@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Apex Vitality | Men's Health and Weight Loss",
+  title: "Apex Vitality | Weight Loss and Men's Health",
   description:
-    "Telehealth testosterone care for men and medical weight-loss visits for men and women.",
+    "Telehealth medical weight-loss visits for men and women, plus testosterone care for men.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Apex Vitality",
     description:
-      "Testosterone care for men and medical weight loss for men and women.",
+      "Medical weight loss for men and women, plus testosterone care for men.",
     type: "website",
   },
 };
