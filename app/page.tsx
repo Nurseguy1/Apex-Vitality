@@ -1,11 +1,11 @@
 const services = [
   {
     title: "Weight loss for men and women",
-    copy: "Medical weight-management visits for adults, including GLP-1 eligibility review, lifestyle strategy, side-effect education, and follow-up support.",
+    copy: "Medical weight-management visits for adults, including GLP-1 care planning, lifestyle strategy, education, and follow-up support.",
   },
   {
     title: "Testosterone care for men",
-    copy: "Telehealth evaluation for low energy, libido changes, strength, mood, sleep, and other symptoms that may be related to low testosterone.",
+    copy: "Telehealth care for low energy, libido changes, strength, mood, sleep, and other concerns that may be related to low testosterone.",
   },
   {
     title: "Men's health optimization",
@@ -15,20 +15,20 @@ const services = [
 
 const steps = [
   {
-    title: "Measure",
-    copy: "Start with your goals, symptoms, medical history, and baseline lab markers.",
+    title: "Start",
+    copy: "Share where you are today and what you want your health to feel like tomorrow.",
   },
   {
     title: "Personalize",
-    copy: "Review options with a clinician and choose a plan that fits your health profile.",
+    copy: "Build a care plan around your health profile, lifestyle, and goals.",
   },
   {
-    title: "Optimize",
-    copy: "Begin treatment only when appropriate, with clear guidance and expectations.",
+    title: "Plan",
+    copy: "Map out treatment guidance, education, and support for tomorrow.",
   },
   {
-    title: "Track",
-    copy: "Monitor progress, labs, side effects, and dose adjustments over time.",
+    title: "Progress",
+    copy: "Keep building momentum with follow-up visits and plan adjustments over time.",
   },
 ];
 
@@ -41,7 +41,7 @@ const highlights = [
 
 const biomarkers = [
   "A1C and glucose",
-  "Weight-loss eligibility",
+  "Weight-loss planning",
   "Thyroid",
   "Lipids",
   "Testosterone",
@@ -74,7 +74,7 @@ export default function Home() {
           <p className="hero-lede">
             Apex Vitality helps men and women pursue medical weight loss with
             clinician-led telehealth care, then supports men with focused
-            testosterone evaluation and men's health optimization.
+            testosterone care and men's health optimization.
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#visit">
@@ -99,23 +99,23 @@ export default function Home() {
           <div className="visit-card">
             <span>Private telehealth</span>
             <strong>Weight loss or men's health consult</strong>
-            <p>Health history, goals, labs, and treatment-fit review.</p>
+            <p>Health history, goals, labs, and care-path review.</p>
           </div>
         </div>
       </section>
 
       <section className="proof-strip" aria-label="Clinic proof points">
         <div>
-          <strong>Adults</strong>
+          <strong>Goals</strong>
           <span>medical weight loss for men and women</span>
         </div>
         <div>
-          <strong>Men</strong>
-          <span>testosterone evaluation and men's health optimization</span>
+          <strong>Vitality</strong>
+          <span>testosterone care and men's health optimization</span>
         </div>
         <div>
-          <strong>Labs</strong>
-          <span>screening and follow-up when clinically appropriate</span>
+          <strong>Knowledge</strong>
+          <span>baseline labs and structured follow-up</span>
         </div>
       </section>
 
@@ -141,13 +141,13 @@ export default function Home() {
 
       <section className="lab-section" id="labs">
         <div className="lab-copy">
-          <p className="eyebrow">Labs and screening</p>
-          <h2>Use the right data before starting treatment.</h2>
+          <p className="eyebrow">Labs and baseline review</p>
+          <h2>Use your data to move forward with confidence.</h2>
           <p>
-            When labs are appropriate, your clinician can review key markers
+            When labs are part of your care, your clinician can review key markers
             that help connect weight, metabolic patterns, treatment
-            eligibility, and testosterone status. The goal is practical
-            clarity, not a wall of numbers.
+            planning, and testosterone status. The goal is practical clarity,
+            not a wall of numbers.
           </p>
         </div>
         <div className="marker-grid" aria-label="Example biomarker categories">
@@ -160,10 +160,10 @@ export default function Home() {
       <section className="split-section" id="process">
         <div>
           <p className="eyebrow">The method</p>
-          <h2>Measure, personalize, optimize, track.</h2>
+          <h2>Start, personalize, plan, progress.</h2>
           <p>
             A premium, focused telehealth experience built around clear
-            screening, appropriate treatment, and follow-through.
+            planning, medical guidance, and forward momentum.
           </p>
         </div>
         <ol className="step-list">
@@ -181,10 +181,10 @@ export default function Home() {
           <p className="eyebrow">Start online</p>
           <h2>Book a confidential optimization consult.</h2>
           <p>
-            Share your goals, symptoms, medications, and health history. A
-            clinician will help determine whether GLP-1 weight-loss care, labs,
-            testosterone evaluation, or a non-medication plan may be a fit for
-            your goals.
+            Share your goals, medications, and health history. A
+            clinician will help you review your baseline metabolic health,
+            discuss GLP-1 weight-loss care or testosterone care, and
+            explore the path forward to your goals.
           </p>
         </div>
         <form className="intake-form">
@@ -211,8 +211,7 @@ export default function Home() {
           <button type="submit">Request visit</button>
           <p className="form-note">
             This demo form does not submit medical information. Treatment is
-            available only when clinically appropriate and permitted in your
-            location.
+            guided by your clinician and available services in your location.
           </p>
         </form>
       </section>
@@ -220,9 +219,8 @@ export default function Home() {
       <footer>
         <strong>Apex Vitality</strong>
         <p>
-          Telehealth men's health and medical weight-loss services for adults.
-          This website is educational and does not replace medical advice,
-          diagnosis, or emergency care.
+          Telehealth medical weight-loss care for men and women, clinically
+          focused men's health and testosterone support.
         </p>
       </footer>
     </main>
