@@ -21,6 +21,9 @@
 # misc
 .DS_Store
 *.pem
+/.cache/
+/.home/
+/.pnpm-home/
 
 # debug
 npm-debug.log*
