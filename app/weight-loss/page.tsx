@@ -34,12 +34,12 @@ export default function WeightLossPage() {
       </section>
       <section className="content-split">
         <div>
-          <p className="eyebrow">Medication conversations</p>
-          <h2>GLP-1 options require individualized medical review.</h2>
+          <p className="eyebrow">Medical treatment conversations</p>
+          <h2>Advanced weight-management options require individualized review.</h2>
           <p>
-            GLP-1 medications may be discussed for eligible patients, but they are
-            not right for everyone. Your medical provider considers medical history,
-            current medications, contraindications, potential benefits, and risks.
+            Medical treatment options may be discussed for eligible patients, but
+            they are not right for everyone. Your medical provider considers medical
+            history, current medications, contraindications, potential benefits, and risks.
           </p>
         </div>
         <ul className="check-list">

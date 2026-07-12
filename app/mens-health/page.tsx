@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { CareNotice, PageIntro, SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
-  title: "Men's Health & Testosterone Care | Apex Vitality",
-  description: "Telehealth evaluation for men's health concerns and clinically appropriate testosterone care.",
+  title: "Men's Vitality & Hormonal Health | Apex Vitality",
+  description: "Telehealth evaluation for men's vitality, performance, and hormonal health concerns.",
 };
 
 export default function MensHealthPage() {
@@ -31,13 +31,13 @@ export default function MensHealthPage() {
       </section>
       <section className="content-split dark-panel">
         <div>
-          <p className="eyebrow">Testosterone care</p>
-          <h2>Treatment only when clinically appropriate.</h2>
+          <p className="eyebrow">Hormonal health care</p>
+          <h2>Medical treatment only when clinically appropriate.</h2>
           <p>
-            Testosterone therapy requires a licensed medical provider&apos;s diagnosis, discussion of
-            benefits and risks, baseline testing, and ongoing monitoring. Apex
-            Vitality does not position testosterone as a shortcut for bodybuilding
-            or purely aesthetic goals.
+            Hormonal treatment requires a licensed medical provider&apos;s diagnosis,
+            discussion of benefits and risks, baseline testing, and ongoing
+            monitoring. Apex Vitality does not position medical therapy as a
+            shortcut for bodybuilding or purely aesthetic goals.
           </p>
         </div>
         <ul className="check-list">

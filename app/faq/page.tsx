@@ -5,8 +5,9 @@ export const metadata: Metadata = { title: "Frequently Asked Questions | Apex Vi
 
 const questions = [
   ["Is treatment guaranteed?", "No. A consultation does not guarantee a diagnosis, prescription, or enrollment. Treatment depends on evaluation by our board-certified medical team, eligibility, and service availability."],
-  ["Are GLP-1 medications available to everyone?", "No. A licensed clinician must determine whether a medication is medically appropriate after reviewing risks, benefits, medical history, and other relevant information."],
-  ["Does Apex Vitality offer testosterone care?", "The care model is designed to support evaluation of men’s health concerns and, when clinically appropriate, testosterone treatment with appropriate testing and monitoring."],
+  ["Are medical weight-management treatments available to everyone?", "No. A licensed clinician must determine whether a treatment is medically appropriate after reviewing risks, benefits, medical history, and other relevant information."],
+  ["Does Apex Vitality offer men's hormonal health care?", "The care model supports evaluation of men’s health concerns and, when clinically appropriate, individualized treatment with appropriate testing and monitoring."],
+  ["How are specific treatment options selected?", "Specific options are discussed privately through the secure clinical process after evaluation by Apex Vitality's fully licensed, board-certified medical providers. Public program descriptions do not replace individualized medical recommendations."],
   ["Will I need lab work?", "Lab work may be required depending on your symptoms, medical history, requested care, and clinician recommendations."],
   ["Does everyone need specialty gut testing?", "No. Testing is selected only when the medical team believes the result is likely to answer a useful clinical question or change the care plan."],
   ["Does Apex Vitality offer longevity-focused care?", "The longevity pathway focuses on modifiable risk factors, biomarkers, recovery, body composition, and healthy-aging fundamentals. It does not promise to reverse aging or guarantee a particular result."],

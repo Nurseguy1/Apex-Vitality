@@ -77,8 +77,9 @@ export function CareNotice() {
       <strong>Care starts with clinical review.</strong>
       <p>
         Medication is prescribed only when an appropriately licensed prescribing
-        clinician on our board-certified medical team determines it is
-        medically appropriate. Lab work and follow-up may be required.
+        clinician on our fully licensed, board-certified medical team determines
+        it is medically appropriate. Specific options are discussed privately
+        through the secure clinical process. Lab work and follow-up may be required.
       </p>
     </aside>
   );
