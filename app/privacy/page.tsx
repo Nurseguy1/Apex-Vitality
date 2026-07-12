@@ -1,0 +1,5 @@
+import { SiteFooter, SiteHeader } from "../components";
+
+export default function PrivacyPage() {
+  return <main><SiteHeader /><article className="legal-page"><p className="eyebrow">Privacy</p><h1>Privacy notice</h1><p>This website does not currently provide a secure patient intake portal. Do not submit protected health information or other sensitive medical details through ordinary email or website channels.</p><h2>Website information</h2><p>Basic technical information may be processed by the hosting provider to operate, secure, and measure the website. A complete privacy policy identifying the operating clinical entity, contact information, analytics tools, retention practices, and patient-privacy procedures must be published before patient enrollment begins.</p><h2>Medical records</h2><p>Any future collection of health information should occur through a properly configured patient system with appropriate privacy and security safeguards.</p><p className="legal-updated">Last updated July 11, 2026.</p></article><SiteFooter /></main>;
+}
