@@ -411,7 +411,9 @@ footer p {
   grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.8fr);
   gap: clamp(30px, 6vw, 80px);
   align-items: center;
-  background: var(--ice);
+  background:
+    radial-gradient(circle at 92% 18%, rgb(179 109 66 / 0.2), transparent 28%),
+    linear-gradient(135deg, #d9eeea 0%, #e5eef5 56%, #f3e7dd 100%);
 }
 
 .program-section {
