@@ -38,9 +38,8 @@ export default function Home() {
           <p className="eyebrow">Telehealth weight loss and men&apos;s health</p>
           <h1>Medical weight loss for men and women. Testosterone care for men.</h1>
           <p className="hero-lede">
-            Apex Vitality offers focused telehealth care from licensed nurse
-            a board-certified medical team,
-            with clear pathways for adult weight management and
+            Apex Vitality offers focused telehealth care from a board-certified
+            medical team, with clear pathways for adult weight management and
             men&apos;s health.
           </p>
           <div className="hero-actions">
