@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const services = [
   {
     title: "Weight loss for men and women",
@@ -69,12 +71,12 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Telehealth weight loss and men's health</p>
+          <p className="eyebrow">Telehealth weight loss and men&apos;s health</p>
           <h1>Medical weight loss for men and women. Testosterone care for men.</h1>
           <p className="hero-lede">
             Apex Vitality helps men and women pursue medical weight loss with
             clinician-led telehealth care, then supports men with focused
-            testosterone care and men's health optimization.
+            testosterone care and men&apos;s health optimization.
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#visit">
@@ -92,13 +94,16 @@ export default function Home() {
         </div>
 
         <div className="hero-visual" aria-label="Telehealth consultation">
-          <img
+          <Image
             src="/telehealth-consult.png"
             alt="Man and woman meeting with a clinician through a secure telehealth visit"
+            width={1693}
+            height={929}
+            priority
           />
           <div className="visit-card">
             <span>Private telehealth</span>
-            <strong>Weight loss or men's health consult</strong>
+            <strong>Weight loss or men&apos;s health consult</strong>
             <p>Health history, goals, labs, and care-path review.</p>
           </div>
         </div>
@@ -111,7 +116,7 @@ export default function Home() {
         </div>
         <div>
           <strong>Vitality</strong>
-          <span>testosterone care and men's health optimization</span>
+          <span>testosterone care and men&apos;s health optimization</span>
         </div>
         <div>
           <strong>Knowledge</strong>
@@ -125,7 +130,7 @@ export default function Home() {
           <h2>Simple, specific, medically guided.</h2>
           <p>
             No oversized menu of treatments. Just focused telehealth care for
-            medical weight loss for adults, plus testosterone and men's health
+            medical weight loss for adults, plus testosterone and men&apos;s health
             for men.
           </p>
         </div>
@@ -204,7 +209,7 @@ export default function Home() {
               </option>
               <option>Weight loss for men and women</option>
               <option>Testosterone care for men</option>
-              <option>Men's health optimization</option>
+              <option>Men&apos;s health optimization</option>
               <option>Not sure yet</option>
             </select>
           </label>
@@ -220,7 +225,7 @@ export default function Home() {
         <strong>Apex Vitality</strong>
         <p>
           Telehealth medical weight-loss care for men and women, clinically
-          focused men's health and testosterone support.
+          focused men&apos;s health and testosterone support.
         </p>
       </footer>
     </main>
