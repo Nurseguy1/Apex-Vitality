@@ -329,9 +329,10 @@ footer p {
 
 .proof-strip strong {
   color: var(--teal-dark);
-  font-size: clamp(32px, 4vw, 50px);
+  font-size: clamp(27px, 3.2vw, 46px);
   line-height: 1;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  white-space: nowrap;
 }
 
 .proof-strip span {
