@@ -63,7 +63,8 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">Modern telehealth wellness care</p>
           <h1>
-            Gut health. Metabolic care. Men&apos;s vitality.
+            Gut health. Metabolic care.
+            <span className="headline-line">Men&apos;s vitality.</span>
             <span className="headline-line">Longevity.</span>
             <span className="headline-line">Wellness.</span>
           </h1>
