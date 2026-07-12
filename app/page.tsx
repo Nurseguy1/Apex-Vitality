@@ -62,7 +62,11 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow">Modern telehealth wellness care</p>
-          <h1>Gut health. Metabolic care. Men&apos;s vitality. Long-term wellness.</h1>
+          <h1>
+            Gut health. Metabolic care. Men&apos;s vitality.
+            <span className="headline-line">Longevity.</span>
+            <span className="headline-line">Wellness.</span>
+          </h1>
           <p className="hero-lede">
             Apex Vitality offers focused telehealth care from a board-certified
             medical team, with clear pathways for digestive wellness, adult

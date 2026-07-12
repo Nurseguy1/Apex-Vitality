@@ -157,6 +157,10 @@ h1 {
   line-height: 0.98;
 }
 
+.headline-line {
+  display: block;
+}
+
 .hero h1,
 .hero .hero-lede {
   color: white;
