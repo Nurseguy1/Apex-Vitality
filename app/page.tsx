@@ -52,7 +52,9 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-visual" aria-label="Telehealth consultation">
-          <Image src="/telehealth-consult-v2.png" alt="Couple fully in view while meeting with a medical professional through telehealth" width={1672} height={941} priority />
+          <div className="hero-image-frame">
+            <Image src="/telehealth-consult-v2.png" alt="Couple fully in view while meeting with a medical professional through telehealth" width={1672} height={941} priority />
+          </div>
           <div className="visit-card"><span>Private telehealth</span><strong>Focused, medically guided care</strong><p>Health history, goals, labs, and care-path review.</p></div>
         </div>
       </section>
