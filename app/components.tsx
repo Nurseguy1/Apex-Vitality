@@ -25,7 +25,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div>
         <strong>Apex Vitality</strong>
-        <p>Care from board-certified nurse practitioners with physician Medical Director oversight.</p>
+        <p>Focused telehealth care from a board-certified medical team.</p>
       </div>
       <nav aria-label="Footer navigation">
         <Link href="/weight-loss">Weight Loss</Link>
@@ -73,8 +73,8 @@ export function CareNotice() {
     <aside className="care-notice">
       <strong>Care starts with clinical review.</strong>
       <p>
-        Medication is prescribed only when a licensed nurse practitioner or
-        physician determines it is
+        Medication is prescribed only when an appropriately licensed prescribing
+        clinician on our board-certified medical team determines it is
         medically appropriate. Lab work and follow-up may be required.
       </p>
     </aside>

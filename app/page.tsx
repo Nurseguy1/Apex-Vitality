@@ -39,7 +39,7 @@ export default function Home() {
           <h1>Medical weight loss for men and women. Testosterone care for men.</h1>
           <p className="hero-lede">
             Apex Vitality offers focused telehealth care from licensed nurse
-            board-certified nurse practitioners with physician Medical Director oversight,
+            a board-certified medical team,
             with clear pathways for adult weight management and
             men&apos;s health.
           </p>
@@ -48,8 +48,8 @@ export default function Home() {
             <Link className="secondary-button" href="/how-it-works">How care works</Link>
           </div>
           <div className="trust-row" aria-label="Clinic highlights">
-            <span>Weight loss for adults</span><span>Board-certified nurse practitioners</span>
-            <span>Physician Medical Director</span><span>Telehealth visits</span>
+            <span>Weight loss for adults</span><span>Board-certified medical team</span>
+            <span>Physician Medical Director oversight</span><span>Telehealth visits</span>
           </div>
         </div>
         <div className="hero-visual" aria-label="Telehealth consultation">
@@ -60,7 +60,7 @@ export default function Home() {
 
       <section className="proof-strip" aria-label="Care principles">
         <div><strong>Focused</strong><span>clear care paths, not an oversized treatment menu</span></div>
-        <div><strong>Clinical</strong><span>board-certified nurse practitioners with physician Medical Director oversight</span></div>
+        <div><strong>Clinical</strong><span>care from a board-certified medical team</span></div>
         <div><strong>Personal</strong><span>recommendations based on individual needs and eligibility</span></div>
       </section>
 
@@ -72,7 +72,7 @@ export default function Home() {
       </section>
 
       <section className="lab-section" id="labs">
-        <div className="lab-copy"><p className="eyebrow">Labs and baseline review</p><h2>Use your data to move forward with confidence.</h2><p>When appropriate, licensed nurse practitioners may review key markers connected to metabolic health, weight-management planning, and testosterone status.</p></div>
+        <div className="lab-copy"><p className="eyebrow">Labs and baseline review</p><h2>Use your data to move forward with confidence.</h2><p>When appropriate, our board-certified medical team may review key markers connected to metabolic health, weight-management planning, and testosterone status.</p></div>
         <div className="marker-grid" aria-label="Example biomarker categories">{biomarkers.map((marker) => <span key={marker}>{marker}</span>)}</div>
       </section>
 
@@ -87,14 +87,14 @@ export default function Home() {
       </section>
 
       <section className="visit-section" id="visit">
-        <div className="visit-copy"><p className="eyebrow">Start online</p><h2>Prepare for a confidential consultation.</h2><p>A licensed nurse practitioner can review your health history, goals, medications, and potential care options once secure scheduling and intake are active.</p></div>
+        <div className="visit-copy"><p className="eyebrow">Start online</p><h2>Prepare for a confidential consultation.</h2><p>A member of our board-certified medical team can review your health history, goals, medications, and potential care options once secure scheduling and intake are active.</p></div>
         <div className="intake-form readiness-card">
           <span className="status-pill">Secure scheduling in preparation</span>
           <h3>Patient intake is not open yet.</h3>
           <p>A secure scheduling and intake pathway will be activated before patient enrollment begins. Please do not send medical information through ordinary email or website messages.</p>
           <Link className="primary-button" href="/how-it-works">See how care will work</Link>
           <Link className="text-link" href="/faq">Review common questions</Link>
-          <p className="form-note">Treatment is guided by board-certified nurse practitioners with physician Medical Director oversight and depends on clinical eligibility and service availability in your location.</p>
+          <p className="form-note">Treatment is guided by our board-certified medical team and depends on clinical eligibility and service availability in your location.</p>
         </div>
       </section>
       <SiteFooter />

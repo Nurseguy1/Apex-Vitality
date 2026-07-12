@@ -4,7 +4,7 @@ import { PageIntro, SiteFooter, SiteHeader } from "../components";
 export const metadata: Metadata = { title: "Frequently Asked Questions | Apex Vitality" };
 
 const questions = [
-  ["Is treatment guaranteed?", "No. A consultation does not guarantee a diagnosis, prescription, or enrollment. Treatment depends on evaluation by a board-certified nurse practitioner, eligibility, and service availability."],
+  ["Is treatment guaranteed?", "No. A consultation does not guarantee a diagnosis, prescription, or enrollment. Treatment depends on evaluation by our board-certified medical team, eligibility, and service availability."],
   ["Are GLP-1 medications available to everyone?", "No. A licensed clinician must determine whether a medication is medically appropriate after reviewing risks, benefits, medical history, and other relevant information."],
   ["Does Apex Vitality offer testosterone care?", "The care model is designed to support evaluation of men’s health concerns and, when clinically appropriate, testosterone treatment with appropriate testing and monitoring."],
   ["Will I need lab work?", "Lab work may be required depending on your symptoms, medical history, requested care, and clinician recommendations."],

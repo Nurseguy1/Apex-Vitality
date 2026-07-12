@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  ["Clinical evaluation", "A board-certified nurse practitioner reviews your health history, goals, medications, and potential risk factors."],
+  ["Clinical evaluation", "Our board-certified medical team reviews your health history, goals, medications, and potential risk factors."],
   ["Individual care plan", "Recommendations may include nutrition, activity, behavior change, lab work, and medication when appropriate."],
   ["Ongoing follow-up", "Progress, tolerability, and next steps are reviewed over time so the plan can be adjusted responsibly."],
 ];
