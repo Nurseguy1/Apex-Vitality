@@ -8,7 +8,7 @@
   --surface: #ffffff;
   --teal: #0b6066;
   --teal-dark: #082f35;
-  --graphite: #11191c;
+  --graphite: #0b1f3a;
   --copper: #b36d42;
   --steel: #e4eaec;
   --ice: #f9fbfa;
@@ -323,8 +323,28 @@ footer p {
   gap: 8px;
   min-height: 150px;
   align-content: center;
-  background: var(--surface);
+  background: linear-gradient(145deg, #eef8f7, #ffffff 78%);
   padding: clamp(22px, 4vw, 42px);
+}
+
+.proof-strip div:nth-child(2) {
+  background: linear-gradient(145deg, #fff3e9, #ffffff 78%);
+}
+
+.proof-strip div:nth-child(3) {
+  background: linear-gradient(145deg, #edf3fa, #ffffff 78%);
+}
+
+.proof-strip div:nth-child(1) strong {
+  color: var(--teal);
+}
+
+.proof-strip div:nth-child(2) strong {
+  color: #96522f;
+}
+
+.proof-strip div:nth-child(3) strong {
+  color: #315f78;
 }
 
 .proof-strip strong {
@@ -494,10 +514,22 @@ footer p {
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: white;
+  background: linear-gradient(145deg, #eef8f7, #ffffff 76%);
   color: var(--teal-dark);
   font-size: 17px;
   font-weight: 760;
+}
+
+.marker-grid span:nth-child(3n + 2) {
+  border-color: #e7cdbb;
+  background: linear-gradient(145deg, #fff3e9, #ffffff 76%);
+  color: #7f4529;
+}
+
+.marker-grid span:nth-child(3n) {
+  border-color: #c9d9e7;
+  background: linear-gradient(145deg, #edf3fa, #ffffff 76%);
+  color: #264f69;
 }
 
 .split-section {
@@ -522,8 +554,24 @@ footer p {
   padding: 24px 24px 24px 76px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--surface);
+  border-left: 5px solid var(--teal);
+  background: linear-gradient(145deg, #eef8f7, #ffffff 76%);
   color: var(--teal-dark);
+}
+
+.step-list li:nth-child(2) {
+  border-left-color: var(--copper);
+  background: linear-gradient(145deg, #fff3e9, #ffffff 76%);
+}
+
+.step-list li:nth-child(3) {
+  border-left-color: #315f78;
+  background: linear-gradient(145deg, #edf3fa, #ffffff 76%);
+}
+
+.step-list li:nth-child(4) {
+  border-left-color: #7767a8;
+  background: linear-gradient(145deg, #f4f0fa, #ffffff 76%);
 }
 
 .step-list strong {
@@ -555,6 +603,21 @@ footer p {
   counter-increment: steps;
   font-size: 14px;
   font-weight: 840;
+}
+
+.step-list li:nth-child(2)::before {
+  background: #f7dfcf;
+  color: #7f4529;
+}
+
+.step-list li:nth-child(3)::before {
+  background: #dce8f1;
+  color: #264f69;
+}
+
+.step-list li:nth-child(4)::before {
+  background: #e8e1f3;
+  color: #594985;
 }
 
 .visit-section {
