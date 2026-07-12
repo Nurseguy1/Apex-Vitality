@@ -8,10 +8,11 @@ export function SiteHeader() {
         <span>Apex Vitality</span>
       </Link>
       <nav className="nav-links" aria-label="Main navigation">
-        <Link href="/weight-loss">Weight Loss</Link>
+        <Link href="/gut-health">Gut Health</Link>
+        <Link href="/weight-loss">Metabolic Health</Link>
         <Link href="/mens-health">Men&apos;s Health</Link>
+        <Link href="/longevity">Longevity</Link>
         <Link href="/how-it-works">How It Works</Link>
-        <Link href="/faq">FAQ</Link>
       </nav>
       <Link className="header-action" href="/#visit">
         Start here
@@ -28,8 +29,10 @@ export function SiteFooter() {
         <p>Focused telehealth care from a board-certified medical team.</p>
       </div>
       <nav aria-label="Footer navigation">
-        <Link href="/weight-loss">Weight Loss</Link>
+        <Link href="/gut-health">Gut Health</Link>
+        <Link href="/weight-loss">Metabolic Health</Link>
         <Link href="/mens-health">Men&apos;s Health</Link>
+        <Link href="/longevity">Longevity</Link>
         <Link href="/how-it-works">How It Works</Link>
         <Link href="/faq">FAQ</Link>
       </nav>

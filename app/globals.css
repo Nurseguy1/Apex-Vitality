@@ -352,7 +352,7 @@ footer p {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
 }
 
@@ -387,6 +387,55 @@ footer p {
   gap: clamp(30px, 6vw, 80px);
   align-items: center;
   background: var(--ice);
+}
+
+.program-section {
+  padding: clamp(64px, 9vw, 116px) clamp(20px, 5vw, 72px);
+  background: var(--background);
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.program-card {
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.program-card > span {
+  color: var(--copper);
+  font-size: 12px;
+  font-weight: 820;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.program-card h3 {
+  margin-top: 14px;
+}
+
+.program-card p,
+.program-card li,
+.program-note {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.program-card ul {
+  display: grid;
+  gap: 9px;
+  margin: 22px 0 0;
+  padding-left: 20px;
+}
+
+.program-note {
+  margin: 24px 0 0;
+  font-size: 14px;
 }
 
 .lab-copy p {
@@ -848,6 +897,10 @@ footer p {
   }
 
   .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-grid {
     grid-template-columns: 1fr;
   }
 
