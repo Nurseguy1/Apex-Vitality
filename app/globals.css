@@ -539,6 +539,9 @@ footer p {
   grid-template-columns: minmax(0, 0.95fr) minmax(300px, 0.8fr);
   gap: clamp(30px, 6vw, 88px);
   align-items: start;
+  background:
+    radial-gradient(circle at 8% 82%, rgb(179 109 66 / 0.16), transparent 28%),
+    linear-gradient(135deg, #e7f2f6 0%, #dcefe9 55%, #f4e9e0 100%);
 }
 
 .step-list {
@@ -637,8 +640,10 @@ footer p {
   grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.8fr);
   gap: clamp(30px, 6vw, 88px);
   padding: clamp(64px, 9vw, 116px) clamp(20px, 5vw, 72px);
-  background: var(--graphite);
-  color: white;
+  background:
+    radial-gradient(circle at 88% 18%, rgb(179 109 66 / 0.18), transparent 28%),
+    linear-gradient(135deg, #dcefe9 0%, #e6eef7 55%, #f3e6dc 100%);
+  color: var(--foreground);
 }
 
 .faq-preview-list {
@@ -651,13 +656,14 @@ footer p {
   gap: 8px;
   margin: 0;
   padding: 22px;
-  border: 1px solid rgb(255 255 255 / 0.14);
+  border: 1px solid rgb(49 95 120 / 0.2);
   border-radius: 8px;
-  background: rgb(255 255 255 / 0.05);
+  background: rgb(255 255 255 / 0.68);
+  box-shadow: 0 14px 30px rgb(23 32 29 / 0.06);
 }
 
 .faq-preview-list span {
-  color: rgb(255 255 255 / 0.68);
+  color: var(--muted);
   line-height: 1.55;
 }
 
