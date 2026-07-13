@@ -118,7 +118,7 @@ export default function Home() {
           <div className="hero-image-frame">
             <Image src="/telehealth-consult-v2.png" alt="Couple fully in view while meeting with a medical professional through telehealth" width={1672} height={941} priority />
           </div>
-          <div className="visit-card"><span>Private telehealth</span><strong>Executive-level attention. Clinically grounded care.</strong><p>Your history, goals, biomarkers, and lifestyle considered together.</p></div>
+          <div className="visit-card"><span>Concierge telemedicine</span><strong>Executive-level attention. Clinically grounded care.</strong><p>Your history, goals, biomarkers, and lifestyle considered together.</p></div>
         </div>
       </section>
 
