@@ -91,7 +91,7 @@ export default function Home() {
       <SiteHeader />
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Concierge telehealth for modern health</p>
+          <p className="eyebrow">Telemedicine for modern health</p>
           <h1>
             Personalized care.
             <span className="headline-line">Measurable progress.</span>
