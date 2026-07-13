@@ -99,7 +99,7 @@ export default function Home() {
           </h1>
           <blockquote className="hero-quote">
             <p className="hero-lede">
-              &ldquo;Apex Vitality provides discreet, clinician-led care, combining
+              &ldquo;Apex Vitality provides discreet, clinician-led care combining
               thoughtful evaluation, evidence-informed treatment, and convenient
               follow-through for long-term health and performance.&rdquo;
             </p>
