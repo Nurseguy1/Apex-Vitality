@@ -349,9 +349,52 @@ footer p {
 .quiz-privacy { margin: 24px 0 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
 .quiz-complete h2 { margin-top: 22px; }
 .quiz-complete p { color: var(--muted); font-size: 17px; line-height: 1.7; }
+.quiz-complete .primary-button { margin: 8px 10px 8px 0; }
+
+.patient-access-hero {
+  padding: clamp(72px, 9vw, 124px) clamp(20px, 8vw, 150px);
+  background: linear-gradient(135deg, #11191c, #164c52);
+  color: white;
+}
+.patient-access-hero h1 { max-width: 900px; }
+.patient-access-hero > p:last-child { max-width: 760px; color: rgb(255 255 255 / .76); font-size: 18px; line-height: 1.7; }
+.patient-access-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: clamp(58px, 8vw, 100px) clamp(20px, 5vw, 72px);
+}
+.patient-access-grid article {
+  display: flex;
+  min-height: 390px;
+  flex-direction: column;
+  padding: clamp(26px, 4vw, 42px);
+  border: 1px solid rgb(15 62 68 / .12);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #e4f2ef, #fff 76%);
+  box-shadow: 0 20px 48px rgb(17 25 28 / .08);
+}
+.patient-access-grid article:nth-child(2) { background: linear-gradient(145deg, #f5e7dc, #fff 76%); }
+.patient-access-grid article:nth-child(3) { background: linear-gradient(145deg, #e3edf6, #fff 76%); }
+.patient-access-grid article > span:first-child { color: var(--copper); font-weight: 800; letter-spacing: .12em; }
+.patient-access-grid h2 { margin-top: 28px; font-size: clamp(28px, 3vw, 40px); }
+.patient-access-grid p { color: var(--muted); font-size: 16px; line-height: 1.65; }
+.patient-access-grid .primary-button,
+.patient-access-grid .pending-button { width: fit-content; margin-top: auto; }
+.pending-button { display: inline-flex; padding: 13px 17px; border: 1px solid var(--line); border-radius: 999px; background: #eef1f1; color: var(--muted); font-weight: 720; }
+.healthie-status { margin: 0 clamp(20px, 5vw, 72px) clamp(60px, 8vw, 100px); padding: 26px 30px; border-left: 4px solid var(--copper); background: #fff4eb; }
+.healthie-status.is-ready { border-left-color: var(--teal); background: #e7f3f0; }
+.healthie-status p { max-width: 900px; margin: 8px 0; color: var(--muted); line-height: 1.65; }
+.footer-portal-link { color: #b9e6e0; font-weight: 720; }
+.healthie-handoff { display: flex; gap: 30px; align-items: center; justify-content: space-between; padding: clamp(52px, 7vw, 90px) clamp(20px, 5vw, 72px); background: linear-gradient(135deg, #dcefe9, #e6eef7); }
+.healthie-handoff > div { max-width: 760px; }
+.healthie-handoff p { color: var(--muted); font-size: 17px; line-height: 1.65; }
 
 @media (max-width: 900px) {
   .questionnaire-grid { grid-template-columns: 1fr; }
+  .patient-access-grid { grid-template-columns: 1fr; }
+  .patient-access-grid article { min-height: 0; }
+  .healthie-handoff { align-items: flex-start; flex-direction: column; }
   .questionnaire-card { min-height: 0; }
 }
 

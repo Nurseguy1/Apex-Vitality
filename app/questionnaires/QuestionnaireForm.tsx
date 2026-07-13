@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import type { Questionnaire, Question } from "./data";
+import { healthieLinks } from "../lib/healthie";
 
 function QuestionField({ question, answers }: { question: Question; answers: Record<string, string[]> }) {
   const common = { name: question.id, required: question.required };
@@ -60,8 +61,9 @@ export default function QuestionnaireForm({ questionnaire }: { questionnaire: Qu
       <section className="quiz-complete" aria-live="polite">
         <span className="status-pill">Screening complete</span>
         <h2>Thank you for completing the questionnaire.</h2>
-        <p>Your answers have not been transmitted or saved because secure patient intake is still being prepared. This screening does not diagnose a condition, establish treatment eligibility, or replace a medical evaluation.</p>
-        <p>When Apex Vitality opens secure intake, you will complete or transfer this information within the protected patient system for review by a licensed clinician.</p>
+        <p>Your answers on this preview page have not been transmitted or saved. This screening does not diagnose a condition, establish treatment eligibility, or replace a medical evaluation.</p>
+        <p>{healthieLinks.intake ? "Continue to Apex Vitality’s secure Healthie intake to submit information for clinical review." : "When Apex Vitality opens secure intake, you will complete or transfer this information within the protected Healthie patient system for review by a licensed clinician."}</p>
+        {healthieLinks.intake && <a className="primary-button" href={healthieLinks.intake} rel="noreferrer" target="_blank">Continue to secure Healthie intake ↗</a>}
         <button className="secondary-dark-button" type="button" onClick={() => { setSection(0); setComplete(false); setAnswers({}); }}>Review the questionnaire again</button>
       </section>
     );

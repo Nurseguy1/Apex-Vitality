@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageIntro, SiteFooter, SiteHeader } from "../components";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "How Telehealth Care Works | Apex Vitality",
@@ -33,6 +34,10 @@ export default function HowItWorksPage() {
       <section className="care-notice">
         <strong>Not for emergencies.</strong>
         <p>If you may be experiencing a medical emergency, call 911 or seek immediate in-person care.</p>
+      </section>
+      <section className="healthie-handoff">
+        <div><p className="eyebrow">Secure next step</p><h2>Scheduling and intake through Healthie.</h2><p>When patient enrollment opens, appointments, health forms, medication review, and portal access will be handled through the secure patient workflow.</p></div>
+        <Link className="primary-button" href="/patient-access">Go to Patient Access</Link>
       </section>
       <SiteFooter />
     </main>

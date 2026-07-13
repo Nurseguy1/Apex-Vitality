@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { healthieLinks } from "./lib/healthie";
 
 export function SiteHeader() {
   return (
@@ -15,9 +16,7 @@ export function SiteHeader() {
         <Link href="/how-it-works">How It Works</Link>
         <Link href="/questionnaires">Questionnaires</Link>
       </nav>
-      <Link className="header-action" href="/#visit">
-        Start here
-      </Link>
+      <Link className="header-action" href="/patient-access">Patient Access</Link>
     </header>
   );
 }
@@ -37,6 +36,7 @@ export function SiteFooter() {
         <Link href="/how-it-works">How It Works</Link>
         <Link href="/faq">FAQ</Link>
         <Link href="/questionnaires">Questionnaires</Link>
+        <Link href="/patient-access">Patient Access</Link>
       </nav>
       <nav aria-label="Legal navigation">
         <Link href="/privacy">Privacy</Link>
@@ -47,6 +47,7 @@ export function SiteFooter() {
         Treatment requires evaluation by a licensed clinician and is not guaranteed.
         Availability and eligibility vary by location and individual circumstances.
       </p>
+      {healthieLinks.portal && <a className="footer-portal-link" href={healthieLinks.portal} rel="noreferrer" target="_blank">Secure Healthie patient login ↗</a>}
     </footer>
   );
 }

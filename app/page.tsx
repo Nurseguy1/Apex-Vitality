@@ -139,7 +139,7 @@ export default function Home() {
           <span className="status-pill">Secure scheduling in preparation</span>
           <h3>Patient intake is not open yet.</h3>
           <p>A secure scheduling and intake pathway will be activated before patient enrollment begins. Please do not send medical information through ordinary email or website messages.</p>
-          <Link className="primary-button" href="/how-it-works">See how care will work</Link>
+          <Link className="primary-button" href="/patient-access">Open Patient Access</Link>
           <Link className="text-link" href="/faq">Review common questions</Link>
           <p className="form-note">Treatment is guided by our board-certified medical team and depends on clinical eligibility and service availability in your location.</p>
         </div>
