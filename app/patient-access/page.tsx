@@ -12,7 +12,7 @@ const accessItems = [
   {
     title: "Schedule a consultation",
     copy: "Choose an available visit type and begin the secure onboarding process.",
-    href: healthieLinks.booking,
+    href: healthieLinks.booking ? "/schedule" : null,
     label: "Open secure scheduling",
   },
   {
@@ -45,7 +45,7 @@ export default function PatientAccessPage() {
             <h2>{item.title}</h2>
             <p>{item.copy}</p>
             {item.href ? (
-              <a className="primary-button" href={item.href} rel="noreferrer" target="_blank">{item.label} ↗</a>
+              item.href.startsWith("/") ? <Link className="primary-button" href={item.href}>{item.label} →</Link> : <a className="primary-button" href={item.href} rel="noreferrer" target="_blank">{item.label} ↗</a>
             ) : (
               <span className="pending-button" aria-disabled="true">Connection being configured</span>
             )}

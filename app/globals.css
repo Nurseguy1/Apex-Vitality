@@ -390,6 +390,16 @@ footer p {
 .healthie-handoff > div { max-width: 760px; }
 .healthie-handoff p { color: var(--muted); font-size: 17px; line-height: 1.65; }
 
+.schedule-intro { padding: clamp(62px, 8vw, 104px) clamp(20px, 8vw, 150px); background: linear-gradient(135deg, #11191c, #164c52); color: white; }
+.schedule-intro h1 { max-width: 850px; }
+.schedule-intro > p:last-child { max-width: 720px; color: rgb(255 255 255 / .76); font-size: 18px; line-height: 1.65; }
+.scheduler-section { padding: clamp(38px, 6vw, 72px) clamp(14px, 5vw, 72px); }
+.scheduler-frame { overflow: hidden; max-width: 1160px; margin: 0 auto; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: 0 22px 60px rgb(17 25 28 / .1); }
+.scheduler-frame iframe { display: block; width: 100%; min-height: 760px; border: 0; }
+.scheduler-frame p { margin: 0; padding: 14px 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; text-align: center; }
+.scheduler-frame p a { color: var(--teal); font-weight: 760; }
+.scheduler-pending { max-width: 760px; margin: 0 auto; padding: 46px; border-radius: 18px; background: white; box-shadow: 0 20px 50px rgb(17 25 28 / .08); text-align: center; }
+
 @media (max-width: 900px) {
   .questionnaire-grid { grid-template-columns: 1fr; }
   .patient-access-grid { grid-template-columns: 1fr; }
