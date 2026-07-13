@@ -145,7 +145,7 @@ export default function Home() {
       </section>
 
       <section className="membership-section" id="memberships">
-        <div className="section-heading"><p className="eyebrow">Membership care</p><h2>Expert guidance with the access and continuity your health deserves.</h2><p>Begin with a comprehensive consultation. If ongoing care is appropriate, choose the level of access and support that fits your goals.</p></div>
+        <div className="section-heading"><p className="eyebrow">Membership care</p><h2>Expert guidance with the access and continuity your health deserves.</h2><p>Begin with a comprehensive consultation. For appropriate ongoing care, choose the level of access and support that fits your goals.</p></div>
         <div className="membership-grid">
           {memberships.map((membership, index) => (
             <article className={`membership-card ${index === 2 ? "featured" : ""}`} key={membership.name}>
