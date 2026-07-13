@@ -61,44 +61,67 @@ const programs = [
   },
 ];
 
+const memberships = [
+  {
+    name: "Comprehensive New Patient Consultation",
+    price: "$325",
+    cadence: "one-time",
+    description: "An unhurried clinical evaluation and personalized starting plan.",
+    includes: ["Detailed health and goal review", "Medication and risk-factor review", "Relevant lab planning", "Personalized next steps"],
+  },
+  {
+    name: "Apex Core Membership",
+    price: "$225",
+    cadence: "per month",
+    description: "Ongoing medical management with convenient, consistent follow-through.",
+    includes: ["Personalized treatment planning", "Clinically appropriate follow-ups", "Secure non-urgent messaging", "Prescription management", "Annual wellness planning"],
+  },
+  {
+    name: "Apex Performance Membership",
+    price: "$375",
+    cadence: "per month",
+    description: "Elevated access and deeper performance-focused care planning.",
+    includes: ["Everything in Apex Core", "Priority scheduling", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle, nutrition, and performance planning"],
+  },
+];
+
 export default function Home() {
   return (
     <main>
       <SiteHeader />
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Modern telehealth wellness care</p>
+          <p className="eyebrow">Concierge telehealth for modern health</p>
           <h1>
-            Gut health. Metabolic care.
-            <span className="headline-line">Men&apos;s vitality.</span>
-            <span className="headline-line">Longevity.</span>
-            <span className="headline-line">Wellness.</span>
+            Personalized care.
+            <span className="headline-line">Measurable progress.</span>
+            <span className="headline-line">Built around you.</span>
           </h1>
           <p className="hero-lede">
-            Apex Vitality offers focused telehealth care from a board-certified
-            medical team, with clear pathways for digestive wellness, adult
-            weight management, men&apos;s health, and longevity-focused care.
+            Apex Vitality provides discreet, clinician-led care by John Bagby,
+            MSN, FNP-C—combining thoughtful evaluation, evidence-informed treatment,
+            and convenient follow-through for long-term health and performance.
           </p>
           <div className="hero-actions">
-            <a className="primary-button" href="#visit">Start here</a>
+            <Link className="primary-button" href="/schedule">Schedule a consultation</Link>
             <Link className="secondary-button" href="/how-it-works">How care works</Link>
           </div>
           <div className="trust-row" aria-label="Clinic highlights">
-            <span>Gut & metabolic health</span><span>Board-certified medical team</span>
-            <span>Physician Medical Director oversight</span><span>Secure telehealth</span>
+            <span>Personalized care</span><span>Board-certified family nurse practitioner</span>
+            <span>Private &amp; convenient</span><span>Secure telehealth</span>
           </div>
         </div>
         <div className="hero-visual" aria-label="Telehealth consultation">
           <div className="hero-image-frame">
             <Image src="/telehealth-consult-v2.png" alt="Couple fully in view while meeting with a medical professional through telehealth" width={1672} height={941} priority />
           </div>
-          <div className="visit-card"><span>Private telehealth</span><strong>Focused, medically guided care</strong><p>Health history, goals, labs, and care-path review.</p></div>
+          <div className="visit-card"><span>Private telehealth</span><strong>Executive-level attention. Clinically grounded care.</strong><p>Your history, goals, biomarkers, and lifestyle considered together.</p></div>
         </div>
       </section>
 
       <section className="proof-strip" aria-label="Care principles">
         <div><strong>Evaluate</strong><span>symptoms, goals, history, lifestyle, and relevant biomarkers</span></div>
-        <div><strong>Personalize</strong><span>care guided by a board-certified medical team</span></div>
+        <div><strong>Personalize</strong><span>a plan shaped around your goals, history, and clinical needs</span></div>
         <div><strong>Progress</strong><span>structured follow-up with responsible plan adjustments</span></div>
       </section>
 
@@ -110,12 +133,29 @@ export default function Home() {
       </section>
 
       <section className="program-section">
-        <div className="section-heading"><p className="eyebrow">Program pathways</p><h2>Choose a starting point—not a prewritten prescription.</h2><p>Each pathway is a framework for evaluation and ongoing care. Specific testing and treatment are determined individually by the medical team.</p></div>
+        <div className="section-heading"><p className="eyebrow">Program pathways</p><h2>Choose a starting point—not a prewritten prescription.</h2><p>Each pathway is a framework for evaluation and ongoing care. Specific testing and treatment are determined individually after clinical review.</p></div>
         <div className="program-grid">
           {programs.map((program) => <article className="program-card" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul><Link className="quiz-button" href={program.quizHref}>{program.quizLabel} →</Link></article>)}
         </div>
         <div className="questionnaire-link"><Link className="secondary-dark-button" href="/questionnaires">View screening questionnaires &amp; medication review</Link></div>
-        <p className="program-note">Program pricing, service areas, and enrollment details will be published before patient intake opens.</p>
+        <p className="program-note">Clinical services are individualized. A consultation does not guarantee enrollment, testing, or a prescription.</p>
+      </section>
+
+      <section className="membership-section" id="memberships">
+        <div className="section-heading"><p className="eyebrow">Membership care</p><h2>Expert guidance with the access and continuity your health deserves.</h2><p>Begin with a comprehensive consultation. If ongoing care is appropriate, choose the level of access and support that fits your goals.</p></div>
+        <div className="membership-grid">
+          {memberships.map((membership, index) => (
+            <article className={`membership-card ${index === 2 ? "featured" : ""}`} key={membership.name}>
+              {index === 2 && <span className="membership-badge">Elevated access</span>}
+              <h3>{membership.name}</h3>
+              <p className="membership-price"><strong>{membership.price}</strong><span>{membership.cadence}</span></p>
+              <p>{membership.description}</p>
+              <ul>{membership.includes.map((item) => <li key={item}>{item}</li>)}</ul>
+              <Link className={index === 2 ? "primary-button" : "secondary-dark-button"} href={index === 0 ? "/schedule" : "/memberships"}>{index === 0 ? "Schedule consultation" : "View membership details"}</Link>
+            </article>
+          ))}
+        </div>
+        <p className="membership-note">Membership fees cover the professional services listed. Medications, laboratory testing, pharmacy charges, imaging, and outside services are separate unless expressly stated. Secure messaging is for non-urgent questions and is answered during business hours.</p>
       </section>
 
       <section className="lab-section" id="labs">
@@ -134,14 +174,14 @@ export default function Home() {
       </section>
 
       <section className="visit-section" id="visit">
-        <div className="visit-copy"><p className="eyebrow">Start online</p><h2>Prepare for a confidential consultation.</h2><p>A member of our board-certified medical team can review your health history, goals, medications, and potential care options once secure scheduling and intake are active.</p></div>
+        <div className="visit-copy"><p className="eyebrow">Start online</p><h2>Begin with a confidential consultation.</h2><p>Meet with John Bagby, MSN, FNP-C to review your health history, goals, medications, relevant data, and the care options that may be appropriate for you.</p></div>
         <div className="intake-form readiness-card">
-          <span className="status-pill">Secure scheduling in preparation</span>
-          <h3>Patient intake is not open yet.</h3>
-          <p>A secure scheduling and intake pathway will be activated before patient enrollment begins. Please do not send medical information through ordinary email or website messages.</p>
-          <Link className="primary-button" href="/patient-access">Open Patient Access</Link>
+          <span className="status-pill">Secure online scheduling</span>
+          <h3>Ready to take the next step?</h3>
+          <p>Schedule through Healthie, then complete the secure intake assigned to you. Please do not send medical information through ordinary email or website messages.</p>
+          <Link className="primary-button" href="/schedule">Schedule a consultation</Link>
           <Link className="text-link" href="/faq">Review common questions</Link>
-          <p className="form-note">Treatment is guided by our board-certified medical team and depends on clinical eligibility and service availability in your location.</p>
+          <p className="form-note">Treatment depends on individualized clinical evaluation, eligibility, and service availability in your location.</p>
         </div>
       </section>
       <SiteFooter />

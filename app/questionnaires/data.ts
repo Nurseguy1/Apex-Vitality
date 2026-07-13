@@ -60,7 +60,7 @@ export const questionnaires: Questionnaire[] = [
       },
       {
         title: "Required safety review",
-        note: "A “Yes” or “Not sure” answer does not make a decision by itself. It tells the medical team what needs careful review.",
+        note: "A “Yes” or “Not sure” answer does not make a decision by itself. It identifies what needs careful clinical review.",
         questions: [
           { id: "mens_cancer", label: "Do you have a personal history of prostate cancer or breast cancer, or are you currently being evaluated or treated for either?", type: "yesno", options: yesNo, required: true },
           { id: "mens_prostate", label: "Have you had an abnormal PSA, prostate biopsy, prostate nodule, or severe urinary symptoms?", type: "yesno", options: yesNo, required: true },

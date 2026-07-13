@@ -26,7 +26,7 @@ export default function GutHealthPage() {
         <div className="section-heading">
           <p className="eyebrow">A measured approach</p>
           <h2>Every test should answer a useful clinical question.</h2>
-          <p>Not every patient needs specialty testing. The medical team considers whether a result is likely to change recommendations before ordering a panel.</p>
+          <p>Not every patient needs specialty testing. Testing is considered only when a result is likely to answer a useful clinical question or change recommendations.</p>
         </div>
         <div className="service-grid light-grid">
           {evaluation.map(([title, copy]) => <article className="service-card" key={title}><h3>{title}</h3><p>{copy}</p></article>)}

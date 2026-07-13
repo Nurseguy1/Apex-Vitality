@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  ["1", "Request a consultation", "Choose the care area you want to discuss. Do not send sensitive medical details through ordinary email or unsecured forms."],
-  ["2", "Complete secure intake", "When scheduling is active, health information will be collected through an appropriate secure patient workflow."],
-  ["3", "Meet with our medical team", "Discuss symptoms, history, goals, medications, risks, and whether lab work or treatment may be appropriate with a board-certified medical professional."],
+  ["1", "Schedule a consultation", "Choose an available appointment through the secure Healthie scheduling experience."],
+  ["2", "Complete secure intake", "Provide your health history, medications, consent forms, and other requested information through Healthie before your visit."],
+  ["3", "Meet with John Bagby, MSN, FNP-C", "Discuss symptoms, history, goals, medications, risks, and whether laboratory testing or treatment may be appropriate."],
   ["4", "Review your plan", "Receive individualized recommendations, education, and clear expectations for follow-up."],
   ["5", "Measure and adjust", "When enrolled in care, follow-up helps assess progress, tolerability, labs, and next steps."],
 ];
@@ -36,8 +36,8 @@ export default function HowItWorksPage() {
         <p>If you may be experiencing a medical emergency, call 911 or seek immediate in-person care.</p>
       </section>
       <section className="healthie-handoff">
-        <div><p className="eyebrow">Secure next step</p><h2>Scheduling and intake through Healthie.</h2><p>When patient enrollment opens, appointments, health forms, medication review, and portal access will be handled through the secure patient workflow.</p></div>
-        <Link className="primary-button" href="/patient-access">Go to Patient Access</Link>
+        <div><p className="eyebrow">Secure next step</p><h2>Scheduling and care coordination through Healthie.</h2><p>Appointments, assigned health forms, medication review, secure messages, and portal access are handled through the protected patient workflow.</p></div>
+        <Link className="primary-button" href="/schedule">Schedule a consultation</Link>
       </section>
       <SiteFooter />
     </main>
