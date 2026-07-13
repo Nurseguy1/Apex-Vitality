@@ -14,12 +14,12 @@ export default function QuestionnairesPage() {
       <section className="questionnaire-hero">
         <p className="eyebrow">Patient screening questionnaires</p>
         <h1>Start with the right questions.</h1>
-        <p>Choose the questionnaire that best matches your goals. These quizzes help organize information for clinical review; they do not diagnose a condition or approve treatment.</p>
+        <p>Choose the questionnaire that best matches your goals, then complete the medication review required for every program. These quizzes help organize information for clinical review; they do not diagnose a condition or approve treatment.</p>
       </section>
       <section className="questionnaire-grid">
         {questionnaires.map((quiz, index) => (
           <article className={`questionnaire-card quiz-${quiz.accent}`} key={quiz.slug}>
-            <span>Questionnaire {index + 1} · {quiz.tier}</span>
+            <span>{index < 3 ? `Questionnaire ${index + 1}` : "Universal medication review"} · {quiz.tier}</span>
             <h2>{quiz.title}</h2>
             <p>{quiz.description}</p>
             <Link className="quiz-button" href={`/questionnaires/${quiz.slug}`}>Take this quiz →</Link>

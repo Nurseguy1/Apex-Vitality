@@ -114,7 +114,7 @@ export default function Home() {
         <div className="program-grid">
           {programs.map((program) => <article className="program-card" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul><Link className="quiz-button" href={program.quizHref}>{program.quizLabel} →</Link></article>)}
         </div>
-        <div className="questionnaire-link"><Link className="secondary-dark-button" href="/questionnaires">View all three screening questionnaires</Link></div>
+        <div className="questionnaire-link"><Link className="secondary-dark-button" href="/questionnaires">View screening questionnaires &amp; medication review</Link></div>
         <p className="program-note">Program pricing, service areas, and enrollment details will be published before patient intake opens.</p>
       </section>
 

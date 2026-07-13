@@ -155,6 +155,63 @@ export const questionnaires: Questionnaire[] = [
       },
     ],
   },
+  {
+    slug: "medication-review",
+    shortTitle: "Medication Review",
+    title: "Medication & Contraindication Review",
+    tier: "Required for all programs",
+    description: "A structured medication-reconciliation questionnaire that gives the clinical team the details needed to review allergies, interactions, duplicate therapy, and potential contraindications.",
+    accent: "teal",
+    sections: [
+      {
+        title: "Medication reconciliation",
+        note: "Include everything you take—even products used only as needed. Do not stop or change any medication because of this questionnaire unless your prescribing clinician tells you to do so.",
+        questions: [
+          { id: "med_name_1", label: "Medication 1: Enter the exact name, strength/dose, route (by mouth, injection, topical, etc.), how often you take it, reason for use, and prescribing clinician.", type: "text", required: true },
+          { id: "med_name_2", label: "Medication 2: Enter the exact name, strength/dose, route, frequency, reason for use, and prescribing clinician.", type: "text" },
+          { id: "med_name_3", label: "Medication 3: Enter the exact name, strength/dose, route, frequency, reason for use, and prescribing clinician.", type: "text" },
+          { id: "med_name_4", label: "Medication 4: Enter the exact name, strength/dose, route, frequency, reason for use, and prescribing clinician.", type: "text" },
+          { id: "med_name_5", label: "Medication 5: Enter the exact name, strength/dose, route, frequency, reason for use, and prescribing clinician.", type: "text" },
+          { id: "med_more", label: "List any additional prescription medications using the same details. If you take no prescription medications, enter “None” in Medication 1.", type: "text" },
+          { id: "med_recent", label: "Have you started, stopped, or changed the dose of any medication during the past 90 days? If yes, describe what changed, when, and why.", type: "text", required: true },
+          { id: "med_adherence", label: "Do you take any medication differently from the directions on its label, or have difficulty remembering or obtaining doses?", type: "yesno", options: yesNo, required: true },
+          { id: "med_pharmacy", label: "Enter your preferred pharmacy name, city/state, and telephone number.", type: "text", required: true },
+        ],
+      },
+      {
+        title: "Nonprescription products and exposures",
+        questions: [
+          { id: "med_otc", label: "List all over-the-counter medicines you use, including pain relievers, antacids, sleep aids, allergy/cold products, and laxatives. Include dose and frequency.", type: "text", required: true },
+          { id: "med_supplements", label: "List all vitamins, minerals, herbs, protein or performance products, probiotics, and other supplements. Include dose and frequency.", type: "text", required: true },
+          { id: "med_hormones", label: "List any hormones, peptides, compounded products, weight-management injections, or products obtained outside a traditional pharmacy. Include the source when known.", type: "text", required: true },
+          { id: "med_substances", label: "Do you use nicotine, cannabis, alcohol, stimulants, or other recreational substances? Describe the product, amount, and frequency.", type: "text", required: true },
+          { id: "med_other_pharmacy", label: "Do you fill prescriptions at more than one pharmacy, receive medications from multiple clinicians, or use mail-order/online pharmacies?", type: "yesno", options: yesNo, required: true },
+        ],
+      },
+      {
+        title: "Allergies and prior reactions",
+        questions: [
+          { id: "med_allergies", label: "List every medication allergy. For each, describe the reaction and approximately when it occurred. Enter “No known medication allergies” only if accurate.", type: "text", required: true },
+          { id: "med_severe_reaction", label: "Have you ever had anaphylaxis, facial or throat swelling, severe rash/blistering, breathing difficulty, or hospitalization after a medication?", type: "yesno", options: yesNo, required: true },
+          { id: "med_intolerance", label: "List medicines you avoid because of side effects or intolerance, even if they are not true allergies. Describe the reaction.", type: "text", required: true },
+          { id: "med_food_allergy", label: "List serious food, latex, adhesive, or other allergies that could affect treatment.", type: "text" },
+        ],
+      },
+      {
+        title: "High-priority interaction screening",
+        note: "Select all categories that apply. The list is intentionally broad and is not a determination that a medication is unsafe.",
+        questions: [
+          { id: "med_categories", label: "Are you currently using any of these medication categories?", type: "multi", required: true, options: ["Blood thinner or antiplatelet medication", "Insulin or medication that can lower blood sugar", "Blood-pressure or heart-rhythm medication", "Diuretic or water pill", "Opioid pain medication", "Benzodiazepine, sedative, or prescription sleep medication", "Antidepressant, mood stabilizer, antipsychotic, or stimulant", "Seizure medication", "Steroid or immune-suppressing medication", "Thyroid medication", "Hormone therapy or fertility medication", "Erectile-dysfunction medication or nitrate", "Weight-management or diabetes injection", "Isotretinoin or another medication with pregnancy precautions", "None of these", "Not sure"] },
+          { id: "med_conditions", label: "List medical conditions that may affect medication safety, including kidney, liver, heart, bleeding, seizure, eye, endocrine, gastrointestinal, psychiatric, or immune conditions.", type: "text", required: true },
+          { id: "med_pregnancy", label: "Are you pregnant, breastfeeding, trying to conceive, or planning pregnancy with a partner in the near future?", type: "yesno", options: yesNo, required: true },
+          { id: "med_procedure", label: "Do you have surgery, anesthesia, dental work, imaging with contrast, or another procedure planned in the next 90 days?", type: "yesno", options: yesNo, required: true },
+          { id: "med_symptoms", label: "Are you currently experiencing a possible serious medication reaction such as trouble breathing, facial swelling, fainting, chest pain, severe weakness, confusion, uncontrolled bleeding, or a widespread blistering rash?", type: "yesno", options: yesNo, required: true, help: "If yes and symptoms are severe or worsening, call emergency services now. Do not wait for a website response." },
+          { id: "med_questions", label: "What medication concerns or possible side effects would you like the clinician to review?", type: "text", required: true },
+          { id: "med_accuracy", label: "To the best of your knowledge, is this a complete and accurate list of everything you currently take?", type: "yesno", options: ["Yes", "No — I need help completing it"], required: true },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getQuestionnaire(slug: string) {
