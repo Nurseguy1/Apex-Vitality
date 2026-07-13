@@ -40,18 +40,24 @@ const programs = [
     title: "Metabolic & Gut Optimization Track",
     copy: "A coordinated pathway for digestive wellness, metabolic health, and medical weight-management goals.",
     includes: ["Initial medical evaluation", "Relevant lab review", "Personalized nutrition and lifestyle plan", "Structured clinical follow-up"],
+    quizHref: "/questionnaires/metabolic-weight",
+    quizLabel: "Take the metabolic screening",
   },
   {
     label: "Program 02",
     title: "Men's Vitality & Hormonal Optimization Track",
     copy: "A focused pathway for energy, sexual health, strength, recovery, body composition, and hormonal evaluation when indicated.",
     includes: ["Comprehensive men's health review", "Baseline and follow-up labs when needed", "Individualized clinical plan", "Secure follow-up and monitoring"],
+    quizHref: "/questionnaires/mens-vitality",
+    quizLabel: "Take the men’s vitality screening",
   },
   {
     label: "Program 03",
     title: "Elite Cellular Longevity & Regeneration Track",
     copy: "A comprehensive pathway connecting metabolic health, recovery, healthy aging, and advanced care conversations.",
     includes: ["Expanded biomarker review", "Gut, metabolic, and vitality coordination", "Priority care planning", "Advanced options only when lawful and appropriate"],
+    quizHref: "/questionnaires/gut-cellular",
+    quizLabel: "Take the gut & cellular health intake",
   },
 ];
 
@@ -106,8 +112,9 @@ export default function Home() {
       <section className="program-section">
         <div className="section-heading"><p className="eyebrow">Program pathways</p><h2>Choose a starting point—not a prewritten prescription.</h2><p>Each pathway is a framework for evaluation and ongoing care. Specific testing and treatment are determined individually by the medical team.</p></div>
         <div className="program-grid">
-          {programs.map((program) => <article className="program-card" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul></article>)}
+          {programs.map((program) => <article className="program-card" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul><Link className="quiz-button" href={program.quizHref}>{program.quizLabel} →</Link></article>)}
         </div>
+        <div className="questionnaire-link"><Link className="secondary-dark-button" href="/questionnaires">View all three screening questionnaires</Link></div>
         <p className="program-note">Program pricing, service areas, and enrollment details will be published before patient intake opens.</p>
       </section>
 

@@ -13,6 +13,7 @@ export function SiteHeader() {
         <Link href="/mens-health">Men&apos;s Health</Link>
         <Link href="/longevity">Longevity</Link>
         <Link href="/how-it-works">How It Works</Link>
+        <Link href="/questionnaires">Questionnaires</Link>
       </nav>
       <Link className="header-action" href="/#visit">
         Start here
@@ -35,6 +36,7 @@ export function SiteFooter() {
         <Link href="/longevity">Longevity</Link>
         <Link href="/how-it-works">How It Works</Link>
         <Link href="/faq">FAQ</Link>
+        <Link href="/questionnaires">Questionnaires</Link>
       </nav>
       <nav aria-label="Legal navigation">
         <Link href="/privacy">Privacy</Link>
