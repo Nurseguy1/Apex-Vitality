@@ -97,11 +97,14 @@ export default function Home() {
             <span className="headline-line">Measurable progress.</span>
             <span className="headline-line">Built around you.</span>
           </h1>
-          <p className="hero-lede">
-            Apex Vitality provides discreet, clinician-led care by John Bagby,
-            MSN, FNP-C—combining thoughtful evaluation, evidence-informed treatment,
-            and convenient follow-through for long-term health and performance.
-          </p>
+          <blockquote className="hero-quote">
+            <p className="hero-lede">
+              &ldquo;Apex Vitality provides discreet, clinician-led care—combining
+              thoughtful evaluation, evidence-informed treatment, and convenient
+              follow-through for long-term health and performance.&rdquo;
+            </p>
+            <cite>— John Bagby, MSN, FNP-C</cite>
+          </blockquote>
           <div className="hero-actions">
             <Link className="primary-button" href="/schedule">Schedule a consultation</Link>
             <Link className="secondary-button" href="/how-it-works">How care works</Link>

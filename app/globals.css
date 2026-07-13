@@ -194,7 +194,21 @@ footer p {
 
 .hero-lede {
   max-width: 620px;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
+}
+
+.hero-quote {
+  max-width: 620px;
+  margin: 0 0 30px;
+}
+
+.hero-quote cite {
+  display: block;
+  color: #e9a66c;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 760;
+  letter-spacing: .025em;
 }
 
 .hero .eyebrow {
