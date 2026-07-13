@@ -10,7 +10,10 @@ function safeHealthieUrl(value: string | undefined) {
 }
 
 export const healthieLinks = {
-  portal: safeHealthieUrl(process.env.NEXT_PUBLIC_HEALTHIE_PORTAL_URL),
+  portal: safeHealthieUrl(
+    process.env.NEXT_PUBLIC_HEALTHIE_PORTAL_URL ??
+      "https://secure.gethealthie.com/go/apexvitality",
+  ),
   booking: safeHealthieUrl(process.env.NEXT_PUBLIC_HEALTHIE_BOOKING_URL),
   intake: safeHealthieUrl(process.env.NEXT_PUBLIC_HEALTHIE_INTAKE_URL),
 };
