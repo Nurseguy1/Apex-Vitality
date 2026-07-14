@@ -197,6 +197,16 @@ footer p {
   margin-bottom: 14px;
 }
 
+.hero-tagline {
+  max-width: 620px;
+  margin: 0 0 18px;
+  color: #e9a66c;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 760;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
 .hero-quote {
   max-width: 620px;
   margin: 0 0 30px;

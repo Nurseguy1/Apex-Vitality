@@ -97,6 +97,7 @@ export default function Home() {
             <span className="headline-line">Measurable progress.</span>
             <span className="headline-line">Built around you.</span>
           </h1>
+          <p className="hero-tagline">Helping You Get Back to Health</p>
           <blockquote className="hero-quote">
             <p className="hero-lede">
               &ldquo;Apex Vitality provides discreet, clinician-led care combining
