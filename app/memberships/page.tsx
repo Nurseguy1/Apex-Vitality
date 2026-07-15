@@ -10,21 +10,21 @@ export const metadata: Metadata = {
 const options = [
   {
     name: "Comprehensive New Patient Consultation",
-    price: "$325",
+    price: "$325 USD",
     cadence: "one-time",
     intro: "A focused first step for understanding your goals, health history, and appropriate care options.",
     features: ["Unhurried clinical evaluation", "Health, medication, and risk review", "Relevant laboratory planning", "Personalized recommendations and next steps"],
   },
   {
     name: "Apex Core Membership",
-    price: "$225",
+    price: "$225 USD",
     cadence: "per month",
     intro: "Designed for patients who value consistent access and ongoing medical management.",
-    features: ["Personalized treatment planning", "Clinically appropriate follow-up visits", "Secure non-urgent messaging during business hours", "Treatment adjustments and prescription management", "Annual wellness planning", "Preferred pricing on selected laboratory services when available"],
+    features: ["Personalized treatment planning", "Clinically appropriate follow-up visits", "Secure non-urgent messaging during business hours", "Care-plan coordination and treatment management", "Annual wellness planning", "Preferred pricing on selected laboratory services when available"],
   },
   {
     name: "Apex Performance Membership",
-    price: "$375",
+    price: "$375 USD",
     cadence: "per month",
     intro: "For patients seeking elevated access and a deeper focus on performance, prevention, and long-term progress.",
     features: ["Everything in Apex Core", "Priority scheduling, subject to availability", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle and nutrition guidance", "Annual advanced laboratory interpretation", "Performance optimization planning"],

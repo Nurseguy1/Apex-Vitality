@@ -22,11 +22,10 @@ export default function LongevityPage() {
         </div>
       </section>
       <section className="content-split">
-        <div><p className="eyebrow">Advanced care conversations</p><h2>Eligibility, legality, and evidence come first.</h2><p>Some patients may ask about compounded medications or advanced therapies. These are never automatic and may be unavailable. Any treatment discussion requires an established clinical relationship, individualized evaluation, informed consent, appropriate monitoring, and a lawful source.</p></div>
+        <div><p className="eyebrow">Individualized care conversations</p><h2>Eligibility, legality, and evidence come first.</h2><p>Additional medical options are never automatic and may be unavailable. Any treatment discussion requires an established clinical relationship, individualized evaluation, informed consent, appropriate monitoring, and compliance with applicable law.</p></div>
         <ul className="check-list">
-          <li>No research-use-only substances</li>
           <li>No guaranteed performance or anti-aging outcomes</li>
-          <li>No medication based solely on an online questionnaire</li>
+          <li>No treatment based solely on an online questionnaire</li>
           <li>No treatment without appropriate follow-up</li>
         </ul>
       </section>

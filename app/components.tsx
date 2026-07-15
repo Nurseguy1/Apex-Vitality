@@ -36,8 +36,8 @@ export function SiteFooter() {
         <Link href="/how-it-works">How It Works</Link>
         <Link href="/memberships">Memberships &amp; Pricing</Link>
         <Link href="/faq">FAQ</Link>
-        <Link href="/questionnaires">Questionnaires</Link>
         <Link href="/patient-access">Patient Access</Link>
+        <Link href="/contact">Contact</Link>
       </nav>
       <nav aria-label="Legal navigation">
         <Link href="/privacy">Privacy</Link>
@@ -81,9 +81,9 @@ export function CareNotice() {
     <aside className="care-notice">
       <strong>Care starts with clinical review.</strong>
       <p>
-        Medication is prescribed only when John Bagby, MSN, FNP-C determines
-        it is medically appropriate after an individualized clinical evaluation. Specific options are discussed privately
-        through the secure clinical process. Lab work and follow-up may be required.
+        Every care plan is based on an individualized clinical evaluation by
+        John Bagby, MSN, FNP-C. Specific recommendations are discussed privately
+        through the secure clinical process, with appropriate monitoring and follow-up.
       </p>
     </aside>
   );

@@ -40,45 +40,39 @@ const programs = [
     title: "Metabolic & Gut Optimization Track",
     copy: "A coordinated pathway for digestive wellness, metabolic health, and medical weight-management goals.",
     includes: ["Initial medical evaluation", "Relevant lab review", "Personalized nutrition and lifestyle plan", "Structured clinical follow-up"],
-    quizHref: "/questionnaires/metabolic-weight",
-    quizLabel: "Take the metabolic screening",
   },
   {
     label: "Program 02",
     title: "Men's Vitality & Hormonal Optimization Track",
     copy: "A focused pathway for energy, sexual health, strength, recovery, body composition, and hormonal evaluation when indicated.",
     includes: ["Comprehensive men's health review", "Baseline and follow-up labs when needed", "Individualized clinical plan", "Secure follow-up and monitoring"],
-    quizHref: "/questionnaires/mens-vitality",
-    quizLabel: "Take the men’s vitality screening",
   },
   {
     label: "Program 03",
-    title: "Elite Cellular Longevity & Regeneration Track",
+    title: "Apex Longevity & Preventive Wellness Track",
     copy: "A comprehensive pathway connecting metabolic health, recovery, healthy aging, and advanced care conversations.",
     includes: ["Expanded biomarker review", "Gut, metabolic, and vitality coordination", "Priority care planning", "Advanced options only when lawful and appropriate"],
-    quizHref: "/questionnaires/gut-cellular",
-    quizLabel: "Take the gut & cellular health intake",
   },
 ];
 
 const memberships = [
   {
     name: "Comprehensive New Patient Consultation",
-    price: "$325",
+    price: "$325 USD",
     cadence: "one-time",
     description: "An unhurried clinical evaluation and personalized starting plan.",
     includes: ["Detailed health and goal review", "Medication and risk-factor review", "Relevant lab planning", "Personalized next steps"],
   },
   {
     name: "Apex Core Membership",
-    price: "$225",
+    price: "$225 USD",
     cadence: "per month",
     description: "Ongoing medical management with convenient, consistent follow-through.",
     includes: ["Personalized treatment planning", "Clinically appropriate follow-ups", "Secure non-urgent messaging", "Prescription management", "Annual wellness planning"],
   },
   {
     name: "Apex Performance Membership",
-    price: "$375",
+    price: "$375 USD",
     cadence: "per month",
     description: "Elevated access and deeper performance-focused care planning.",
     includes: ["Everything in Apex Core", "Priority scheduling", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle, nutrition, and performance planning"],
@@ -139,9 +133,8 @@ export default function Home() {
       <section className="program-section">
         <div className="section-heading"><p className="eyebrow">Program pathways</p><h2>Choose a starting point—not a prewritten prescription.</h2><p>Each pathway is a framework for evaluation and ongoing care. Specific testing and treatment are determined individually after clinical review.</p></div>
         <div className="program-grid">
-          {programs.map((program) => <article className="program-card" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul><Link className="quiz-button" href={program.quizHref}>{program.quizLabel} →</Link></article>)}
+          {programs.map((program) => <article className="program-card" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul></article>)}
         </div>
-        <div className="questionnaire-link"><Link className="secondary-dark-button" href="/questionnaires">View screening questionnaires &amp; medication review</Link></div>
         <p className="program-note">Clinical services are individualized. A consultation does not guarantee enrollment, testing, or a prescription.</p>
       </section>
 
