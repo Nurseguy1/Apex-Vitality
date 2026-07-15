@@ -45,6 +45,12 @@ test("server-renders the membership details and pricing safeguards", async () =>
   assert.match(html, /Secure messaging is intended for non-urgent questions/);
   assert.match(html, /does not guarantee a prescription/);
   assert.match(html, /Schedule securely through Healthie/);
+  assert.match(html, /href="https:\/\/buy\.stripe\.com\/eVq9AU1BJ7i00Cr9JOfnO00"/);
+  assert.match(html, /href="https:\/\/buy\.stripe\.com\/5kQcN6cgn1XG0Crg8cfnO01"/);
+  assert.match(html, /href="https:\/\/buy\.stripe\.com\/cNieVe3JRfOwbh5bRWfnO02"/);
+  assert.match(html, /Pay securely with Stripe/);
+  assert.match(html, /Start Apex Core/);
+  assert.match(html, /Start Apex Performance/);
 });
 
 test("server-renders public payment and customer-service policies", async () => {

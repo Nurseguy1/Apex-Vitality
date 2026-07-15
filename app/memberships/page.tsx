@@ -14,6 +14,8 @@ const options = [
     cadence: "one-time",
     intro: "A focused first step for understanding your goals, health history, and appropriate care options.",
     features: ["Unhurried clinical evaluation", "Health, medication, and risk review", "Relevant laboratory planning", "Personalized recommendations and next steps"],
+    checkoutUrl: "https://buy.stripe.com/eVq9AU1BJ7i00Cr9JOfnO00",
+    checkoutLabel: "Pay securely with Stripe",
   },
   {
     name: "Apex Core Membership",
@@ -21,6 +23,8 @@ const options = [
     cadence: "per month",
     intro: "Designed for patients who value consistent access and ongoing medical management.",
     features: ["Personalized treatment planning", "Clinically appropriate follow-up visits", "Secure non-urgent messaging during business hours", "Care-plan coordination and treatment management", "Annual wellness planning", "Preferred pricing on selected laboratory services when available"],
+    checkoutUrl: "https://buy.stripe.com/5kQcN6cgn1XG0Crg8cfnO01",
+    checkoutLabel: "Start Apex Core",
   },
   {
     name: "Apex Performance Membership",
@@ -28,6 +32,8 @@ const options = [
     cadence: "per month",
     intro: "For patients seeking elevated access and a deeper focus on performance, prevention, and long-term progress.",
     features: ["Everything in Apex Core", "Priority scheduling, subject to availability", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle and nutrition guidance", "Annual advanced laboratory interpretation", "Performance optimization planning"],
+    checkoutUrl: "https://buy.stripe.com/cNieVe3JRfOwbh5bRWfnO02",
+    checkoutLabel: "Start Apex Performance",
   },
 ];
 
@@ -48,7 +54,7 @@ export default function MembershipsPage() {
             <p className="membership-price"><strong>{option.price}</strong><span>{option.cadence}</span></p>
             <p>{option.intro}</p>
             <ul>{option.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
-            <Link className="primary-button" href="/schedule">{index === 0 ? "Schedule your consultation" : "Start with a consultation"}</Link>
+            <a className="primary-button" href={option.checkoutUrl} rel="noreferrer" target="_blank">{option.checkoutLabel}</a>
           </article>
         ))}
       </section>
