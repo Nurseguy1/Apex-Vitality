@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { CareNotice, PageIntro, SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
-  title: "Medical Weight Loss | Apex Vitality",
+  title: "Medical Weight Management | Apex Vitality",
   description: "Clinician-guided telehealth weight-management care for eligible adults.",
 };
 
 const features = [
   ["Clinical evaluation", "John Bagby, MSN, FNP-C reviews your health history, goals, medications, and potential risk factors."],
-  ["Individual care plan", "Recommendations may include nutrition, activity, behavior change, lab work, and medication when appropriate."],
+  ["Individual care plan", "Recommendations may include nutrition, activity, behavior change, relevant testing, and other clinically appropriate options."],
   ["Ongoing follow-up", "Progress, tolerability, and next steps are reviewed over time so the plan can be adjusted responsibly."],
 ];
 
@@ -39,7 +39,7 @@ export default function WeightLossPage() {
           <p>
             Medical treatment options may be discussed for eligible patients, but
             they are not right for everyone. Your medical provider considers medical
-            history, current medications, contraindications, potential benefits, and risks.
+            history, current treatments, contraindications, potential benefits, and risks.
           </p>
         </div>
         <ul className="check-list">

@@ -30,6 +30,7 @@ test("server-renders the premium Apex Vitality home page", async () => {
   assert.match(html, /\$225/);
   assert.match(html, /Apex Performance Membership/);
   assert.match(html, /\$375/);
+  assert.match(html, /USD/);
   assert.match(html, /href="\/schedule"/);
   assert.doesNotMatch(html, /physician-led|collaborative agreement|Patient intake is not open yet/i);
 });
@@ -44,4 +45,19 @@ test("server-renders the membership details and pricing safeguards", async () =>
   assert.match(html, /Secure messaging is intended for non-urgent questions/);
   assert.match(html, /does not guarantee a prescription/);
   assert.match(html, /Schedule securely through Healthie/);
+});
+
+test("server-renders public payment and customer-service policies", async () => {
+  const termsResponse = await render("/terms");
+  assert.equal(termsResponse.status, 200);
+  const terms = await termsResponse.text();
+  assert.match(terms, /\$150 USD fee/);
+  assert.match(terms, /at least 24 hours/);
+  assert.match(terms, /original payment method/);
+
+  const contactResponse = await render("/contact");
+  assert.equal(contactResponse.status, 200);
+  const contact = await contactResponse.text();
+  assert.match(contact, /billing questions/);
+  assert.match(contact, /refund requests/);
 });
