@@ -164,6 +164,10 @@ h1 {
   display: block;
 }
 
+.headline-line + .headline-line {
+  margin-top: 0.12em;
+}
+
 .hero h1,
 .hero .hero-lede {
   color: white;
