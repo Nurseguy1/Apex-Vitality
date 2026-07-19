@@ -66,7 +66,7 @@ export default function MembershipsPage() {
           <p><strong>Clinical decisions:</strong> Membership does not guarantee a prescription, a specific therapy, or acceptance into every program. Recommendations follow individualized clinical evaluation.</p>
         </div>
       </section>
-      <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start with a comprehensive consultation.</h2><p>We will review your goals and determine whether an Apex membership or another care path is the right fit.</p></div><Link className="primary-button" href="/schedule">Schedule securely through Healthie</Link></section>
+      <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start with a comprehensive consultation.</h2><p>We will review your goals and determine whether an Apex membership or another care path is the right fit.</p></div><Link className="primary-button" href="/schedule">Pay and schedule securely</Link></section>
       <SiteFooter />
     </main>
   );

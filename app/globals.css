@@ -410,17 +410,23 @@ footer p {
 .patient-access-grid .primary-button,
 .patient-access-grid .pending-button { width: fit-content; margin-top: auto; }
 .pending-button { display: inline-flex; padding: 13px 17px; border: 1px solid var(--line); border-radius: 999px; background: #eef1f1; color: var(--muted); font-weight: 720; }
-.healthie-status { margin: 0 clamp(20px, 5vw, 72px) clamp(60px, 8vw, 100px); padding: 26px 30px; border-left: 4px solid var(--copper); background: #fff4eb; }
-.healthie-status.is-ready { border-left-color: var(--teal); background: #e7f3f0; }
-.healthie-status p { max-width: 900px; margin: 8px 0; color: var(--muted); line-height: 1.65; }
+.portal-status { margin: 0 clamp(20px, 5vw, 72px) clamp(60px, 8vw, 100px); padding: 26px 30px; border-left: 4px solid var(--copper); background: #fff4eb; }
+.portal-status.is-ready { border-left-color: var(--teal); background: #e7f3f0; }
+.portal-status p { max-width: 900px; margin: 8px 0; color: var(--muted); line-height: 1.65; }
 .footer-portal-link { color: #b9e6e0; font-weight: 720; }
-.healthie-handoff { display: flex; gap: 30px; align-items: center; justify-content: space-between; padding: clamp(52px, 7vw, 90px) clamp(20px, 5vw, 72px); background: linear-gradient(135deg, #dcefe9, #e6eef7); }
-.healthie-handoff > div { max-width: 760px; }
-.healthie-handoff p { color: var(--muted); font-size: 17px; line-height: 1.65; }
+.portal-handoff { display: flex; gap: 30px; align-items: center; justify-content: space-between; padding: clamp(52px, 7vw, 90px) clamp(20px, 5vw, 72px); background: linear-gradient(135deg, #dcefe9, #e6eef7); }
+.portal-handoff > div { max-width: 760px; }
+.portal-handoff p { color: var(--muted); font-size: 17px; line-height: 1.65; }
 
 .schedule-intro { padding: clamp(62px, 8vw, 104px) clamp(20px, 8vw, 150px); background: linear-gradient(135deg, #11191c, #164c52); color: white; }
 .schedule-intro h1 { max-width: 850px; }
 .schedule-intro > p:last-child { max-width: 720px; color: rgb(255 255 255 / .76); font-size: 18px; line-height: 1.65; }
+.booking-steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; padding: clamp(38px, 5vw, 64px) clamp(20px, 6vw, 90px) 0; background: #f7f4ef; }
+.booking-steps article { padding: 30px; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: 0 18px 45px rgb(17 25 28 / .07); }
+.booking-steps article > span { color: var(--copper); font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.booking-steps h2 { margin: 12px 0 8px; font-size: clamp(25px, 3vw, 34px); }
+.booking-steps p { color: var(--muted); line-height: 1.65; }
+.booking-steps .primary-button { margin-top: 10px; }
 .scheduler-section { padding: clamp(38px, 6vw, 72px) clamp(14px, 5vw, 72px); }
 .scheduler-frame { overflow: hidden; max-width: 1160px; margin: 0 auto; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: 0 22px 60px rgb(17 25 28 / .1); }
 .scheduler-frame iframe { display: block; width: 100%; min-height: 760px; border: 0; }
@@ -429,10 +435,11 @@ footer p {
 .scheduler-pending { max-width: 760px; margin: 0 auto; padding: 46px; border-radius: 18px; background: white; box-shadow: 0 20px 50px rgb(17 25 28 / .08); text-align: center; }
 
 @media (max-width: 900px) {
+  .booking-steps { grid-template-columns: 1fr; }
   .questionnaire-grid { grid-template-columns: 1fr; }
   .patient-access-grid { grid-template-columns: 1fr; }
   .patient-access-grid article { min-height: 0; }
-  .healthie-handoff { align-items: flex-start; flex-direction: column; }
+  .portal-handoff { align-items: flex-start; flex-direction: column; }
   .questionnaire-card { min-height: 0; }
 }
 

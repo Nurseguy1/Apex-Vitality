@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { healthieLinks } from "./lib/healthie";
+import { charmLinks } from "./lib/charm";
 
 export function SiteHeader() {
   return (
@@ -49,7 +49,7 @@ export function SiteFooter() {
         Availability and eligibility vary by location and individual circumstances.
         Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation.
       </p>
-      {healthieLinks.portal && <a className="footer-portal-link" href={healthieLinks.portal} rel="noreferrer" target="_blank">Secure Healthie patient login ↗</a>}
+      {charmLinks.portal && <a className="footer-portal-link" href={charmLinks.portal} rel="noreferrer" target="_blank">Secure Charm patient login ↗</a>}
     </footer>
   );
 }

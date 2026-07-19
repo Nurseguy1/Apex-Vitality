@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  ["1", "Schedule a consultation", "Choose an available appointment through the secure Healthie scheduling experience."],
-  ["2", "Complete secure intake", "Provide your health history, medications, consent forms, and other requested information through Healthie before your visit."],
+  ["1", "Pay and schedule", "Pay the consultation fee securely through Stripe, then choose an available 45-minute appointment through CharmHealth."],
+  ["2", "Complete secure intake", "Provide your health history, medications, consent forms, and other requested information through the Charm patient portal before your visit."],
   ["3", "Meet with John Bagby, MSN, FNP-C", "Discuss symptoms, history, goals, medications, risks, and whether laboratory testing or treatment may be appropriate."],
   ["4", "Review your plan", "Receive individualized recommendations, education, and clear expectations for follow-up."],
   ["5", "Measure and adjust", "When enrolled in care, follow-up helps assess progress, tolerability, labs, and next steps."],
@@ -35,8 +35,8 @@ export default function HowItWorksPage() {
         <strong>Not for emergencies.</strong>
         <p>If you may be experiencing a medical emergency, call 911 or seek immediate in-person care.</p>
       </section>
-      <section className="healthie-handoff">
-        <div><p className="eyebrow">Secure next step</p><h2>Scheduling and care coordination through Healthie.</h2><p>Appointments, assigned health forms, medication review, secure messages, and portal access are handled through the protected patient workflow.</p></div>
+      <section className="portal-handoff">
+        <div><p className="eyebrow">Secure next step</p><h2>Payment through Stripe. Care coordination through CharmHealth.</h2><p>Appointments, assigned health forms, medication review, secure messages, and portal access are handled through the protected patient workflow.</p></div>
         <Link className="primary-button" href="/schedule">Schedule a consultation</Link>
       </section>
       <SiteFooter />

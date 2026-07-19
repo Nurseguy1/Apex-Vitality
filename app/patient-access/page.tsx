@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
-import { healthieLinks } from "../lib/healthie";
+import { charmLinks } from "../lib/charm";
 
 export const metadata: Metadata = {
   title: "Secure Patient Access | Apex Vitality",
@@ -12,19 +12,19 @@ const accessItems = [
   {
     title: "Schedule a consultation",
     copy: "Choose an available visit type and begin the secure onboarding process.",
-    href: healthieLinks.booking ? "/schedule" : null,
+    href: charmLinks.booking ? "/schedule" : null,
     label: "Open secure scheduling",
   },
   {
     title: "Complete secure intake",
     copy: "Submit health history, medication information, consent forms, and program questionnaires through the protected patient workflow.",
-    href: healthieLinks.intake,
-    label: "Open secure intake",
+    href: charmLinks.portal,
+    label: "Open Charm patient portal",
   },
   {
     title: "Existing patient login",
-    copy: "Access appointments, assigned forms, messages, care plans, and account information in the Healthie patient portal.",
-    href: healthieLinks.portal,
+    copy: "Access appointments, assigned forms, messages, and account information in the Charm patient portal.",
+    href: charmLinks.portal,
     label: "Log in to the patient portal",
   },
 ];
@@ -35,8 +35,8 @@ export default function PatientAccessPage() {
       <SiteHeader />
       <section className="patient-access-hero">
         <p className="eyebrow">Secure patient access</p>
-        <h1>Your care journey, connected through Healthie.</h1>
-        <p>Scheduling, clinical intake, assigned forms, and patient communication will take place through Apex Vitality&apos;s secure Healthie workflow.</p>
+        <h1>Your care journey, connected through CharmHealth.</h1>
+        <p>Scheduling, clinical intake, assigned forms, and patient communication take place through Apex Vitality&apos;s secure CharmHealth workflow.</p>
       </section>
       <section className="patient-access-grid">
         {accessItems.map((item, index) => (
@@ -52,10 +52,10 @@ export default function PatientAccessPage() {
           </article>
         ))}
       </section>
-      <aside className={`healthie-status ${healthieLinks.booking && healthieLinks.portal ? "is-ready" : ""}`}>
-        <strong>{healthieLinks.booking && healthieLinks.portal ? "Secure scheduling and portal access are active." : "Healthie connection is being prepared."}</strong>
-        <p>{healthieLinks.booking && healthieLinks.portal ? "Schedule above or use the patient portal. Assigned intake forms will appear in your secure Healthie account." : "Please do not send medical information through ordinary email or unsecured website messages. These buttons will activate after the clinic’s Healthie links are connected."}</p>
-        {!(healthieLinks.booking && healthieLinks.portal) && <Link className="text-link" href="/questionnaires">Preview the screening questionnaires →</Link>}
+      <aside className={`portal-status ${charmLinks.booking && charmLinks.portal ? "is-ready" : ""}`}>
+        <strong>{charmLinks.booking && charmLinks.portal ? "Secure scheduling and portal access are active." : "CharmHealth connection is being prepared."}</strong>
+        <p>{charmLinks.booking && charmLinks.portal ? "Schedule above or use the patient portal. Assigned intake forms will appear in your secure Charm account." : "Please do not send medical information through ordinary email or unsecured website messages."}</p>
+        {!(charmLinks.booking && charmLinks.portal) && <Link className="text-link" href="/questionnaires">Preview the screening questionnaires →</Link>}
       </aside>
       <SiteFooter />
     </main>

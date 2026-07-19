@@ -175,7 +175,7 @@ export default function Home() {
         <div className="intake-form readiness-card">
           <span className="status-pill">Secure online scheduling</span>
           <h3>Ready to take the next step?</h3>
-          <p>Schedule through Healthie, then complete the secure intake assigned to you. Please do not send medical information through ordinary email or website messages.</p>
+          <p>Pay securely through Stripe, schedule through CharmHealth, then complete the intake assigned in your patient portal. Please do not send medical information through ordinary email or website messages.</p>
           <Link className="primary-button" href="/schedule">Schedule a consultation</Link>
           <Link className="text-link" href="/faq">Review common questions</Link>
           <p className="form-note">Treatment depends on individualized clinical evaluation, eligibility, and service availability in your location.</p>

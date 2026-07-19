@@ -15,7 +15,7 @@ const questions = [
   ["Are specific treatments included automatically?", "No. Recommendations depend on individualized evaluation, clinical appropriateness, informed consent, monitoring needs, and applicable law."],
   ["What does the initial consultation cost?", "The comprehensive new patient consultation is $325 USD. It includes an individualized clinical evaluation and care planning, but does not guarantee a prescription or membership enrollment."],
   ["What do memberships cost?", "Apex Core is $225 USD per month and Apex Performance is $375 USD per month. Medications, laboratory testing, pharmacy charges, imaging, and outside services are separate unless expressly stated."],
-  ["Can I send medical information through ordinary email?", "No. Use the secure Healthie workflow for medical information, forms, messages, and appointments. Do not send sensitive medical information through ordinary email or general website channels."],
+  ["Can I send medical information through ordinary email?", "No. Use the secure CharmHealth patient portal for medical information, forms, messages, and appointments. Do not send sensitive medical information through ordinary email or general website channels."],
   ["Where is care available?", "Availability depends on clinician licensure, applicable telehealth rules, and the services offered in your location. Confirm availability before relying on the service."],
   ["Is this website medical advice?", "No. Website content is general education and does not replace professional medical advice, diagnosis, treatment, or emergency care."],
 ];
