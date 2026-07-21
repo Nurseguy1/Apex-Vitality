@@ -38,7 +38,7 @@ export default function SchedulePage() {
               loading="eager"
               referrerPolicy="strict-origin-when-cross-origin"
             />
-            <p>Secure scheduling provided by CharmHealth. If the calendar does not load, <a href={charmLinks.booking} rel="noreferrer" target="_blank">open scheduling in a new window ↗</a></p>
+            <p>Secure scheduling provided by CharmHealth. If the calendar does not load, refresh this page or contact Apex Vitality for scheduling assistance.</p>
           </div>
         ) : (
           <div className="scheduler-pending"><h2>Online scheduling is being configured.</h2><p>Please return soon. Do not send medical information through ordinary email.</p></div>
