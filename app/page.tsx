@@ -4,6 +4,11 @@ import { SiteFooter, SiteHeader } from "./components";
 
 const services = [
   {
+    title: "Functional health & longevity",
+    copy: "A whole-person pathway connecting symptoms, nutrition, metabolic health, recovery, biomarkers, and evidence-informed wellness options.",
+    href: "/functional-health",
+  },
+  {
     title: "Gut health & digestive wellness",
     copy: "A structured evaluation of symptoms, nutrition, lifestyle, medications, and selected laboratory findings when clinically appropriate.",
     href: "/gut-health",
@@ -19,9 +24,9 @@ const services = [
     href: "/mens-health",
   },
   {
-    title: "Longevity & cellular wellness",
-    copy: "A goal-based program focused on biomarkers, metabolic resilience, recovery, healthy aging, and evidence-informed care options.",
-    href: "/longevity",
+    title: "Women's health & healthy aging",
+    copy: "Adult telehealth support for perimenopause, menopause, metabolic health, thyroid concerns, sleep, energy, and long-term wellness.",
+    href: "/womens-health",
   },
 ];
 
@@ -49,9 +54,9 @@ const programs = [
   },
   {
     label: "Program 03",
-    title: "Apex Longevity & Preventive Wellness Track",
-    copy: "A comprehensive pathway connecting metabolic health, recovery, healthy aging, and advanced care conversations.",
-    includes: ["Expanded biomarker review", "Gut, metabolic, and vitality coordination", "Priority care planning", "Advanced options only when lawful and appropriate"],
+    title: "Functional Health & Longevity Track",
+    copy: "A comprehensive pathway connecting metabolic health, digestive wellness, recovery, healthy aging, and women's or men's health goals.",
+    includes: ["Goal-directed biomarker review", "Nutrition and supplement review when appropriate", "Men's or women's healthy-aging support", "Specialty testing only when it may change care"],
   },
 ];
 
@@ -124,7 +129,7 @@ export default function Home() {
       </section>
 
       <section className="service-band" id="programs">
-        <div className="section-heading"><p className="eyebrow">Four connected care paths</p><h2>Start with your goals. Build from your data.</h2><p>Programs can stand alone or work together when multiple areas of health overlap.</p></div>
+        <div className="section-heading"><p className="eyebrow">Connected care paths</p><h2>Start with your goals. Build from your data.</h2><p>Programs can stand alone or work together when multiple areas of health overlap.</p></div>
         <div className="service-grid">
           {services.map((service) => <article className="service-card" key={service.title}><h3>{service.title}</h3><p>{service.copy}</p><Link className="text-link" href={service.href}>Explore this care path →</Link></article>)}
         </div>
