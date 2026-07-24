@@ -4,6 +4,11 @@ import { SiteFooter, SiteHeader } from "./components";
 
 const services = [
   {
+    title: "NAD+ focused evaluation",
+    copy: "A streamlined clinical evaluation for adults interested in NAD+-related care, with treatment dependent on medical review.",
+    href: "/nad-plus",
+  },
+  {
     title: "Functional health & longevity",
     copy: "A whole-person pathway connecting symptoms, nutrition, metabolic health, recovery, biomarkers, and evidence-informed wellness options.",
     href: "/functional-health",

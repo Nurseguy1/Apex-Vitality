@@ -11,6 +11,7 @@ export function SiteHeader() {
       <nav className="nav-links" aria-label="Main navigation">
         <Link href="/memberships">Memberships</Link>
         <Link href="/functional-health">Functional Health</Link>
+        <Link href="/nad-plus">NAD+</Link>
         <Link href="/mens-health">Men&apos;s Health</Link>
         <Link href="/womens-health">Women&apos;s Health</Link>
         <Link href="/how-it-works">How It Works</Link>
@@ -32,6 +33,7 @@ export function SiteFooter() {
         <Link href="/gut-health">Gut Health</Link>
         <Link href="/weight-loss">Metabolic Health</Link>
         <Link href="/functional-health">Functional Health &amp; Longevity</Link>
+        <Link href="/nad-plus">NAD+ Focused Evaluation</Link>
         <Link href="/mens-health">Men&apos;s Health</Link>
         <Link href="/womens-health">Women&apos;s Health</Link>
         <Link href="/longevity">Longevity</Link>
