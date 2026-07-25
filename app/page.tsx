@@ -11,6 +11,20 @@ const services = [
     cta: "Explore NAD+ care",
   },
   {
+    category: "Sermorelin Care",
+    title: "Strengthen Sleep, Recovery & Healthy Aging",
+    copy: "Support natural growth-hormone signaling with focused care for sleep, recovery, strength, body composition, and vitality.",
+    href: "/sermorelin",
+    cta: "Explore sermorelin care",
+  },
+  {
+    category: "Peptide Monitoring",
+    title: "Already Using BPC-157 or Other Peptides? Add Medical Oversight",
+    copy: "Move from online peptide purchases and self-directed protocols to confidential product review, health monitoring, and lawful clinician-guided alternatives.",
+    href: "/peptide-care",
+    cta: "Start monitored peptide care",
+  },
+  {
     category: "Longevity & Functional Health",
     title: "Build Your Longevity & Functional Health Plan",
     copy: "Connect the dots between symptoms, nutrition, metabolic health, recovery, biomarkers, and the way you want to live.",
@@ -166,7 +180,7 @@ export default function Home() {
             <ul>
               <li>Gut, metabolic, men&apos;s, or women&apos;s health</li>
               <li><strong>Longevity &amp; Functional Health</strong></li>
-              <li><strong>NAD+ Evaluation &amp; Comprehensive Care</strong></li>
+              <li><strong>NAD+, Sermorelin &amp; Peptide Monitoring</strong></li>
             </ul>
             <Link className="secondary-dark-button care-path-button" href="/questionnaires">Start My Self-Assessment</Link>
           </article>

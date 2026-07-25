@@ -464,6 +464,82 @@ footer p {
 .focused-care-lede { max-width: 720px; color: rgb(255 255 255 / .76); font-size: 19px; line-height: 1.7; }
 .focused-care-note { max-width: 700px; margin: -8px 0 0; color: rgb(255 255 255 / .7); font-size: 14px; line-height: 1.6; }
 
+.sermorelin-hero {
+  background:
+    radial-gradient(circle at 12% 20%, rgb(83 145 151 / .24), transparent 32%),
+    linear-gradient(135deg, #102c34, #1a3b42 58%, #234c50);
+}
+
+.sermorelin-audiences { background: #edf2f0; }
+.sermorelin-learning-center { background: #193940; }
+.sermorelin-article-header {
+  background:
+    radial-gradient(circle at 84% 14%, rgb(91 160 158 / .27), transparent 34%),
+    #15343b;
+}
+.sermorelin-article-cta { background: #d8e7e2; }
+
+.peptide-care-hero {
+  background:
+    radial-gradient(circle at 84% 16%, rgb(94 154 158 / .25), transparent 31%),
+    linear-gradient(135deg, #102a32, #183941 58%, #21464b);
+}
+
+.peptide-conversion-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr);
+  gap: 48px 72px;
+  align-items: center;
+  padding: 86px clamp(20px, 6vw, 92px);
+  background: #edf2f0;
+}
+
+.peptide-conversion-section h2,
+.peptide-next-step h2 { font-size: clamp(38px, 5.5vw, 66px); }
+
+.peptide-conversion-section p,
+.peptide-next-step > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.peptide-goal-list { display: grid; gap: 12px; }
+.peptide-goal-list span {
+  padding: 18px 20px;
+  border-left: 4px solid var(--teal-dark);
+  background: white;
+  color: var(--graphite);
+  font-weight: 760;
+  box-shadow: 0 10px 28px rgb(17 38 44 / .06);
+}
+
+.peptide-review-list { background: #e1ebe8; }
+.peptide-next-step {
+  padding: 82px clamp(20px, 9vw, 150px);
+  background: #f5f7f6;
+}
+.peptide-next-step > p:not(.eyebrow) { max-width: 820px; }
+.sermorelin-peptide-bridge { background: #dce9e5; }
+
+.sermorelin-recovery-bridge {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr);
+  gap: 44px 74px;
+  align-items: center;
+  padding: 86px clamp(20px, 7vw, 110px);
+  background: #153840;
+  color: white;
+}
+.sermorelin-recovery-bridge h2 { font-size: clamp(38px, 5.5vw, 66px); }
+.sermorelin-recovery-bridge p:not(.eyebrow) { color: rgb(255 255 255 / .78); font-size: 18px; line-height: 1.7; }
+.sermorelin-recovery-bridge .check-list { color: rgb(255 255 255 / .88); }
+
+@media (max-width: 900px) {
+  .peptide-conversion-section,
+  .sermorelin-recovery-bridge { grid-template-columns: 1fr; }
+}
+
 .nad-audiences {
   padding: 86px clamp(20px, 6vw, 92px);
   background: #eef2f1;
