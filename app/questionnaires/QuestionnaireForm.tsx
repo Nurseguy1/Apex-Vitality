@@ -61,7 +61,7 @@ export default function QuestionnaireForm({ questionnaire }: { questionnaire: Qu
       <section className="quiz-complete" aria-live="polite">
         <span className="status-pill">Screening complete</span>
         <h2>Thank you for completing the questionnaire.</h2>
-        <p>Your answers on this preview page have not been transmitted or saved. This screening does not diagnose a condition, establish treatment eligibility, or replace a medical evaluation.</p>
+        <p>Your answers on this preview page have not been transmitted or saved. This questionnaire helps prepare for your consultation and does not replace the assessment and care provided directly by your clinician.</p>
         <p>Complete the official intake assigned to you in the secure Charm patient portal. The preview answers above are not transmitted or saved.</p>
         {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Continue to the Charm patient portal ↗</a>}
         <button className="secondary-dark-button" type="button" onClick={() => { setSection(0); setComplete(false); setAnswers({}); }}>Review the questionnaire again</button>

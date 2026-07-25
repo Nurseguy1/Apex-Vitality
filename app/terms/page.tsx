@@ -13,8 +13,8 @@ export default function TermsPage() {
         <p>Website content is provided for general educational purposes and is not medical advice, diagnosis, or treatment. Do not delay or disregard professional care because of information on this website.</p>
         <h2>No clinician-patient relationship</h2>
         <p>Using this website, reviewing pricing, paying a fee, or scheduling an appointment does not by itself create a clinician-patient relationship. Such a relationship can arise only through an appropriate clinical intake, evaluation, and acceptance process.</p>
-        <h2>No guarantee of treatment</h2>
-        <p>Consultation or membership does not guarantee eligibility, a prescription, any particular medication, or a specific result. Clinical decisions depend on individualized evaluation and applicable law.</p>
+        <h2>Assessment, care planning, and specific therapies</h2>
+        <p>Consultations and memberships provide professional assessment, clinical guidance, and individualized care planning. They do not promise a particular prescription, medication, or result. Specific therapies are selected through clinical judgment and applicable law.</p>
         <h2>Prices and outside costs</h2>
         <p>All prices displayed on this website are in U.S. dollars. Fees cover only the professional services expressly listed. Medications, laboratory testing, pharmacy charges, imaging, supplements, and outside services are separate unless expressly stated.</p>
         <h2>Appointment cancellations and refunds</h2>

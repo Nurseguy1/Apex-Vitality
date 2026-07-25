@@ -14,7 +14,7 @@ export default function QuestionnairesPage() {
       <section className="questionnaire-hero">
         <p className="eyebrow">Patient screening questionnaires</p>
         <h1>Start with the right questions.</h1>
-        <p>Choose the questionnaire that best matches your goals, then complete the medication review required for every program. These quizzes help organize information for clinical review; they do not diagnose a condition or approve treatment.</p>
+        <p>Choose the questionnaire that best matches your goals, then complete the medication review used across our programs. These questions help organize your priorities so your consultation can focus on assessment, guidance, and a personalized plan.</p>
       </section>
       <section className="questionnaire-grid">
         {questionnaires.map((quiz, index) => (

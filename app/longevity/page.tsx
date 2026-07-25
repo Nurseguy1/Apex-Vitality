@@ -22,7 +22,7 @@ export default function LongevityPage() {
         </div>
       </section>
       <section className="content-split">
-        <div><p className="eyebrow">Individualized care conversations</p><h2>Eligibility, legality, and evidence come first.</h2><p>Additional medical options are never automatic and may be unavailable. Any treatment discussion requires an established clinical relationship, individualized evaluation, informed consent, appropriate monitoring, and compliance with applicable law.</p></div>
+        <div><p className="eyebrow">Individualized care conversations</p><h2>Build a plan around your priorities.</h2><p>Your assessment, clinical guidance, and care plan begin at the first visit. Additional testing or medical options can be incorporated when they are useful, evidence-informed, and appropriate for your goals.</p></div>
         <ul className="check-list">
           <li>No guaranteed performance or anti-aging outcomes</li>
           <li>No treatment based solely on an online questionnaire</li>

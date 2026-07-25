@@ -49,8 +49,8 @@ export function SiteFooter() {
       </nav>
       <p className="footer-disclaimer">
         Information on this website is educational and is not medical advice.
-        Treatment requires evaluation by a licensed clinician and is not guaranteed.
-        Availability and eligibility vary by location and individual circumstances.
+        Care includes assessment, clinical guidance, and individualized planning.
+        Specific tests, prescriptions, and services vary by clinical need and location.
         Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation.
       </p>
       {charmLinks.portal && <a className="footer-portal-link" href={charmLinks.portal} rel="noreferrer" target="_blank">Secure Charm patient login ↗</a>}
@@ -83,11 +83,11 @@ export function PageIntro({
 export function CareNotice() {
   return (
     <aside className="care-notice">
-      <strong>Care starts with clinical review.</strong>
+      <strong>Your assessment is the beginning of care.</strong>
       <p>
-        Every care plan is based on an individualized clinical evaluation by
-        John Bagby, MSN, FNP-C. Specific recommendations are discussed privately
-        through the secure clinical process, with appropriate monitoring and follow-up.
+        John Bagby, MSN, FNP-C will assess your history, goals, symptoms, and
+        available data, then provide clinical guidance and a personalized plan.
+        Testing, prescriptions, monitoring, and follow-up are incorporated when useful.
       </p>
     </aside>
   );

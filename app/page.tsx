@@ -165,7 +165,7 @@ export default function Home() {
             <Link className="secondary-dark-button care-path-button" href="/questionnaires">Start My Self-Assessment</Link>
           </article>
         </div>
-        <p className="funnel-disclaimer">A consultation does not guarantee testing, treatment, a prescription, or medication fulfillment. Recommendations depend on individualized clinical evaluation.</p>
+        <p className="funnel-disclaimer">Your consultation includes individualized assessment, clinical guidance, and a personalized care plan. Testing, prescriptions, and medication fulfillment are added when they support that plan.</p>
       </section>
 
       <section className="proof-strip" aria-label="Care principles">
@@ -182,7 +182,7 @@ export default function Home() {
       </section>
 
       <section className="program-section">
-        <div className="section-heading"><p className="eyebrow">Program pathways</p><h2>Choose a starting point—not a prewritten prescription.</h2><p>Each pathway is a framework for evaluation and ongoing care. Specific testing and treatment are determined individually after clinical review.</p></div>
+        <div className="section-heading"><p className="eyebrow">Program pathways</p><h2>Choose the care experience that fits your goals.</h2><p>Each pathway includes clinician-led assessment, guidance, and ongoing care. Testing and specific therapies are personalized to your needs.</p></div>
         <div className="program-grid">
           {programs.map((program) => <article className="program-card" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul></article>)}
         </div>
@@ -218,7 +218,7 @@ export default function Home() {
 
       <section className="faq-preview">
         <div><p className="eyebrow">Know before you begin</p><h2>Care should feel clear before it starts.</h2></div>
-        <div className="faq-preview-list"><p><strong>Is treatment guaranteed?</strong><span>No. Eligibility and treatment depend on individualized medical evaluation.</span></p><p><strong>Will labs be required?</strong><span>They may be, depending on your health history and requested care.</span></p><Link className="text-link" href="/faq">Read all frequently asked questions →</Link></div>
+        <div className="faq-preview-list"><p><strong>What does the consultation include?</strong><span>Individualized assessment, clinical guidance, and a personalized plan for next steps.</span></p><p><strong>Will labs be required?</strong><span>They may be recommended when they can add useful information to your care.</span></p><Link className="text-link" href="/faq">Read all frequently asked questions →</Link></div>
       </section>
 
       <section className="visit-section" id="visit">
@@ -229,7 +229,7 @@ export default function Home() {
           <p>Pay securely through Stripe, schedule through CharmHealth, then complete the intake assigned in your patient portal. Please do not send medical information through ordinary email or website messages.</p>
           <Link className="primary-button" href="/schedule">Start changing my health</Link>
           <Link className="text-link" href="/faq">Review common questions</Link>
-          <p className="form-note">Treatment depends on individualized clinical evaluation, eligibility, and service availability in your location.</p>
+          <p className="form-note">Care is personalized during your consultation. Specific tests, prescriptions, and services vary according to your needs and location.</p>
         </div>
       </section>
       <SiteFooter />

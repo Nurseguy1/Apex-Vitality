@@ -20,7 +20,7 @@ export default function SchedulePage() {
         <article>
           <span>Step 1</span>
           <h2>Pay the $325 consultation fee</h2>
-          <p>Complete secure payment through Stripe. The consultation fee does not guarantee a prescription, treatment, or membership enrollment.</p>
+          <p>Complete secure payment through Stripe. Your consultation includes individualized assessment, clinical guidance, and a personalized care plan; specific prescriptions or membership options are discussed as part of that care.</p>
           {charmLinks.newPatientCheckout && <a className="primary-button" href={charmLinks.newPatientCheckout} rel="noreferrer" target="_blank">Pay $325 securely with Stripe ↗</a>}
         </article>
         <article>

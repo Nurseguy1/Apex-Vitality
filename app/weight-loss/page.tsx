@@ -3,7 +3,7 @@ import { CareNotice, PageIntro, SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
   title: "Medical Weight Management | Apex Vitality",
-  description: "Clinician-guided telehealth weight-management care for eligible adults.",
+  description: "Clinician-guided telehealth weight-management assessment, planning, and ongoing care for adults.",
 };
 
 const features = [
@@ -37,7 +37,7 @@ export default function WeightLossPage() {
           <p className="eyebrow">Medical treatment conversations</p>
           <h2>Advanced weight-management options require individualized review.</h2>
           <p>
-            Medical treatment options may be discussed for eligible patients, but
+            Medical treatment options may be included when clinically appropriate, but
             they are not right for everyone. Your medical provider considers medical
             history, current treatments, contraindications, potential benefits, and risks.
           </p>

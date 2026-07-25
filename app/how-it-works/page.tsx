@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "How Telehealth Care Works | Apex Vitality",
-  description: "Learn how consultation, clinical review, labs, and follow-up work at Apex Vitality.",
+  description: "Learn how assessment, personalized care planning, labs, and follow-up work at Apex Vitality.",
 };
 
 const steps = [
@@ -21,7 +21,7 @@ export default function HowItWorksPage() {
       <SiteHeader />
       <PageIntro
         eyebrow="How it works"
-        title="A straightforward process with clinical review at the center."
+        title="A straightforward process with personalized care at the center."
         description="Telehealth should feel convenient without cutting corners. Apex Vitality is designed around informed evaluation, clear next steps, and responsible follow-up."
       />
       <section className="content-section process-page">
