@@ -448,6 +448,68 @@ footer p {
 .scheduler-frame p a { color: var(--teal); font-weight: 760; }
 .scheduler-pending { max-width: 760px; margin: 0 auto; padding: 46px; border-radius: 18px; background: white; box-shadow: 0 20px 50px rgb(17 25 28 / .08); text-align: center; }
 
+.focused-care-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(340px, .75fr);
+  gap: clamp(34px, 7vw, 94px);
+  align-items: center;
+  padding: clamp(72px, 9vw, 126px) clamp(20px, 7vw, 120px);
+  background:
+    radial-gradient(circle at 85% 15%, rgb(64 124 133 / .28), transparent 32%),
+    linear-gradient(135deg, #11191c, #123d42);
+  color: white;
+}
+.focused-care-hero > div { max-width: 790px; }
+.focused-care-hero h1 { max-width: 820px; font-size: clamp(46px, 6.5vw, 84px); }
+.focused-care-lede { max-width: 720px; color: rgb(255 255 255 / .76); font-size: 19px; line-height: 1.7; }
+.focused-care-note { max-width: 700px; margin: -8px 0 0; color: rgb(255 255 255 / .7); font-size: 14px; line-height: 1.6; }
+.focused-offer-card {
+  padding: clamp(28px, 4vw, 44px);
+  border: 1px solid rgb(255 255 255 / .18);
+  border-radius: 22px;
+  background: rgb(255 255 255 / .09);
+  box-shadow: 0 28px 70px rgb(0 0 0 / .22);
+  backdrop-filter: blur(16px);
+}
+.focused-offer-card > span {
+  color: #89d2cf;
+  font-size: 12px;
+  font-weight: 820;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.focused-offer-card h2 { margin: 16px 0 24px; font-size: clamp(30px, 3.4vw, 46px); }
+.focused-offer-card .check-list { margin-bottom: 24px; }
+.focused-offer-card .check-list li { border-color: rgb(255 255 255 / .15); color: rgb(255 255 255 / .86); }
+.focused-offer-card > p { margin: 0; color: rgb(255 255 255 / .72); font-size: 14px; line-height: 1.6; }
+.focused-process { padding: clamp(68px, 9vw, 116px) clamp(20px, 6vw, 96px); background: #f4f6f4; }
+.focused-process-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.focused-process-grid article {
+  min-height: 310px;
+  padding: clamp(28px, 4vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 20px 48px rgb(17 25 28 / .07);
+}
+.focused-process-grid article > span { color: var(--teal); font-size: 13px; font-weight: 850; letter-spacing: .14em; }
+.focused-process-grid h3 { margin-top: 30px; color: var(--teal-dark); font-size: clamp(25px, 2.8vw, 35px); }
+.focused-process-grid p { color: var(--muted); line-height: 1.7; }
+.focused-choice {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .85fr);
+  gap: clamp(36px, 8vw, 120px);
+  align-items: center;
+  padding: clamp(72px, 9vw, 120px) clamp(20px, 8vw, 140px);
+  background: var(--ice);
+}
+.focused-choice > div { max-width: 780px; }
+.focused-choice > div > p:not(.eyebrow):not(.focused-price) { color: var(--muted); font-size: 18px; line-height: 1.7; }
+.focused-price { display: flex; gap: 12px; align-items: baseline; margin: 28px 0; color: var(--teal-dark); }
+.focused-price strong { font-size: 42px; }
+.focused-price span { color: var(--muted); font-size: 14px; font-weight: 720; }
+.focused-comprehensive-list { padding: clamp(28px, 4vw, 46px); border-radius: 18px; background: white; box-shadow: 0 22px 58px rgb(17 25 28 / .08); }
+
 @media (max-width: 900px) {
   .booking-steps { grid-template-columns: 1fr; }
   .questionnaire-grid { grid-template-columns: 1fr; }
@@ -455,6 +517,10 @@ footer p {
   .patient-access-grid article { min-height: 0; }
   .portal-handoff { align-items: flex-start; flex-direction: column; }
   .questionnaire-card { min-height: 0; }
+  .focused-care-hero,
+  .focused-choice { grid-template-columns: 1fr; }
+  .focused-process-grid { grid-template-columns: 1fr; }
+  .focused-process-grid article { min-height: 0; }
 }
 
 @media (max-width: 620px) {

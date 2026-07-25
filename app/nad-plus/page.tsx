@@ -1,112 +1,131 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CareNotice, SiteFooter, SiteHeader } from "../components";
+import { charmLinks } from "../lib/charm";
 
 export const metadata: Metadata = {
-  title: "NAD+ Focused Evaluation | Apex Vitality",
+  title: "NAD+ Focused Care | Online Provider Review | Apex Vitality",
   description:
-    "A clinician-led telehealth evaluation for adults interested in NAD+-related treatment, with comprehensive functional health care also available.",
+    "Begin NAD+ focused care online with a secure health intake, personal clinician review, pharmacy coordination, and comprehensive care available when you want a broader plan.",
 };
 
-const focusedReview = [
-  "Focused review of symptoms, goals, medications, supplements, and relevant history",
-  "Screening for contraindications and whether telehealth is appropriate",
-  "Limited baseline testing when clinically indicated",
-  "Discussion of evidence, limitations, alternatives, risks, and expected costs",
-  "An early follow-up plan when treatment is prescribed",
+const included = [
+  "Personal review of your health history, goals, medications, and supplements",
+  "Secure portal communication with your clinician",
+  "A personalized treatment and follow-up plan",
+  "Prescription and pharmacy coordination",
+  "Medication, supplies, and direct shipping included when listed in your selected plan",
 ];
 
 const comprehensiveCare = [
   "45-minute comprehensive new-patient consultation",
-  "Detailed metabolic, hormonal, nutritional, sleep, stress, and digestive-health review",
-  "Quest laboratory testing selected according to clinical need",
+  "Metabolic, hormonal, nutritional, sleep, stress, and digestive-health review",
+  "Laboratory planning selected around your goals",
   "Individualized treatment, nutrition, lifestyle, and Fullscript options",
-  "Planned monitoring and ongoing care when appropriate",
+  "Planned monitoring and ongoing care",
 ];
 
 export default function NadPlusPage() {
   return (
     <main>
       <SiteHeader />
-      <section className="page-intro">
-        <p className="eyebrow">Two levels of clinician-led care</p>
-        <h1>NAD+ Evaluation &amp; Comprehensive Care</h1>
-        <p>
-          Start with an NAD+ question or take a more comprehensive look at your
-          health. Choose a focused evaluation when NAD+ is your primary interest,
-          or begin with Longevity &amp; Functional Health care for a broader
-          assessment and treatment plan.
-        </p>
-      </section>
 
-      <section className="content-section">
-        <div className="section-heading">
-          <p className="eyebrow">Level 1</p>
-          <h2>NAD+ Focused Evaluation</h2>
-          <p>
-            A streamlined telehealth pathway for adults interested in discussing
-            NAD+-related treatment with a licensed clinician.
+      <section className="focused-care-hero">
+        <div>
+          <p className="eyebrow">Focused treatment access</p>
+          <h1>NAD+ care that starts online and moves at your pace.</h1>
+          <p className="focused-care-lede">
+            Tell us about your health and goals through a secure intake. Your
+            clinician personally reviews your information, communicates with you
+            through the patient portal, and develops your treatment plan.
           </p>
-        </div>
-        <div className="content-split">
-          <div>
-            <h3>What the evaluation includes</h3>
-            <ul className="check-list">
-              {focusedReview.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          </div>
-          <div>
-            <p className="eyebrow">Important payment information</p>
-            <h3>Your focused evaluation is clinical care.</h3>
-            <p>
-              Your visit includes assessment, education, clinical guidance, and a
-              treatment plan. After the visit, we help coordinate the prescriptions,
-              pharmacy services, laboratory work, supplies, and follow-up included
-              in that plan. Separate charges are explained clearly before fulfillment.
-            </p>
-            <p>
-              Focused-evaluation pricing and secure checkout will be available
-              when the clinical protocol and pharmacy pathway are finalized.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="content-section">
-        <div className="section-heading">
-          <p className="eyebrow">Level 2</p>
-          <h2>Comprehensive Longevity &amp; Functional Health Care</h2>
-          <p>
-            Choose this pathway when fatigue, recovery, metabolic health,
-            hormones, nutrition, sleep, digestive health, or healthy-aging goals
-            need to be considered together.
-          </p>
-        </div>
-        <div className="content-split">
-          <ul className="check-list">
-            {comprehensiveCare.map((item) => <li key={item}>{item}</li>)}
-          </ul>
-          <div>
-            <p className="eyebrow">$325 one-time consultation</p>
-            <h3>Begin with a thorough clinical assessment.</h3>
-            <p>
-              Your clinician will explain where NAD+-related treatment fits within
-              your goals and incorporate it into a broader plan for energy,
-              recovery, metabolic health, and healthy aging.
-            </p>
-            <Link className="primary-button" href="/schedule">
-              Schedule comprehensive care
+          <div className="hero-actions">
+            {charmLinks.portal && (
+              <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">
+                Start my secure NAD+ review ↗
+              </a>
+            )}
+            <Link className="secondary-button" href="/schedule">
+              Choose comprehensive care
             </Link>
           </div>
+          <p className="focused-care-note">
+            No scheduled visit is required by default. A secure message,
+            telephone call, or video conversation can be added whenever it helps
+            move your care forward.
+          </p>
         </div>
+        <aside className="focused-offer-card">
+          <span>One straightforward pathway</span>
+          <h2>Personal clinician review. Clear next steps.</h2>
+          <ul className="check-list">
+            {included.map((item) => <li key={item}>{item}</li>)}
+          </ul>
+          <p>
+            Your total price is presented before payment. If treatment is not
+            prescribed, the focused-care payment is refunded.
+          </p>
+        </aside>
+      </section>
+
+      <section className="focused-process" aria-labelledby="nad-process">
+        <div className="section-heading">
+          <p className="eyebrow">Simple by design</p>
+          <h2 id="nad-process">From your goals to your plan in three steps.</h2>
+        </div>
+        <div className="focused-process-grid">
+          <article>
+            <span>01</span>
+            <h3>Complete your secure intake</h3>
+            <p>
+              Share your goals, health history, medications, supplements, and
+              relevant safety information through the Charm patient portal.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Your clinician reviews your information</h3>
+            <p>
+              John Bagby, MSN, FNP-C personally reviews your submission and
+              communicates with you securely to develop your plan.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Begin your personalized plan</h3>
+            <p>
+              Prescriptions are coordinated with the fulfillment pharmacy and
+              shipped directly, with follow-up organized through Charm.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="focused-choice">
+        <div>
+          <p className="eyebrow">Want a broader view?</p>
+          <h2>Choose comprehensive longevity and functional health care.</h2>
+          <p>
+            When energy, recovery, metabolic health, hormones, nutrition, sleep,
+            digestive health, and healthy aging need to be considered together,
+            begin with the complete consultation.
+          </p>
+          <p className="focused-price"><strong>$325</strong><span>one-time · 45 minutes</span></p>
+          <Link className="primary-button" href="/schedule">
+            Schedule comprehensive care
+          </Link>
+        </div>
+        <ul className="check-list focused-comprehensive-list">
+          {comprehensiveCare.map((item) => <li key={item}>{item}</li>)}
+        </ul>
       </section>
 
       <aside className="screening-notice">
         <strong>About NAD+ products:</strong> Evidence for meaningful wellness
         and longevity outcomes remains limited and evolving. Compounded
         medications are not FDA-approved and are not reviewed by FDA for safety,
-        effectiveness, or quality before marketing. Recommendations depend on
-        individual clinical circumstances and product availability.
+        effectiveness, or quality before marketing. Your clinician will explain
+        the available options and help you build the plan that fits your goals.
       </aside>
       <CareNotice />
       <SiteFooter />
