@@ -12,8 +12,8 @@ const options = [
     name: "Comprehensive New Patient Consultation",
     price: "$325 USD",
     cadence: "one-time",
-    intro: "A focused first step for understanding your goals, health history, and appropriate care options.",
-    features: ["Unhurried clinical evaluation", "Health, medication, and risk review", "Relevant laboratory planning", "Personalized recommendations and next steps"],
+    intro: "A complete first step for connecting your goals and health history with a personalized care plan.",
+    features: ["Unhurried clinician review", "Health, medication, and risk review", "Relevant laboratory planning", "Personalized recommendations and next steps"],
     checkoutUrl: "https://buy.stripe.com/eVq9AU1BJ7i00Cr9JOfnO00",
     checkoutLabel: "Pay securely with Stripe",
   },
@@ -44,7 +44,7 @@ export default function MembershipsPage() {
       <section className="membership-hero">
         <p className="eyebrow">Memberships &amp; pricing</p>
         <h1>Ongoing care designed around access, continuity, and your goals.</h1>
-        <p>Memberships provide professional clinical services and a more connected care experience. They do not sell or guarantee medication, testing, or a particular outcome.</p>
+        <p>Choose the access, continuity, and level of support that matches the health goals you are ready to pursue.</p>
       </section>
       <section className="membership-page-grid">
         {options.map((option, index) => (
@@ -66,7 +66,7 @@ export default function MembershipsPage() {
           <p><strong>Clinical partnership:</strong> Membership provides ongoing assessment, education, guidance, and care planning. Your clinician helps you understand your health more clearly and coordinates a plan designed to help you achieve your goals.</p>
         </div>
       </section>
-      <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start with a comprehensive consultation.</h2><p>We will review your goals and determine whether an Apex membership or another care path is the right fit.</p></div><Link className="primary-button" href="/schedule">Pay and schedule securely</Link></section>
+      <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start with a comprehensive consultation.</h2><p>Your clinician reviews your goals, builds your initial plan, and helps you choose the ongoing support that keeps it moving.</p></div><Link className="primary-button" href="/schedule">Pay and start my care</Link></section>
       <SiteFooter />
     </main>
   );

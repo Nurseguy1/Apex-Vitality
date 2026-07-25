@@ -17,12 +17,12 @@ export default function MensHealthPage() {
       />
       <section className="content-section">
         <div className="section-heading">
-          <p className="eyebrow">A responsible evaluation</p>
-          <h2>Symptoms alone do not determine treatment.</h2>
+          <p className="eyebrow">Your symptoms are the starting point</p>
+          <h2>Turn the changes you notice into a plan for renewed vitality.</h2>
           <p>
             Men&apos;s health concerns have many contributing factors. Clinical review includes
             symptoms, medical history, medications, sleep, stress, metabolic health,
-            and appropriately timed lab testing.
+            and goal-directed lab testing.
           </p>
         </div>
         <div className="marker-grid wide-markers">
@@ -42,7 +42,7 @@ export default function MensHealthPage() {
         </div>
         <ul className="check-list">
           <li>Symptom and medical-history review</li>
-          <li>Appropriate laboratory evaluation</li>
+          <li>Goal-directed laboratory review</li>
           <li>Shared decision-making with a clinician</li>
           <li>Monitoring based on the care plan</li>
         </ul>

@@ -41,7 +41,7 @@ const services = [
   {
     category: "Medical Weight Management",
     title: "Make Medical Weight Management Work for You",
-    copy: "Move toward sustainable change with clinical evaluation, relevant lab review, practical strategy, and ongoing follow-through.",
+    copy: "Start with your goals, receive personal clinician review, and move forward with a practical treatment and follow-up plan.",
     href: "/weight-loss",
     cta: "Explore weight management",
   },
@@ -62,10 +62,10 @@ const services = [
 ];
 
 const steps = [
-  ["1. Find your starting point", "Use a short self-assessment to identify the care area that best matches your concerns and goals."],
-  ["2. Book your consultation", "Choose a convenient telehealth time and complete your secure patient intake."],
-  ["3. Meet with a real clinician", "Talk directly with a licensed clinician about your history, symptoms, goals, and options."],
-  ["4. Put your plan into motion", "Leave with clearer priorities, then use follow-up and responsible adjustments to build momentum."],
+  ["1. Choose your care", "Start with the treatment, health concern, or comprehensive care experience that matches your goals."],
+  ["2. Purchase and answer a few questions", "Pay securely, then complete a short confidential intake through the patient portal."],
+  ["3. Receive personal clinician review", "Your clinician reviews your symptoms, history, medications, goals, and treatment ideas."],
+  ["4. Begin your plan", "Move directly into your personalized care plan, pharmacy coordination, delivery, and follow-up."],
 ];
 
 const biomarkers = ["A1C, glucose & insulin", "Lipids & cardiovascular risk", "Thyroid", "Hormonal health", "Liver & kidney function", "Nutrient status", "Inflammation in context", "Digestive testing when indicated"];
@@ -137,8 +137,8 @@ export default function Home() {
             <cite>— Apex Vitality Clinical Team</cite>
           </blockquote>
           <div className="hero-actions">
-            <Link className="primary-button" href="/questionnaires">Start my health assessment</Link>
-            <Link className="secondary-button" href="/schedule">Book a $325 consultation</Link>
+            <Link className="primary-button" href="#care-options">Choose my care</Link>
+            <Link className="secondary-button" href="/schedule">Start comprehensive care · $325</Link>
           </div>
           <p className="hero-cta-note">45-minute new-patient consultation • Secure online scheduling • Personalized clinical plan</p>
           <div className="trust-row" aria-label="Clinic highlights">
@@ -162,27 +162,27 @@ export default function Home() {
         </div>
         <div className="funnel-options">
           <article className="funnel-card featured-funnel">
-            <span className="funnel-label">Best place to start</span>
+            <span className="funnel-label">Complete care in one visit</span>
             <h3>Comprehensive New-Patient Consultation</h3>
             <p className="funnel-price"><strong>$325</strong><span>one-time • 45 minutes</span></p>
             <p>Review your symptoms, health history, medications, goals, and relevant testing needs with your clinician.</p>
             <ul>
-              <li>Unhurried whole-person evaluation</li>
+              <li>Unhurried whole-person clinician review</li>
               <li>Clear priorities and personalized next steps</li>
               <li>Personalized lab planning</li>
             </ul>
             <Link className="primary-button" href="/schedule">Book my consultation</Link>
           </article>
           <article className="funnel-card">
-            <span className="funnel-label">Focused starting point</span>
-            <h3>Explore a Specific Care Area</h3>
+            <span className="funnel-label">Know what you want?</span>
+            <h3>Start Focused Care</h3>
             <p>Already know what you want to address—or have a treatment in mind? Start there. We will listen to your perspective and work with you to turn it into a clear clinical plan.</p>
             <ul>
               <li>Gut, metabolic, men&apos;s, or women&apos;s health</li>
               <li><strong>Longevity &amp; Functional Health</strong></li>
               <li><strong>NAD+, Sermorelin &amp; Peptide Monitoring</strong></li>
             </ul>
-            <Link className="secondary-dark-button care-path-button" href="/questionnaires">Start My Self-Assessment</Link>
+            <Link className="secondary-dark-button care-path-button" href="#care-options">Choose My Care</Link>
           </article>
         </div>
         <p className="funnel-disclaimer">Your consultation includes individualized assessment, clinical guidance, and a personalized care plan. Testing, prescriptions, and medication fulfillment are added when they support that plan.</p>
@@ -232,7 +232,7 @@ export default function Home() {
       </section>
 
       <section className="split-section" id="process">
-        <div><p className="eyebrow">A simple path forward</p><h2>Four steps to the care you have been looking for.</h2><p>Start online, meet with a real clinician, and move forward with a plan shaped around your life—not a generic protocol.</p><Link className="primary-button" href="/questionnaires">Start my assessment</Link></div>
+        <div><p className="eyebrow">A simple path forward</p><h2>Four steps to the care you have been looking for.</h2><p>Choose your care, answer a few questions, receive personal clinician review, and put your plan into motion.</p><Link className="primary-button" href="#care-options">Choose my care</Link></div>
         <ol className="step-list">{steps.map(([title, copy]) => <li key={title}><strong>{title}</strong><span>{copy}</span></li>)}</ol>
       </section>
 
@@ -249,7 +249,7 @@ export default function Home() {
           <p>Pay securely through Stripe, schedule through CharmHealth, then complete the intake assigned in your patient portal. Please do not send medical information through ordinary email or website messages.</p>
           <Link className="primary-button" href="/schedule">Start changing my health</Link>
           <Link className="text-link" href="/faq">Review common questions</Link>
-          <p className="form-note">Care is personalized during your consultation. Specific tests, prescriptions, and services vary according to your needs and location.</p>
+          <p className="form-note">Your clinician connects testing, prescriptions, pharmacy coordination, and follow-up with your personalized plan.</p>
         </div>
       </section>
       <SiteFooter />

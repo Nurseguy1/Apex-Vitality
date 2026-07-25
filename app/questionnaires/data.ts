@@ -121,7 +121,7 @@ export const questionnaires: Questionnaire[] = [
     shortTitle: "Gut & Cellular Health",
     title: "Functional Gut & Cellular Health Intake",
     tier: "Tier 1 and Tier 3",
-    description: "A digestive, lifestyle, recovery, and health-history intake to help organize symptoms and priorities before a clinician determines appropriate evaluation or care.",
+    description: "A short digestive, lifestyle, recovery, and health-history intake that organizes your symptoms and goals for personal clinician review.",
     accent: "blue",
     sections: [
       {

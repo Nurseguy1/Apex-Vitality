@@ -35,7 +35,7 @@ export function SiteFooter() {
         <Link href="/gut-health">Gut Health</Link>
         <Link href="/weight-loss">Medical Weight Management</Link>
         <Link href="/functional-health">Longevity &amp; Functional Health</Link>
-        <Link href="/nad-plus">NAD+ Evaluation &amp; Comprehensive Care</Link>
+        <Link href="/nad-plus">NAD+ Focused Care</Link>
         <Link href="/sermorelin">Sermorelin Care</Link>
         <Link href="/peptide-care">BPC-157 &amp; Peptide Monitoring</Link>
         <Link href="/mens-health">Men&apos;s Health</Link>
@@ -54,7 +54,7 @@ export function SiteFooter() {
       <p className="footer-disclaimer">
         Information on this website is educational and is not medical advice.
         Care includes assessment, clinical guidance, and individualized planning.
-        Specific tests, prescriptions, and services vary by clinical need and location.
+        Your clinician connects testing, prescriptions, monitoring, and follow-up with your personal care plan.
         Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation.
       </p>
       {charmLinks.portal && <a className="footer-portal-link" href={charmLinks.portal} rel="noreferrer" target="_blank">Secure Charm patient login ↗</a>}
@@ -77,8 +77,8 @@ export function PageIntro({
       <h1>{title}</h1>
       <p>{description}</p>
       <div className="hero-actions">
-        <Link className="primary-button" href="/questionnaires">Start my assessment</Link>
-        <Link className="secondary-button" href="/schedule">Book a consultation</Link>
+        <Link className="primary-button" href="/questionnaires">Start my care</Link>
+        <Link className="secondary-button" href="/schedule">Choose comprehensive care</Link>
       </div>
     </section>
   );

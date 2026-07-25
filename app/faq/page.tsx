@@ -10,7 +10,7 @@ const questions = [
   ["How is a medical weight-management plan built?", "Your clinician reviews your goals, health history, medications, risks, and relevant data; explains what those findings mean; and builds an individualized nutrition, activity, medical, testing, and follow-up plan with you."],
   ["Does Apex Vitality offer men's hormonal health care?", "Yes. Care includes assessment of men’s health concerns, education about symptoms and laboratory findings, individualized treatment planning, and the testing and monitoring needed to support that plan."],
   ["Who provides my care?", "Your care is provided by a licensed medical provider. Recommendations are based on your health history, goals, available clinical data, and applicable standards of care."],
-  ["How are specific treatment options selected?", "Specific options are discussed privately through the secure clinical process after an individualized evaluation. Public program descriptions do not replace personalized medical recommendations."],
+  ["Can I start with a specific treatment in mind?", "Yes. Choose the focused care area that matches your goal, complete the secure questionnaire, and bring your treatment ideas into the clinician review. Your clinician works with you to build the plan."],
   ["How is lab work used?", "Your clinician selects laboratory testing that adds useful insight, explains the results clearly, and uses them to guide progress toward your goals."],
   ["Does everyone need specialty gut testing?", "No. Testing is selected only when the clinician believes the result is likely to answer a useful clinical question or change the care plan."],
   ["Does Apex Vitality offer longevity-focused care?", "Yes. The longevity pathway helps you understand modifiable risks, biomarkers, recovery, body composition, and healthy-aging priorities, then turns that information into a practical long-term plan."],
@@ -40,7 +40,7 @@ export default function FaqPage() {
     <main>
       <JsonLd data={faqSchema} />
       <SiteHeader />
-      <PageIntro eyebrow="Common questions" title="Clear answers before you take the next step." description="Know what telehealth care can—and cannot—provide before beginning." />
+      <PageIntro eyebrow="Common questions" title="Clear answers. A simple path into care." description="Choose your care, complete the secure intake, and move forward with personal clinician guidance." />
       <section className="faq-list">
         {questions.map(([question, answer]) => <details key={question}><summary>{question}</summary><p>{answer}</p></details>)}
       </section>

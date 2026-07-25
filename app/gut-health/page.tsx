@@ -20,20 +20,20 @@ export default function GutHealthPage() {
       <PageIntro
         eyebrow="Digestive wellness"
         title="Gut Health"
-        description="Look beyond the symptom list without losing sight of medical fundamentals. Apex Vitality offers structured telehealth evaluation for bloating, irregularity, digestive discomfort, food-related concerns, and the gut–metabolic connection."
+        description="Start with the digestive changes you notice and build a clear plan for bloating, irregularity, discomfort, food-related concerns, and the gut–metabolic connection."
       />
       <section className="content-section">
         <div className="section-heading">
-          <p className="eyebrow">A measured approach</p>
-          <h2>Every test should answer a useful clinical question.</h2>
-          <p>Not every patient needs specialty testing. Testing is considered only when a result is likely to answer a useful clinical question or change recommendations.</p>
+          <p className="eyebrow">Clarity before complexity</p>
+          <h2>Use the right information to move your gut health forward.</h2>
+          <p>Your clinician connects symptoms, nutrition, medications, prior testing, and goal-directed labs to build practical recommendations.</p>
         </div>
         <div className="service-grid light-grid">
           {evaluation.map(([title, copy]) => <article className="service-card" key={title}><h3>{title}</h3><p>{copy}</p></article>)}
         </div>
       </section>
       <section className="content-split dark-panel">
-        <div><p className="eyebrow">Testing when indicated</p><h2>Possible areas of review.</h2><p>Testing decisions depend on symptoms, prior workup, red flags, and the medical provider&apos;s judgment.</p></div>
+        <div><p className="eyebrow">Testing that builds clarity</p><h2>Connect digestive symptoms with useful data.</h2><p>Your symptoms, prior workup, health history, and goals guide laboratory and specialty testing.</p></div>
         <ul className="check-list">
           <li>General metabolic and nutritional markers</li>
           <li>Inflammation or malabsorption concerns</li>

@@ -37,9 +37,9 @@ export default function FunctionalHealthPage() {
       </section>
       <section className="content-split">
         <div>
-          <p className="eyebrow">Optional tools, not automatic packages</p>
-          <h2>Use supplements and specialty testing purposefully.</h2>
-          <p>When appropriate, Fullscript supports supplement fulfillment and selected functional or longevity testing. Products and specialty panels are separate from professional fees and are never required simply to participate in care.</p>
+          <p className="eyebrow">Put the right tools behind your goals</p>
+          <h2>Use supplements and specialty testing with purpose.</h2>
+          <p>Fullscript supports supplement fulfillment and selected functional or longevity testing that strengthens your plan. Products and specialty panels are separate from professional fees.</p>
         </div>
         <ul className="check-list">
           <li>Focused testing based on symptoms and clinical goals</li>
@@ -54,7 +54,7 @@ export default function FunctionalHealthPage() {
           <h2>Functional care for different stages and priorities.</h2>
         </div>
         <div className="service-grid">
-          <article className="service-card"><h3>NAD+ Evaluation &amp; Comprehensive Care</h3><p>A streamlined clinician-led pathway for adults specifically interested in discussing NAD+-related treatment.</p><Link className="text-link" href="/nad-plus">Compare the two care levels →</Link></article>
+          <article className="service-card"><h3>NAD+ Focused Care</h3><p>A streamlined path from your energy, focus, recovery, and longevity goals to personal clinician review and home delivery.</p><Link className="text-link" href="/nad-plus">Start NAD+ care →</Link></article>
           <article className="service-card"><h3>Women&apos;s Health &amp; Healthy Aging</h3><p>Perimenopause, menopause, metabolic health, thyroid concerns, sleep, energy, and healthy aging.</p><Link className="text-link" href="/womens-health">Explore women&apos;s health →</Link></article>
           <article className="service-card"><h3>Men&apos;s Health</h3><p>Energy, sexual health, strength, recovery, body composition, and individualized hormonal evaluation.</p><Link className="text-link" href="/mens-health">Explore men&apos;s health →</Link></article>
           <article className="service-card"><h3>Gut Health</h3><p>Structured evaluation of digestive symptoms, nutrition, medications, and testing when clinically useful.</p><Link className="text-link" href="/gut-health">Explore gut health →</Link></article>
