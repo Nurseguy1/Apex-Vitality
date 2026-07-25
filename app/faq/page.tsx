@@ -5,7 +5,7 @@ import { JsonLd } from "../seo";
 export const metadata: Metadata = { title: "Frequently Asked Questions | Apex Vitality" };
 
 const questions = [
-  ["Can I ask about a specific treatment I believe may help?", "Yes. Your experience and ideas are an important part of the consultation. Your clinician will listen, take your perspective seriously, review the relevant information with you, explain the options clearly, and build a plan designed around your goals."],
+  ["Can I ask about a specific treatment I believe may help?", "Yes. Your experience and ideas are an important part of the consultation. Your clinician will listen, explore your ideas with you, answer your questions, explain the options clearly, and build a plan designed around your goals."],
   ["What care begins at the first consultation?", "Your consultation includes individualized assessment, clinical guidance, education, and a personalized care plan. Testing, prescriptions, monitoring, and follow-up can be incorporated when they support your needs and goals."],
   ["How is a medical weight-management plan built?", "Your clinician reviews your goals, health history, medications, risks, and relevant data; explains what those findings mean; and builds an individualized nutrition, activity, medical, testing, and follow-up plan with you."],
   ["Does Apex Vitality offer men's hormonal health care?", "Yes. Care includes assessment of men’s health concerns, education about symptoms and laboratory findings, individualized treatment planning, and the testing and monitoring needed to support that plan."],

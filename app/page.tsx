@@ -139,7 +139,7 @@ export default function Home() {
         <div className="funnel-heading">
           <p className="eyebrow">Choose your care experience</p>
           <h2 id="choose-your-path">Whatever brings you here, there is a place to start.</h2>
-          <p>Come with a focused goal, a concern, or a treatment idea already in mind. You may be right about what could help. Your clinician will listen, assess it thoughtfully, explain the options clearly, and build a plan with you.</p>
+          <p>Come with a focused goal, a concern, or a treatment idea already in mind. You may be right about what could help. Your clinician will listen, explore the idea with you, explain the options clearly, and build a plan with you.</p>
         </div>
         <div className="funnel-options">
           <article className="funnel-card featured-funnel">
@@ -157,7 +157,7 @@ export default function Home() {
           <article className="funnel-card">
             <span className="funnel-label">Focused starting point</span>
             <h3>Explore a Specific Care Area</h3>
-            <p>Already know what you want to address—or have a treatment in mind? Start there. We will take your perspective seriously and help turn it into a clear clinical plan.</p>
+            <p>Already know what you want to address—or have a treatment in mind? Start there. We will listen to your perspective and work with you to turn it into a clear clinical plan.</p>
             <ul>
               <li>Gut, metabolic, men&apos;s, or women&apos;s health</li>
               <li><strong>Longevity &amp; Functional Health</strong></li>
