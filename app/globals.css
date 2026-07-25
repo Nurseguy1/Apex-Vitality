@@ -131,9 +131,9 @@ main {
   min-height: calc(100vh - 78px);
   padding: clamp(48px, 7vw, 86px) clamp(20px, 5vw, 72px) 60px;
   background:
-    radial-gradient(circle at 12% 18%, rgb(191 121 88 / 0.11), transparent 32%),
-    radial-gradient(circle at 86% 14%, rgb(85 127 155 / 0.2), transparent 35%),
-    linear-gradient(120deg, #fffdf9 0%, #f1f7f6 52%, #e6f0f6 100%);
+    radial-gradient(circle at 12% 18%, rgb(191 121 88 / 0.13), transparent 32%),
+    radial-gradient(circle at 86% 14%, rgb(85 127 155 / 0.27), transparent 35%),
+    linear-gradient(120deg, #f6f7f2 0%, #e6f1ee 52%, #dce8f0 100%);
 }
 
 .hero-copy {
@@ -1405,7 +1405,7 @@ footer p {
 
   .hero {
     min-height: auto;
-    background: linear-gradient(145deg, #fffdf9, #e8f4f1 58%, #e5eef5);
+    background: linear-gradient(145deg, #f6f7f2, #e2efeb 58%, #dce7ef);
   }
 
   .hero-visual,
