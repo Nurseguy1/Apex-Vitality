@@ -4,36 +4,42 @@ import { SiteFooter, SiteHeader } from "./components";
 
 const services = [
   {
+    category: "NAD+ Care",
     title: "Explore NAD+ Care for Energy & Healthy Aging",
     copy: "Explore energy, recovery, and healthy-aging goals through a focused clinical evaluation. Treatment depends on medical review.",
     href: "/nad-plus",
     cta: "Explore NAD+ care",
   },
   {
+    category: "Longevity & Functional Health",
     title: "Build Your Longevity & Functional Health Plan",
     copy: "Connect the dots between symptoms, nutrition, metabolic health, recovery, biomarkers, and the way you want to live.",
     href: "/functional-health",
     cta: "Explore functional health",
   },
   {
+    category: "Gut Health",
     title: "Get to the Root of Your Gut Health",
     copy: "Stop guessing about digestive symptoms. Build a clearer plan around nutrition, lifestyle, medications, and useful testing.",
     href: "/gut-health",
     cta: "Explore gut health",
   },
   {
+    category: "Medical Weight Management",
     title: "Make Medical Weight Management Work for You",
     copy: "Move toward sustainable change with clinical evaluation, relevant lab review, practical strategy, and ongoing follow-through.",
     href: "/weight-loss",
     cta: "Explore weight management",
   },
   {
+    category: "Men’s Health",
     title: "Restore Energy, Strength & Confidence",
     copy: "Take changes in energy, sexual health, strength, mood, sleep, recovery, and body composition seriously—and act on them.",
     href: "/mens-health",
     cta: "Explore men's health",
   },
   {
+    category: "Women’s Health",
     title: "Feel Your Best Through Every Stage of Women’s Health",
     copy: "Move through hormonal and metabolic changes with a plan for energy, sleep, strength, confidence, and healthy aging.",
     href: "/womens-health",
@@ -177,7 +183,7 @@ export default function Home() {
       <section className="service-band" id="care-options">
         <div className="section-heading"><p className="eyebrow">Explore care areas</p><h2>Find the care that matches your health goals.</h2><p>Start with a familiar area of care. Programs can stand alone or work together when multiple aspects of health overlap.</p></div>
         <div className="service-grid">
-          {services.map((service) => <article className="service-card" key={service.title}><h3>{service.title}</h3><p>{service.copy}</p><Link className="text-link" href={service.href}>{service.cta} →</Link></article>)}
+          {services.map((service) => <article className="service-card" key={service.title}><p className="service-category">{service.category}</p><h3>{service.title}</h3><p>{service.copy}</p><Link className="text-link" href={service.href}>{service.cta} →</Link></article>)}
         </div>
       </section>
 
