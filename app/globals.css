@@ -222,7 +222,7 @@ footer p {
 .hero-tagline {
   max-width: 620px;
   margin: 0 0 18px;
-  color: var(--copper);
+  color: var(--navy);
   font-size: clamp(20px, 2vw, 28px);
   font-weight: 760;
   letter-spacing: 0.01em;
