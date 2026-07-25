@@ -17,7 +17,7 @@ export function SiteHeader() {
         <Link href="/womens-health">Women&apos;s Health &amp; Healthy Aging</Link>
         <Link href="/how-it-works">How It Works</Link>
       </nav>
-      <Link className="header-action" href="/patient-access">Patient Access</Link>
+      <Link className="header-action" href="/schedule">Book Consultation</Link>
     </header>
   );
 }
