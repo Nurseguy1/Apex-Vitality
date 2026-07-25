@@ -616,6 +616,12 @@ footer p {
   line-height: 1.6;
 }
 
+.funnel-card li strong {
+  color: var(--teal-dark);
+  font-size: 1.05em;
+  font-weight: 850;
+}
+
 .funnel-price {
   display: flex;
   flex-wrap: wrap;
@@ -644,6 +650,15 @@ footer p {
 .funnel-card > a {
   width: fit-content;
   margin-top: auto;
+}
+
+.care-path-button {
+  border: 2px solid var(--blue-dark);
+  background: var(--blue-dark);
+  color: white;
+  box-shadow: 0 14px 30px rgb(49 93 120 / 0.2);
+  font-size: 15px;
+  font-weight: 850;
 }
 
 .funnel-disclaimer {

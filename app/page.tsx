@@ -159,10 +159,10 @@ export default function Home() {
             <p>Already know what you want to address? Learn about the relevant evaluation pathway before scheduling.</p>
             <ul>
               <li>Gut, metabolic, men&apos;s, or women&apos;s health</li>
-              <li>Functional Health &amp; Longevity</li>
-              <li>NAD+ evaluation and comprehensive care</li>
+              <li><strong>Functional Health &amp; Longevity</strong></li>
+              <li><strong>NAD+ Evaluation &amp; Comprehensive Care</strong></li>
             </ul>
-            <Link className="secondary-dark-button" href="/questionnaires">Start a self-assessment</Link>
+            <Link className="secondary-dark-button care-path-button" href="/questionnaires">Start My Self-Assessment</Link>
           </article>
         </div>
         <p className="funnel-disclaimer">A consultation does not guarantee testing, treatment, a prescription, or medication fulfillment. Recommendations depend on individualized clinical evaluation.</p>
