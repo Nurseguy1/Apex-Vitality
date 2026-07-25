@@ -67,7 +67,7 @@ const programs = [
     label: "Program 03",
     title: "Longevity & Functional Health Track",
     copy: "A comprehensive pathway connecting metabolic health, digestive wellness, recovery, healthy aging, and women's or men's health goals.",
-    includes: ["Goal-directed biomarker review", "Nutrition and supplement review when appropriate", "Men's or women's healthy-aging support", "Specialty testing only when it may change care"],
+    includes: ["Goal-directed biomarker review", "Personalized nutrition and supplement review", "Men's or women's healthy-aging support", "Focused testing that informs care"],
   },
 ];
 
@@ -110,9 +110,10 @@ export default function Home() {
           <p className="hero-tagline">Proactive, clinician-led care for people ready to feel and perform at their best.</p>
           <blockquote className="hero-quote">
             <p className="hero-lede">
-              &ldquo;Your goals, health history, biomarkers, and lifestyle deserve to
-              be considered together. Apex Vitality turns that complete picture into
-              a thoughtful plan for lasting energy, performance, and healthy aging.&rdquo;
+              &ldquo;You know your body and your goals. We start with what you have
+              noticed and what you believe may help, take those ideas seriously,
+              and build a thoughtful plan with you for lasting energy, performance,
+              and healthy aging.&rdquo;
             </p>
             <cite>— John Bagby, MSN, FNP-C</cite>
           </blockquote>
@@ -137,8 +138,8 @@ export default function Home() {
       <section className="funnel-section" aria-labelledby="choose-your-path">
         <div className="funnel-heading">
           <p className="eyebrow">Choose your care experience</p>
-          <h2 id="choose-your-path">A more personal approach to vitality, performance, and healthy aging.</h2>
-          <p>Begin with a focused goal or a comprehensive consultation. Each pathway is designed to help you make informed, confident decisions about your health.</p>
+          <h2 id="choose-your-path">Whatever brings you here, there is a place to start.</h2>
+          <p>Come with a focused goal, a concern, or a treatment idea already in mind. You may be right about what could help. Your clinician will listen, assess it thoughtfully, explain the options clearly, and build a plan with you.</p>
         </div>
         <div className="funnel-options">
           <article className="funnel-card featured-funnel">
@@ -149,14 +150,14 @@ export default function Home() {
             <ul>
               <li>Unhurried whole-person evaluation</li>
               <li>Clear priorities and personalized next steps</li>
-              <li>Lab planning when clinically appropriate</li>
+              <li>Personalized lab planning</li>
             </ul>
             <Link className="primary-button" href="/schedule">Book my consultation</Link>
           </article>
           <article className="funnel-card">
             <span className="funnel-label">Focused starting point</span>
             <h3>Explore a Specific Care Area</h3>
-            <p>Already know what you want to address? Learn about the relevant evaluation pathway before scheduling.</p>
+            <p>Already know what you want to address—or have a treatment in mind? Start there. We will take your perspective seriously and help turn it into a clear clinical plan.</p>
             <ul>
               <li>Gut, metabolic, men&apos;s, or women&apos;s health</li>
               <li><strong>Longevity &amp; Functional Health</strong></li>
@@ -186,7 +187,7 @@ export default function Home() {
         <div className="program-grid">
           {programs.map((program) => <article className="program-card" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul></article>)}
         </div>
-        <p className="program-note">Clinical services are individualized. A consultation does not guarantee enrollment, testing, or a prescription.</p>
+        <p className="program-note">Your clinician will help you understand your health more clearly and build an individualized treatment plan designed around your goals.</p>
       </section>
 
       <section className="membership-section" id="memberships">
@@ -218,11 +219,11 @@ export default function Home() {
 
       <section className="faq-preview">
         <div><p className="eyebrow">Know before you begin</p><h2>Care should feel clear before it starts.</h2></div>
-        <div className="faq-preview-list"><p><strong>What does the consultation include?</strong><span>Individualized assessment, clinical guidance, and a personalized plan for next steps.</span></p><p><strong>Will labs be required?</strong><span>They may be recommended when they can add useful information to your care.</span></p><Link className="text-link" href="/faq">Read all frequently asked questions →</Link></div>
+        <div className="faq-preview-list"><p><strong>What does the consultation include?</strong><span>Assessment, education, clinical guidance, and a treatment plan built around your goals.</span></p><p><strong>How are labs used?</strong><span>Your clinician selects and explains testing that helps guide progress toward your goals.</span></p><Link className="text-link" href="/faq">Read all frequently asked questions →</Link></div>
       </section>
 
       <section className="visit-section" id="visit">
-        <div className="visit-copy"><p className="eyebrow">Start online</p><h2>Begin with a confidential consultation.</h2><p>Meet with John Bagby, MSN, FNP-C to review your health history, goals, medications, relevant data, and the care options that may be appropriate for you.</p></div>
+        <div className="visit-copy"><p className="eyebrow">Start online</p><h2>Begin with a confidential consultation.</h2><p>Meet with John Bagby, MSN, FNP-C to understand your health more clearly, learn what your findings mean, and build the treatment plan you need.</p></div>
         <div className="intake-form readiness-card">
           <span className="status-pill">Secure online scheduling</span>
           <h3>Ready to take the next step?</h3>

@@ -35,11 +35,12 @@ export default function WeightLossPage() {
       <section className="content-split">
         <div>
           <p className="eyebrow">Medical treatment conversations</p>
-          <h2>Advanced weight-management options require individualized review.</h2>
+          <h2>A complete medical strategy, personalized to you.</h2>
           <p>
-            Medical treatment options may be included when clinically appropriate, but
-            they are not right for everyone. Your medical provider considers medical
-            history, current treatments, contraindications, potential benefits, and risks.
+            Your clinician reviews your history, current treatments, goals, relevant
+            data, potential benefits, and risks; explains what those findings mean;
+            and helps you put the right nutrition, lifestyle, medical, and follow-up
+            plan into action.
           </p>
         </div>
         <ul className="check-list">

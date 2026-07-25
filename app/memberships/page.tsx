@@ -63,7 +63,7 @@ export default function MembershipsPage() {
         <div>
           <p><strong>What is separate:</strong> Medications, laboratory testing, pharmacy charges, imaging, supplements, and services from outside clinicians or facilities are not included unless expressly stated.</p>
           <p><strong>Communication:</strong> Secure messaging is intended for non-urgent questions and is answered during business hours. It is not continuously monitored and is not an emergency service.</p>
-          <p><strong>Clinical decisions:</strong> Membership includes ongoing assessment, guidance, and care planning. Prescriptions and specific therapies are personalized and used when appropriate for your plan.</p>
+          <p><strong>Clinical partnership:</strong> Membership provides ongoing assessment, education, guidance, and care planning. Your clinician helps you understand your health more clearly and coordinates a plan designed to help you achieve your goals.</p>
         </div>
       </section>
       <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start with a comprehensive consultation.</h2><p>We will review your goals and determine whether an Apex membership or another care path is the right fit.</p></div><Link className="primary-button" href="/schedule">Pay and schedule securely</Link></section>

@@ -16,7 +16,7 @@ export default function LongevityPage() {
         description="Build healthspan with measurable fundamentals. A premium care path for adults who want a coordinated view of metabolic health, recovery, body composition, sleep, performance, and long-term risk factors."
       />
       <section className="content-section">
-        <div className="section-heading"><p className="eyebrow">What the program emphasizes</p><h2>Start with evidence, then individualize.</h2><p>Longevity is not a promise to reverse aging. It is a structured effort to identify modifiable risks, strengthen daily foundations, and consider additional medical options only when appropriate.</p></div>
+        <div className="section-heading"><p className="eyebrow">What the program emphasizes</p><h2>Turn evidence into a plan for the years ahead.</h2><p>Your clinician helps identify modifiable risks, clarify what your data means, strengthen daily foundations, and integrate medical options into a personalized healthy-aging strategy.</p></div>
         <div className="marker-grid wide-markers">
           {['Cardiometabolic markers', 'Sleep and recovery', 'Strength and body composition', 'Nutrition and micronutrients', 'Inflammation in context', 'Hormonal health when indicated'].map((item) => <span key={item}>{item}</span>)}
         </div>

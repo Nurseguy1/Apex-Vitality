@@ -32,12 +32,12 @@ export default function MensHealthPage() {
       <section className="content-split dark-panel">
         <div>
           <p className="eyebrow">Hormonal health care</p>
-          <h2>Medical treatment only when clinically appropriate.</h2>
+          <h2>Thoughtful hormonal care, built with you.</h2>
           <p>
-            Hormonal treatment requires a licensed medical provider&apos;s diagnosis,
-            discussion of benefits and risks, baseline testing, and ongoing
-            monitoring. Apex Vitality does not position medical therapy as a
-            shortcut for bodybuilding or purely aesthetic goals.
+            Your clinician explains what your symptoms and laboratory findings mean,
+            reviews the benefits and risks of your options, and helps you implement
+            a treatment plan with the baseline testing and ongoing monitoring it needs.
+            The focus is health, function, vitality, and long-term well-being.
           </p>
         </div>
         <ul className="check-list">

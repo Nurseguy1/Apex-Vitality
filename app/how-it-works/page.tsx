@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const steps = [
   ["1", "Pay and schedule", "Pay the consultation fee securely through Stripe, then choose an available 45-minute appointment through CharmHealth."],
   ["2", "Complete secure intake", "Provide your health history, medications, consent forms, and other requested information through the Charm patient portal before your visit."],
-  ["3", "Meet with John Bagby, MSN, FNP-C", "Discuss symptoms, history, goals, medications, risks, and whether laboratory testing or treatment may be appropriate."],
+  ["3", "Meet with John Bagby, MSN, FNP-C", "Discuss your history, goals, medications, symptoms, and relevant data; learn what they mean; and build a treatment plan designed to help you achieve your goals."],
   ["4", "Review your plan", "Receive individualized recommendations, education, and clear expectations for follow-up."],
   ["5", "Measure and adjust", "When enrolled in care, follow-up helps assess progress, tolerability, labs, and next steps."],
 ];

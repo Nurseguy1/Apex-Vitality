@@ -57,13 +57,12 @@ export default function NadPlusPage() {
           </div>
           <div>
             <p className="eyebrow">Important payment information</p>
-            <h3>You are paying for a clinical evaluation.</h3>
+            <h3>Your focused evaluation is clinical care.</h3>
             <p>
-              Payment for the evaluation does not guarantee approval, a
-              prescription, medication fulfillment, or a particular result.
-              Medication, pharmacy, laboratory, supply, and shipping charges are
-              separate and are collected only after medical approval unless
-              expressly stated otherwise.
+              Your visit includes assessment, education, clinical guidance, and a
+              treatment plan. After the visit, we help coordinate the prescriptions,
+              pharmacy services, laboratory work, supplies, and follow-up included
+              in that plan. Separate charges are explained clearly before fulfillment.
             </p>
             <p>
               Focused-evaluation pricing and secure checkout will be available
@@ -91,8 +90,9 @@ export default function NadPlusPage() {
             <p className="eyebrow">$325 one-time consultation</p>
             <h3>Begin with a thorough clinical assessment.</h3>
             <p>
-              NAD+-related treatment may be discussed, but it is only one
-              possible part of an individualized plan.
+              Your clinician will explain where NAD+-related treatment fits within
+              your goals and incorporate it into a broader plan for energy,
+              recovery, metabolic health, and healthy aging.
             </p>
             <Link className="primary-button" href="/schedule">
               Schedule comprehensive care
