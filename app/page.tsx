@@ -6,7 +6,7 @@ const services = [
   {
     category: "NAD+ Care",
     title: "Explore NAD+ Care for Energy & Healthy Aging",
-    copy: "Explore energy, recovery, and healthy-aging goals through a focused clinical evaluation. Treatment depends on medical review.",
+    copy: "Explore energy, recovery, and healthy-aging goals through focused, personalized care.",
     href: "/nad-plus",
     cta: "Explore NAD+ care",
   },
