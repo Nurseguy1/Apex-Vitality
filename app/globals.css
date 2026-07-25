@@ -465,10 +465,73 @@ footer p {
 .focused-care-note { max-width: 700px; margin: -8px 0 0; color: rgb(255 255 255 / .7); font-size: 14px; line-height: 1.6; }
 
 .sermorelin-hero {
+  position: relative;
+  display: block;
+  min-height: min(780px, 82vh);
   background:
-    radial-gradient(circle at 12% 20%, rgb(83 145 151 / .24), transparent 32%),
-    linear-gradient(135deg, #102c34, #1a3b42 58%, #234c50);
+    linear-gradient(90deg, rgb(7 24 29 / .96) 0%, rgb(10 35 41 / .86) 40%, rgb(9 28 32 / .18) 72%, rgb(7 21 24 / .08) 100%),
+    url('/sermorelin-hero-apex.png') center / cover no-repeat;
 }
+
+.sermorelin-hero-copy { max-width: 760px !important; }
+.sermorelin-hero h1 { font-size: clamp(48px, 6vw, 80px); }
+.sermorelin-price-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; margin: 24px 0 18px; }
+.sermorelin-price-line strong { font-size: 38px; line-height: 1; }
+.sermorelin-price-line span { color: rgb(255 255 255 / .74); }
+.sermorelin-price-line b { width: 100%; color: #b7e4dc; font-size: 15px; }
+
+.sermorelin-offer {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(460px, 1.1fr);
+  gap: clamp(42px, 7vw, 94px);
+  align-items: center;
+  padding: 88px clamp(20px, 7vw, 112px);
+  background: #f5f3ee;
+}
+.sermorelin-offer h2,
+.sermorelin-education h2,
+.sermorelin-experience h2 { font-size: clamp(38px, 5.2vw, 64px); }
+.sermorelin-kit-image { overflow: hidden; border-radius: 22px; box-shadow: 0 28px 68px rgb(13 37 42 / .18); }
+.sermorelin-kit-image img { display: block; width: 100%; height: auto; }
+.sermorelin-offer-lede { max-width: 680px; color: var(--muted); font-size: 18px; line-height: 1.7; }
+.sermorelin-plan-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 28px 0; }
+.sermorelin-plan-grid article { padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: white; }
+.sermorelin-plan-grid article.featured { border: 2px solid var(--teal-dark); background: #e7f1ee; }
+.sermorelin-plan-grid span { display: block; color: var(--copper); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.sermorelin-plan-grid strong { display: block; margin: 8px 0 2px; color: var(--graphite); font-size: 38px; line-height: 1; }
+.sermorelin-plan-grid b { color: var(--teal-dark); font-size: 14px; }
+.sermorelin-plan-grid p { color: var(--muted); font-size: 14px; line-height: 1.55; }
+.sermorelin-pricing-note { max-width: 660px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+
+.sermorelin-education {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(420px, 1.1fr);
+  gap: 52px 84px;
+  align-items: center;
+  padding: 88px clamp(20px, 7vw, 112px);
+  background: #eff4f2;
+}
+.sermorelin-education > div:first-child > p:not(.eyebrow) { color: var(--muted); font-size: 18px; line-height: 1.72; }
+.sermorelin-signal-path { display: grid; gap: 12px; }
+.sermorelin-signal-path article { position: relative; padding: 24px 24px 24px 78px; border-radius: 16px; background: white; box-shadow: 0 14px 34px rgb(14 46 52 / .08); }
+.sermorelin-signal-path article:not(:last-child)::after { position: absolute; left: 35px; bottom: -18px; width: 2px; height: 22px; background: #78aaa4; content: ''; }
+.sermorelin-signal-path span { position: absolute; left: 22px; top: 24px; display: grid; width: 36px; height: 36px; place-items: center; border-radius: 50%; background: var(--teal-dark); color: white; font-size: 12px; font-weight: 800; }
+.sermorelin-signal-path strong { display: block; color: var(--graphite); font-size: 20px; }
+.sermorelin-signal-path p { margin-bottom: 0; color: var(--muted); line-height: 1.6; }
+
+.sermorelin-experience { padding: 88px clamp(20px, 7vw, 112px); background: #f8f6f2; }
+.sermorelin-experience .section-heading { max-width: 820px; }
+.sermorelin-experience .section-heading > p:last-child { color: var(--muted); font-size: 18px; line-height: 1.7; }
+.sermorelin-experience-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin: 38px 0 30px; }
+.sermorelin-experience-grid article { padding: 28px; border-top: 4px solid var(--teal-dark); background: white; box-shadow: 0 16px 38px rgb(14 39 44 / .07); }
+.sermorelin-experience-grid span { color: var(--copper); font-size: 13px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+.sermorelin-experience-grid h3 { margin: 12px 0 8px; font-size: 27px; }
+.sermorelin-experience-grid p { color: var(--muted); line-height: 1.65; }
+
+.sermorelin-trust-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: #3d5b60; }
+.sermorelin-trust-strip article { padding: 32px 26px; background: #153940; color: white; }
+.sermorelin-trust-strip strong { display: block; margin-bottom: 8px; color: #b9e6e0; font-size: 18px; }
+.sermorelin-trust-strip span { color: rgb(255 255 255 / .72); font-size: 14px; line-height: 1.6; }
 
 .focused-care-simple-path {
   max-width: 720px;
@@ -549,7 +612,24 @@ footer p {
 
 @media (max-width: 900px) {
   .peptide-conversion-section,
-  .sermorelin-recovery-bridge { grid-template-columns: 1fr; }
+  .sermorelin-recovery-bridge,
+  .sermorelin-offer,
+  .sermorelin-education { grid-template-columns: 1fr; }
+  .sermorelin-experience-grid { grid-template-columns: 1fr; }
+  .sermorelin-trust-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .sermorelin-hero {
+    min-height: 0;
+    padding-bottom: 420px;
+    background:
+      linear-gradient(180deg, rgb(7 24 29 / .98) 0%, rgb(10 35 41 / .92) 52%, rgb(9 28 32 / .08) 72%),
+      url('/sermorelin-hero-apex.png') 68% bottom / auto 48% no-repeat,
+      #102c34;
+  }
+  .sermorelin-plan-grid,
+  .sermorelin-trust-strip { grid-template-columns: 1fr; }
 }
 
 .nad-audiences {
