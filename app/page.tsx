@@ -11,11 +11,11 @@ const services = [
     cta: "Explore NAD+ care",
   },
   {
-    category: "Sermorelin Care",
+    category: "Sermorelin Peptide Care",
     title: "Strengthen Sleep, Recovery & Healthy Aging",
     copy: "Answer a quick questionnaire, receive personal clinician review, and have your medication delivered directly to your door.",
     href: "/sermorelin",
-    cta: "Explore sermorelin care",
+    cta: "Explore sermorelin peptide care",
   },
   {
     category: "Peptide Monitoring",

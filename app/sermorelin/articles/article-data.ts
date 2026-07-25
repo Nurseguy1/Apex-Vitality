@@ -11,8 +11,8 @@ export type SermorelinArticle = {
 export const sermorelinArticles: SermorelinArticle[] = [
   {
     slug: "sermorelin-sleep-recovery",
-    title: "Build Better Sleep and Recovery with Sermorelin Care",
-    description: "Connect sleep quality, overnight recovery, and daily performance through a clinician-guided sermorelin plan.",
+    title: "Build Better Sleep and Recovery with Sermorelin Peptide Care",
+    description: "Connect sleep quality, overnight recovery, and daily performance through a clinician-guided sermorelin peptide plan.",
     audience: "Adults ready for deeper recovery",
     readTime: "4 min read",
     intro: "Restorative sleep drives physical repair, cognitive performance, metabolic health, and the energy you bring into each day. Sermorelin supports the body’s own growth-hormone signaling, creating a focused pathway for adults who want to strengthen sleep and recovery.",
@@ -37,8 +37,8 @@ export const sermorelinArticles: SermorelinArticle[] = [
   },
   {
     slug: "sermorelin-active-adults",
-    title: "Sermorelin for Active Adults: Recovery, Strength, and Performance",
-    description: "Build sermorelin into a broader strategy for training recovery, strength, sleep, and body composition.",
+    title: "Sermorelin Peptide Care for Active Adults: Recovery, Strength, and Performance",
+    description: "Build sermorelin peptide care into a broader strategy for training recovery, strength, sleep, and body composition.",
     audience: "Active adults & fitness-minded people",
     readTime: "4 min read",
     intro: "Training results depend on what happens between workouts. Sermorelin supports natural growth-hormone signaling and adds a clinician-guided tool to a performance plan built around recovery, strength, sleep, and body composition.",
@@ -63,7 +63,7 @@ export const sermorelinArticles: SermorelinArticle[] = [
   },
   {
     slug: "sermorelin-healthy-aging",
-    title: "Sermorelin and Healthy Aging: Support Strength and Resilience",
+    title: "Sermorelin Peptide Care and Healthy Aging: Support Strength and Resilience",
     description: "Understand how growth-hormone signaling connects with sleep, recovery, body composition, and healthy-aging goals.",
     audience: "Adults focused on longevity",
     readTime: "5 min read",
@@ -89,8 +89,8 @@ export const sermorelinArticles: SermorelinArticle[] = [
   },
   {
     slug: "sermorelin-midlife-wellness",
-    title: "Sermorelin for Midlife Energy, Sleep, and Body Composition",
-    description: "Connect changing sleep, recovery, strength, and body-composition goals through personalized sermorelin care.",
+    title: "Sermorelin Peptide Care for Midlife Energy, Sleep, and Body Composition",
+    description: "Connect changing sleep, recovery, strength, and body-composition goals through personalized sermorelin peptide care.",
     audience: "Adults navigating midlife changes",
     readTime: "5 min read",
     intro: "Midlife often changes the way the body responds to sleep, stress, exercise, and nutrition. Sermorelin supports natural growth-hormone signaling and gives adults a focused option for building stronger recovery, performance, and healthy-aging habits.",

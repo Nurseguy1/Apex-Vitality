@@ -80,9 +80,9 @@ export default function PeptideCarePage() {
       <section className="sermorelin-recovery-bridge">
         <div>
           <p className="eyebrow">A prescription-based recovery pathway</p>
-          <h2>Keep the tissue-recovery goal. Move into monitored sermorelin care.</h2>
-          <p>Sermorelin supports the body’s natural growth-hormone signaling, a pathway involved in tissue maintenance, sleep, and physical recovery. Work with a licensed clinician to build a patient-specific sermorelin plan with licensed pharmacy coordination and monitoring centered on your health and goals.</p>
-          <Link className="primary-button" href="/sermorelin">Explore sermorelin recovery care</Link>
+          <h2>Keep the tissue-recovery goal. Move into monitored sermorelin peptide care.</h2>
+          <p>Sermorelin is a prescription peptide that supports the body’s natural growth-hormone signaling, a pathway involved in tissue maintenance, sleep, and physical recovery. Work with a licensed clinician to build a patient-specific peptide plan with licensed pharmacy coordination and monitoring centered on your health and goals.</p>
+          <Link className="primary-button" href="/sermorelin">Explore sermorelin peptide care</Link>
         </div>
         <ul className="check-list">
           <li>Patient-specific prescription and clinician oversight</li>
@@ -99,7 +99,7 @@ export default function PeptideCarePage() {
         <p>Bring your questions, your treatment ideas, and the products you already use. We will work with you to protect your health, transition out of unsupervised use, and pursue your goals through lawful, clinician-led care.</p>
         <div className="hero-actions">
           {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Start my peptide review ↗</a>}
-          <Link className="secondary-dark-button" href="/sermorelin">Explore sermorelin care</Link>
+          <Link className="secondary-dark-button" href="/sermorelin">Explore sermorelin peptide care</Link>
         </div>
       </section>
 

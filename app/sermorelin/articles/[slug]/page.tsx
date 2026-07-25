@@ -38,7 +38,7 @@ export default async function SermorelinArticlePage({ params }: { params: Promis
     author: { "@type": "Organization", name: "Apex Vitality Clinical Team" },
     publisher: { "@type": "Organization", name: "Apex Vitality" },
     mainEntityOfPage: `${siteUrl}/sermorelin/articles/${article.slug}`,
-    about: { "@type": "MedicalTherapy", name: "Sermorelin care" },
+    about: { "@type": "MedicalTherapy", name: "Sermorelin peptide care" },
   };
 
   return (
@@ -47,7 +47,7 @@ export default async function SermorelinArticlePage({ params }: { params: Promis
       <SiteHeader />
       <article className="nad-article">
         <header className="nad-article-header sermorelin-article-header">
-          <Link href="/sermorelin#sermorelin-learning-center">← Sermorelin Learning Center</Link>
+          <Link href="/sermorelin#sermorelin-learning-center">← Sermorelin Peptide Learning Center</Link>
           <p className="eyebrow">{article.audience} · {article.readTime}</p>
           <h1>{article.title}</h1>
           <p>{article.intro}</p>
@@ -64,9 +64,9 @@ export default async function SermorelinArticlePage({ params }: { params: Promis
         <section className="nad-article-cta sermorelin-article-cta">
           <p className="eyebrow">Start building your advantage</p>
           <h2>Stronger recovery and healthier aging start with a personal plan.</h2>
-          <p>Complete your secure review and work with a licensed clinician to connect sermorelin with your sleep, recovery, performance, and longevity goals.</p>
+          <p>Complete your secure review and work with a licensed clinician to connect sermorelin peptide care with your sleep, recovery, performance, and longevity goals.</p>
           <div className="hero-actions">
-            {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Start my sermorelin plan ↗</a>}
+            {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Start my peptide care plan ↗</a>}
             <Link className="secondary-button" href="/schedule">Choose comprehensive care</Link>
           </div>
         </section>
