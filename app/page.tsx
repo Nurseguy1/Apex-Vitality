@@ -138,7 +138,7 @@ export default function Home() {
         <div className="funnel-heading">
           <p className="eyebrow">Choose your care experience</p>
           <h2 id="choose-your-path">Whatever brings you here, there is a place to start.</h2>
-          <p>Come with a focused goal, a concern, or a treatment idea already in mind. You may be right about what could help. Your clinician will listen, explore the idea with you, explain the options clearly, and build a plan with you.</p>
+          <p>Come with a focused goal, a concern, or a treatment idea already in mind. Your clinician will listen and collaborate with you to develop options and build a plan.</p>
         </div>
         <div className="funnel-options">
           <article className="funnel-card featured-funnel">
