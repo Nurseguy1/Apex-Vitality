@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CareNotice, PageIntro, SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
-  title: "Functional Health & Longevity | Apex Vitality",
+  title: "Longevity & Functional Health | Apex Vitality",
   description: "Clinician-led functional health and longevity care connecting symptoms, nutrition, metabolic health, recovery, and focused testing.",
 };
 
@@ -22,7 +22,7 @@ export default function FunctionalHealthPage() {
       <SiteHeader />
       <PageIntro
         eyebrow="Whole-person, clinician-led care"
-        title="Functional Health & Longevity"
+        title="Longevity & Functional Health"
         description="Look beyond isolated symptoms without losing clinical discipline. This whole-person telehealth pathway considers your symptoms, daily habits, metabolic health, recovery, and long-term goals together."
       />
       <section className="content-section">

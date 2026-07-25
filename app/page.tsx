@@ -10,7 +10,7 @@ const services = [
     cta: "Explore NAD+ care",
   },
   {
-    title: "Functional Health & Longevity",
+    title: "Longevity & Functional Health",
     copy: "Connect the dots between symptoms, nutrition, metabolic health, recovery, biomarkers, and the way you want to live.",
     href: "/functional-health",
     cta: "Explore functional health",
@@ -65,7 +65,7 @@ const programs = [
   },
   {
     label: "Program 03",
-    title: "Functional Health & Longevity Track",
+    title: "Longevity & Functional Health Track",
     copy: "A comprehensive pathway connecting metabolic health, digestive wellness, recovery, healthy aging, and women's or men's health goals.",
     includes: ["Goal-directed biomarker review", "Nutrition and supplement review when appropriate", "Men's or women's healthy-aging support", "Specialty testing only when it may change care"],
   },
@@ -159,7 +159,7 @@ export default function Home() {
             <p>Already know what you want to address? Learn about the relevant evaluation pathway before scheduling.</p>
             <ul>
               <li>Gut, metabolic, men&apos;s, or women&apos;s health</li>
-              <li><strong>Functional Health &amp; Longevity</strong></li>
+              <li><strong>Longevity &amp; Functional Health</strong></li>
               <li><strong>NAD+ Evaluation &amp; Comprehensive Care</strong></li>
             </ul>
             <Link className="secondary-dark-button care-path-button" href="/questionnaires">Start My Self-Assessment</Link>

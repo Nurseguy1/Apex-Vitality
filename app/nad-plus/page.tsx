@@ -34,7 +34,7 @@ export default function NadPlusPage() {
         <p>
           Start with an NAD+ question or take a more comprehensive look at your
           health. Choose a focused evaluation when NAD+ is your primary interest,
-          or begin with Functional Health &amp; Longevity care for a broader
+          or begin with Longevity &amp; Functional Health care for a broader
           assessment and treatment plan.
         </p>
       </section>
@@ -76,7 +76,7 @@ export default function NadPlusPage() {
       <section className="content-section">
         <div className="section-heading">
           <p className="eyebrow">Level 2</p>
-          <h2>Comprehensive Functional Health &amp; Longevity Care</h2>
+          <h2>Comprehensive Longevity &amp; Functional Health Care</h2>
           <p>
             Choose this pathway when fatigue, recovery, metabolic health,
             hormones, nutrition, sleep, digestive health, or healthy-aging goals
