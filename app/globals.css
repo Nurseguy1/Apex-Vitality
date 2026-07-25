@@ -608,6 +608,7 @@ footer p {
     #dce9e5;
 }
 .nad-peptide-bridge > p:not(.eyebrow) { max-width: 880px; }
+.nad-peptide-bridge h2 { color: var(--teal-dark); }
 .nad-peptide-bridge .hero-actions { margin-top: 28px; }
 
 .sermorelin-recovery-bridge {
