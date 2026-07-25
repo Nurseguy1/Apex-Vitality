@@ -110,10 +110,9 @@ export default function Home() {
           <p className="hero-tagline">Proactive, clinician-led care for people ready to feel and perform at their best.</p>
           <blockquote className="hero-quote">
             <p className="hero-lede">
-              &ldquo;You know your body and your goals. We start with what you have
-              noticed and what you believe may help, take those ideas seriously,
-              and build a thoughtful plan with you for lasting energy, performance,
-              and healthy aging.&rdquo;
+              &ldquo;You know your body and your goals. Work with a care team that
+              believes in your ability to achieve them. Greater vitality, longevity,
+              and a healthier life are within reach.&rdquo;
             </p>
             <cite>— John Bagby, MSN, FNP-C</cite>
           </blockquote>
