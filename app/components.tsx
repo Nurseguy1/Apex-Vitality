@@ -49,6 +49,7 @@ export function SiteFooter() {
       </nav>
       <nav aria-label="Legal navigation">
         <Link href="/privacy">Privacy</Link>
+        <Link href="/telehealth-consent">Telehealth Consent</Link>
         <Link href="/terms">Terms &amp; Medical Disclaimer</Link>
       </nav>
       <p className="footer-disclaimer">
