@@ -475,8 +475,15 @@ footer p {
 
 .sermorelin-hero-copy { max-width: 760px !important; }
 .sermorelin-hero .eyebrow {
-  color: #d8fff7;
-  text-shadow: 0 1px 18px rgb(151 242 226 / .28);
+  display: inline-block;
+  padding: 9px 13px;
+  border: 1px solid rgb(197 255 244 / .52);
+  border-radius: 999px;
+  background: rgb(20 91 91 / .62);
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: .14em;
+  text-shadow: 0 1px 12px rgb(0 0 0 / .35);
 }
 .sermorelin-hero h1 { font-size: clamp(48px, 6vw, 80px); }
 .sermorelin-price-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; margin: 24px 0 18px; }
