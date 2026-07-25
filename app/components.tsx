@@ -17,7 +17,7 @@ export function SiteHeader() {
         <Link href="/womens-health">Women&apos;s Health &amp; Healthy Aging</Link>
         <Link href="/how-it-works">How It Works</Link>
       </nav>
-      <Link className="header-action" href="/schedule">Book Consultation</Link>
+      <Link className="header-action" href="/questionnaires">Get Started</Link>
     </header>
   );
 }
@@ -73,8 +73,8 @@ export function PageIntro({
       <h1>{title}</h1>
       <p>{description}</p>
       <div className="hero-actions">
-        <Link className="primary-button" href="/schedule">Schedule a consultation</Link>
-        <Link className="secondary-button" href="/how-it-works">See how care works</Link>
+        <Link className="primary-button" href="/questionnaires">Start my assessment</Link>
+        <Link className="secondary-button" href="/schedule">Book a consultation</Link>
       </div>
     </section>
   );

@@ -5,47 +5,47 @@ import { SiteFooter, SiteHeader } from "./components";
 const services = [
   {
     title: "NAD+ Evaluation & Comprehensive Care",
-    copy: "A streamlined clinical evaluation for adults interested in NAD+-related care, with treatment dependent on medical review.",
+    copy: "Explore energy, recovery, and healthy-aging goals through a focused clinical evaluation. Treatment depends on medical review.",
     href: "/nad-plus",
     cta: "Explore NAD+ care",
   },
   {
     title: "Functional Health & Longevity",
-    copy: "A whole-person pathway connecting symptoms, nutrition, metabolic health, recovery, biomarkers, and evidence-informed wellness options.",
+    copy: "Connect the dots between symptoms, nutrition, metabolic health, recovery, biomarkers, and the way you want to live.",
     href: "/functional-health",
     cta: "Explore functional health",
   },
   {
     title: "Gut Health",
-    copy: "A structured evaluation of symptoms, nutrition, lifestyle, medications, and selected laboratory findings when clinically appropriate.",
+    copy: "Stop guessing about digestive symptoms. Build a clearer plan around nutrition, lifestyle, medications, and useful testing.",
     href: "/gut-health",
     cta: "Explore gut health",
   },
   {
     title: "Medical Weight Management",
-    copy: "Medical weight-management care for adults combining clinical evaluation, lab review, lifestyle strategy, and ongoing follow-up.",
+    copy: "Move toward sustainable change with clinical evaluation, relevant lab review, practical strategy, and ongoing follow-through.",
     href: "/weight-loss",
     cta: "Explore weight management",
   },
   {
     title: "Men's Health",
-    copy: "Telehealth care for changes in energy, sexual health, strength, mood, sleep, recovery, and body composition.",
+    copy: "Take changes in energy, sexual health, strength, mood, sleep, recovery, and body composition seriously—and act on them.",
     href: "/mens-health",
     cta: "Explore men's health",
   },
   {
     title: "Women's Health & Healthy Aging",
-    copy: "Adult telehealth support for perimenopause, menopause, metabolic health, thyroid concerns, sleep, energy, and long-term wellness.",
+    copy: "Move through hormonal and metabolic changes with a plan for energy, sleep, strength, confidence, and healthy aging.",
     href: "/womens-health",
     cta: "Explore women's health",
   },
 ];
 
 const steps = [
-  ["Start", "Choose the care area you want to discuss."],
-  ["Secure intake", "Complete health information through the appropriate patient workflow."],
-  ["Clinical review", "Meet with a licensed medical professional to discuss history, goals, and next steps."],
-  ["Progress", "Use follow-up, monitoring, and plan adjustments to keep moving forward."],
+  ["1. Find your starting point", "Use a short self-assessment to identify the care area that best matches your concerns and goals."],
+  ["2. Book your consultation", "Choose a convenient telehealth time and complete your secure patient intake."],
+  ["3. Meet with a real clinician", "Talk directly with John Bagby, MSN, FNP-C about your history, symptoms, goals, and options."],
+  ["4. Put your plan into motion", "Leave with clearer priorities, then use follow-up and responsible adjustments to build momentum."],
 ];
 
 const biomarkers = ["A1C, glucose & insulin", "Lipids & cardiovascular risk", "Thyroid", "Hormonal health", "Liver & kidney function", "Nutrient status", "Inflammation in context", "Digestive testing when indicated"];
@@ -117,8 +117,8 @@ export default function Home() {
             <cite>— John Bagby, MSN, FNP-C</cite>
           </blockquote>
           <div className="hero-actions">
-            <Link className="primary-button" href="/schedule">Start changing my health</Link>
-            <Link className="secondary-button" href="#care-options">Find your care path</Link>
+            <Link className="primary-button" href="/questionnaires">Start my health assessment</Link>
+            <Link className="secondary-button" href="/schedule">Book a $325 consultation</Link>
           </div>
           <p className="hero-cta-note">45-minute new-patient consultation • Secure online scheduling • Personalized clinical plan</p>
           <div className="trust-row" aria-label="Clinic highlights">
@@ -151,7 +151,7 @@ export default function Home() {
               <li>Clear priorities and personalized next steps</li>
               <li>Lab planning when clinically appropriate</li>
             </ul>
-            <Link className="primary-button" href="/schedule">Take my first step</Link>
+            <Link className="primary-button" href="/schedule">Book my consultation</Link>
           </article>
           <article className="funnel-card">
             <span className="funnel-label">Focused starting point</span>
@@ -162,16 +162,16 @@ export default function Home() {
               <li>Functional Health &amp; Longevity</li>
               <li>NAD+ evaluation and comprehensive care</li>
             </ul>
-            <Link className="secondary-dark-button" href="#care-options">Compare care areas</Link>
+            <Link className="secondary-dark-button" href="/questionnaires">Start a self-assessment</Link>
           </article>
         </div>
         <p className="funnel-disclaimer">A consultation does not guarantee testing, treatment, a prescription, or medication fulfillment. Recommendations depend on individualized clinical evaluation.</p>
       </section>
 
       <section className="proof-strip" aria-label="Care principles">
-        <div><strong>Evaluate</strong><span>symptoms, goals, history, lifestyle, and relevant biomarkers</span></div>
-        <div><strong>Personalize</strong><span>a plan shaped around your goals, history, and clinical needs</span></div>
-        <div><strong>Progress</strong><span>structured follow-up with responsible plan adjustments</span></div>
+        <div><strong>Clarity</strong><span>understand your symptoms, risks, options, and most useful next steps</span></div>
+        <div><strong>Momentum</strong><span>turn health goals into a realistic plan you can begin acting on now</span></div>
+        <div><strong>Support</strong><span>work with a real clinician through follow-up and responsible adjustments</span></div>
       </section>
 
       <section className="service-band" id="care-options">
@@ -212,7 +212,7 @@ export default function Home() {
       </section>
 
       <section className="split-section" id="process">
-        <div><p className="eyebrow">The patient journey</p><h2>Start with questions. Move forward with clarity.</h2><p>Convenient telehealth should still include appropriate clinical review, informed decisions, and responsible follow-up.</p><Link className="text-link" href="/how-it-works">See the complete process →</Link></div>
+        <div><p className="eyebrow">A simple path forward</p><h2>Four steps to the care you have been looking for.</h2><p>Start online, meet with a real clinician, and move forward with a plan shaped around your life—not a generic protocol.</p><Link className="primary-button" href="/questionnaires">Start my assessment</Link></div>
         <ol className="step-list">{steps.map(([title, copy]) => <li key={title}><strong>{title}</strong><span>{copy}</span></li>)}</ol>
       </section>
 
