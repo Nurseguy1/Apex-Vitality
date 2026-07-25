@@ -4,37 +4,37 @@ import { SiteFooter, SiteHeader } from "./components";
 
 const services = [
   {
-    title: "NAD+ Evaluation & Comprehensive Care",
+    title: "Explore NAD+ Care for Energy & Healthy Aging",
     copy: "Explore energy, recovery, and healthy-aging goals through a focused clinical evaluation. Treatment depends on medical review.",
     href: "/nad-plus",
     cta: "Explore NAD+ care",
   },
   {
-    title: "Longevity & Functional Health",
+    title: "Build Your Longevity & Functional Health Plan",
     copy: "Connect the dots between symptoms, nutrition, metabolic health, recovery, biomarkers, and the way you want to live.",
     href: "/functional-health",
     cta: "Explore functional health",
   },
   {
-    title: "Gut Health",
+    title: "Get to the Root of Your Gut Health",
     copy: "Stop guessing about digestive symptoms. Build a clearer plan around nutrition, lifestyle, medications, and useful testing.",
     href: "/gut-health",
     cta: "Explore gut health",
   },
   {
-    title: "Medical Weight Management",
+    title: "Make Medical Weight Management Work for You",
     copy: "Move toward sustainable change with clinical evaluation, relevant lab review, practical strategy, and ongoing follow-through.",
     href: "/weight-loss",
     cta: "Explore weight management",
   },
   {
-    title: "Men's Health",
+    title: "Restore Energy, Strength & Confidence",
     copy: "Take changes in energy, sexual health, strength, mood, sleep, recovery, and body composition seriously—and act on them.",
     href: "/mens-health",
     cta: "Explore men's health",
   },
   {
-    title: "Women's Health & Healthy Aging",
+    title: "Feel Your Best Through Every Stage of Women’s Health",
     copy: "Move through hormonal and metabolic changes with a plan for energy, sleep, strength, confidence, and healthy aging.",
     href: "/womens-health",
     cta: "Explore women's health",
