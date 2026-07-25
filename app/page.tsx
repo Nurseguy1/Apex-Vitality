@@ -13,7 +13,7 @@ const services = [
   {
     category: "Sermorelin Care",
     title: "Strengthen Sleep, Recovery & Healthy Aging",
-    copy: "Support natural growth-hormone signaling with focused care for sleep, recovery, strength, body composition, and vitality.",
+    copy: "Answer a quick questionnaire, receive personal clinician review, and have your medication delivered directly to your door.",
     href: "/sermorelin",
     cta: "Explore sermorelin care",
   },

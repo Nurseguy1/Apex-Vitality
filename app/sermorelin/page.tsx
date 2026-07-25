@@ -36,11 +36,12 @@ export default function SermorelinPage() {
           <p className="eyebrow">Prescription-based recovery care</p>
           <h1>Activate your body’s natural recovery system with sermorelin care.</h1>
           <p className="focused-care-lede">Sermorelin supports natural growth-hormone signaling involved in tissue maintenance, sleep, and physical recovery. Start prescription-based care and build a plan around recovery, strength, body composition, performance, and healthy-aging goals.</p>
+          <p className="focused-care-simple-path">Start with a quick questionnaire. A clinician reviews your symptoms and goals. Your medication is delivered directly to your door.</p>
           <div className="hero-actions">
             {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Start my sermorelin plan ↗</a>}
             <Link className="secondary-button" href="/schedule">Choose comprehensive care</Link>
           </div>
-          <p className="focused-care-note">Complete your secure intake online. Your clinician adds secure messaging, telephone, or video when it moves your care forward.</p>
+          <p className="focused-care-note">Simple online care with personal clinical review, secure communication, and convenient home delivery.</p>
         </div>
         <aside className="focused-offer-card">
           <span>Build momentum while you recover</span>
@@ -53,9 +54,9 @@ export default function SermorelinPage() {
       <section className="focused-process" aria-labelledby="sermorelin-process">
         <div className="section-heading"><p className="eyebrow">Simple by design</p><h2 id="sermorelin-process">Start your sermorelin plan in three steps.</h2></div>
         <div className="focused-process-grid">
-          <article><span>01</span><h3>Complete your secure intake</h3><p>Share your sleep, recovery, performance, health history, medications, supplements, and goals.</p></article>
-          <article><span>02</span><h3>Your clinician builds the plan</h3><p>A licensed clinician reviews your information, communicates with you securely, and develops your treatment and monitoring plan.</p></article>
-          <article><span>03</span><h3>Begin and build momentum</h3><p>Your prescription is coordinated with the fulfillment pharmacy and shipped directly, with follow-up organized through Charm.</p></article>
+          <article><span>01</span><h3>Answer a quick questionnaire</h3><p>Tell us about your symptoms, sleep, recovery, health history, medications, and goals through the secure portal.</p></article>
+          <article><span>02</span><h3>A clinician reviews your symptoms</h3><p>Your clinician personally reviews your answers and builds a treatment and monitoring plan around your goals.</p></article>
+          <article><span>03</span><h3>Medication arrives at your door</h3><p>Your prescription is coordinated with a licensed pharmacy and delivered directly to you, with follow-up organized through Charm.</p></article>
         </div>
       </section>
 

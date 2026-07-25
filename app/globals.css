@@ -470,6 +470,18 @@ footer p {
     linear-gradient(135deg, #102c34, #1a3b42 58%, #234c50);
 }
 
+.focused-care-simple-path {
+  max-width: 720px;
+  margin: 24px 0;
+  padding: 18px 22px;
+  border-left: 4px solid #8cc9c3;
+  background: rgb(255 255 255 / .08);
+  color: white;
+  font-size: 19px;
+  font-weight: 720;
+  line-height: 1.55;
+}
+
 .sermorelin-audiences { background: #edf2f0; }
 .sermorelin-learning-center { background: #193940; }
 .sermorelin-article-header {
