@@ -155,8 +155,8 @@ export default function NadPlusPage() {
 
       <section className="peptide-next-step nad-peptide-bridge">
         <p className="eyebrow">Cellular support meets peptide care</p>
-        <h2>Supercharge your peptide therapy with nucleotides.</h2>
-        <p>NAD+ supports cellular energy and repair pathways. Connect nucleotide support with clinician-guided sermorelin peptide care, recovery goals, healthy-aging strategy, and monitored follow-up in one coordinated plan.</p>
+        <h2>Supercharge your peptide therapy with the two-nucleotide power of NAD+.</h2>
+        <p>NAD+ is made from two nucleotides and supports cellular energy and repair pathways. Connect NAD+ support with clinician-guided sermorelin peptide care, recovery goals, healthy-aging strategy, and monitored follow-up in one coordinated plan.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/sermorelin">Explore sermorelin peptide care</Link>
           <Link className="secondary-dark-button" href="/peptide-care">Explore monitored peptide care</Link>
