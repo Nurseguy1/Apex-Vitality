@@ -463,6 +463,169 @@ footer p {
 .focused-care-hero h1 { max-width: 820px; font-size: clamp(46px, 6.5vw, 84px); }
 .focused-care-lede { max-width: 720px; color: rgb(255 255 255 / .76); font-size: 19px; line-height: 1.7; }
 .focused-care-note { max-width: 700px; margin: -8px 0 0; color: rgb(255 255 255 / .7); font-size: 14px; line-height: 1.6; }
+
+.nad-audiences {
+  padding: 86px clamp(20px, 6vw, 92px);
+  background: #eef2f1;
+}
+
+.nad-audiences .section-heading {
+  max-width: 820px;
+  margin-bottom: 38px;
+}
+
+.nad-audiences .section-heading > p:last-child {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.nad-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.nad-audience-grid article {
+  display: flex;
+  min-height: 290px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+  border: 1px solid rgb(23 57 65 / .14);
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 18px 45px rgb(17 38 44 / .07);
+}
+
+.nad-audience-grid span {
+  color: var(--teal-dark);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.nad-audience-grid h3 {
+  margin: 18px 0 12px;
+  color: var(--graphite);
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.08;
+}
+
+.nad-audience-grid p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.nad-audience-grid a {
+  margin-top: auto;
+  padding-top: 22px;
+  color: var(--teal-dark);
+  font-weight: 800;
+}
+
+.nad-learning-center {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 36px 70px;
+  align-items: end;
+  padding: 70px clamp(20px, 6vw, 92px);
+  background: #15333b;
+  color: white;
+}
+
+.nad-learning-center h2 {
+  margin: 6px 0 0;
+  font-size: clamp(36px, 5vw, 62px);
+}
+
+.nad-learning-center > p {
+  margin: 0;
+  color: rgb(255 255 255 / .78);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.nad-article {
+  background: #f4f6f5;
+}
+
+.nad-article-header {
+  padding: 84px clamp(20px, 9vw, 150px);
+  background:
+    radial-gradient(circle at 85% 15%, rgb(71 139 147 / .24), transparent 34%),
+    #17323a;
+  color: white;
+}
+
+.nad-article-header > a {
+  display: inline-block;
+  margin-bottom: 52px;
+  color: #b9ded9;
+  font-weight: 750;
+}
+
+.nad-article-header h1 {
+  max-width: 980px;
+  margin: 12px 0 24px;
+  font-size: clamp(46px, 7vw, 82px);
+  line-height: .98;
+}
+
+.nad-article-header > p:last-child {
+  max-width: 820px;
+  color: rgb(255 255 255 / .8);
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.nad-article-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 76px 24px;
+}
+
+.nad-article-body section + section {
+  margin-top: 58px;
+}
+
+.nad-article-body h2 {
+  color: var(--graphite);
+  font-size: clamp(30px, 4vw, 44px);
+}
+
+.nad-article-body p,
+.nad-article-body li {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.nad-article-body li + li {
+  margin-top: 10px;
+}
+
+.nad-article-cta {
+  max-width: 1120px;
+  margin: 0 auto 80px;
+  padding: 48px;
+  border-radius: 16px;
+  background: #dce8e5;
+}
+
+.nad-article-cta h2 {
+  max-width: 800px;
+  font-size: clamp(34px, 5vw, 56px);
+}
+
+.nad-article-cta > p:not(.eyebrow) {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
 .focused-offer-card {
   padding: clamp(28px, 4vw, 44px);
   border: 1px solid rgb(255 255 255 / .18);
@@ -1601,6 +1764,7 @@ footer p {
   }
 
   .hero,
+  .nad-learning-center,
   .funnel-options,
   .lab-section,
   .split-section,
@@ -1622,6 +1786,10 @@ footer p {
   }
 
   .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nad-audience-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1694,6 +1862,10 @@ footer p {
   }
 
   .hero,
+  .nad-audiences,
+  .nad-learning-center,
+  .nad-article-header,
+  .nad-article-cta,
   .service-band,
   .membership-section,
   .membership-page-grid,
@@ -1737,5 +1909,10 @@ footer p {
 
   .journey-list li {
     grid-template-columns: 1fr;
+  }
+
+  .nad-audience-grid article,
+  .nad-article-cta {
+    padding: 24px;
   }
 }

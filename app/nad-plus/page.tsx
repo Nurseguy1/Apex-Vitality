@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CareNotice, SiteFooter, SiteHeader } from "../components";
 import { charmLinks } from "../lib/charm";
+import { JsonLd } from "../seo";
+import { nadArticles } from "./articles/article-data";
 
 export const metadata: Metadata = {
   title: "NAD+ Focused Care | Online Provider Review | Apex Vitality",
@@ -26,23 +28,37 @@ const comprehensiveCare = [
 ];
 
 export default function NadPlusPage() {
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "NAD+ Focused Care and Learning Center",
+    description:
+      "Online NAD+ focused care and clinician-written education for adults interested in energy, recovery, performance, and healthy aging.",
+    hasPart: nadArticles.map((article) => ({
+      "@type": "Article",
+      headline: article.title,
+      url: `https://create-a-coral.vercel.app/nad-plus/articles/${article.slug}`,
+    })),
+  };
+
   return (
     <main>
+      <JsonLd data={pageSchema} />
       <SiteHeader />
 
       <section className="focused-care-hero">
         <div>
-          <p className="eyebrow">Focused treatment access</p>
-          <h1>NAD+ care that starts online and moves at your pace.</h1>
+          <p className="eyebrow">More energy. Sharper focus. Stronger days.</p>
+          <h1>Recharge how you feel with personalized NAD+ care.</h1>
           <p className="focused-care-lede">
-            Tell us about your health and goals through a secure intake. Your
-            clinician personally reviews your information, communicates with you
-            through the patient portal, and develops your treatment plan.
+            You know when your energy, focus, or recovery is not where you want
+            it to be. Start online today and work directly with a clinician to
+            build an NAD+ plan around your body, your routine, and your goals.
           </p>
           <div className="hero-actions">
             {charmLinks.portal && (
               <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">
-                Start my secure NAD+ review ↗
+                Start my NAD+ plan ↗
               </a>
             )}
             <Link className="secondary-button" href="/schedule">
@@ -56,8 +72,8 @@ export default function NadPlusPage() {
           </p>
         </div>
         <aside className="focused-offer-card">
-          <span>One straightforward pathway</span>
-          <h2>Personal clinician review. Clear next steps.</h2>
+          <span>Your goals can start moving today</span>
+          <h2>A simpler path to feeling energized, focused, and ready.</h2>
           <ul className="check-list">
             {included.map((item) => <li key={item}>{item}</li>)}
           </ul>
@@ -99,6 +115,41 @@ export default function NadPlusPage() {
             </p>
           </article>
         </div>
+      </section>
+
+      <section className="nad-audiences" aria-labelledby="nad-audiences-title">
+        <div className="section-heading">
+          <p className="eyebrow">Find yourself in the possibilities</p>
+          <h2 id="nad-audiences-title">What could more energy and better recovery change for you?</h2>
+          <p>
+            Choose the story that feels most like your life. Learn how NAD+ fits
+            your goals, then take the first step toward a personalized plan.
+          </p>
+        </div>
+        <div className="nad-audience-grid">
+          {nadArticles.map((article) => (
+            <article key={article.slug}>
+              <span>{article.audience}</span>
+              <h3>{article.title}</h3>
+              <p>{article.description}</p>
+              <Link href={`/nad-plus/articles/${article.slug}`}>
+                See what NAD+ could mean for me →
+              </Link>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="nad-learning-center" id="nad-learning-center">
+        <div>
+          <p className="eyebrow">NAD+ Learning Center</p>
+          <h2>Picture what is possible. Then make it personal.</h2>
+        </div>
+        <p>
+          Explore the energy, focus, recovery, healthy-aging, and midlife goals
+          people are pursuing with NAD+. When you see your goal, start your
+          secure review and turn that interest into a plan designed for you.
+        </p>
       </section>
 
       <section className="focused-choice">
