@@ -21,9 +21,9 @@ export default function FunctionalHealthPage() {
     <main>
       <SiteHeader />
       <PageIntro
-        eyebrow="Functional health & longevity"
-        title="Look beyond isolated symptoms—without losing clinical discipline."
-        description="A whole-person telehealth pathway for adults who want their symptoms, daily habits, metabolic health, recovery, and long-term goals considered together."
+        eyebrow="Whole-person, clinician-led care"
+        title="Functional Health & Longevity"
+        description="Look beyond isolated symptoms without losing clinical discipline. This whole-person telehealth pathway considers your symptoms, daily habits, metabolic health, recovery, and long-term goals together."
       />
       <section className="content-section">
         <div className="section-heading">

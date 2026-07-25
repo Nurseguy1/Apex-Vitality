@@ -29,12 +29,13 @@ export default function NadPlusPage() {
     <main>
       <SiteHeader />
       <section className="page-intro">
-        <p className="eyebrow">Two levels of care</p>
-        <h1>Start with an NAD+ question—or take a more comprehensive look at your health.</h1>
+        <p className="eyebrow">Two levels of clinician-led care</p>
+        <h1>NAD+ Evaluation &amp; Comprehensive Care</h1>
         <p>
-          Choose a focused evaluation if NAD+ is your primary interest, or begin
-          with comprehensive Functional Health &amp; Longevity care when you want
-          a broader assessment and treatment plan.
+          Start with an NAD+ question or take a more comprehensive look at your
+          health. Choose a focused evaluation when NAD+ is your primary interest,
+          or begin with Functional Health &amp; Longevity care for a broader
+          assessment and treatment plan.
         </p>
       </section>
 

@@ -20,9 +20,9 @@ export default function WomensHealthPage() {
     <main>
       <SiteHeader />
       <PageIntro
-        eyebrow="Women's health & healthy aging"
-        title="Care that connects hormonal transitions with whole-person health."
-        description="Adult telehealth support for women navigating changes in energy, sleep, mood, weight, metabolic health, recovery, and healthy aging."
+        eyebrow="Hormonal transitions & whole-person care"
+        title="Women's Health & Healthy Aging"
+        description="Care that connects hormonal transitions with whole-person health. Adult telehealth support for changes in energy, sleep, mood, weight, metabolic health, recovery, and healthy aging."
       />
       <section className="content-section">
         <div className="section-heading">

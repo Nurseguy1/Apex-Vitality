@@ -11,9 +11,9 @@ export default function LongevityPage() {
     <main>
       <SiteHeader />
       <PageIntro
-        eyebrow="Longevity & cellular wellness"
-        title="Build healthspan with measurable fundamentals."
-        description="A premium care path for adults who want a coordinated view of metabolic health, recovery, body composition, sleep, performance, and long-term risk factors."
+        eyebrow="Healthspan & cellular wellness"
+        title="Longevity Care"
+        description="Build healthspan with measurable fundamentals. A premium care path for adults who want a coordinated view of metabolic health, recovery, body composition, sleep, performance, and long-term risk factors."
       />
       <section className="content-section">
         <div className="section-heading"><p className="eyebrow">What the program emphasizes</p><h2>Start with evidence, then individualize.</h2><p>Longevity is not a promise to reverse aging. It is a structured effort to identify modifiable risks, strengthen daily foundations, and consider additional medical options only when appropriate.</p></div>

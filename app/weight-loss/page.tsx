@@ -17,9 +17,9 @@ export default function WeightLossPage() {
     <main>
       <SiteHeader />
       <PageIntro
-        eyebrow="Medical weight management"
-        title="A clearer path toward sustainable weight loss."
-        description="Apex Vitality combines telehealth access, clinician guidance, and practical follow-up for adults seeking a medically informed approach to weight management."
+        eyebrow="Clinician-guided telehealth care"
+        title="Medical Weight Management"
+        description="A clearer path toward sustainable weight loss. Apex Vitality combines telehealth access, clinician guidance, and practical follow-up for adults seeking a medically informed approach."
       />
       <section className="content-section">
         <div className="section-heading">

@@ -18,9 +18,9 @@ export default function GutHealthPage() {
     <main>
       <SiteHeader />
       <PageIntro
-        eyebrow="Gut health & digestive wellness"
-        title="Look beyond the symptom list without losing sight of medical fundamentals."
-        description="Apex Vitality offers a structured telehealth evaluation for adults navigating bloating, irregularity, digestive discomfort, food-related concerns, or questions about the gut–metabolic connection."
+        eyebrow="Digestive wellness"
+        title="Gut Health"
+        description="Look beyond the symptom list without losing sight of medical fundamentals. Apex Vitality offers structured telehealth evaluation for bloating, irregularity, digestive discomfort, food-related concerns, and the gut–metabolic connection."
       />
       <section className="content-section">
         <div className="section-heading">

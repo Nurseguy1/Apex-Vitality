@@ -11,9 +11,9 @@ export default function MensHealthPage() {
     <main>
       <SiteHeader />
       <PageIntro
-        eyebrow="Men's health"
-        title="Understand the symptoms. Review the data. Build the right plan."
-        description="Focused telehealth care for men experiencing changes in energy, sexual health, strength, recovery, mood, sleep, or body composition."
+        eyebrow="Vitality, performance & hormonal health"
+        title="Men's Health"
+        description="Understand the symptoms, review the data, and build the right plan. Focused telehealth care for changes in energy, sexual health, strength, recovery, mood, sleep, or body composition."
       />
       <section className="content-section">
         <div className="section-heading">
