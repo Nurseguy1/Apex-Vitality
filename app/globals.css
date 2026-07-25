@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4f6f4;
-  --foreground: #101719;
-  --muted: #5b666b;
-  --line: #d4dbdd;
+  --background: #fbfaf6;
+  --foreground: #183033;
+  --muted: #5d6f70;
+  --line: #dce5e1;
   --surface: #ffffff;
-  --teal: #0b6066;
-  --teal-dark: #082f35;
-  --graphite: #11191c;
-  --copper: #b36d42;
-  --steel: #e4eaec;
-  --ice: #f9fbfa;
+  --teal: #287b78;
+  --teal-dark: #164f52;
+  --graphite: #173f42;
+  --copper: #bf7958;
+  --steel: #eaf0ed;
+  --ice: #f5faf7;
 }
 
 @theme inline {
@@ -67,8 +67,8 @@ main {
   align-items: center;
   gap: 20px;
   padding: 18px clamp(20px, 5vw, 72px);
-  border-bottom: 1px solid rgb(21 29 31 / 0.1);
-  background: rgb(244 246 244 / 0.9);
+  border-bottom: 1px solid rgb(22 79 82 / 0.1);
+  background: rgb(251 250 246 / 0.92);
   backdrop-filter: blur(18px);
 }
 
@@ -128,8 +128,8 @@ main {
   min-height: calc(100vh - 78px);
   padding: clamp(48px, 7vw, 86px) clamp(20px, 5vw, 72px) 60px;
   background:
-    linear-gradient(108deg, rgb(17 25 28 / 0.98) 0%, rgb(17 25 28 / 0.9) 50%, rgb(17 25 28 / 0.34) 61%, rgb(244 246 244 / 0) 68%),
-    var(--background);
+    radial-gradient(circle at 12% 18%, rgb(191 121 88 / 0.13), transparent 32%),
+    linear-gradient(120deg, #fffdf9 0%, #f2f8f5 58%, #e8f4f1 100%);
 }
 
 .hero-copy {
@@ -168,9 +168,12 @@ h1 {
   margin-top: 0.12em;
 }
 
-.hero h1,
+.hero h1 {
+  color: var(--teal-dark);
+}
+
 .hero .hero-lede {
-  color: white;
+  color: var(--muted);
 }
 
 h2 {
@@ -204,7 +207,7 @@ footer p {
 .hero-tagline {
   max-width: 620px;
   margin: 0 0 18px;
-  color: #e9a66c;
+  color: var(--copper);
   font-size: clamp(20px, 2vw, 28px);
   font-weight: 760;
   letter-spacing: 0.01em;
@@ -218,7 +221,7 @@ footer p {
 
 .hero-quote cite {
   display: block;
-  color: #e9a66c;
+  color: var(--teal);
   font-size: 15px;
   font-style: normal;
   font-weight: 760;
@@ -226,7 +229,7 @@ footer p {
 }
 
 .hero .eyebrow {
-  color: #e9a66c;
+  color: var(--copper);
 }
 
 .hero-actions {
@@ -291,16 +294,16 @@ footer p {
 .questionnaire-hero,
 .quiz-page-intro {
   padding: clamp(72px, 9vw, 124px) clamp(20px, 8vw, 150px);
-  background: linear-gradient(135deg, #11191c, #123d42);
-  color: white;
+  background: linear-gradient(135deg, #f5faf7, #e4f2ed);
+  color: var(--foreground);
 }
 
 .questionnaire-hero h1,
 .quiz-page-intro h1 { max-width: 940px; }
 .questionnaire-hero > p:last-child,
-.quiz-page-intro > p:last-child { max-width: 760px; color: rgb(255 255 255 / 0.76); font-size: 18px; line-height: 1.7; }
-.quiz-page-intro.quiz-copper { background: linear-gradient(135deg, #2b2020, #814d30); }
-.quiz-page-intro.quiz-blue { background: linear-gradient(135deg, #14212a, #315f78); }
+.quiz-page-intro > p:last-child { max-width: 760px; color: var(--muted); font-size: 18px; line-height: 1.7; }
+.quiz-page-intro.quiz-copper { background: linear-gradient(135deg, #fff8f2, #f4e5da); }
+.quiz-page-intro.quiz-blue { background: linear-gradient(135deg, #f4f8fb, #e1edf3); }
 
 .questionnaire-grid {
   display: grid;
@@ -381,11 +384,11 @@ footer p {
 
 .patient-access-hero {
   padding: clamp(72px, 9vw, 124px) clamp(20px, 8vw, 150px);
-  background: linear-gradient(135deg, #11191c, #164c52);
-  color: white;
+  background: linear-gradient(135deg, #f6fbf8, #e3f1ed);
+  color: var(--foreground);
 }
 .patient-access-hero h1 { max-width: 900px; }
-.patient-access-hero > p:last-child { max-width: 760px; color: rgb(255 255 255 / .76); font-size: 18px; line-height: 1.7; }
+.patient-access-hero > p:last-child { max-width: 760px; color: var(--muted); font-size: 18px; line-height: 1.7; }
 .patient-access-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -418,9 +421,9 @@ footer p {
 .portal-handoff > div { max-width: 760px; }
 .portal-handoff p { color: var(--muted); font-size: 17px; line-height: 1.65; }
 
-.schedule-intro { padding: clamp(62px, 8vw, 104px) clamp(20px, 8vw, 150px); background: linear-gradient(135deg, #11191c, #164c52); color: white; }
+.schedule-intro { padding: clamp(62px, 8vw, 104px) clamp(20px, 8vw, 150px); background: linear-gradient(135deg, #f6fbf8, #e3f1ed); color: var(--foreground); }
 .schedule-intro h1 { max-width: 850px; }
-.schedule-intro > p:last-child { max-width: 720px; color: rgb(255 255 255 / .76); font-size: 18px; line-height: 1.65; }
+.schedule-intro > p:last-child { max-width: 720px; color: var(--muted); font-size: 18px; line-height: 1.65; }
 .booking-steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; padding: clamp(38px, 5vw, 64px) clamp(20px, 6vw, 90px) 0; background: #f7f4ef; }
 .booking-steps article { padding: 30px; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: 0 18px 45px rgb(17 25 28 / .07); }
 .booking-steps article > span { color: var(--copper); font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
@@ -449,9 +452,9 @@ footer p {
 }
 
 .secondary-button {
-  border: 1px solid rgb(255 255 255 / 0.24);
-  background: rgb(255 255 255 / 0.08);
-  color: white;
+  border: 1px solid rgb(22 79 82 / 0.22);
+  background: rgb(255 255 255 / 0.8);
+  color: var(--teal-dark);
 }
 
 .trust-row {
@@ -463,8 +466,8 @@ footer p {
   padding: 9px 12px;
   border: 1px solid rgb(13 99 88 / 0.16);
   border-radius: 999px;
-  background: rgb(255 255 255 / 0.1);
-  color: rgb(255 255 255 / 0.86);
+  background: rgb(255 255 255 / 0.78);
+  color: var(--teal-dark);
   font-size: 13px;
   font-weight: 700;
 }
@@ -582,8 +585,8 @@ footer p {
 }
 
 .service-band {
-  background: var(--graphite);
-  color: white;
+  background: linear-gradient(135deg, #edf7f3, #f9f7f1);
+  color: var(--foreground);
 }
 
 .section-heading {
@@ -592,7 +595,7 @@ footer p {
 }
 
 .service-band .section-heading p {
-  color: rgb(255 255 255 / 0.72);
+  color: var(--muted);
 }
 
 .service-grid {
@@ -604,19 +607,20 @@ footer p {
 .service-card {
   min-height: 260px;
   padding: clamp(22px, 3vw, 34px);
-  border: 1px solid rgb(255 255 255 / 0.16);
+  border: 1px solid var(--line);
   border-radius: 8px;
-  background: linear-gradient(180deg, rgb(255 255 255 / 0.08), rgb(255 255 255 / 0.035));
+  background: rgb(255 255 255 / 0.84);
+  box-shadow: 0 18px 40px rgb(23 63 66 / 0.06);
 }
 
 .service-card p {
-  color: rgb(255 255 255 / 0.7);
+  color: var(--muted);
 }
 
 .text-link {
   display: inline-flex;
   margin-top: 12px;
-  color: #89d2cf;
+  color: var(--teal);
   font-size: 14px;
   font-weight: 760;
 }
@@ -829,9 +833,9 @@ footer p {
 .membership-hero {
   padding: clamp(72px, 10vw, 132px) clamp(20px, 9vw, 150px);
   background:
-    radial-gradient(circle at 86% 22%, rgb(179 109 66 / .3), transparent 28%),
-    linear-gradient(135deg, #11191c, #123d42);
-  color: white;
+    radial-gradient(circle at 86% 22%, rgb(191 121 88 / .16), transparent 28%),
+    linear-gradient(135deg, #f4faf7, #e7f2ee);
+  color: var(--foreground);
 }
 
 .membership-hero h1 {
@@ -840,7 +844,7 @@ footer p {
 
 .membership-hero > p:last-child {
   max-width: 800px;
-  color: rgb(255 255 255 / .74);
+  color: var(--muted);
   font-size: 19px;
   line-height: 1.7;
 }
@@ -855,8 +859,8 @@ footer p {
   grid-template-columns: minmax(260px, .7fr) minmax(0, 1fr);
   gap: clamp(34px, 7vw, 100px);
   padding: clamp(64px, 9vw, 110px) clamp(20px, 8vw, 130px);
-  background: var(--graphite);
-  color: white;
+  background: linear-gradient(135deg, #eef7f3, #f8f5ef);
+  color: var(--foreground);
 }
 
 .membership-terms > div {
@@ -867,14 +871,14 @@ footer p {
 .membership-terms p {
   margin: 0;
   padding: 20px;
-  border: 1px solid rgb(255 255 255 / .14);
+  border: 1px solid var(--line);
   border-radius: 10px;
-  color: rgb(255 255 255 / .72);
+  color: var(--muted);
   line-height: 1.6;
 }
 
 .membership-terms strong {
-  color: white;
+  color: var(--teal-dark);
 }
 
 .membership-cta {
@@ -1124,9 +1128,9 @@ footer p {
 .page-intro {
   padding: clamp(72px, 10vw, 132px) clamp(20px, 9vw, 150px);
   background:
-    radial-gradient(circle at 86% 18%, rgb(17 128 132 / 0.3), transparent 30%),
-    var(--graphite);
-  color: white;
+    radial-gradient(circle at 86% 18%, rgb(40 123 120 / 0.14), transparent 30%),
+    linear-gradient(135deg, #f8fbf8, #e6f2ee);
+  color: var(--foreground);
 }
 
 .page-intro h1 {
@@ -1135,7 +1139,7 @@ footer p {
 
 .page-intro > p:not(.eyebrow) {
   max-width: 760px;
-  color: rgb(255 255 255 / 0.72);
+  color: var(--muted);
   font-size: 20px;
   line-height: 1.7;
 }
@@ -1175,13 +1179,13 @@ footer p {
 }
 
 .dark-panel {
-  background: var(--graphite);
-  color: white;
+  background: linear-gradient(135deg, #edf7f3, #f8f5ef);
+  color: var(--foreground);
 }
 
 .dark-panel p,
 .dark-panel .check-list {
-  color: rgb(255 255 255 / 0.72);
+  color: var(--muted);
 }
 
 .check-list {
@@ -1197,7 +1201,7 @@ footer p {
   padding: 18px 18px 18px 50px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgb(255 255 255 / 0.06);
+  background: rgb(255 255 255 / 0.82);
   font-weight: 650;
 }
 
@@ -1395,7 +1399,7 @@ footer p {
 
   .hero {
     min-height: auto;
-    background: var(--graphite);
+    background: linear-gradient(145deg, #fffdf9, #e8f4f1);
   }
 
   .hero-visual,
