@@ -66,7 +66,7 @@ export default function NadPlusPage() {
             </Link>
           </div>
           <p className="focused-care-note">
-            No scheduled visit is required by default. A secure message,
+            No scheduled visit is required. A secure message,
             telephone call, or video conversation can be added whenever it helps
             move your care forward.
           </p>
