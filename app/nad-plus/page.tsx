@@ -78,8 +78,9 @@ export default function NadPlusPage() {
             {included.map((item) => <li key={item}>{item}</li>)}
           </ul>
           <p>
-            Your total price is presented before payment. If treatment is not
-            prescribed, the focused-care payment is refunded.
+            Your total price is presented before payment and clearly lists the
+            clinician review, care coordination, medication, supplies, and
+            shipping included in your selected plan.
           </p>
         </aside>
       </section>

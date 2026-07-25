@@ -81,7 +81,7 @@ export default function PeptideCarePage() {
         <div>
           <p className="eyebrow">A prescription-based recovery pathway</p>
           <h2>Keep the tissue-recovery goal. Move into monitored sermorelin care.</h2>
-          <p>Sermorelin supports the body’s natural growth-hormone signaling, a pathway involved in tissue maintenance, sleep, and physical recovery. A licensed clinician can prescribe patient-specific sermorelin through an appropriately licensed compounding pharmacy and monitor the plan around your health and goals.</p>
+          <p>Sermorelin supports the body’s natural growth-hormone signaling, a pathway involved in tissue maintenance, sleep, and physical recovery. Work with a licensed clinician to build a patient-specific sermorelin plan with licensed pharmacy coordination and monitoring centered on your health and goals.</p>
           <Link className="primary-button" href="/sermorelin">Explore sermorelin recovery care</Link>
         </div>
         <ul className="check-list">

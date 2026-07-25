@@ -35,7 +35,7 @@ export default function SermorelinPage() {
         <div>
           <p className="eyebrow">Prescription-based recovery care</p>
           <h1>Activate your body’s natural recovery system with sermorelin care.</h1>
-          <p className="focused-care-lede">Sermorelin supports natural growth-hormone signaling involved in tissue maintenance, sleep, and physical recovery. Build a prescription-based plan around your recovery, strength, body composition, performance, and healthy-aging goals.</p>
+          <p className="focused-care-lede">Sermorelin supports natural growth-hormone signaling involved in tissue maintenance, sleep, and physical recovery. Start prescription-based care and build a plan around recovery, strength, body composition, performance, and healthy-aging goals.</p>
           <div className="hero-actions">
             {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Start my sermorelin plan ↗</a>}
             <Link className="secondary-button" href="/schedule">Choose comprehensive care</Link>
@@ -46,7 +46,7 @@ export default function SermorelinPage() {
           <span>Build momentum while you recover</span>
           <h2>A focused path to stronger sleep, recovery, and vitality.</h2>
           <ul className="check-list">{included.map((item) => <li key={item}>{item}</li>)}</ul>
-          <p>Your total price is presented before payment. If treatment is not prescribed, the focused-care payment is refunded.</p>
+          <p>Your total price is presented before payment and clearly lists the clinician review, care coordination, medication, supplies, and shipping included in your selected plan.</p>
         </aside>
       </section>
 
