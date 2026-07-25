@@ -4,32 +4,32 @@ import { SiteFooter, SiteHeader } from "./components";
 
 const services = [
   {
-    title: "NAD+ focused evaluation",
+    title: "NAD+ Evaluation & Comprehensive Care",
     copy: "A streamlined clinical evaluation for adults interested in NAD+-related care, with treatment dependent on medical review.",
     href: "/nad-plus",
   },
   {
-    title: "Functional health & longevity",
+    title: "Functional Health & Longevity",
     copy: "A whole-person pathway connecting symptoms, nutrition, metabolic health, recovery, biomarkers, and evidence-informed wellness options.",
     href: "/functional-health",
   },
   {
-    title: "Gut health & digestive wellness",
+    title: "Gut Health",
     copy: "A structured evaluation of symptoms, nutrition, lifestyle, medications, and selected laboratory findings when clinically appropriate.",
     href: "/gut-health",
   },
   {
-    title: "Metabolic & weight optimization",
+    title: "Medical Weight Management",
     copy: "Medical weight-management care for adults combining clinical evaluation, lab review, lifestyle strategy, and ongoing follow-up.",
     href: "/weight-loss",
   },
   {
-    title: "Men's vitality & performance",
+    title: "Men's Health",
     copy: "Telehealth care for changes in energy, sexual health, strength, mood, sleep, recovery, and body composition.",
     href: "/mens-health",
   },
   {
-    title: "Women's health & healthy aging",
+    title: "Women's Health & Healthy Aging",
     copy: "Adult telehealth support for perimenopause, menopause, metabolic health, thyroid concerns, sleep, energy, and long-term wellness.",
     href: "/womens-health",
   },
@@ -134,7 +134,7 @@ export default function Home() {
       </section>
 
       <section className="service-band" id="programs">
-        <div className="section-heading"><p className="eyebrow">Connected care paths</p><h2>Start with your goals. Build from your data.</h2><p>Programs can stand alone or work together when multiple areas of health overlap.</p></div>
+        <div className="section-heading"><p className="eyebrow">Explore care areas</p><h2>Find the care that matches your health goals.</h2><p>Start with a familiar area of care. Programs can stand alone or work together when multiple aspects of health overlap.</p></div>
         <div className="service-grid">
           {services.map((service) => <article className="service-card" key={service.title}><h3>{service.title}</h3><p>{service.copy}</p><Link className="text-link" href={service.href}>Explore this care path →</Link></article>)}
         </div>

@@ -10,12 +10,12 @@ export function SiteHeader() {
       </Link>
       <nav className="nav-links" aria-label="Main navigation">
         <Link href="/memberships">Memberships</Link>
-        <Link href="/functional-health">Functional Health</Link>
+        <Link href="/gut-health">Gut Health</Link>
+        <Link href="/functional-health">Functional Health &amp; Longevity</Link>
         <Link href="/nad-plus">NAD+</Link>
         <Link href="/mens-health">Men&apos;s Health</Link>
-        <Link href="/womens-health">Women&apos;s Health</Link>
+        <Link href="/womens-health">Women&apos;s Health &amp; Healthy Aging</Link>
         <Link href="/how-it-works">How It Works</Link>
-        <Link href="/faq">FAQ</Link>
       </nav>
       <Link className="header-action" href="/patient-access">Patient Access</Link>
     </header>
@@ -31,12 +31,12 @@ export function SiteFooter() {
       </div>
       <nav aria-label="Footer navigation">
         <Link href="/gut-health">Gut Health</Link>
-        <Link href="/weight-loss">Metabolic Health</Link>
+        <Link href="/weight-loss">Medical Weight Management</Link>
         <Link href="/functional-health">Functional Health &amp; Longevity</Link>
-        <Link href="/nad-plus">NAD+ Focused Evaluation</Link>
+        <Link href="/nad-plus">NAD+ Evaluation &amp; Comprehensive Care</Link>
         <Link href="/mens-health">Men&apos;s Health</Link>
-        <Link href="/womens-health">Women&apos;s Health</Link>
-        <Link href="/longevity">Longevity</Link>
+        <Link href="/womens-health">Women&apos;s Health &amp; Healthy Aging</Link>
+        <Link href="/longevity">Longevity Care</Link>
         <Link href="/how-it-works">How It Works</Link>
         <Link href="/memberships">Memberships &amp; Pricing</Link>
         <Link href="/faq">FAQ</Link>

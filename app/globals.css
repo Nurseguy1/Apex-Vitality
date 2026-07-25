@@ -100,10 +100,11 @@ main {
 }
 
 .nav-links {
-  gap: clamp(18px, 3vw, 34px);
+  gap: clamp(10px, 1.2vw, 18px);
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 620;
+  white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -617,6 +618,12 @@ footer p {
   border-radius: 8px;
   background: rgb(255 255 255 / 0.84);
   box-shadow: 0 18px 40px rgb(23 63 66 / 0.06);
+}
+
+.service-card h3 {
+  color: var(--teal-dark);
+  font-size: clamp(27px, 2.6vw, 38px);
+  line-height: 1.08;
 }
 
 .service-card p {

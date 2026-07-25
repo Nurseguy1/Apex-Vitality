@@ -54,10 +54,10 @@ export default function FunctionalHealthPage() {
           <h2>Functional care for different stages and priorities.</h2>
         </div>
         <div className="service-grid">
-          <article className="service-card"><h3>NAD+ focused evaluation</h3><p>A streamlined clinician-led pathway for adults specifically interested in discussing NAD+-related treatment.</p><Link className="text-link" href="/nad-plus">Compare the two care levels →</Link></article>
-          <article className="service-card"><h3>Women&apos;s health</h3><p>Perimenopause, menopause, metabolic health, thyroid concerns, sleep, energy, and healthy aging.</p><Link className="text-link" href="/womens-health">Explore women&apos;s health →</Link></article>
-          <article className="service-card"><h3>Men&apos;s health</h3><p>Energy, sexual health, strength, recovery, body composition, and individualized hormonal evaluation.</p><Link className="text-link" href="/mens-health">Explore men&apos;s health →</Link></article>
-          <article className="service-card"><h3>Gut health</h3><p>Structured evaluation of digestive symptoms, nutrition, medications, and testing when clinically useful.</p><Link className="text-link" href="/gut-health">Explore gut health →</Link></article>
+          <article className="service-card"><h3>NAD+ Evaluation &amp; Comprehensive Care</h3><p>A streamlined clinician-led pathway for adults specifically interested in discussing NAD+-related treatment.</p><Link className="text-link" href="/nad-plus">Compare the two care levels →</Link></article>
+          <article className="service-card"><h3>Women&apos;s Health &amp; Healthy Aging</h3><p>Perimenopause, menopause, metabolic health, thyroid concerns, sleep, energy, and healthy aging.</p><Link className="text-link" href="/womens-health">Explore women&apos;s health →</Link></article>
+          <article className="service-card"><h3>Men&apos;s Health</h3><p>Energy, sexual health, strength, recovery, body composition, and individualized hormonal evaluation.</p><Link className="text-link" href="/mens-health">Explore men&apos;s health →</Link></article>
+          <article className="service-card"><h3>Gut Health</h3><p>Structured evaluation of digestive symptoms, nutrition, medications, and testing when clinically useful.</p><Link className="text-link" href="/gut-health">Explore gut health →</Link></article>
         </div>
       </section>
       <CareNotice />
