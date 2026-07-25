@@ -1,0 +1,24 @@
+# Apex Vitality
+
+> Apex Vitality is a California telehealth practice providing proactive, clinician-led care for adults. Care is led by John Bagby, MSN, FNP-C, a board-certified family nurse practitioner. Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation.
+
+## Core care areas
+
+- [Longevity & Functional Health](https://create-a-coral.vercel.app/functional-health): Whole-person care connecting health history, lifestyle, metabolic health, recovery, nutrition, and relevant testing.
+- [Longevity Care](https://create-a-coral.vercel.app/longevity): Clinically guided care focused on healthspan, metabolic resilience, recovery, body composition, sleep, and healthy aging.
+- [Gut Health](https://create-a-coral.vercel.app/gut-health): Telehealth evaluation for digestive concerns, nutrition, lifestyle, and clinically appropriate testing.
+- [Medical Weight Management](https://create-a-coral.vercel.app/weight-loss): Individualized evaluation and ongoing care for eligible adults.
+- [Men's Health](https://create-a-coral.vercel.app/mens-health): Evaluation of energy, sexual health, strength, recovery, mood, sleep, body composition, and hormonal concerns.
+- [Women's Health & Healthy Aging](https://create-a-coral.vercel.app/womens-health): Adult care for perimenopause, menopause, metabolic health, sleep, energy, thyroid concerns, and healthy aging.
+- [NAD+ Evaluation & Comprehensive Care](https://create-a-coral.vercel.app/nad-plus): Focused clinical evaluation and a broader comprehensive-care pathway. Treatment is never guaranteed.
+
+## Practice information
+
+- [How care works](https://create-a-coral.vercel.app/how-it-works)
+- [Memberships and pricing](https://create-a-coral.vercel.app/memberships)
+- [Frequently asked questions](https://create-a-coral.vercel.app/faq)
+- [Contact and secure patient workflow](https://create-a-coral.vercel.app/contact)
+
+## Important clinical boundaries
+
+Website information is educational and is not medical advice. Treatment requires an individualized evaluation by a licensed clinician and is not guaranteed. Testing, prescriptions, medication fulfillment, and program eligibility depend on clinical appropriateness, applicable law, location, and service availability.

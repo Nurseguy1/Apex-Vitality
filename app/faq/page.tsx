@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageIntro, SiteFooter, SiteHeader } from "../components";
+import { JsonLd } from "../seo";
 
 export const metadata: Metadata = { title: "Frequently Asked Questions | Apex Vitality" };
 
@@ -20,9 +21,23 @@ const questions = [
   ["Is this website medical advice?", "No. Website content is general education and does not replace professional medical advice, diagnosis, treatment, or emergency care."],
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: questions.map(([question, answer]) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: answer,
+    },
+  })),
+};
+
 export default function FaqPage() {
   return (
     <main>
+      <JsonLd data={faqSchema} />
       <SiteHeader />
       <PageIntro eyebrow="Common questions" title="Clear answers before you take the next step." description="Know what telehealth care can—and cannot—provide before beginning." />
       <section className="faq-list">
