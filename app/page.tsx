@@ -101,18 +101,18 @@ export default function Home() {
       <SiteHeader />
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Your health can move forward</p>
+          <p className="eyebrow">Personalized care for what comes next</p>
           <h1>
-            You are not stuck.
-            <span className="headline-line">A healthier direction</span>
-            <span className="headline-line">can start today.</span>
+            Invest in your vitality.
+            <span className="headline-line">Feel stronger today.</span>
+            <span className="headline-line">Build health for the years ahead.</span>
           </h1>
-          <p className="hero-tagline">Take the first step toward feeling stronger, clearer, and more in control.</p>
+          <p className="hero-tagline">Proactive, clinician-led care for people ready to feel and perform at their best.</p>
           <blockquote className="hero-quote">
             <p className="hero-lede">
-              &ldquo;When you understand what may be holding you back, you can make
-              informed changes with purpose. Apex Vitality gives you a clinician-led
-              plan and consistent support to help you build momentum.&rdquo;
+              &ldquo;Your goals, health history, biomarkers, and lifestyle deserve to
+              be considered together. Apex Vitality turns that complete picture into
+              a thoughtful plan for lasting energy, performance, and healthy aging.&rdquo;
             </p>
             <cite>— John Bagby, MSN, FNP-C</cite>
           </blockquote>
@@ -136,9 +136,9 @@ export default function Home() {
 
       <section className="funnel-section" aria-labelledby="choose-your-path">
         <div className="funnel-heading">
-          <p className="eyebrow">Choose your next step</p>
-          <h2 id="choose-your-path">You may have more opportunity to change your health than you realize.</h2>
-          <p>One informed step can create real momentum. Start with the level of care that fits what you need today, and leave with clearer priorities for moving forward.</p>
+          <p className="eyebrow">Choose your care experience</p>
+          <h2 id="choose-your-path">A more personal approach to vitality, performance, and healthy aging.</h2>
+          <p>Begin with a focused goal or a comprehensive consultation. Each pathway is designed to help you make informed, confident decisions about your health.</p>
         </div>
         <div className="funnel-options">
           <article className="funnel-card featured-funnel">
@@ -169,9 +169,9 @@ export default function Home() {
       </section>
 
       <section className="proof-strip" aria-label="Care principles">
-        <div><strong>Clarity</strong><span>understand your symptoms, risks, options, and most useful next steps</span></div>
-        <div><strong>Momentum</strong><span>turn health goals into a realistic plan you can begin acting on now</span></div>
-        <div><strong>Support</strong><span>work with a real clinician through follow-up and responsible adjustments</span></div>
+        <div><strong>Insight</strong><span>see your health history, goals, lifestyle, and relevant data as a complete picture</span></div>
+        <div><strong>Precision</strong><span>focus your time and effort on the strategies most relevant to your priorities</span></div>
+        <div><strong>Partnership</strong><span>work directly with a clinician through thoughtful follow-up and responsible adjustments</span></div>
       </section>
 
       <section className="service-band" id="care-options">
