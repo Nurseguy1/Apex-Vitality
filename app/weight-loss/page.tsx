@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const features = [
   ["Clinical evaluation", "A licensed clinician reviews your health history, goals, medications, and potential risk factors."],
-  ["Individual care plan", "Recommendations may include nutrition, activity, behavior change, relevant testing, and other clinically appropriate options."],
+  ["Individual care plan", "Your recommendations connect nutrition, activity, behavior change, relevant testing, and clinically appropriate treatment options."],
   ["Ongoing follow-up", "Progress, tolerability, and next steps are reviewed over time so the plan can be adjusted responsibly."],
 ];
 
@@ -23,7 +23,7 @@ export default function WeightLossPage() {
       />
       <section className="content-section">
         <div className="section-heading">
-          <p className="eyebrow">What care may include</p>
+          <p className="eyebrow">What your care includes</p>
           <h2>Built around your health—not a one-size-fits-all protocol.</h2>
         </div>
         <div className="service-grid light-grid">
@@ -38,7 +38,7 @@ export default function WeightLossPage() {
           <h2>A complete medical strategy, personalized to you.</h2>
           <p>
             Your clinician reviews your history, current treatments, goals, relevant
-            data, potential benefits, and risks; explains what those findings mean;
+            data, benefits, and risks; explains what those findings mean;
             and helps you put the right nutrition, lifestyle, medical, and follow-up
             plan into action.
           </p>

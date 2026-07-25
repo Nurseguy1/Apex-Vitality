@@ -17,7 +17,7 @@ export const nadArticles: NadArticle[] = [
     slug: "nad-energy-focus-busy-adults",
     title: "NAD+ for Energy and Focus in a Demanding Life",
     description:
-      "How busy professionals, parents, and frequent travelers can think about NAD+ as part of a broader energy and focus plan.",
+      "How busy professionals, parents, and frequent travelers can build NAD+ into a broader energy and focus plan.",
     audience: "Busy professionals, parents & travelers",
     readTime: "4 min read",
     intro:
@@ -26,7 +26,7 @@ export const nadArticles: NadArticle[] = [
       {
         heading: "Why NAD+ comes up in conversations about energy",
         paragraphs: [
-          "NAD+ is a coenzyme found throughout the body. Cells use it in energy metabolism, cellular signaling, and repair processes. Interest in NAD+ care often begins with a simple goal: feeling more capable and consistent through a full day.",
+          "NAD+ is a coenzyme found throughout the body. Cells use it in energy metabolism, cellular signaling, and repair processes. NAD+ care connects that cellular foundation with a simple goal: feeling more capable and consistent through a full day.",
           "That does not mean every energy problem has the same source. Sleep quality, stress, nutrition, hormones, medications, and metabolic health can all shape how you feel. A focused review helps connect the treatment conversation to your real life.",
         ],
       },
@@ -39,14 +39,14 @@ export const nadArticles: NadArticle[] = [
           "When your energy tends to fall during the day",
           "Sleep schedule, recovery, stress, and travel",
           "Nutrition, hydration, caffeine, and supplements",
-          "Medications and health conditions that may affect energy",
+          "Medications and health conditions that affect energy",
           "The format and follow-up plan that fit your routine",
         ],
       },
       {
         heading: "Where focused care fits",
         paragraphs: [
-          "If your main goal is to explore NAD+, the secure focused-care pathway keeps the process simple. If fatigue or focus is part of a larger hormonal, metabolic, nutritional, or sleep concern, the comprehensive consultation creates room to connect those pieces.",
+          "If NAD+ is your main goal, the secure focused-care pathway keeps the process simple. When fatigue or focus connects with hormonal, metabolic, nutritional, or sleep concerns, the comprehensive consultation brings those pieces into one plan.",
         ],
       },
     ],
@@ -59,17 +59,17 @@ export const nadArticles: NadArticle[] = [
     audience: "Active adults & fitness-minded people",
     readTime: "4 min read",
     intro:
-      "Training creates an energy and recovery demand that extends beyond the workout itself. NAD+ has attracted attention because of its central role in cellular energy, but the most useful plan still starts with the person, the training load, and the goal.",
+      "Training creates an energy and recovery demand that extends beyond the workout itself. NAD+ supports the cellular energy processes behind performance and recovery, while the strongest plan starts with the person, the training load, and the goal.",
     sections: [
       {
         heading: "Performance is more than a single product",
         paragraphs: [
-          "Recovery reflects the interaction of training volume, sleep, nutrition, hydration, stress, hormones, and time between sessions. NAD+ can be discussed as one part of that larger performance picture rather than a substitute for it.",
-          "The goal is not simply to add another item to a routine. It is to understand where your current plan is working, where it is falling short, and how a clinician-guided option could fit.",
+          "Recovery reflects the interaction of training volume, sleep, nutrition, hydration, stress, hormones, and time between sessions. Build NAD+ into that larger performance picture alongside the foundations that drive progress.",
+          "The goal is not simply to add another item to a routine. Identify where your current plan works, where it falls short, and how clinician-guided NAD+ care strengthens it.",
         ],
       },
       {
-        heading: "Topics worth bringing to your clinician",
+        heading: "Build your clinician conversation around performance",
         paragraphs: [
           "A focused review works best when it reflects the demands you actually place on your body.",
         ],
@@ -84,7 +84,7 @@ export const nadArticles: NadArticle[] = [
       {
         heading: "Choose the depth that matches your goal",
         paragraphs: [
-          "The focused NAD+ pathway is designed for adults who already know what they want to explore. Comprehensive care is available when performance, hormones, metabolism, body composition, sleep, or nutrition should be considered together.",
+          "The focused NAD+ pathway serves adults ready to add NAD+ to their performance strategy. Comprehensive care connects performance, hormones, metabolism, body composition, sleep, and nutrition in one coordinated plan.",
         ],
       },
     ],
@@ -93,11 +93,11 @@ export const nadArticles: NadArticle[] = [
     slug: "nad-healthy-aging",
     title: "NAD+ and Healthy Aging: What to Know",
     description:
-      "A clear introduction to NAD+, cellular energy, healthy-aging interest, and the questions adults can bring to a clinician.",
+      "A clear introduction to NAD+, cellular energy, healthy aging, and the questions adults can bring to a clinician.",
     audience: "Adults focused on longevity",
     readTime: "5 min read",
     intro:
-      "NAD+ is essential to cellular energy and many repair and signaling processes. Levels can change with age, which has made NAD+ a major area of interest in longevity science and healthy-aging care.",
+      "NAD+ is essential to cellular energy and many repair and signaling processes. NAD+ levels decline with age, placing this coenzyme at the center of longevity science and healthy-aging care.",
     sections: [
       {
         heading: "Why NAD+ matters in the body",
@@ -131,17 +131,17 @@ export const nadArticles: NadArticle[] = [
     slug: "nad-women-35-55",
     title: "NAD+ for Women Ages 35–55",
     description:
-      "How NAD+ may fit into a whole-person conversation about energy, metabolism, recovery, and changing needs in midlife.",
+      "How NAD+ fits into a whole-person plan for energy, metabolism, recovery, and changing needs in midlife.",
     audience: "Women navigating midlife changes",
     readTime: "5 min read",
     intro:
-      "Between the mid-30s and mid-50s, changes in sleep, stress, hormones, body composition, and daily demands can all affect energy and recovery. NAD+ is increasingly discussed as one option within a broader midlife wellness plan.",
+      "Between the mid-30s and mid-50s, changes in sleep, stress, hormones, body composition, and daily demands affect energy and recovery. NAD+ supports cellular energy and adds another tool to a broader midlife wellness plan.",
     sections: [
       {
         heading: "Why this life stage deserves a wider lens",
         paragraphs: [
           "Low energy, slower recovery, sleep disruption, and metabolic changes rarely exist in isolation. A useful conversation recognizes the overlap between lifestyle demands, hormonal transitions, nutrition, and cellular energy.",
-          "Because NAD+ participates in energy metabolism and cellular processes, it may be an area you want to explore. Your clinician can help place that interest within the rest of your health picture.",
+          "NAD+ drives essential energy-metabolism and cellular processes. Your clinician connects NAD+ care with the rest of your health picture and the changes you want to make.",
         ],
       },
       {
@@ -160,7 +160,7 @@ export const nadArticles: NadArticle[] = [
       {
         heading: "Two ways to begin",
         paragraphs: [
-          "Choose the focused pathway when you want to explore NAD+ directly. Choose comprehensive care when you want energy, hormones, metabolism, nutrition, sleep, and healthy aging considered together.",
+          "Choose the focused pathway to begin NAD+ care directly. Choose comprehensive care to connect energy, hormones, metabolism, nutrition, sleep, and healthy aging in one plan.",
         ],
       },
     ],

@@ -28,7 +28,7 @@ export default function WomensHealthPage() {
         <div className="section-heading">
           <p className="eyebrow">What we can evaluate</p>
           <h2>Start with symptoms, history, risks, and goals.</h2>
-          <p>Care may include a medication and supplement review, relevant laboratory planning, lifestyle support, risk assessment, and an individualized discussion of appropriate treatment options.</p>
+          <p>Care includes medication and supplement review, relevant laboratory planning, lifestyle support, risk assessment, and an individualized discussion of treatment options.</p>
         </div>
         <div className="marker-grid wide-markers">
           {concerns.map((item) => <span key={item}>{item}</span>)}

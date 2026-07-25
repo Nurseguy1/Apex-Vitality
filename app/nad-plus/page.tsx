@@ -120,7 +120,7 @@ export default function NadPlusPage() {
       <section className="nad-audiences" aria-labelledby="nad-audiences-title">
         <div className="section-heading">
           <p className="eyebrow">Find yourself in the possibilities</p>
-          <h2 id="nad-audiences-title">What could more energy and better recovery change for you?</h2>
+          <h2 id="nad-audiences-title">Bring more energy, focus, and recovery into your life.</h2>
           <p>
             Choose the story that feels most like your life. Learn how NAD+ fits
             your goals, then take the first step toward a personalized plan.
@@ -133,7 +133,7 @@ export default function NadPlusPage() {
               <h3>{article.title}</h3>
               <p>{article.description}</p>
               <Link href={`/nad-plus/articles/${article.slug}`}>
-                See what NAD+ could mean for me →
+                See how NAD+ supports my goals →
               </Link>
             </article>
           ))}
@@ -143,12 +143,12 @@ export default function NadPlusPage() {
       <section className="nad-learning-center" id="nad-learning-center">
         <div>
           <p className="eyebrow">NAD+ Learning Center</p>
-          <h2>Picture what is possible. Then make it personal.</h2>
+          <h2>Understand the science. Build your personal plan.</h2>
         </div>
         <p>
-          Explore the energy, focus, recovery, healthy-aging, and midlife goals
-          people are pursuing with NAD+. When you see your goal, start your
-          secure review and turn that interest into a plan designed for you.
+          Learn how NAD+ supports cellular energy and connects with focus,
+          recovery, healthy-aging, and midlife goals. Choose your starting
+          point, begin your secure review, and build a plan designed for you.
         </p>
       </section>
 

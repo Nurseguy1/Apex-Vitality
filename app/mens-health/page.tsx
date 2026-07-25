@@ -20,7 +20,7 @@ export default function MensHealthPage() {
           <p className="eyebrow">A responsible evaluation</p>
           <h2>Symptoms alone do not determine treatment.</h2>
           <p>
-            Men&apos;s health concerns can have many causes. Clinical review may include
+            Men&apos;s health concerns have many contributing factors. Clinical review includes
             symptoms, medical history, medications, sleep, stress, metabolic health,
             and appropriately timed lab testing.
           </p>

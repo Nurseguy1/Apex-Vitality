@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 const evaluation = [
   ["History first", "Review digestive symptoms, nutrition, medications, supplements, stress, sleep, and prior diagnoses or testing."],
-  ["Selective testing", "Conventional labs and selected specialty testing may be considered when results are likely to guide care."],
-  ["Personalized plan", "Recommendations may address nutrition, hydration, fiber, movement, stress, sleep, and supplements when appropriate."],
+  ["Selective testing", "Conventional labs and selected specialty testing provide actionable information that guides care."],
+  ["Personalized plan", "Your recommendations connect nutrition, hydration, fiber, movement, stress, sleep, and supplements."],
   ["Follow-up", "Track symptoms and response over time, adjust the plan, and refer for gastroenterology or in-person care when needed."],
 ];
 

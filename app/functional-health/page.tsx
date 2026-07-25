@@ -29,7 +29,7 @@ export default function FunctionalHealthPage() {
         <div className="section-heading">
           <p className="eyebrow">A focused, stepwise approach</p>
           <h2>Begin with the questions most likely to change care.</h2>
-          <p>Functional care should not mean ordering every available test. Apex Vitality starts with history, symptoms, medications, nutrition, sleep, movement, and conventional clinical data, then considers additional testing only when the result may affect the plan.</p>
+          <p>Functional care should not mean ordering every available test. Apex Vitality starts with history, symptoms, medications, nutrition, sleep, movement, and conventional clinical data, then uses additional testing when the results strengthen the plan.</p>
         </div>
         <div className="marker-grid wide-markers">
           {focusAreas.map((item) => <span key={item}>{item}</span>)}
@@ -39,7 +39,7 @@ export default function FunctionalHealthPage() {
         <div>
           <p className="eyebrow">Optional tools, not automatic packages</p>
           <h2>Use supplements and specialty testing purposefully.</h2>
-          <p>When appropriate, Fullscript may support supplement fulfillment and selected functional or longevity testing. Products and specialty panels are separate from professional fees and are never required simply to participate in care.</p>
+          <p>When appropriate, Fullscript supports supplement fulfillment and selected functional or longevity testing. Products and specialty panels are separate from professional fees and are never required simply to participate in care.</p>
         </div>
         <ul className="check-list">
           <li>Focused testing based on symptoms and clinical goals</li>
