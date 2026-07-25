@@ -1515,20 +1515,6 @@ footer p {
   font-size: 14px;
 }
 
-.funnel-label,
-.visit-card span,
-.questionnaire-card > span,
-.patient-access-grid article > span:first-child,
-.booking-steps article > span,
-.program-card > span,
-.status-pill {
-  color: var(--navy);
-  font-size: 12px;
-  font-weight: 820;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
 @media (max-width: 900px) {
   .site-header {
     grid-template-columns: 1fr auto;
