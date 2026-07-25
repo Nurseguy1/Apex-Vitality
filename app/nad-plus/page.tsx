@@ -52,8 +52,8 @@ export default function NadPlusPage() {
           <h1>Recharge how you feel with personalized NAD+ care.</h1>
           <p className="focused-care-lede">
             You know when your energy, focus, or recovery is not where you want
-            it to be. Start online today and work directly with a clinician to
-            build an NAD+ plan around your body, your routine, and your goals.
+            it to be. Start today. Let&apos;s build an NAD+ plan around your body,
+            your routine, and your goals.
           </p>
           <div className="hero-actions">
             {charmLinks.portal && (
