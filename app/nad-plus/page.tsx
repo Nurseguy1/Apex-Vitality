@@ -8,7 +8,7 @@ import { nadArticles } from "./articles/article-data";
 export const metadata: Metadata = {
   title: "NAD+ Focused Care | Online Provider Review | Apex Vitality",
   description:
-    "Begin NAD+ focused care online with a secure health intake, personal clinician review, pharmacy coordination, and comprehensive care available when you want a broader plan.",
+    "Begin NAD+ focused care online or connect NAD+ cellular support with a clinician-guided peptide therapy plan.",
 };
 
 const included = [
@@ -151,6 +151,16 @@ export default function NadPlusPage() {
           recovery, healthy-aging, and midlife goals. Choose your starting
           point, begin your secure review, and build a plan designed for you.
         </p>
+      </section>
+
+      <section className="peptide-next-step nad-peptide-bridge">
+        <p className="eyebrow">Cellular support meets peptide care</p>
+        <h2>Supercharge your peptide therapy with nucleotides.</h2>
+        <p>NAD+ supports cellular energy and repair pathways. Connect nucleotide support with clinician-guided sermorelin peptide care, recovery goals, healthy-aging strategy, and monitored follow-up in one coordinated plan.</p>
+        <div className="hero-actions">
+          <Link className="primary-button" href="/sermorelin">Explore sermorelin peptide care</Link>
+          <Link className="secondary-dark-button" href="/peptide-care">Explore monitored peptide care</Link>
+        </div>
       </section>
 
       <section className="focused-choice">

@@ -602,6 +602,13 @@ footer p {
 }
 .peptide-next-step > p:not(.eyebrow) { max-width: 820px; }
 .sermorelin-peptide-bridge { background: #dce9e5; }
+.nad-peptide-bridge {
+  background:
+    radial-gradient(circle at 84% 18%, rgb(98 165 161 / .22), transparent 30%),
+    #dce9e5;
+}
+.nad-peptide-bridge > p:not(.eyebrow) { max-width: 880px; }
+.nad-peptide-bridge .hero-actions { margin-top: 28px; }
 
 .sermorelin-recovery-bridge {
   display: grid;
