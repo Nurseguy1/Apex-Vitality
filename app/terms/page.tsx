@@ -8,7 +8,7 @@ export default function TermsPage() {
         <p className="eyebrow">Terms, cancellations &amp; medical disclaimer</p>
         <h1>Important information about services and payments</h1>
         <h2>Operating entity</h2>
-        <p>Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation. Professional services are provided by John Bagby, MSN, FNP-C.</p>
+        <p>Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation. Professional services are provided by appropriately licensed medical providers.</p>
         <h2>Educational content only</h2>
         <p>Website content is provided for general educational purposes and is not medical advice, diagnosis, or treatment. Do not delay or disregard professional care because of information on this website.</p>
         <h2>No clinician-patient relationship</h2>

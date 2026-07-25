@@ -102,7 +102,7 @@ export default function NadPlusPage() {
             <span>02</span>
             <h3>Your clinician reviews your information</h3>
             <p>
-              John Bagby, MSN, FNP-C personally reviews your submission and
+              A licensed clinician personally reviews your submission and
               communicates with you securely to develop your plan.
             </p>
           </article>

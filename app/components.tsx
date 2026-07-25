@@ -27,7 +27,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div>
         <strong>Apex Vitality</strong>
-        <p>Personalized, clinician-led telehealth care by John Bagby, MSN, FNP-C.</p>
+        <p>Personalized telehealth care from licensed medical providers.</p>
       </div>
       <nav aria-label="Footer navigation">
         <Link href="/gut-health">Gut Health</Link>
@@ -85,7 +85,7 @@ export function CareNotice() {
     <aside className="care-notice">
       <strong>Your assessment is the beginning of care.</strong>
       <p>
-        John Bagby, MSN, FNP-C will assess your history, goals, symptoms, and
+        Your clinician will assess your history, goals, symptoms, and
         available data, then provide clinical guidance and a personalized plan.
         Testing, prescriptions, monitoring, and follow-up are incorporated when useful.
       </p>

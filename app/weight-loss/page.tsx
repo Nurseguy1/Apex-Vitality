@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  ["Clinical evaluation", "John Bagby, MSN, FNP-C reviews your health history, goals, medications, and potential risk factors."],
+  ["Clinical evaluation", "A licensed clinician reviews your health history, goals, medications, and potential risk factors."],
   ["Individual care plan", "Recommendations may include nutrition, activity, behavior change, relevant testing, and other clinically appropriate options."],
   ["Ongoing follow-up", "Progress, tolerability, and next steps are reviewed over time so the plan can be adjusted responsibly."],
 ];

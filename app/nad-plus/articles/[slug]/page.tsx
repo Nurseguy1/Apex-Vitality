@@ -50,8 +50,8 @@ export default async function NadArticlePage({
     description: article.description,
     audience: article.audience,
     author: {
-      "@type": "Person",
-      name: "John Bagby, MSN, FNP-C",
+      "@type": "Organization",
+      name: "Apex Vitality Clinical Team",
     },
     publisher: {
       "@type": "Organization",

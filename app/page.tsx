@@ -50,7 +50,7 @@ const services = [
 const steps = [
   ["1. Find your starting point", "Use a short self-assessment to identify the care area that best matches your concerns and goals."],
   ["2. Book your consultation", "Choose a convenient telehealth time and complete your secure patient intake."],
-  ["3. Meet with a real clinician", "Talk directly with John Bagby, MSN, FNP-C about your history, symptoms, goals, and options."],
+  ["3. Meet with a real clinician", "Talk directly with a licensed clinician about your history, symptoms, goals, and options."],
   ["4. Put your plan into motion", "Leave with clearer priorities, then use follow-up and responsible adjustments to build momentum."],
 ];
 
@@ -120,7 +120,7 @@ export default function Home() {
               believes in your ability to achieve them. Greater vitality, longevity,
               and a healthier life are within reach.&rdquo;
             </p>
-            <cite>— John Bagby, MSN, FNP-C</cite>
+            <cite>— Apex Vitality Clinical Team</cite>
           </blockquote>
           <div className="hero-actions">
             <Link className="primary-button" href="/questionnaires">Start my health assessment</Link>
@@ -151,7 +151,7 @@ export default function Home() {
             <span className="funnel-label">Best place to start</span>
             <h3>Comprehensive New-Patient Consultation</h3>
             <p className="funnel-price"><strong>$325</strong><span>one-time • 45 minutes</span></p>
-            <p>Review your symptoms, health history, medications, goals, and relevant testing needs with John Bagby, MSN, FNP-C.</p>
+            <p>Review your symptoms, health history, medications, goals, and relevant testing needs with your clinician.</p>
             <ul>
               <li>Unhurried whole-person evaluation</li>
               <li>Clear priorities and personalized next steps</li>
@@ -228,7 +228,7 @@ export default function Home() {
       </section>
 
       <section className="visit-section" id="visit">
-        <div className="visit-copy"><p className="eyebrow">Start online</p><h2>Begin with a confidential consultation.</h2><p>Meet with John Bagby, MSN, FNP-C to understand your health more clearly, learn what your findings mean, and build the treatment plan you need.</p></div>
+        <div className="visit-copy"><p className="eyebrow">Start online</p><h2>Begin with a confidential consultation.</h2><p>Meet with a licensed clinician to understand your health more clearly, learn what your findings mean, and build a treatment plan around your goals.</p></div>
         <div className="intake-form readiness-card">
           <span className="status-pill">Secure online scheduling</span>
           <h3>Ready to take the next step?</h3>

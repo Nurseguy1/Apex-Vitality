@@ -84,13 +84,6 @@ const organizationSchema = {
         "@type": "State",
         name: "California",
       },
-      employee: {
-        "@type": "Person",
-        "@id": `${siteUrl}/#john-bagby`,
-        name: "John Bagby",
-        honorificSuffix: "MSN, FNP-C",
-        jobTitle: "Board-Certified Family Nurse Practitioner",
-      },
     },
     {
       "@type": "WebSite",
