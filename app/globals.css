@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fbfaf6;
-  --foreground: #183033;
-  --muted: #5d6f70;
-  --line: #dce5e1;
+  --background: #f4f6f4;
+  --foreground: #101719;
+  --muted: #5b666b;
+  --line: #d4dbdd;
   --surface: #ffffff;
-  --teal: #287b78;
-  --teal-dark: #164f52;
-  --blue: #557f9b;
-  --blue-dark: #315d78;
-  --blue-soft: #e9f2f7;
-  --navy: #173b5e;
-  --graphite: #173f42;
-  --copper: #bf7958;
-  --steel: #eaf0ed;
-  --ice: #f5faf7;
+  --teal: #0b6066;
+  --teal-dark: #082f35;
+  --blue: #355f78;
+  --blue-dark: #203f52;
+  --blue-soft: #e4eaec;
+  --navy: #082f35;
+  --graphite: #11191c;
+  --copper: #b36d42;
+  --steel: #e4eaec;
+  --ice: #f9fbfa;
 }
 
 @theme inline {
@@ -71,8 +71,8 @@ main {
   align-items: center;
   gap: 20px;
   padding: 18px clamp(20px, 5vw, 72px);
-  border-bottom: 1px solid rgb(22 79 82 / 0.1);
-  background: rgb(251 250 246 / 0.92);
+  border-bottom: 1px solid rgb(21 29 31 / 0.1);
+  background: rgb(244 246 244 / 0.9);
   backdrop-filter: blur(18px);
 }
 
@@ -142,8 +142,8 @@ main {
   min-height: calc(100vh - 78px);
   padding: clamp(48px, 7vw, 86px) clamp(20px, 5vw, 72px) 60px;
   background:
-    radial-gradient(circle at 12% 18%, rgb(191 121 88 / 0.13), transparent 32%),
-    linear-gradient(120deg, #fffdf9 0%, #f2f8f5 58%, #e8f4f1 100%);
+    linear-gradient(108deg, rgb(17 25 28 / 0.98) 0%, rgb(17 25 28 / 0.9) 50%, rgb(17 25 28 / 0.34) 61%, rgb(244 246 244 / 0) 68%),
+    var(--background);
 }
 
 .hero-copy {
@@ -182,12 +182,9 @@ h1 {
   margin-top: 0.12em;
 }
 
-.hero h1 {
-  color: var(--teal-dark);
-}
-
+.hero h1,
 .hero .hero-lede {
-  color: var(--muted);
+  color: white;
 }
 
 h2 {
@@ -221,7 +218,7 @@ footer p {
 .hero-tagline {
   max-width: 620px;
   margin: 0 0 18px;
-  color: var(--navy);
+  color: #e9a66c;
   font-size: clamp(20px, 2vw, 28px);
   font-weight: 760;
   letter-spacing: 0.01em;
@@ -235,7 +232,7 @@ footer p {
 
 .hero-quote cite {
   display: block;
-  color: var(--teal);
+  color: #e9a66c;
   font-size: 15px;
   font-style: normal;
   font-weight: 760;
@@ -243,7 +240,7 @@ footer p {
 }
 
 .hero .eyebrow {
-  color: var(--navy);
+  color: #e9a66c;
 }
 
 .hero-actions {
@@ -308,16 +305,16 @@ footer p {
 .questionnaire-hero,
 .quiz-page-intro {
   padding: clamp(72px, 9vw, 124px) clamp(20px, 8vw, 150px);
-  background: linear-gradient(135deg, #f5faf7, #e4f2ed);
-  color: var(--foreground);
+  background: linear-gradient(135deg, #11191c, #123d42);
+  color: white;
 }
 
 .questionnaire-hero h1,
 .quiz-page-intro h1 { max-width: 940px; }
 .questionnaire-hero > p:last-child,
-.quiz-page-intro > p:last-child { max-width: 760px; color: var(--muted); font-size: 18px; line-height: 1.7; }
-.quiz-page-intro.quiz-copper { background: linear-gradient(135deg, #fff8f2, #f4e5da); }
-.quiz-page-intro.quiz-blue { background: linear-gradient(135deg, #f4f8fb, #e1edf3); }
+.quiz-page-intro > p:last-child { max-width: 760px; color: rgb(255 255 255 / 0.76); font-size: 18px; line-height: 1.7; }
+.quiz-page-intro.quiz-copper { background: linear-gradient(135deg, #2b2020, #814d30); }
+.quiz-page-intro.quiz-blue { background: linear-gradient(135deg, #14212a, #315f78); }
 
 .questionnaire-grid {
   display: grid;
@@ -398,11 +395,11 @@ footer p {
 
 .patient-access-hero {
   padding: clamp(72px, 9vw, 124px) clamp(20px, 8vw, 150px);
-  background: linear-gradient(135deg, #f6fbf8, #e3f1ed);
-  color: var(--foreground);
+  background: linear-gradient(135deg, #11191c, #164c52);
+  color: white;
 }
 .patient-access-hero h1 { max-width: 900px; }
-.patient-access-hero > p:last-child { max-width: 760px; color: var(--muted); font-size: 18px; line-height: 1.7; }
+.patient-access-hero > p:last-child { max-width: 760px; color: rgb(255 255 255 / .76); font-size: 18px; line-height: 1.7; }
 .patient-access-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -435,9 +432,9 @@ footer p {
 .portal-handoff > div { max-width: 760px; }
 .portal-handoff p { color: var(--muted); font-size: 17px; line-height: 1.65; }
 
-.schedule-intro { padding: clamp(62px, 8vw, 104px) clamp(20px, 8vw, 150px); background: linear-gradient(135deg, #f6fbf8, #e3f1ed); color: var(--foreground); }
+.schedule-intro { padding: clamp(62px, 8vw, 104px) clamp(20px, 8vw, 150px); background: linear-gradient(135deg, #11191c, #164c52); color: white; }
 .schedule-intro h1 { max-width: 850px; }
-.schedule-intro > p:last-child { max-width: 720px; color: var(--muted); font-size: 18px; line-height: 1.65; }
+.schedule-intro > p:last-child { max-width: 720px; color: rgb(255 255 255 / .76); font-size: 18px; line-height: 1.65; }
 .booking-steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; padding: clamp(38px, 5vw, 64px) clamp(20px, 6vw, 90px) 0; background: #f7f4ef; }
 .booking-steps article { padding: 30px; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: 0 18px 45px rgb(17 25 28 / .07); }
 .booking-steps article > span { color: var(--copper); font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
@@ -466,9 +463,9 @@ footer p {
 }
 
 .secondary-button {
-  border: 1px solid rgb(22 79 82 / 0.22);
-  background: rgb(255 255 255 / 0.8);
-  color: var(--teal-dark);
+  border: 1px solid rgb(255 255 255 / 0.24);
+  background: rgb(255 255 255 / 0.08);
+  color: white;
 }
 
 .trust-row {
@@ -480,8 +477,8 @@ footer p {
   padding: 9px 12px;
   border: 1px solid rgb(13 99 88 / 0.16);
   border-radius: 999px;
-  background: rgb(255 255 255 / 0.78);
-  color: var(--teal-dark);
+  background: rgb(255 255 255 / 0.1);
+  color: rgb(255 255 255 / 0.86);
   font-size: 13px;
   font-weight: 700;
 }
@@ -720,8 +717,8 @@ footer p {
 }
 
 .service-band {
-  background: linear-gradient(135deg, #edf7f3, #f9f7f1);
-  color: var(--foreground);
+  background: var(--graphite);
+  color: white;
 }
 
 .section-heading {
@@ -730,7 +727,7 @@ footer p {
 }
 
 .service-band .section-heading p {
-  color: var(--muted);
+  color: rgb(255 255 255 / 0.72);
 }
 
 .service-grid {
@@ -742,10 +739,9 @@ footer p {
 .service-card {
   min-height: 260px;
   padding: clamp(22px, 3vw, 34px);
-  border: 1px solid var(--line);
+  border: 1px solid rgb(255 255 255 / 0.16);
   border-radius: 8px;
-  background: rgb(255 255 255 / 0.84);
-  box-shadow: 0 18px 40px rgb(23 63 66 / 0.06);
+  background: linear-gradient(180deg, rgb(255 255 255 / 0.08), rgb(255 255 255 / 0.035));
 }
 
 .service-card h3 {
@@ -755,13 +751,13 @@ footer p {
 }
 
 .service-card p {
-  color: var(--muted);
+  color: rgb(255 255 255 / 0.7);
 }
 
 .text-link {
   display: inline-flex;
   margin-top: 12px;
-  color: var(--teal);
+  color: #89d2cf;
   font-size: 14px;
   font-weight: 760;
 }
@@ -974,9 +970,9 @@ footer p {
 .membership-hero {
   padding: clamp(72px, 10vw, 132px) clamp(20px, 9vw, 150px);
   background:
-    radial-gradient(circle at 86% 22%, rgb(191 121 88 / .16), transparent 28%),
-    linear-gradient(135deg, #f4faf7, #e7f2ee);
-  color: var(--foreground);
+    radial-gradient(circle at 86% 22%, rgb(179 109 66 / .3), transparent 28%),
+    linear-gradient(135deg, #11191c, #123d42);
+  color: white;
 }
 
 .membership-hero h1 {
@@ -985,7 +981,7 @@ footer p {
 
 .membership-hero > p:last-child {
   max-width: 800px;
-  color: var(--muted);
+  color: rgb(255 255 255 / .74);
   font-size: 19px;
   line-height: 1.7;
 }
@@ -1000,8 +996,8 @@ footer p {
   grid-template-columns: minmax(260px, .7fr) minmax(0, 1fr);
   gap: clamp(34px, 7vw, 100px);
   padding: clamp(64px, 9vw, 110px) clamp(20px, 8vw, 130px);
-  background: linear-gradient(135deg, #eef7f3, #f8f5ef);
-  color: var(--foreground);
+  background: var(--graphite);
+  color: white;
 }
 
 .membership-terms > div {
@@ -1012,14 +1008,14 @@ footer p {
 .membership-terms p {
   margin: 0;
   padding: 20px;
-  border: 1px solid var(--line);
+  border: 1px solid rgb(255 255 255 / .14);
   border-radius: 10px;
-  color: var(--muted);
+  color: rgb(255 255 255 / .72);
   line-height: 1.6;
 }
 
 .membership-terms strong {
-  color: var(--teal-dark);
+  color: white;
 }
 
 .membership-cta {
@@ -1269,9 +1265,9 @@ footer p {
 .page-intro {
   padding: clamp(72px, 10vw, 132px) clamp(20px, 9vw, 150px);
   background:
-    radial-gradient(circle at 86% 18%, rgb(40 123 120 / 0.14), transparent 30%),
-    linear-gradient(135deg, #f8fbf8, #e6f2ee);
-  color: var(--foreground);
+    radial-gradient(circle at 86% 18%, rgb(17 128 132 / 0.3), transparent 30%),
+    var(--graphite);
+  color: white;
 }
 
 .page-intro h1 {
@@ -1280,7 +1276,7 @@ footer p {
 
 .page-intro > p:not(.eyebrow) {
   max-width: 760px;
-  color: var(--muted);
+  color: rgb(255 255 255 / 0.72);
   font-size: 20px;
   line-height: 1.7;
 }
@@ -1320,13 +1316,13 @@ footer p {
 }
 
 .dark-panel {
-  background: linear-gradient(135deg, #edf7f3, #f8f5ef);
-  color: var(--foreground);
+  background: var(--graphite);
+  color: white;
 }
 
 .dark-panel p,
 .dark-panel .check-list {
-  color: var(--muted);
+  color: rgb(255 255 255 / 0.72);
 }
 
 .check-list {
@@ -1342,7 +1338,7 @@ footer p {
   padding: 18px 18px 18px 50px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgb(255 255 255 / 0.82);
+  background: rgb(255 255 255 / 0.06);
   font-weight: 650;
 }
 
@@ -1565,7 +1561,7 @@ footer p {
 
   .hero {
     min-height: auto;
-    background: linear-gradient(145deg, #fffdf9, #e8f4f1);
+    background: var(--graphite);
   }
 
   .hero-visual,
