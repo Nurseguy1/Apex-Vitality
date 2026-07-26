@@ -117,34 +117,21 @@ const memberships = [
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-sermorelin-vibe">
       <SiteHeader />
-      <section className="hero" id="top">
+      <section className="hero home-focus-hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Personalized care for what comes next</p>
+          <p className="eyebrow">Modern telehealth for vitality, recovery &amp; longevity</p>
           <h1>
-            Invest in your vitality.
-            <span className="headline-line">Feel stronger today.</span>
-            <span className="headline-line">Build health for the years ahead.</span>
+            Overcome what is holding you back. Build the health to achieve more.
           </h1>
-          <p className="hero-tagline">Proactive, clinician-led care for people ready to feel and perform at their best.</p>
-          <blockquote className="hero-quote">
-            <p className="hero-lede">
-              &ldquo;You know your body and your goals. Work with a care team that
-              believes in your ability to achieve them. Greater vitality, longevity,
-              and a healthier life are within reach.&rdquo;
-            </p>
-            <cite>— Apex Vitality Clinical Team</cite>
-          </blockquote>
+          <p className="hero-tagline">Turn health obstacles into a focused plan for greater energy, strength, recovery, confidence, and longevity.</p>
+          <p className="hero-lede">You know your body and what you want to achieve. Work with a care team that listens, connects the details, and helps you create forward momentum.</p>
           <div className="hero-actions">
-            <Link className="primary-button" href="#care-options">Choose my care</Link>
-            <Link className="secondary-button" href="/schedule">Start comprehensive care · $325</Link>
+            <Link className="primary-button" href="#care-options">Start achieving my goals</Link>
+            <Link className="secondary-button" href="/schedule">Comprehensive care · $325</Link>
           </div>
-          <p className="hero-cta-note">45-minute new-patient consultation • Secure online scheduling • Personalized clinical plan</p>
-          <div className="trust-row" aria-label="Clinic highlights">
-            <span>Personalized care</span><span>Board-certified family nurse practitioner</span>
-            <span>Private &amp; convenient</span><span>Secure telehealth</span>
-          </div>
+          <p className="hero-cta-note">Simple online start • Personal clinician review • A plan built to move you forward</p>
         </div>
         <div className="hero-visual" aria-label="Telehealth consultation">
           <div className="hero-image-frame">
@@ -152,6 +139,13 @@ export default function Home() {
           </div>
           <div className="visit-card"><span>Concierge telemedicine</span><strong>Executive-level attention. Clinically grounded care.</strong><p>Your history, goals, biomarkers, and lifestyle considered holistically.</p></div>
         </div>
+      </section>
+
+      <section className="home-trust-strip" aria-label="Apex Vitality care experience">
+        <article><strong>Start online</strong><span>Choose focused care or a comprehensive consultation.</span></article>
+        <article><strong>Personal review</strong><span>Your history, symptoms, medications, and goals receive clinician attention.</span></article>
+        <article><strong>Overcome the obstacles</strong><span>Connect symptoms, history, habits, and treatment options in one plan.</span></article>
+        <article><strong>Build lasting momentum</strong><span>Use convenient follow-through to keep moving toward the life you want.</span></article>
       </section>
 
       <section className="funnel-section" aria-labelledby="choose-your-path">
