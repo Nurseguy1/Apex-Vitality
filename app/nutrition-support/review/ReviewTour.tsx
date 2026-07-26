@@ -3,9 +3,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const pages = [
-  { id: "program", label: "01 · Program page", title: "Daily Nutrition Support", src: "/nutrition-support?tour=1" },
-  { id: "questionnaire", label: "02 · Starting experience", title: "Simple Questionnaire", src: "/nutrition-support/start?tour=1" },
-  { id: "options", label: "03 · Care pathways", title: "Care Options", src: "/nutrition-support/care-options?tour=1" },
+  { id: "program", title: "Daily Nutrition Support", src: "/nutrition-support?tour=1", header: true, footer: false },
+  { id: "questionnaire", title: "Simple Questionnaire", src: "/nutrition-support/start?tour=1", header: false, footer: false },
+  { id: "options", title: "Care Options", src: "/nutrition-support/care-options?tour=1", header: false, footer: true },
 ];
 
 function TourFrame({ page }: { page: (typeof pages)[number] }) {
@@ -17,8 +17,13 @@ function TourFrame({ page }: { page: (typeof pages)[number] }) {
     const body = frame?.contentDocument?.body;
     const root = frame?.contentDocument?.documentElement;
     if (!body || !root) return;
+    const header = frame?.contentDocument?.querySelector<HTMLElement>(".site-header");
+    const footer = frame?.contentDocument?.querySelector<HTMLElement>(".site-footer");
+    if (header && !page.header) header.style.display = "none";
+    if (footer && !page.footer) footer.style.display = "none";
+    body.style.overflow = "hidden";
     setHeight(Math.max(body.scrollHeight, root.scrollHeight, 900));
-  }, []);
+  }, [page.footer, page.header]);
 
   useEffect(() => {
     window.addEventListener("resize", fitFrame);
@@ -27,7 +32,6 @@ function TourFrame({ page }: { page: (typeof pages)[number] }) {
 
   return (
     <section className="review-tour-page" id={page.id}>
-      <div className="review-tour-divider"><span>{page.label}</span><strong>{page.title}</strong></div>
       <iframe ref={frameRef} src={page.src} title={`${page.title} preview`} style={{ height }} onLoad={() => { fitFrame(); window.setTimeout(fitFrame, 600); }} />
     </section>
   );
@@ -36,12 +40,6 @@ function TourFrame({ page }: { page: (typeof pages)[number] }) {
 export default function ReviewTour() {
   return (
     <main className="review-tour">
-      <header className="review-tour-header">
-        <div><span>Private concept review</span><strong>Apex Daily Nutrition Support</strong></div>
-        <nav aria-label="Jump to a preview page">
-          {pages.map((page) => <a href={`#${page.id}`} key={page.id}>{page.title}</a>)}
-        </nav>
-      </header>
       {pages.map((page) => <TourFrame page={page} key={page.id} />)}
     </main>
   );

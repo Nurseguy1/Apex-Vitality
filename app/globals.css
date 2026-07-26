@@ -2578,7 +2578,7 @@ footer p {
 
 /* Home direction aligned with the Sermorelin focused-care experience */
 .review-tour {
-  background: #0d2d35;
+  background: #f5f3ed;
 }
 
 .review-tour-header {
@@ -2629,7 +2629,7 @@ footer p {
 }
 
 .review-tour-page {
-  scroll-margin-top: 74px;
+  margin: 0;
 }
 
 .review-tour-divider {
@@ -2657,6 +2657,7 @@ footer p {
 .review-tour-page iframe {
   display: block;
   width: 100%;
+  margin: 0;
   border: 0;
   background: #f5f3ed;
 }
