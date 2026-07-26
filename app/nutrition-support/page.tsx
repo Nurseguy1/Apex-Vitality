@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
 
@@ -58,10 +57,7 @@ export default function NutritionSupportPage() {
       </section>
 
       <section className="nutrition-audience">
-        <div className="nutrition-family-image">
-          <Image src="/nutrition-support-family-v1.png" alt="Caregiver and child happily preparing a colorful snack together" width={1800} height={875} />
-        </div>
-        <div>
+        <div className="nutrition-audience-copy">
           <p className="eyebrow">Designed for everyday challenges</p>
           <h2>Begin with what is happening at home.</h2>
           <p>This pathway can support families managing selective eating, a narrow food repertoire, inconsistent protein or produce intake, supplement confusion, or a desire for a steadier digestive routine.</p>

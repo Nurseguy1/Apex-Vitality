@@ -2251,13 +2251,25 @@ footer p {
 }
 
 .nutrition-audience {
-  gap: 0;
-  padding: 0;
+  display: flex;
+  min-height: 700px;
+  align-items: center;
+  padding: clamp(72px, 9vw, 120px) clamp(20px, 7vw, 104px);
+  background:
+    linear-gradient(90deg, rgba(12,37,46,.97) 0%, rgba(12,37,46,.86) 40%, rgba(12,37,46,.24) 72%, rgba(12,37,46,.08) 100%),
+    url("/nutrition-support-family-v1.png") center / cover no-repeat;
+  color: white;
 }
 
-.nutrition-audience > div:last-child {
-  padding: clamp(64px, 8vw, 110px) clamp(28px, 7vw, 104px);
+.nutrition-audience-copy {
+  max-width: 720px;
 }
+
+.nutrition-audience .eyebrow { color: #9fe0d4; }
+.nutrition-audience h2 { color: white; }
+.nutrition-audience-copy > p:not(.eyebrow) { color: rgba(255,255,255,.8); font-size: 18px; line-height: 1.7; }
+.nutrition-audience .nutrition-tag-cloud { margin-top: 30px; }
+.nutrition-audience .nutrition-tag-cloud span { border-color: rgba(255,255,255,.28); background: rgba(12,37,46,.66); color: white; backdrop-filter: blur(10px); }
 
 .nutrition-audience h2,
 .nutrition-routing h2,
