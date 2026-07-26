@@ -2577,6 +2577,101 @@ footer p {
 }
 
 /* Home direction aligned with the Sermorelin focused-care experience */
+.review-tour {
+  background: #0d2d35;
+}
+
+.review-tour-header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  padding: 15px clamp(18px, 4vw, 58px);
+  border-bottom: 1px solid rgba(255,255,255,.14);
+  background: rgba(13, 45, 53, .96);
+  color: white;
+  backdrop-filter: blur(16px);
+}
+
+.review-tour-header > div {
+  display: grid;
+  gap: 2px;
+}
+
+.review-tour-header span {
+  color: #9edbd1;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.review-tour-header strong {
+  font-size: 17px;
+}
+
+.review-tour-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.review-tour-header a {
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 999px;
+  color: rgba(255,255,255,.86);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.review-tour-page {
+  scroll-margin-top: 74px;
+}
+
+.review-tour-divider {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: baseline;
+  padding: 26px clamp(20px, 5vw, 72px);
+  background: #0d2d35;
+  color: white;
+}
+
+.review-tour-divider span {
+  color: #9edbd1;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.review-tour-divider strong {
+  font-size: clamp(20px, 2.5vw, 30px);
+}
+
+.review-tour-page iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: #f5f3ed;
+}
+
+@media (max-width: 700px) {
+  .review-tour-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .review-tour-divider {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
 .home-sermorelin-vibe .home-focus-hero {
   grid-template-columns: minmax(0, 1.02fr) minmax(420px, .98fr);
   min-height: 760px;
