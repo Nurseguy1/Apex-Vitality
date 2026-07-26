@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
 
@@ -34,15 +35,13 @@ export default function NutritionSupportPage() {
           </div>
           <p className="nutrition-reassurance">No routine lab work is required to get started.</p>
         </div>
-        <aside className="nutrition-hero-card">
-          <span className="nutrition-card-kicker">Apex Daily Nutrition Support</span>
-          <h2>Start with one achievable step. Build from every win.</h2>
-          <ol>
-            <li><span>1</span><div><strong>Share the daily picture</strong><p>Foods, supplements, digestion, medications, and goals.</p></div></li>
-            <li><span>2</span><div><strong>Receive clinician guidance</strong><p>A practical plan shaped around the person&apos;s needs and routine.</p></div></li>
-            <li><span>3</span><div><strong>Build on progress</strong><p>Continue independently or add focused support for the next goal.</p></div></li>
-          </ol>
-        </aside>
+      </section>
+
+      <section className="nutrition-achievement-strip" aria-label="Daily Nutrition Support approach">
+        <article><strong>Respect preferences</strong><span>Begin with the person&apos;s strengths and accepted routine.</span></article>
+        <article><strong>Overcome barriers</strong><span>Find practical ways around sensory, schedule, and food limitations.</span></article>
+        <article><strong>Create achievable wins</strong><span>Choose changes that caregivers can confidently carry into daily life.</span></article>
+        <article><strong>Build on progress</strong><span>Access focused support for future goals.</span></article>
       </section>
 
       <section className="nutrition-benefits">
@@ -59,14 +58,17 @@ export default function NutritionSupportPage() {
       </section>
 
       <section className="nutrition-audience">
+        <div className="nutrition-family-image">
+          <Image src="/nutrition-support-family-v1.png" alt="Caregiver and child happily preparing a colorful snack together" width={1800} height={875} />
+        </div>
         <div>
           <p className="eyebrow">Designed for everyday challenges</p>
           <h2>Begin with what is happening at home.</h2>
           <p>This pathway can support families managing selective eating, a narrow food repertoire, inconsistent protein or produce intake, supplement confusion, or a desire for a steadier digestive routine.</p>
-        </div>
-        <div className="nutrition-tag-cloud">
-          <span>Selective eating</span><span>Sensory preferences</span><span>Nutrition gaps</span>
-          <span>Digestive routine</span><span>Supplement guidance</span><span>Caregiver-friendly plans</span>
+          <div className="nutrition-tag-cloud">
+            <span>Selective eating</span><span>Sensory preferences</span><span>Nutrition gaps</span>
+            <span>Digestive routine</span><span>Supplement guidance</span><span>Caregiver-friendly plans</span>
+          </div>
         </div>
       </section>
 
