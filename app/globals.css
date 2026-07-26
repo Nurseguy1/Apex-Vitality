@@ -2190,15 +2190,14 @@ footer p {
 
 .nutrition-family-image {
   overflow: hidden;
-  border-radius: 22px;
-  box-shadow: 0 28px 68px rgba(13, 37, 42, .18);
+  min-height: 640px;
 }
 
 .nutrition-family-image img {
   display: block;
   width: 100%;
-  height: auto;
-  transform: scale(1.01);
+  height: 100%;
+  object-fit: cover;
 }
 
 .nutrition-benefits .section-heading {
@@ -2249,6 +2248,15 @@ footer p {
   gap: clamp(42px, 8vw, 110px);
   align-items: center;
   background: #e3eee9;
+}
+
+.nutrition-audience {
+  gap: 0;
+  padding: 0;
+}
+
+.nutrition-audience > div:last-child {
+  padding: clamp(64px, 8vw, 110px) clamp(28px, 7vw, 104px);
 }
 
 .nutrition-audience h2,
@@ -2428,16 +2436,22 @@ footer p {
 }
 
 .nutrition-options-hero {
-  padding: clamp(72px, 9vw, 120px) clamp(20px, 7vw, 104px) 54px;
-  background: #163744;
+  display: flex;
+  min-height: 700px;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(72px, 9vw, 120px) clamp(20px, 7vw, 104px);
+  background:
+    linear-gradient(90deg, rgba(13,39,47,.97) 0%, rgba(13,39,47,.84) 38%, rgba(13,39,47,.28) 70%, rgba(13,39,47,.12) 100%),
+    url("/nutrition-support-woman-v1.png") center / cover no-repeat;
   color: white;
-  text-align: center;
+  text-align: left;
 }
 
 .nutrition-options-hero h1,
 .nutrition-options-hero > p {
-  max-width: 970px;
-  margin-inline: auto;
+  max-width: 760px;
+  margin-inline: 0;
 }
 
 .nutrition-options-hero > p:last-child {
