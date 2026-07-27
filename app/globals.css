@@ -2447,6 +2447,19 @@ footer p {
   padding-top: 26px;
 }
 
+.nutrition-step-heading { padding: 10px 0 24px; }
+.nutrition-step-heading h2 { margin: 8px 0 0; color: #183f4a; font-size: clamp(28px, 3vw, 40px); }
+.nutrition-questionnaire textarea { width: 100%; padding: 16px; border: 1px solid #cad4d0; border-radius: 12px; background: white; color: #263e45; font: inherit; line-height: 1.55; resize: vertical; }
+.nutrition-route-result { padding: clamp(28px, 5vw, 52px); border: 1px solid #cbd8d3; border-radius: 24px; background: #fffdf8; box-shadow: 0 22px 60px rgba(31,58,61,.1); }
+.nutrition-route-result h2 { margin: 20px 0 14px; color: #183f4a; font-size: clamp(34px, 4vw, 54px); }
+.nutrition-route-result > p:not(.eyebrow) { color: #52646a; font-size: 18px; line-height: 1.7; }
+.nutrition-route-pill { display: inline-flex; margin-top: 12px; padding: 10px 14px; border-radius: 999px; color: white; font-size: 13px; font-weight: 850; letter-spacing: .05em; text-transform: uppercase; }
+.route-foundation { background: #397b6f; }
+.route-focused { background: #286b83; }
+.route-comprehensive { background: #88583e; }
+.nutrition-result-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 22px; }
+.nutrition-route-result small { display: block; color: #718085; line-height: 1.55; }
+
 .nutrition-options-hero {
   display: flex;
   min-height: 700px;
