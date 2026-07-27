@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../../components";
 
 export const metadata: Metadata = {
-  title: "Daily Nutrition Support Options | Apex Vitality",
+  title: "Special Needs Nutrition Support Options | Apex Vitality",
   robots: { index: false, follow: false },
 };
 
@@ -40,7 +40,7 @@ export default function NutritionCareOptionsPage() {
     <main className="nutrition-preview">
       <SiteHeader />
       <section className="nutrition-options-hero">
-        <p className="eyebrow">Support that grows with the need</p>
+        <p className="eyebrow">Apex Daily Nutrition Support for Special Needs</p>
         <h1>Choose an achievable first step. Build momentum from there.</h1>
         <p>Every family can begin with a clear action they can manage today. Focused and comprehensive support helps overcome the next obstacle as new goals come into view.</p>
       </section>

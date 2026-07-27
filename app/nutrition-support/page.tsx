@@ -3,8 +3,8 @@ import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
-  title: "Daily Nutrition Support | Apex Vitality",
-  description: "Caregiver-guided nutrition and digestive wellness support for selective eaters, with a simple starting questionnaire and clinician guidance.",
+  title: "Daily Nutrition Support for Special Needs | Apex Vitality",
+  description: "Caregiver-guided nutrition and digestive wellness support for children, teens, and adults with special needs and selective or limited diets.",
   robots: { index: false, follow: false },
 };
 
@@ -20,13 +20,13 @@ export default function NutritionSupportPage() {
       <SiteHeader />
       <section className="nutrition-hero">
         <div className="nutrition-hero-copy">
-          <p className="eyebrow">Caregiver-guided nutrition support</p>
+          <p className="eyebrow">Apex Daily Nutrition Support for Special Needs</p>
           <h1>Turn daily nutrition challenges into achievable progress.</h1>
           <p className="nutrition-lead">
-            Help the person you care for move beyond the obstacles created by a
-            limited range of foods. Share their routine, strengths, preferences,
-            and your goals. We&apos;ll help you build a practical nutrition plan
-            that creates meaningful wins at home.
+            Caregiver-guided nutrition and digestive wellness support for children,
+            teens, and adults with special needs and selective or limited diets.
+            Share their routine, strengths, preferences, and your goals. We&apos;ll
+            help you build a practical plan that creates meaningful wins at home.
           </p>
           <div className="hero-actions">
             <Link className="primary-button" href="/nutrition-support/start">Start the questionnaire</Link>
