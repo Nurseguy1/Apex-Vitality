@@ -1776,6 +1776,57 @@ footer p {
   font-weight: 900;
 }
 
+/* Medical weight-loss pathway */
+.weight-loss-page { background: #f5f7f6; }
+.weight-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, .82fr);
+  gap: 54px;
+  align-items: center;
+  padding: 92px clamp(24px, 6vw, 96px);
+  background:
+    radial-gradient(circle at 82% 18%, rgb(71 164 151 / .22), transparent 30%),
+    linear-gradient(135deg, #0d2029 0%, #173745 58%, #215e68 100%);
+  color: white;
+}
+.weight-hero h1 { max-width: 900px; margin: 12px 0 24px; font-size: clamp(46px, 6.4vw, 84px); line-height: .98; letter-spacing: -.045em; }
+.weight-hero .eyebrow { color: #8ee0d5; }
+.weight-hero-lede { max-width: 760px; color: rgb(255 255 255 / .82); font-size: clamp(18px, 2vw, 23px); line-height: 1.55; }
+.weight-offer-card { padding: 38px; border: 1px solid rgb(255 255 255 / .18); border-radius: 22px; background: rgb(7 24 31 / .7); box-shadow: 0 28px 70px rgb(0 0 0 / .22); backdrop-filter: blur(12px); }
+.weight-offer-card > span { color: #8ee0d5; font-size: 12px; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+.weight-offer-card h2 { margin: 12px 0 18px; font-size: clamp(28px, 3vw, 42px); }
+.weight-offer-card .check-list { color: rgb(255 255 255 / .9); }
+.weight-offer-card .check-list li { border-color: rgb(255 255 255 / .14); }
+.weight-pricing-note { margin-top: 24px; padding: 17px 18px; border-radius: 12px; background: rgb(142 224 213 / .1); color: rgb(255 255 255 / .72); line-height: 1.55; }
+.weight-pricing-note strong { color: #8ee0d5; }
+.weight-trust-strip { display: grid; grid-template-columns: repeat(4, 1fr); background: #102b35; color: white; }
+.weight-trust-strip article { display: grid; gap: 7px; padding: 26px 28px; border-right: 1px solid rgb(255 255 255 / .1); }
+.weight-trust-strip strong { color: #8ee0d5; font-size: 17px; }
+.weight-trust-strip span { color: rgb(255 255 255 / .7); font-size: 14px; line-height: 1.5; }
+.weight-benefits { background: #f5f7f6; }
+.weight-process-section { padding: 88px clamp(24px, 6vw, 96px); background: white; }
+.weight-treatment-section { background: #e6efed; }
+.weight-plan-options { display: grid; gap: 14px; }
+.weight-plan-options article { display: grid; gap: 6px; padding: 20px 22px; border: 1px solid rgb(18 65 75 / .12); border-radius: 14px; background: rgb(255 255 255 / .7); }
+.weight-plan-options strong { color: var(--teal-dark); font-size: 18px; }
+.weight-plan-options span { color: var(--muted); line-height: 1.6; }
+.weight-final-cta { padding: 88px clamp(24px, 12vw, 180px); text-align: center; background: linear-gradient(135deg, #173745, #215e68); color: white; }
+.weight-final-cta .eyebrow { color: #8ee0d5; }
+.weight-final-cta h2 { margin: 12px auto 18px; max-width: 850px; font-size: clamp(36px, 5vw, 64px); }
+.weight-final-cta > p:not(.eyebrow) { max-width: 720px; margin: 0 auto; color: rgb(255 255 255 / .78); font-size: 18px; line-height: 1.65; }
+.weight-final-cta .hero-actions { justify-content: center; }
+
+@media (max-width: 900px) {
+  .weight-hero { grid-template-columns: 1fr; }
+  .weight-trust-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+  .weight-hero { padding-top: 62px; }
+  .weight-offer-card { padding: 26px; }
+  .weight-trust-strip { grid-template-columns: 1fr; }
+}
+
 .wide-markers {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }

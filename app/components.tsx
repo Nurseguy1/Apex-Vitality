@@ -11,6 +11,7 @@ export function SiteHeader() {
       <nav className="nav-links" aria-label="Main navigation">
         <Link href="/memberships">Memberships</Link>
         <Link href="/gut-health">Gut Health</Link>
+        <Link href="/weight-loss">Weight Loss</Link>
         <Link href="/functional-health">Longevity &amp; Functional Health</Link>
         <Link href="/nad-plus">NAD+</Link>
         <Link href="/sermorelin">Sermorelin Peptide</Link>
