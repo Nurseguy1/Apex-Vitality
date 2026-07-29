@@ -39,7 +39,7 @@ export default function WeightLossPage() {
             energy, and lasting progress.
           </p>
           <div className="hero-actions">
-            <Link className="primary-button" href="/questionnaires/metabolic-weight">Start my weight-loss questionnaire</Link>
+            <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
             <Link className="secondary-button" href="/schedule/lab-planning">Plan my labs · $59</Link>
           </div>
           <p className="hero-cta-note">Simple online start • Personal clinician review • Convenient follow-through</p>
@@ -116,10 +116,9 @@ export default function WeightLossPage() {
         <h2>Turn your weight-loss goal into a medical plan.</h2>
         <p>Answer a few focused questions now, then connect with Apex Vitality to begin building your path forward.</p>
         <div className="hero-actions">
-          <Link className="primary-button" href="/questionnaires/metabolic-weight">Start online now</Link>
+          <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
           <Link className="secondary-button" href="/schedule">Choose comprehensive care</Link>
         </div>
-        <p className="weight-review-note">Your clinician will review your information and work with you to finalize your personalized treatment plan.</p>
       </section>
 
       <SiteFooter />

@@ -22,7 +22,7 @@ export default async function QuestionnairePage({ params }: { params: Promise<{ 
     <main>
       <SiteHeader />
       <section className={`quiz-page-intro quiz-${questionnaire.accent}`}>
-        <p className="eyebrow">{questionnaire.tier} screening</p>
+        <p className="eyebrow">{questionnaire.tier} questionnaire</p>
         <h1>{questionnaire.title}</h1>
         <p>{questionnaire.description}</p>
       </section>

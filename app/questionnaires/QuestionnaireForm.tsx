@@ -59,11 +59,11 @@ export default function QuestionnaireForm({ questionnaire }: { questionnaire: Qu
   if (complete) {
     return (
       <section className="quiz-complete" aria-live="polite">
-        <span className="status-pill">Screening complete</span>
-        <h2>Thank you for completing the questionnaire.</h2>
-        <p>Your answers on this preview page have not been transmitted or saved. This questionnaire helps prepare for your consultation and does not replace the assessment and care provided directly by your clinician.</p>
-        <p>Complete the official intake assigned to you in the secure Charm patient portal. The preview answers above are not transmitted or saved.</p>
-        {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Continue to the Charm patient portal ↗</a>}
+        <span className="status-pill">Questionnaire complete</span>
+        <h2>You&apos;re ready for the next step.</h2>
+        <p>Continue to the secure Apex patient portal to complete your care setup.</p>
+        <p className="form-note">This website preview does not transmit or save your answers. Enter your information securely in the patient portal.</p>
+        {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Continue securely ↗</a>}
         <button className="secondary-dark-button" type="button" onClick={() => { setSection(0); setComplete(false); setAnswers({}); }}>Review the questionnaire again</button>
       </section>
     );
@@ -76,7 +76,7 @@ export default function QuestionnaireForm({ questionnaire }: { questionnaire: Qu
       <div className="quiz-fields">{current.questions.map((question) => <QuestionField question={question} answers={answers} key={question.id} />)}</div>
       <div className="quiz-navigation">
         {section > 0 && <button className="secondary-dark-button" type="button" onClick={() => setSection(section - 1)}>← Previous section</button>}
-        <button className="primary-button" type="submit">{section === questionnaire.sections.length - 1 ? "Complete screening" : "Continue →"}</button>
+        <button className="primary-button" type="submit">{section === questionnaire.sections.length - 1 ? "Complete questionnaire" : "Continue →"}</button>
       </div>
       <p className="quiz-privacy">Fields marked * are required. Do not use this questionnaire for emergencies. Your responses remain on this page and are not sent or stored.</p>
     </form>
