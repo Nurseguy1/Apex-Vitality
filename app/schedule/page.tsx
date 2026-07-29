@@ -3,8 +3,8 @@ import { SiteFooter, SiteHeader } from "../components";
 import { charmLinks } from "../lib/charm";
 
 export const metadata: Metadata = {
-  title: "Schedule a Consultation | Apex Vitality",
-  description: "Pay for and schedule a secure Apex Vitality new patient consultation.",
+  title: "Start Care and Schedule | Apex Vitality",
+  description: "Choose an Apex Vitality new-patient starting visit, pay securely, and schedule through CharmHealth.",
 };
 
 export default function SchedulePage() {
@@ -12,21 +12,22 @@ export default function SchedulePage() {
     <main>
       <SiteHeader />
       <section className="schedule-intro">
-        <p className="eyebrow">New patient consultation</p>
-        <h1>Pay securely, then choose your appointment.</h1>
-        <p>The comprehensive new patient consultation is $325. Payment is handled by Stripe and scheduling is handled securely by CharmHealth.</p>
+        <p className="eyebrow">Begin your care</p>
+        <h1>Choose the starting point that fits your goals.</h1>
+        <p>Start with a focused lab-planning visit or begin with a comprehensive consultation. Payment is handled securely by Stripe and scheduling by CharmHealth.</p>
       </section>
       <section className="booking-steps" aria-label="New patient booking steps">
         <article>
-          <span>Step 1</span>
-          <h2>Pay the $325 consultation fee</h2>
-          <p>Complete secure payment through Stripe. Your consultation begins your care: we listen to your goals, assess your health, explain the findings and options clearly, and build a treatment plan designed to help you achieve those goals.</p>
-          {charmLinks.newPatientCheckout && <a className="primary-button" href={charmLinks.newPatientCheckout} rel="noreferrer" target="_blank">Pay $325 securely with Stripe ↗</a>}
+          <span>Focused start · 15 minutes</span>
+          <h2>New Patient Lab-Planning Visit · $59</h2>
+          <p>Establish care, discuss your goals, and plan the labs that will guide your next step. Apply the full $59 toward a comprehensive lab-review and treatment-planning visit booked within 90 days.</p>
+          {charmLinks.labPlanningCheckout && <a className="primary-button" href={charmLinks.labPlanningCheckout} rel="noreferrer" target="_blank">Pay $59 and start ↗</a>}
         </article>
         <article>
-          <span>Step 2</span>
-          <h2>Choose your appointment</h2>
-          <p>After payment, select a 45-minute New Patient Visit below. Your assigned intake and consent forms will appear in the Charm patient portal.</p>
+          <span>Comprehensive start · 45 minutes</span>
+          <h2>Comprehensive New Patient Consultation · $325</h2>
+          <p>Begin with a complete assessment, clear clinical guidance, and an individualized care plan. Patients who begin with the $59 visit pay the remaining $266 when they return within 90 days.</p>
+          {charmLinks.newPatientCheckout && <a className="secondary-dark-button" href={charmLinks.newPatientCheckout} rel="noreferrer" target="_blank">Pay $325 and start ↗</a>}
         </article>
       </section>
       <section className="scheduler-section">
@@ -38,7 +39,7 @@ export default function SchedulePage() {
               loading="eager"
               referrerPolicy="strict-origin-when-cross-origin"
             />
-            <p>Secure scheduling provided by CharmHealth. If the calendar does not load, refresh this page or contact Apex Vitality for scheduling assistance.</p>
+            <p>Already paid? Choose the matching appointment above. Secure scheduling is provided by CharmHealth.</p>
           </div>
         ) : (
           <div className="scheduler-pending"><h2>Online scheduling is being configured.</h2><p>Please return soon. Do not send medical information through ordinary email.</p></div>
