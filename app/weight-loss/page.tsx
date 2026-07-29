@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  ["01", "Complete a brief questionnaire", "Share the essential information your clinician will review before your visit."],
-  ["02", "Connect with your clinician", "Review your starting point, ask questions, and build a practical medical weight-loss strategy together."],
-  ["03", "Complete useful labs", "Upload recent results or receive a personalized lab plan when updated information is needed."],
-  ["04", "Put your plan into motion", "Begin your treatment plan with pharmacy coordination, delivery, and clear follow-up."],
+  ["01", "Choose your goal", "Decide what you want to achieve and take the first step toward it."],
+  ["02", "Share what matters", "Complete a brief questionnaire so we can understand your starting point and priorities."],
+  ["03", "Build your strategy", "Bring your goals together with medical expertise, useful labs, and personalized options."],
+  ["04", "Put your plan into motion", "Begin with clear next steps, convenient follow-through, and support that keeps you moving."],
 ];
 
 const benefits = [
@@ -32,21 +32,21 @@ export default function WeightLossPage() {
       <section className="weight-hero">
         <div>
           <p className="eyebrow">Online medical weight loss for California adults</p>
-          <h1>Lose weight with a medical plan built to move you forward.</h1>
+          <h1>Your weight-loss goal is within reach. Start today.</h1>
           <p className="weight-hero-lede">
-            Start online today. Complete a brief questionnaire, connect with a clinician, and
-            build a personalized strategy for weight loss, metabolic health,
-            energy, and lasting progress.
+            You know what you want to change. Make the decision, choose your goal,
+            and begin building the energy, confidence, and lasting progress you are
+            ready to achieve.
           </p>
           <div className="hero-actions">
             <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
             <Link className="secondary-button" href="/schedule/lab-planning">Plan my labs · $59</Link>
           </div>
-          <p className="hero-cta-note">Simple online start • Personal clinician review • Convenient follow-through</p>
+          <p className="hero-cta-note">Start online • Choose your direction • Build real momentum</p>
         </div>
         <aside className="weight-offer-card">
           <span>Medical weight-loss pathway</span>
-          <h2>Everything starts with your goals.</h2>
+          <h2>You decide. You start. You move forward.</h2>
           <ul className="check-list">
             <li>Brief questionnaire</li>
             <li>Clinician-led treatment planning</li>
@@ -59,17 +59,17 @@ export default function WeightLossPage() {
       </section>
 
       <section className="weight-trust-strip" aria-label="Weight loss care highlights">
-        <article><strong>Start online</strong><span>Begin with a brief questionnaire.</span></article>
-        <article><strong>Bring recent labs</strong><span>Upload useful results you already have.</span></article>
-        <article><strong>Build your plan</strong><span>Connect medical treatment with sustainable habits.</span></article>
-        <article><strong>Keep progressing</strong><span>Use convenient follow-up to maintain momentum.</span></article>
+        <article><strong>Choose your goal</strong><span>Decide what you are ready to achieve.</span></article>
+        <article><strong>Start today</strong><span>Turn your decision into forward motion.</span></article>
+        <article><strong>Shape your strategy</strong><span>Build it around your life and priorities.</span></article>
+        <article><strong>Keep progressing</strong><span>Stay supported as your results take shape.</span></article>
       </section>
 
       <section className="content-section weight-benefits">
         <div className="section-heading">
-          <p className="eyebrow">More than a prescription</p>
-          <h2>Medical care that supports the whole journey.</h2>
-          <p>Weight loss works better when treatment, metabolic health, daily habits, and follow-up all move in the same direction.</p>
+          <p className="eyebrow">Your goal. Your decision. Your progress.</p>
+          <h2>The change begins when you choose it.</h2>
+          <p>Turn your motivation into action with a personalized path designed around the life, health, and results you want.</p>
         </div>
         <div className="marker-grid" aria-label="Program benefits">
           {benefits.map((benefit) => <span key={benefit}>{benefit}</span>)}
@@ -79,8 +79,8 @@ export default function WeightLossPage() {
       <section className="weight-process-section">
         <div className="section-heading">
           <p className="eyebrow">A clear path forward</p>
-          <h2>From first questions to active treatment.</h2>
-          <p>No guessing about what happens next. Each step prepares you to make informed decisions and begin moving toward your goals.</p>
+          <h2>Choose your result. Start building it.</h2>
+          <p>A few simple steps can turn the decision you make today into forward motion you can feel.</p>
         </div>
         <div className="focused-process-grid">
           {steps.map(([number, title, copy]) => (
@@ -95,13 +95,13 @@ export default function WeightLossPage() {
 
       <section className="content-split weight-treatment-section">
         <div>
-          <p className="eyebrow">Personalized treatment planning</p>
-          <h2>Choose a strategy that fits your health and your life.</h2>
+          <p className="eyebrow">Built around your success</p>
+          <h2>A strategy shaped around the result you want.</h2>
           <p>
-            Your clinician considers your goals, weight history, current
-            medications, metabolic health, nutrition, activity, sleep, and
-            relevant lab results holistically. Together, you will build a plan
-            designed for meaningful progress and practical follow-through.
+            You know your body, your life, and the future you want to create.
+            We bring your goals, history, lifestyle, and useful health information
+            together holistically to build a strategy designed for meaningful
+            progress and practical follow-through.
           </p>
         </div>
         <div className="weight-plan-options">
@@ -112,9 +112,9 @@ export default function WeightLossPage() {
       </section>
 
       <section className="weight-final-cta">
-        <p className="eyebrow">Your next step can start today</p>
-        <h2>Turn your weight-loss goal into a medical plan.</h2>
-        <p>Answer a few focused questions now, then connect with Apex Vitality to begin building your path forward.</p>
+        <p className="eyebrow">The power to begin is yours</p>
+        <h2>Your next chapter starts with one decision.</h2>
+        <p>Choose your goal. Start online today. Begin creating the progress you want to see.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
           <Link className="secondary-button" href="/schedule">Choose comprehensive care</Link>
