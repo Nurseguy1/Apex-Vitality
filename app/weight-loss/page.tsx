@@ -51,7 +51,7 @@ export default function WeightLossPage() {
             <li>Brief questionnaire</li>
             <li>Clinician-led treatment planning</li>
             <li>Lab review and monitoring</li>
-            <li>Medication options discussed when relevant</li>
+            <li>Medication options discussed</li>
             <li>Ongoing support and adjustments</li>
           </ul>
           <p className="weight-pricing-note"><strong>Medication program pricing coming soon</strong><br />Final pricing will be posted after pharmacy fulfillment is confirmed.</p>
