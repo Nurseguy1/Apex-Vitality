@@ -1815,6 +1815,7 @@ footer p {
 .weight-final-cta h2 { margin: 12px auto 18px; max-width: 850px; font-size: clamp(36px, 5vw, 64px); }
 .weight-final-cta > p:not(.eyebrow) { max-width: 720px; margin: 0 auto; color: rgb(255 255 255 / .78); font-size: 18px; line-height: 1.65; }
 .weight-final-cta .hero-actions { justify-content: center; }
+.weight-final-cta .weight-review-note { margin-top: 20px; font-size: 14px; color: rgb(255 255 255 / .7); }
 
 @media (max-width: 900px) {
   .weight-hero { grid-template-columns: 1fr; }

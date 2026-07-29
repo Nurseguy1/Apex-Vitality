@@ -77,14 +77,14 @@ export const questionnaires: Questionnaire[] = [
   {
     slug: "metabolic-weight",
     shortTitle: "Metabolic & Weight",
-    title: "Quick Weight-Loss Health Questionnaire",
+    title: "Brief Weight-Loss Questionnaire",
     tier: "Tier 1 and Tier 3",
-    description: "A two-minute preliminary screen covering the essential information needed before a weight-loss visit. Your clinician will gather the complete history with you during care.",
+    description: "A brief first step covering the essential information your clinician will review before a weight-loss visit. Your clinician will gather the complete history with you during care.",
     accent: "copper",
     sections: [
       {
         title: "Your starting point",
-        note: "Most people complete this preliminary screen in about 2 minutes.",
+        note: "Most people complete this brief questionnaire in about 2 minutes.",
         questions: [
           { id: "met_age", label: "What is your age?", type: "number", required: true },
           { id: "met_height", label: "What is your height? Include feet/inches or centimeters.", type: "text", required: true },

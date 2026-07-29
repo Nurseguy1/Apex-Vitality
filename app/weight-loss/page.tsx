@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  ["01", "Complete a two-minute screen", "Share the essential information needed for preliminary qualification before your visit."],
+  ["01", "Complete a brief questionnaire", "Share the essential information your clinician will review before your visit."],
   ["02", "Connect with your clinician", "Review your starting point, ask questions, and build a practical medical weight-loss strategy together."],
   ["03", "Complete useful labs", "Upload recent results or receive a personalized lab plan when updated information is needed."],
   ["04", "Put your plan into motion", "Begin your treatment plan with pharmacy coordination, delivery, and clear follow-up."],
@@ -34,7 +34,7 @@ export default function WeightLossPage() {
           <p className="eyebrow">Online medical weight loss for California adults</p>
           <h1>Lose weight with a medical plan built to move you forward.</h1>
           <p className="weight-hero-lede">
-            Start online today. Complete a brief qualification screen, connect with a clinician, and
+            Start online today. Complete a brief questionnaire, connect with a clinician, and
             build a personalized strategy for weight loss, metabolic health,
             energy, and lasting progress.
           </p>
@@ -48,7 +48,7 @@ export default function WeightLossPage() {
           <span>Medical weight-loss pathway</span>
           <h2>Everything starts with your goals.</h2>
           <ul className="check-list">
-            <li>Two-minute qualification screen</li>
+            <li>Brief questionnaire</li>
             <li>Clinician-led treatment planning</li>
             <li>Lab review and monitoring</li>
             <li>Medication options discussed when relevant</li>
@@ -59,7 +59,7 @@ export default function WeightLossPage() {
       </section>
 
       <section className="weight-trust-strip" aria-label="Weight loss care highlights">
-        <article><strong>Start online</strong><span>Begin with a two-minute qualification screen.</span></article>
+        <article><strong>Start online</strong><span>Begin with a brief questionnaire.</span></article>
         <article><strong>Bring recent labs</strong><span>Upload useful results you already have.</span></article>
         <article><strong>Build your plan</strong><span>Connect medical treatment with sustainable habits.</span></article>
         <article><strong>Keep progressing</strong><span>Use convenient follow-up to maintain momentum.</span></article>
@@ -119,6 +119,7 @@ export default function WeightLossPage() {
           <Link className="primary-button" href="/questionnaires/metabolic-weight">Start online now</Link>
           <Link className="secondary-button" href="/schedule">Choose comprehensive care</Link>
         </div>
+        <p className="weight-review-note">Your clinician will review your information and work with you to finalize your personalized treatment plan.</p>
       </section>
 
       <SiteFooter />
