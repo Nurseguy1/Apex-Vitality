@@ -24,6 +24,7 @@ export default function LabPlanningSchedulePage() {
         </div>
         {charmLinks.booking ? (
           <div className="scheduler-frame">
+            <a className="scheduler-mobile-launch" href={charmLinks.booking} rel="noreferrer" target="_blank">Open secure scheduler full screen ↗</a>
             <iframe src={charmLinks.booking} title="Schedule an Apex Vitality new-patient lab-planning visit through CharmHealth" loading="eager" referrerPolicy="strict-origin-when-cross-origin" />
             <p>Select <strong>New Patient Lab-Planning Visit</strong>. Secure scheduling is provided by CharmHealth.</p>
           </div>

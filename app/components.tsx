@@ -20,6 +20,22 @@ export function SiteHeader() {
         <Link href="/womens-health">Women&apos;s Health &amp; Healthy Aging</Link>
         <Link href="/how-it-works">How It Works</Link>
       </nav>
+      <details className="mobile-menu">
+        <summary aria-label="Open site navigation">Menu</summary>
+        <nav aria-label="Mobile navigation">
+          <Link href="/mens-health">Men&apos;s Health</Link>
+          <Link href="/womens-health">Women&apos;s Health</Link>
+          <Link href="/weight-loss">Weight Loss</Link>
+          <Link href="/functional-health">Longevity &amp; Functional Health</Link>
+          <Link href="/gut-health">Gut Health</Link>
+          <Link href="/nad-plus">NAD+</Link>
+          <Link href="/sermorelin">Sermorelin Peptide</Link>
+          <Link href="/peptide-care">Peptide Monitoring</Link>
+          <Link href="/memberships">Memberships</Link>
+          <Link href="/how-it-works">How It Works</Link>
+          <Link href="/patient-access">Patient Access</Link>
+        </nav>
+      </details>
       <Link className="header-action" href="/questionnaires">Get Started</Link>
     </header>
   );
