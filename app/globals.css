@@ -998,7 +998,7 @@ footer p {
 
 .funnel-options {
   display: grid;
-  grid-template-columns: 1.12fr 0.88fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -1011,6 +1011,12 @@ footer p {
   border-radius: 18px;
   background: rgb(255 255 255 / 0.88);
   box-shadow: 0 24px 58px rgb(49 93 120 / 0.1);
+}
+
+.home-focus-hero .hero-care-link {
+  align-self: center;
+  color: #b9e6e0;
+  font-weight: 800;
 }
 
 .funnel-card.featured-funnel {

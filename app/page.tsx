@@ -135,8 +135,9 @@ export default function Home() {
           <p className="hero-tagline">Turn health obstacles into a focused plan for greater energy, strength, recovery, confidence, and longevity.</p>
           <p className="hero-lede">You know your body and what you want to achieve. Work with a care team that listens, connects the details, and helps you create forward momentum.</p>
           <div className="hero-actions">
-            <Link className="primary-button" href="#care-options">Start achieving my goals</Link>
+            <Link className="primary-button" href="/schedule">Start with a $59 visit</Link>
             <Link className="secondary-button" href="/schedule">Comprehensive care · $325</Link>
+            <Link className="text-link hero-care-link" href="#care-options">Explore care options →</Link>
           </div>
           <p className="hero-cta-note">Simple online start • Personal clinician review • A plan built to move you forward</p>
         </div>
@@ -157,6 +158,18 @@ export default function Home() {
         </div>
         <div className="funnel-options">
           <article className="funnel-card featured-funnel">
+            <span className="funnel-label">Simple $59 entry</span>
+            <h3>New-Patient Lab-Planning Visit</h3>
+            <p className="funnel-price"><strong>$59</strong><span>one-time • 15 minutes</span></p>
+            <p>Establish care, discuss your goals, and create the lab plan that moves you toward your next step.</p>
+            <ul>
+              <li>Focused introductory clinician visit</li>
+              <li>Personalized lab planning</li>
+              <li>Full $59 credit toward your comprehensive follow-up within 90 days</li>
+            </ul>
+            <Link className="primary-button" href="/schedule">Start for $59</Link>
+          </article>
+          <article className="funnel-card">
             <span className="funnel-label">Complete care in one visit</span>
             <h3>Comprehensive New-Patient Consultation</h3>
             <p className="funnel-price"><strong>$325</strong><span>one-time • 45 minutes</span></p>
@@ -166,7 +179,7 @@ export default function Home() {
               <li>Clear priorities and personalized next steps</li>
               <li>Personalized lab planning</li>
             </ul>
-            <Link className="primary-button" href="/schedule">Book my consultation</Link>
+            <Link className="secondary-dark-button" href="/schedule">Book my consultation</Link>
           </article>
           <article className="funnel-card">
             <span className="funnel-label">Know what you want?</span>
