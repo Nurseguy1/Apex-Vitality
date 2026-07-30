@@ -452,11 +452,11 @@ footer p {
   color: white;
 }
 .schedule-intro h1 { max-width: 850px; }
-.schedule-intro .eyebrow { color: #b9d4f0; }
+.schedule-intro .eyebrow { color: #b8cfdf; }
 .schedule-intro > p:last-child { max-width: 720px; color: rgb(255 255 255 / .76); font-size: 18px; line-height: 1.65; }
 .booking-steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; padding: clamp(38px, 5vw, 64px) clamp(20px, 6vw, 90px) 0; background: #f7f4ef; }
 .booking-steps article { padding: 30px; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: 0 18px 45px rgb(17 25 28 / .07); }
-.booking-steps article > span { color: #214f7a; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.booking-steps article > span { color: #476b82; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .booking-steps h2 { margin: 12px 0 8px; font-size: clamp(25px, 3vw, 34px); }
 .booking-steps p { color: var(--muted); line-height: 1.65; }
 .booking-steps .primary-button { margin-top: 10px; }
@@ -465,26 +465,26 @@ footer p {
   background: linear-gradient(180deg, #edf4f3 0%, #f8f6f1 100%);
 }
 .scheduler-heading { max-width: 1160px; margin: 0 auto 22px; }
-.scheduler-heading .eyebrow { color: #214f7a; }
+.scheduler-heading .eyebrow { color: #476b82; }
 .scheduler-heading h2 { max-width: 760px; margin: 8px 0; color: #102f3a; font-size: clamp(30px, 4vw, 48px); }
 .scheduler-heading > p:last-child { max-width: 720px; margin: 0; color: var(--muted); line-height: 1.6; }
 .scheduler-frame {
   overflow: hidden;
   max-width: 1160px;
   margin: 0 auto;
-  border: 7px solid #183b63;
+  border: 7px solid #303b42;
   border-radius: 22px;
   background: white;
-  box-shadow: 0 24px 65px rgb(20 47 79 / .2);
+  box-shadow: 0 24px 65px rgb(34 43 49 / .2);
 }
 .scheduler-frame iframe {
   display: block;
   width: 100%;
   min-height: 760px;
   border: 0;
-  filter: grayscale(1) sepia(.8) hue-rotate(165deg) saturate(1.9) brightness(.9);
+  filter: grayscale(1) contrast(.94) brightness(.96);
 }
-.scheduler-frame p { margin: 0; padding: 15px 20px; border-top: 1px solid #bfd0e2; background: #e8eff7; color: #1f4165; font-size: 13px; text-align: center; }
+.scheduler-frame p { margin: 0; padding: 15px 20px; border-top: 1px solid #c8d3d9; background: #edf1f3; color: #35454e; font-size: 13px; text-align: center; }
 .scheduler-frame p a { color: var(--teal); font-weight: 760; }
 .scheduler-pending { max-width: 760px; margin: 0 auto; padding: 46px; border-radius: 18px; background: white; box-shadow: 0 20px 50px rgb(17 25 28 / .08); text-align: center; }
 
