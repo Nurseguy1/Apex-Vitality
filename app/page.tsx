@@ -135,7 +135,7 @@ export default function Home() {
           <p className="hero-tagline">Turn health obstacles into a focused plan for greater energy, strength, recovery, confidence, and longevity.</p>
           <p className="hero-lede">You know your body and what you want to achieve. Work with a care team that listens, connects the details, and helps you create forward momentum.</p>
           <div className="hero-actions">
-            <Link className="primary-button" href="/schedule">Start with a $59 visit</Link>
+            <Link className="primary-button" href="/schedule">Start with an introductory visit</Link>
             <Link className="text-link hero-care-link" href="#care-options">Explore care options →</Link>
           </div>
           <p className="hero-cta-note">Simple online start • Personal clinician review • A plan built to move you forward</p>
