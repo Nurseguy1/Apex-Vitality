@@ -157,7 +157,7 @@ export default function Home() {
         </div>
         <div className="funnel-options">
           <article className="funnel-card featured-funnel">
-            <span className="funnel-label">Simple $59 entry</span>
+            <span className="funnel-label">Introductory visit</span>
             <h3>New-Patient Lab-Planning Visit</h3>
             <p className="funnel-price"><strong>$59</strong><span>one-time • 15 minutes</span></p>
             <p>Establish care, discuss your goals, and create the lab plan that moves you toward your next step.</p>
