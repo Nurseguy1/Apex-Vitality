@@ -129,7 +129,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">Modern telehealth for vitality, recovery &amp; longevity</p>
           <h1>
-            Overcome what is holding you back. Build the health to achieve more.
+            Your goals are within reach. Build the health to achieve more.
           </h1>
           <p className="hero-tagline">Turn health obstacles into a focused plan for greater energy, strength, recovery, confidence, and longevity.</p>
           <p className="hero-lede">You know your body and what you want to achieve. Work with a care team that listens, connects the details, and helps you create forward momentum.</p>
