@@ -23,6 +23,7 @@ export default function SchedulePage() {
           <p>Establish care, discuss your goals, and plan the labs that will guide your next step. Apply the full $59 toward a comprehensive lab-review and treatment-planning visit booked within 90 days.</p>
           {charmLinks.labPlanningCheckout && <a className="primary-button" href={charmLinks.labPlanningCheckout} rel="noreferrer" target="_blank">Pay $59 and start ↗</a>}
         </article>
+        <p className="alternate-start">Already have recent lab results from another provider or laboratory? <a href="/schedule/comprehensive">Go directly to a comprehensive visit →</a></p>
       </section>
       <aside className="screening-notice"><strong>Medical emergency?</strong> Do not use online scheduling. Call 911 or seek immediate in-person care.</aside>
       <SiteFooter />
