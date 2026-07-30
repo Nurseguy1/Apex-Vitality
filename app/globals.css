@@ -447,44 +447,44 @@ footer p {
 .schedule-intro {
   padding: clamp(62px, 8vw, 104px) clamp(20px, 8vw, 150px);
   background:
-    linear-gradient(90deg, rgb(12 25 29 / .98), rgb(22 76 82 / .72)),
+    linear-gradient(90deg, rgb(8 8 8 / .98), rgb(28 28 28 / .78)),
     url('/telehealth-consult-v2.png') center / cover no-repeat;
   color: white;
 }
 .schedule-intro h1 { max-width: 850px; }
-.schedule-intro .eyebrow { color: #b8cfdf; }
+.schedule-intro .eyebrow { color: #dedede; }
 .schedule-intro > p:last-child { max-width: 720px; color: rgb(255 255 255 / .76); font-size: 18px; line-height: 1.65; }
-.booking-steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; padding: clamp(38px, 5vw, 64px) clamp(20px, 6vw, 90px) 0; background: #f7f4ef; }
+.booking-steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; padding: clamp(38px, 5vw, 64px) clamp(20px, 6vw, 90px) 0; background: #f1f1f1; }
 .booking-steps article { padding: 30px; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: 0 18px 45px rgb(17 25 28 / .07); }
-.booking-steps article > span { color: #476b82; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.booking-steps article > span { color: #303030; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .booking-steps h2 { margin: 12px 0 8px; font-size: clamp(25px, 3vw, 34px); }
 .booking-steps p { color: var(--muted); line-height: 1.65; }
 .booking-steps .primary-button { margin-top: 10px; }
 .scheduler-section {
   padding: clamp(46px, 6vw, 78px) clamp(14px, 5vw, 72px);
-  background: linear-gradient(180deg, #edf4f3 0%, #f8f6f1 100%);
+  background: linear-gradient(180deg, #e9e9e9 0%, #f7f7f7 100%);
 }
 .scheduler-heading { max-width: 1160px; margin: 0 auto 22px; }
-.scheduler-heading .eyebrow { color: #476b82; }
-.scheduler-heading h2 { max-width: 760px; margin: 8px 0; color: #102f3a; font-size: clamp(30px, 4vw, 48px); }
+.scheduler-heading .eyebrow { color: #333; }
+.scheduler-heading h2 { max-width: 760px; margin: 8px 0; color: #111; font-size: clamp(30px, 4vw, 48px); }
 .scheduler-heading > p:last-child { max-width: 720px; margin: 0; color: var(--muted); line-height: 1.6; }
 .scheduler-frame {
   overflow: hidden;
   max-width: 1160px;
   margin: 0 auto;
-  border: 7px solid #303b42;
+  border: 7px solid #171717;
   border-radius: 22px;
   background: white;
-  box-shadow: 0 24px 65px rgb(34 43 49 / .2);
+  box-shadow: 0 24px 65px rgb(0 0 0 / .18);
 }
 .scheduler-frame iframe {
   display: block;
   width: 100%;
   min-height: 760px;
   border: 0;
-  filter: grayscale(1) contrast(.94) brightness(.96);
+  filter: grayscale(1) contrast(.96) brightness(.98);
 }
-.scheduler-frame p { margin: 0; padding: 15px 20px; border-top: 1px solid #c8d3d9; background: #edf1f3; color: #35454e; font-size: 13px; text-align: center; }
+.scheduler-frame p { margin: 0; padding: 15px 20px; border-top: 1px solid #d0d0d0; background: #f1f1f1; color: #333; font-size: 13px; text-align: center; }
 .scheduler-frame p a { color: var(--teal); font-weight: 760; }
 .scheduler-pending { max-width: 760px; margin: 0 auto; padding: 46px; border-radius: 18px; background: white; box-shadow: 0 20px 50px rgb(17 25 28 / .08); text-align: center; }
 
