@@ -482,7 +482,7 @@ footer p {
   width: 100%;
   min-height: 760px;
   border: 0;
-  filter: hue-rotate(195deg) saturate(.78);
+  filter: grayscale(1) sepia(.72) hue-rotate(125deg) saturate(1.45);
 }
 .scheduler-frame p { margin: 0; padding: 15px 20px; border-top: 1px solid #bfd3d1; background: #e5f1ef; color: #244850; font-size: 13px; text-align: center; }
 .scheduler-frame p a { color: var(--teal); font-weight: 760; }
