@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "./components";
 
@@ -132,12 +131,6 @@ export default function Home() {
             <Link className="secondary-button" href="/schedule">Comprehensive care · $325</Link>
           </div>
           <p className="hero-cta-note">Simple online start • Personal clinician review • A plan built to move you forward</p>
-        </div>
-        <div className="hero-visual" aria-label="Telehealth consultation">
-          <div className="hero-image-frame">
-            <Image src="/telehealth-consult-v2.png" alt="Couple fully in view while meeting with a medical professional through telehealth" width={1672} height={941} priority />
-          </div>
-          <div className="visit-card"><span>Concierge telemedicine</span><strong>Executive-level attention. Clinically grounded care.</strong><p>Your history, goals, biomarkers, and lifestyle considered holistically.</p></div>
         </div>
       </section>
 
