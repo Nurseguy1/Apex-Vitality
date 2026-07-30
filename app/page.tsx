@@ -118,7 +118,14 @@ export default function Home() {
   return (
     <main className="home-sermorelin-vibe">
       <SiteHeader />
-      <section className="hero home-focus-hero" id="top">
+      <section
+        className="hero home-focus-hero home-active-adults-hero"
+        id="top"
+        style={{
+          backgroundImage:
+            "linear-gradient(90deg, rgba(7, 27, 33, .98) 0%, rgba(15, 49, 56, .92) 42%, rgba(12, 37, 42, .3) 73%, rgba(7, 21, 24, .08) 100%), url('/home-active-adults-v1.jpg?v=20260729-1')",
+        }}
+      >
         <div className="hero-copy">
           <p className="eyebrow">Modern telehealth for vitality, recovery &amp; longevity</p>
           <h1>
