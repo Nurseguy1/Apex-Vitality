@@ -122,13 +122,6 @@ export default function SermorelinPage() {
         <ul className="check-list focused-comprehensive-list"><li>45-minute comprehensive consultation</li><li>Hormonal, metabolic, nutritional, sleep, and recovery review</li><li>Laboratory planning selected around your goals</li><li>Personalized treatment and lifestyle strategy</li><li>Planned monitoring and ongoing care</li></ul>
       </section>
 
-      <section className="peptide-next-step sermorelin-peptide-bridge">
-        <p className="eyebrow">Already using BPC-157 or another peptide?</p>
-        <h2>Bring self-directed peptide use into monitored care.</h2>
-        <p>Keep your tissue-recovery and performance goals while adding confidential product review, baseline assessment, laboratory planning, and prescription-based care with a licensed clinician. Sermorelin supports natural growth-hormone signaling involved in tissue maintenance and recovery. Apex Vitality does not prescribe or supply BPC-157.</p>
-        <Link className="primary-button" href="/peptide-care">Start monitored peptide care</Link>
-      </section>
-
       <aside className="screening-notice"><strong>About sermorelin products:</strong> Sermorelin used for adult wellness is a compounded prescription medication and is not FDA-approved. Your clinician explains the product, monitoring, risks, and treatment plan before you begin.</aside>
       <CareNotice />
       <SiteFooter />

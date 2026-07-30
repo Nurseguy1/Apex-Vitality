@@ -17,13 +17,6 @@ const services = [
     cta: "Explore sermorelin peptide care",
   },
   {
-    category: "Peptide Monitoring",
-    title: "Already Using BPC-157 or Other Peptides? Add Medical Oversight",
-    copy: "Move from online peptide purchases and self-directed protocols to confidential product review, health monitoring, and lawful clinician-guided alternatives.",
-    href: "/peptide-care",
-    cta: "Start monitored peptide care",
-  },
-  {
     category: "Longevity & Functional Health",
     title: "Build Your Longevity & Functional Health Plan",
     copy: "Connect the dots between symptoms, nutrition, metabolic health, recovery, biomarkers, and the way you want to live.",
@@ -195,7 +188,7 @@ export default function Home() {
             <ul>
               <li>Gut, metabolic, men&apos;s, or women&apos;s health</li>
               <li><strong>Longevity &amp; Functional Health</strong></li>
-              <li><strong>NAD+, Sermorelin &amp; Peptide Monitoring</strong></li>
+              <li><strong>NAD+ &amp; Sermorelin Peptide Care</strong></li>
             </ul>
             <Link className="secondary-dark-button care-path-button" href="#care-options">Choose My Care</Link>
           </article>

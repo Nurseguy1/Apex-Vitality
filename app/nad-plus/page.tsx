@@ -159,7 +159,6 @@ export default function NadPlusPage() {
         <p>NAD+ is made from two nucleotides and supports cellular energy and repair pathways. Connect NAD+ support with clinician-guided sermorelin peptide care, recovery goals, healthy-aging strategy, and monitored follow-up in one coordinated plan.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/sermorelin">Explore sermorelin peptide care</Link>
-          <Link className="secondary-dark-button" href="/peptide-care">Explore monitored peptide care</Link>
         </div>
       </section>
 

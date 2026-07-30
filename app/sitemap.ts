@@ -20,7 +20,6 @@ const routes = [
   "/sermorelin/articles/sermorelin-active-adults",
   "/sermorelin/articles/sermorelin-healthy-aging",
   "/sermorelin/articles/sermorelin-midlife-wellness",
-  "/peptide-care",
   "/memberships",
   "/how-it-works",
   "/faq",

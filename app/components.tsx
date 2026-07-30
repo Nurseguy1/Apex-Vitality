@@ -15,7 +15,6 @@ export function SiteHeader() {
         <Link href="/functional-health">Longevity &amp; Functional Health</Link>
         <Link href="/nad-plus">NAD+</Link>
         <Link href="/sermorelin">Sermorelin Peptide</Link>
-        <Link href="/peptide-care">Peptide Monitoring</Link>
         <Link href="/mens-health">Men&apos;s Health</Link>
         <Link href="/womens-health">Women&apos;s Health &amp; Healthy Aging</Link>
         <Link href="/how-it-works">How It Works</Link>
@@ -30,7 +29,6 @@ export function SiteHeader() {
           <Link href="/gut-health">Gut Health</Link>
           <Link href="/nad-plus">NAD+</Link>
           <Link href="/sermorelin">Sermorelin Peptide</Link>
-          <Link href="/peptide-care">Peptide Monitoring</Link>
           <Link href="/memberships">Memberships</Link>
           <Link href="/how-it-works">How It Works</Link>
           <Link href="/patient-access">Patient Access</Link>
@@ -54,7 +52,6 @@ export function SiteFooter() {
         <Link href="/functional-health">Longevity &amp; Functional Health</Link>
         <Link href="/nad-plus">NAD+ Focused Care</Link>
         <Link href="/sermorelin">Sermorelin Peptide Care</Link>
-        <Link href="/peptide-care">BPC-157 &amp; Peptide Monitoring</Link>
         <Link href="/mens-health">Men&apos;s Health</Link>
         <Link href="/womens-health">Women&apos;s Health &amp; Healthy Aging</Link>
         <Link href="/longevity">Longevity Care</Link>
