@@ -123,7 +123,8 @@ export default function Home() {
         id="top"
         style={{
           backgroundImage:
-            "linear-gradient(90deg, rgba(7, 27, 33, .98) 0%, rgba(15, 49, 56, .92) 42%, rgba(12, 37, 42, .3) 73%, rgba(7, 21, 24, .08) 100%), url('/home-active-adults-v1.jpg?v=20260729-1')",
+            "linear-gradient(90deg, rgba(7, 27, 33, .98) 0%, rgba(15, 49, 56, .92) 42%, rgba(12, 37, 42, .3) 73%, rgba(7, 21, 24, .08) 100%), url('/home-professional-man-35-45-v3.png?v=20260729-3')",
+          backgroundPosition: "70% center",
         }}
       >
         <div className="hero-copy">
