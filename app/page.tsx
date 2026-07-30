@@ -60,6 +60,14 @@ const services = [
   },
 ];
 
+const carePriority = ["Men’s Health", "Women’s Health", "Medical Weight Management"];
+const orderedServices = [...services].sort((a, b) => {
+  const aPriority = carePriority.indexOf(a.category);
+  const bPriority = carePriority.indexOf(b.category);
+  return (aPriority === -1 ? carePriority.length : aPriority) -
+    (bPriority === -1 ? carePriority.length : bPriority);
+});
+
 const steps = [
   ["1. Choose your care", "Start with the treatment, health concern, or comprehensive care experience that matches your goals."],
   ["2. Purchase and answer a few questions", "Pay securely, then complete a short confidential intake through the patient portal."],
@@ -204,7 +212,7 @@ export default function Home() {
       <section className="service-band" id="care-options">
         <div className="section-heading"><p className="eyebrow">Explore care areas</p><h2>Find the care that matches your health goals.</h2><p>Start with a familiar area of care. Programs can stand alone or work together when multiple aspects of health overlap.</p></div>
         <div className="service-grid">
-          {services.map((service) => <article className="service-card" key={service.title}><p className="service-category">{service.category}</p><h3>{service.title}</h3><p>{service.copy}</p><Link className="text-link" href={service.href}>{service.cta} →</Link></article>)}
+          {orderedServices.map((service) => <article className="service-card" key={service.title}><p className="service-category">{service.category}</p><h3>{service.title}</h3><p>{service.copy}</p><Link className="text-link" href={service.href}>{service.cta} →</Link></article>)}
         </div>
       </section>
 
