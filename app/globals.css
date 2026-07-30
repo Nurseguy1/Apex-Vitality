@@ -482,7 +482,7 @@ footer p {
   width: 100%;
   min-height: 760px;
   border: 0;
-  filter: grayscale(1) contrast(.96) brightness(.98);
+  filter: grayscale(1) brightness(.67) contrast(3);
 }
 .scheduler-frame p { margin: 0; padding: 15px 20px; border-top: 1px solid #d0d0d0; background: #f1f1f1; color: #333; font-size: 13px; text-align: center; }
 .scheduler-frame p a { color: var(--teal); font-weight: 760; }
