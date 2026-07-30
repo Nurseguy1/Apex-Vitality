@@ -31,6 +31,11 @@ export default function SchedulePage() {
         </article>
       </section>
       <section className="scheduler-section">
+        <div className="scheduler-heading">
+          <p className="eyebrow">Secure online scheduling</p>
+          <h2>Choose your Apex Vitality appointment.</h2>
+          <p>The calendar below is powered by CharmHealth and presented in the Apex Vitality experience.</p>
+        </div>
         {charmLinks.booking ? (
           <div className="scheduler-frame">
             <iframe

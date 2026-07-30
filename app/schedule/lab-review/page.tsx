@@ -17,6 +17,11 @@ export default function LabReviewSchedulePage() {
         <p>Your $59 lab-planning credit has been applied. Choose the matching follow-up appointment in CharmHealth below to review your results and build your next-step care plan.</p>
       </section>
       <section className="scheduler-section">
+        <div className="scheduler-heading">
+          <p className="eyebrow">Secure online scheduling</p>
+          <h2>Select your lab-review visit.</h2>
+          <p>The calendar below is powered by CharmHealth and presented in the Apex Vitality experience.</p>
+        </div>
         {charmLinks.booking ? (
           <div className="scheduler-frame">
             <iframe src={charmLinks.booking} title="Schedule an Apex Vitality lab-review and treatment-planning visit through CharmHealth" loading="eager" referrerPolicy="strict-origin-when-cross-origin" />

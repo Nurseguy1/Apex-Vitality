@@ -17,6 +17,11 @@ export default function LabPlanningSchedulePage() {
         <p>Select <strong>New Patient Lab-Planning Visit</strong> in the secure CharmHealth calendar below. Your $59 payment can be applied to a comprehensive lab-review and treatment-planning visit booked within 90 days.</p>
       </section>
       <section className="scheduler-section">
+        <div className="scheduler-heading">
+          <p className="eyebrow">Secure online scheduling</p>
+          <h2>Select your lab-planning visit.</h2>
+          <p>The calendar below is powered by CharmHealth and presented in the Apex Vitality experience.</p>
+        </div>
         {charmLinks.booking ? (
           <div className="scheduler-frame">
             <iframe src={charmLinks.booking} title="Schedule an Apex Vitality new-patient lab-planning visit through CharmHealth" loading="eager" referrerPolicy="strict-origin-when-cross-origin" />
