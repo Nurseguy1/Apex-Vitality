@@ -93,25 +93,32 @@ const programs = [
 
 const memberships = [
   {
-    name: "Comprehensive New Patient Consultation",
-    price: "$325 USD",
+    name: "Introductory Visit",
+    price: "$59 USD",
     cadence: "one-time",
-    description: "An unhurried clinical evaluation and personalized starting plan.",
-    includes: ["Detailed health and goal review", "Medication and risk-factor review", "Relevant lab planning", "Personalized next steps"],
+    description: "A simple first visit to establish care, clarify your goals, and plan the right next step.",
+    includes: ["Focused health and goal review", "Medication and risk-factor review", "Relevant lab planning", "Full $59 credit toward your comprehensive follow-up within 90 days"],
   },
   {
-    name: "Apex Core Membership",
-    price: "$225 USD",
+    name: "Apex Essential Membership",
+    price: "$149 USD",
     cadence: "per month",
-    description: "Ongoing medical management with convenient, consistent follow-through.",
-    includes: ["Personalized treatment planning", "Clinically appropriate follow-ups", "Secure non-urgent messaging", "Prescription management", "Annual wellness planning"],
+    description: "Consistent access and ongoing medical management that keeps your plan moving.",
+    includes: ["Quarterly follow-up visits", "Scheduled laboratory reviews", "Secure non-urgent messaging", "Prescription and refill management", "Treatment adjustments and coordination"],
   },
   {
     name: "Apex Performance Membership",
     price: "$375 USD",
     cadence: "per month",
     description: "Elevated access and deeper performance-focused care planning.",
-    includes: ["Everything in Apex Core", "Priority scheduling", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle, nutrition, and performance planning"],
+    includes: ["Everything in Apex Essential", "Monthly progress reviews", "Priority scheduling", "Extended appointments", "Lifestyle, nutrition, and performance planning"],
+  },
+  {
+    name: "Apex Private Client Care",
+    price: "From $750 USD",
+    cadence: "per month",
+    description: "Limited-enrollment concierge care for patients who value exceptional access and proactive coordination.",
+    includes: ["Everything in Apex Performance", "Highly responsive communication", "Frequent strategy visits", "Proactive laboratory and pharmacy coordination", "Concierge-level continuity"],
   },
 ];
 
@@ -218,16 +225,16 @@ export default function Home() {
       </section>
 
       <section className="membership-section" id="memberships">
-        <div className="section-heading"><p className="eyebrow">Membership care</p><h2>Expert guidance with the access and continuity your health deserves.</h2><p>Begin with a comprehensive consultation. For appropriate ongoing care, choose the level of access and support that fits your goals.</p></div>
+        <div className="section-heading"><p className="eyebrow">Membership care</p><h2>Expert guidance with the access and continuity your health deserves.</h2><p>Begin with a $59 introductory visit. As your plan develops, choose the level of ongoing access and support that fits your goals.</p></div>
         <div className="membership-grid">
           {memberships.map((membership, index) => (
-            <article className={`membership-card ${index === 2 ? "featured" : ""}`} key={membership.name}>
-              {index === 2 && <span className="membership-badge">Elevated access</span>}
+            <article className={`membership-card ${index === 3 ? "featured" : ""}`} key={membership.name}>
+              {index === 3 && <span className="membership-badge">Private client</span>}
               <h3>{membership.name}</h3>
               <p className="membership-price"><strong>{membership.price}</strong><span>{membership.cadence}</span></p>
               <p>{membership.description}</p>
               <ul>{membership.includes.map((item) => <li key={item}>{item}</li>)}</ul>
-              <Link className={index === 2 ? "primary-button" : "secondary-dark-button"} href={index === 0 ? "/schedule" : "/memberships"}>{index === 0 ? "Schedule consultation" : "View membership details"}</Link>
+              <Link className={index === 3 ? "primary-button" : "secondary-dark-button"} href={index === 0 ? "/schedule" : "/memberships"}>{index === 0 ? "Schedule consultation" : "View membership details"}</Link>
             </article>
           ))}
         </div>

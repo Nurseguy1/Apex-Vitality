@@ -9,31 +9,40 @@ export const metadata: Metadata = {
 
 const options = [
   {
-    name: "Comprehensive New Patient Consultation",
-    price: "$325 USD",
+    name: "Introductory Visit",
+    price: "$59 USD",
     cadence: "one-time",
-    intro: "A complete first step for connecting your goals and health history with a personalized care plan.",
-    features: ["Unhurried clinician review", "Health, medication, and risk review", "Relevant laboratory planning", "Personalized recommendations and next steps"],
-    checkoutUrl: "https://buy.stripe.com/eVq9AU1BJ7i00Cr9JOfnO00",
-    checkoutLabel: "Pay securely with Stripe",
+    intro: "A simple first visit to establish care, clarify your goals, and plan the right next step.",
+    features: ["Focused clinician review", "Health, medication, and risk review", "Relevant laboratory planning", "Full $59 credit toward your comprehensive follow-up within 90 days"],
+    checkoutUrl: "https://buy.stripe.com/3cI8wQa8fdGo84TaNSfnO03",
+    checkoutLabel: "Start for $59",
   },
   {
-    name: "Apex Core Membership",
-    price: "$225 USD",
+    name: "Apex Essential Membership",
+    price: "$149 USD",
     cadence: "per month",
     intro: "Designed for patients who value consistent access and ongoing medical management.",
-    features: ["Personalized treatment planning", "Clinically appropriate follow-up visits", "Secure non-urgent messaging during business hours", "Care-plan coordination and treatment management", "Annual wellness planning", "Preferred pricing on selected laboratory services when available"],
-    checkoutUrl: "https://buy.stripe.com/5kQcN6cgn1XG0Crg8cfnO01",
-    checkoutLabel: "Start Apex Core",
+    features: ["Quarterly follow-up visits", "Scheduled laboratory reviews", "Secure non-urgent messaging during business hours", "Prescription and refill management", "Treatment adjustments", "Laboratory and pharmacy coordination"],
+    checkoutUrl: "/schedule",
+    checkoutLabel: "Start with an introductory visit",
   },
   {
     name: "Apex Performance Membership",
     price: "$375 USD",
     cadence: "per month",
     intro: "For patients seeking elevated access and a deeper focus on performance, prevention, and long-term progress.",
-    features: ["Everything in Apex Core", "Priority scheduling, subject to availability", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle and nutrition guidance", "Annual advanced laboratory interpretation", "Performance optimization planning"],
-    checkoutUrl: "https://buy.stripe.com/cNieVe3JRfOwbh5bRWfnO02",
-    checkoutLabel: "Start Apex Performance",
+    features: ["Everything in Apex Essential", "Monthly progress reviews", "Priority scheduling, subject to availability", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle and nutrition guidance", "Performance optimization planning"],
+    checkoutUrl: "/schedule",
+    checkoutLabel: "Start with an introductory visit",
+  },
+  {
+    name: "Apex Private Client Care",
+    price: "From $750 USD",
+    cadence: "per month",
+    intro: "Limited-enrollment concierge care for patients who value exceptional access, privacy, and proactive coordination.",
+    features: ["Everything in Apex Performance", "Highly responsive communication", "Frequent strategy visits", "Proactive laboratory and pharmacy coordination", "Concierge-level continuity", "A care cadence designed around your goals"],
+    checkoutUrl: "/schedule",
+    checkoutLabel: "Request private client care",
   },
 ];
 
@@ -48,13 +57,13 @@ export default function MembershipsPage() {
       </section>
       <section className="membership-page-grid">
         {options.map((option, index) => (
-          <article className={`membership-card ${index === 2 ? "featured" : ""}`} key={option.name}>
-            {index === 2 && <span className="membership-badge">Elevated access</span>}
+          <article className={`membership-card ${index === 3 ? "featured" : ""}`} key={option.name}>
+            {index === 3 && <span className="membership-badge">Private client</span>}
             <h2>{option.name}</h2>
             <p className="membership-price"><strong>{option.price}</strong><span>{option.cadence}</span></p>
             <p>{option.intro}</p>
             <ul>{option.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
-            <a className="primary-button" href={option.checkoutUrl} rel="noreferrer" target="_blank">{option.checkoutLabel}</a>
+            <a className="primary-button" href={option.checkoutUrl}>{option.checkoutLabel}</a>
           </article>
         ))}
       </section>
@@ -66,7 +75,7 @@ export default function MembershipsPage() {
           <p><strong>Clinical partnership:</strong> Membership provides ongoing assessment, education, guidance, and care planning. Your clinician helps you understand your health more clearly and coordinates a plan designed to help you achieve your goals.</p>
         </div>
       </section>
-      <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start with a comprehensive consultation.</h2><p>Your clinician reviews your goals, builds your initial plan, and helps you choose the ongoing support that keeps it moving.</p></div><Link className="primary-button" href="/schedule">Pay and start my care</Link></section>
+      <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start with a $59 introductory visit.</h2><p>Establish care, clarify your goals, and build the path toward treatment and ongoing support.</p></div><Link className="primary-button" href="/schedule">Start online today</Link></section>
       <SiteFooter />
     </main>
   );
