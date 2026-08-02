@@ -1420,6 +1420,25 @@ footer p {
   box-shadow: 0 22px 54px rgb(17 25 28 / 0.08);
 }
 
+.membership-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.membership-card-link .membership-card {
+  height: 100%;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.membership-card-link:hover .membership-card {
+  transform: translateY(-5px);
+  box-shadow: 0 28px 64px rgb(17 25 28 / .15);
+}
+.membership-card-link:focus-visible {
+  border-radius: 16px;
+  outline: 3px solid #168c83;
+  outline-offset: 5px;
+}
+
 
 .membership-card.featured {
   border: 2px solid var(--teal);
