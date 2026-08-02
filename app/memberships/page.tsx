@@ -62,6 +62,20 @@ export default function MembershipsPage() {
         <h1>One membership. All your care.</h1>
         <p>Choose easy monthly payments or save with an annual membership. Clinician visits, medications, labs, delivery, and ongoing support are included—no separate bills.</p>
       </section>
+      <section className="membership-visual-story" aria-label="Active Apex Vitality members">
+        <div className="membership-visual-large">
+          <img src="/membership-treatment-v1.png" alt="Active man running outdoors" />
+          <span>Keep moving forward.</span>
+        </div>
+        <div className="membership-visual-small">
+          <img src="/membership-performance-v1.png" alt="Man strength training in a gym" />
+          <span>Build your performance.</span>
+        </div>
+        <div className="membership-visual-small">
+          <img src="/membership-private-v1.png" alt="Active man after a morning workout" />
+          <span>Make your health a priority.</span>
+        </div>
+      </section>
       <section className="membership-page-grid">
         {options.map((option, index) => (
           <article className={`membership-card membership-tone-${index + 1} ${index === 3 ? "featured" : ""}`} key={option.name}>

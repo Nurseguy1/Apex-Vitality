@@ -1351,6 +1351,56 @@ footer p {
   gap: 18px;
 }
 
+.membership-visual-story {
+  display: grid;
+  grid-template-columns: 1.4fr .8fr .8fr;
+  gap: 16px;
+  padding: 40px max(6vw, 24px) 10px;
+  background: #f3f5f5;
+}
+.membership-visual-story > div {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #071b21;
+}
+.membership-visual-story img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  object-position: 70% center;
+}
+.membership-visual-story > div::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 52%, rgba(4,15,19,.82) 100%);
+}
+.membership-visual-story span {
+  position: absolute;
+  z-index: 1;
+  left: 24px;
+  bottom: 22px;
+  color: #fff;
+  font-size: clamp(20px, 2vw, 30px);
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+
+@media (max-width: 900px) {
+  .membership-visual-story { grid-template-columns: 1fr 1fr; }
+  .membership-visual-large { grid-column: 1 / -1; }
+}
+
+@media (max-width: 600px) {
+  .membership-visual-story { grid-template-columns: 1fr; }
+  .membership-visual-large { grid-column: auto; }
+  .membership-visual-story > div,
+  .membership-visual-story img { min-height: 300px; }
+}
+
 .membership-card {
   display: flex;
   min-height: 570px;
