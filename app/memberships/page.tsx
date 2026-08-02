@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 const options = [
   {
     detailsUrl: "/memberships/initial-care",
+    image: "/membership-initial-care-v1.png",
     name: "Initial Care Visit",
     price: "$259 USD",
     cadence: "one-time",
@@ -20,6 +21,7 @@ const options = [
   },
   {
     detailsUrl: "/memberships/treatment",
+    image: "/membership-treatment-v1.png",
     name: "Apex Treatment Membership",
     price: "From $499 USD",
     cadence: "per month",
@@ -31,6 +33,7 @@ const options = [
   },
   {
     detailsUrl: "/memberships/performance",
+    image: "/membership-performance-v1.png",
     name: "Apex Performance Membership",
     price: "From $749 USD",
     cadence: "per month",
@@ -42,6 +45,7 @@ const options = [
   },
   {
     detailsUrl: "/memberships/private-client",
+    image: "/membership-private-v1.png",
     name: "Apex Private Client Care",
     price: "From $1,250 USD",
     cadence: "per month",
@@ -65,6 +69,9 @@ export default function MembershipsPage() {
       <section className="membership-page-grid">
         {options.map((option, index) => (
           <article className={`membership-card ${index === 3 ? "featured" : ""}`} key={option.name}>
+            <Link className="membership-card-image" href={option.detailsUrl} aria-label={`Explore ${option.name}`}>
+              <img src={option.image} alt={`Active man representing ${option.name}`} />
+            </Link>
             {index === 3 && <span className="membership-badge">Private client</span>}
             <h2>{option.name}</h2>
             <p className="membership-price"><strong>{option.price}</strong><span>{option.cadence}</span></p>
