@@ -1351,6 +1351,10 @@ footer p {
   gap: 18px;
 }
 
+.membership-page-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .membership-visual-story {
   display: grid;
   grid-template-columns: 1.4fr .8fr .8fr;
@@ -1399,6 +1403,10 @@ footer p {
   .membership-visual-large { grid-column: auto; }
   .membership-visual-story > div,
   .membership-visual-story img { min-height: 300px; }
+}
+
+@media (max-width: 760px) {
+  .membership-page-grid { grid-template-columns: 1fr; }
 }
 
 .membership-card {
