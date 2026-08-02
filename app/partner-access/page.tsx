@@ -3,56 +3,52 @@ import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
-  title: "Partner Member Access | Apex Vitality",
-  description: "Exclusive Apex Vitality care access and preferred pricing for partner-organization members.",
+  title: "Welcome to Apex Vitality",
+  description: "A dedicated welcome page for partner-organization members beginning or continuing care with Apex Vitality.",
   robots: { index: false, follow: false },
 };
-
-const benefits = [
-  ["Preferred member pricing", "Exclusive program pricing created for members of your organization."],
-  ["Simple online start", "Choose your care, answer a few questions, and connect with a qualified medical clinician."],
-  ["One membership", "Clinician visits, medications, labs, delivery, and ongoing support in one plan."],
-];
 
 export default function PartnerAccessPage() {
   return (
     <main>
       <SiteHeader />
       <section className="membership-hero">
-        <p className="eyebrow">Exclusive partner access</p>
-        <h1>A healthier future starts with one simple step.</h1>
-        <p>Members of your organization receive preferred access to Apex Vitality programs and exclusive member pricing.</p>
-        <div className="hero-actions">
-          <Link className="primary-button" href="/contact">Request member access</Link>
-          <Link className="secondary-dark-button" href="/how-it-works">See how it works</Link>
-        </div>
+        <p className="eyebrow">Welcome to Apex Vitality</p>
+        <h1>Your care can keep moving forward.</h1>
+        <p>Whether you are beginning something new or continuing care from a previous clinic, we will help make your next step simple.</p>
       </section>
 
-      <section className="membership-page-grid" aria-label="Partner member benefits">
-        {benefits.map(([title, copy]) => (
-          <article className="membership-card" key={title}>
-            <h2>{title}</h2>
-            <p>{copy}</p>
-          </article>
-        ))}
+      <section className="membership-page-grid" aria-label="Choose your starting point">
+        <article className="membership-card">
+          <p className="eyebrow">New to care</p>
+          <h2>Start with your goals.</h2>
+          <p>Answer a few questions, connect with a qualified medical clinician, and build your plan.</p>
+          <Link className="primary-button" href="/start">Begin my care</Link>
+        </article>
+
+        <article className="membership-card featured">
+          <span className="membership-badge">Continuing care</span>
+          <h2>Already receiving treatment?</h2>
+          <p>Share your current medications, recent labs, and available records so your clinician can review the care you already have in place.</p>
+          <Link className="primary-button" href="/schedule/comprehensive">Continue my care</Link>
+        </article>
       </section>
 
       <section className="membership-terms">
-        <h2>Care designed to fit your life.</h2>
+        <h2>A simple transition.</h2>
         <div>
-          <p><strong>Choose your goal.</strong> Start with the care experience that matches what you want to achieve.</p>
-          <p><strong>Connect online.</strong> Meet with a qualified medical clinician and build your plan.</p>
-          <p><strong>Move forward.</strong> Your treatment, delivery, and ongoing support stay connected in one membership.</p>
+          <p><strong>Bring what you have.</strong> Recent laboratory results, medication details, and available treatment records help keep your care connected.</p>
+          <p><strong>Meet online.</strong> Connect with a qualified medical clinician and discuss the next step toward your goals.</p>
+          <p><strong>Move forward.</strong> Your treatment, delivery, and ongoing support stay connected through Apex.</p>
         </div>
       </section>
 
       <section className="membership-cta">
         <div>
-          <p className="eyebrow">Member pricing</p>
-          <h2>Your exclusive offer is coming next.</h2>
-          <p>Partner-specific membership options and savings will appear here once finalized.</p>
+          <p className="eyebrow">We are ready when you are</p>
+          <h2>Choose the path that fits where you are today.</h2>
         </div>
-        <Link className="primary-button" href="/contact">Request member access</Link>
+        <Link className="primary-button" href="/start">Get started</Link>
       </section>
       <SiteFooter />
     </main>
