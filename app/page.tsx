@@ -103,13 +103,15 @@ const memberships = [
     name: "Apex Treatment Membership",
     price: "From $499 USD",
     cadence: "per month",
-    description: "One clear monthly program connecting clinical care, treatment management, and home delivery.",
-    includes: ["Clinician evaluation and follow-up", "Prescription and refill management", "Medication fulfillment and delivery", "Treatment adjustments and coordination", "Apex-branded support"],
+    annual: "From $4,990/year — save $998",
+    description: "One membership connecting clinical care, treatment, labs, and home delivery.",
+    includes: ["Clinician visits and follow-up", "Prescription and refill management", "Medication fulfillment and delivery", "Included laboratory testing", "Treatment adjustments and ongoing support"],
   },
   {
     name: "Apex Performance Membership",
     price: "From $749 USD",
     cadence: "per month",
+    annual: "From $7,490/year — save $1,498",
     description: "Elevated access and deeper performance-focused care planning.",
     includes: ["Everything in Apex Treatment Membership", "Monthly progress reviews", "Priority scheduling", "Extended appointments", "Lifestyle, nutrition, and performance planning"],
   },
@@ -117,6 +119,7 @@ const memberships = [
     name: "Apex Private Client Care",
     price: "From $1,250 USD",
     cadence: "per month",
+    annual: "From $12,500/year — save $2,500",
     description: "Limited-enrollment concierge care for patients who value exceptional access and proactive coordination.",
     includes: ["Everything in Apex Performance", "Highly responsive communication", "Frequent strategy visits", "Proactive laboratory and pharmacy coordination", "Concierge-level continuity"],
   },
@@ -232,13 +235,14 @@ export default function Home() {
               {index === 3 && <span className="membership-badge">Private client</span>}
               <h3>{membership.name}</h3>
               <p className="membership-price"><strong>{membership.price}</strong><span>{membership.cadence}</span></p>
+              {"annual" in membership && <p className="membership-annual">{membership.annual}</p>}
               <p>{membership.description}</p>
               <ul>{membership.includes.map((item) => <li key={item}>{item}</li>)}</ul>
               <Link className={index === 3 ? "primary-button" : "secondary-dark-button"} href={index === 0 ? "/schedule" : "/memberships"}>{index === 0 ? "Schedule consultation" : "View membership details"}</Link>
             </article>
           ))}
         </div>
-        <p className="membership-note">Treatment memberships combine the services displayed for the selected program, including medication fulfillment when included. Laboratory testing, imaging, supplements, and outside services are separate unless expressly stated. Secure messaging is for non-urgent questions and is answered during business hours.</p>
+        <p className="membership-note">Choose easy monthly payments or save with an annual membership. Clinician visits, medications, labs, delivery, and ongoing support are included—no separate bills.</p>
       </section>
 
       <section className="lab-section" id="labs">

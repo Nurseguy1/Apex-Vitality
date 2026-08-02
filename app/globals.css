@@ -1410,6 +1410,12 @@ footer p {
   font-weight: 700;
 }
 
+.membership-annual {
+  margin: -0.35rem 0 1rem;
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
 .membership-card ul {
   display: grid;
   gap: 11px;
