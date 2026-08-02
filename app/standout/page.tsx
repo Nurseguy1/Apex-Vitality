@@ -12,10 +12,13 @@ export default function PartnerAccessPage() {
   return (
     <main>
       <SiteHeader />
-      <section className="membership-hero">
-        <p className="eyebrow">Welcome to Apex Vitality</p>
-        <h1>Your care can keep moving forward.</h1>
-        <p>Whether you are beginning something new or continuing care from a previous clinic, we will help make your next step simple.</p>
+      <section className="membership-detail-hero standout-hero">
+        <div>
+          <p className="eyebrow">Welcome to Apex Vitality</p>
+          <h1>Your care can keep moving forward.</h1>
+          <p>Whether you are beginning something new or continuing care from a previous clinic, we will help make your next step simple.</p>
+          <Link className="primary-button" href="/start">Get started</Link>
+        </div>
       </section>
 
       <section className="membership-page-grid" aria-label="Choose your starting point">

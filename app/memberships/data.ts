@@ -1,0 +1,48 @@
+export const memberships = {
+  "initial-care": {
+    name: "Initial Care Visit",
+    eyebrow: "Your first step",
+    headline: "Start moving toward your goals.",
+    price: "$259",
+    cadence: "one-time",
+    image: "/membership-initial-care-v1.png",
+    intro: "A focused online visit designed to understand where you are, what you want to achieve, and the best next step.",
+    features: ["Initial clinician visit", "Focused health and medication review", "Prescription coordination or laboratory kit", "Personalized next steps"],
+    cta: "Start for $259",
+  },
+  treatment: {
+    name: "Apex Treatment Membership",
+    eyebrow: "Keep your progress moving",
+    headline: "Your treatment. Connected.",
+    price: "From $499/month",
+    annual: "From $4,990/year — 2 months free",
+    image: "/membership-treatment-v1.png",
+    intro: "One membership brings your clinician visits, treatment, labs, delivery, and ongoing support together.",
+    features: ["Clinician visits and follow-up", "Prescription and refill management", "Medication fulfillment and delivery", "Included laboratory testing", "Treatment adjustments", "Ongoing support"],
+    cta: "Start my care",
+  },
+  performance: {
+    name: "Apex Performance Membership",
+    eyebrow: "Built for more",
+    headline: "Raise your level.",
+    price: "From $749/month",
+    annual: "From $7,490/year — 2 months free",
+    image: "/membership-performance-v1.png",
+    intro: "Elevated access and a deeper focus on performance, prevention, and long-term progress.",
+    features: ["Everything in Apex Treatment Membership", "Monthly progress reviews", "Priority scheduling, subject to availability", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle and nutrition guidance", "Performance optimization planning"],
+    cta: "Build my performance plan",
+  },
+  "private-client": {
+    name: "Apex Private Client Care",
+    eyebrow: "Limited enrollment",
+    headline: "Care designed around you.",
+    price: "From $1,250/month",
+    annual: "From $12,500/year — 2 months free",
+    image: "/membership-private-v1.png",
+    intro: "Concierge-level care for people who value exceptional access, privacy, and proactive coordination.",
+    features: ["Everything in Apex Performance", "Highly responsive communication", "Frequent strategy visits", "Proactive laboratory and pharmacy coordination", "Concierge-level continuity", "A care cadence designed around your goals"],
+    cta: "Request private client care",
+  },
+} as const;
+
+export type MembershipSlug = keyof typeof memberships;

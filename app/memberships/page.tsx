@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const options = [
   {
+    detailsUrl: "/memberships/initial-care",
     name: "Initial Care Visit",
     price: "$259 USD",
     cadence: "one-time",
@@ -18,6 +19,7 @@ const options = [
     checkoutLabel: "Start for $259",
   },
   {
+    detailsUrl: "/memberships/treatment",
     name: "Apex Treatment Membership",
     price: "From $499 USD",
     cadence: "per month",
@@ -28,6 +30,7 @@ const options = [
     checkoutLabel: "Start with an introductory visit",
   },
   {
+    detailsUrl: "/memberships/performance",
     name: "Apex Performance Membership",
     price: "From $749 USD",
     cadence: "per month",
@@ -38,6 +41,7 @@ const options = [
     checkoutLabel: "Start with an introductory visit",
   },
   {
+    detailsUrl: "/memberships/private-client",
     name: "Apex Private Client Care",
     price: "From $1,250 USD",
     cadence: "per month",
@@ -67,7 +71,7 @@ export default function MembershipsPage() {
             {"annual" in option && <p className="membership-annual">{option.annual}</p>}
             <p>{option.intro}</p>
             <ul>{option.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
-            <a className="primary-button" href={option.checkoutUrl}>{option.checkoutLabel}</a>
+            <Link className="primary-button" href={option.detailsUrl}>Explore membership</Link>
           </article>
         ))}
       </section>
