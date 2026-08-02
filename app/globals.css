@@ -1362,26 +1362,28 @@ footer p {
   box-shadow: 0 22px 54px rgb(17 25 28 / 0.08);
 }
 
-.membership-card-image {
-  display: block;
-  height: 230px;
-  margin: -28px -28px 26px;
-  overflow: hidden;
-  border-radius: 18px 18px 0 0;
-}
-.membership-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 70% center;
-  transition: transform .35s ease;
-}
-.membership-card-image:hover img { transform: scale(1.025); }
 
 .membership-card.featured {
   border: 2px solid var(--teal);
   background: linear-gradient(160deg, #eef8f5, #fff 62%);
   transform: translateY(-10px);
+}
+
+.membership-card.membership-tone-1 {
+  border-top: 7px solid #5d7f87;
+  background: linear-gradient(180deg, #edf3f3 0%, #fff 34%);
+}
+.membership-card.membership-tone-2 {
+  border-top: 7px solid #168c83;
+  background: linear-gradient(180deg, #e7f4f1 0%, #fff 34%);
+}
+.membership-card.membership-tone-3 {
+  border-top: 7px solid #234d63;
+  background: linear-gradient(180deg, #e8eff3 0%, #fff 34%);
+}
+.membership-card.membership-tone-4 {
+  border-top: 7px solid #111b20;
+  background: linear-gradient(180deg, #e5e9eb 0%, #fff 34%);
 }
 
 .membership-badge {
