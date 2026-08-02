@@ -100,22 +100,22 @@ const memberships = [
     includes: ["Focused health and goal review", "Medication and risk-factor review", "Relevant lab planning", "Full $59 credit toward your comprehensive follow-up within 90 days"],
   },
   {
-    name: "Apex Essential Membership",
-    price: "$149 USD",
+    name: "Apex Treatment Membership",
+    price: "From $499 USD",
     cadence: "per month",
-    description: "Consistent access and ongoing medical management that keeps your plan moving.",
-    includes: ["Quarterly follow-up visits", "Scheduled laboratory reviews", "Secure non-urgent messaging", "Prescription and refill management", "Treatment adjustments and coordination"],
+    description: "One clear monthly program connecting clinical care, treatment management, and home delivery.",
+    includes: ["Clinician evaluation and follow-up", "Prescription and refill management", "Medication fulfillment and delivery", "Treatment adjustments and coordination", "Apex-branded support"],
   },
   {
     name: "Apex Performance Membership",
-    price: "$375 USD",
+    price: "From $749 USD",
     cadence: "per month",
     description: "Elevated access and deeper performance-focused care planning.",
-    includes: ["Everything in Apex Essential", "Monthly progress reviews", "Priority scheduling", "Extended appointments", "Lifestyle, nutrition, and performance planning"],
+    includes: ["Everything in Apex Treatment Membership", "Monthly progress reviews", "Priority scheduling", "Extended appointments", "Lifestyle, nutrition, and performance planning"],
   },
   {
     name: "Apex Private Client Care",
-    price: "From $750 USD",
+    price: "From $1,250 USD",
     cadence: "per month",
     description: "Limited-enrollment concierge care for patients who value exceptional access and proactive coordination.",
     includes: ["Everything in Apex Performance", "Highly responsive communication", "Frequent strategy visits", "Proactive laboratory and pharmacy coordination", "Concierge-level continuity"],
@@ -238,7 +238,7 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <p className="membership-note">Membership fees cover the professional services listed. Medications, laboratory testing, pharmacy charges, imaging, and outside services are separate unless expressly stated. Secure messaging is for non-urgent questions and is answered during business hours.</p>
+        <p className="membership-note">Treatment memberships combine the services displayed for the selected program, including medication fulfillment when included. Laboratory testing, imaging, supplements, and outside services are separate unless expressly stated. Secure messaging is for non-urgent questions and is answered during business hours.</p>
       </section>
 
       <section className="lab-section" id="labs">

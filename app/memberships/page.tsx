@@ -18,26 +18,26 @@ const options = [
     checkoutLabel: "Start for $59",
   },
   {
-    name: "Apex Essential Membership",
-    price: "$149 USD",
+    name: "Apex Treatment Membership",
+    price: "From $499 USD",
     cadence: "per month",
-    intro: "Designed for patients who value consistent access and ongoing medical management.",
-    features: ["Quarterly follow-up visits", "Scheduled laboratory reviews", "Secure non-urgent messaging during business hours", "Prescription and refill management", "Treatment adjustments", "Laboratory and pharmacy coordination"],
+    intro: "One clear monthly program connecting clinical care, treatment management, and home delivery.",
+    features: ["Clinician evaluation and follow-up", "Prescription and refill management", "Medication fulfillment and delivery", "Treatment adjustments and coordination", "Secure non-urgent support", "Apex-branded experience"],
     checkoutUrl: "/schedule",
     checkoutLabel: "Start with an introductory visit",
   },
   {
     name: "Apex Performance Membership",
-    price: "$375 USD",
+    price: "From $749 USD",
     cadence: "per month",
     intro: "For patients seeking elevated access and a deeper focus on performance, prevention, and long-term progress.",
-    features: ["Everything in Apex Essential", "Monthly progress reviews", "Priority scheduling, subject to availability", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle and nutrition guidance", "Performance optimization planning"],
+    features: ["Everything in Apex Treatment Membership", "Monthly progress reviews", "Priority scheduling, subject to availability", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle and nutrition guidance", "Performance optimization planning"],
     checkoutUrl: "/schedule",
     checkoutLabel: "Start with an introductory visit",
   },
   {
     name: "Apex Private Client Care",
-    price: "From $750 USD",
+    price: "From $1,250 USD",
     cadence: "per month",
     intro: "Limited-enrollment concierge care for patients who value exceptional access, privacy, and proactive coordination.",
     features: ["Everything in Apex Performance", "Highly responsive communication", "Frequent strategy visits", "Proactive laboratory and pharmacy coordination", "Concierge-level continuity", "A care cadence designed around your goals"],
@@ -70,7 +70,8 @@ export default function MembershipsPage() {
       <section className="membership-terms">
         <h2>Clear expectations from the beginning.</h2>
         <div>
-          <p><strong>What is separate:</strong> Medications, laboratory testing, pharmacy charges, imaging, supplements, and services from outside clinicians or facilities are not included unless expressly stated.</p>
+          <p><strong>What is included:</strong> Treatment memberships combine the services displayed for the selected program. Available medications, dosing, monitoring, and follow-up are personalized by the treating clinician.</p>
+          <p><strong>What may be separate:</strong> Laboratory testing, imaging, supplements, and services outside the selected program are separate unless expressly stated.</p>
           <p><strong>Communication:</strong> Secure messaging is intended for non-urgent questions and is answered during business hours. It is not continuously monitored and is not an emergency service.</p>
           <p><strong>Clinical partnership:</strong> Membership provides ongoing assessment, education, guidance, and care planning. Your clinician helps you understand your health more clearly and coordinates a plan designed to help you achieve your goals.</p>
         </div>
