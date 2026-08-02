@@ -70,7 +70,7 @@ export default function MembershipsPage() {
         {options.map((option, index) => (
           <section
             className={`membership-choice-panel membership-choice-${index + 1}`}
-            style={{ backgroundImage: `linear-gradient(90deg, rgba(5,15,20,.18) 20%, rgba(5,15,20,.78) 68%, rgba(5,15,20,.94) 100%), url('${option.image}')` }}
+            style={{ backgroundImage: `linear-gradient(90deg, rgba(242,247,246,.96) 0%, rgba(242,247,246,.76) 34%, rgba(242,247,246,.08) 62%), url('${option.image}')` }}
             key={option.name}
           >
             <article className={`membership-card membership-tone-${index + 1} ${index === 3 ? "featured" : ""}`}>
@@ -80,7 +80,7 @@ export default function MembershipsPage() {
               <p className="membership-price"><strong>{option.price}</strong><span>{option.cadence}</span></p>
               {"annual" in option && <p className="membership-annual">{option.annual}</p>}
               <p>{option.intro}</p>
-              <ul>{option.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
+              <ul>{option.features.slice(0, 3).map((feature) => <li key={feature}>{feature}</li>)}</ul>
               <Link className="primary-button" href={option.detailsUrl}>Explore membership</Link>
             </article>
           </section>
