@@ -1355,6 +1355,40 @@ footer p {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.membership-scroll-stack {
+  background: #071b21;
+}
+.membership-choice-panel {
+  min-height: 860px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 72px max(6vw, 24px);
+  background-position: center;
+  background-size: cover;
+}
+.membership-choice-panel .membership-card {
+  width: min(520px, 100%);
+  min-height: 0;
+  padding: clamp(30px, 4vw, 48px);
+  box-shadow: 0 30px 80px rgb(0 0 0 / .26);
+}
+.membership-choice-panel .membership-card.featured {
+  transform: none;
+}
+.membership-choice-panel .membership-card h2 {
+  min-height: auto;
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1;
+  letter-spacing: -.035em;
+}
+.membership-choice-panel .membership-price strong {
+  font-size: clamp(34px, 4vw, 52px);
+}
+.membership-choice-panel .eyebrow {
+  margin-bottom: 14px;
+}
+
 .membership-visual-story {
   display: grid;
   grid-template-columns: 1.4fr .8fr .8fr;
@@ -1407,6 +1441,13 @@ footer p {
 
 @media (max-width: 760px) {
   .membership-page-grid { grid-template-columns: 1fr; }
+  .membership-choice-panel {
+    min-height: 820px;
+    align-items: flex-end;
+    padding: 250px 20px 34px;
+    background-position: 68% center;
+  }
+  .membership-choice-panel .membership-card { padding: 28px 24px; }
 }
 
 .membership-card {
