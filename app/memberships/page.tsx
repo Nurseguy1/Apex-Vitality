@@ -78,17 +78,15 @@ export default function MembershipsPage() {
       </section>
       <section className="membership-page-grid">
         {options.map((option, index) => (
-          <Link className="membership-card-link" href={option.detailsUrl} key={option.name}>
-            <article className={`membership-card membership-tone-${index + 1} ${index === 3 ? "featured" : ""}`}>
-              {index === 3 && <span className="membership-badge">Private client</span>}
-              <h2>{option.name}</h2>
-              <p className="membership-price"><strong>{option.price}</strong><span>{option.cadence}</span></p>
-              {"annual" in option && <p className="membership-annual">{option.annual}</p>}
-              <p>{option.intro}</p>
-              <ul>{option.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
-              <span className="primary-button">Explore membership</span>
-            </article>
-          </Link>
+          <article className={`membership-card membership-tone-${index + 1} ${index === 3 ? "featured" : ""}`} key={option.name}>
+            {index === 3 && <span className="membership-badge">Private client</span>}
+            <h2>{option.name}</h2>
+            <p className="membership-price"><strong>{option.price}</strong><span>{option.cadence}</span></p>
+            {"annual" in option && <p className="membership-annual">{option.annual}</p>}
+            <p>{option.intro}</p>
+            <ul>{option.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
+            <Link className="primary-button" href={option.detailsUrl}>Explore membership</Link>
+          </article>
         ))}
       </section>
       <section className="membership-terms">
