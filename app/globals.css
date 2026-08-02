@@ -1581,8 +1581,8 @@ footer p {
 .membership-hero {
   padding: clamp(72px, 10vw, 132px) clamp(20px, 9vw, 150px);
   background:
-    linear-gradient(90deg, rgb(10 24 29 / .98), rgb(18 61 66 / .72)),
-    url('/telehealth-consult-v2.png') center / cover no-repeat;
+    linear-gradient(90deg, rgb(7 20 25 / .96) 0%, rgb(12 37 43 / .82) 42%, rgb(12 37 43 / .14) 72%),
+    url('/membership-treatment-v1.png') 68% center / cover no-repeat;
   color: white;
 }
 
