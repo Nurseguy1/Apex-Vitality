@@ -8,11 +8,10 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  ["1", "Choose and purchase your care", "Select focused treatment access, comprehensive care, or membership support and pay securely through Stripe."],
-  ["2", "Answer a few health questions", "Complete a short confidential questionnaire through the Charm patient portal."],
-  ["3", "Receive personal clinician review", "Your clinician reviews your symptoms, history, medications, goals, and treatment ideas."],
-  ["4", "Begin your personalized plan", "Move into treatment, pharmacy coordination, home delivery, laboratory planning, and follow-up organized around your care."],
-  ["5", "Build momentum", "Use follow-up and monitoring to measure progress and keep your plan moving toward your goals."],
+  ["1", "Choose your program", "Start with the goals and results that matter to you."],
+  ["2", "Answer a few questions", "Complete a brief, confidential online questionnaire."],
+  ["3", "Connect with a qualified medical clinician", "Review your goals and build your personalized treatment plan."],
+  ["4", "Begin your plan", "Your medication is delivered directly to your door, with follow-up built around your progress."],
 ];
 
 export default function HowItWorksPage() {
@@ -22,7 +21,7 @@ export default function HowItWorksPage() {
       <PageIntro
         eyebrow="How it works"
         title="A straightforward process with personalized care at the center."
-        description="Choose your care online, answer a few questions, receive personal clinician review, and begin a plan built around your goals."
+        description="Choose your program, answer a few questions, connect with a qualified medical clinician, and begin your plan."
       />
       <section className="content-section process-page">
         <ol className="journey-list">
@@ -36,8 +35,8 @@ export default function HowItWorksPage() {
         <p>If you may be experiencing a medical emergency, call 911 or seek immediate in-person care.</p>
       </section>
       <section className="portal-handoff">
-        <div><p className="eyebrow">Secure next step</p><h2>Payment through Stripe. Care coordination through CharmHealth.</h2><p>Appointments, assigned health forms, medication review, secure messages, and portal access are handled through the protected patient workflow.</p></div>
-        <Link className="primary-button" href="/questionnaires">Choose my care</Link>
+        <div><p className="eyebrow">Your next step</p><h2>Ready to begin?</h2><p>Choose the care experience that fits your goals and start online today.</p></div>
+        <Link className="primary-button" href="/memberships">Choose my care</Link>
       </section>
       <SiteFooter />
     </main>

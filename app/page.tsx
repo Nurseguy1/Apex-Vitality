@@ -64,7 +64,7 @@ const orderedServices = [...services].sort((a, b) => {
 const steps = [
   ["1. Choose your care", "Start with the treatment, health concern, or comprehensive care experience that matches your goals."],
   ["2. Purchase and answer a few questions", "Pay securely, then complete a short confidential intake through the patient portal."],
-  ["3. Receive personal clinician review", "Your clinician reviews your symptoms, history, medications, goals, and treatment ideas."],
+  ["3. Connect with a qualified medical clinician", "Review your goals and build your personalized treatment plan."],
   ["4. Begin your plan", "Move directly into your personalized care plan, pharmacy coordination, delivery, and follow-up."],
 ];
 
@@ -247,7 +247,7 @@ export default function Home() {
       </section>
 
       <section className="split-section" id="process">
-        <div><p className="eyebrow">A simple path forward</p><h2>Four steps to the care you have been looking for.</h2><p>Choose your care, answer a few questions, receive personal clinician review, and put your plan into motion.</p><Link className="primary-button" href="#care-options">Choose my care</Link></div>
+        <div><p className="eyebrow">A simple path forward</p><h2>Four steps to the care you have been looking for.</h2><p>Choose your care, answer a few questions, connect with a qualified medical clinician, and put your plan into motion.</p><Link className="primary-button" href="#care-options">Choose my care</Link></div>
         <ol className="step-list">{steps.map(([title, copy]) => <li key={title}><strong>{title}</strong><span>{copy}</span></li>)}</ol>
       </section>
 

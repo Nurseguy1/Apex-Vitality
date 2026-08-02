@@ -12,11 +12,8 @@ export default function LocationRouter() {
     <section className="location-router" aria-labelledby="care-location-title">
       <div className="location-router-heading">
         <p className="eyebrow">Your first step</p>
-        <h1 id="care-location-title">Where will you be located during your care?</h1>
-        <p>
-          Choose your location so we can show you the care pathway designed for
-          your state. This selection does not collect or store health information.
-        </p>
+        <h1 id="care-location-title">Where are you located?</h1>
+        <p>Choose your location to see your available care options.</p>
       </div>
 
       <div className="location-choice-grid" role="group" aria-label="Choose your care location">
@@ -27,8 +24,8 @@ export default function LocationRouter() {
           aria-pressed={region === "california"}
         >
           <span>California</span>
-          <strong>Start directly with Apex Vitality</strong>
-          <small>Scheduling, clinician care, labs, and follow-up through the Apex pathway.</small>
+          <strong>Start your Apex care journey</strong>
+          <small>Choose your care and begin online.</small>
         </button>
         <button
           className={region === "national" ? "location-choice selected" : "location-choice"}
@@ -37,8 +34,8 @@ export default function LocationRouter() {
           aria-pressed={region === "national"}
         >
           <span>Outside California</span>
-          <strong>Explore the expanding national pathway</strong>
-          <small>Care routed to a clinician licensed in the state where you are located.</small>
+          <strong>Explore Apex care options</strong>
+          <small>Simple online care designed around your goals.</small>
         </button>
       </div>
 
@@ -64,26 +61,20 @@ export default function LocationRouter() {
 
         {region === "national" && (
           <article>
-            <p className="result-kicker">National expansion pathway</p>
-            <h2>A simpler route to care is being prepared.</h2>
-            <p>
-              Apex is preparing a separate pathway that connects patients with clinicians
-              licensed in their state. We will activate it after the clinical, pharmacy,
-              record-sharing, and support workflows are confirmed in writing.
-            </p>
-            <div className="national-status-list" aria-label="National pathway setup status">
-              <span><strong>State routing</strong>Built into the Apex experience</span>
-              <span><strong>Clinical review</strong>Planned through licensed partner clinicians</span>
-              <span><strong>Prescriptions &amp; delivery</strong>Activated only after partner confirmation</span>
+            <p className="result-kicker">Online care</p>
+            <h2>Your next step starts here.</h2>
+            <p>Choose your program, answer a few questions, and connect with a qualified medical clinician.</p>
+            <div className="national-status-list" aria-label="Apex care experience">
+              <span><strong>Choose your program</strong>Start with the goals that matter to you</span>
+              <span><strong>Connect online</strong>Meet with a qualified medical clinician</span>
+              <span><strong>Delivered to you</strong>Medication arrives at your door</span>
             </div>
-            <Link className="secondary-dark-button" href="/contact">Ask about national availability</Link>
+            <Link className="primary-button" href="/memberships">Explore care options</Link>
           </article>
         )}
       </div>
 
-      <p className="location-router-note">
-        The patient&apos;s physical location at the time of care determines the applicable clinical pathway.
-      </p>
+      <p className="location-router-note">Care options vary by location.</p>
     </section>
   );
 }
