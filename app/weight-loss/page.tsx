@@ -40,7 +40,7 @@ export default function WeightLossPage() {
           </p>
           <div className="hero-actions">
             <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
-            <Link className="secondary-button" href="/schedule/lab-planning">Plan my labs · $59</Link>
+            <Link className="secondary-button" href="/schedule">Start care · $259</Link>
           </div>
           <p className="hero-cta-note">Start online • Choose your direction • Build real momentum</p>
         </div>

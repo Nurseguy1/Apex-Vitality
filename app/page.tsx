@@ -93,11 +93,11 @@ const programs = [
 
 const memberships = [
   {
-    name: "Introductory Visit",
-    price: "$59 USD",
+    name: "Initial Care Visit",
+    price: "$259 USD",
     cadence: "one-time",
-    description: "A simple first visit to establish care, clarify your goals, and plan the right next step.",
-    includes: ["Focused health and goal review", "Medication and risk-factor review", "Relevant lab planning", "Full $59 credit toward your comprehensive follow-up within 90 days"],
+    description: "Connect with a qualified medical clinician and begin the right next step.",
+    includes: ["Initial clinician visit", "Focused health and medication review", "Prescription coordination or laboratory kit", "Personalized next steps"],
   },
   {
     name: "Apex Treatment Membership",
@@ -146,7 +146,7 @@ export default function Home() {
           <p className="hero-tagline">Turn health obstacles into a focused plan for greater energy, strength, recovery, confidence, and longevity.</p>
           <p className="hero-lede">You know your body and what you want to achieve. Work with a care team that listens, connects the details, and helps you create forward momentum.</p>
           <div className="hero-actions">
-            <Link className="primary-button" href="/start">Start with a $59 visit</Link>
+            <Link className="primary-button" href="/start">Start with a $259 visit</Link>
             <Link className="text-link hero-care-link" href="#care-options">Explore care options →</Link>
           </div>
           <p className="hero-cta-note">Simple online start • Personal clinician review • A plan built to move you forward</p>
@@ -170,14 +170,14 @@ export default function Home() {
           <article className="funnel-card featured-funnel">
             <span className="funnel-label">Introductory visit</span>
             <h3>New-Patient Lab-Planning Visit</h3>
-            <p className="funnel-price"><strong>$59</strong><span>one-time • 15 minutes</span></p>
+            <p className="funnel-price"><strong>$259</strong><span>one-time initial care visit</span></p>
             <p>Establish care, discuss your goals, and create the lab plan that moves you toward your next step.</p>
             <ul>
               <li>Focused introductory clinician visit</li>
               <li>Personalized lab planning</li>
-              <li>Full $59 credit toward your comprehensive follow-up within 90 days</li>
+              <li>Prescription coordination or laboratory kit</li>
             </ul>
-            <Link className="primary-button" href="/schedule">Start for $59</Link>
+            <Link className="primary-button" href="/schedule">Start for $259</Link>
           </article>
           <article className="funnel-card">
             <span className="funnel-label">Complete care in one visit</span>
@@ -228,7 +228,7 @@ export default function Home() {
       </section>
 
       <section className="membership-section" id="memberships">
-        <div className="section-heading"><p className="eyebrow">Membership care</p><h2>Expert guidance with the access and continuity your health deserves.</h2><p>Begin with a $59 introductory visit. As your plan develops, choose the level of ongoing access and support that fits your goals.</p></div>
+        <div className="section-heading"><p className="eyebrow">Membership care</p><h2>Expert guidance with the access and continuity your health deserves.</h2><p>Begin with a $259 initial care visit. As your plan develops, choose the membership that fits your goals.</p></div>
         <div className="membership-grid">
           {memberships.map((membership, index) => (
             <article className={`membership-card ${index === 3 ? "featured" : ""}`} key={membership.name}>

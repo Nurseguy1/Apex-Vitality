@@ -9,13 +9,13 @@ export const metadata: Metadata = {
 
 const options = [
   {
-    name: "Introductory Visit",
-    price: "$59 USD",
+    name: "Initial Care Visit",
+    price: "$259 USD",
     cadence: "one-time",
-    intro: "A simple first visit to establish care, clarify your goals, and plan the right next step.",
-    features: ["Focused clinician review", "Health, medication, and risk review", "Relevant laboratory planning", "Full $59 credit toward your comprehensive follow-up within 90 days"],
-    checkoutUrl: "https://buy.stripe.com/3cI8wQa8fdGo84TaNSfnO03",
-    checkoutLabel: "Start for $59",
+    intro: "Connect with a qualified medical clinician and begin the right next step.",
+    features: ["Initial clinician visit", "Focused health and medication review", "Prescription coordination or laboratory kit", "Personalized next steps"],
+    checkoutUrl: "/schedule",
+    checkoutLabel: "Start for $259",
   },
   {
     name: "Apex Treatment Membership",
@@ -78,7 +78,7 @@ export default function MembershipsPage() {
           <p><strong>Communication:</strong> Secure messaging is intended for non-urgent questions and is answered during business hours. It is not continuously monitored and is not an emergency service.</p>
         </div>
       </section>
-      <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start with a $59 introductory visit.</h2><p>Establish care, clarify your goals, and build the path toward treatment and ongoing support.</p></div><Link className="primary-button" href="/schedule">Start online today</Link></section>
+      <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start with a $259 initial care visit.</h2><p>Connect with a qualified medical clinician and begin the right next step.</p></div><Link className="primary-button" href="/schedule">Start online today</Link></section>
       <SiteFooter />
     </main>
   );

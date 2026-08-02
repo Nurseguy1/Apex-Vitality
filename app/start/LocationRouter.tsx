@@ -49,11 +49,11 @@ export default function LocationRouter() {
             <p className="result-kicker">California care</p>
             <h2>Your Apex care pathway is ready.</h2>
             <p>
-              Begin with the $59 introductory visit, or go directly to a comprehensive
+              Begin with the $259 initial care visit, or go directly to a comprehensive
               consultation if you already have recent labs.
             </p>
             <div className="hero-actions">
-              <Link className="primary-button" href="/schedule">Start with a $59 visit</Link>
+              <Link className="primary-button" href="/schedule">Start with a $259 visit</Link>
               <Link className="secondary-dark-button" href="/schedule/comprehensive">I already have labs</Link>
             </div>
           </article>

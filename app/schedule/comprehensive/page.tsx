@@ -23,7 +23,7 @@ export default function ComprehensiveVisitPage() {
           <p>Review your history, goals, lifestyle, and recent lab results together, then build a personalized plan for your next steps.</p>
           {charmLinks.newPatientCheckout && <a className="primary-button" href={charmLinks.newPatientCheckout} rel="noreferrer" target="_blank">Pay $325 and schedule ↗</a>}
         </article>
-        <p className="alternate-start"><a href="/schedule">← Start with the $59 introductory visit instead</a></p>
+        <p className="alternate-start"><a href="/schedule">← Start with the $259 initial care visit instead</a></p>
       </section>
       <aside className="screening-notice"><strong>Medical emergency?</strong> Do not use online scheduling. Call 911 or seek immediate in-person care.</aside>
       <SiteFooter />
