@@ -73,6 +73,7 @@ const biomarkers = ["A1C, glucose & insulin", "Lipids & cardiovascular risk", "T
 const programs = [
   {
     href: "/programs/metabolic-gut",
+    image: "/program-metabolic-couple-v1.png",
     label: "Program 01",
     title: "Metabolic & Gut Optimization Track",
     copy: "A coordinated pathway for digestive wellness, metabolic health, and medical weight-management goals.",
@@ -80,6 +81,7 @@ const programs = [
   },
   {
     href: "/programs/mens-vitality",
+    image: "/membership-performance-v1.png",
     label: "Program 02",
     title: "Men's Vitality & Hormonal Optimization Track",
     copy: "A focused pathway for energy, sexual health, strength, recovery, body composition, and hormonal evaluation when indicated.",
@@ -87,6 +89,7 @@ const programs = [
   },
   {
     href: "/programs/longevity-functional",
+    image: "/program-longevity-couple-v1.png",
     label: "Program 03",
     title: "Longevity & Functional Health Track",
     copy: "A comprehensive pathway connecting metabolic health, digestive wellness, recovery, healthy aging, and women's or men's health goals.",
@@ -226,10 +229,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="program-section" id="programs">
+      <section className="program-section program-section-visual" id="programs">
         <div className="section-heading"><p className="eyebrow">Program pathways</p><h2>Choose the care experience that fits your goals.</h2><p>Each pathway includes clinician-led assessment, guidance, and ongoing care. Testing and specific therapies are personalized to your needs.</p></div>
-        <div className="program-grid">
-          {programs.map((program) => <article className="program-card program-card-modern" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul><Link className="primary-button program-card-button" href={program.href}>Explore this program</Link></article>)}
+        <div className="program-scroll-stack">
+          {programs.map((program, index) => <section className={`program-choice-panel program-choice-${index + 1}`} style={{ backgroundImage: `linear-gradient(90deg, rgba(242,247,246,.94) 0%, rgba(242,247,246,.7) 31%, rgba(242,247,246,.06) 60%), url('${program.image}')` }} key={program.title}><article className="program-card program-card-modern"><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.slice(0, 3).map((item) => <li key={item}>{item}</li>)}</ul><Link className="primary-button program-card-button" href={program.href}>Explore this program</Link></article></section>)}
         </div>
         <p className="program-note">Your clinician will help you understand your health more clearly and build an individualized treatment plan designed around your goals.</p>
       </section>
