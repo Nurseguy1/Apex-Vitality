@@ -10,7 +10,7 @@ export function SiteHeader() {
       </Link>
       <nav className="nav-links" aria-label="Main navigation">
         <Link href="/#programs">Programs</Link>
-        <Link href="/memberships">Memberships</Link>
+        <Link href="/#memberships">Memberships</Link>
         <Link href="/gut-health">Gut Health</Link>
         <Link href="/weight-loss">Weight Loss</Link>
         <Link href="/functional-health">Longevity &amp; Functional Health</Link>
@@ -31,7 +31,7 @@ export function SiteHeader() {
           <Link href="/gut-health">Gut Health</Link>
           <Link href="/nad-plus">NAD+</Link>
           <Link href="/sermorelin">Sermorelin Peptide</Link>
-          <Link href="/memberships">Memberships</Link>
+          <Link href="/#memberships">Memberships</Link>
           <Link href="/how-it-works">How It Works</Link>
           <Link href="/patient-access">Patient Access</Link>
         </nav>
@@ -61,7 +61,7 @@ export function SiteFooter() {
         <Link href="/womens-health">Women&apos;s Health &amp; Healthy Aging</Link>
         <Link href="/longevity">Longevity Care</Link>
         <Link href="/how-it-works">How It Works</Link>
-        <Link href="/memberships">Memberships &amp; Pricing</Link>
+        <Link href="/#memberships">Memberships &amp; Pricing</Link>
         <Link href="/faq">FAQ</Link>
         <Link href="/patient-access">Patient Access</Link>
         <Link href="/contact">Contact</Link>

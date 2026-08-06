@@ -97,6 +97,7 @@ const programs = [
 const memberships = [
   {
     name: "Initial Care Visit",
+    image: "/membership-initial-care-v1.png",
     price: "$259 USD",
     cadence: "one-time",
     description: "Connect with a qualified medical clinician and begin the right next step.",
@@ -104,6 +105,7 @@ const memberships = [
   },
   {
     name: "Apex Treatment Membership",
+    image: "/membership-treatment-v1.png",
     price: "From $499 USD",
     cadence: "per month",
     annual: "From $4,990/year — 2 months free",
@@ -112,6 +114,7 @@ const memberships = [
   },
   {
     name: "Apex Performance Membership",
+    image: "/membership-performance-v1.png",
     price: "From $749 USD",
     cadence: "per month",
     annual: "From $7,490/year — 2 months free",
@@ -120,6 +123,7 @@ const memberships = [
   },
   {
     name: "Apex Private Client Care",
+    image: "/membership-private-v1.png",
     price: "From $1,250 USD",
     cadence: "per month",
     annual: "From $12,500/year — 2 months free",
@@ -230,19 +234,22 @@ export default function Home() {
         <p className="program-note">Your clinician will help you understand your health more clearly and build an individualized treatment plan designed around your goals.</p>
       </section>
 
-      <section className="membership-section" id="memberships">
+      <section className="membership-section membership-section-scroll" id="memberships">
         <div className="section-heading"><p className="eyebrow">Membership care</p><h2>Expert guidance with the access and continuity your health deserves.</h2><p>Begin with a $259 initial care visit. As your plan develops, choose the membership that fits your goals.</p></div>
-        <div className="membership-grid">
+        <div className="membership-scroll-stack" aria-label="Membership choices">
           {memberships.map((membership, index) => (
-            <article className={`membership-card membership-tone-${index + 1} ${index === 3 ? "featured" : ""}`} key={membership.name}>
-              {index === 3 && <span className="membership-badge">Private client</span>}
-              <h3>{membership.name}</h3>
-              <p className="membership-price"><strong>{membership.price}</strong><span>{membership.cadence}</span></p>
-              {"annual" in membership && <p className="membership-annual">{membership.annual}</p>}
-              <p>{membership.description}</p>
-              <ul>{membership.includes.map((item) => <li key={item}>{item}</li>)}</ul>
-              <Link className={index === 3 ? "primary-button" : "secondary-dark-button"} href={`/memberships#membership-${index + 1}`}>View membership</Link>
-            </article>
+            <section className={`membership-choice-panel membership-choice-${index + 1}`} id={`membership-${index + 1}`} style={{ backgroundImage: `linear-gradient(90deg, rgba(242,247,246,.96) 0%, rgba(242,247,246,.76) 34%, rgba(242,247,246,.08) 62%), url('${membership.image}')` }} key={membership.name}>
+              <article className={`membership-card membership-card-modern membership-tone-${index + 1} ${index === 3 ? "featured" : ""}`}>
+                {index === 3 && <span className="membership-badge">Private client</span>}
+                <p className="eyebrow">Membership {index + 1} of 4</p>
+                <h2>{membership.name}</h2>
+                <p className="membership-price"><strong>{membership.price}</strong><span>{membership.cadence}</span></p>
+                {"annual" in membership && <p className="membership-annual">{membership.annual}</p>}
+                <p>{membership.description}</p>
+                <ul>{membership.includes.map((item) => <li key={item}>{item}</li>)}</ul>
+                <Link className="primary-button" href="/schedule">{index === 0 ? "Start for $259" : index === 3 ? "Request private client care" : "Start with an introductory visit"}</Link>
+              </article>
+            </section>
           ))}
         </div>
         <p className="membership-note">Choose easy monthly payments or save with an annual membership. Clinician visits, medications, labs, delivery, and ongoing support are included—no separate bills.</p>

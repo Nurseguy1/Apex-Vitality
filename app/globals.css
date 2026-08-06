@@ -1515,6 +1515,18 @@ footer p {
     linear-gradient(145deg, #f8faf8, #e8f2ef 54%, #f6ede7);
 }
 
+.membership-section-scroll {
+  padding-inline: 0;
+  padding-bottom: 0;
+}
+.membership-section-scroll > .section-heading,
+.membership-section-scroll > .membership-note {
+  margin-inline: clamp(20px, 5vw, 72px);
+}
+.membership-section-scroll > .membership-note {
+  margin-bottom: 36px;
+}
+
 .membership-grid,
 .membership-page-grid {
   display: grid;
