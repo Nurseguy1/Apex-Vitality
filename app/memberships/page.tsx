@@ -61,15 +61,11 @@ export default function MembershipsPage() {
   return (
     <main>
       <SiteHeader />
-      <section className="membership-hero">
-        <p className="eyebrow">Memberships &amp; pricing</p>
-        <h1>One membership. All your care.</h1>
-        <p>Choose easy monthly payments or save with an annual membership. Clinician visits, medications, labs, delivery, and ongoing support are included—no separate bills.</p>
-      </section>
       <div className="membership-scroll-stack" aria-label="Membership choices">
         {options.map((option, index) => (
           <section
             className={`membership-choice-panel membership-choice-${index + 1}`}
+            id={`membership-${index + 1}`}
             style={{ backgroundImage: `linear-gradient(90deg, rgba(242,247,246,.96) 0%, rgba(242,247,246,.76) 34%, rgba(242,247,246,.08) 62%), url('${option.image}')` }}
             key={option.name}
           >

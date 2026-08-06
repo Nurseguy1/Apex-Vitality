@@ -234,14 +234,14 @@ export default function Home() {
         <div className="section-heading"><p className="eyebrow">Membership care</p><h2>Expert guidance with the access and continuity your health deserves.</h2><p>Begin with a $259 initial care visit. As your plan develops, choose the membership that fits your goals.</p></div>
         <div className="membership-grid">
           {memberships.map((membership, index) => (
-            <article className={`membership-card ${index === 3 ? "featured" : ""}`} key={membership.name}>
+            <article className={`membership-card membership-tone-${index + 1} ${index === 3 ? "featured" : ""}`} key={membership.name}>
               {index === 3 && <span className="membership-badge">Private client</span>}
               <h3>{membership.name}</h3>
               <p className="membership-price"><strong>{membership.price}</strong><span>{membership.cadence}</span></p>
               {"annual" in membership && <p className="membership-annual">{membership.annual}</p>}
               <p>{membership.description}</p>
               <ul>{membership.includes.map((item) => <li key={item}>{item}</li>)}</ul>
-              <Link className={index === 3 ? "primary-button" : "secondary-dark-button"} href={index === 0 ? "/schedule" : "/memberships"}>{index === 0 ? "Schedule consultation" : "View membership details"}</Link>
+              <Link className={index === 3 ? "primary-button" : "secondary-dark-button"} href={`/memberships#membership-${index + 1}`}>View membership</Link>
             </article>
           ))}
         </div>

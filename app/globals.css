@@ -1906,6 +1906,24 @@ footer p {
   background: rgb(255 255 255 / .9);
 }
 
+.membership-choice-panel .membership-card-modern.membership-tone-1 {
+  border-color: rgb(73 129 137 / .22);
+  background: linear-gradient(145deg, rgb(255 255 255 / .94), rgb(220 239 238 / .92));
+}
+.membership-choice-panel .membership-card-modern.membership-tone-2 {
+  border-color: rgb(34 144 128 / .22);
+  background: linear-gradient(145deg, rgb(255 255 255 / .94), rgb(218 242 234 / .92));
+}
+.membership-choice-panel .membership-card-modern.membership-tone-3 {
+  border-color: rgb(63 101 143 / .22);
+  background: linear-gradient(145deg, rgb(255 255 255 / .94), rgb(222 233 247 / .92));
+}
+.membership-choice-panel .membership-card-modern.membership-tone-4,
+.membership-choice-panel .membership-card-modern.membership-tone-4.featured {
+  border-color: rgb(137 103 160 / .22);
+  background: linear-gradient(145deg, rgb(255 255 255 / .94), rgb(238 226 247 / .92));
+}
+
 .membership-choice-panel .membership-card-modern .eyebrow {
   width: fit-content;
   margin-bottom: 20px;
