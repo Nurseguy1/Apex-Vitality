@@ -311,7 +311,7 @@ footer p {
   padding: clamp(72px, 9vw, 124px) clamp(20px, 8vw, 150px);
   background:
     linear-gradient(90deg, rgb(10 22 26 / .98) 0%, rgb(14 48 53 / .9) 56%, rgb(14 48 53 / .34) 100%),
-    url('/telehealth-consult-v2.png') center / cover no-repeat;
+    url('/home-professional-man-35-45-v3.png?v=20260806') center / cover no-repeat;
   color: white;
 }
 
@@ -322,12 +322,12 @@ footer p {
 .quiz-page-intro.quiz-copper {
   background:
     linear-gradient(90deg, rgb(43 32 32 / .98), rgb(129 77 48 / .72)),
-    url('/telehealth-consult-v2.png') center / cover no-repeat;
+    url('/home-professional-man-35-45-v3.png?v=20260806') center / cover no-repeat;
 }
 .quiz-page-intro.quiz-blue {
   background:
     linear-gradient(90deg, rgb(20 33 42 / .98), rgb(49 95 120 / .72)),
-    url('/telehealth-consult-v2.png') center / cover no-repeat;
+    url('/home-professional-man-35-45-v3.png?v=20260806') center / cover no-repeat;
 }
 
 .questionnaire-grid {
@@ -411,7 +411,7 @@ footer p {
   padding: clamp(72px, 9vw, 124px) clamp(20px, 8vw, 150px);
   background:
     linear-gradient(90deg, rgb(12 25 29 / .98), rgb(22 76 82 / .74)),
-    url('/telehealth-consult-v2.png') center / cover no-repeat;
+    url('/home-professional-man-35-45-v3.png?v=20260806') center / cover no-repeat;
   color: white;
 }
 .patient-access-hero h1 { max-width: 900px; }
@@ -451,8 +451,8 @@ footer p {
 .schedule-intro {
   padding: clamp(62px, 8vw, 104px) clamp(20px, 8vw, 150px);
   background:
-    linear-gradient(90deg, rgb(8 8 8 / .98), rgb(28 28 28 / .78)),
-    url('/telehealth-consult-v2.png') center / cover no-repeat;
+    linear-gradient(90deg, rgb(6 22 29 / .84) 0%, rgb(8 32 39 / .58) 42%, rgb(8 29 35 / .12) 72%, transparent 100%),
+    url('/home-professional-man-35-45-v3.png?v=20260806') center / cover no-repeat;
   color: white;
 }
 .schedule-intro h1 { max-width: 850px; }
@@ -505,7 +505,7 @@ footer p {
   padding: clamp(72px, 9vw, 126px) clamp(20px, 7vw, 120px);
   background:
     linear-gradient(90deg, rgb(10 24 29 / .98) 0%, rgb(18 61 66 / .9) 58%, rgb(18 61 66 / .48) 100%),
-    url('/telehealth-consult-v2.png') center / cover no-repeat;
+    url('/home-professional-man-35-45-v3.png?v=20260806') center / cover no-repeat;
   color: white;
 }
 .focused-care-hero > div { max-width: 790px; }
@@ -1969,7 +1969,7 @@ footer p {
   padding: clamp(72px, 10vw, 132px) clamp(20px, 9vw, 150px);
   background:
     linear-gradient(90deg, rgb(14 25 29 / .99) 0%, rgb(14 25 29 / .9) 54%, rgb(14 25 29 / .38) 100%),
-    url('/telehealth-consult-v2.png') center / cover no-repeat;
+    url('/home-professional-man-35-45-v3.png?v=20260806') center / cover no-repeat;
   color: white;
 }
 
@@ -2063,7 +2063,7 @@ footer p {
   padding: 92px clamp(24px, 6vw, 96px);
   background:
     linear-gradient(90deg, rgb(7 25 32 / .98) 0%, rgb(23 55 69 / .92) 54%, rgb(33 94 104 / .52) 100%),
-    url('/telehealth-consult-v2.png') center / cover no-repeat;
+    url('/home-professional-man-35-45-v3.png?v=20260806') center / cover no-repeat;
   color: white;
 }
 .weight-hero h1 { max-width: 900px; margin: 12px 0 24px; font-size: clamp(46px, 6.4vw, 84px); line-height: .98; letter-spacing: -.045em; }
