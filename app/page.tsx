@@ -72,18 +72,21 @@ const biomarkers = ["A1C, glucose & insulin", "Lipids & cardiovascular risk", "T
 
 const programs = [
   {
+    href: "/programs/metabolic-gut",
     label: "Program 01",
     title: "Metabolic & Gut Optimization Track",
     copy: "A coordinated pathway for digestive wellness, metabolic health, and medical weight-management goals.",
     includes: ["Initial medical evaluation", "Relevant lab review", "Personalized nutrition and lifestyle plan", "Structured clinical follow-up"],
   },
   {
+    href: "/programs/mens-vitality",
     label: "Program 02",
     title: "Men's Vitality & Hormonal Optimization Track",
     copy: "A focused pathway for energy, sexual health, strength, recovery, body composition, and hormonal evaluation when indicated.",
     includes: ["Comprehensive men's health review", "Baseline and follow-up labs when needed", "Individualized clinical plan", "Secure follow-up and monitoring"],
   },
   {
+    href: "/programs/longevity-functional",
     label: "Program 03",
     title: "Longevity & Functional Health Track",
     copy: "A comprehensive pathway connecting metabolic health, digestive wellness, recovery, healthy aging, and women's or men's health goals.",
@@ -222,7 +225,7 @@ export default function Home() {
       <section className="program-section">
         <div className="section-heading"><p className="eyebrow">Program pathways</p><h2>Choose the care experience that fits your goals.</h2><p>Each pathway includes clinician-led assessment, guidance, and ongoing care. Testing and specific therapies are personalized to your needs.</p></div>
         <div className="program-grid">
-          {programs.map((program) => <article className="program-card program-card-modern" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul></article>)}
+          {programs.map((program) => <article className="program-card program-card-modern" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul><Link className="primary-button program-card-button" href={program.href}>Explore this program</Link></article>)}
         </div>
         <p className="program-note">Your clinician will help you understand your health more clearly and build an individualized treatment plan designed around your goals.</p>
       </section>
