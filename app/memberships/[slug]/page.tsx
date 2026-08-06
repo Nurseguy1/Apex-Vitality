@@ -28,7 +28,7 @@ export default async function MembershipDetailPage({ params }: { params: Promise
       <SiteHeader />
       <section
         className="membership-detail-hero"
-        style={{ backgroundImage: `linear-gradient(90deg, rgba(5,15,20,.96) 0%, rgba(8,25,31,.86) 42%, rgba(5,15,20,.18) 72%), url('${membership.image}')` }}
+        style={{ backgroundImage: `linear-gradient(90deg, rgba(5,28,34,.84) 0%, rgba(12,55,61,.58) 42%, rgba(5,35,41,.1) 72%), url('${membership.image}')` }}
       >
         <div>
           <p className="eyebrow">{membership.eyebrow}</p>
