@@ -1461,10 +1461,23 @@ footer p {
   position: relative;
   padding: 24px 24px 24px 58px;
   border-radius: 22px;
-  background: white;
+  border: 1px solid rgb(23 111 112 / .1);
+  background: linear-gradient(145deg, #ffffff 0%, #e5f4ef 100%);
   box-shadow: 0 16px 45px rgb(20 56 60 / .08);
   font-weight: 700;
   line-height: 1.45;
+}
+.program-detail-includes li:nth-child(2) {
+  border-color: rgb(192 139 58 / .14);
+  background: linear-gradient(145deg, #ffffff 0%, #fbf0da 100%);
+}
+.program-detail-includes li:nth-child(3) {
+  border-color: rgb(72 105 145 / .14);
+  background: linear-gradient(145deg, #ffffff 0%, #e9f0f8 100%);
+}
+.program-detail-includes li:nth-child(4) {
+  border-color: rgb(116 92 150 / .13);
+  background: linear-gradient(145deg, #ffffff 0%, #f0eafb 100%);
 }
 .program-detail-includes li::before {
   position: absolute;
