@@ -9,6 +9,7 @@ export function SiteHeader() {
         <span>Apex Vitality</span>
       </Link>
       <nav className="nav-links" aria-label="Main navigation">
+        <Link href="/#programs">Programs</Link>
         <Link href="/memberships">Memberships</Link>
         <Link href="/gut-health">Gut Health</Link>
         <Link href="/weight-loss">Weight Loss</Link>
@@ -22,6 +23,7 @@ export function SiteHeader() {
       <details className="mobile-menu">
         <summary aria-label="Open site navigation">Menu</summary>
         <nav aria-label="Mobile navigation">
+          <Link href="/#programs">Programs</Link>
           <Link href="/mens-health">Men&apos;s Health</Link>
           <Link href="/womens-health">Women&apos;s Health</Link>
           <Link href="/weight-loss">Weight Loss</Link>
@@ -47,6 +49,9 @@ export function SiteFooter() {
         <p>Personalized telehealth care from licensed medical providers.</p>
       </div>
       <nav aria-label="Footer navigation">
+        <Link href="/programs/metabolic-gut">Metabolic &amp; Gut Program</Link>
+        <Link href="/programs/mens-vitality">Men&apos;s Vitality Program</Link>
+        <Link href="/programs/longevity-functional">Longevity &amp; Functional Health Program</Link>
         <Link href="/gut-health">Gut Health</Link>
         <Link href="/weight-loss">Medical Weight Management</Link>
         <Link href="/functional-health">Longevity &amp; Functional Health</Link>

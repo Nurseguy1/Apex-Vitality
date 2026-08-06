@@ -222,7 +222,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="program-section">
+      <section className="program-section" id="programs">
         <div className="section-heading"><p className="eyebrow">Program pathways</p><h2>Choose the care experience that fits your goals.</h2><p>Each pathway includes clinician-led assessment, guidance, and ongoing care. Testing and specific therapies are personalized to your needs.</p></div>
         <div className="program-grid">
           {programs.map((program) => <article className="program-card program-card-modern" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul><Link className="primary-button program-card-button" href={program.href}>Explore this program</Link></article>)}
