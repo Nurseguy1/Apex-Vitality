@@ -106,6 +106,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="/bright-theme-v2.css" />
+      </head>
       <body>
         <JsonLd data={organizationSchema} />
         {children}
