@@ -42,7 +42,7 @@ export default async function MembershipDetailPage({ params }: { params: Promise
         </div>
       </section>
 
-      <section className="membership-detail-includes">
+      <section className="membership-detail-includes membership-detail-includes-modern">
         <div>
           <p className="eyebrow">What is included</p>
           <h2>Everything you need to keep moving forward.</h2>

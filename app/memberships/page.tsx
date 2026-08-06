@@ -73,7 +73,7 @@ export default function MembershipsPage() {
             style={{ backgroundImage: `linear-gradient(90deg, rgba(242,247,246,.96) 0%, rgba(242,247,246,.76) 34%, rgba(242,247,246,.08) 62%), url('${option.image}')` }}
             key={option.name}
           >
-            <article className={`membership-card membership-tone-${index + 1} ${index === 3 ? "featured" : ""}`}>
+            <article className={`membership-card membership-card-modern membership-tone-${index + 1} ${index === 3 ? "featured" : ""}`}>
               {index === 3 && <span className="membership-badge">Private client</span>}
               <p className="eyebrow">Membership {index + 1} of 4</p>
               <h2>{option.name}</h2>

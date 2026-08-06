@@ -1719,6 +1719,87 @@ footer p {
 }
 .membership-detail-simple h2 { max-width: 800px; margin: 12px auto 30px; }
 
+/* Current membership presentation: light, image-led, and intentionally distinct
+   from the older pricing-card grid used elsewhere on the site. */
+.membership-choice-panel .membership-card-modern {
+  width: min(420px, 100%);
+  padding: clamp(28px, 3.2vw, 42px);
+  border: 1px solid rgb(255 255 255 / .72);
+  border-top: 1px solid rgb(255 255 255 / .72);
+  border-radius: 30px;
+  background: rgb(255 255 255 / .88);
+  box-shadow: 0 28px 80px rgb(22 54 58 / .16);
+  backdrop-filter: blur(16px);
+}
+
+.membership-choice-panel .membership-card-modern.featured {
+  border: 1px solid rgb(255 255 255 / .72);
+  background: rgb(255 255 255 / .9);
+}
+
+.membership-choice-panel .membership-card-modern .eyebrow {
+  width: fit-content;
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #e5f2ef;
+  color: #176b6b;
+  font-size: 11px;
+  letter-spacing: .1em;
+}
+
+.membership-choice-panel .membership-card-modern h2 {
+  margin-bottom: 20px;
+  color: #101d22;
+}
+
+.membership-choice-panel .membership-card-modern .membership-price {
+  margin-bottom: 14px;
+}
+
+.membership-choice-panel .membership-card-modern .membership-price strong {
+  color: #166f72;
+  font-size: clamp(30px, 3vw, 42px);
+}
+
+.membership-choice-panel .membership-card-modern ul {
+  margin: 18px 0 28px;
+  padding-top: 18px;
+  border-top: 1px solid #dce7e5;
+}
+
+.membership-choice-panel .membership-card-modern .primary-button {
+  width: 100%;
+  justify-content: center;
+  border-radius: 999px;
+}
+
+.membership-detail-includes-modern li {
+  min-height: 0;
+  padding: 22px 24px 22px 54px;
+  border: 0;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 16px 45px rgb(20 56 60 / .08);
+  position: relative;
+}
+
+.membership-detail-includes-modern li::before {
+  position: absolute;
+  top: 21px;
+  left: 23px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #d9efea;
+  color: #176f70;
+  content: "✓";
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 900;
+}
+
 @media (max-width: 760px) {
   .membership-detail-hero {
     min-height: 720px;
@@ -1728,6 +1809,7 @@ footer p {
   }
   .membership-detail-includes { grid-template-columns: 1fr; gap: 36px; }
   .membership-detail-includes ul { grid-template-columns: 1fr; }
+  .membership-choice-panel .membership-card-modern { border-radius: 24px; }
 }
 
 .membership-cta > div {
