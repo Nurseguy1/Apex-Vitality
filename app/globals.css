@@ -1339,6 +1339,67 @@ footer p {
   font-size: 14px;
 }
 
+.program-grid .program-card-modern,
+.program-grid .program-card-modern:nth-child(2),
+.program-grid .program-card-modern:nth-child(3) {
+  min-height: 0;
+  padding: clamp(28px, 3vw, 40px);
+  border: 1px solid rgb(18 77 78 / .1);
+  border-top: 1px solid rgb(18 77 78 / .1);
+  border-radius: 30px;
+  background: rgb(255 255 255 / .9);
+  box-shadow: 0 24px 64px rgb(22 54 58 / .1);
+}
+
+.program-grid .program-card-modern > span,
+.program-grid .program-card-modern:nth-child(2) > span,
+.program-grid .program-card-modern:nth-child(3) > span {
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #e5f2ef;
+  color: #176b6b;
+  font-size: 11px;
+  letter-spacing: .1em;
+}
+
+.program-grid .program-card-modern h3 {
+  margin: 22px 0 16px;
+  color: #101d22;
+  font-size: clamp(30px, 3vw, 42px);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+
+.program-grid .program-card-modern ul {
+  gap: 12px;
+  margin-top: 24px;
+  padding: 22px 0 0;
+  border-top: 1px solid #dce7e5;
+  list-style: none;
+}
+
+.program-grid .program-card-modern li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.program-grid .program-card-modern li::before {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #d9efea;
+  color: #176f70;
+  content: "✓";
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 900;
+}
+
 .membership-section {
   padding: clamp(64px, 9vw, 116px) clamp(20px, 5vw, 72px);
   background:
