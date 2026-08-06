@@ -464,6 +464,8 @@ footer p {
 .booking-steps h2 { margin: 12px 0 8px; font-size: clamp(25px, 3vw, 34px); }
 .booking-steps p { color: var(--muted); line-height: 1.65; }
 .booking-steps .primary-button { margin-top: 10px; }
+.booking-steps .enrollment-pending { cursor: default; display: inline-flex; opacity: .82; }
+.booking-steps .enrollment-note { font-size: .92rem; margin-top: 12px; max-width: 34rem; }
 .alternate-start { margin: 0; text-align: center; color: #333; }
 .alternate-start a { color: #111; font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
 .scheduler-section {

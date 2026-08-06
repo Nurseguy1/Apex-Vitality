@@ -20,7 +20,8 @@ export default function SchedulePage() {
           <span>Your first step</span>
           <h2>Initial Care Visit · $259</h2>
           <p>Your visit includes a focused health and medication review plus prescription coordination or a laboratory kit.</p>
-          <a className="primary-button" href="/contact">Start my care</a>
+          <span className="primary-button enrollment-pending" aria-label="Enrollment opening soon">Enrollment opening soon</span>
+          <p className="enrollment-note">Online enrollment will open after the secure clinical pathway is connected.</p>
         </article>
         <p className="alternate-start">Already have recent lab results from another provider or laboratory? <a href="/schedule/comprehensive">Go directly to a comprehensive visit →</a></p>
       </section>
