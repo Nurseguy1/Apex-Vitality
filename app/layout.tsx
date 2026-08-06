@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./bright-theme.css";
 import { JsonLd } from "./seo";
 
 const siteUrl = "https://create-a-coral.vercel.app";
