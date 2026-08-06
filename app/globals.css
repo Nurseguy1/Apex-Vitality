@@ -1033,6 +1033,60 @@ footer p {
   gap: 20px;
 }
 
+.funnel-options-visual {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.funnel-visual-panel {
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  padding: 54px max(5vw, 24px);
+  background-position: center;
+  background-size: cover;
+}
+.funnel-visual-panel .funnel-card-compact {
+  width: min(390px, 100%);
+  min-height: 0;
+  padding: clamp(25px, 3vw, 34px);
+  border-radius: 28px;
+  box-shadow: 0 26px 72px rgb(20 52 58 / .15);
+  backdrop-filter: blur(16px);
+}
+.funnel-visual-1 .funnel-card-compact {
+  border-color: rgb(38 139 125 / .24);
+  background: linear-gradient(145deg, rgb(255 255 255 / .94), rgb(216 241 234 / .92));
+}
+.funnel-visual-2 .funnel-card-compact {
+  border-color: rgb(188 132 54 / .24);
+  background: linear-gradient(145deg, rgb(255 255 255 / .94), rgb(250 235 207 / .92));
+}
+.funnel-visual-3 .funnel-card-compact {
+  border-color: rgb(61 104 151 / .24);
+  background: linear-gradient(145deg, rgb(255 255 255 / .94), rgb(219 232 247 / .92));
+}
+.funnel-card-compact h3 {
+  font-size: clamp(28px, 3vw, 40px);
+}
+.funnel-card-compact > a {
+  width: 100%;
+  justify-content: center;
+  border-radius: 999px;
+}
+
+@media (max-width: 760px) {
+  .funnel-options-visual { border-radius: 22px; }
+  .funnel-visual-panel {
+    min-height: 740px;
+    align-items: flex-end;
+    padding: 290px 18px 26px;
+    background-position: 68% center;
+  }
+}
+
 .funnel-card {
   display: flex;
   min-height: 490px;
@@ -1261,102 +1315,6 @@ footer p {
 .program-section {
   padding: clamp(64px, 9vw, 116px) clamp(20px, 5vw, 72px);
   background: var(--background);
-}
-
-.program-section-visual {
-  padding-inline: 0;
-  padding-bottom: 0;
-}
-.program-section-visual > .section-heading,
-.program-section-visual > .program-note {
-  margin-inline: clamp(20px, 5vw, 72px);
-}
-.program-scroll-stack {
-  margin-top: 38px;
-  background: #e8f1ef;
-}
-.program-choice-panel {
-  min-height: 680px;
-  display: flex;
-  align-items: center;
-  padding: 64px max(6vw, 24px);
-  background-position: center;
-  background-size: cover;
-}
-.program-choice-panel .program-card-modern {
-  width: min(390px, 100%);
-  min-height: 0;
-  padding: clamp(25px, 3vw, 34px);
-  border: 1px solid rgb(255 255 255 / .78);
-  border-radius: 28px;
-  background: rgb(255 255 255 / .9);
-  box-shadow: 0 26px 72px rgb(20 52 58 / .15);
-  backdrop-filter: blur(16px);
-}
-.program-choice-1 .program-card-modern {
-  border-color: rgb(38 139 125 / .24);
-  background: linear-gradient(145deg, rgb(255 255 255 / .94), rgb(216 241 234 / .92));
-}
-.program-choice-2 .program-card-modern {
-  border-color: rgb(188 132 54 / .24);
-  background: linear-gradient(145deg, rgb(255 255 255 / .94), rgb(250 235 207 / .92));
-}
-.program-choice-3 .program-card-modern {
-  border-color: rgb(61 104 151 / .24);
-  background: linear-gradient(145deg, rgb(255 255 255 / .94), rgb(219 232 247 / .92));
-}
-.program-choice-panel .program-card-modern > span {
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: #e5f2ef;
-  color: #176b6b;
-  font-size: 11px;
-  font-weight: 820;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-.program-choice-panel .program-card-modern h3 {
-  margin: 20px 0 14px;
-  font-size: clamp(29px, 3vw, 39px);
-  line-height: 1.03;
-  letter-spacing: -.035em;
-}
-.program-choice-panel .program-card-modern p,
-.program-choice-panel .program-card-modern li {
-  color: var(--muted);
-  line-height: 1.5;
-}
-.program-choice-panel .program-card-modern ul {
-  display: grid;
-  gap: 10px;
-  margin: 20px 0 24px;
-  padding: 18px 0 0;
-  border-top: 1px solid #dce7e5;
-  list-style: none;
-}
-.program-choice-panel .program-card-modern li {
-  position: relative;
-  padding-left: 28px;
-}
-.program-choice-panel .program-card-modern li::before {
-  position: absolute;
-  left: 0;
-  color: #168c83;
-  content: "✓";
-  font-weight: 900;
-}
-.program-choice-panel .program-card-button {
-  width: 100%;
-}
-
-@media (max-width: 760px) {
-  .program-choice-panel {
-    min-height: 740px;
-    align-items: flex-end;
-    padding: 290px 20px 28px;
-    background-position: 68% center;
-  }
 }
 
 .program-grid {

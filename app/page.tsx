@@ -176,8 +176,9 @@ export default function Home() {
           <h2 id="choose-your-path">Whatever brings you here, there is a place to start.</h2>
           <p>Come with a focused goal, a concern, or a treatment idea already in mind. Your clinician will listen and collaborate with you to develop options and build a plan.</p>
         </div>
-        <div className="funnel-options">
-          <article className="funnel-card featured-funnel">
+        <div className="funnel-options funnel-options-visual">
+          <section className="funnel-visual-panel funnel-visual-1" style={{ backgroundImage: "linear-gradient(90deg, rgba(242,247,246,.95), rgba(242,247,246,.68) 34%, rgba(242,247,246,.06) 62%), url('/membership-initial-care-v1.png')" }}>
+          <article className="funnel-card featured-funnel funnel-card-compact">
             <span className="funnel-label">Introductory visit</span>
             <h3>New-Patient Lab-Planning Visit</h3>
             <p className="funnel-price"><strong>$259</strong><span>one-time initial care visit</span></p>
@@ -189,7 +190,9 @@ export default function Home() {
             </ul>
             <Link className="primary-button" href="/schedule">Start for $259</Link>
           </article>
-          <article className="funnel-card">
+          </section>
+          <section className="funnel-visual-panel funnel-visual-2" style={{ backgroundImage: "linear-gradient(90deg, rgba(242,247,246,.95), rgba(242,247,246,.68) 34%, rgba(242,247,246,.06) 62%), url('/program-metabolic-couple-v1.png')" }}>
+          <article className="funnel-card funnel-card-compact">
             <span className="funnel-label">Complete care in one visit</span>
             <h3>Comprehensive New-Patient Consultation</h3>
             <p className="funnel-price"><strong>$325</strong><span>one-time • 45 minutes</span></p>
@@ -201,7 +204,9 @@ export default function Home() {
             </ul>
             <Link className="secondary-dark-button" href="/schedule">Book my consultation</Link>
           </article>
-          <article className="funnel-card">
+          </section>
+          <section className="funnel-visual-panel funnel-visual-3" style={{ backgroundImage: "linear-gradient(90deg, rgba(242,247,246,.95), rgba(242,247,246,.68) 34%, rgba(242,247,246,.06) 62%), url('/membership-performance-v1.png')" }}>
+          <article className="funnel-card funnel-card-compact">
             <span className="funnel-label">Know what you want?</span>
             <h3>Start Focused Care</h3>
             <p>Already know what you want to address—or have a treatment in mind? Start there. We will listen to your perspective and work with you to turn it into a clear clinical plan.</p>
@@ -212,6 +217,7 @@ export default function Home() {
             </ul>
             <Link className="secondary-dark-button care-path-button" href="#care-options">Choose My Care</Link>
           </article>
+          </section>
         </div>
         <p className="funnel-disclaimer">Your consultation includes individualized assessment, clinical guidance, and a personalized care plan. Testing, prescriptions, and medication fulfillment are added when they support that plan.</p>
       </section>
@@ -229,10 +235,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="program-section program-section-visual" id="programs">
+      <section className="program-section" id="programs">
         <div className="section-heading"><p className="eyebrow">Program pathways</p><h2>Choose the care experience that fits your goals.</h2><p>Each pathway includes clinician-led assessment, guidance, and ongoing care. Testing and specific therapies are personalized to your needs.</p></div>
-        <div className="program-scroll-stack">
-          {programs.map((program, index) => <section className={`program-choice-panel program-choice-${index + 1}`} style={{ backgroundImage: `linear-gradient(90deg, rgba(242,247,246,.94) 0%, rgba(242,247,246,.7) 31%, rgba(242,247,246,.06) 60%), url('${program.image}')` }} key={program.title}><article className="program-card program-card-modern"><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.slice(0, 3).map((item) => <li key={item}>{item}</li>)}</ul><Link className="primary-button program-card-button" href={program.href}>Explore this program</Link></article></section>)}
+        <div className="program-grid">
+          {programs.map((program) => <article className="program-card program-card-modern" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul><Link className="primary-button program-card-button" href={program.href}>Explore this program</Link></article>)}
         </div>
         <p className="program-note">Your clinician will help you understand your health more clearly and build an individualized treatment plan designed around your goals.</p>
       </section>
