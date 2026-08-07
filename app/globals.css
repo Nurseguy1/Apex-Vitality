@@ -4580,3 +4580,26 @@ footer p {
     grid-template-columns: 1fr;
   }
 }
+
+/* Definitive page canvas: never use a fixed site-wide photograph */
+.home-sermorelin-vibe {
+  background: #f5f3ed !important;
+  background-attachment: scroll !important;
+}
+
+.home-sermorelin-vibe > .funnel-section,
+.home-sermorelin-vibe > .service-band,
+.home-sermorelin-vibe > .membership-section,
+.home-sermorelin-vibe > .split-section,
+.home-sermorelin-vibe > .visit-section {
+  background: #f8faf8 !important;
+  backdrop-filter: none !important;
+}
+
+.home-sermorelin-vibe > .proof-strip,
+.home-sermorelin-vibe > .program-section,
+.home-sermorelin-vibe > .lab-section,
+.home-sermorelin-vibe > .faq-preview {
+  background: #e7f2ef !important;
+  backdrop-filter: none !important;
+}
