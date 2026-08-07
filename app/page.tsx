@@ -179,7 +179,7 @@ export default function Home() {
         <div className="funnel-options funnel-options-visual">
           <section className="funnel-visual-panel funnel-visual-1" style={{ backgroundImage: "linear-gradient(90deg, rgba(242,247,246,.96), rgba(242,247,246,.72) 38%, rgba(242,247,246,.08) 66%), url('/treatment-nad-v1.png')" }}>
           <article className="funnel-card featured-funnel funnel-card-compact">
-            <span className="funnel-label">Know what you want?</span>
+            <span className="funnel-label focused-care-kicker">Know what you want?</span>
             <h3>Comprehensive Peptide Care</h3>
             <p>Choose the treatment that fits your goals. Compare one- and three-month options, complete a brief medical review, and move directly toward home delivery when prescribed.</p>
             <p className="focused-care-intro"><strong>Explore available options:</strong></p>

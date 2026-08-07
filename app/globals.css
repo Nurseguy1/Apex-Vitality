@@ -2823,34 +2823,52 @@ footer p {
 }
 
 .focused-care-intro {
-  margin: 1.1rem 0 .55rem;
+  margin: 1.1rem 0 .65rem;
 }
 
 .focused-care-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .55rem;
   margin: 0 0 1.2rem;
 }
 
 .focused-care-options span {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  min-height: 2rem;
-  padding: .4rem .7rem;
+  min-height: 2.55rem;
+  padding: .55rem .75rem;
   border: 1px solid rgba(23, 78, 68, .2);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, .86);
-  color: #173f38;
-  font-size: .84rem;
-  font-weight: 750;
-  line-height: 1.15;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 4px 14px rgba(23, 63, 56, .07);
+  color: #123c35;
+  font-size: .92rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.focused-care-kicker {
+  display: block;
+  margin-bottom: .35rem;
+  color: #174e44;
+  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  font-weight: 850;
+  letter-spacing: -.015em;
+  line-height: 1.1;
+  text-transform: none;
 }
 
 .focused-care-speed {
   margin: 0 0 .85rem;
   color: #173f38;
   font-size: .96rem;
+}
+
+@media (max-width: 520px) {
+  .focused-care-options {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Conversion-focused treatment storefront */
