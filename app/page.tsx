@@ -181,10 +181,6 @@ export default function Home() {
           <article className="funnel-card featured-funnel funnel-card-compact">
             <span className="funnel-label focused-care-kicker">Know what you want?</span>
             <h3>Comprehensive Peptide Care</h3>
-            <figure className="focused-care-product-image">
-              <img src="/treatment-cjc-ipamorelin-v1.png" alt="Peptide treatment vial presented in Apex Vitality style" />
-              <figcaption>Peptide &amp; NAD+ treatment options</figcaption>
-            </figure>
             <p>Choose the treatment that fits your goals. Compare one- and three-month options, complete a brief medical review, and move directly toward home delivery when prescribed.</p>
             <p className="focused-care-intro"><strong>Explore available options:</strong></p>
             <div className="focused-care-options" aria-label="Available peptide and wellness treatment options">

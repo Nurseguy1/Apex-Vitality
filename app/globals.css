@@ -1087,6 +1087,89 @@ footer p {
   }
 }
 
+/* Premium, compact focused-care card */
+@media (min-width: 761px) {
+  .funnel-visual-1 {
+    min-height: 600px;
+    padding: 38px max(5vw, 34px);
+    background-position: 70% center !important;
+  }
+
+  .funnel-visual-1 .funnel-card-compact {
+    width: min(475px, 100%);
+    padding: 30px 32px 32px;
+    border: 1px solid rgba(22, 92, 81, .24);
+    border-radius: 22px;
+    background: rgba(250, 253, 251, .94);
+    box-shadow: 0 24px 60px rgba(15, 53, 48, .14);
+  }
+
+  .funnel-visual-1 .focused-care-kicker {
+    margin-bottom: .55rem;
+    padding: 0;
+    background: transparent;
+    color: #257668;
+    font-size: 1.25rem;
+  }
+
+  .funnel-visual-1 h3 {
+    margin: 0 0 .75rem;
+    color: #102e2a;
+    font-size: clamp(2.15rem, 3vw, 2.8rem);
+    line-height: 1.02;
+  }
+
+  .funnel-visual-1 .funnel-card-compact > p:not(.focused-care-intro):not(.focused-care-speed) {
+    margin: 0 0 .9rem;
+    color: #536b67;
+    font-size: .95rem;
+    line-height: 1.5;
+  }
+
+  .funnel-visual-1 .focused-care-intro {
+    margin: .75rem 0 .3rem;
+    color: #173f38;
+  }
+
+  .funnel-visual-1 .focused-care-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 1.1rem;
+    margin-bottom: .85rem;
+  }
+
+  .funnel-visual-1 .focused-care-options span {
+    min-height: 2.25rem;
+    padding: .52rem 0;
+    border: 0;
+    border-bottom: 1px solid rgba(22, 92, 81, .16);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: #284d47;
+    font-size: .86rem;
+    font-weight: 760;
+  }
+
+  .funnel-visual-1 .focused-care-options span:nth-child(-n+2) {
+    color: #12685b;
+    font-size: .98rem;
+    font-weight: 900;
+  }
+
+  .funnel-visual-1 .focused-care-speed {
+    margin: .15rem 0 .8rem;
+    color: #173f38;
+    font-size: .9rem;
+    line-height: 1.35;
+  }
+
+  .funnel-visual-1 .primary-button {
+    width: auto;
+    padding-right: 1.35rem;
+    padding-left: 1.35rem;
+  }
+}
+
 .funnel-card {
   display: flex;
   min-height: 490px;
