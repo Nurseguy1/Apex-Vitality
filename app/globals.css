@@ -1087,6 +1087,21 @@ footer p {
   }
 }
 
+/* Site-wide breathing room for editorial and care pages */
+@media (min-width: 761px) {
+  main:not(.home-sermorelin-vibe):not(.treatment-shop-page):not(.review-tour):not(.nutrition-preview) > section:not([class*="hero"]):not(.proof-strip):not(.home-trust-strip) {
+    padding-top: clamp(92px, 10vw, 150px);
+    padding-bottom: clamp(92px, 10vw, 150px);
+  }
+}
+
+@media (max-width: 760px) {
+  main:not(.home-sermorelin-vibe):not(.treatment-shop-page):not(.review-tour):not(.nutrition-preview) > section:not([class*="hero"]):not(.proof-strip):not(.home-trust-strip) {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+}
+
 /* Premium, compact focused-care card */
 @media (min-width: 761px) {
   .funnel-visual-1 {
