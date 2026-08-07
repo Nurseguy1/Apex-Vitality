@@ -2979,6 +2979,28 @@ footer p {
   }
 }
 
+/* Clean page background: imagery stays within intentional visual panels */
+.home-sermorelin-vibe {
+  background: #f5f3ed;
+}
+
+.home-sermorelin-vibe > .funnel-section,
+.home-sermorelin-vibe > .service-band,
+.home-sermorelin-vibe > .membership-section,
+.home-sermorelin-vibe > .split-section,
+.home-sermorelin-vibe > .visit-section {
+  background: #f8faf8 !important;
+  backdrop-filter: none;
+}
+
+.home-sermorelin-vibe > .proof-strip,
+.home-sermorelin-vibe > .program-section,
+.home-sermorelin-vibe > .lab-section,
+.home-sermorelin-vibe > .faq-preview {
+  background: #e7f2ef !important;
+  backdrop-filter: none;
+}
+
 /* One continuous active-lifestyle background across the home experience */
 .home-sermorelin-vibe {
   background:
