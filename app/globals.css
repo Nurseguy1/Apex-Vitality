@@ -2908,7 +2908,7 @@ footer p {
 /* One continuous active-lifestyle background across the home experience */
 .home-sermorelin-vibe {
   background:
-    linear-gradient(rgba(239, 247, 245, .78), rgba(247, 244, 237, .84)),
+    linear-gradient(rgba(232, 243, 240, .38), rgba(246, 241, 231, .48)),
     url('/home-professional-man-35-45-v3.png?v=20260806-page-continuity') 70% center / cover fixed;
 }
 
@@ -2917,16 +2917,16 @@ footer p {
 .home-sermorelin-vibe > .membership-section,
 .home-sermorelin-vibe > .split-section,
 .home-sermorelin-vibe > .visit-section {
-  background: rgba(248, 250, 248, .86) !important;
-  backdrop-filter: blur(2px);
+  background: rgba(248, 250, 248, .7) !important;
+  backdrop-filter: blur(1px);
 }
 
 .home-sermorelin-vibe > .proof-strip,
 .home-sermorelin-vibe > .program-section,
 .home-sermorelin-vibe > .lab-section,
 .home-sermorelin-vibe > .faq-preview {
-  background: rgba(231, 242, 239, .82) !important;
-  backdrop-filter: blur(2px);
+  background: rgba(231, 242, 239, .64) !important;
+  backdrop-filter: blur(1px);
 }
 
 @media (max-width: 760px) {
@@ -2940,14 +2940,14 @@ footer p {
   .home-sermorelin-vibe > .membership-section,
   .home-sermorelin-vibe > .split-section,
   .home-sermorelin-vibe > .visit-section {
-    background: rgba(248, 250, 248, .91) !important;
+    background: rgba(248, 250, 248, .78) !important;
   }
 
   .home-sermorelin-vibe > .proof-strip,
   .home-sermorelin-vibe > .program-section,
   .home-sermorelin-vibe > .lab-section,
   .home-sermorelin-vibe > .faq-preview {
-    background: rgba(231, 242, 239, .89) !important;
+    background: rgba(231, 242, 239, .74) !important;
   }
 }
 
