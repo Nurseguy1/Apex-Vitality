@@ -2995,6 +2995,28 @@ footer p {
     background-position: center right !important;
     background-size: cover !important;
   }
+
+  .home-sermorelin-vibe .funnel-visual-1 .funnel-card-compact {
+    width: min(500px, 100%);
+    min-height: 520px;
+    padding: 38px 36px;
+  }
+
+  .home-sermorelin-vibe .funnel-visual-1 .focused-care-kicker {
+    margin-bottom: .75rem;
+  }
+
+  .home-sermorelin-vibe .funnel-visual-1 h3 {
+    margin-bottom: 1rem;
+  }
+
+  .home-sermorelin-vibe .funnel-visual-1 .focused-care-intro {
+    margin-top: 1rem;
+  }
+
+  .home-sermorelin-vibe .funnel-visual-1 .focused-care-options {
+    margin-bottom: 1.1rem;
+  }
 }
 
 @media (max-width: 760px) {
