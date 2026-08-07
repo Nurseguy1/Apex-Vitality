@@ -4603,3 +4603,15 @@ footer p {
   background: #e7f2ef !important;
   backdrop-filter: none !important;
 }
+
+.home-sermorelin-vibe > .service-band {
+  background: #173a40 !important;
+}
+
+.home-sermorelin-vibe > .service-band .section-heading h2 {
+  color: #fff;
+}
+
+.home-sermorelin-vibe > .service-band .section-heading p {
+  color: rgba(255, 255, 255, .74);
+}
