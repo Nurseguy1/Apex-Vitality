@@ -189,10 +189,10 @@ export default function Home() {
             <p className="focused-care-intro"><strong>Explore available options:</strong></p>
             <div className="focused-care-options" aria-label="Available peptide and wellness treatment options">
               <span>Sermorelin</span>
+              <span>NAD+</span>
               <span>CJC-1295 / Ipamorelin</span>
               <span>Tesamorelin</span>
               <span>GHK-Cu</span>
-              <span>NAD+</span>
               <span>Glutathione</span>
             </div>
             <p className="focused-care-speed"><strong>Buy now and begin your medical review in as little as one minute.</strong></p>
