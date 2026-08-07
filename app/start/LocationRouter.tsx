@@ -69,7 +69,7 @@ export default function LocationRouter() {
               <span><strong>Connect online</strong>Meet with a qualified medical clinician</span>
               <span><strong>Delivered to you</strong>Medication arrives at your door</span>
             </div>
-            <Link className="primary-button" href="/memberships">Explore care options</Link>
+            <Link className="primary-button" href="/treatments">Choose my treatment</Link>
           </article>
         )}
       </div>

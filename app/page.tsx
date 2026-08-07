@@ -177,18 +177,21 @@ export default function Home() {
           <p>Come with a focused goal, a concern, or a treatment idea already in mind. Your clinician will listen and collaborate with you to develop options and build a plan.</p>
         </div>
         <div className="funnel-options funnel-options-visual">
-          <section className="funnel-visual-panel funnel-visual-1" style={{ backgroundImage: "linear-gradient(90deg, rgba(242,247,246,.95), rgba(242,247,246,.68) 34%, rgba(242,247,246,.06) 62%), url('/membership-initial-care-v1.png')" }}>
+          <section className="funnel-visual-panel funnel-visual-1" style={{ backgroundImage: "linear-gradient(90deg, rgba(242,247,246,.96), rgba(242,247,246,.72) 38%, rgba(242,247,246,.08) 66%), url('/treatment-nad-v1.png')" }}>
           <article className="funnel-card featured-funnel funnel-card-compact">
-            <span className="funnel-label">Introductory visit</span>
-            <h3>New-Patient Lab-Planning Visit</h3>
-            <p className="funnel-price"><strong>$259</strong><span>one-time initial care visit</span></p>
-            <p>Establish care, discuss your goals, and create the lab plan that moves you toward your next step.</p>
-            <ul>
-              <li>Focused introductory clinician visit</li>
-              <li>Personalized lab planning</li>
-              <li>Prescription coordination or laboratory kit</li>
-            </ul>
-            <Link className="primary-button" href="/schedule">Start for $259</Link>
+            <span className="funnel-label">Know what you want?</span>
+            <h3>Comprehensive Peptide Care</h3>
+            <p>Choose the treatment that fits your goals. Compare one- and three-month options, complete a brief medical review, and move directly toward home delivery when prescribed.</p>
+            <p className="focused-care-intro"><strong>Explore available options:</strong></p>
+            <div className="focused-care-options" aria-label="Available peptide and wellness treatment options">
+              <span>Sermorelin</span>
+              <span>CJC-1295 / Ipamorelin</span>
+              <span>Tesamorelin</span>
+              <span>GHK-Cu</span>
+              <span>NAD+</span>
+              <span>Glutathione</span>
+            </div>
+            <Link className="primary-button" href="/treatments">Explore Peptide &amp; NAD+ Care</Link>
           </article>
           </section>
           <section className="funnel-visual-panel funnel-visual-2" style={{ backgroundImage: "linear-gradient(90deg, rgba(242,247,246,.95), rgba(242,247,246,.68) 34%, rgba(242,247,246,.06) 62%), url('/program-metabolic-couple-v1.png')" }}>
@@ -205,17 +208,18 @@ export default function Home() {
             <Link className="secondary-dark-button" href="/schedule">Book my consultation</Link>
           </article>
           </section>
-          <section className="funnel-visual-panel funnel-visual-3" style={{ backgroundImage: "linear-gradient(90deg, rgba(242,247,246,.95), rgba(242,247,246,.68) 34%, rgba(242,247,246,.06) 62%), url('/membership-performance-v1.png')" }}>
+          <section className="funnel-visual-panel funnel-visual-3" style={{ backgroundImage: "linear-gradient(90deg, rgba(242,247,246,.95), rgba(242,247,246,.68) 34%, rgba(242,247,246,.06) 62%), url('/membership-initial-care-v1.png')" }}>
           <article className="funnel-card funnel-card-compact">
-            <span className="funnel-label">Know what you want?</span>
-            <h3>Start Focused Care</h3>
-            <p>Already know what you want to address—or have a treatment in mind? Start there. We will listen to your perspective and work with you to turn it into a clear clinical plan.</p>
+            <span className="funnel-label">Introductory visit</span>
+            <h3>New-Patient Lab-Planning Visit</h3>
+            <p className="funnel-price"><strong>$259</strong><span>one-time initial care visit</span></p>
+            <p>Establish care, discuss your goals, and create the lab plan that moves you toward your next step.</p>
             <ul>
-              <li>Gut, metabolic, men&apos;s, or women&apos;s health</li>
-              <li><strong>Longevity &amp; Functional Health</strong></li>
-              <li><strong>NAD+ &amp; Sermorelin Peptide Care</strong></li>
+              <li>Focused introductory clinician visit</li>
+              <li>Personalized lab planning</li>
+              <li>Prescription coordination or laboratory kit</li>
             </ul>
-            <Link className="secondary-dark-button care-path-button" href="#care-options">Choose My Care</Link>
+            <Link className="secondary-dark-button care-path-button" href="/schedule">Start for $259</Link>
           </article>
           </section>
         </div>
