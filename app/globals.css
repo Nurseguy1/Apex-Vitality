@@ -1170,6 +1170,44 @@ footer p {
   }
 }
 
+/* Slower, more spacious home-page scroll rhythm */
+@media (min-width: 761px) {
+  .home-sermorelin-vibe > .funnel-section,
+  .home-sermorelin-vibe > .service-band,
+  .home-sermorelin-vibe > .program-section,
+  .home-sermorelin-vibe > .membership-section,
+  .home-sermorelin-vibe > .lab-section,
+  .home-sermorelin-vibe > .split-section,
+  .home-sermorelin-vibe > .faq-preview,
+  .home-sermorelin-vibe > .visit-section {
+    padding-top: clamp(105px, 11vw, 165px);
+    padding-bottom: clamp(105px, 11vw, 165px);
+  }
+
+  .home-sermorelin-vibe > .service-band,
+  .home-sermorelin-vibe > .program-section,
+  .home-sermorelin-vibe > .lab-section,
+  .home-sermorelin-vibe > .split-section,
+  .home-sermorelin-vibe > .faq-preview,
+  .home-sermorelin-vibe > .visit-section {
+    min-height: 78vh;
+  }
+}
+
+@media (max-width: 760px) {
+  .home-sermorelin-vibe > .funnel-section,
+  .home-sermorelin-vibe > .service-band,
+  .home-sermorelin-vibe > .program-section,
+  .home-sermorelin-vibe > .membership-section,
+  .home-sermorelin-vibe > .lab-section,
+  .home-sermorelin-vibe > .split-section,
+  .home-sermorelin-vibe > .faq-preview,
+  .home-sermorelin-vibe > .visit-section {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+}
+
 .funnel-card {
   display: flex;
   min-height: 490px;
