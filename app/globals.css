@@ -2984,6 +2984,30 @@ footer p {
   background: #f5f3ed;
 }
 
+/* Full-screen visual moment for the focused-care offer only */
+@media (min-width: 761px) {
+  .home-sermorelin-vibe .funnel-visual-1 {
+    min-height: calc(100vh - 72px);
+    padding: 48px max(5vw, 42px);
+    background-image:
+      linear-gradient(90deg, rgba(244, 249, 247, .97) 0%, rgba(244, 249, 247, .9) 38%, rgba(244, 249, 247, .3) 62%, rgba(244, 249, 247, .04) 100%),
+      url('/treatment-cjc-ipamorelin-v1.png') !important;
+    background-position: center right !important;
+    background-size: cover !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .home-sermorelin-vibe .funnel-visual-1 {
+    min-height: 100svh;
+    background-image:
+      linear-gradient(180deg, rgba(244, 249, 247, .12) 0%, rgba(244, 249, 247, .3) 34%, rgba(244, 249, 247, .94) 62%, rgba(244, 249, 247, .98) 100%),
+      url('/treatment-cjc-ipamorelin-v1.png') !important;
+    background-position: center top !important;
+    background-size: cover !important;
+  }
+}
+
 .home-sermorelin-vibe > .funnel-section,
 .home-sermorelin-vibe > .service-band,
 .home-sermorelin-vibe > .membership-section,
