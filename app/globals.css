@@ -4615,3 +4615,22 @@ footer p {
 .home-sermorelin-vibe > .service-band .section-heading p {
   color: rgba(255, 255, 255, .74);
 }
+
+/* Active performance backdrop for Comprehensive Peptide Care */
+@media (min-width: 761px) {
+  .home-sermorelin-vibe .funnel-visual-1 {
+    background-image:
+      linear-gradient(90deg, rgba(238, 246, 243, .97) 0%, rgba(238, 246, 243, .9) 37%, rgba(12, 37, 42, .34) 64%, rgba(7, 21, 24, .1) 100%),
+      url('/standout-gym-men-v1.png?v=20260807-peptide-active') !important;
+    background-position: center right !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .home-sermorelin-vibe .funnel-visual-1 {
+    background-image:
+      linear-gradient(180deg, rgba(10, 35, 41, .08) 0%, rgba(10, 35, 41, .2) 34%, rgba(238, 246, 243, .94) 62%, rgba(238, 246, 243, .99) 100%),
+      url('/standout-gym-men-v1.png?v=20260807-peptide-active') !important;
+    background-position: 66% top !important;
+  }
+}
