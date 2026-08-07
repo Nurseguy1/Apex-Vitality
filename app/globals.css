@@ -2822,6 +2822,52 @@ footer p {
   }
 }
 
+/* One continuous active-lifestyle background across the home experience */
+.home-sermorelin-vibe {
+  background:
+    linear-gradient(rgba(239, 247, 245, .78), rgba(247, 244, 237, .84)),
+    url('/home-professional-man-35-45-v3.png?v=20260806-page-continuity') 70% center / cover fixed;
+}
+
+.home-sermorelin-vibe > .funnel-section,
+.home-sermorelin-vibe > .service-band,
+.home-sermorelin-vibe > .membership-section,
+.home-sermorelin-vibe > .split-section,
+.home-sermorelin-vibe > .visit-section {
+  background: rgba(248, 250, 248, .86) !important;
+  backdrop-filter: blur(2px);
+}
+
+.home-sermorelin-vibe > .proof-strip,
+.home-sermorelin-vibe > .program-section,
+.home-sermorelin-vibe > .lab-section,
+.home-sermorelin-vibe > .faq-preview {
+  background: rgba(231, 242, 239, .82) !important;
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 760px) {
+  .home-sermorelin-vibe {
+    background-attachment: scroll;
+    background-position: 68% center;
+  }
+
+  .home-sermorelin-vibe > .funnel-section,
+  .home-sermorelin-vibe > .service-band,
+  .home-sermorelin-vibe > .membership-section,
+  .home-sermorelin-vibe > .split-section,
+  .home-sermorelin-vibe > .visit-section {
+    background: rgba(248, 250, 248, .91) !important;
+  }
+
+  .home-sermorelin-vibe > .proof-strip,
+  .home-sermorelin-vibe > .program-section,
+  .home-sermorelin-vibe > .lab-section,
+  .home-sermorelin-vibe > .faq-preview {
+    background: rgba(231, 242, 239, .89) !important;
+  }
+}
+
 .focused-care-intro {
   margin: 1.1rem 0 .65rem;
 }
@@ -2896,6 +2942,70 @@ footer p {
   margin: 0 0 .85rem;
   color: #173f38;
   font-size: .96rem;
+}
+
+@media (min-width: 761px) {
+  .funnel-visual-1 {
+    min-height: 640px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .funnel-visual-1 .funnel-card-compact {
+    width: min(620px, 100%);
+    padding: 22px 26px 24px;
+  }
+
+  .funnel-visual-1 .focused-care-kicker {
+    margin-bottom: .2rem;
+  }
+
+  .funnel-visual-1 h3 {
+    margin: .2rem 0 .55rem;
+    font-size: clamp(2rem, 3vw, 2.65rem);
+  }
+
+  .funnel-visual-1 .focused-care-product-image {
+    margin: .45rem 0 .65rem;
+  }
+
+  .funnel-visual-1 .focused-care-product-image img {
+    height: 118px;
+  }
+
+  .funnel-visual-1 .focused-care-product-image figcaption {
+    right: .45rem;
+    bottom: .45rem;
+    left: .45rem;
+    padding: .35rem .55rem;
+  }
+
+  .funnel-visual-1 .funnel-card-compact > p:not(.focused-care-intro):not(.focused-care-speed) {
+    margin: .55rem 0;
+    font-size: .9rem;
+    line-height: 1.42;
+  }
+
+  .funnel-visual-1 .focused-care-intro {
+    margin: .6rem 0 .45rem;
+  }
+
+  .funnel-visual-1 .focused-care-options {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .4rem;
+    margin-bottom: .65rem;
+  }
+
+  .funnel-visual-1 .focused-care-options span {
+    min-height: 2.2rem;
+    padding: .4rem .55rem;
+    font-size: .82rem;
+  }
+
+  .funnel-visual-1 .focused-care-speed {
+    margin-bottom: .55rem;
+    font-size: .87rem;
+  }
 }
 
 @media (max-width: 520px) {
