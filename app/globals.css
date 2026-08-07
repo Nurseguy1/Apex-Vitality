@@ -2847,6 +2847,12 @@ footer p {
   line-height: 1.15;
 }
 
+.focused-care-speed {
+  margin: 0 0 .85rem;
+  color: #173f38;
+  font-size: .96rem;
+}
+
 /* Conversion-focused treatment storefront */
 .treatment-shop-page { background: #f7f8f5; }
 .treatment-shop-hero {

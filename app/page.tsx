@@ -191,6 +191,7 @@ export default function Home() {
               <span>NAD+</span>
               <span>Glutathione</span>
             </div>
+            <p className="focused-care-speed"><strong>Buy now and begin your medical review in as little as one minute.</strong></p>
             <Link className="primary-button" href="/treatments">Explore Peptide &amp; NAD+ Care</Link>
           </article>
           </section>
