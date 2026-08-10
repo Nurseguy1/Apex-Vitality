@@ -1,8 +1,8 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Link from "next/link";
 import type { Questionnaire, Question } from "./data";
-import { charmLinks } from "../lib/charm";
 
 function QuestionField({ question, answers }: { question: Question; answers: Record<string, string[]> }) {
   const common = { name: question.id, required: question.required };
@@ -63,7 +63,7 @@ export default function QuestionnaireForm({ questionnaire }: { questionnaire: Qu
         <h2>You&apos;re ready for the next step.</h2>
         <p>Continue to the secure Apex patient portal to complete your care setup.</p>
         <p className="form-note">This website preview does not transmit or save your answers. Enter your information securely in the patient portal.</p>
-        {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Continue securely ↗</a>}
+        <Link className="primary-button" href="/start">Continue to my care options →</Link>
         <button className="secondary-dark-button" type="button" onClick={() => { setSection(0); setComplete(false); setAnswers({}); }}>Review the questionnaire again</button>
       </section>
     );

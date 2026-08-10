@@ -57,11 +57,9 @@ export default function NadPlusPage() {
           </p>
           <div className="hero-actions">
             {charmLinks.portal && (
-              <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">
-                Start my NAD+ plan ↗
-              </a>
+              <Link className="primary-button" href="/treatments#nad">Start my NAD+ plan</Link>
             )}
-            <Link className="secondary-button" href="/schedule">
+            <Link className="secondary-button" href="/schedule/comprehensive">
               Choose comprehensive care
             </Link>
           </div>
@@ -172,7 +170,7 @@ export default function NadPlusPage() {
             begin with the complete consultation.
           </p>
           <p className="focused-price"><strong>$325</strong><span>one-time · 45 minutes</span></p>
-          <Link className="primary-button" href="/schedule">
+          <Link className="primary-button" href="/schedule/comprehensive">
             Schedule comprehensive care
           </Link>
         </div>

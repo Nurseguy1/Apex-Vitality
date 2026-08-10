@@ -4,6 +4,7 @@ const siteUrl = "https://create-a-coral.vercel.app";
 
 const routes = [
   "",
+  "/peptides",
   "/treatments",
   "/functional-health",
   "/longevity",

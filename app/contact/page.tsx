@@ -10,7 +10,7 @@ export default function ContactPage() {
         <h1>Connect through the secure patient workflow.</h1>
         <h2>New patients</h2>
         <p>Explore the initial care pathway and current enrollment status.</p>
-        <p><Link className="primary-button" href="/schedule">View initial care</Link></p>
+        <p><Link className="primary-button" href="/start">Start my care</Link></p>
         <h2>Existing patients</h2>
         <p>Use the Charm patient portal for appointment changes, assigned forms, non-urgent care messages, and other customer-service needs. Stripe receipts and payment details remain available through Stripe.</p>
         <p><Link className="secondary-dark-button" href="/patient-access">Open secure patient access</Link></p>

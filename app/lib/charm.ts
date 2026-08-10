@@ -25,4 +25,7 @@ export const charmLinks = {
     process.env.NEXT_PUBLIC_STRIPE_LAB_PLANNING_CHECKOUT_URL ??
       "https://buy.stripe.com/3cI8wQa8fdGo84TaNSfnO03",
   ),
+  nationalCareCheckout: safeHttpsUrl(
+    process.env.NEXT_PUBLIC_NATIONAL_CARE_CHECKOUT_URL,
+  ),
 };

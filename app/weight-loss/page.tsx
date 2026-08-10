@@ -117,7 +117,7 @@ export default function WeightLossPage() {
         <p>Choose your goal. Start online today. Begin creating the progress you want to see.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
-          <Link className="secondary-button" href="/schedule">Choose comprehensive care</Link>
+          <Link className="secondary-button" href="/schedule/comprehensive">Choose comprehensive care</Link>
         </div>
       </section>
 

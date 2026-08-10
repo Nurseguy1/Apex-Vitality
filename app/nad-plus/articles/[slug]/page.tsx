@@ -100,11 +100,9 @@ export default async function NadArticlePage({
           </p>
           <div className="hero-actions">
             {charmLinks.portal && (
-              <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">
-                Start my NAD+ plan ↗
-              </a>
+              <Link className="primary-button" href="/treatments#nad">Start my NAD+ plan</Link>
             )}
-            <Link className="secondary-button" href="/schedule">
+            <Link className="secondary-button" href="/schedule/comprehensive">
               Choose comprehensive care
             </Link>
           </div>

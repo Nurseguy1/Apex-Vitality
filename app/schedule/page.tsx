@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components";
+import { charmLinks } from "../lib/charm";
 
 export const metadata: Metadata = {
   title: "Start Care and Schedule | Apex Vitality",
@@ -20,8 +21,12 @@ export default function SchedulePage() {
           <span>Your first step</span>
           <h2>Initial Care Visit · $259</h2>
           <p>Your visit includes a focused health and medication review plus prescription coordination or a laboratory kit.</p>
-          <span className="primary-button enrollment-pending" aria-label="Enrollment opening soon">Enrollment opening soon</span>
-          <p className="enrollment-note">Online enrollment will open after the secure clinical pathway is connected.</p>
+          {charmLinks.labPlanningCheckout ? (
+            <a className="primary-button" href={charmLinks.labPlanningCheckout} rel="noreferrer" target="_blank">Pay $259 and schedule ↗</a>
+          ) : (
+            <span className="primary-button enrollment-pending" aria-label="Enrollment opening soon">Enrollment opening soon</span>
+          )}
+          {!charmLinks.labPlanningCheckout && <p className="enrollment-note">Online enrollment will open after the secure clinical pathway is connected.</p>}
         </article>
         <p className="alternate-start">Already have recent lab results from another provider or laboratory? <a href="/schedule/comprehensive">Go directly to a comprehensive visit →</a></p>
       </section>

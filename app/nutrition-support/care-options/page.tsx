@@ -16,6 +16,7 @@ const options = [
     items: ["Brief starting questionnaire", "Medication and supplement review", "Simple daily plan", "Fullscript recommendations when useful"],
     action: "Start with the foundation",
     featured: true,
+    href: "/schedule",
   },
   {
     label: "When one concern needs more attention",
@@ -24,6 +25,7 @@ const options = [
     description: "Add a focused visit for selective eating, protein intake, constipation or fiber, probiotics, omega-3s, or supplement questions.",
     items: ["Expanded questions for the concern", "Brief telehealth follow-up", "Plan adjustments", "Clear home observations to track"],
     action: "Explore focused support",
+    href: "/schedule",
   },
   {
     label: "For the fuller picture",
@@ -32,6 +34,7 @@ const options = [
     description: "A longer visit for complex histories, several overlapping concerns, optional lab decisions, or coordination with other clinicians.",
     items: ["Detailed history and goal review", "Longer telehealth visit", "Individualized care plan", "Optional testing or referral planning"],
     action: "Choose comprehensive care",
+    href: "/schedule/comprehensive",
   },
 ];
 
@@ -53,7 +56,7 @@ export default function NutritionCareOptionsPage() {
             <strong className="nutrition-price">{option.price}</strong>
             <p>{option.description}</p>
             <ul>{option.items.map((item) => <li key={item}>✓ {item}</li>)}</ul>
-            <Link className={option.featured ? "primary-button" : "secondary-dark-button"} href={option.featured ? "/nutrition-support/start" : "/schedule"}>{option.action}</Link>
+            <Link className={option.featured ? "primary-button" : "secondary-dark-button"} href={option.href}>{option.action}</Link>
           </article>
         ))}
       </section>

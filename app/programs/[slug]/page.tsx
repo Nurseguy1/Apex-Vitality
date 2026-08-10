@@ -56,7 +56,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
           <p className="eyebrow">{program.eyebrow}</p>
           <h1>{program.headline}</h1>
           <p>{program.intro}</p>
-          <Link className="primary-button" href="/schedule">Start with a $259 visit</Link>
+          <Link className="primary-button" href="/start">Start with a $259 visit</Link>
         </div>
       </section>
       <section className="program-detail-includes">
@@ -67,7 +67,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
         <p className="eyebrow">Your next step</p>
         <h2>Choose your goal. Begin your program.</h2>
         <p>Start online, connect with a qualified medical clinician, and put your personalized plan into motion.</p>
-        <Link className="primary-button" href="/schedule">Start online today</Link>
+        <Link className="primary-button" href="/start">Start online today</Link>
       </section>
       <SiteFooter />
     </main>

@@ -37,8 +37,8 @@ export default function SermorelinPage() {
           <p className="focused-care-lede">Sermorelin is a prescription peptide that supports natural growth-hormone signaling involved in tissue maintenance, sleep, and physical recovery. Build a plan around recovery, strength, body composition, performance, and healthy-aging goals.</p>
           <p className="focused-care-simple-path">Start with a quick questionnaire. A clinician reviews your symptoms and goals. Your medication is delivered directly to your door.</p>
           <div className="hero-actions">
-            {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Start my peptide care plan ↗</a>}
-            <Link className="secondary-button" href="/schedule">Choose comprehensive care</Link>
+            <Link className="primary-button" href="/treatments#sermorelin">Start my peptide care plan</Link>
+            <Link className="secondary-button" href="/schedule/comprehensive">Choose comprehensive care</Link>
           </div>
           <div className="sermorelin-price-line"><strong>$179</strong><span>month-to-month</span><b>or $149/month with a three-month plan</b></div>
           <p className="focused-care-note">Simple online care with personal clinical review, secure communication, and convenient home delivery.</p>
@@ -58,7 +58,7 @@ export default function SermorelinPage() {
             <article className="featured"><span>Best value</span><strong>$447</strong><b>three months · $149/month</b><p>Give your plan time to build momentum while lowering the monthly price.</p></article>
           </div>
           <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication, injection supplies, and direct shipping</li><li>Secure follow-up and refill support</li></ul>
-          {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Start sermorelin peptide care ↗</a>}
+          <Link className="primary-button" href="/treatments#sermorelin">Start sermorelin peptide care</Link>
           <p className="sermorelin-pricing-note">Laboratory services are selected and priced separately when they are part of your personalized monitoring plan.</p>
         </div>
       </section>
@@ -107,7 +107,7 @@ export default function SermorelinPage() {
       <section className="sermorelin-experience" aria-labelledby="sermorelin-experience-title">
         <div className="section-heading"><p className="eyebrow">What the experience looks like</p><h2 id="sermorelin-experience-title">Give your plan time to build momentum.</h2><p>Sermorelin care is designed as a continuing process. Your experience is personal, and follow-up helps connect what you notice with the next stage of your plan.</p></div>
         <div className="sermorelin-experience-grid">{experience.map(([time, title, copy]) => <article key={time}><span>{time}</span><h3>{title}</h3><p>{copy}</p></article>)}</div>
-        {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Start with the quick questionnaire ↗</a>}
+        <Link className="primary-button" href="/treatments#sermorelin">Start with sermorelin care</Link>
       </section>
 
       <section className="sermorelin-trust-strip" aria-label="Sermorelin care standards">
@@ -118,7 +118,7 @@ export default function SermorelinPage() {
       </section>
 
       <section className="focused-choice">
-        <div><p className="eyebrow">Want a broader view?</p><h2>Connect sermorelin with your complete longevity plan.</h2><p>Bring hormones, metabolism, nutrition, exercise, sleep, body composition, and healthy aging together through comprehensive care.</p><p className="focused-price"><strong>$325</strong><span>one-time · 45 minutes</span></p><Link className="primary-button" href="/schedule">Schedule comprehensive care</Link></div>
+        <div><p className="eyebrow">Want a broader view?</p><h2>Connect sermorelin with your complete longevity plan.</h2><p>Bring hormones, metabolism, nutrition, exercise, sleep, body composition, and healthy aging together through comprehensive care.</p><p className="focused-price"><strong>$325</strong><span>one-time · 45 minutes</span></p><Link className="primary-button" href="/schedule/comprehensive">Schedule comprehensive care</Link></div>
         <ul className="check-list focused-comprehensive-list"><li>45-minute comprehensive consultation</li><li>Hormonal, metabolic, nutritional, sleep, and recovery review</li><li>Laboratory planning selected around your goals</li><li>Personalized treatment and lifestyle strategy</li><li>Planned monitoring and ongoing care</li></ul>
       </section>
 

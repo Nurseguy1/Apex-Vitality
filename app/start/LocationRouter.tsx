@@ -5,8 +5,17 @@ import { useState } from "react";
 
 type CareRegion = "" | "california" | "national";
 
-export default function LocationRouter() {
+export default function LocationRouter({
+  nationalCareCheckout,
+  selectedPlan,
+  selectedTreatment,
+}: {
+  nationalCareCheckout: string | null;
+  selectedPlan: string;
+  selectedTreatment: string;
+}) {
   const [region, setRegion] = useState<CareRegion>("");
+  const planLabel = selectedPlan === "3-month" ? "Three-month supply" : selectedPlan === "1-month" ? "One-month supply" : "";
 
   return (
     <section className="location-router" aria-labelledby="care-location-title">
@@ -14,6 +23,9 @@ export default function LocationRouter() {
         <p className="eyebrow">Your first step</p>
         <h1 id="care-location-title">Where are you located?</h1>
         <p>Choose your location to see your available care options.</p>
+        {selectedTreatment && (
+          <p className="location-prompt"><strong>{selectedTreatment}</strong>{planLabel ? ` · ${planLabel}` : ""}</p>
+        )}
       </div>
 
       <div className="location-choice-grid" role="group" aria-label="Choose your care location">
@@ -69,7 +81,11 @@ export default function LocationRouter() {
               <span><strong>Connect online</strong>Meet with a qualified medical clinician</span>
               <span><strong>Delivered to you</strong>Medication arrives at your door</span>
             </div>
-            <Link className="primary-button" href="/treatments">Choose my treatment</Link>
+            {nationalCareCheckout ? (
+              <a className="primary-button" href={nationalCareCheckout} rel="noreferrer" target="_blank">Continue to secure checkout ↗</a>
+            ) : (
+              <span className="pending-button" aria-disabled="true">Nationwide checkout connection pending</span>
+            )}
           </article>
         )}
       </div>

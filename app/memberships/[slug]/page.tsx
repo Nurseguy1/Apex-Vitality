@@ -38,7 +38,7 @@ export default async function MembershipDetailPage({ params }: { params: Promise
             <strong>{membership.price}</strong>
             {"annual" in membership && <span>{membership.annual}</span>}
           </div>
-          <Link className="primary-button" href="/schedule">{membership.cta}</Link>
+          <Link className="primary-button" href="/start">{membership.cta}</Link>
         </div>
       </section>
 
@@ -53,7 +53,7 @@ export default async function MembershipDetailPage({ params }: { params: Promise
       <section className="membership-detail-simple">
         <p className="eyebrow">Simple by design</p>
         <h2>Choose your plan. We handle the details.</h2>
-        <Link className="primary-button" href="/schedule">{membership.cta}</Link>
+        <Link className="primary-button" href="/start">{membership.cta}</Link>
       </section>
       <SiteFooter />
     </main>

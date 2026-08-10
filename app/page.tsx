@@ -206,7 +206,7 @@ export default function Home() {
               <li>Clear priorities and personalized next steps</li>
               <li>Personalized lab planning</li>
             </ul>
-            <Link className="secondary-dark-button" href="/schedule">Book my consultation</Link>
+            <Link className="secondary-dark-button" href="/schedule/comprehensive">Book my consultation</Link>
           </article>
           </section>
           <section className="funnel-visual-panel funnel-visual-3" style={{ backgroundImage: "linear-gradient(90deg, rgba(242,247,246,.95), rgba(242,247,246,.68) 34%, rgba(242,247,246,.06) 62%), url('/membership-initial-care-v1.png')" }}>
@@ -261,7 +261,7 @@ export default function Home() {
                 {"annual" in membership && <p className="membership-annual">{membership.annual}</p>}
                 <p>{membership.description}</p>
                 <ul>{membership.includes.map((item) => <li key={item}>{item}</li>)}</ul>
-                <Link className="primary-button" href="/schedule">{index === 0 ? "Start for $259" : index === 3 ? "Request private client care" : "Start with an introductory visit"}</Link>
+                <Link className="primary-button" href="/start">{index === 0 ? "Start for $259" : index === 3 ? "Request private client care" : "Start with an introductory visit"}</Link>
               </article>
             </section>
           ))}
@@ -290,7 +290,7 @@ export default function Home() {
           <span className="status-pill">Secure online scheduling</span>
           <h3>Ready to take the next step?</h3>
           <p>Pay securely through Stripe, schedule through CharmHealth, then complete the intake assigned in your patient portal. Please do not send medical information through ordinary email or website messages.</p>
-          <Link className="primary-button" href="/schedule">Start changing my health</Link>
+          <Link className="primary-button" href="/start">Start changing my health</Link>
           <Link className="text-link" href="/faq">Review common questions</Link>
           <p className="form-note">Your clinician connects testing, prescriptions, pharmacy coordination, and follow-up with your personalized plan.</p>
         </div>

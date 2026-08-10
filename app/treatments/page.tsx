@@ -81,7 +81,7 @@ export default function TreatmentsPage() {
 
       <section className="treatment-showcase" aria-label="Treatment choices">
         {treatments.map((treatment, index) => (
-          <article className={`treatment-product treatment-product-${index + 1}`} key={treatment.name}>
+          <article className={`treatment-product treatment-product-${index + 1}`} id={treatment.name.toLowerCase().replace(/\+.*/, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")} key={treatment.name}>
             <div className="treatment-product-image">
               <Image
                 src={treatment.image}
@@ -107,7 +107,7 @@ export default function TreatmentsPage() {
                   <span>Try one month</span>
                   <strong>{treatment.oneMonth}</strong>
                   <small>One-time payment</small>
-                  <Link className="secondary-dark-button" href={`/contact?treatment=${encodeURIComponent(treatment.name)}&plan=1-month`}>
+                  <Link className="secondary-dark-button" href={`/start?treatment=${encodeURIComponent(treatment.name)}&plan=1-month`}>
                     Choose one month
                   </Link>
                 </section>
@@ -117,7 +117,7 @@ export default function TreatmentsPage() {
                   <span>Three-month supply</span>
                   <strong>{treatment.threeMonths}</strong>
                   <small>{treatment.equivalent} · {treatment.savings}</small>
-                  <Link className="primary-button" href={`/contact?treatment=${encodeURIComponent(treatment.name)}&plan=3-month`}>
+                  <Link className="primary-button" href={`/start?treatment=${encodeURIComponent(treatment.name)}&plan=3-month`}>
                     Choose three months
                   </Link>
                 </section>
