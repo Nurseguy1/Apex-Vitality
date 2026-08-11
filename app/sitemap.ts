@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://create-a-coral.vercel.app";
+const siteUrl = "https://goapexvitality.com";
 
 const routes = [
   "",
@@ -26,8 +26,11 @@ const routes = [
   "/how-it-works",
   "/faq",
   "/contact",
+  "/providers",
+  "/service-areas",
   "/schedule",
   "/privacy",
+  "/notice-of-privacy-practices",
   "/terms",
 ];
 

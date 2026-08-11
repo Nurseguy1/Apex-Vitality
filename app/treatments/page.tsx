@@ -6,7 +6,7 @@ import { SiteFooter, SiteHeader } from "../components";
 export const metadata: Metadata = {
   title: "Choose Your Treatment | Peptide & Longevity Care | Apex Vitality",
   description:
-    "Explore focused peptide and longevity treatment options with medical consultation, medication, supplies, and home delivery included.",
+    "Explore focused peptide and longevity care options subject to medical evaluation, prescription, state availability, and pharmacy fulfillment.",
 };
 
 const treatments = [
@@ -65,16 +65,16 @@ export default function TreatmentsPage() {
     <main className="treatment-shop-page">
       <SiteHeader />
       <section className="treatment-shop-hero">
-        <p className="eyebrow">Focused treatment, delivered</p>
-        <h1>Choose the support that moves your goals forward.</h1>
+        <p className="eyebrow">Focused treatment options</p>
+        <h1>Explore the support that may fit your goals.</h1>
         <p>
-          Start with the result you want. Choose one month or commit to three
-          months and save. Medical consultation, medication, supplies, and
-          shipping are included.
+          Begin with the option you want to discuss. A licensed clinician reviews
+          your information and determines what is medically appropriate and legally
+          available where you are located.
         </p>
         <div className="treatment-shop-proof" aria-label="Treatment experience">
           <span>Medical consultation included</span>
-          <span>Ships directly to your home</span>
+          <span>Home delivery when prescribed</span>
           <span>No separate membership required</span>
         </div>
       </section>
@@ -124,8 +124,8 @@ export default function TreatmentsPage() {
               </div>
 
               <p className="treatment-included">
-                Consultation, prescribed medication, supplies, and standard
-                shipping included.
+                The displayed program price applies when the selected program is
+                clinically authorized and available through the applicable pharmacy.
               </p>
             </div>
           </article>
@@ -134,9 +134,9 @@ export default function TreatmentsPage() {
 
       <section className="treatment-how-it-works">
         <p className="eyebrow">From choice to your door</p>
-        <h2>Start in minutes. Move forward with confidence.</h2>
+        <h2>A straightforward path from interest to clinical review.</h2>
         <div>
-          <span><b>1</b><strong>Choose your treatment</strong><small>Select one month or the three-month value.</small></span>
+          <span><b>1</b><strong>Choose an option to discuss</strong><small>Select the program that interests you.</small></span>
           <span><b>2</b><strong>Complete your review</strong><small>Answer a brief medical questionnaire and connect with a qualified provider.</small></span>
           <span><b>3</b><strong>Receive your plan</strong><small>If prescribed, your treatment ships directly to your home.</small></span>
         </div>
@@ -148,8 +148,10 @@ export default function TreatmentsPage() {
           Medication eligibility and treatment decisions are made by a licensed
           medical provider after clinical review. A selected treatment is not
           guaranteed. If treatment is not prescribed, the applicable treatment
-          purchase will be refunded. Compounded medications are not FDA-approved,
-          and final medication, packaging, and dispensing pharmacy may vary.
+          purchase will be handled under the refund terms shown before payment.
+          Compounded medications are not FDA-approved, and final medication,
+          packaging, dispensing pharmacy, and availability vary by state. Qualiphy-supported
+          prescription care is currently unavailable in Alabama and Mississippi.
         </p>
       </aside>
 

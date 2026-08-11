@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components";
-import { charmLinks } from "../lib/charm";
 import LocationRouter from "./LocationRouter";
+import { getProductCheckout } from "../lib/product-checkouts";
 
 export const metadata: Metadata = {
   title: "Start Your Care | Apex Vitality",
@@ -15,14 +15,15 @@ export default async function StartPage({
   searchParams: Promise<{ treatment?: string; plan?: string }>;
 }) {
   const { treatment = "", plan = "" } = await searchParams;
+  const checkoutUrl = getProductCheckout(treatment, plan);
 
   return (
     <main className="start-location-page">
       <SiteHeader />
       <LocationRouter
-        nationalCareCheckout={charmLinks.nationalCareCheckout}
         selectedPlan={plan}
         selectedTreatment={treatment}
+        checkoutUrl={checkoutUrl}
       />
       <SiteFooter />
     </main>

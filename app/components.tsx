@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { charmLinks } from "./lib/charm";
+import { practiceContact } from "./lib/compliance";
 
 export function SiteHeader() {
   return (
@@ -11,15 +12,7 @@ export function SiteHeader() {
       <nav className="nav-links" aria-label="Main navigation">
         <Link href="/peptides">Peptides</Link>
         <Link href="/treatments">Treatments</Link>
-        <Link href="/#programs">Programs</Link>
-        <Link href="/#memberships">Memberships</Link>
-        <Link href="/gut-health">Gut Health</Link>
-        <Link href="/weight-loss">Weight Loss</Link>
-        <Link href="/functional-health">Longevity &amp; Functional Health</Link>
-        <Link href="/nad-plus">NAD+</Link>
-        <Link href="/sermorelin">Sermorelin Peptide</Link>
-        <Link href="/mens-health">Men&apos;s Health</Link>
-        <Link href="/womens-health">Women&apos;s Health &amp; Healthy Aging</Link>
+        <Link href="/memberships">Memberships</Link>
         <Link href="/how-it-works">How It Works</Link>
       </nav>
       <details className="mobile-menu">
@@ -27,7 +20,7 @@ export function SiteHeader() {
         <nav aria-label="Mobile navigation">
           <Link href="/peptides">Peptide Care</Link>
           <Link href="/treatments">Choose a Treatment</Link>
-          <Link href="/#programs">Programs</Link>
+          <Link href="/treatments">Programs</Link>
           <Link href="/mens-health">Men&apos;s Health</Link>
           <Link href="/womens-health">Women&apos;s Health</Link>
           <Link href="/weight-loss">Weight Loss</Link>
@@ -35,7 +28,7 @@ export function SiteHeader() {
           <Link href="/gut-health">Gut Health</Link>
           <Link href="/nad-plus">NAD+</Link>
           <Link href="/sermorelin">Sermorelin Peptide</Link>
-          <Link href="/#memberships">Memberships</Link>
+          <Link href="/memberships">Memberships</Link>
           <Link href="/how-it-works">How It Works</Link>
           <Link href="/patient-access">Patient Access</Link>
         </nav>
@@ -51,6 +44,12 @@ export function SiteFooter() {
       <div>
         <strong>Apex Vitality</strong>
         <p>Personalized telehealth care from licensed medical providers.</p>
+        <address>
+          {practiceContact.legalName}<br />
+          {practiceContact.addressLine1}<br />
+          {practiceContact.cityStateZip}<br />
+          <a href={`tel:${practiceContact.phone.replace(/[^\d+]/g, "")}`}>{practiceContact.phone}</a>
+        </address>
       </div>
       <nav aria-label="Footer navigation">
         <Link href="/peptides">Peptide Care</Link>
@@ -67,13 +66,16 @@ export function SiteFooter() {
         <Link href="/womens-health">Women&apos;s Health &amp; Healthy Aging</Link>
         <Link href="/longevity">Longevity Care</Link>
         <Link href="/how-it-works">How It Works</Link>
-        <Link href="/#memberships">Memberships &amp; Pricing</Link>
+        <Link href="/memberships">Memberships &amp; Pricing</Link>
         <Link href="/faq">FAQ</Link>
         <Link href="/patient-access">Patient Access</Link>
         <Link href="/contact">Contact</Link>
+        <Link href="/providers">Care Team &amp; Clinical Partners</Link>
+        <Link href="/service-areas">Service Areas</Link>
       </nav>
       <nav aria-label="Legal navigation">
         <Link href="/privacy">Privacy</Link>
+        <Link href="/notice-of-privacy-practices">HIPAA Notice</Link>
         <Link href="/telehealth-consent">Telehealth Consent</Link>
         <Link href="/terms">Terms &amp; Medical Disclaimer</Link>
       </nav>

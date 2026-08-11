@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
+import { qualiphyCare } from "../lib/compliance";
 
 export default function TermsPage() {
   return (
@@ -14,12 +15,12 @@ export default function TermsPage() {
 
         <h2>1. Who we are</h2>
         <p>
-          Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation. Medical services are provided by appropriately licensed clinicians acting within their professional scope and the laws of the state where the patient is located.
+          Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation. California care may be provided directly by Apex Vitality clinicians. For eligible Qualiphy-supported services, Qualiphy operates the technology and booking platform and connects patients with an independent medical group and a clinician licensed in the patient&apos;s state. The treating clinician and medical group—not Apex Vitality&apos;s website, Qualiphy&apos;s nonclinical platform services, the pharmacy, or the payment processor—are responsible for medical evaluation and treatment decisions.
         </p>
 
         <h2>2. Eligibility and service area</h2>
         <p>
-          Apex Vitality currently serves adults age 18 and older. You must provide accurate identity, contact, location, health, medication, and payment information. Availability depends on clinician licensure, pharmacy service areas, and applicable law. You may not use another person&apos;s identity or account.
+          Apex Vitality currently serves adults age 18 and older. Direct Apex Vitality clinical care is available in California. Eligible Qualiphy-supported services are available in 48 states and Washington, D.C., but are not currently available in Alabama or Mississippi. Availability also depends on the selected service, clinician licensure, pharmacy coverage, and applicable law. See the <Link href="/service-areas">Service Areas page</Link>. You must provide accurate identity, contact, physical location, shipping address, health, medication, and payment information and may not use another person&apos;s identity or account.
         </p>
 
         <h2>3. Not emergency care</h2>
@@ -56,6 +57,7 @@ export default function TermsPage() {
         <p>
           Pharmacies, laboratories, payment processors, delivery carriers, and technology platforms are independent third parties with their own terms and privacy practices. Apex Vitality may coordinate with them but does not control their operating hours, inventory, turnaround times, shipping, or service interruptions. Delivery dates are estimates. You are responsible for providing a complete delivery address, promptly retrieving packages, and following storage instructions.
         </p>
+        <p>Patients using the Qualiphy-supported pathway must also review and accept the clinical workflow&apos;s applicable notices and consents. Qualiphy&apos;s current <a href={qualiphyCare.termsUrl} rel="noreferrer" target="_blank">Terms of Use</a> describe its platform role and its relationships with independent medical groups, clinicians, laboratories, and pharmacies.</p>
 
         <h2>10. Prices, payments, and insurance</h2>
         <p>
@@ -126,7 +128,7 @@ export default function TermsPage() {
         <p>
           These terms, the Privacy Notice, the Telehealth Informed Consent, and any program-specific terms presented at checkout form the agreement concerning the service. Use the <Link href="/contact">contact page</Link> for customer-service questions and the secure Charm patient portal for care-related questions. Do not use ordinary email for sensitive medical information.
         </p>
-        <p className="legal-updated">Effective July 25, 2026.</p>
+        <p className="legal-updated">Effective August 11, 2026.</p>
       </article>
       <SiteFooter />
     </main>

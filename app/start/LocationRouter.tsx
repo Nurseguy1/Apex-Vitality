@@ -1,96 +1,97 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-type CareRegion = "" | "california" | "national";
+const states = [
+  ["AL", "Alabama"], ["AK", "Alaska"], ["AZ", "Arizona"], ["AR", "Arkansas"],
+  ["CA", "California"], ["CO", "Colorado"], ["CT", "Connecticut"], ["DE", "Delaware"],
+  ["DC", "District of Columbia"], ["FL", "Florida"], ["GA", "Georgia"], ["HI", "Hawaii"],
+  ["ID", "Idaho"], ["IL", "Illinois"], ["IN", "Indiana"], ["IA", "Iowa"],
+  ["KS", "Kansas"], ["KY", "Kentucky"], ["LA", "Louisiana"], ["ME", "Maine"],
+  ["MD", "Maryland"], ["MA", "Massachusetts"], ["MI", "Michigan"], ["MN", "Minnesota"],
+  ["MS", "Mississippi"], ["MO", "Missouri"], ["MT", "Montana"], ["NE", "Nebraska"],
+  ["NV", "Nevada"], ["NH", "New Hampshire"], ["NJ", "New Jersey"], ["NM", "New Mexico"],
+  ["NY", "New York"], ["NC", "North Carolina"], ["ND", "North Dakota"], ["OH", "Ohio"],
+  ["OK", "Oklahoma"], ["OR", "Oregon"], ["PA", "Pennsylvania"], ["RI", "Rhode Island"],
+  ["SC", "South Carolina"], ["SD", "South Dakota"], ["TN", "Tennessee"], ["TX", "Texas"],
+  ["UT", "Utah"], ["VT", "Vermont"], ["VA", "Virginia"], ["WA", "Washington"],
+  ["WV", "West Virginia"], ["WI", "Wisconsin"], ["WY", "Wyoming"],
+];
 
 export default function LocationRouter({
-  nationalCareCheckout,
   selectedPlan,
   selectedTreatment,
+  checkoutUrl,
 }: {
-  nationalCareCheckout: string | null;
   selectedPlan: string;
   selectedTreatment: string;
+  checkoutUrl: string | null;
 }) {
-  const [region, setRegion] = useState<CareRegion>("");
+  const [state, setState] = useState("");
   const planLabel = selectedPlan === "3-month" ? "Three-month supply" : selectedPlan === "1-month" ? "One-month supply" : "";
+  const unavailable = state === "AL" || state === "MS";
 
   return (
-    <section className="location-router" aria-labelledby="care-location-title">
-      <div className="location-router-heading">
-        <p className="eyebrow">Your first step</p>
-        <h1 id="care-location-title">Where are you located?</h1>
-        <p>Choose your location to see your available care options.</p>
-        {selectedTreatment && (
-          <p className="location-prompt"><strong>{selectedTreatment}</strong>{planLabel ? ` · ${planLabel}` : ""}</p>
-        )}
+    <section className="location-router" aria-labelledby="purchase-title">
+      <div className="location-router-intro">
+        <div className="location-router-heading">
+          <p className="eyebrow">Complete your selection</p>
+          <h1 id="purchase-title">Start with the care you want.</h1>
+          <p>Confirm your selection and continue to secure checkout. Clinical review follows purchase and determines whether treatment is appropriate.</p>
+          {selectedTreatment ? (
+            <p className="location-prompt"><strong>{selectedTreatment}</strong>{planLabel ? ` · ${planLabel}` : ""}</p>
+          ) : (
+            <p className="location-prompt">Choose a treatment before continuing.</p>
+          )}
+        </div>
+        <div className="location-router-image">
+          <Image src="/location-tennis-couple-early-40s-v1.png" alt="Active adults enjoying a healthy lifestyle" fill priority sizes="(max-width: 760px) 100vw, 46vw" />
+        </div>
       </div>
 
-      <div className="location-choice-grid" role="group" aria-label="Choose your care location">
-        <button
-          className={region === "california" ? "location-choice selected" : "location-choice"}
-          onClick={() => setRegion("california")}
-          type="button"
-          aria-pressed={region === "california"}
-        >
-          <span>California</span>
-          <strong>Start your Apex care journey</strong>
-          <small>Choose your care and begin online.</small>
-        </button>
-        <button
-          className={region === "national" ? "location-choice selected" : "location-choice"}
-          onClick={() => setRegion("national")}
-          type="button"
-          aria-pressed={region === "national"}
-        >
-          <span>Outside California</span>
-          <strong>Explore Apex care options</strong>
-          <small>Simple online care designed around your goals.</small>
-        </button>
-      </div>
-
-      <div className="location-result" aria-live="polite">
-        {region === "" && (
-          <p className="location-prompt">Select your location to continue.</p>
-        )}
-
-        {region === "california" && (
+      <div className="location-result">
+        {!selectedTreatment || !planLabel ? (
           <article>
-            <p className="result-kicker">California care</p>
-            <h2>Your Apex care pathway is ready.</h2>
-            <p>
-              Begin with the $259 initial care visit, or go directly to a comprehensive
-              consultation if you already have recent labs.
-            </p>
-            <div className="hero-actions">
-              <Link className="primary-button" href="/schedule">Start with a $259 visit</Link>
-              <Link className="secondary-dark-button" href="/schedule/comprehensive">I already have labs</Link>
-            </div>
+            <p className="result-kicker">Choose your program</p>
+            <h2>Find the treatment option that matches your goal.</h2>
+            <p>Compare available programs and select a one- or three-month option to continue.</p>
+            <Link className="primary-button" href="/treatments">Explore treatments</Link>
           </article>
-        )}
-
-        {region === "national" && (
+        ) : (
           <article>
-            <p className="result-kicker">Online care</p>
-            <h2>Your next step starts here.</h2>
-            <p>Choose your program, answer a few questions, and connect with a qualified medical clinician.</p>
-            <div className="national-status-list" aria-label="Apex care experience">
-              <span><strong>Choose your program</strong>Start with the goals that matter to you</span>
-              <span><strong>Connect online</strong>Meet with a qualified medical clinician</span>
-              <span><strong>Delivered to you</strong>Medication arrives at your door</span>
-            </div>
-            {nationalCareCheckout ? (
-              <a className="primary-button" href={nationalCareCheckout} rel="noreferrer" target="_blank">Continue to secure checkout ↗</a>
-            ) : (
-              <span className="pending-button" aria-disabled="true">Nationwide checkout connection pending</span>
-            )}
+            <p className="result-kicker">Purchase-first care</p>
+            <h2>Continue with {selectedTreatment}.</h2>
+            <p>Your payment begins the care process. It does not establish eligibility or guarantee a prescription. If the clinician does not authorize the selected treatment, the refund terms shown at checkout apply.</p>
+
+            <label className="checkout-state-field">
+              <span>Where will you be physically located for care?</span>
+              <select value={state} onChange={(event) => setState(event.target.value)}>
+                <option value="">Select your state</option>
+                {states.map(([code, name]) => <option value={code} key={code}>{name}</option>)}
+              </select>
+            </label>
+
+            {unavailable ? (
+              <div className="scheduler-pending">
+                <h3>This pathway is not currently available in your state.</h3>
+                <p>Qualiphy-supported prescription care is currently unavailable in Alabama and Mississippi. Please do not purchase this program.</p>
+              </div>
+            ) : state && checkoutUrl ? (
+              <a className="primary-button" href={checkoutUrl}>Continue to secure checkout</a>
+            ) : state ? (
+              <div className="scheduler-pending">
+                <h3>Secure checkout is being connected.</h3>
+                <p>This purchase option will open as soon as the Qualiphy and Stripe product connection is finalized.</p>
+              </div>
+            ) : null}
+
+            <p className="location-router-note">Checkout collects and verifies the address used to determine your clinical pathway. California purchasers will receive an optional membership offer after purchase; membership is not required.</p>
           </article>
         )}
       </div>
-
-      <p className="location-router-note">Care options vary by location.</p>
+      <p className="location-router-note">See <Link href="/service-areas">current service areas</Link>, <Link href="/providers">care-team information</Link>, and <Link href="/terms">purchase terms</Link>.</p>
     </section>
   );
 }

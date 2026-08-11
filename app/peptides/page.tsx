@@ -66,9 +66,9 @@ export default function PeptidesPage() {
           <p className={styles.kicker}>Apex peptide &amp; longevity care</p>
           <h1>Feel stronger. Recover better. Keep moving forward.</h1>
           <p className={styles.heroLead}>
-            Choose the peptide or wellness treatment that matches your goals,
-            complete a brief medical review, and move directly toward your
-            personalized plan.
+            Explore peptide and wellness options, complete an appropriate medical
+            evaluation, and work with a licensed clinician to determine whether a
+            treatment is suitable for you.
           </p>
           <div className={styles.actions}>
             <Link className={styles.primaryCta} href="#treatments">
@@ -81,7 +81,7 @@ export default function PeptidesPage() {
           <div className={styles.heroProof} aria-label="Peptide care highlights">
             <span>Online medical review</span>
             <span>One- and three-month options</span>
-            <span>Home delivery when prescribed</span>
+            <span>Licensed-pharmacy fulfillment when prescribed</span>
           </div>
         </div>
       </section>
@@ -99,9 +99,9 @@ export default function PeptidesPage() {
         <p className={styles.kicker}>Know what you want?</p>
         <h2>Start with the treatment that fits your goal.</h2>
         <p>
-          Compare focused options for recovery, energy, performance, and
-          healthy aging. Your clinician connects your choice with your health
-          history and determines the right plan for you.
+          Compare focused options that may be discussed during clinical review.
+          Your clinician considers your health history, medications, goals, and
+          applicable state requirements before recommending a plan.
         </p>
       </section>
 
@@ -194,10 +194,11 @@ export default function PeptidesPage() {
           Get started
         </Link>
         <p className={styles.clinicalNote}>
-          Treatment requires medical review and a prescription when applicable.
+          Treatment requires an appropriate medical evaluation and a valid prescription when applicable.
           Selecting a product does not guarantee that it will be prescribed.
           Compounded medications are not FDA-approved. Final medication,
-          packaging, pharmacy, and availability may vary.
+          packaging, pharmacy, and availability vary by clinical decision and state.
+          Qualiphy-supported prescription care is currently unavailable in Alabama and Mississippi.
         </p>
       </section>
 
