@@ -4552,6 +4552,26 @@ footer p {
 
 .membership-scroll-stack { background: #edf5f2; }
 
+.membership-availability {
+  padding: 72px clamp(24px, 7vw, 112px) 64px;
+  background: linear-gradient(135deg, #f4faf8 0%, #e3f2ed 100%);
+  text-align: center;
+}
+
+.membership-availability h1 {
+  margin: 10px auto 16px;
+  max-width: 850px;
+  font-size: clamp(38px, 6vw, 72px);
+  line-height: 1.02;
+}
+
+.membership-availability > p:last-child {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.6;
+}
+
 .dark-panel {
   background: linear-gradient(135deg, #dcefeb, #eef5f3 62%, #e8f1f7);
   color: var(--foreground);

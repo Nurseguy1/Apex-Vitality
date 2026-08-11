@@ -34,6 +34,7 @@ export default async function MembershipDetailPage({ params }: { params: Promise
           <p className="eyebrow">{membership.eyebrow}</p>
           <h1>{membership.headline}</h1>
           <p>{membership.intro}</p>
+          <p><strong>Available to California residents.</strong></p>
           <div className="membership-detail-price">
             <strong>{membership.price}</strong>
             {"annual" in membership && <span>{membership.annual}</span>}

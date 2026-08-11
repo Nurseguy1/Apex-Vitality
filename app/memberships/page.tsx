@@ -4,7 +4,7 @@ import { SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
   title: "Memberships & Pricing | Apex Vitality",
-  description: "Explore simple monthly and discounted annual Apex Vitality memberships with all your care in one plan.",
+  description: "Explore Apex Vitality membership care available to California residents.",
 };
 
 const options = [
@@ -61,6 +61,11 @@ export default function MembershipsPage() {
   return (
     <main>
       <SiteHeader />
+      <section className="membership-availability" aria-label="Membership availability">
+        <p className="eyebrow">California membership care</p>
+        <h1>Membership care for California residents.</h1>
+        <p>Choose closer monitoring, ongoing support, and a more connected relationship with your Apex care team.</p>
+      </section>
       <div className="membership-scroll-stack" aria-label="Membership choices">
         {options.map((option, index) => (
           <section
