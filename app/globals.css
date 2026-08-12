@@ -2777,8 +2777,8 @@ footer p {
     right: 0;
     bottom: auto;
     display: grid;
-    width: min(calc(100vw - 24px), 340px);
-    height: calc(100dvh - 100px);
+    width: min(calc(100vw - 24px), 310px);
+    height: min(70dvh, 620px);
     max-height: none;
     align-self: auto;
     align-content: start;
@@ -2909,8 +2909,8 @@ footer p {
     top: calc(100% + 8px);
     right: 0;
     left: auto;
-    width: min(calc(100vw - 24px), 340px);
-    height: calc(100dvh - 88px);
+    width: min(calc(100vw - 24px), 310px);
+    height: min(70dvh, 620px);
   }
 
   .hero,
