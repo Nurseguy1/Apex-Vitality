@@ -2778,7 +2778,9 @@ footer p {
     bottom: 12px;
     display: grid;
     width: min(82vw, 340px);
+    height: calc(100dvh - 88px);
     max-height: none;
+    align-self: stretch;
     align-content: start;
     overflow-y: auto;
     overscroll-behavior: contain;
@@ -2907,6 +2909,7 @@ footer p {
     top: 68px;
     left: 12px;
     width: auto;
+    height: calc(100dvh - 80px);
   }
 
   .hero,
