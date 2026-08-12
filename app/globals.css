@@ -2772,18 +2772,23 @@ footer p {
   .mobile-menu summary::-webkit-details-marker { display: none; }
 
   .mobile-menu[open] nav {
-    position: absolute;
-    top: calc(100% + 10px);
-    right: 0;
+    position: fixed;
+    top: 76px;
+    right: 12px;
+    bottom: 12px;
     display: grid;
     width: min(82vw, 340px);
-    max-height: calc(100vh - 100px);
+    max-height: none;
+    align-content: start;
     overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
     padding: 10px;
     border: 1px solid var(--line);
     border-radius: 18px;
     background: white;
     box-shadow: 0 24px 60px rgb(17 25 28 / .2);
+    z-index: 100;
   }
 
   .mobile-menu nav a {
@@ -2896,6 +2901,12 @@ footer p {
     min-height: 44px;
     padding: 11px 12px;
     font-size: 13px;
+  }
+
+  .mobile-menu[open] nav {
+    top: 68px;
+    left: 12px;
+    width: auto;
   }
 
   .hero,
