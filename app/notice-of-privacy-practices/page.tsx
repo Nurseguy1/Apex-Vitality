@@ -26,13 +26,13 @@ export default function NoticeOfPrivacyPracticesPage() {
         <h2>Our responsibilities</h2>
         <p>We maintain the privacy and security of protected health information as required by law, use reasonable safeguards, notify affected individuals when legally required after a breach, follow the notice currently in effect, and do not use or disclose information in a manner not described here unless authorized or otherwise permitted by law.</p>
         <h2>Clinical partners and secure systems</h2>
-        <p>Depending on the care pathway, protected information may be handled by Apex Vitality, Qualiphy, an assigned medical group and treating clinician, CharmHealth, laboratories, licensed pharmacies, and other service providers as permitted by law and described in their applicable notices. Medical information should be submitted only through the designated secure workflow.</p>
+        <p>Protected information may be handled by Apex Vitality clinicians and staff, CharmHealth, laboratories, licensed pharmacies, and other service providers as permitted by law and described in their applicable notices. Medical information should be submitted only through the designated secure workflow.</p>
         <h2>Questions and complaints</h2>
         <p>Contact the HIPAA Privacy Officer, Apex Vitality, at {practiceContact.addressLine1}, {practiceContact.cityStateZip}, or call {practiceContact.phone}.</p>
         <p>You may also complain to the U.S. Department of Health and Human Services Office for Civil Rights at 200 Independence Avenue SW, Washington, DC 20201, by calling 1-877-696-6775, or through the HHS website. Apex Vitality will not retaliate for a privacy complaint.</p>
         <h2>Changes to this notice</h2>
         <p>We may revise this notice and apply the revised terms to information already maintained and information received in the future. The current version will remain available on this website and upon request.</p>
-        <p className="legal-updated">Effective August 11, 2026.</p>
+        <p className="legal-updated">Effective August 13, 2026.</p>
       </article>
       <SiteFooter />
     </main>

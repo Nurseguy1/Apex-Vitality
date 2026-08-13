@@ -4,22 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const states = [
-  ["AL", "Alabama"], ["AK", "Alaska"], ["AZ", "Arizona"], ["AR", "Arkansas"],
-  ["CA", "California"], ["CO", "Colorado"], ["CT", "Connecticut"], ["DE", "Delaware"],
-  ["DC", "District of Columbia"], ["FL", "Florida"], ["GA", "Georgia"], ["HI", "Hawaii"],
-  ["ID", "Idaho"], ["IL", "Illinois"], ["IN", "Indiana"], ["IA", "Iowa"],
-  ["KS", "Kansas"], ["KY", "Kentucky"], ["LA", "Louisiana"], ["ME", "Maine"],
-  ["MD", "Maryland"], ["MA", "Massachusetts"], ["MI", "Michigan"], ["MN", "Minnesota"],
-  ["MS", "Mississippi"], ["MO", "Missouri"], ["MT", "Montana"], ["NE", "Nebraska"],
-  ["NV", "Nevada"], ["NH", "New Hampshire"], ["NJ", "New Jersey"], ["NM", "New Mexico"],
-  ["NY", "New York"], ["NC", "North Carolina"], ["ND", "North Dakota"], ["OH", "Ohio"],
-  ["OK", "Oklahoma"], ["OR", "Oregon"], ["PA", "Pennsylvania"], ["RI", "Rhode Island"],
-  ["SC", "South Carolina"], ["SD", "South Dakota"], ["TN", "Tennessee"], ["TX", "Texas"],
-  ["UT", "Utah"], ["VT", "Vermont"], ["VA", "Virginia"], ["WA", "Washington"],
-  ["WV", "West Virginia"], ["WI", "Wisconsin"], ["WY", "Wyoming"],
-];
-
 export default function LocationRouter({
   selectedPlan,
   selectedTreatment,
@@ -31,7 +15,7 @@ export default function LocationRouter({
 }) {
   const [state, setState] = useState("");
   const planLabel = selectedPlan === "3-month" ? "Three-month supply" : selectedPlan === "1-month" ? "One-month supply" : "";
-  const unavailable = state === "AL" || state === "MS";
+  const unavailable = state === "OTHER";
 
   return (
     <section className="location-router" aria-labelledby="purchase-title">
@@ -68,26 +52,27 @@ export default function LocationRouter({
             <label className="checkout-state-field">
               <span>Where will you be physically located for care?</span>
               <select value={state} onChange={(event) => setState(event.target.value)}>
-                <option value="">Select your state</option>
-                {states.map(([code, name]) => <option value={code} key={code}>{name}</option>)}
+                <option value="">Select your location</option>
+                <option value="CA">California</option>
+                <option value="OTHER">Outside California</option>
               </select>
             </label>
 
             {unavailable ? (
               <div className="scheduler-pending">
-                <h3>This pathway is not currently available in your state.</h3>
-                <p>Qualiphy-supported prescription care is currently unavailable in Alabama and Mississippi. Please do not purchase this program.</p>
+                <h3>Clinical care is currently limited to California.</h3>
+                <p>Please do not purchase this program if you will be physically located outside California during care. Join us later as additional service areas become available.</p>
               </div>
             ) : state && checkoutUrl ? (
               <a className="primary-button" href={checkoutUrl}>Continue to secure checkout</a>
             ) : state ? (
               <div className="scheduler-pending">
                 <h3>Secure checkout is being connected.</h3>
-                <p>This purchase option will open as soon as the Qualiphy and Stripe product connection is finalized.</p>
+                <p>This purchase option will open as soon as the California checkout connection is finalized.</p>
               </div>
             ) : null}
 
-            <p className="location-router-note">Checkout collects and verifies the address used to determine your clinical pathway. California purchasers will receive an optional membership offer after purchase; membership is not required.</p>
+            <p className="location-router-note">Checkout collects and verifies your address. You must be physically located in California when clinical care is provided. Optional membership services are available but are not required.</p>
           </article>
         )}
       </div>

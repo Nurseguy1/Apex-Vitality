@@ -5,7 +5,7 @@ import { getProductCheckout } from "../lib/product-checkouts";
 
 export const metadata: Metadata = {
   title: "Start Your Care | Apex Vitality",
-  description: "Choose the Apex Vitality care pathway available for your location.",
+  description: "Start Apex Vitality clinical care while physically located in California.",
   robots: { index: false, follow: false },
 };
 

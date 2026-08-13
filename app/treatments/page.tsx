@@ -150,8 +150,8 @@ export default function TreatmentsPage() {
           guaranteed. If treatment is not prescribed, the applicable treatment
           purchase will be handled under the refund terms shown before payment.
           Compounded medications are not FDA-approved, and final medication,
-          packaging, dispensing pharmacy, and availability vary by state. Qualiphy-supported
-          prescription care is currently unavailable in Alabama and Mississippi.
+          packaging and dispensing pharmacy may vary. Clinical care is currently
+          available only to adults physically located in California at the time of care.
         </p>
       </aside>
 

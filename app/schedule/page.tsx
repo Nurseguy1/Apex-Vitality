@@ -4,7 +4,7 @@ import { charmLinks } from "../lib/charm";
 
 export const metadata: Metadata = {
   title: "Start Care and Schedule | Apex Vitality",
-  description: "Start with a $259 Apex Vitality initial care visit.",
+  description: "Start with a $259 Apex Vitality initial care visit in California.",
 };
 
 export default function SchedulePage() {
@@ -15,12 +15,14 @@ export default function SchedulePage() {
         <p className="eyebrow">Begin your care</p>
         <h1>Start with a $259 initial care visit.</h1>
         <p>Connect with a qualified medical clinician and begin the right next step.</p>
+        <p><strong>Currently available only to adults physically located in California at the time of care.</strong></p>
       </section>
       <section className="booking-steps" aria-label="New patient booking steps">
         <article>
           <span>Your first step</span>
           <h2>Initial Care Visit · $259</h2>
           <p>Your visit includes a focused health and medication review plus prescription coordination or a laboratory kit.</p>
+          <p>By continuing, you confirm that you will be physically located in California when clinical care is provided.</p>
           {charmLinks.labPlanningCheckout ? (
             <a className="primary-button" href={charmLinks.labPlanningCheckout} rel="noreferrer" target="_blank">Pay $259 and schedule ↗</a>
           ) : (

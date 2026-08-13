@@ -197,8 +197,8 @@ export default function PeptidesPage() {
           Treatment requires an appropriate medical evaluation and a valid prescription when applicable.
           Selecting a product does not guarantee that it will be prescribed.
           Compounded medications are not FDA-approved. Final medication,
-          packaging, pharmacy, and availability vary by clinical decision and state.
-          Qualiphy-supported prescription care is currently unavailable in Alabama and Mississippi.
+          packaging, pharmacy, and availability vary by clinical decision.
+          Clinical care is currently available only to adults physically located in California at the time of care.
         </p>
       </section>
 

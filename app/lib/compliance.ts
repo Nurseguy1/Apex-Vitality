@@ -8,11 +8,3 @@ export const practiceContact = {
   addressLine1: "28105 Bobwhite Circle, Unit 121",
   cityStateZip: "Santa Clarita, CA 91350",
 };
-
-export const qualiphyCare = {
-  platformName: "Qualiphy",
-  platformEntity: "Qualiphy PC",
-  serviceAreaSummary:
-    "Available through the Qualiphy-supported pathway in 48 states and Washington, D.C.; not currently available in Alabama or Mississippi.",
-  termsUrl: "https://qualiphy.me/qualiphy-terms-of-use/",
-};

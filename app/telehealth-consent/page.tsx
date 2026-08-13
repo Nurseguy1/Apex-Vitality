@@ -28,25 +28,18 @@ export default function TelehealthConsentPage() {
         <h2>2. Who may provide your medical care</h2>
         <p>
           Apex Vitality is operated by Elite Functional Health, a Professional
-          Nursing Corporation. California care may be provided by Apex Vitality
-          clinicians. For eligible Qualiphy-supported services, Qualiphy operates
-          the clinical technology and booking platform and connects you with an
-          independent telehealth medical group and a clinician licensed where you
-          are located. Your treating clinician—not the
+          Nursing Corporation. Clinical care is provided by appropriately
+          licensed Apex Vitality clinicians. Your treating clinician—not the
           website, marketing team, pharmacy, or payment processor—makes all
           medical decisions. The clinician&apos;s identity and professional
-          credentials will be disclosed through the Qualiphy clinical workflow
-          before care is provided.
+          credentials will be disclosed before care is provided.
         </p>
         <p>
-          The Qualiphy-supported pathway is currently available in 48 states and
-          Washington, D.C., and is not available in Alabama or Mississippi.
-          Service availability depends on your physical location at the time
-          of care, clinician licensure, the medical group&apos;s service area,
-          pharmacy availability, and applicable law. Apex Vitality does not
-          represent that every service is available in every state.
+          Clinical care is currently available only when you are physically
+          located in California at the time of care. Service availability also
+          depends on clinical appropriateness, pharmacy availability, and
+          applicable law.
         </p>
-        <p>You will also be asked to accept the applicable Qualiphy, medical-group, and state-specific notices and consents before care is provided.</p>
 
         <h2>3. Nature of telehealth services</h2>
         <p>
@@ -214,10 +207,10 @@ export default function TelehealthConsentPage() {
         <p>
           This consent works together with the <Link href="/terms">Terms of
           Service</Link>, <Link href="/privacy">Privacy Notice</Link>, and any
-          medical-group, pharmacy, program, or state-specific notices presented
+          pharmacy, laboratory, program, or service-specific notices presented
           to you during the applicable workflow.
         </p>
-        <p className="legal-updated">Effective August 7, 2026.</p>
+        <p className="legal-updated">Effective August 13, 2026.</p>
       </article>
       <SiteFooter />
     </main>
