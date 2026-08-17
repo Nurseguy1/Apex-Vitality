@@ -34,7 +34,7 @@ const steps = [
   ["1", "Choose your direction", "Start with the treatment, concern, or health goal that matters most to you."],
   ["2", "Complete your assessment", "Share your history and complete laboratory testing when your clinician determines it is needed."],
   ["3", "Meet your clinician", "Review your goals, results, options, benefits, and risks with a California-licensed clinician."],
-  ["4", "Follow your plan", "Begin only the care your clinician authorizes, with monitoring and adjustments organized around your progress."],
+  ["4", "Begin care with your clinician’s guidance and support", "Move forward with monitoring and adjustments organized around your progress."],
 ];
 
 export default function Home() {
