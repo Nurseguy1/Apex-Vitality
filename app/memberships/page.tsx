@@ -26,8 +26,8 @@ const options = [
     price: "From $499 USD",
     cadence: "per month",
     annual: "From $4,990/year — 2 months free",
-    intro: "One membership connecting clinical care, treatment, labs, and home delivery.",
-    features: ["Clinician visits and follow-up", "Prescription and refill management", "Medication fulfillment and delivery", "Included laboratory testing", "Treatment adjustments", "Ongoing support"],
+    intro: "Ongoing clinical monitoring, follow-up, and treatment coordination in one connected relationship.",
+    features: ["Scheduled clinician follow-up", "Prescription and refill management", "Laboratory monitoring when included", "Treatment-response review", "Clinically appropriate adjustments", "Secure non-urgent support"],
     checkoutUrl: "/schedule",
     checkoutLabel: "Start with an introductory visit",
   },
@@ -38,7 +38,7 @@ const options = [
     price: "From $749 USD",
     cadence: "per month",
     annual: "From $7,490/year — 2 months free",
-    intro: "For patients seeking elevated access and a deeper focus on performance, prevention, and long-term progress.",
+    intro: "For patients seeking more frequent monitoring and a deeper focus on performance, prevention, and long-term progress.",
     features: ["Everything in Apex Treatment Membership", "Monthly progress reviews", "Priority scheduling, subject to availability", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle and nutrition guidance", "Performance optimization planning"],
     checkoutUrl: "/schedule",
     checkoutLabel: "Start with an introductory visit",
@@ -90,8 +90,9 @@ export default function MembershipsPage() {
       <section className="membership-terms">
         <h2>Simple from the beginning.</h2>
         <div>
-          <p><strong>All your care in one membership:</strong> Clinician visits, medications, labs, delivery, and ongoing support are included in your selected program.</p>
+          <p><strong>The value is continuity:</strong> Your selected membership defines its included visits, monitoring, testing, coordination, and support. Medication and outside services are included only when the specific plan expressly says so.</p>
           <p><strong>Communication:</strong> Secure messaging is intended for non-urgent questions and is answered during business hours. It is not continuously monitored and is not an emergency service.</p>
+          <p><strong>Clinical decisions stay clinical:</strong> Membership does not guarantee a prescription, refill, laboratory order, or particular outcome.</p>
         </div>
       </section>
       <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start with a $259 initial care visit.</h2><p>Connect with a qualified medical clinician and begin the right next step.</p></div><Link className="primary-button" href="/start">Start online today</Link></section>

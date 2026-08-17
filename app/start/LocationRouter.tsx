@@ -14,6 +14,8 @@ export default function LocationRouter({
   checkoutUrl: string | null;
 }) {
   const [state, setState] = useState("");
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [financialAccepted, setFinancialAccepted] = useState(false);
   const planLabel = selectedPlan === "3-month" ? "Three-month supply" : selectedPlan === "1-month" ? "One-month supply" : "";
   const unavailable = state === "OTHER";
 
@@ -58,13 +60,26 @@ export default function LocationRouter({
               </select>
             </label>
 
+            {state === "CA" && (
+              <div className="checkout-acknowledgments" aria-label="Required purchase acknowledgments">
+                <label>
+                  <input type="checkbox" checked={termsAccepted} onChange={(event) => setTermsAccepted(event.target.checked)} />
+                  <span>I have reviewed the <Link href="/terms">Terms</Link>, <Link href="/telehealth-consent">Telehealth Consent</Link>, and applicable <Link href="/treatment-consents">treatment information</Link>.</span>
+                </label>
+                <label>
+                  <input type="checkbox" checked={financialAccepted} onChange={(event) => setFinancialAccepted(event.target.checked)} />
+                  <span>I understand the <Link href="/agreements/self-pay">self-pay terms</Link>, that payment does not guarantee a prescription, and that the checkout must disclose any nonrefundable clinical-review fee.</span>
+                </label>
+              </div>
+            )}
+
             {unavailable ? (
               <div className="scheduler-pending">
                 <h3>Clinical care is currently limited to California.</h3>
                 <p>Please do not purchase this program if you will be physically located outside California during care. Join us later as additional service areas become available.</p>
               </div>
             ) : state && checkoutUrl ? (
-              <a className="primary-button" href={checkoutUrl}>Continue to secure checkout</a>
+              termsAccepted && financialAccepted ? <a className="primary-button" href={checkoutUrl}>Continue to secure checkout</a> : <p className="location-router-note"><strong>Review and accept both acknowledgments to continue.</strong></p>
             ) : state ? (
               <div className="scheduler-pending">
                 <h3>Secure checkout is being connected.</h3>

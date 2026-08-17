@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  ["1", "Choose your program", "Start with the goals and results that matter to you."],
-  ["2", "Answer a few questions", "Complete a brief, confidential online questionnaire."],
-  ["3", "Connect with a qualified medical clinician", "Review your goals and build your personalized treatment plan."],
-  ["4", "Begin your plan", "Your medication is delivered directly to your door, with follow-up built around your progress."],
+  ["1", "Choose your starting point", "Select a treatment, symptom, or health goal. Your selection is a request for clinical review, not a guaranteed prescription."],
+  ["2", "Complete your assessment", "Submit a confidential medical intake and complete laboratory testing when clinically indicated."],
+  ["3", "Meet your California clinician", "Review your history, results, options, material risks, and alternatives before a treatment decision is made."],
+  ["4", "Begin a monitored plan", "If treatment is authorized, receive pharmacy coordination, follow-up, repeat testing when needed, and adjustments based on your response."],
 ];
 
 export default function HowItWorksPage() {
@@ -21,7 +21,7 @@ export default function HowItWorksPage() {
       <PageIntro
         eyebrow="How it works"
         title="A straightforward process with personalized care at the center."
-        description="Choose your program, answer a few questions, connect with a qualified medical clinician, and begin your plan."
+        description="Choose a starting point, complete an assessment, meet your clinician, and begin only the treatment that is medically appropriate for you."
       />
       <section className="content-section process-page">
         <ol className="journey-list">

@@ -140,8 +140,8 @@ export default function TelehealthConsentPage() {
 
         <h2>10. Privacy, records, and electronic communication</h2>
         <p>
-          Clinical information may be handled by Apex Vitality, the treating
-          medical group, clinicians, laboratories, pharmacies, and technology
+          Clinical information may be handled by Apex Vitality, treating
+          clinicians, laboratories, pharmacies, and technology
           providers as permitted by law and described in their applicable
           privacy notices. Use the designated secure patient platform for
           medical information. Ordinary email and text messages may not be fully

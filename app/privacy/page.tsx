@@ -18,6 +18,8 @@ export default function PrivacyPage() {
         <p>When needed for care, authorized clinicians, laboratories, dispensing pharmacies, payment processors, and other service providers may handle information as described in their applicable notices and as permitted by law. Clinical information should be submitted only through the secure patient workflow provided for your care.</p>
         <h2>Notice of Privacy Practices</h2>
         <p>Read the full <Link href="/notice-of-privacy-practices">Apex Vitality Notice of Privacy Practices</Link> for patient rights, permitted uses and disclosures, our responsibilities, and complaint information.</p>
+        <h2>California residents</h2>
+        <p>Review the <Link href="/california-privacy">Supplemental California Privacy Notice</Link> for additional information about public-website data and applicable California privacy requests.</p>
         <h2>Questions and privacy rights</h2>
         <p>Patients may use the secure patient portal to ask questions about medical records or communication preferences, or call {practiceContact.phone} for privacy questions.</p>
         <p className="legal-updated">Last updated August 13, 2026.</p>

@@ -59,7 +59,7 @@ export default function TermsPage() {
 
         <h2>10. Prices, payments, and insurance</h2>
         <p>
-          Prices are shown in U.S. dollars. The checkout page identifies what is included in a purchase. Medication, laboratory testing, supplements, shipping, imaging, or other outside services are separate unless expressly listed as included. Payments are processed through Stripe or another identified processor. By submitting payment information, you authorize the stated charge. Apex Vitality is a cash-pay practice unless expressly stated otherwise and does not guarantee insurance reimbursement.
+          Prices are shown in U.S. dollars. The checkout page identifies what is included in a purchase. Medication, laboratory testing, supplements, shipping, imaging, or other outside services are separate unless expressly listed as included. Payments are processed through Stripe or another identified processor. By submitting payment information, you authorize the stated charge. Apex Vitality is a cash-pay practice unless expressly stated otherwise and does not guarantee insurance reimbursement. The <Link href="/agreements/self-pay">Self-Pay Agreement</Link> provides additional financial terms.
         </p>
 
         <h2>11. Provider-review purchases and refunds</h2>
@@ -74,7 +74,7 @@ export default function TermsPage() {
 
         <h2>13. Memberships and recurring charges</h2>
         <p>
-          If you purchase a recurring membership, the price, billing interval, included services, and renewal terms will be shown before checkout. By enrolling, you authorize recurring charges to your payment method until cancellation. You may cancel before the next renewal through the secure patient portal or the stated customer-service method. Cancellation stops future renewals. Fees already paid for the current period are not prorated or refunded except when required by law or agreed in writing.
+          If you purchase a recurring membership, the price, billing interval, included services, and renewal terms will be shown before checkout. A recurring charge begins only after your separate affirmative authorization. You may cancel future renewals using the direct online method identified at enrollment and in your retainable acknowledgment. Cancellation stops future renewals. Fees already paid for the current period are not prorated or refunded except when required by law or agreed in writing. Review the <Link href="/agreements/recurring-payments">Recurring-Payment Terms</Link>.
         </p>
 
         <h2>14. Electronic communications</h2>

@@ -75,8 +75,12 @@ export function SiteFooter() {
       </nav>
       <nav aria-label="Legal navigation">
         <Link href="/privacy">Privacy</Link>
+        <Link href="/california-privacy">California Privacy</Link>
         <Link href="/notice-of-privacy-practices">HIPAA Notice</Link>
         <Link href="/telehealth-consent">Telehealth Consent</Link>
+        <Link href="/treatment-consents">Treatment Consents</Link>
+        <Link href="/agreements/self-pay">Self-Pay Agreement</Link>
+        <Link href="/agreements/recurring-payments">Recurring Payments</Link>
         <Link href="/terms">Terms &amp; Medical Disclaimer</Link>
       </nav>
       <p className="footer-disclaimer">

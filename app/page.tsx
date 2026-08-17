@@ -31,9 +31,10 @@ const carePaths = [
 ];
 
 const steps = [
-  ["1", "Choose your direction", "Start with a treatment, concern, or goal that feels right for you."],
-  ["2", "Complete a brief intake", "Share the essential information your medical clinician needs before the visit."],
-  ["3", "Begin your plan", "Connect with a qualified clinician and move forward with your personalized next steps."],
+  ["1", "Choose your direction", "Start with the treatment, concern, or health goal that matters most to you."],
+  ["2", "Complete your assessment", "Share your history and complete laboratory testing when your clinician determines it is needed."],
+  ["3", "Meet your clinician", "Review your goals, results, options, benefits, and risks with a California-licensed clinician."],
+  ["4", "Follow your plan", "Begin only the care your clinician authorizes, with monitoring and adjustments organized around your progress."],
 ];
 
 export default function Home() {
@@ -90,7 +91,7 @@ export default function Home() {
         <div className={styles.processHeading}>
           <p className={styles.kicker}>How it works</p>
           <h2>A simple path forward.</h2>
-          <p>Three steps take you from interest to personalized care.</p>
+          <p>Four clear steps take you from interest to personalized, monitored care.</p>
         </div>
         <ol>
           {steps.map(([number, title, copy]) => (
