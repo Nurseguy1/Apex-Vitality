@@ -50,10 +50,10 @@ const treatments = [
 ];
 
 const trustPoints = [
-  ["Simple online start", "Choose your goal and complete a brief, private medical intake."],
-  ["Real medical review", "A qualified clinician reviews your history and treatment request."],
-  ["Straightforward pricing", "See your one- and three-month options before moving forward."],
-  ["Convenient delivery", "When prescribed, treatment is coordinated for delivery to your home."],
+  ["California clinical care", "Care is currently available to adults physically located in California."],
+  ["Licensed clinician review", "A licensed clinician reviews your history and independently decides what is appropriate."],
+  ["Prescription-only treatment", "Selecting or purchasing an option never guarantees that it will be prescribed."],
+  ["Licensed-pharmacy fulfillment", "When prescribed, medication is prepared and shipped by an independent licensed pharmacy."],
 ];
 
 export default function PeptidesPage() {
@@ -79,9 +79,9 @@ export default function PeptidesPage() {
             </Link>
           </div>
           <div className={styles.heroProof} aria-label="Peptide care highlights">
-            <span>Online medical review</span>
-            <span>One- and three-month options</span>
-            <span>Licensed-pharmacy fulfillment when prescribed</span>
+            <span>California adults</span>
+            <span>Licensed clinician review</span>
+            <span>Licensed-pharmacy fulfillment</span>
           </div>
         </div>
       </section>
@@ -199,6 +199,9 @@ export default function PeptidesPage() {
           Compounded medications are not FDA-approved. Final medication,
           packaging, pharmacy, and availability vary by clinical decision.
           Clinical care is currently available only to adults physically located in California at the time of care.
+        </p>
+        <p className={styles.clinicalNote}>
+          <Link href="/care-standards">Review Apex Vitality care and compliance standards.</Link>
         </p>
       </section>
 

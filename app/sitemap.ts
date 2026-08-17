@@ -27,6 +27,7 @@ const routes = [
   "/faq",
   "/contact",
   "/providers",
+  "/care-standards",
   "/service-areas",
   "/schedule",
   "/privacy",

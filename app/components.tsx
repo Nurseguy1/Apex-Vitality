@@ -71,6 +71,7 @@ export function SiteFooter() {
         <Link href="/patient-access">Patient Access</Link>
         <Link href="/contact">Contact</Link>
         <Link href="/providers">Care Team &amp; Clinical Partners</Link>
+        <Link href="/care-standards">Care &amp; Compliance Standards</Link>
         <Link href="/service-areas">Service Areas</Link>
       </nav>
       <nav aria-label="Legal navigation">
@@ -85,8 +86,8 @@ export function SiteFooter() {
       </nav>
       <p className="footer-disclaimer">
         Information on this website is educational and is not medical advice.
-        Care includes assessment, clinical guidance, and individualized planning.
-        Your clinician connects testing, prescriptions, monitoring, and follow-up with your personal care plan.
+        Prescription treatment requires an appropriate evaluation by a licensed clinician and is provided only when clinically appropriate.
+        Some treatments use patient-specific compounded medications prepared by independent licensed pharmacies; compounded medications are not FDA-approved.
         Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation.
       </p>
       {charmLinks.portal && <a className="footer-portal-link" href={charmLinks.portal} rel="noreferrer" target="_blank">Secure Charm patient login ↗</a>}
