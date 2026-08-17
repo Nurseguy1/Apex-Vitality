@@ -32,7 +32,7 @@ const carePaths = [
 
 const steps = [
   ["1", "Choose your direction", "Start with the treatment, concern, or health goal that matters most to you."],
-  ["2", "Complete your assessment", "Share your history and complete laboratory testing when your clinician determines it is needed."],
+  ["2", "Complete your assessment", "Share your history and review your labs with your clinician."],
   ["3", "Meet your clinician", "Review your goals, results, options, benefits, and risks with a California-licensed clinician."],
   ["4", "Begin care with your clinician’s guidance and support", "Move forward with monitoring and adjustments organized around your progress."],
 ];
