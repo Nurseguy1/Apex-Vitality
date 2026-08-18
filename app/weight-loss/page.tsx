@@ -5,20 +5,20 @@ import { SiteFooter, SiteHeader } from "../components";
 export const metadata: Metadata = {
   title: "Online Medical Weight Loss in California | Apex Vitality",
   description:
-    "Start medical weight-loss care online with a focused questionnaire, personal clinician review, lab planning, treatment options, and ongoing support from Apex Vitality.",
+    "Start medical weight-loss care online with a focused questionnaire, personal clinician review, treatment options, and ongoing support from Apex Vitality.",
 };
 
 const steps = [
   ["01", "Choose your goal", "Decide what you want to achieve and take the first step toward it."],
   ["02", "Share what matters", "Complete a brief questionnaire so we can understand your starting point and priorities."],
-  ["03", "Build your strategy", "Bring your goals together with medical expertise, useful labs, and personalized options."],
+  ["03", "Build your strategy", "Bring your goals together with medical expertise and personalized options."],
   ["04", "Put your plan into motion", "Begin with clear next steps, convenient follow-through, and support that keeps you moving."],
 ];
 
 const benefits = [
   "A plan built around your goals and health history",
   "Medication and metabolic-health review",
-  "Recent outside labs accepted for clinician review",
+  "Labs reviewed or requested when clinically useful",
   "Nutrition, movement, sleep, and habit support",
   "Convenient telehealth follow-up",
   "Pharmacy coordination and home delivery when prescribed",
@@ -40,7 +40,7 @@ export default function WeightLossPage() {
           </p>
           <div className="hero-actions">
             <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
-            <Link className="secondary-button" href="/schedule">Start care · $259</Link>
+            <Link className="secondary-button" href="/questionnaires/metabolic-weight">Initial visit · $59</Link>
           </div>
           <p className="hero-cta-note">Start online • Choose your direction • Build real momentum</p>
         </div>
@@ -50,11 +50,14 @@ export default function WeightLossPage() {
           <ul className="check-list">
             <li>Brief questionnaire</li>
             <li>Clinician-led treatment planning</li>
-            <li>Lab review and monitoring</li>
+            <li>Labs only when clinically useful</li>
             <li>Medication options discussed</li>
             <li>Ongoing support and adjustments</li>
           </ul>
-          <p className="weight-pricing-note"><strong>Medication program pricing coming soon</strong><br />Final pricing will be posted after pharmacy fulfillment is confirmed.</p>
+          <p className="weight-pricing-note">
+            <strong>Start with a $59 initial visit</strong><br />
+            Continue for $149 per month. Medication is purchased separately.
+          </p>
         </aside>
       </section>
 
@@ -106,7 +109,7 @@ export default function WeightLossPage() {
         </div>
         <div className="weight-plan-options">
           <article><strong>Medical options</strong><span>Discuss available prescription pathways and how they fit into your broader plan.</span></article>
-          <article><strong>Metabolic insight</strong><span>Use relevant measurements and labs to understand factors affecting progress.</span></article>
+          <article><strong>Metabolic insight</strong><span>Use relevant health information to understand the factors affecting your progress.</span></article>
           <article><strong>Lasting momentum</strong><span>Strengthen nutrition, movement, recovery, and routines that support continued results.</span></article>
         </div>
       </section>
@@ -114,10 +117,10 @@ export default function WeightLossPage() {
       <section className="weight-final-cta">
         <p className="eyebrow">The power to begin is yours</p>
         <h2>Your next chapter starts with one decision.</h2>
-        <p>Choose your goal. Start online today. Begin creating the progress you want to see.</p>
+        <p>Start with a $59 initial visit, then continue with ongoing care for $149 per month. Medication is separate.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
-          <Link className="secondary-button" href="/schedule/comprehensive">Choose comprehensive care</Link>
+          <Link className="secondary-button" href="/questionnaires/metabolic-weight">Start for $59</Link>
         </div>
       </section>
 
