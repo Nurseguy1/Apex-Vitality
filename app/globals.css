@@ -2676,7 +2676,15 @@ footer p {
 .weight-trust-strip strong { color: #126c70; font-size: 17px; }
 .weight-trust-strip span { color: #496368; font-size: 14px; line-height: 1.5; }
 .weight-benefits { background: #f5f7f6; }
-.weight-process-section { padding: 88px clamp(24px, 6vw, 96px); background: white; }
+.weight-process-section { padding: 88px clamp(24px, 6vw, 96px); background: linear-gradient(135deg, #cfe6e2 0%, #d8e8ef 50%, #eadfd4 100%); }
+.weight-process-section .section-heading > p:not(.eyebrow) { color: #38545a; }
+.weight-process-section .focused-process-grid article { border-color: #83b9b4; background: linear-gradient(145deg, #f8fffd 0%, #bfe1da 100%); box-shadow: 0 20px 48px rgb(20 71 76 / .14); }
+.weight-process-section .focused-process-grid article:nth-child(2) { border-color: #8fb6cb; background: linear-gradient(145deg, #fbfdff 0%, #c8e0ed 100%); }
+.weight-process-section .focused-process-grid article:nth-child(3) { border-color: #77b5b9; background: linear-gradient(145deg, #f8ffff 0%, #b9dcdf 100%); }
+.weight-process-section .focused-process-grid article:nth-child(4) { border-color: #c4a98f; background: linear-gradient(145deg, #fffdf9 0%, #e7d4c2 100%); }
+.weight-process-section .focused-process-grid article > span { color: #087078; font-size: 14px; }
+.weight-process-section .focused-process-grid h3 { color: #123f45; }
+.weight-process-section .focused-process-grid p { color: #365158; }
 .weight-treatment-section { background: #e6efed; }
 .weight-plan-options { display: grid; gap: 14px; }
 .weight-plan-options article { display: grid; gap: 6px; padding: 20px 22px; border: 1px solid rgb(18 65 75 / .12); border-radius: 14px; background: rgb(255 255 255 / .7); }
