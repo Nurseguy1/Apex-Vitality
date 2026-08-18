@@ -51,7 +51,7 @@ export default function WeightLossPage() {
             <span>Begin today</span>
             <strong>$59</strong>
             <b>Initial medical visit</b>
-            <p>$149/month for ongoing care<br />Medication purchased separately</p>
+            <p>$149/month for ongoing care</p>
           </div>
         </div>
       </section>
@@ -112,11 +112,12 @@ export default function WeightLossPage() {
       <section className="weight-final-cta">
         <p className="eyebrow">The power to begin is yours</p>
         <h2>Your next chapter starts with one decision.</h2>
-        <p>Start with a $59 initial visit, then continue with ongoing care for $149 per month. Medication is separate.</p>
+        <p>Start with a $59 initial visit, then continue with ongoing care for $149 per month.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
           <Link className="secondary-button" href="/questionnaires/metabolic-weight">Start for $59</Link>
         </div>
+        <p className="weight-price-footnote">Medication costs are separate from clinical-care fees.</p>
       </section>
 
       <SiteFooter />
