@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function MensHealthPage() {
   return (
-    <main>
+    <main className="mens-health-page">
       <SiteHeader />
       <section className="page-intro">
         <p className="eyebrow">Vitality, performance &amp; hormonal health</p>

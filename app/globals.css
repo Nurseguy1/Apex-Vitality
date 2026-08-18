@@ -2551,6 +2551,10 @@ footer p {
   max-width: 980px;
 }
 
+.mens-health-page .page-intro .eyebrow {
+  color: #9ad8d4;
+}
+
 .page-intro > p:not(.eyebrow) {
   max-width: 760px;
   color: rgb(255 255 255 / 0.72);
