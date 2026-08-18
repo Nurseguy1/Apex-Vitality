@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { CareNotice, PageIntro, SiteFooter, SiteHeader } from "../components";
+import Link from "next/link";
+import { CareNotice, SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
   title: "Men's Vitality & Hormonal Health | Apex Vitality",
@@ -10,11 +11,16 @@ export default function MensHealthPage() {
   return (
     <main>
       <SiteHeader />
-      <PageIntro
-        eyebrow="Vitality, performance & hormonal health"
-        title="Men's Health"
-        description="Understand the symptoms, review the data, and build the right plan. Focused telehealth care for changes in energy, sexual health, strength, recovery, mood, sleep, or body composition."
-      />
+      <section className="page-intro">
+        <p className="eyebrow">Vitality, performance &amp; hormonal health</p>
+        <h1>Men&apos;s Health</h1>
+        <p>Understand the symptoms, review the data, and build the right plan. Focused telehealth care for changes in energy, sexual health, strength, recovery, mood, sleep, or body composition.</p>
+        <div className="hero-actions">
+          <Link className="primary-button" href="/questionnaires/mens-vitality">Start my men&apos;s health intake</Link>
+          <Link className="secondary-button" href="/schedule">Schedule an initial visit</Link>
+        </div>
+        <p className="hero-cta-note">Evaluation comes first. Hormonal care is guided by your history, symptoms, laboratory findings, and individual goals.</p>
+      </section>
       <section className="content-section">
         <div className="section-heading">
           <p className="eyebrow">Your symptoms are the starting point</p>
@@ -46,6 +52,26 @@ export default function MensHealthPage() {
           <li>Shared decision-making with a clinician</li>
           <li>Monitoring based on the care plan</li>
         </ul>
+      </section>
+      <section className="content-section" id="hormone-balance">
+        <div className="section-heading">
+          <p className="eyebrow">Men&apos;s hormone balance</p>
+          <h2>A thoughtful plan begins with evaluation and laboratory review.</h2>
+          <p>
+            Hormonal treatment options are considered only when your symptoms,
+            health history, examination requirements, and appropriate laboratory
+            findings support them. Completing an intake or visit never guarantees a prescription.
+          </p>
+        </div>
+        <div className="focused-process-grid">
+          <article><span>01</span><h3>Complete your intake</h3><p>Share symptoms, medical history, medications, fertility goals, and relevant safety information.</p></article>
+          <article><span>02</span><h3>Meet with your clinician</h3><p>Review possible causes of your symptoms and determine which laboratory testing is appropriate.</p></article>
+          <article><span>03</span><h3>Review your laboratory results</h3><p>Discuss hormone levels and other clinically relevant findings before deciding on treatment.</p></article>
+          <article><span>04</span><h3>Begin an appropriate plan</h3><p>If treatment is prescribed, pharmacy coordination, follow-up, and ongoing monitoring are built into your care.</p></article>
+        </div>
+        <div className="hero-actions">
+          <Link className="primary-button" href="/questionnaires/mens-vitality">Begin the clinical intake</Link>
+        </div>
       </section>
       <CareNotice />
       <SiteFooter />

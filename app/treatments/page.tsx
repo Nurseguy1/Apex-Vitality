@@ -21,6 +21,9 @@ const treatments = [
     threeMonths: "$549",
     equivalent: "$183/month",
     savings: "Save $198",
+    firstLabel: "Try one month",
+    firstNote: "One-time payment",
+    secondLabel: "Three-month supply",
   },
   {
     name: "NAD+",
@@ -29,10 +32,13 @@ const treatments = [
     description:
       "Build NAD+ care around the energy, focus, recovery, and longevity goals that power your work, training, and life.",
     image: "/treatment-nad-v1.png",
-    oneMonth: "$249",
-    threeMonths: "$549",
-    equivalent: "$183/month",
-    savings: "Save $198",
+    oneMonth: "$549",
+    threeMonths: "$399",
+    equivalent: "$399 every 30 days",
+    savings: "Save $150 today",
+    firstLabel: "One-time purchase",
+    firstNote: "One-month supply",
+    secondLabel: "Monthly delivery",
   },
   {
     name: "Glutathione",
@@ -45,18 +51,25 @@ const treatments = [
     threeMonths: "$549",
     equivalent: "$183/month",
     savings: "Save $198",
+    firstLabel: "Try one month",
+    firstNote: "One-time payment",
+    secondLabel: "Three-month supply",
   },
   {
-    name: "CJC-1295 / Ipamorelin",
-    tag: "Performance · recovery · body composition",
-    headline: "Build a stronger recovery strategy.",
+    name: "Medical Weight Loss",
+    tag: "Weight management · metabolic health · ongoing support",
+    headline: "Move forward with a plan built around you.",
     description:
-      "A performance-minded peptide option for adults seeking a focused clinical pathway around training, recovery, sleep, and body composition.",
-    image: "/treatment-cjc-ipamorelin-v1.png",
-    oneMonth: "$269",
-    threeMonths: "$599",
-    equivalent: "About $200/month",
-    savings: "Save $208",
+      "Personalized clinical evaluation, medication management, progress monitoring, and ongoing support, with FDA-approved options such as Wegovy or Zepbound considered when appropriate.",
+    image: "/membership-banner-runner-v1.png",
+    oneMonth: "$149/month",
+    threeMonths: "Paid separately",
+    equivalent: "Direct from the dispensing pharmacy",
+    savings: "No medication markup",
+    firstLabel: "Clinical membership",
+    firstNote: "Ongoing medical care",
+    secondLabel: "Medication cost",
+    href: "/weight-loss",
   },
 ];
 
@@ -104,21 +117,21 @@ export default function TreatmentsPage() {
 
               <div className="treatment-price-options">
                 <section className="treatment-price-card">
-                  <span>Try one month</span>
+                  <span>{treatment.firstLabel}</span>
                   <strong>{treatment.oneMonth}</strong>
-                  <small>One-time payment</small>
-                  <Link className="secondary-dark-button" href={`/start?treatment=${encodeURIComponent(treatment.name)}&plan=1-month`}>
-                    Choose one month
+                  <small>{treatment.firstNote}</small>
+                  <Link className="secondary-dark-button" href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=1-month`}>
+                    {treatment.href ? "Learn more" : "Choose one month"}
                   </Link>
                 </section>
 
                 <section className="treatment-price-card treatment-price-best">
                   <span className="best-value-badge">Best value</span>
-                  <span>Three-month supply</span>
+                  <span>{treatment.secondLabel}</span>
                   <strong>{treatment.threeMonths}</strong>
                   <small>{treatment.equivalent} · {treatment.savings}</small>
-                  <Link className="primary-button" href={`/start?treatment=${encodeURIComponent(treatment.name)}&plan=3-month`}>
-                    Choose three months
+                  <Link className="primary-button" href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=3-month`}>
+                    {treatment.href ? "Explore weight-loss care" : "Choose three months"}
                   </Link>
                 </section>
               </div>

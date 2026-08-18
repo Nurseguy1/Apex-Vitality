@@ -13,8 +13,6 @@ const checkoutKeys: Record<string, string | undefined> = {
   "Sermorelin|3-month": process.env.NEXT_PUBLIC_STRIPE_SERMORELIN_3_MONTH_URL,
   "NAD+|1-month": process.env.NEXT_PUBLIC_STRIPE_NAD_1_MONTH_URL,
   "NAD+|3-month": process.env.NEXT_PUBLIC_STRIPE_NAD_3_MONTH_URL,
-  "CJC-1295 / Ipamorelin|1-month": process.env.NEXT_PUBLIC_STRIPE_CJC_IPAMORELIN_1_MONTH_URL,
-  "CJC-1295 / Ipamorelin|3-month": process.env.NEXT_PUBLIC_STRIPE_CJC_IPAMORELIN_3_MONTH_URL,
   "Glutathione|1-month": process.env.NEXT_PUBLIC_STRIPE_GLUTATHIONE_1_MONTH_URL,
   "Glutathione|3-month": process.env.NEXT_PUBLIC_STRIPE_GLUTATHIONE_3_MONTH_URL,
 };

@@ -19,6 +19,8 @@ const treatments = [
     image: "/treatment-sermorelin-v1.png",
     oneMonth: "$249",
     threeMonths: "$549",
+    firstLabel: "One month",
+    secondLabel: "Three months",
   },
   {
     name: "NAD+",
@@ -26,17 +28,22 @@ const treatments = [
     description:
       "Bring more intention to energy, mental sharpness, recovery, and healthy-aging goals with a focused NAD+ care pathway.",
     image: "/treatment-nad-v1.png",
-    oneMonth: "$249",
-    threeMonths: "$549",
+    oneMonth: "$549",
+    threeMonths: "$399",
+    firstLabel: "One-time purchase",
+    secondLabel: "Monthly delivery",
   },
   {
-    name: "CJC-1295 / Ipamorelin",
-    outcome: "Performance, recovery & body composition",
+    name: "Medical Weight Loss",
+    outcome: "Clinician-guided weight management",
     description:
-      "Explore a performance-minded peptide pathway built around training, sleep, recovery, and body-composition goals.",
-    image: "/treatment-cjc-ipamorelin-v1.png",
-    oneMonth: "$269",
-    threeMonths: "$599",
+      "Build a personalized weight-management plan with clinical evaluation, ongoing monitoring, and FDA-approved medication options when appropriate.",
+    image: "/membership-banner-runner-v1.png",
+    oneMonth: "$149/month",
+    threeMonths: "Paid separately",
+    firstLabel: "Clinical membership",
+    secondLabel: "Medication",
+    href: "/weight-loss",
   },
   {
     name: "Glutathione",
@@ -46,6 +53,8 @@ const treatments = [
     image: "/treatment-glutathione-v1.png",
     oneMonth: "$249",
     threeMonths: "$549",
+    firstLabel: "One month",
+    secondLabel: "Three months",
   },
 ];
 
@@ -124,20 +133,20 @@ export default function PeptidesPage() {
               <p>{treatment.description}</p>
               <div className={styles.priceRow}>
                 <div>
-                  <span>One month</span>
+                  <span>{treatment.firstLabel}</span>
                   <strong>{treatment.oneMonth}</strong>
                 </div>
                 <div className={styles.bestValue}>
                   <small>Best value</small>
-                  <span>Three months</span>
+                  <span>{treatment.secondLabel}</span>
                   <strong>{treatment.threeMonths}</strong>
                 </div>
               </div>
               <Link
                 className={styles.cardCta}
-                href={`/start?treatment=${encodeURIComponent(treatment.name)}&plan=3-month`}
+                href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=3-month`}
               >
-                Start with {treatment.name}
+                {treatment.href ? "Explore weight-loss care" : `Start with ${treatment.name}`}
               </Link>
             </div>
           </article>
