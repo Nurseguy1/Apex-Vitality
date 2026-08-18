@@ -48,10 +48,10 @@ export default function WeightLossPage() {
         <div className="weight-hero-visual">
           <Image src="/program-longevity-couple-v1.png" alt="Active man and woman playing tennis outdoors" fill priority sizes="(max-width: 900px) 100vw, 44vw" />
           <div className="weight-pricing-card">
-            <span>Begin today</span>
-            <strong>$59</strong>
-            <b>Initial medical visit</b>
-            <p>$149/month for ongoing care</p>
+            <span>Medical weight loss</span>
+            <strong>Start with $59</strong>
+            <b>$149/month for ongoing care</b>
+            <p>Medication costs are separate.</p>
           </div>
         </div>
       </section>
@@ -117,7 +117,6 @@ export default function WeightLossPage() {
           <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
           <Link className="secondary-button" href="/questionnaires/metabolic-weight">Start for $59</Link>
         </div>
-        <p className="weight-price-footnote">Medication costs are separate from clinical-care fees.</p>
       </section>
 
       <SiteFooter />
