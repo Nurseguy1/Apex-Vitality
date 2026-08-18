@@ -2649,7 +2649,7 @@ footer p {
 .weight-hero .secondary-button { border-color: rgb(16 47 54 / .28); color: #102f36; }
 .weight-hero-visual { position: relative; min-height: 590px; overflow: hidden; border-radius: 28px; box-shadow: 0 30px 70px rgb(18 65 75 / .2); }
 .weight-hero-visual > img { object-fit: cover; object-position: center 36%; }
-.weight-pricing-card { position: absolute; bottom: 20px; left: 20px; width: min(350px, calc(100% - 40px)); padding: 18px 20px; border: 1px solid rgb(255 255 255 / .9); border-radius: 14px; background: rgb(255 255 255 / .94); box-shadow: 0 12px 30px rgb(13 44 50 / .18); backdrop-filter: blur(10px); color: #102f36; }
+.weight-pricing-card { position: absolute; right: 20px; bottom: 20px; left: auto; width: min(350px, calc(100% - 40px)); padding: 18px 20px; border: 1px solid rgb(255 255 255 / .9); border-radius: 14px; background: rgb(255 255 255 / .94); box-shadow: 0 12px 30px rgb(13 44 50 / .18); backdrop-filter: blur(10px); color: #102f36; }
 .weight-pricing-card > span { color: #126c70; font-size: 12px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
 .weight-pricing-card strong { display: block; margin-top: 5px; color: #075f64; font-size: clamp(36px, 4vw, 48px); line-height: .98; }
 .weight-pricing-card b { display: block; margin-top: 10px; font-size: 16px; }
@@ -2694,7 +2694,7 @@ footer p {
 @media (max-width: 580px) {
   .weight-hero { padding-top: 62px; }
   .weight-hero-visual { min-height: 440px; }
-  .weight-pricing-card { right: auto; bottom: 14px; left: 14px; width: calc(100% - 28px); padding: 18px; }
+  .weight-pricing-card { right: 14px; bottom: 14px; left: auto; width: min(310px, calc(100% - 28px)); padding: 18px; }
   .weight-offer-card { padding: 26px; }
   .weight-trust-strip { grid-template-columns: 1fr; }
 }
