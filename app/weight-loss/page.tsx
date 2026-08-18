@@ -46,7 +46,7 @@ export default function WeightLossPage() {
           <p className="hero-cta-note">Simple online start • Personal clinician guidance • Ongoing support</p>
         </div>
         <div className="weight-hero-visual">
-          <Image src="/program-longevity-couple-v1.png" alt="Active man and woman playing tennis outdoors" fill priority sizes="(max-width: 900px) 100vw, 44vw" />
+          <Image src="/weight-loss-couple-walking-v1.png" alt="Active man and woman walking together outdoors" fill priority sizes="(max-width: 900px) 100vw, 44vw" />
           <div className="weight-pricing-card">
             <span>Medical weight loss</span>
             <strong>Start with $59</strong>
