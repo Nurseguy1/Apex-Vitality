@@ -13,6 +13,14 @@ const carePaths = [
     cta: "Explore peptide care",
   },
   {
+    eyebrow: "Start with a $59 initial visit",
+    title: "Medical Weight Loss",
+    copy: "Build a personalized weight-loss plan with clinician guidance, ongoing support, and medication options tailored to your goals.",
+    image: "/membership-banner-runner-v1.png",
+    href: "/weight-loss",
+    cta: "Start weight-loss care",
+  },
+  {
     eyebrow: "Build a complete plan",
     title: "Men’s, Women’s & Metabolic Health",
     copy: "Choose the health goal that matters most now—energy, strength, hormonal health, weight, digestion, or healthy aging.",
@@ -81,7 +89,7 @@ export default function Home() {
               <p className={styles.kicker}>{path.eyebrow}</p>
               <h2>{path.title}</h2>
               <p>{path.copy}</p>
-              <Link className={index === 0 ? styles.primaryCta : styles.darkCta} href={path.href}>{path.cta}</Link>
+              <Link className={index < 2 ? styles.primaryCta : styles.darkCta} href={path.href}>{path.cta}</Link>
             </div>
           </article>
         ))}

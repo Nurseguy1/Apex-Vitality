@@ -11,6 +11,7 @@ export function SiteHeader() {
       </Link>
       <nav className="nav-links" aria-label="Main navigation">
         <Link href="/peptides">Peptides</Link>
+        <Link href="/weight-loss">Weight Loss</Link>
         <Link href="/treatments">Treatments</Link>
         <Link href="/memberships">Memberships</Link>
         <Link href="/how-it-works">How It Works</Link>
