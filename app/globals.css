@@ -894,6 +894,34 @@ footer p {
 .focused-process-grid article > span { color: var(--teal); font-size: 13px; font-weight: 850; letter-spacing: .14em; }
 .focused-process-grid h3 { margin-top: 30px; color: var(--teal-dark); font-size: clamp(25px, 2.8vw, 35px); }
 .focused-process-grid p { color: var(--muted); line-height: 1.7; }
+
+/* Stronger contrast for the men's hormone-balance pathway. */
+#hormone-balance {
+  background: linear-gradient(135deg, #e4f0ef 0%, #edf3f5 52%, #f4e8df 100%);
+}
+
+#hormone-balance .section-heading > p:not(.eyebrow) {
+  color: #34484d;
+}
+
+#hormone-balance .focused-process-grid article {
+  border-color: #a8c6c5;
+  background: linear-gradient(150deg, #ffffff 25%, #e4f1f0 100%);
+  box-shadow: 0 20px 48px rgb(14 54 59 / .13);
+}
+
+#hormone-balance .focused-process-grid article:nth-child(even) {
+  border-color: #d3b9a7;
+  background: linear-gradient(150deg, #ffffff 25%, #f4e4d9 100%);
+}
+
+#hormone-balance .focused-process-grid article > span {
+  color: #086268;
+  font-size: 14px;
+}
+
+#hormone-balance .focused-process-grid h3 { color: #123f45; }
+#hormone-balance .focused-process-grid p { color: #34484d; }
 .focused-choice {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, .85fr);
