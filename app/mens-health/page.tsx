@@ -14,12 +14,12 @@ export default function MensHealthPage() {
       <section className="page-intro">
         <p className="eyebrow">Vitality, performance &amp; hormonal health</p>
         <h1>Men&apos;s Health</h1>
-        <p>Understand the symptoms, review the data, and build the right plan. Focused telehealth care for changes in energy, sexual health, strength, recovery, mood, sleep, or body composition.</p>
+        <p>Feel stronger, sharper, and more like yourself. Personalized men&apos;s health care designed to improve energy, performance, sexual health, recovery, mood, sleep, and body composition.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/questionnaires/mens-vitality">Start my men&apos;s health intake</Link>
           <Link className="secondary-button" href="/schedule">Schedule an initial visit</Link>
         </div>
-        <p className="hero-cta-note">Evaluation comes first. Hormonal care is guided by your history, symptoms, laboratory findings, and individual goals.</p>
+        <p className="hero-cta-note">Your goals lead the way, supported by expert clinical guidance and a care plan built around you.</p>
       </section>
       <section className="content-section">
         <div className="section-heading">
