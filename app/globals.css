@@ -922,6 +922,34 @@ footer p {
 
 #hormone-balance .focused-process-grid h3 { color: #123f45; }
 #hormone-balance .focused-process-grid p { color: #34484d; }
+
+.hormone-balance-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 32px;
+  padding: clamp(26px, 4vw, 42px);
+  border-radius: 18px;
+  background: #123f45;
+  box-shadow: 0 20px 48px rgb(14 54 59 / .18);
+  color: white;
+}
+
+.hormone-balance-cta h3 {
+  max-width: 680px;
+  margin: 8px 0 0;
+  color: white;
+  font-size: clamp(25px, 3vw, 38px);
+}
+
+.hormone-balance-cta .eyebrow { color: #9ad8d4; }
+.hormone-balance-cta .primary-button { flex: 0 0 auto; margin: 0; }
+
+@media (max-width: 720px) {
+  .hormone-balance-cta { align-items: stretch; flex-direction: column; }
+  .hormone-balance-cta .primary-button { width: 100%; }
+}
 .focused-choice {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, .85fr);

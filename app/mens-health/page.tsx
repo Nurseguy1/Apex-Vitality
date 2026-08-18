@@ -70,8 +70,12 @@ export default function MensHealthPage() {
           <article><span>03</span><h3>Understand your results</h3><p>Review your hormone levels and health markers together, with clear answers and a plan built around you.</p></article>
           <article><span>04</span><h3>Put your plan into action</h3><p>Move forward with coordinated treatment, follow-up, and monitoring designed to support your progress.</p></article>
         </div>
-        <div className="hero-actions">
-          <Link className="primary-button" href="/questionnaires/mens-vitality">Begin my personalized plan</Link>
+        <div className="hormone-balance-cta">
+          <div>
+            <p className="eyebrow">Ready to move forward?</p>
+            <h3>Take the first step toward renewed vitality.</h3>
+          </div>
+          <Link className="primary-button" href="/questionnaires/mens-vitality">Start my plan</Link>
         </div>
       </section>
       <SiteFooter />
