@@ -2649,11 +2649,11 @@ footer p {
 .weight-hero .secondary-button { border-color: rgb(16 47 54 / .28); color: #102f36; }
 .weight-hero-visual { position: relative; min-height: 590px; overflow: hidden; border-radius: 28px; box-shadow: 0 30px 70px rgb(18 65 75 / .2); }
 .weight-hero-visual > img { object-fit: cover; object-position: center 36%; }
-.weight-pricing-card { position: absolute; right: 20px; bottom: 20px; left: auto; width: min(350px, calc(100% - 40px)); padding: 18px 20px; border: 1px solid rgb(255 255 255 / .9); border-radius: 14px; background: rgb(255 255 255 / .94); box-shadow: 0 12px 30px rgb(13 44 50 / .18); backdrop-filter: blur(10px); color: #102f36; }
+.weight-pricing-card { position: absolute; right: 20px; bottom: 20px; left: auto; width: min(350px, calc(100% - 40px)); padding: 18px 20px; border: 1px solid #c7dbd8; border-radius: 14px; background: #ffffff; box-shadow: 0 12px 32px rgb(13 44 50 / .24); color: #102f36; }
 .weight-pricing-card > span { color: #126c70; font-size: 12px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
 .weight-pricing-card strong { display: block; margin-top: 5px; color: #075f64; font-size: clamp(36px, 4vw, 48px); line-height: .98; }
 .weight-pricing-card b { display: block; margin-top: 10px; font-size: 16px; }
-.weight-pricing-card p { margin: 6px 0 0; color: #50666a; font-size: 12px; font-weight: 650; line-height: 1.4; }
+.weight-pricing-card p { margin: 6px 0 0; color: #415b60; font-size: 12px; font-weight: 700; line-height: 1.45; }
 .weight-offer-card { padding: 38px; border: 1px solid rgb(255 255 255 / .18); border-radius: 22px; background: rgb(7 24 31 / .7); box-shadow: 0 28px 70px rgb(0 0 0 / .22); backdrop-filter: blur(12px); }
 .weight-offer-card > span { color: #8ee0d5; font-size: 12px; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
 .weight-offer-card h2 { margin: 12px 0 18px; font-size: clamp(28px, 3vw, 42px); }
