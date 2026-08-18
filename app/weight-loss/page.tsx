@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
 
@@ -18,7 +19,7 @@ const steps = [
 const benefits = [
   "A plan built around your goals and health history",
   "Medication and metabolic-health review",
-  "Labs reviewed or requested when clinically useful",
+  "A simple start without unnecessary steps",
   "Nutrition, movement, sleep, and habit support",
   "Convenient telehealth follow-up",
   "Pharmacy coordination and home delivery when prescribed",
@@ -30,35 +31,29 @@ export default function WeightLossPage() {
       <SiteHeader />
 
       <section className="weight-hero">
-        <div>
-          <p className="eyebrow">Online medical weight loss for California adults</p>
-          <h1>Start your weight-loss plan with a $59 initial visit.</h1>
+        <div className="weight-hero-copy">
+          <p className="eyebrow">Online care for California adults</p>
+          <h1>Medical Weight Loss</h1>
+          <h2 className="weight-hero-offer">Start with a $59 initial visit.</h2>
           <p className="weight-hero-lede">
-            You know what you want to change. Make the decision, choose your goal,
-            and begin building the energy, confidence, and lasting progress you are
-            ready to achieve.
+            Get a personalized medical strategy, ongoing clinician support, and a
+            clear path toward results that fit your life.
           </p>
           <div className="hero-actions">
             <Link className="primary-button" href="/questionnaires/metabolic-weight">Start for $59</Link>
             <Link className="secondary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
           </div>
-          <p className="hero-cta-note">Start online • Choose your direction • Build real momentum</p>
+          <p className="hero-cta-note">Simple online start • Personal clinician guidance • Ongoing support</p>
         </div>
-        <aside className="weight-offer-card">
-          <span>Medical weight-loss pathway</span>
-          <h2>You decide. You start. You move forward.</h2>
-          <ul className="check-list">
-            <li>Brief questionnaire</li>
-            <li>Clinician-led treatment planning</li>
-            <li>Labs only when clinically useful</li>
-            <li>Medication options discussed</li>
-            <li>Ongoing support and adjustments</li>
-          </ul>
-          <p className="weight-pricing-note">
-            <strong>$59 initial visit</strong><br />
-            Continue for $149 per month. Medication is purchased separately.
-          </p>
-        </aside>
+        <div className="weight-hero-visual">
+          <Image src="/program-longevity-couple-v1.png" alt="Active man and woman playing tennis outdoors" fill priority sizes="(max-width: 900px) 100vw, 44vw" />
+          <div className="weight-pricing-card">
+            <span>Begin today</span>
+            <strong>$59</strong>
+            <b>Initial medical visit</b>
+            <p>$149/month for ongoing care<br />Medication purchased separately</p>
+          </div>
+        </div>
       </section>
 
       <section className="weight-trust-strip" aria-label="Weight loss care highlights">
