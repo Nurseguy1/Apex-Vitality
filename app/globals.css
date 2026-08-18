@@ -2634,26 +2634,25 @@ footer p {
 /* Medical weight-loss pathway */
 .weight-loss-page { background: #f5f7f6; }
 .weight-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, .9fr);
-  gap: clamp(38px, 6vw, 86px);
-  align-items: center;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
   min-height: 760px;
-  padding: 82px clamp(24px, 7vw, 112px);
-  background:
-    radial-gradient(circle at 18% 18%, rgb(77 157 151 / .24), transparent 35%),
-    linear-gradient(135deg, #102f36 0%, #174b51 58%, #1c6067 100%);
+  overflow: hidden;
+  padding: 78px clamp(24px, 7vw, 112px) 245px;
+  background: #173f46;
   color: white;
 }
+.weight-hero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgb(7 28 34 / .08) 0%, rgb(10 35 41 / .2) 38%, rgb(13 48 54 / .82) 70%, rgb(12 43 49 / .94) 100%); }
+.weight-hero-image { object-fit: cover; object-position: center 32%; }
+.weight-hero-copy { position: relative; z-index: 2; width: min(610px, 48%); margin-left: auto; }
 .weight-hero h1 { max-width: 760px; margin: 12px 0 24px; color: white; font-size: clamp(44px, 5.6vw, 72px); line-height: 1; letter-spacing: -.045em; }
 .weight-hero-offer { max-width: 690px; margin: -6px 0 20px; color: #9ad8d4; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.08; }
 .weight-hero .eyebrow { color: #9ad8d4; }
 .weight-hero-lede { max-width: 680px; color: #ffffff; font-size: clamp(18px, 2vw, 22px); font-weight: 560; line-height: 1.6; }
 .weight-hero .hero-cta-note { color: rgb(255 255 255 / .78); }
 .weight-hero .secondary-button { border-color: rgb(255 255 255 / .58); color: white; }
-.weight-hero-visual { position: relative; min-height: 590px; overflow: hidden; border-radius: 28px; box-shadow: 0 30px 70px rgb(18 65 75 / .2); }
-.weight-hero-visual > img { object-fit: cover; object-position: center 36%; }
-.weight-pricing-card { position: absolute; right: 20px; bottom: 20px; left: auto; width: min(315px, calc(100% - 40px)); padding: 18px 20px; border: 1px solid rgb(255 255 255 / .26); border-radius: 14px; background: rgb(18 63 69 / .72); box-shadow: 0 12px 30px rgb(5 25 29 / .2); backdrop-filter: blur(7px); color: white; }
+.weight-pricing-card { position: absolute; z-index: 2; right: clamp(24px, 7vw, 112px); bottom: 34px; left: auto; width: min(315px, calc(100% - 48px)); padding: 18px 20px; border: 1px solid rgb(255 255 255 / .26); border-radius: 14px; background: rgb(18 63 69 / .58); box-shadow: 0 12px 30px rgb(5 25 29 / .18); backdrop-filter: blur(7px); color: white; }
 .weight-pricing-card > span { color: #9ad8d4; font-size: 11px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
 .weight-pricing-card strong { display: block; margin-top: 5px; color: #ffffff; font-size: clamp(32px, 3.5vw, 42px); font-weight: 850; line-height: 1; }
 .weight-pricing-card b { display: block; margin-top: 9px; color: white; font-size: 15px; }
@@ -2690,15 +2689,18 @@ footer p {
 .weight-final-cta .hero-actions { justify-content: center; }
 
 @media (max-width: 900px) {
-  .weight-hero { grid-template-columns: 1fr; }
-  .weight-hero-visual { min-height: 520px; }
+  .weight-hero { min-height: 760px; padding-bottom: 240px; }
+  .weight-hero::after { background: linear-gradient(180deg, rgb(7 28 34 / .7) 0%, rgb(10 35 41 / .44) 48%, rgb(12 43 49 / .9) 100%); }
+  .weight-hero-copy { width: min(680px, 100%); margin-left: 0; }
+  .weight-hero-image { object-position: center 30%; }
   .weight-trust-strip { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 580px) {
-  .weight-hero { padding-top: 62px; }
-  .weight-hero-visual { min-height: 440px; }
-  .weight-pricing-card { right: 14px; bottom: 14px; left: auto; width: min(310px, calc(100% - 28px)); padding: 18px; }
+  .weight-hero { min-height: 820px; padding: 54px 20px 230px; }
+  .weight-hero h1 { font-size: clamp(42px, 14vw, 58px); }
+  .weight-hero-offer { font-size: clamp(27px, 9vw, 38px); }
+  .weight-pricing-card { right: 20px; bottom: 22px; left: auto; width: min(310px, calc(100% - 40px)); padding: 18px; }
   .weight-offer-card { padding: 26px; }
   .weight-trust-strip { grid-template-columns: 1fr; }
 }

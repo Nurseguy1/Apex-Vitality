@@ -31,6 +31,7 @@ export default function WeightLossPage() {
       <SiteHeader />
 
       <section className="weight-hero">
+        <Image className="weight-hero-image" src="/weight-loss-couple-walking-v1.png" alt="Active man and woman walking together outdoors" fill priority sizes="100vw" />
         <div className="weight-hero-copy">
           <p className="eyebrow">Online care for California adults</p>
           <h1>Medical Weight Loss</h1>
@@ -45,14 +46,11 @@ export default function WeightLossPage() {
           </div>
           <p className="hero-cta-note">Simple online start • Personal clinician guidance • Ongoing support</p>
         </div>
-        <div className="weight-hero-visual">
-          <Image src="/weight-loss-couple-walking-v1.png" alt="Active man and woman walking together outdoors" fill priority sizes="(max-width: 900px) 100vw, 44vw" />
-          <div className="weight-pricing-card">
-            <span>Medical weight loss</span>
-            <strong>Start with $59</strong>
-            <b>$149/month for ongoing care</b>
-            <p>Medication costs are separate.</p>
-          </div>
+        <div className="weight-pricing-card">
+          <span>Medical weight loss</span>
+          <strong>Start with $59</strong>
+          <b>$149/month for ongoing care</b>
+          <p>Medication costs are separate.</p>
         </div>
       </section>
 
