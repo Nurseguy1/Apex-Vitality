@@ -5,20 +5,20 @@ import styles from "./home.module.css";
 
 const carePaths = [
   {
-    eyebrow: "Know what you want?",
-    title: "Peptide & NAD+ Care",
-    copy: "Compare focused treatment options, complete a brief medical review, and move directly toward your personalized plan.",
-    image: "/standout-gym-men-v1.png",
-    href: "/peptides",
-    cta: "Explore peptide care",
-  },
-  {
     eyebrow: "Start with a $59 initial visit",
     title: "Medical Weight Loss",
     copy: "Build a personalized weight-loss plan with clinician guidance, ongoing support, and medication options tailored to your goals.",
     image: "/membership-banner-runner-v1.png",
     href: "/weight-loss",
     cta: "Start weight-loss care",
+  },
+  {
+    eyebrow: "Know what you want?",
+    title: "Peptide & NAD+ Care",
+    copy: "Compare focused treatment options, complete a brief medical review, and move directly toward your personalized plan.",
+    image: "/standout-gym-men-v1.png",
+    href: "/peptides",
+    cta: "Explore peptide care",
   },
   {
     eyebrow: "Build a complete plan",
