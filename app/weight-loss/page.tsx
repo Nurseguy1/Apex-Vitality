@@ -32,15 +32,15 @@ export default function WeightLossPage() {
       <section className="weight-hero">
         <div>
           <p className="eyebrow">Online medical weight loss for California adults</p>
-          <h1>Your weight-loss goal is within reach. Start today.</h1>
+          <h1>Start your weight-loss plan with a $59 initial visit.</h1>
           <p className="weight-hero-lede">
             You know what you want to change. Make the decision, choose your goal,
             and begin building the energy, confidence, and lasting progress you are
             ready to achieve.
           </p>
           <div className="hero-actions">
-            <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
-            <Link className="secondary-button" href="/questionnaires/metabolic-weight">Initial visit · $59</Link>
+            <Link className="primary-button" href="/questionnaires/metabolic-weight">Start for $59</Link>
+            <Link className="secondary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
           </div>
           <p className="hero-cta-note">Start online • Choose your direction • Build real momentum</p>
         </div>
@@ -55,7 +55,7 @@ export default function WeightLossPage() {
             <li>Ongoing support and adjustments</li>
           </ul>
           <p className="weight-pricing-note">
-            <strong>Start with a $59 initial visit</strong><br />
+            <strong>$59 initial visit</strong><br />
             Continue for $149 per month. Medication is purchased separately.
           </p>
         </aside>

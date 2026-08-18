@@ -2649,7 +2649,14 @@ footer p {
 .weight-offer-card .check-list { color: rgb(255 255 255 / .9); }
 .weight-offer-card .check-list li { border-color: rgb(255 255 255 / .14); }
 .weight-pricing-note { margin-top: 24px; padding: 17px 18px; border-radius: 12px; background: rgb(142 224 213 / .1); color: rgb(255 255 255 / .72); line-height: 1.55; }
-.weight-pricing-note strong { color: #8ee0d5; }
+.weight-pricing-note strong {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #8ee0d5;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 850;
+  line-height: 1.05;
+}
 .weight-trust-strip { display: grid; grid-template-columns: repeat(4, 1fr); background: #102b35; color: white; }
 .weight-trust-strip article { display: grid; gap: 7px; padding: 26px 28px; border-right: 1px solid rgb(255 255 255 / .1); }
 .weight-trust-strip strong { color: #8ee0d5; font-size: 17px; }
