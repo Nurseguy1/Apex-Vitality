@@ -58,9 +58,10 @@ export default function MensHealthPage() {
           <p className="eyebrow">Men&apos;s hormone balance</p>
           <h2>A thoughtful plan begins with evaluation and laboratory review.</h2>
           <p>
-            Hormonal treatment options are considered only when your symptoms,
-            health history, examination requirements, and appropriate laboratory
-            findings support them. Completing an intake or visit never guarantees a prescription.
+            Your clinician will bring together your symptoms, health history,
+            goals, and laboratory findings to identify the care options that fit
+            you best. When hormonal care is appropriate, your plan includes clear
+            guidance, coordinated treatment, and monitoring organized around your progress.
           </p>
         </div>
         <div className="focused-process-grid">
