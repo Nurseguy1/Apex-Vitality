@@ -56,12 +56,12 @@ export default function MensHealthPage() {
       <section className="content-section" id="hormone-balance">
         <div className="section-heading">
           <p className="eyebrow">Men&apos;s hormone balance</p>
-          <h2>A thoughtful plan begins with evaluation and laboratory review.</h2>
+          <h2>Build a plan around how you want to feel, perform, and live.</h2>
           <p>
-            Your clinician will bring together your symptoms, health history,
-            goals, and laboratory findings to identify the care options that fit
-            you best. When hormonal care is appropriate, your plan includes clear
-            guidance, coordinated treatment, and monitoring organized around your progress.
+            Start with a focused conversation about your goals, symptoms, and lab
+            results. Together, you and your clinician will create a personalized
+            care plan with clear guidance, coordinated treatment, and ongoing
+            support designed to help you make meaningful progress.
           </p>
         </div>
         <div className="focused-process-grid">
