@@ -66,9 +66,9 @@ export default function MensHealthPage() {
         </div>
         <div className="focused-process-grid">
           <article><span>01</span><h3>Complete your intake</h3><p>Share symptoms, medical history, medications, fertility goals, and relevant safety information.</p></article>
-          <article><span>02</span><h3>Meet with your clinician</h3><p>Review possible causes of your symptoms and determine which laboratory testing is appropriate.</p></article>
-          <article><span>03</span><h3>Review your laboratory results</h3><p>Discuss hormone levels and other clinically relevant findings before deciding on treatment.</p></article>
-          <article><span>04</span><h3>Begin an appropriate plan</h3><p>If treatment is prescribed, pharmacy coordination, follow-up, and ongoing monitoring are built into your care.</p></article>
+          <article><span>02</span><h3>Collaborate with your clinician</h3><p>Talk through your goals, symptoms, and the testing that will help shape your care.</p></article>
+          <article><span>03</span><h3>Understand your results</h3><p>Review your hormone levels and health markers together, with clear answers and a plan built around you.</p></article>
+          <article><span>04</span><h3>Put your plan into action</h3><p>Move forward with coordinated treatment, follow-up, and monitoring designed to support your progress.</p></article>
         </div>
         <div className="hero-actions">
           <Link className="primary-button" href="/questionnaires/mens-vitality">Begin the clinical intake</Link>
