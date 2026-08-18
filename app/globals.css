@@ -2641,16 +2641,16 @@ footer p {
   min-height: 760px;
   padding: 82px clamp(24px, 7vw, 112px);
   background:
-    radial-gradient(circle at 14% 18%, rgb(87 170 162 / .18), transparent 34%),
-    linear-gradient(135deg, #f4f8f7 0%, #e8f1ef 58%, #f5e9df 100%);
-  color: #102f36;
+    radial-gradient(circle at 18% 18%, rgb(77 157 151 / .24), transparent 35%),
+    linear-gradient(135deg, #102f36 0%, #174b51 58%, #1c6067 100%);
+  color: white;
 }
-.weight-hero h1 { max-width: 760px; margin: 12px 0 24px; color: #102f36; font-size: clamp(44px, 5.6vw, 72px); line-height: 1; letter-spacing: -.045em; }
-.weight-hero-offer { max-width: 690px; margin: -6px 0 20px; color: #0c686c; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.08; }
-.weight-hero .eyebrow { color: #126c70; }
-.weight-hero-lede { max-width: 680px; color: #39565b; font-size: clamp(18px, 2vw, 22px); line-height: 1.6; }
-.weight-hero .hero-cta-note { color: #36565b; }
-.weight-hero .secondary-button { border-color: rgb(16 47 54 / .28); color: #102f36; }
+.weight-hero h1 { max-width: 760px; margin: 12px 0 24px; color: white; font-size: clamp(44px, 5.6vw, 72px); line-height: 1; letter-spacing: -.045em; }
+.weight-hero-offer { max-width: 690px; margin: -6px 0 20px; color: #9ad8d4; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.08; }
+.weight-hero .eyebrow { color: #9ad8d4; }
+.weight-hero-lede { max-width: 680px; color: #ffffff; font-size: clamp(18px, 2vw, 22px); font-weight: 560; line-height: 1.6; }
+.weight-hero .hero-cta-note { color: rgb(255 255 255 / .78); }
+.weight-hero .secondary-button { border-color: rgb(255 255 255 / .58); color: white; }
 .weight-hero-visual { position: relative; min-height: 590px; overflow: hidden; border-radius: 28px; box-shadow: 0 30px 70px rgb(18 65 75 / .2); }
 .weight-hero-visual > img { object-fit: cover; object-position: center 36%; }
 .weight-pricing-card { position: absolute; right: 20px; bottom: 20px; left: auto; width: min(315px, calc(100% - 40px)); padding: 18px 20px; border: 1px solid rgb(255 255 255 / .22); border-radius: 14px; background: rgb(18 63 69 / .96); box-shadow: 0 12px 30px rgb(5 25 29 / .24); color: white; }
