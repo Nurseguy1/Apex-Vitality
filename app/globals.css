@@ -2653,7 +2653,7 @@ footer p {
 .weight-hero .secondary-button { border-color: rgb(255 255 255 / .58); color: white; }
 .weight-hero-visual { position: relative; min-height: 590px; overflow: hidden; border-radius: 28px; box-shadow: 0 30px 70px rgb(18 65 75 / .2); }
 .weight-hero-visual > img { object-fit: cover; object-position: center 36%; }
-.weight-pricing-card { position: absolute; right: 20px; bottom: 20px; left: auto; width: min(315px, calc(100% - 40px)); padding: 18px 20px; border: 1px solid rgb(255 255 255 / .22); border-radius: 14px; background: rgb(18 63 69 / .96); box-shadow: 0 12px 30px rgb(5 25 29 / .24); color: white; }
+.weight-pricing-card { position: absolute; right: 20px; bottom: 20px; left: auto; width: min(315px, calc(100% - 40px)); padding: 18px 20px; border: 1px solid rgb(255 255 255 / .26); border-radius: 14px; background: rgb(18 63 69 / .72); box-shadow: 0 12px 30px rgb(5 25 29 / .2); backdrop-filter: blur(7px); color: white; }
 .weight-pricing-card > span { color: #9ad8d4; font-size: 11px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
 .weight-pricing-card strong { display: block; margin-top: 5px; color: #ffffff; font-size: clamp(32px, 3.5vw, 42px); font-weight: 850; line-height: 1; }
 .weight-pricing-card b { display: block; margin-top: 9px; color: white; font-size: 15px; }
