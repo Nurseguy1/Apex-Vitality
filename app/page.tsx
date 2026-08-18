@@ -8,7 +8,7 @@ const carePaths = [
     eyebrow: "Start with a $59 initial visit",
     title: "Medical Weight Loss",
     copy: "Build a personalized weight-loss plan with clinician guidance, ongoing support, and medication options tailored to your goals.",
-    image: "/membership-banner-runner-v1.png",
+    image: "/weight-loss-couple-walking-v1.png",
     href: "/weight-loss",
     cta: "Start weight-loss care",
   },

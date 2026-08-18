@@ -37,10 +37,14 @@
 
 .pathStack { display: grid; gap: clamp(34px,5vw,70px); padding: 0 clamp(22px,6vw,90px) clamp(100px,13vw,180px); }
 .pathPanel { display: grid; grid-template-columns: 1.06fr .94fr; min-height: 590px; overflow: hidden; border: 1px solid #d4dbdd; border-radius: 30px; background: #fff; box-shadow: 0 24px 68px rgba(7,34,42,.1); }
+.pathPanel:first-child { border-color: rgba(154,216,212,.28); background: linear-gradient(145deg,#102f36,#174b51 62%,#1c6067); color: #fff; }
+.pathPanel:first-child .pathCopy h2 { color: #fff; }
+.pathPanel:first-child .pathCopy > p:not(.kicker) { color: rgba(255,255,255,.82); }
+.pathPanel:first-child .kicker { color: #9ad8d4; }
 .pathPanel:nth-child(even) .pathImage { order: 2; }
 .pathImage { position: relative; min-height: 500px; }
 .pathImage img,.supportImage img { object-fit: cover; }
-.pathPanel:nth-child(1) .pathImage img { object-position: 72% 52%; }
+.pathPanel:nth-child(1) .pathImage img { object-position: center 32%; }
 .pathPanel:nth-child(2) .pathImage img { object-position: 82% 48%; }
 .pathPanel:nth-child(3) .pathImage img { object-position: 72% 45%; }
 .pathCopy { align-self: center; padding: clamp(48px,7vw,104px); }
@@ -81,7 +85,7 @@
   .pathStack { padding-right: 16px; padding-left: 16px; }
   .pathPanel { border-radius: 22px; }
   .pathImage { min-height: 330px; }
-  .pathPanel:nth-child(1) .pathImage img { object-position: 70% center; }
+  .pathPanel:nth-child(1) .pathImage img { object-position: center 30%; }
   .pathPanel:nth-child(2) .pathImage img { object-position: 82% center; }
   .pathPanel:nth-child(3) .pathImage img { object-position: 70% 42%; }
   .supportImage img { object-position: 67% center; }
