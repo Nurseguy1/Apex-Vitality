@@ -1,4 +1,4 @@
-.page { background: #fff; color: #101719; }
+.page { background: linear-gradient(180deg,#f7faf9 0%,#e8f2ef 54%,#f7faf9 100%); color: #101719; }
 
 .hero {
   min-height: 780px;
@@ -41,6 +41,9 @@
 .pathPanel:first-child .pathCopy h2 { color: #fff; }
 .pathPanel:first-child .pathCopy > p:not(.kicker) { color: rgba(255,255,255,.82); }
 .pathPanel:first-child .kicker { color: #9ad8d4; }
+.pathPanel:nth-child(2) { border-color: #c8ddd9; background: #edf7f4; }
+.pathPanel:nth-child(3) { border-color: #d8ddd2; background: #f4f5ed; }
+.pathPanel:nth-child(4) { border-color: #cbdedf; background: #eaf3f4; }
 .pathPanel:nth-child(even) .pathImage { order: 2; }
 .pathImage { position: relative; min-height: 500px; }
 .pathImage img,.supportImage img { object-fit: cover; }
