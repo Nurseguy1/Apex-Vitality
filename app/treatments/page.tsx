@@ -17,13 +17,15 @@ const treatments = [
     description:
       "A focused peptide pathway for adults ready to invest in stronger sleep, physical recovery, body composition, and healthy-aging goals.",
     image: "/treatment-sermorelin-v1.png",
-    oneMonth: "$249",
-    threeMonths: "$549",
-    equivalent: "$183/month",
-    savings: "Save $198",
+    oneMonth: "$179",
+    threeMonths: "$447",
+    equivalent: "$149/month",
+    savings: "Save $90",
     firstLabel: "Try one month",
     firstNote: "One-time payment",
     secondLabel: "Three-month supply",
+    href: "/sermorelin",
+    ctaLabel: "Explore Sermorelin care",
   },
   {
     name: "NAD+",
@@ -32,13 +34,15 @@ const treatments = [
     description:
       "Build NAD+ care around the energy, focus, recovery, and longevity goals that power your work, training, and life.",
     image: "/treatment-nad-v1.png",
-    oneMonth: "$549",
-    threeMonths: "$399",
-    equivalent: "$399 every 30 days",
-    savings: "Save $150 today",
-    firstLabel: "One-time purchase",
-    firstNote: "One-month supply",
-    secondLabel: "Monthly delivery",
+    oneMonth: "$149",
+    threeMonths: "$357",
+    equivalent: "$119/month",
+    savings: "Save $90",
+    firstLabel: "Try one month",
+    firstNote: "One-time payment",
+    secondLabel: "Three-month supply",
+    href: "/nad-plus",
+    ctaLabel: "Explore NAD+ care",
   },
   {
     name: "Glutathione",
@@ -47,13 +51,15 @@ const treatments = [
     description:
       "A streamlined wellness pathway for people who want clinician-guided antioxidant support integrated into a more intentional routine.",
     image: "/treatment-glutathione-v1.png",
-    oneMonth: "$249",
-    threeMonths: "$549",
-    equivalent: "$183/month",
-    savings: "Save $198",
+    oneMonth: "$149",
+    threeMonths: "$357",
+    equivalent: "$119/month",
+    savings: "Save $90",
     firstLabel: "Try one month",
     firstNote: "One-time payment",
     secondLabel: "Three-month supply",
+    href: "/glutathione",
+    ctaLabel: "Explore Glutathione care",
   },
   {
     name: "Medical Weight Loss",
@@ -70,6 +76,7 @@ const treatments = [
     firstNote: "Ongoing medical care",
     secondLabel: "Medication cost",
     href: "/weight-loss",
+    ctaLabel: "Explore weight-loss care",
   },
 ];
 
@@ -121,7 +128,7 @@ export default function TreatmentsPage() {
                   <strong>{treatment.oneMonth}</strong>
                   <small>{treatment.firstNote}</small>
                   <Link className="secondary-dark-button" href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=1-month`}>
-                    {treatment.href ? "Learn more" : "Choose one month"}
+                    {treatment.ctaLabel ?? "Choose one month"}
                   </Link>
                 </section>
 
@@ -131,14 +138,15 @@ export default function TreatmentsPage() {
                   <strong>{treatment.threeMonths}</strong>
                   <small>{treatment.equivalent} · {treatment.savings}</small>
                   <Link className="primary-button" href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=3-month`}>
-                    {treatment.href ? "Explore weight-loss care" : "Choose three months"}
+                    {treatment.ctaLabel ?? "Choose three months"}
                   </Link>
                 </section>
               </div>
 
               <p className="treatment-included">
-                The displayed program price applies when the selected program is
-                clinically authorized and available through the applicable pharmacy.
+                The displayed program price includes medication, supplies, shipping,
+                and routine clinical support when the selected program is clinically
+                authorized and available through the applicable pharmacy.
               </p>
             </div>
           </article>

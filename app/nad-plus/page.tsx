@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { CareNotice, SiteFooter, SiteHeader } from "../components";
-import { charmLinks } from "../lib/charm";
 import { JsonLd } from "../seo";
 import { nadArticles } from "./articles/article-data";
 
@@ -56,9 +56,7 @@ export default function NadPlusPage() {
             your routine, and your goals.
           </p>
           <div className="hero-actions">
-            {charmLinks.portal && (
-              <Link className="primary-button" href="/treatments#nad">Start my NAD+ plan</Link>
-            )}
+            <Link className="primary-button" href="#nad-offer">Start my NAD+ plan</Link>
             <Link className="secondary-button" href="/schedule/comprehensive">
               Choose comprehensive care
             </Link>
@@ -81,6 +79,23 @@ export default function NadPlusPage() {
             shipping included in your selected plan.
           </p>
         </aside>
+      </section>
+
+      <section className="sermorelin-offer" id="nad-offer" aria-labelledby="nad-offer-title">
+        <div className="sermorelin-kit-image">
+          <Image src="/treatment-nad-v1.png" alt="Illustrative NAD+ nasal care packaging" width={1536} height={1024} />
+        </div>
+        <div>
+          <p className="eyebrow">Simple, transparent pricing</p>
+          <h2 id="nad-offer-title">Your NAD+ care, medication, and delivery in one plan.</h2>
+          <p className="sermorelin-offer-lede">Choose a flexible start or save with three months of coordinated cellular-support care.</p>
+          <div className="sermorelin-plan-grid">
+            <article><span>Flexible</span><strong>$149</strong><b>one month</b><p>Begin with one month of clinician-guided NAD+ care.</p></article>
+            <article className="featured"><span>Best value</span><strong>$357</strong><b>three months · $119/month</b><p>Save $90 while giving your care plan time to build momentum.</p></article>
+          </div>
+          <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication, supplies, and direct shipping</li><li>Secure follow-up support</li></ul>
+          <Link className="primary-button" href="/start?treatment=NAD%2B&plan=3-month">Start NAD+ care</Link>
+        </div>
       </section>
 
       <section className="focused-process" aria-labelledby="nad-process">

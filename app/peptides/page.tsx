@@ -17,10 +17,12 @@ const treatments = [
     description:
       "Build a stronger recovery rhythm around deeper sleep, training, body composition, and the way you want to feel each day.",
     image: "/treatment-sermorelin-v1.png",
-    oneMonth: "$249",
-    threeMonths: "$549",
+    oneMonth: "$179",
+    threeMonths: "$447",
     firstLabel: "One month",
     secondLabel: "Three months",
+    href: "/sermorelin",
+    ctaLabel: "Explore Sermorelin care",
   },
   {
     name: "NAD+",
@@ -28,10 +30,12 @@ const treatments = [
     description:
       "Bring more intention to energy, mental sharpness, recovery, and healthy-aging goals with a focused NAD+ care pathway.",
     image: "/treatment-nad-v1.png",
-    oneMonth: "$549",
-    threeMonths: "$399",
-    firstLabel: "One-time purchase",
-    secondLabel: "Monthly delivery",
+    oneMonth: "$149",
+    threeMonths: "$357",
+    firstLabel: "One month",
+    secondLabel: "Three months",
+    href: "/nad-plus",
+    ctaLabel: "Explore NAD+ care",
   },
   {
     name: "Medical Weight Loss",
@@ -44,6 +48,7 @@ const treatments = [
     firstLabel: "Clinical membership",
     secondLabel: "Medication",
     href: "/weight-loss",
+    ctaLabel: "Explore weight-loss care",
   },
   {
     name: "Glutathione",
@@ -51,10 +56,12 @@ const treatments = [
     description:
       "Add clinician-guided antioxidant support to a more intentional wellness, recovery, and longevity routine.",
     image: "/treatment-glutathione-v1.png",
-    oneMonth: "$249",
-    threeMonths: "$549",
+    oneMonth: "$149",
+    threeMonths: "$357",
     firstLabel: "One month",
     secondLabel: "Three months",
+    href: "/glutathione",
+    ctaLabel: "Explore Glutathione care",
   },
 ];
 
@@ -146,7 +153,7 @@ export default function PeptidesPage() {
                 className={styles.cardCta}
                 href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=3-month`}
               >
-                {treatment.href ? "Explore weight-loss care" : `Start with ${treatment.name}`}
+                {treatment.ctaLabel ?? `Start with ${treatment.name}`}
               </Link>
             </div>
           </article>

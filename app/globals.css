@@ -523,6 +523,22 @@ footer p {
     url('/sermorelin-hero-apex.png') center / cover no-repeat;
 }
 
+.glutathione-hero {
+  display: block;
+  min-height: min(720px, 80vh);
+  background-image:
+    linear-gradient(90deg, rgb(7 34 42 / .9) 0%, rgb(19 71 76 / .68) 48%, rgb(16 66 70 / .16) 76%, transparent 100%),
+    url('/standout-gym-men-v1.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.focused-care-hero.glutathione-hero {
+  background-image:
+    linear-gradient(90deg, rgb(7 34 42 / .92) 0%, rgb(19 71 76 / .68) 48%, rgb(16 66 70 / .16) 76%, transparent 100%),
+    url('/standout-gym-men-v1.png');
+}
+
 .sermorelin-hero-copy { max-width: 760px !important; }
 .sermorelin-hero .eyebrow {
   color: #b7e4dc;
@@ -2555,6 +2571,17 @@ footer p {
   color: #9ad8d4;
 }
 
+.womens-health-page .page-intro {
+  background-image:
+    linear-gradient(90deg, rgb(7 34 42 / .9) 0%, rgb(19 71 76 / .65) 43%, rgb(16 66 70 / .12) 72%, transparent 100%),
+    url('/womens-health-hero-v1.png');
+  background-position: center;
+}
+
+.womens-health-page .page-intro .eyebrow {
+  color: #9ad8d4;
+}
+
 .page-intro > p:not(.eyebrow) {
   max-width: 760px;
   color: rgb(255 255 255 / 0.72);
@@ -2650,9 +2677,11 @@ footer p {
 .weight-hero-offer { max-width: 690px; margin: -6px 0 20px; color: #9ad8d4; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.08; }
 .weight-hero .eyebrow { color: #9ad8d4; }
 .weight-hero-lede { max-width: 680px; color: #ffffff; font-size: clamp(18px, 2vw, 22px); font-weight: 560; line-height: 1.6; }
+.weight-hero .hero-actions { margin-top: 34px; }
+.weight-hero .primary-button { min-width: 230px; padding-right: 34px; padding-left: 34px; }
 .weight-hero .hero-cta-note { color: rgb(255 255 255 / .78); }
 .weight-hero .secondary-button { border-color: rgb(255 255 255 / .58); color: white; }
-.weight-pricing-card { position: absolute; z-index: 2; right: clamp(24px, 7vw, 112px); bottom: 34px; left: auto; width: min(315px, calc(100% - 48px)); padding: 18px 20px; border: 1px solid rgb(255 255 255 / .26); border-radius: 14px; background: rgb(18 63 69 / .58); box-shadow: 0 12px 30px rgb(5 25 29 / .18); backdrop-filter: blur(7px); color: white; }
+.weight-pricing-card { position: absolute; z-index: 2; right: clamp(24px, 7vw, 112px); bottom: 34px; left: auto; width: min(390px, calc(100% - 48px)); padding: 20px 26px; border: 1px solid rgb(255 255 255 / .26); border-radius: 14px; background: rgb(18 63 69 / .58); box-shadow: 0 12px 30px rgb(5 25 29 / .18); backdrop-filter: blur(7px); color: white; }
 .weight-pricing-card > span { color: #9ad8d4; font-size: 11px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
 .weight-pricing-card strong { display: block; margin-top: 5px; color: #ffffff; font-size: clamp(32px, 3.5vw, 42px); font-weight: 850; line-height: 1; }
 .weight-pricing-card b { display: block; margin-top: 9px; color: white; font-size: 15px; }

@@ -13,6 +13,7 @@ const routes = [
   "/mens-health",
   "/womens-health",
   "/nad-plus",
+  "/glutathione",
   "/nad-plus/articles/nad-energy-focus-busy-adults",
   "/nad-plus/articles/nad-recovery-active-adults",
   "/nad-plus/articles/nad-healthy-aging",

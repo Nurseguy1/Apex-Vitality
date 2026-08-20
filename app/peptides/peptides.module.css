@@ -14,7 +14,7 @@
   align-items: center;
   padding: clamp(72px, 10vw, 150px) clamp(22px, 7vw, 112px);
   background:
-    linear-gradient(90deg, rgba(5, 25, 67, .96) 0%, rgba(10, 48, 116, .89) 46%, rgba(21, 83, 223, .34) 72%, rgba(21, 83, 223, .05) 100%),
+    linear-gradient(90deg, rgba(7, 34, 42, .96) 0%, rgba(19, 71, 76, .88) 46%, rgba(75, 127, 121, .34) 72%, rgba(75, 127, 121, .05) 100%),
     url('/standout-gym-men-v1.png') 70% center / cover no-repeat;
   color: #fff;
 }
@@ -30,7 +30,7 @@
   text-transform: uppercase;
 }
 
-.hero .kicker { color: #aecdff; }
+.hero .kicker { color: #b7e4dc; }
 
 .hero h1 {
   max-width: 800px;
@@ -64,12 +64,13 @@
 }
 
 .primaryCta { background: var(--blue); color: #fff; box-shadow: 0 18px 42px rgba(9,42,115,.24); }
+.hero .primaryCta { background: #2d736f; box-shadow: 0 18px 42px rgba(7,34,42,.28); }
 .secondaryCta { border: 1px solid rgba(255,255,255,.48); color: #fff; }
 .whiteCta { background: #fff; color: var(--blue-dark); }
 
 .heroProof { display: flex; flex-wrap: wrap; gap: 18px 28px; margin-top: 40px; }
 .heroProof span { color: rgba(255,255,255,.78); font-size: 13px; font-weight: 750; }
-.heroProof span::before { content: "✓"; margin-right: 8px; color: #91b8ff; }
+.heroProof span::before { content: "✓"; margin-right: 8px; color: #9ad8d4; }
 
 .trustGrid {
   display: grid;
