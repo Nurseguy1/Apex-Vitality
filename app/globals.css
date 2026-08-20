@@ -3221,26 +3221,41 @@ footer p {
 .focused-process-grid article,
 .booking-steps article,
 .funnel-card,
-.visit-card {
-  border-color: #a8c9c5;
-  background: linear-gradient(145deg, #e3f0ed 0%, #d4e8e4 100%);
+.visit-card,
+.nad-audience-grid article,
+.marker-grid span,
+.weight-plan-options article {
+  border-color: #83b9b4;
+  background: linear-gradient(145deg, #f8fffd 0%, #bfe1da 100%);
   color: #172f34;
-  box-shadow: 0 20px 48px rgb(17 55 60 / .1);
+  box-shadow: 0 20px 48px rgb(20 71 76 / .14);
 }
 
 .sermorelin-plan-grid article:nth-child(even),
 .focused-process-grid article:nth-child(2),
 .booking-steps article:nth-child(even),
-.funnel-card:nth-child(even) {
-  border-color: #afc7d2;
-  background: linear-gradient(145deg, #e7eff3 0%, #d7e5eb 100%);
+.funnel-card:nth-child(even),
+.nad-audience-grid article:nth-child(even),
+.marker-grid span:nth-child(3n + 2),
+.weight-plan-options article:nth-child(even) {
+  border-color: #8fb6cb;
+  background: linear-gradient(145deg, #fbfdff 0%, #c8e0ed 100%);
 }
 
-.sermorelin-plan-grid article.featured,
 .focused-process-grid article:nth-child(3),
-.funnel-card.featured-funnel {
-  border-color: #d3b59e;
-  background: linear-gradient(145deg, #f2e6dc 0%, #ead7c8 100%);
+.funnel-card.featured-funnel,
+.nad-audience-grid article:nth-child(3n),
+.marker-grid span:nth-child(3n) {
+  border-color: #77b5b9;
+  background: linear-gradient(145deg, #f8ffff 0%, #b9dcdf 100%);
+}
+
+.focused-process-grid article:nth-child(4),
+.booking-steps article:nth-child(4n),
+.nad-audience-grid article:nth-child(4n),
+.marker-grid span:nth-child(4n) {
+  border-color: #c4a98f;
+  background: linear-gradient(145deg, #fffdf9 0%, #e7d4c2 100%);
 }
 
 .sermorelin-plan-grid strong,
@@ -3272,19 +3287,24 @@ footer p {
 
 #hormone-balance .focused-process-grid article,
 #hormone-balance .focused-process-grid article:nth-child(even) {
-  border-color: #a8c9c5;
-  background: linear-gradient(145deg, #e3f0ed 0%, #d4e8e4 100%);
+  border-color: #83b9b4;
+  background: linear-gradient(145deg, #f8fffd 0%, #bfe1da 100%);
   color: #172f34;
 }
 
 #hormone-balance .focused-process-grid article:nth-child(2) {
-  border-color: #afc7d2;
-  background: linear-gradient(145deg, #e7eff3 0%, #d7e5eb 100%);
+  border-color: #8fb6cb;
+  background: linear-gradient(145deg, #fbfdff 0%, #c8e0ed 100%);
 }
 
 #hormone-balance .focused-process-grid article:nth-child(3) {
-  border-color: #d3b59e;
-  background: linear-gradient(145deg, #f2e6dc 0%, #ead7c8 100%);
+  border-color: #77b5b9;
+  background: linear-gradient(145deg, #f8ffff 0%, #b9dcdf 100%);
+}
+
+#hormone-balance .focused-process-grid article:nth-child(4) {
+  border-color: #c4a98f;
+  background: linear-gradient(145deg, #fffdf9 0%, #e7d4c2 100%);
 }
 
 .home-sermorelin-vibe > .funnel-section,
