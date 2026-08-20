@@ -3216,6 +3216,92 @@ footer p {
   }
 }
 
+/* Clearly visible version of the shared light-card palette. */
+.sermorelin-plan-grid article,
+.focused-process-grid article,
+.weight-process-section .focused-process-grid article,
+.booking-steps article,
+.funnel-card,
+.visit-card,
+.nad-audience-grid article,
+.marker-grid span,
+.weight-plan-options article,
+.questionnaire-card,
+.program-card,
+.program-grid .program-card-modern,
+.service-card,
+.light-grid .service-card,
+.membership-card,
+.membership-choice-panel .membership-card-modern,
+.readiness-card,
+.treatment-price-card,
+.nutrition-price {
+  border-color: #6fa9a3;
+  background:
+    radial-gradient(circle at 12% 8%, rgb(255 255 255 / .96) 0%, rgb(255 255 255 / .5) 32%, transparent 58%),
+    linear-gradient(135deg, #eef9f6 0%, #c2e4dc 52%, #86c2b7 100%);
+}
+
+.sermorelin-plan-grid article:nth-child(even),
+.focused-process-grid article:nth-child(2),
+.weight-process-section .focused-process-grid article:nth-child(2),
+.booking-steps article:nth-child(even),
+.funnel-card:nth-child(even),
+.nad-audience-grid article:nth-child(even),
+.marker-grid span:nth-child(3n + 2),
+.weight-plan-options article:nth-child(even),
+.questionnaire-card:nth-child(even),
+.program-card:nth-child(even),
+.program-grid .program-card-modern:nth-child(even),
+.service-card:nth-child(even),
+.membership-card:nth-child(even),
+.membership-choice-panel .membership-card-modern:nth-child(even),
+.readiness-card:nth-child(even),
+.treatment-price-card:nth-child(even) {
+  border-color: #799fb2;
+  background:
+    radial-gradient(circle at 12% 8%, rgb(255 255 255 / .96) 0%, rgb(255 255 255 / .5) 32%, transparent 58%),
+    linear-gradient(135deg, #f0f7fb 0%, #c9e1ed 52%, #97bfd4 100%);
+}
+
+.focused-process-grid article:nth-child(3),
+.weight-process-section .focused-process-grid article:nth-child(3),
+.funnel-card.featured-funnel,
+.nad-audience-grid article:nth-child(3n),
+.marker-grid span:nth-child(3n),
+.questionnaire-card:nth-child(3n),
+.program-card:nth-child(3n),
+.program-grid .program-card-modern:nth-child(3n),
+.service-card:nth-child(3n),
+.membership-card:nth-child(3n),
+.membership-choice-panel .membership-card-modern:nth-child(3n),
+.readiness-card:nth-child(3n),
+.treatment-price-card:nth-child(3n) {
+  border-color: #689da1;
+  background:
+    radial-gradient(circle at 12% 8%, rgb(255 255 255 / .96) 0%, rgb(255 255 255 / .5) 32%, transparent 58%),
+    linear-gradient(135deg, #eef9f9 0%, #c1e1e3 52%, #89c1c5 100%);
+}
+
+.focused-process-grid article:nth-child(4),
+.weight-process-section .focused-process-grid article:nth-child(4),
+.booking-steps article:nth-child(4n),
+.nad-audience-grid article:nth-child(4n),
+.marker-grid span:nth-child(4n),
+.questionnaire-card:nth-child(4n),
+.program-card:nth-child(4n),
+.program-grid .program-card-modern:nth-child(4n),
+.service-card:nth-child(4n),
+.membership-card:nth-child(4n),
+.membership-choice-panel .membership-card-modern:nth-child(4n),
+.readiness-card:nth-child(4n),
+.treatment-price-card:nth-child(4n) {
+  border-color: #b08d71;
+  background:
+    radial-gradient(circle at 12% 8%, rgb(255 255 255 / .96) 0%, rgb(255 255 255 / .48) 32%, transparent 58%),
+    linear-gradient(135deg, #fff7ef 0%, #ead8c8 52%, #cba98d 100%);
+}
+
 /* Complete site-wide card and pricing palette, matched to Medical Weight Loss. */
 .questionnaire-card,
 .program-card,
