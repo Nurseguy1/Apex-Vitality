@@ -42,7 +42,7 @@ export default function NadPlusPage() {
   };
 
   return (
-    <main>
+    <main className="nad-plus-page">
       <JsonLd data={pageSchema} />
       <SiteHeader />
 
