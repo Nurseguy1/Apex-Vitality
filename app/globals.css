@@ -897,7 +897,7 @@ footer p {
 .focused-offer-card .check-list { margin-bottom: 24px; }
 .focused-offer-card .check-list li { border-color: rgb(255 255 255 / .15); color: rgb(255 255 255 / .86); }
 .focused-offer-card > p { margin: 0; color: rgb(255 255 255 / .72); font-size: 14px; line-height: 1.6; }
-.nad-plus-page .focused-care-hero .focused-offer-card { transform: translateX(-140px); }
+.nad-plus-page .focused-care-hero .focused-offer-card { transform: translateX(-85px); }
 .focused-process { padding: clamp(68px, 9vw, 116px) clamp(20px, 6vw, 96px); background: #f4f6f4; }
 .focused-process-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .focused-process-grid article {
