@@ -67,6 +67,9 @@ export default function NadPlusPage() {
             move your care forward.
           </p>
         </div>
+      </section>
+
+      <section className="nad-offer-band" aria-label="NAD+ focused care benefits">
         <aside className="focused-offer-card">
           <span>Your goals can start moving today</span>
           <h2>A simpler path to feeling energized, focused, and ready.</h2>
