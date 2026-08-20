@@ -3216,6 +3216,77 @@ footer p {
   }
 }
 
+/* Final cascade: soft-color marketing, pricing, and step cards site-wide. */
+.sermorelin-plan-grid article,
+.focused-process-grid article,
+.booking-steps article,
+.funnel-card,
+.visit-card {
+  border-color: #a8c9c5;
+  background: linear-gradient(145deg, #e3f0ed 0%, #d4e8e4 100%);
+  color: #172f34;
+  box-shadow: 0 20px 48px rgb(17 55 60 / .1);
+}
+
+.sermorelin-plan-grid article:nth-child(even),
+.focused-process-grid article:nth-child(2),
+.booking-steps article:nth-child(even),
+.funnel-card:nth-child(even) {
+  border-color: #afc7d2;
+  background: linear-gradient(145deg, #e7eff3 0%, #d7e5eb 100%);
+}
+
+.sermorelin-plan-grid article.featured,
+.focused-process-grid article:nth-child(3),
+.funnel-card.featured-funnel {
+  border-color: #d3b59e;
+  background: linear-gradient(145deg, #f2e6dc 0%, #ead7c8 100%);
+}
+
+.sermorelin-plan-grid strong,
+.sermorelin-plan-grid b,
+.focused-process-grid h3,
+.booking-steps h2,
+.funnel-card h3,
+.funnel-card li strong,
+.funnel-price strong,
+.visit-card strong,
+#hormone-balance .focused-process-grid h3 { color: #173f46; }
+
+.sermorelin-plan-grid p,
+.focused-process-grid p,
+.booking-steps p,
+.booking-steps .enrollment-note,
+.funnel-card > p:not(.funnel-price),
+.funnel-card li,
+.funnel-disclaimer,
+.funnel-price span,
+.visit-card p,
+#hormone-balance .focused-process-grid p { color: #3f555a; }
+
+.sermorelin-plan-grid span,
+.focused-process-grid article > span,
+.booking-steps article > span,
+.visit-card span,
+#hormone-balance .focused-process-grid article > span { color: #176a6d; }
+
+#hormone-balance .focused-process-grid article,
+#hormone-balance .focused-process-grid article:nth-child(even) {
+  border-color: #a8c9c5;
+  background: linear-gradient(145deg, #e3f0ed 0%, #d4e8e4 100%);
+  color: #172f34;
+}
+
+#hormone-balance .focused-process-grid article:nth-child(2) {
+  border-color: #afc7d2;
+  background: linear-gradient(145deg, #e7eff3 0%, #d7e5eb 100%);
+}
+
+#hormone-balance .focused-process-grid article:nth-child(3) {
+  border-color: #d3b59e;
+  background: linear-gradient(145deg, #f2e6dc 0%, #ead7c8 100%);
+}
+
 .home-sermorelin-vibe > .funnel-section,
 .home-sermorelin-vibe > .service-band,
 .home-sermorelin-vibe > .membership-section,
