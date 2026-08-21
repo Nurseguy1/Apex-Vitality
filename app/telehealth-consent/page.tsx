@@ -155,9 +155,10 @@ export default function TelehealthConsentPage() {
           You are responsible for the fees disclosed before purchase and for
           pharmacy, laboratory, shipping, or other third-party charges unless
           they are expressly listed as included. Payment or membership
-          enrollment does not guarantee treatment approval. If treatment is
-          declined, the refund or alternative-care terms disclosed for the
-          applicable purchase will apply. Apex Vitality does not guarantee
+          enrollment does not guarantee treatment approval. If the clinician
+          does not authorize the selected treatment, Apex Vitality will issue
+          a full refund of that treatment purchase to the original payment
+          method, with no clinical-review fee retained. Apex Vitality does not guarantee
           insurance coverage or reimbursement.
         </p>
 

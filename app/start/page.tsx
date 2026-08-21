@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components";
 import LocationRouter from "./LocationRouter";
 import { getProductCheckout } from "../lib/product-checkouts";
+import { getProductOffer } from "../lib/product-offers";
 
 export const metadata: Metadata = {
   title: "Start Your Care | Apex Vitality",
@@ -16,6 +17,7 @@ export default async function StartPage({
 }) {
   const { treatment = "", plan = "" } = await searchParams;
   const checkoutUrl = getProductCheckout(treatment, plan);
+  const offer = getProductOffer(treatment, plan);
 
   return (
     <main className="start-location-page">
@@ -24,6 +26,7 @@ export default async function StartPage({
         selectedPlan={plan}
         selectedTreatment={treatment}
         checkoutUrl={checkoutUrl}
+        offer={offer}
       />
       <SiteFooter />
     </main>

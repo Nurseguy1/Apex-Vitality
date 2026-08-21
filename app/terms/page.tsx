@@ -64,7 +64,7 @@ export default function TermsPage() {
 
         <h2>11. Provider-review purchases and refunds</h2>
         <p>
-          Some programs allow you to pay and submit a health questionnaire before clinician review. If the reviewing clinician does not authorize the selected prescription, Apex Vitality will contact you about next steps. You may receive a refund for the undelivered medication or program portion, or choose another offered care option. Any nonrefundable clinical-review fee will be clearly disclosed before purchase. Prescription medications generally cannot be returned or refunded after a pharmacy has prepared or shipped them, except when required by law or under the pharmacy&apos;s written policy.
+          Some programs allow you to pay and submit a health questionnaire before clinician review. If the reviewing clinician does not authorize the selected treatment, Apex Vitality will issue a full refund of that treatment purchase to the original payment method. No clinical-review fee will be retained. After treatment is authorized, prescription medications generally cannot be returned or refunded once a pharmacy has prepared or shipped them, except when required by law or under the pharmacy&apos;s written policy.
         </p>
 
         <h2>12. Appointments, cancellations, and missed visits</h2>

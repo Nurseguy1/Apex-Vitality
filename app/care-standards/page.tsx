@@ -57,7 +57,7 @@ export default function CareStandardsPage() {
 
         <h2>Transparent self-pay terms</h2>
         <p>
-          Prices and inclusions are presented before checkout. Payment does not guarantee medical eligibility or a prescription. Refund, recurring-payment, pharmacy, and outside-service terms are disclosed in the applicable checkout and written agreements.
+          Prices and inclusions are presented before checkout. Payment does not guarantee medical eligibility or a prescription. If the clinician does not authorize the selected treatment, Apex Vitality issues a full refund of that treatment purchase and retains no clinical-review fee. Recurring-payment, pharmacy, and outside-service terms are disclosed in the applicable checkout and written agreements.
         </p>
         <p>
           Review the <Link href="/agreements/self-pay">Self-Pay Agreement</Link>, <Link href="/agreements/recurring-payments">Recurring-Payment Terms</Link>, and <Link href="/terms">Terms of Service</Link>.

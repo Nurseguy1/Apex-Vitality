@@ -27,7 +27,7 @@ export default function SelfPayAgreementPage() {
         <p>The checkout description controls what is included. Medication, laboratory testing, injection supplies, shipping, consultations, follow-up, supplements, imaging, and outside services are separate unless the checkout expressly identifies them as included. You are responsible for charges you authorize and for providing accurate billing, shipping, and contact information.</p>
 
         <h2>When treatment is not authorized</h2>
-        <p>If a clinician does not authorize the selected treatment, Apex Vitality will apply the refund or alternative-care terms displayed before payment. Any clinical-review fee that will not be refunded must be clearly identified before purchase. Medication generally cannot be returned or refunded after a pharmacy has prepared or shipped it, except when required by law or under the dispensing pharmacy&apos;s written policy.</p>
+        <p>If a clinician does not authorize the selected treatment, Apex Vitality will issue a full refund of that treatment purchase to the original payment method. No clinical-review fee will be retained. After treatment is authorized, medication generally cannot be returned or refunded once a pharmacy has prepared or shipped it, except when required by law or under the dispensing pharmacy&apos;s written policy.</p>
 
         <h2>Appointments</h2>
         <p>Appointment cancellation, rescheduling, and missed-visit terms are stated in the <Link href="/terms">Terms of Service</Link> and any appointment-specific notice shown before payment. If a checkout notice conflicts with this agreement, contact Apex Vitality before paying.</p>

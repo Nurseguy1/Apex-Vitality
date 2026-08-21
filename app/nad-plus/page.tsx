@@ -93,11 +93,10 @@ export default function NadPlusPage() {
           <h2 id="nad-offer-title">Your NAD+ care, medication, and delivery in one plan.</h2>
           <p className="sermorelin-offer-lede">Choose a flexible start or save with three months of coordinated cellular-support care.</p>
           <div className="sermorelin-plan-grid">
-            <article><span>Flexible</span><strong>$149</strong><b>one month</b><p>Begin with one month of clinician-guided NAD+ care.</p></article>
-            <article className="featured"><span>Best value</span><strong>$357</strong><b>three months · $119/month</b><p>Save $90 while giving your care plan time to build momentum.</p></article>
+            <article><span>Flexible</span><strong>$149</strong><b>one month</b><p>Begin with one month of clinician-guided NAD+ care.</p><Link className="plan-select-button" href="/start?treatment=NAD%2B&plan=1-month">Choose one month</Link></article>
+            <article className="featured"><span>Best value</span><strong>$357</strong><b>three months · $119/month</b><p>Save $90 while giving your care plan time to build momentum.</p><Link className="plan-select-button" href="/start?treatment=NAD%2B&plan=3-month">Choose three months</Link></article>
           </div>
           <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication, supplies, and direct shipping</li><li>Secure follow-up support</li></ul>
-          <Link className="primary-button" href="/start?treatment=NAD%2B&plan=3-month">Start NAD+ care</Link>
         </div>
       </section>
 

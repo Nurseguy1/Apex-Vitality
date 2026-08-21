@@ -30,11 +30,10 @@ export default function GlutathionePage() {
           <h2 id="glutathione-offer-title">Glutathione care, medication, and delivery in one plan.</h2>
           <p className="sermorelin-offer-lede">Choose a flexible month or build consistency and save with a three-month plan.</p>
           <div className="sermorelin-plan-grid">
-            <article><span>Flexible</span><strong>$149</strong><b>one month</b><p>Start with a focused month of clinician-guided antioxidant support.</p></article>
-            <article className="featured"><span>Best value</span><strong>$357</strong><b>three months · $119/month</b><p>Save $90 and give your wellness routine time to build momentum.</p></article>
+            <article><span>Flexible</span><strong>$149</strong><b>one month</b><p>Start with a focused month of clinician-guided antioxidant support.</p><Link className="plan-select-button" href="/start?treatment=Glutathione&plan=1-month">Choose one month</Link></article>
+            <article className="featured"><span>Best value</span><strong>$357</strong><b>three months · $119/month</b><p>Save $90 and give your wellness routine time to build momentum.</p><Link className="plan-select-button" href="/start?treatment=Glutathione&plan=3-month">Choose three months</Link></article>
           </div>
           <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication and direct shipping</li><li>Secure follow-up support</li></ul>
-          <Link className="primary-button" href="/start?treatment=Glutathione&plan=3-month">Start Glutathione care</Link>
         </div>
       </section>
 

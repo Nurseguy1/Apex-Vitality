@@ -168,8 +168,9 @@ export default function TreatmentsPage() {
         <p>
           Medication eligibility and treatment decisions are made by a licensed
           medical provider after clinical review. A selected treatment is not
-          guaranteed. If treatment is not prescribed, the applicable treatment
-          purchase will be handled under the refund terms shown before payment.
+          guaranteed. If the clinician does not authorize the selected treatment,
+          Apex Vitality will issue a full refund of that treatment purchase and
+          will not retain a clinical-review fee.
           Compounded medications are not FDA-approved, and final medication,
           packaging and dispensing pharmacy may vary. Clinical care is currently
           available only to adults physically located in California at the time of care.
