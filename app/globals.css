@@ -3904,6 +3904,10 @@ footer p {
   font-size: clamp(18px, 2vw, 25px);
   line-height: 1.15;
 }
+.treatment-price-card > strong.treatment-price-monthly {
+  font-size: clamp(25px, 2.6vw, 36px);
+  line-height: 1.08;
+}
 .treatment-price-card > small { color: #65797b; }
 .treatment-price-card .primary-button,
 .treatment-price-card .secondary-dark-button {

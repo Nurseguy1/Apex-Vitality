@@ -125,7 +125,9 @@ export default function TreatmentsPage() {
               <div className="treatment-price-options">
                 <section className="treatment-price-card">
                   <span>{treatment.firstLabel}</span>
-                  <strong>{treatment.oneMonth}</strong>
+                  <strong className={treatment.name === "Medical Weight Loss" ? "treatment-price-monthly" : undefined}>
+                    {treatment.oneMonth}
+                  </strong>
                   <small>{treatment.firstNote}</small>
                   <Link className="secondary-dark-button" href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=1-month`}>
                     {treatment.ctaLabel ?? "Choose one month"}
