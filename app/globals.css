@@ -4009,7 +4009,7 @@ footer p {
 .location-router {
   width: min(1280px, calc(100% - 40px));
   margin: 0 auto;
-  padding: clamp(64px, 8vw, 112px) 0 96px;
+  padding: clamp(38px, 5vw, 64px) 0 72px;
 }
 
 .location-router-heading {
@@ -4025,7 +4025,7 @@ footer p {
 
 .location-router-image {
   position: relative;
-  min-height: 520px;
+  min-height: 420px;
   overflow: hidden;
   border-radius: 28px;
   box-shadow: 0 24px 64px rgba(13,45,53,.14);
@@ -4109,8 +4109,9 @@ footer p {
 }
 
 .location-result {
-  min-height: 130px;
-  padding: clamp(28px, 5vw, 50px);
+  min-height: 0;
+  margin-top: clamp(20px, 2.5vw, 30px);
+  padding: clamp(22px, 2.6vw, 30px) clamp(28px, 5vw, 50px);
   border-radius: 24px;
   background: #0d2d35;
   color: white;
@@ -4123,7 +4124,7 @@ footer p {
 .location-result h2 {
   margin: 8px 0 14px;
   color: white;
-  font-size: clamp(30px, 4vw, 48px);
+  font-size: clamp(30px, 3.5vw, 42px);
   letter-spacing: -.035em;
 }
 
@@ -4227,6 +4228,31 @@ footer p {
   background: #fff;
   color: var(--foreground);
   font: inherit;
+}
+
+@media (min-width: 761px) and (max-height: 820px) {
+  .location-router {
+    padding-top: 28px;
+    padding-bottom: 44px;
+  }
+
+  .location-router-image {
+    min-height: 300px;
+  }
+
+  .location-result {
+    margin-top: 18px;
+    padding: 18px 40px;
+  }
+
+  .location-result h2 {
+    margin-bottom: 8px;
+    font-size: clamp(29px, 3vw, 36px);
+  }
+
+  .location-result article > p:not(.result-kicker) {
+    line-height: 1.5;
+  }
 }
 
 @media (max-width: 760px) {
