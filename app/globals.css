@@ -3777,12 +3777,23 @@ footer p {
   font-size: 14px;
   font-weight: 760;
 }
-.treatment-showcase { display: grid; }
+.treatment-showcase {
+  display: grid;
+  gap: clamp(24px, 3vw, 42px);
+  padding: clamp(28px, 4.5vw, 72px) clamp(18px, 4.5vw, 72px) clamp(72px, 8vw, 120px);
+  background: linear-gradient(180deg, #f7f8f5 0%, #eef4f1 100%);
+}
 .treatment-product {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(420px, .95fr);
+  width: min(1480px, 100%);
   min-height: 740px;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 1px solid #d7e1df;
+  border-radius: 32px;
   background: white;
+  box-shadow: 0 24px 64px rgba(13, 49, 52, .1);
 }
 .treatment-product:nth-child(even) .treatment-product-image { order: 2; }
 .treatment-product-image {
