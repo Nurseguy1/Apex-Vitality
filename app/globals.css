@@ -2624,8 +2624,8 @@ footer p {
 .womens-health-page .page-intro {
   background-image:
     linear-gradient(90deg, rgb(7 34 42 / .9) 0%, rgb(19 71 76 / .65) 43%, rgb(16 66 70 / .12) 72%, transparent 100%),
-    url('/womens-health-hero-v1.png?v=20260822-woman');
-  background-position: center center;
+    url('/womens-health-hero-v1.png?v=20260822-woman') !important;
+  background-position: center center !important;
 }
 
 .womens-health-page .page-intro .eyebrow {
