@@ -111,8 +111,8 @@ export default function TreatmentsPage() {
                 priority={index === 0}
               />
               <div className="treatment-image-title">
-                <small>Focused care</small>
                 <strong>{treatment.name}</strong>
+                <small>Focused care</small>
               </div>
               <span className="treatment-image-note">Illustrative packaging</span>
             </div>
@@ -135,7 +135,9 @@ export default function TreatmentsPage() {
                 <section className="treatment-price-card treatment-price-best">
                   <span className="best-value-badge">Best value</span>
                   <span>{treatment.secondLabel}</span>
-                  <strong>{treatment.threeMonths}</strong>
+                  <strong className={treatment.threeMonths === "Paid separately" ? "treatment-price-separate" : undefined}>
+                    {treatment.threeMonths}
+                  </strong>
                   <small>{treatment.equivalent} · {treatment.savings}</small>
                   <Link className="primary-button" href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=3-month`}>
                     {treatment.ctaLabel ?? "Choose three months"}
