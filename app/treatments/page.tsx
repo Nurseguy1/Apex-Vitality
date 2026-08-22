@@ -67,7 +67,7 @@ const treatments = [
     headline: "Move forward with a plan built around you.",
     description:
       "Personalized clinical evaluation, medication management, progress monitoring, and ongoing support, with FDA-approved options such as Wegovy or Zepbound considered when appropriate.",
-    image: "/membership-banner-runner-v1.png",
+    image: "/weight-loss-couple-walking-v1.png",
     oneMonth: "$149/month",
     threeMonths: "Paid separately",
     equivalent: "Direct from the dispensing pharmacy",
@@ -105,7 +105,9 @@ export default function TreatmentsPage() {
             <div className="treatment-product-image">
               <Image
                 src={treatment.image}
-                alt={`Illustrative prescription vial for ${treatment.name} treatment`}
+                alt={treatment.name === "Medical Weight Loss"
+                  ? "Active man and woman walking together outdoors"
+                  : `Illustrative prescription vial for ${treatment.name} treatment`}
                 fill
                 sizes="(max-width: 820px) 100vw, 50vw"
                 priority={index === 0}
