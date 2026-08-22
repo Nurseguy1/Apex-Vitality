@@ -17,7 +17,7 @@ const programs = {
     eyebrow: "Program pathway 02",
     headline: "Build the energy, strength, and confidence to do more.",
     intro: "A focused program for energy, sexual health, strength, recovery, body composition, and hormonal evaluation when indicated.",
-    image: "/membership-performance-v1.png",
+    image: "/membership-performance-diverse-v2.png",
     features: ["Comprehensive men's health review", "Baseline and follow-up labs when needed", "Energy, strength, and recovery goals", "Individualized clinical plan", "Secure follow-up and monitoring", "Treatment adjustments as your plan develops"],
   },
   "longevity-functional": {

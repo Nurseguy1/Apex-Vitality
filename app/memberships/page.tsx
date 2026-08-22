@@ -33,7 +33,7 @@ const options = [
   },
   {
     detailsUrl: "/memberships/performance",
-    image: "/membership-performance-v1.png",
+    image: "/membership-performance-diverse-v2.png",
     name: "Apex Performance Membership",
     price: "From $749 USD",
     cadence: "per month",

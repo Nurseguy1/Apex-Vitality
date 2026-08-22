@@ -32,7 +32,7 @@ const carePaths = [
     eyebrow: "Ongoing support",
     title: "Membership Care",
     copy: "Available to California residents. Keep your care, follow-up, treatment coordination, and support connected through one simple membership.",
-    image: "/membership-performance-v1.png",
+    image: "/membership-performance-diverse-v2.png",
     href: "/memberships",
     cta: "View memberships",
   },

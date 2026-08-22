@@ -36,7 +36,7 @@ export default function LocationRouter({
           )}
         </div>
         <div className="location-router-image">
-          <Image src="/location-tennis-couple-athletic-v3.png" alt="Athletic man and woman playing tennis together" fill priority sizes="(max-width: 760px) 100vw, 54vw" />
+          <Image src="/location-coastal-hiking-diverse-couple-v2.png" alt="Athletic Black woman and Latino man hiking together on a coastal trail" fill priority sizes="(max-width: 760px) 100vw, 54vw" />
         </div>
       </div>
 

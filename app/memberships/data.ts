@@ -27,7 +27,7 @@ export const memberships = {
     headline: "Raise your level.",
     price: "From $749/month",
     annual: "From $7,490/year — 2 months free",
-    image: "/membership-performance-v1.png",
+    image: "/membership-performance-diverse-v2.png",
     intro: "Elevated access and a deeper focus on performance, prevention, and long-term progress.",
     features: ["Everything in Apex Treatment Membership", "Monthly progress reviews", "Priority scheduling, subject to availability", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle and nutrition guidance", "Performance optimization planning"],
     cta: "Build my performance plan",
