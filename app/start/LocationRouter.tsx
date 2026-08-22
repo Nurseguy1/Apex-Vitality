@@ -19,7 +19,7 @@ export default function LocationRouter({
   const [state, setState] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [financialAccepted, setFinancialAccepted] = useState(false);
-  const planLabel = selectedPlan === "3-month" ? "Three-month supply" : selectedPlan === "1-month" ? "One-month supply" : "";
+  const planLabel = selectedPlan === "3-month" ? "Three-month care plan" : selectedPlan === "1-month" ? "One-month care plan" : "";
   const unavailable = state === "OTHER";
 
   return (
@@ -28,7 +28,7 @@ export default function LocationRouter({
         <div className="location-router-heading">
           <p className="eyebrow">Complete your selection</p>
           <h1 id="purchase-title">Start with the care you want.</h1>
-          <p>Confirm your selection and continue to secure checkout. Clinical review follows purchase and determines whether treatment is appropriate.</p>
+          <p>Confirm your clinical-care selection and continue to secure checkout. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy.</p>
           {selectedTreatment ? (
             <p className="location-prompt"><strong>{selectedTreatment}</strong>{planLabel ? ` · ${planLabel}` : ""}</p>
           ) : (
@@ -50,9 +50,9 @@ export default function LocationRouter({
           </article>
         ) : (
           <article>
-            <p className="result-kicker">Purchase-first care</p>
+            <p className="result-kicker">Clinical care</p>
             <h2>Continue with {selectedTreatment}.</h2>
-            <p>Your payment begins the care process. It does not establish eligibility or guarantee a prescription. If the clinician does not authorize the selected treatment, Apex Vitality will issue a full refund of the treatment purchase.</p>
+            <p>Your payment covers the selected Apex Vitality clinical-care plan. It does not establish eligibility or guarantee a prescription. Medication and pharmacy charges are separate and paid by you.</p>
 
             {offer && (
               <section className="checkout-purchase-summary" aria-labelledby="checkout-summary-title">
@@ -66,14 +66,14 @@ export default function LocationRouter({
                     <span>{offer.billingLabel}</span>
                   </div>
                 </div>
-                <h4>Included in this price</h4>
+                <h4>Clinical services included</h4>
                 <ul>
                   {offer.included.map((item) => <li key={item}>{item}</li>)}
                 </ul>
                 <div className="checkout-summary-notices">
                   <p><strong>Clinical decision:</strong> Payment requests clinician review but does not guarantee eligibility, a prescription, a particular formulation, or a particular dose.</p>
-                  <p><strong>Pharmacy fulfillment:</strong> Medication is dispensed only after authorization and a valid prescription. The dispensing pharmacy and final medication details are identified through the prescription and fulfillment workflow.</p>
-                  <p><strong>If treatment is not authorized:</strong> Apex Vitality will issue a full refund of this treatment purchase to the original payment method. No clinical-review fee will be retained. See the <Link href="/agreements/self-pay">Self-Pay Agreement</Link>.</p>
+                  <p><strong>Medication cost:</strong> Medication, pharmacy charges, supplies, and shipping are not included in this payment. They are paid separately by the patient through the dispensing pharmacy.</p>
+                  <p><strong>Clinical care:</strong> The clinical-care fee covers the services listed above whether or not medication is ultimately prescribed. See the <Link href="/agreements/self-pay">Self-Pay Agreement</Link>.</p>
                 </div>
               </section>
             )}
@@ -95,7 +95,7 @@ export default function LocationRouter({
                 </label>
                 <label>
                   <input type="checkbox" checked={financialAccepted} onChange={(event) => setFinancialAccepted(event.target.checked)} />
-                  <span>I understand the <Link href="/agreements/self-pay">self-pay terms</Link>, that payment does not guarantee a prescription, and that I will receive a full refund of this treatment purchase if the clinician does not authorize the selected treatment.</span>
+                  <span>I understand the <Link href="/agreements/self-pay">self-pay terms</Link>, that this payment covers clinical care, does not guarantee a prescription, and does not include medication or pharmacy charges.</span>
                 </label>
               </div>
             )}

@@ -19,8 +19,8 @@ const treatments = [
     image: "/treatment-sermorelin-v1.png",
     oneMonth: "$179",
     threeMonths: "$447",
-    firstLabel: "One month",
-    secondLabel: "Three months",
+    firstLabel: "One-month care",
+    secondLabel: "Three-month care",
     href: "/sermorelin",
     ctaLabel: "Explore Sermorelin care",
   },
@@ -32,8 +32,8 @@ const treatments = [
     image: "/treatment-nad-v1.png",
     oneMonth: "$149",
     threeMonths: "$357",
-    firstLabel: "One month",
-    secondLabel: "Three months",
+    firstLabel: "One-month care",
+    secondLabel: "Three-month care",
     href: "/nad-plus",
     ctaLabel: "Explore NAD+ care",
   },
@@ -58,8 +58,8 @@ const treatments = [
     image: "/treatment-glutathione-v1.png",
     oneMonth: "$149",
     threeMonths: "$357",
-    firstLabel: "One month",
-    secondLabel: "Three months",
+    firstLabel: "One-month care",
+    secondLabel: "Three-month care",
     href: "/glutathione",
     ctaLabel: "Explore Glutathione care",
   },
@@ -149,6 +149,7 @@ export default function PeptidesPage() {
                   <strong>{treatment.threeMonths}</strong>
                 </div>
               </div>
+              <p className={styles.clinicalNote}>Medication and pharmacy charges are paid separately by the patient.</p>
               <Link
                 className={styles.cardCta}
                 href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=3-month`}

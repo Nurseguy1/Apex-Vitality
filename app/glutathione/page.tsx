@@ -33,7 +33,7 @@ export default function GlutathionePage() {
             <article><span>Flexible</span><strong>$149</strong><b>one month</b><p>Start with a focused month of clinician-guided antioxidant support.</p><Link className="plan-select-button" href="/start?treatment=Glutathione&plan=1-month">Choose one month</Link></article>
             <article className="featured"><span>Best value</span><strong>$357</strong><b>three months · $119/month</b><p>Save $90 and give your wellness routine time to build momentum.</p><Link className="plan-select-button" href="/start?treatment=Glutathione&plan=3-month">Choose three months</Link></article>
           </div>
-          <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication and direct shipping</li><li>Secure follow-up support</li></ul>
+          <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication paid separately through the pharmacy</li><li>Secure follow-up support</li></ul>
         </div>
       </section>
 

@@ -23,7 +23,7 @@ const treatments = [
     savings: "Save $90",
     firstLabel: "Try one month",
     firstNote: "One-time payment",
-    secondLabel: "Three-month supply",
+    secondLabel: "Three-month care plan",
     href: "/sermorelin",
     ctaLabel: "Explore Sermorelin care",
   },
@@ -40,7 +40,7 @@ const treatments = [
     savings: "Save $90",
     firstLabel: "Try one month",
     firstNote: "One-time payment",
-    secondLabel: "Three-month supply",
+    secondLabel: "Three-month care plan",
     href: "/nad-plus",
     ctaLabel: "Explore NAD+ care",
   },
@@ -57,7 +57,7 @@ const treatments = [
     savings: "Save $90",
     firstLabel: "Try one month",
     firstNote: "One-time payment",
-    secondLabel: "Three-month supply",
+    secondLabel: "Three-month care plan",
     href: "/glutathione",
     ctaLabel: "Explore Glutathione care",
   },
@@ -93,9 +93,9 @@ export default function TreatmentsPage() {
           available where you are located.
         </p>
         <div className="treatment-shop-proof" aria-label="Treatment experience">
-          <span>Medical consultation included</span>
+          <span>Clinician-guided care</span>
           <span>Home delivery when prescribed</span>
-          <span>No separate membership required</span>
+          <span>Medication paid separately</span>
         </div>
       </section>
 
@@ -150,9 +150,8 @@ export default function TreatmentsPage() {
               </div>
 
               <p className="treatment-included">
-                The displayed program price includes medication, supplies, shipping,
-                and routine clinical support when the selected program is clinically
-                authorized and available through the applicable pharmacy.
+                The displayed price covers Apex Vitality clinical care. Medication,
+                pharmacy charges, supplies, and shipping are paid separately by the patient.
               </p>
             </div>
           </article>
@@ -174,9 +173,8 @@ export default function TreatmentsPage() {
         <p>
           Medication eligibility and treatment decisions are made by a licensed
           medical provider after clinical review. A selected treatment is not
-          guaranteed. If the clinician does not authorize the selected treatment,
-          Apex Vitality will issue a full refund of that treatment purchase and
-          will not retain a clinical-review fee.
+          guaranteed. Clinical-care fees do not guarantee that medication will be prescribed.
+          Medication and pharmacy charges are separate and paid by the patient.
           Compounded medications are not FDA-approved, and final medication,
           packaging and dispensing pharmacy may vary. Clinical care is currently
           available only to adults physically located in California at the time of care.

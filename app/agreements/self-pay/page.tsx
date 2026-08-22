@@ -24,10 +24,10 @@ export default function SelfPayAgreementPage() {
         <p>Payment starts the administrative and clinical-review process. It does not establish medical eligibility and does not guarantee a diagnosis, prescription, laboratory order, refill, medication, or result. A licensed clinician independently determines whether a requested service or treatment is appropriate.</p>
 
         <h2>Included and separate charges</h2>
-        <p>The checkout description controls what is included. Medication, laboratory testing, injection supplies, shipping, consultations, follow-up, supplements, imaging, and outside services are separate unless the checkout expressly identifies them as included. You are responsible for charges you authorize and for providing accurate billing, shipping, and contact information.</p>
+        <p>The checkout description controls which Apex Vitality clinical services are included. Prescription medication, pharmacy charges, injection supplies, and medication shipping are always separate and paid by the patient. Laboratory testing, supplements, imaging, and other outside services are also separate unless the checkout expressly identifies them as included. You are responsible for charges you authorize and for providing accurate billing, shipping, and contact information.</p>
 
         <h2>When treatment is not authorized</h2>
-        <p>If a clinician does not authorize the selected treatment, Apex Vitality will issue a full refund of that treatment purchase to the original payment method. No clinical-review fee will be retained. After treatment is authorized, medication generally cannot be returned or refunded once a pharmacy has prepared or shipped it, except when required by law or under the dispensing pharmacy&apos;s written policy.</p>
+        <p>Clinical-care fees pay for the professional services described at checkout and do not guarantee a prescription. Medication is purchased separately from the dispensing pharmacy and is subject to that pharmacy&apos;s payment, cancellation, return, and refund policies.</p>
 
         <h2>Appointments</h2>
         <p>Appointment cancellation, rescheduling, and missed-visit terms are stated in the <Link href="/terms">Terms of Service</Link> and any appointment-specific notice shown before payment. If a checkout notice conflicts with this agreement, contact Apex Vitality before paying.</p>

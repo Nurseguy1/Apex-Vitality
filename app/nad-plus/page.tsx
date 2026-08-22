@@ -16,7 +16,7 @@ const included = [
   "Secure portal communication with your clinician",
   "A personalized treatment and follow-up plan",
   "Prescription and pharmacy coordination",
-  "Medication, supplies, and direct shipping included when listed in your selected plan",
+  "Medication and pharmacy charges paid separately by the patient",
 ];
 
 const comprehensiveCare = [
@@ -77,9 +77,8 @@ export default function NadPlusPage() {
             {included.map((item) => <li key={item}>{item}</li>)}
           </ul>
           <p>
-            Your total price is presented before payment and clearly lists the
-            clinician review, care coordination, medication, supplies, and
-            shipping included in your selected plan.
+            Your clinical-care price is presented before payment. Medication,
+            pharmacy charges, supplies, and shipping are paid separately by you.
           </p>
         </aside>
       </section>
@@ -96,7 +95,7 @@ export default function NadPlusPage() {
             <article><span>Flexible</span><strong>$149</strong><b>one month</b><p>Begin with one month of clinician-guided NAD+ care.</p><Link className="plan-select-button" href="/start?treatment=NAD%2B&plan=1-month">Choose one month</Link></article>
             <article className="featured"><span>Best value</span><strong>$357</strong><b>three months · $119/month</b><p>Save $90 while giving your care plan time to build momentum.</p><Link className="plan-select-button" href="/start?treatment=NAD%2B&plan=3-month">Choose three months</Link></article>
           </div>
-          <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication, supplies, and direct shipping</li><li>Secure follow-up support</li></ul>
+          <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication paid separately through the pharmacy</li><li>Secure follow-up support</li></ul>
         </div>
       </section>
 

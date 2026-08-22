@@ -10,8 +10,6 @@ export type ProductOffer = {
 const sharedIncluded = [
   "Licensed-clinician review of your submitted health information",
   "Prescription and pharmacy coordination when treatment is authorized",
-  "The selected medication supply when prescribed",
-  "Standard supplies and direct shipping when listed for the prescribed formulation",
   "Secure follow-up instructions and access to clinical support",
 ];
 

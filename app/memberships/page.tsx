@@ -90,7 +90,7 @@ export default function MembershipsPage() {
       <section className="membership-terms">
         <h2>Simple from the beginning.</h2>
         <div>
-          <p><strong>The value is continuity:</strong> Your selected membership defines its included visits, monitoring, testing, coordination, and support. Medication and outside services are included only when the specific plan expressly says so.</p>
+          <p><strong>The value is continuity:</strong> Your selected membership defines its included visits, monitoring, testing, coordination, and support. Medication, pharmacy charges, and other outside services are paid separately by the patient.</p>
           <p><strong>Communication:</strong> Secure messaging is intended for non-urgent questions and is answered during business hours. It is not continuously monitored and is not an emergency service.</p>
           <p><strong>Clinical decisions stay clinical:</strong> Membership does not guarantee a prescription, refill, laboratory order, or particular outcome.</p>
         </div>

@@ -49,7 +49,7 @@ export default function TermsPage() {
 
         <h2>8. Compounded medications</h2>
         <p>
-          Some plans may include a compounded medication prepared by an independent licensed pharmacy pursuant to a patient-specific prescription. Compounded drugs are not FDA-approved, and the FDA does not review their safety, effectiveness, or quality before marketing. Formulation, concentration, appearance, packaging, beyond-use date, and availability may vary by pharmacy. Your clinician will discuss material treatment information and alternatives as part of your care.
+          A clinician may prescribe a compounded medication prepared by an independent licensed pharmacy pursuant to a patient-specific prescription. Compounded drugs are not FDA-approved, and the FDA does not review their safety, effectiveness, or quality before marketing. Formulation, concentration, appearance, packaging, beyond-use date, and availability may vary by pharmacy. Your clinician will discuss material treatment information and alternatives as part of your care.
         </p>
 
         <h2>9. Pharmacies, laboratories, and other third parties</h2>
@@ -59,12 +59,12 @@ export default function TermsPage() {
 
         <h2>10. Prices, payments, and insurance</h2>
         <p>
-          Prices are shown in U.S. dollars. The checkout page identifies what is included in a purchase. Medication, laboratory testing, supplements, shipping, imaging, or other outside services are separate unless expressly listed as included. Payments are processed through Stripe or another identified processor. By submitting payment information, you authorize the stated charge. Apex Vitality is a cash-pay practice unless expressly stated otherwise and does not guarantee insurance reimbursement. The <Link href="/agreements/self-pay">Self-Pay Agreement</Link> provides additional financial terms.
+          Prices are shown in U.S. dollars. Apex Vitality checkout charges cover only the clinical services identified at checkout. Prescription medication, pharmacy charges, medication supplies, and medication shipping are paid separately by the patient. Laboratory testing, supplements, imaging, or other outside services are also separate unless expressly listed as included. Payments are processed through Stripe or another identified processor. By submitting payment information, you authorize the stated charge. Apex Vitality is a cash-pay practice unless expressly stated otherwise and does not guarantee insurance reimbursement. The <Link href="/agreements/self-pay">Self-Pay Agreement</Link> provides additional financial terms.
         </p>
 
         <h2>11. Provider-review purchases and refunds</h2>
         <p>
-          Some programs allow you to pay and submit a health questionnaire before clinician review. If the reviewing clinician does not authorize the selected treatment, Apex Vitality will issue a full refund of that treatment purchase to the original payment method. No clinical-review fee will be retained. After treatment is authorized, prescription medications generally cannot be returned or refunded once a pharmacy has prepared or shipped them, except when required by law or under the pharmacy&apos;s written policy.
+          Some programs allow you to pay and submit a health questionnaire before clinician review. That payment covers the clinical services described at checkout and does not guarantee that medication will be prescribed. Medication is purchased separately from the dispensing pharmacy and is governed by the pharmacy&apos;s payment, cancellation, return, and refund policies.
         </p>
 
         <h2>12. Appointments, cancellations, and missed visits</h2>

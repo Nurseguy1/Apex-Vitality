@@ -152,14 +152,13 @@ export default function TelehealthConsentPage() {
 
         <h2>11. Fees, subscriptions, and insurance</h2>
         <p>
-          You are responsible for the fees disclosed before purchase and for
-          pharmacy, laboratory, shipping, or other third-party charges unless
-          they are expressly listed as included. Payment or membership
-          enrollment does not guarantee treatment approval. If the clinician
-          does not authorize the selected treatment, Apex Vitality will issue
-          a full refund of that treatment purchase to the original payment
-          method, with no clinical-review fee retained. Apex Vitality does not guarantee
-          insurance coverage or reimbursement.
+          You are responsible for the clinical-care fees disclosed before
+          purchase. Prescription medication, pharmacy charges, medication
+          supplies, and medication shipping are paid separately by the patient.
+          Laboratory or other third-party charges are also separate unless
+          expressly listed as included. Payment or membership enrollment does
+          not guarantee a prescription or treatment approval. Apex Vitality does
+          not guarantee insurance coverage or reimbursement.
         </p>
 
         <h2>12. Technical interruptions and follow-up</h2>

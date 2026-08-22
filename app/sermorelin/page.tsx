@@ -57,7 +57,7 @@ export default function SermorelinPage() {
             <article><span>Flexible</span><strong>$179</strong><b>one month</b><p>Start without a long commitment and continue as your plan develops.</p><Link className="plan-select-button" href="/start?treatment=Sermorelin&plan=1-month">Choose one month</Link></article>
             <article className="featured"><span>Best value</span><strong>$447</strong><b>three months · $149/month</b><p>Give your plan time to build momentum while lowering the monthly price.</p><Link className="plan-select-button" href="/start?treatment=Sermorelin&plan=3-month">Choose three months</Link></article>
           </div>
-          <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication, injection supplies, and direct shipping</li><li>Secure follow-up and refill support</li></ul>
+          <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication paid separately through the pharmacy</li><li>Secure follow-up and refill support</li></ul>
           <p className="sermorelin-pricing-note">Laboratory services are selected and priced separately when they are part of your personalized monitoring plan.</p>
         </div>
       </section>

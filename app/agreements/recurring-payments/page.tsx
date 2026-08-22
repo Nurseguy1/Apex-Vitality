@@ -18,7 +18,7 @@ export default function RecurringPaymentsPage() {
         <p>This page describes the rules that apply when you affirmatively enroll in an Apex Vitality membership or another automatically renewing service. It does not enroll you by itself.</p>
 
         <h2>Disclosures before enrollment</h2>
-        <p>Before you agree, the checkout must clearly display the amount charged, billing frequency, renewal period, included services, minimum commitment if any, how to cancel, and whether medication, testing, supplies, or shipping are included. These terms must appear close to the enrollment control.</p>
+        <p>Before you agree, the checkout must clearly display the amount charged, billing frequency, renewal period, included clinical services, minimum commitment if any, and how to cancel. Prescription medication, pharmacy charges, medication supplies, and medication shipping are paid separately by the patient. These terms must appear close to the enrollment control.</p>
 
         <h2>Your affirmative authorization</h2>
         <p>A recurring charge may begin only after you provide separate affirmative consent to the automatic-renewal terms. You authorize Apex Vitality and its identified payment processor to charge the payment method you provide at the disclosed frequency until cancellation. Verification of that consent may be retained as required by law.</p>

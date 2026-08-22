@@ -18,7 +18,7 @@ export const memberships = {
     annual: "From $4,990/year — 2 months free",
     image: "/membership-treatment-v1.png",
     intro: "One membership brings your clinician visits, treatment, labs, delivery, and ongoing support together.",
-    features: ["Clinician visits and follow-up", "Prescription and refill management", "Medication fulfillment and delivery", "Included laboratory testing", "Treatment adjustments", "Ongoing support"],
+    features: ["Clinician visits and follow-up", "Prescription and refill management", "Pharmacy coordination", "Included laboratory testing", "Treatment adjustments", "Ongoing support"],
     cta: "Start my care",
   },
   performance: {
