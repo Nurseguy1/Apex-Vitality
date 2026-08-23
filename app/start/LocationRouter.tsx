@@ -143,7 +143,7 @@ export default function LocationRouter({
               </div>
             ) : null}
 
-            <p className="location-router-note">Checkout collects and verifies your address. You must be physically located in California when clinical care is provided. Optional membership services are available but are not required.</p>
+            <p className="location-router-note">Checkout collects and verifies your address. You must be physically located in California when clinical care is provided. The focused-care membership begins after 30 days unless canceled.</p>
           </article>
         )}
       </div>
