@@ -64,6 +64,23 @@ export default function MensHealthPage() {
             support designed to help you make meaningful progress.
           </p>
         </div>
+        <div className="sermorelin-plan-grid" aria-label="Men's health membership pricing">
+          <article className="featured">
+            <span>Ongoing care membership</span>
+            <strong>$149</strong>
+            <b>per month</b>
+            <p>Ongoing clinician guidance, monitoring, prescription management, and follow-up support.</p>
+            <Link className="plan-select-button" href="/questionnaires/mens-vitality">Start my men&apos;s health intake</Link>
+          </article>
+          <article>
+            <span>Laboratory services</span>
+            <strong>About $150</strong>
+            <b>when clinically needed</b>
+            <p>Laboratory testing is selected for your individual care plan and billed separately.</p>
+            <Link className="plan-select-button" href="/questionnaires/mens-vitality">Begin my assessment</Link>
+          </article>
+        </div>
+        <p className="sermorelin-pricing-note">Medication and laboratory services are billed separately from the membership.</p>
         <div className="focused-process-grid">
           <article><span>01</span><h3>Tell us where you want to go</h3><p>Share how you feel today, what you want to improve, and the health details that help us understand you.</p></article>
           <article><span>02</span><h3>Collaborate with your clinician</h3><p>Talk through your goals, symptoms, and the testing that will help shape your care.</p></article>
