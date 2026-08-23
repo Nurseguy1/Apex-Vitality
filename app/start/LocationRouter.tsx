@@ -85,7 +85,10 @@ export default function LocationRouter({
             <p>Your payment covers the selected Apex Vitality clinical-care plan. It does not establish eligibility or guarantee a prescription. Medication and pharmacy charges are separate and paid by you.</p>
 
             {offer && (
-              <section className="checkout-purchase-summary" aria-labelledby="checkout-summary-title">
+              <section
+                className={`checkout-purchase-summary${selectedTreatment === "Focused Care Membership" ? " checkout-purchase-summary-focused" : ""}`}
+                aria-labelledby="checkout-summary-title"
+              >
                 <div className="checkout-summary-heading">
                   <div>
                     <p className="result-kicker">Purchase summary</p>
