@@ -5,6 +5,14 @@ import styles from "./home.module.css";
 
 const carePaths = [
   {
+    eyebrow: "Start with a $39 initial visit",
+    title: "Medical Weight Loss",
+    copy: "Build a personalized weight-loss plan with clinician guidance, ongoing support, and medication options tailored to your goals.",
+    image: "/weight-loss-couple-walking-v1.png",
+    href: "/weight-loss",
+    cta: "Start weight-loss care",
+  },
+  {
     eyebrow: "Adult nutrition & digestive wellness",
     title: "Metabolic & Gut Health",
     copy: "Connect metabolic goals, digestive wellness, nutrition, lifestyle, and optional Fullscript supplement bundles in one clinician-guided plan.",
@@ -19,14 +27,6 @@ const carePaths = [
     image: "/nutrition-support-family-v1.png",
     href: "/nutrition-support#nutrition-bundles",
     cta: "View support & bundles",
-  },
-  {
-    eyebrow: "Start with a $39 initial visit",
-    title: "Medical Weight Loss",
-    copy: "Build a personalized weight-loss plan with clinician guidance, ongoing support, and medication options tailored to your goals.",
-    image: "/weight-loss-couple-walking-v1.png",
-    href: "/weight-loss",
-    cta: "Start weight-loss care",
   },
   {
     eyebrow: "Know what you want?",
