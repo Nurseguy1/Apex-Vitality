@@ -9,6 +9,12 @@ Updated: August 22, 2026
 - Clinical-care fees do not guarantee eligibility, a prescription, medication, laboratory testing, or a particular result.
 - Medication, pharmacy charges, supplies, shipping, and clinically appropriate laboratory services are paid separately.
 
+## Current project status
+
+- The August 22 launch work is complete.
+- All requested website changes are published on the live site; no launch-session website changes remain unpublished.
+- The final Home-page Care order, Treatments cards, and nutritional bundle paths were verified on both the review and public sites.
+
 ## Current purchase model
 
 - Initial clinical visit: **$39 today**.
@@ -80,6 +86,7 @@ Fullscript products and bundles are paid for separately by the patient. The webs
 
 - Repository folder: `/Users/johnbagby/Documents/Codex/2026-07-14/let/apex-vitality-stripe-ready`
 - Continue from this wiki and the `agent/stripe-checkout-preview` branch.
+- There is no pending launch work at this handoff; begin with the owner's next requested change.
 - The Metabolic & Gut Health and Special Needs Nutrition cards are published on the Home-page Care section and Treatments page.
 - The Special Needs Nutrition page shows Daily Nutrition Foundation, Digestive Routine Support, and Flexible-Format Support bundle examples with age, medication, clinical-review, and separate-purchase safeguards.
 - The Metabolic & Gut Health cards link directly to the adult Fullscript bundle section.
