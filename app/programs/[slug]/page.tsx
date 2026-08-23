@@ -66,6 +66,21 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
         <div><p className="eyebrow">Designed around your goals</p><h2>A clearer path from where you are to where you want to be.</h2></div>
         <ul>{program.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
       </section>
+      {slug === "metabolic-gut" && (
+        <section className="program-fullscript" aria-labelledby="fullscript-bundles-title">
+          <div>
+            <p className="eyebrow">Personalized supplement support</p>
+            <h2 id="fullscript-bundles-title">Fullscript bundles for adult metabolic and gut health.</h2>
+            <p>Your clinician can recommend a practical bundle based on your history, current routine, goals, and clinical plan.</p>
+          </div>
+          <div className="program-fullscript-grid">
+            <article><span>01</span><h3>Nutrition foundation</h3><p>Selected support for everyday nutrition gaps and a more consistent wellness routine.</p></article>
+            <article><span>02</span><h3>Digestive support</h3><p>Options organized around digestive comfort, regularity, and the goals discussed during your review.</p></article>
+            <article><span>03</span><h3>Metabolic wellness</h3><p>Supplement support aligned with nutrition, energy, body-composition, and healthy-lifestyle priorities.</p></article>
+          </div>
+          <p className="program-fullscript-note">Fullscript products and bundles are optional, purchased separately, and not included in Apex Vitality clinical-care or membership fees.</p>
+        </section>
+      )}
       <section className="program-detail-cta">
         <p className="eyebrow">Your next step</p>
         <h2>Choose your goal. Begin your program.</h2>
