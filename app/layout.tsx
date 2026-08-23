@@ -78,7 +78,6 @@ const organizationSchema = {
       image: `${siteUrl}/og.png`,
       description:
         "A California telehealth practice providing clinician-led longevity, functional health, healthy-aging, metabolic, men's health, women's health, and digestive-wellness care for adults.",
-      telephone: practiceContact.phone,
       address: {
         "@type": "PostalAddress",
         streetAddress: practiceContact.addressLine1,

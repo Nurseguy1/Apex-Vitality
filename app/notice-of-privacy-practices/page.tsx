@@ -28,7 +28,7 @@ export default function NoticeOfPrivacyPracticesPage() {
         <h2>Clinical partners and secure systems</h2>
         <p>Protected information may be handled by Apex Vitality clinicians and staff, CharmHealth, laboratories, licensed pharmacies, and other service providers as permitted by law and described in their applicable notices. Medical information should be submitted only through the designated secure workflow.</p>
         <h2>Questions and complaints</h2>
-        <p>Contact the HIPAA Privacy Officer, Apex Vitality, at {practiceContact.addressLine1}, {practiceContact.cityStateZip}, or call {practiceContact.phone}.</p>
+        <p>Contact the HIPAA Privacy Officer in writing through the secure patient portal or by mail to Apex Vitality at {practiceContact.addressLine1}, {practiceContact.cityStateZip}.</p>
         <p>You may also complain to the U.S. Department of Health and Human Services Office for Civil Rights at 200 Independence Avenue SW, Washington, DC 20201, by calling 1-877-696-6775, or through the HHS website. Apex Vitality will not retaliate for a privacy complaint.</p>
         <h2>Changes to this notice</h2>
         <p>We may revise this notice and apply the revised terms to information already maintained and information received in the future. The current version will remain available on this website and upon request.</p>

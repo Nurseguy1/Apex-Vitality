@@ -25,7 +25,7 @@ export default function ProvidersPage() {
         <h2>Pharmacy fulfillment</h2>
         <p>Apex Vitality is not a pharmacy. If medication is prescribed, the prescription is sent to an independent licensed pharmacy serving the patient&apos;s location. The dispensing pharmacy&apos;s identity, contact information, medication label, and applicable instructions are provided through the pharmacy or fulfillment workflow. Pharmacy and product availability vary by state.</p>
         <h2>Questions</h2>
-        <p>Call {practiceContact.phone} for customer-service questions. Use the designated secure patient channel—not ordinary email—for medical information.</p>
+        <p>Use the designated secure patient channel for customer-service and medical questions. Do not send medical information through ordinary email.</p>
       </article>
       <SiteFooter />
     </main>

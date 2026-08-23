@@ -65,7 +65,7 @@ export default function CareStandardsPage() {
 
         <h2>Questions or concerns</h2>
         <p>
-          Call <a href={`tel:${practiceContact.phone.replace(/[^\d+]/g, "")}`}>{practiceContact.phone}</a> for customer-service or compliance questions. Use the secure patient channel for medical questions. Apex Vitality is not an emergency service; call 911 for an emergency.
+          Use the secure patient channel for written customer-service, compliance, and medical questions. Apex Vitality is not an emergency service; call 911 for an emergency.
         </p>
         <p className="legal-updated">Last updated August 16, 2026.</p>
       </article>

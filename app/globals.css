@@ -1201,6 +1201,31 @@ footer p {
   accent-color: #173a40;
 }
 
+.agreement-acceptance {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(24, 108, 99, 0.25);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(223, 242, 238, 0.9), rgba(239, 247, 244, 0.72));
+}
+
+.agreement-acceptance label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-weight: 700;
+}
+
+.agreement-acceptance input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.15rem;
+  accent-color: var(--teal);
+}
+
+
 .checkout-purchase-summary {
   margin: 28px 0;
   padding: clamp(24px, 4vw, 38px);

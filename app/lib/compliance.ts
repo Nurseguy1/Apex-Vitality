@@ -4,7 +4,6 @@ export const practiceContact = {
   clinician: "John Bagby, MSN, FNP-C",
   californiaLicense: "95038579",
   npi: "1851257406",
-  phone: "213-277-6454",
   addressLine1: "28105 Bobwhite Circle, Unit 121",
   cityStateZip: "Santa Clarita, CA 91350",
 };

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../../components";
 import { practiceContact } from "../../lib/compliance";
+import AgreementAcceptance from "../../components/AgreementAcceptance";
 
 export const metadata: Metadata = {
   title: "Self-Pay Agreement | Apex Vitality",
@@ -33,7 +34,11 @@ export default function SelfPayAgreementPage() {
         <p>Appointment cancellation, rescheduling, and missed-visit terms are stated in the <Link href="/terms">Terms of Service</Link> and any appointment-specific notice shown before payment. If a checkout notice conflicts with this agreement, contact Apex Vitality before paying.</p>
 
         <h2>Questions</h2>
-        <p>Call {practiceContact.phone} before purchase if you do not understand the price, included services, refund terms, or another financial term.</p>
+        <p>Submit billing questions through the designated written support channel identified in your purchase confirmation or patient portal before purchasing if you do not understand the price, included services, refund terms, or another financial term.</p>
+        <AgreementAcceptance
+          storageKey="apex-care-terms-accepted"
+          label="I agree to these self-pay terms and the linked Terms, Telehealth Consent, and applicable treatment information."
+        />
         <p className="legal-updated">Effective August 16, 2026.</p>
       </article>
       <SiteFooter />

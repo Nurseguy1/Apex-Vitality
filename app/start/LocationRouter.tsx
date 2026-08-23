@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { ProductOffer } from "../lib/product-offers";
 
 export default function LocationRouter({
@@ -17,10 +17,26 @@ export default function LocationRouter({
   offer: ProductOffer | null;
 }) {
   const [state, setState] = useState("");
-  const [termsAccepted, setTermsAccepted] = useState(false);
-  const [financialAccepted, setFinancialAccepted] = useState(false);
-  const planLabel = selectedPlan === "initial" ? (offer?.planLabel ?? "Initial clinical review") : "";
+  const [careTermsAccepted, setCareTermsAccepted] = useState(false);
+  const [recurringAccepted, setRecurringAccepted] = useState(false);
+  const planLabel = offer?.planLabel ?? "";
   const unavailable = state === "OTHER";
+  const isRecurring = selectedPlan === "ongoing";
+
+  useEffect(() => {
+    setCareTermsAccepted(window.sessionStorage.getItem("apex-care-terms-accepted") === "true");
+    setRecurringAccepted(window.sessionStorage.getItem("apex-recurring-accepted") === "true");
+  }, []);
+
+  const updateCareTermsAcceptance = (checked: boolean) => {
+    setCareTermsAccepted(checked);
+    window.sessionStorage.setItem("apex-care-terms-accepted", String(checked));
+  };
+
+  const updateRecurringAcceptance = (checked: boolean) => {
+    setRecurringAccepted(checked);
+    window.sessionStorage.setItem("apex-recurring-accepted", String(checked));
+  };
 
   return (
     <section className="location-router" aria-labelledby="purchase-title">
@@ -90,13 +106,15 @@ export default function LocationRouter({
             {state === "CA" && (
               <div className="checkout-acknowledgments" aria-label="Required purchase acknowledgments">
                 <label>
-                  <input type="checkbox" checked={termsAccepted} onChange={(event) => setTermsAccepted(event.target.checked)} />
-                  <span>I have reviewed the <Link href="/terms">Terms</Link>, <Link href="/telehealth-consent">Telehealth Consent</Link>, and applicable <Link href="/treatment-consents">treatment information</Link>.</span>
+                  <input type="checkbox" checked={careTermsAccepted} onChange={(event) => updateCareTermsAcceptance(event.target.checked)} />
+                  <span>I agree to the <Link href="/terms">Terms</Link>, <Link href="/telehealth-consent">Telehealth Consent</Link>, applicable <Link href="/treatment-consents">treatment information</Link>, and <Link href="/agreements/self-pay">self-pay terms</Link>. I understand payment does not guarantee a prescription and medication is billed separately.</span>
                 </label>
-                <label>
-                  <input type="checkbox" checked={financialAccepted} onChange={(event) => setFinancialAccepted(event.target.checked)} />
-                  <span>I understand the <Link href="/agreements/self-pay">self-pay terms</Link>, that this payment covers clinical care, does not guarantee a prescription, and does not include medication or pharmacy charges.</span>
-                </label>
+                {isRecurring && (
+                  <label>
+                    <input type="checkbox" checked={recurringAccepted} onChange={(event) => updateRecurringAcceptance(event.target.checked)} />
+                    <span>I agree to the <Link href="/agreements/recurring-payments">recurring-payment and automatic-renewal terms</Link>, including the disclosed monthly charge and cancellation method.</span>
+                  </label>
+                )}
               </div>
             )}
 
@@ -106,7 +124,7 @@ export default function LocationRouter({
                 <p>Please do not purchase this program if you will be physically located outside California during care. Join us later as additional service areas become available.</p>
               </div>
             ) : state && checkoutUrl ? (
-              termsAccepted && financialAccepted ? <a className="primary-button" href={checkoutUrl}>Continue to secure Stripe checkout · {offer?.price ?? ""}</a> : <p className="location-router-note"><strong>Review and accept both acknowledgments to continue.</strong></p>
+              careTermsAccepted && (!isRecurring || recurringAccepted) ? <a className="primary-button" href={checkoutUrl}>Continue to secure Stripe checkout · {offer?.price ?? ""}</a> : <p className="location-router-note"><strong>Review and accept the required acknowledgment to continue.</strong></p>
             ) : state ? (
               <div className="scheduler-pending">
                 <h3>Secure checkout is being connected.</h3>

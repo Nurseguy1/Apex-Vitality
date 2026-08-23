@@ -97,7 +97,7 @@ export default function MembershipsPage() {
           <p><strong>Clinical decisions stay clinical:</strong> Membership does not guarantee a prescription, refill, laboratory order, or particular outcome.</p>
         </div>
       </section>
-      <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start focused ongoing care for $149 per month.</h2><p>Choose essential treatment support now, with the option to move into a higher-touch tier as your needs grow.</p></div><Link className="primary-button" href="/start">Start online today</Link></section>
+      <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start focused ongoing care for $149 per month.</h2><p>Choose essential treatment support now, with the option to move into a higher-touch tier as your needs grow.</p></div><Link className="primary-button" href="/start?treatment=Focused%20Care%20Membership&plan=ongoing">Start online today</Link></section>
       <SiteFooter />
     </main>
   );

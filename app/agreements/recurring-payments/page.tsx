@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../../components";
-import { practiceContact } from "../../lib/compliance";
+import AgreementAcceptance from "../../components/AgreementAcceptance";
 
 export const metadata: Metadata = {
   title: "Recurring Payment Terms | Apex Vitality",
@@ -33,7 +33,11 @@ export default function RecurringPaymentsPage() {
         <p>Membership does not guarantee a prescription, refill, laboratory order, medication, or result. Clinical decisions remain with the treating clinician. Review the <Link href="/terms">Terms of Service</Link> and <Link href="/agreements/self-pay">Self-Pay Agreement</Link>.</p>
 
         <h2>Questions or cancellation assistance</h2>
-        <p>Contact Apex Vitality at {practiceContact.phone}. The online enrollment screen and confirmation message must identify the direct online cancellation method before recurring memberships are activated.</p>
+        <p>Use the direct written cancellation method identified in your enrollment confirmation or secure patient portal. The online enrollment screen and confirmation message must identify that method before recurring memberships are activated.</p>
+        <AgreementAcceptance
+          storageKey="apex-recurring-accepted"
+          label="I have read and agree to the recurring-payment and automatic-renewal terms."
+        />
         <p className="legal-updated">Effective August 16, 2026.</p>
       </article>
       <SiteFooter />

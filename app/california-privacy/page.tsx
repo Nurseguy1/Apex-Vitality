@@ -30,7 +30,7 @@ export default function CaliforniaPrivacyPage() {
         <p>Subject to applicable law and exemptions, California residents may request information about collection and disclosure, correction, deletion, access, or a portable copy of certain personal information, and may exercise applicable rights concerning sale, sharing, or sensitive personal information. Apex Vitality will not discriminate against a person for exercising an applicable privacy right.</p>
 
         <h2>How to submit a request</h2>
-        <p>Call {practiceContact.phone} or write to {practiceContact.legalName}, {practiceContact.addressLine1}, {practiceContact.cityStateZip}. Identity and authority may need to be verified before a request is completed. An authorized agent may submit a request when permitted by law and supported by appropriate documentation.</p>
+        <p>Submit a written request through the secure patient portal or write to {practiceContact.legalName}, {practiceContact.addressLine1}, {practiceContact.cityStateZip}. Identity and authority may need to be verified before a request is completed. An authorized agent may submit a request when permitted by law and supported by appropriate documentation.</p>
 
         <h2>Clinical records</h2>
         <p>For access, amendment, restrictions, confidential communications, or other rights involving the clinical record, use the secure patient portal or follow the instructions in the <Link href="/notice-of-privacy-practices">HIPAA Notice</Link>.</p>

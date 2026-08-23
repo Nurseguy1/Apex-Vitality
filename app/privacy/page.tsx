@@ -21,7 +21,7 @@ export default function PrivacyPage() {
         <h2>California residents</h2>
         <p>Review the <Link href="/california-privacy">Supplemental California Privacy Notice</Link> for additional information about public-website data and applicable California privacy requests.</p>
         <h2>Questions and privacy rights</h2>
-        <p>Patients may use the secure patient portal to ask questions about medical records or communication preferences, or call {practiceContact.phone} for privacy questions.</p>
+        <p>Patients may use the secure patient portal to submit written questions about medical records, privacy, or communication preferences.</p>
         <p className="legal-updated">Last updated August 13, 2026.</p>
       </article>
       <SiteFooter />

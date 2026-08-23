@@ -16,7 +16,8 @@ export default function ContactPage() {
         <p>Use the Charm patient portal for appointment changes, assigned forms, non-urgent care messages, and other customer-service needs. Stripe receipts and payment details remain available through Stripe.</p>
         <p><Link className="secondary-dark-button" href="/patient-access">Open secure patient access</Link></p>
         <h2>Practice contact</h2>
-        <p><strong>{practiceContact.legalName}</strong><br />{practiceContact.addressLine1}<br />{practiceContact.cityStateZip}<br />Telephone: <a href={`tel:${practiceContact.phone.replace(/[^\d+]/g, "")}`}>{practiceContact.phone}</a></p>
+        <p><strong>{practiceContact.legalName}</strong><br />{practiceContact.addressLine1}<br />{practiceContact.cityStateZip}</p>
+        <p>Use the secure patient workflow for written customer-service and billing questions.</p>
         <p>See <Link href="/providers">Care Team &amp; Clinical Partners</Link> for information about who provides care.</p>
         <h2>Medical privacy</h2>
         <p>Do not send medical information through ordinary email or unsecured website messages. Secure messages are reviewed during business hours and are not an emergency service.</p>

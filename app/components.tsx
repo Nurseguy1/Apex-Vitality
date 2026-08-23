@@ -48,8 +48,7 @@ export function SiteFooter() {
         <address>
           {practiceContact.legalName}<br />
           {practiceContact.addressLine1}<br />
-          {practiceContact.cityStateZip}<br />
-          <a href={`tel:${practiceContact.phone.replace(/[^\d+]/g, "")}`}>{practiceContact.phone}</a>
+          {practiceContact.cityStateZip}
         </address>
       </div>
       <nav aria-label="Footer navigation">

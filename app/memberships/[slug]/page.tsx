@@ -22,6 +22,9 @@ export default async function MembershipDetailPage({ params }: { params: Promise
   const { slug } = await params;
   const membership = memberships[slug as MembershipSlug];
   if (!membership) notFound();
+  const enrollmentHref = slug === "initial-care"
+    ? "/start?treatment=Focused%20Care%20Membership&plan=ongoing"
+    : "/schedule/comprehensive";
 
   return (
     <main>
@@ -39,7 +42,7 @@ export default async function MembershipDetailPage({ params }: { params: Promise
             <strong>{membership.price}</strong>
             {"annual" in membership && <span>{membership.annual}</span>}
           </div>
-          <Link className="primary-button" href="/start">{membership.cta}</Link>
+          <Link className="primary-button" href={enrollmentHref}>{membership.cta}</Link>
         </div>
       </section>
 
@@ -54,7 +57,7 @@ export default async function MembershipDetailPage({ params }: { params: Promise
       <section className="membership-detail-simple">
         <p className="eyebrow">Simple by design</p>
         <h2>Choose your plan. We handle the details.</h2>
-        <Link className="primary-button" href="/start">{membership.cta}</Link>
+        <Link className="primary-button" href={enrollmentHref}>{membership.cta}</Link>
       </section>
       <SiteFooter />
     </main>

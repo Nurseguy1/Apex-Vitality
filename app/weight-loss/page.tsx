@@ -41,7 +41,7 @@ export default function WeightLossPage() {
             clear path toward results that fit your life.
           </p>
           <div className="hero-actions">
-            <Link className="primary-button" href="/questionnaires/metabolic-weight">Start for $39</Link>
+            <Link className="primary-button" href="/start?treatment=Medical%20Weight%20Loss&plan=initial">Start for $39</Link>
             <Link className="secondary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
           </div>
           <p className="hero-cta-note">Simple online start • Personal clinician guidance • Ongoing support</p>
@@ -113,7 +113,7 @@ export default function WeightLossPage() {
         <p>Start with a $39 initial visit, then continue with ongoing care for $149 per month.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
-          <Link className="secondary-button" href="/questionnaires/metabolic-weight">Start for $39</Link>
+          <Link className="secondary-button" href="/start?treatment=Medical%20Weight%20Loss&plan=initial">Start for $39</Link>
         </div>
       </section>
 

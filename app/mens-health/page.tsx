@@ -16,7 +16,7 @@ export default function MensHealthPage() {
         <h1>Men&apos;s Health</h1>
         <p>Feel stronger, sharper, and more like yourself. Personalized men&apos;s health care designed to improve energy, performance, sexual health, recovery, mood, sleep, and body composition.</p>
         <div className="hero-actions">
-          <Link className="primary-button" href="/questionnaires/mens-vitality">Start my men&apos;s health intake</Link>
+          <Link className="primary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Start my men&apos;s health care</Link>
           <Link className="secondary-button" href="/schedule">Schedule an initial visit</Link>
         </div>
         <p className="hero-cta-note">Your goals lead the way, supported by expert clinical guidance and a care plan built around you.</p>
@@ -70,7 +70,7 @@ export default function MensHealthPage() {
             <strong>$149</strong>
             <b>per month</b>
             <p>Ongoing clinician guidance, monitoring, prescription management, and follow-up support.</p>
-            <Link className="plan-select-button" href="/questionnaires/mens-vitality">Start my men&apos;s health intake</Link>
+            <Link className="plan-select-button" href="/start?treatment=Focused%20Care%20Membership&plan=ongoing">Choose ongoing care</Link>
           </article>
           <article>
             <span>Laboratory services</span>
@@ -92,7 +92,7 @@ export default function MensHealthPage() {
             <p className="eyebrow">Ready to move forward?</p>
             <h3>Take the first step toward renewed vitality.</h3>
           </div>
-          <Link className="primary-button" href="/questionnaires/mens-vitality">Start my plan</Link>
+          <Link className="primary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Start my plan</Link>
         </div>
       </section>
       <SiteFooter />
