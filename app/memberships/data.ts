@@ -1,14 +1,14 @@
 export const memberships = {
   "initial-care": {
-    name: "Initial Care Visit",
-    eyebrow: "Your first step",
-    headline: "Start moving toward your goals.",
-    price: "$259",
-    cadence: "one-time",
+    name: "Focused Care Membership",
+    eyebrow: "Essential ongoing care",
+    headline: "Keep one treatment pathway connected.",
+    price: "$149/month",
+    cadence: "monthly",
     image: "/membership-initial-care-v1.png",
-    intro: "A focused online visit designed to understand where you are, what you want to achieve, and the best next step.",
-    features: ["Initial clinician visit", "Focused health and medication review", "Prescription coordination or laboratory kit", "Personalized next steps"],
-    cta: "Start for $259",
+    intro: "Focused ongoing clinical support for patients who want one treatment pathway managed simply and consistently.",
+    features: ["Scheduled clinician follow-up", "Prescription and refill management", "Focused progress monitoring", "Secure non-urgent support"],
+    cta: "Start focused care",
   },
   treatment: {
     name: "Apex Treatment Membership",
@@ -17,8 +17,8 @@ export const memberships = {
     price: "From $499/month",
     annual: "From $4,990/year — 2 months free",
     image: "/membership-treatment-v1.png",
-    intro: "One membership brings your clinician visits, treatment, labs, delivery, and ongoing support together.",
-    features: ["Clinician visits and follow-up", "Prescription and refill management", "Pharmacy coordination", "Included laboratory testing", "Treatment adjustments", "Ongoing support"],
+    intro: "Broader clinical attention for patients managing multiple goals, treatments, or health priorities.",
+    features: ["Everything in Focused Care", "Longer, broader clinical reviews", "Multi-treatment coordination", "More frequent treatment-response review", "Clinically appropriate adjustments", "Secure non-urgent support"],
     cta: "Start my care",
   },
   performance: {

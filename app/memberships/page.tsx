@@ -11,13 +11,13 @@ const options = [
   {
     detailsUrl: "/memberships/initial-care",
     image: "/membership-initial-care-v1.png",
-    name: "Initial Care Visit",
-    price: "$259 USD",
-    cadence: "one-time",
-    intro: "Connect with a qualified medical clinician and begin the right next step.",
-    features: ["Initial clinician visit", "Focused health and medication review", "Prescription coordination or laboratory kit", "Personalized next steps"],
+    name: "Focused Care Membership",
+    price: "$149 USD",
+    cadence: "per month",
+    intro: "Focused ongoing care for one treatment pathway with the essential clinical support needed to keep it moving.",
+    features: ["Scheduled clinician follow-up", "Prescription and refill management", "Focused progress monitoring", "Secure non-urgent support"],
     checkoutUrl: "/schedule",
-    checkoutLabel: "Start for $259",
+    checkoutLabel: "Start focused care",
   },
   {
     detailsUrl: "/memberships/treatment",
@@ -26,8 +26,8 @@ const options = [
     price: "From $499 USD",
     cadence: "per month",
     annual: "From $4,990/year — 2 months free",
-    intro: "Ongoing clinical monitoring, follow-up, and treatment coordination in one connected relationship.",
-    features: ["Scheduled clinician follow-up", "Prescription and refill management", "Laboratory monitoring when included", "Treatment-response review", "Clinically appropriate adjustments", "Secure non-urgent support"],
+    intro: "Broader, more connected care for patients managing multiple goals, treatments, or health priorities.",
+    features: ["Everything in Focused Care", "Longer, broader clinical reviews", "Multi-treatment coordination", "More frequent treatment-response review", "Clinically appropriate adjustments", "Secure non-urgent support"],
     checkoutUrl: "/schedule",
     checkoutLabel: "Start with an introductory visit",
   },
@@ -88,14 +88,16 @@ export default function MembershipsPage() {
         ))}
       </div>
       <section className="membership-terms">
-        <h2>Simple from the beginning.</h2>
+        <h2>Choose the level of attention that fits your life.</h2>
         <div>
-          <p><strong>The value is continuity:</strong> Your selected membership defines its included visits, monitoring, testing, coordination, and support. Medication, pharmacy charges, and other outside services are paid separately by the patient.</p>
+          <p><strong>Focused Care keeps one pathway simple:</strong> The $149 membership is designed for patients who want essential ongoing care around a focused treatment plan.</p>
+          <p><strong>Higher tiers add time, access, and breadth:</strong> They are designed for people who want broader health oversight, longer and more frequent reviews, proactive coordination, performance planning, or concierge-level continuity.</p>
+          <p><strong>The value is clinical attention:</strong> Medication, laboratory services, pharmacy charges, and other outside services are paid separately unless a written plan expressly says they are included.</p>
           <p><strong>Communication:</strong> Secure messaging is intended for non-urgent questions and is answered during business hours. It is not continuously monitored and is not an emergency service.</p>
           <p><strong>Clinical decisions stay clinical:</strong> Membership does not guarantee a prescription, refill, laboratory order, or particular outcome.</p>
         </div>
       </section>
-      <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start with a $259 initial care visit.</h2><p>Connect with a qualified medical clinician and begin the right next step.</p></div><Link className="primary-button" href="/start">Start online today</Link></section>
+      <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start focused ongoing care for $149 per month.</h2><p>Choose essential treatment support now, with the option to move into a higher-touch tier as your needs grow.</p></div><Link className="primary-button" href="/start">Start online today</Link></section>
       <SiteFooter />
     </main>
   );
