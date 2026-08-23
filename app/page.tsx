@@ -5,6 +5,22 @@ import styles from "./home.module.css";
 
 const carePaths = [
   {
+    eyebrow: "Adult nutrition & digestive wellness",
+    title: "Metabolic & Gut Health",
+    copy: "Connect metabolic goals, digestive wellness, nutrition, lifestyle, and optional Fullscript supplement bundles in one clinician-guided plan.",
+    image: "/program-metabolic-couple-v1.png",
+    href: "/programs/metabolic-gut#fullscript-bundles",
+    cta: "View program & bundles",
+  },
+  {
+    eyebrow: "Caregiver-guided nutrition support",
+    title: "Special Needs Nutrition",
+    copy: "Build an achievable nutrition and digestive-wellness routine around accepted foods, sensory preferences, supplement forms, and family priorities.",
+    image: "/nutrition-support-family-v1.png",
+    href: "/nutrition-support#nutrition-bundles",
+    cta: "View support & bundles",
+  },
+  {
     eyebrow: "Start with a $39 initial visit",
     title: "Medical Weight Loss",
     copy: "Build a personalized weight-loss plan with clinician guidance, ongoing support, and medication options tailored to your goals.",
@@ -73,13 +89,13 @@ export default function Home() {
         <article><strong>Move forward</strong><p>Leave with a clear plan and an easy next step.</p></article>
       </section>
 
-      <section className={styles.intro} id="care">
+      <section className={styles.intro}>
         <p className={styles.kicker}>Choose your care experience</p>
         <h2>One clear place to start.</h2>
         <p>You do not need to understand every option before beginning. Choose what feels most relevant and let your clinician help tailor the details.</p>
       </section>
 
-      <section className={styles.pathStack} aria-label="Care choices">
+      <section className={styles.pathStack} id="care" aria-label="Care choices">
         {carePaths.map((path, index) => (
           <article className={styles.pathPanel} key={path.title}>
             <div className={styles.pathImage}>

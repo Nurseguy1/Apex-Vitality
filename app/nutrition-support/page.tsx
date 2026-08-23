@@ -56,6 +56,32 @@ export default function NutritionSupportPage() {
         </div>
       </section>
 
+      <section className="program-fullscript" id="nutrition-bundles" aria-labelledby="nutrition-bundles-title">
+        <div>
+          <p className="eyebrow">Optional Fullscript support</p>
+          <h2 id="nutrition-bundles-title">Bundle examples designed around the person and the routine.</h2>
+          <p>A clinician may recommend an age-appropriate bundle after reviewing accepted foods, supplement forms, medications, health history, and the family&apos;s priorities.</p>
+        </div>
+        <div className="program-fullscript-grid">
+          <article>
+            <span>01</span>
+            <h3>Daily nutrition foundation</h3>
+            <p>A streamlined starting bundle for likely everyday nutrition gaps, using forms and flavors the person is more likely to accept.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Digestive routine support</h3>
+            <p>Personalized options organized around digestive comfort, fiber or regularity goals, hydration, and the existing food routine.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Flexible-format support</h3>
+            <p>Powders, liquids, chewables, capsules, or other practical formats selected to respect sensory preferences and caregiver capacity.</p>
+          </article>
+        </div>
+        <p className="program-fullscript-note">These are examples, not preselected prescriptions. Exact products, doses, and whether supplements are appropriate depend on clinician review, age, health history, and current medications. Fullscript purchases are optional, paid separately, and not included in Apex Vitality clinical-care or membership fees.</p>
+      </section>
+
       <section className="nutrition-audience">
         <div className="nutrition-audience-copy">
           <p className="eyebrow">Designed for everyday challenges</p>

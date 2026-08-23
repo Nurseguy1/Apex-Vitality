@@ -67,7 +67,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
         <ul>{program.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
       </section>
       {slug === "metabolic-gut" && (
-        <section className="program-fullscript" aria-labelledby="fullscript-bundles-title">
+        <section className="program-fullscript" id="fullscript-bundles" aria-labelledby="fullscript-bundles-title">
           <div>
             <p className="eyebrow">Personalized supplement support</p>
             <h2 id="fullscript-bundles-title">Fullscript bundles for adult metabolic and gut health.</h2>

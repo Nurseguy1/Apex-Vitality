@@ -3973,6 +3973,12 @@ footer p {
   font-size: 18px;
   line-height: 1.65;
 }
+.treatment-details-link {
+  align-self: flex-start;
+  margin-top: 2px;
+  color: #176f70;
+  font-size: 15px;
+}
 .treatment-price-options {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -25,6 +25,7 @@ const treatments = [
     firstNote: "Today · then $149/month after 30 days",
     secondLabel: "Ongoing clinical care",
     href: "/sermorelin",
+    detailsLabel: "Learn about Sermorelin care",
     ctaLabel: "Explore Sermorelin care",
   },
   {
@@ -42,6 +43,7 @@ const treatments = [
     firstNote: "Today · then $149/month after 30 days",
     secondLabel: "Ongoing clinical care",
     href: "/nad-plus",
+    detailsLabel: "Learn about NAD+ care",
     ctaLabel: "Explore NAD+ care",
   },
   {
@@ -59,6 +61,7 @@ const treatments = [
     firstNote: "Today · then $149/month after 30 days",
     secondLabel: "Ongoing clinical care",
     href: "/glutathione",
+    detailsLabel: "Learn about Glutathione care",
     ctaLabel: "Explore Glutathione care",
   },
   {
@@ -76,7 +79,26 @@ const treatments = [
     firstNote: "Today · then $149/month after 30 days",
     secondLabel: "Ongoing clinical care",
     href: "/weight-loss",
+    detailsLabel: "Learn about weight-loss care",
     ctaLabel: "Explore weight-loss care",
+  },
+  {
+    name: "Metabolic & Gut Health",
+    tag: "Metabolic wellness · digestive support · adult nutrition",
+    headline: "Connect nutrition, digestion, and metabolic health.",
+    description:
+      "Clinician-guided care that brings digestive wellness, metabolic goals, nutrition, lifestyle, and optional Fullscript supplement bundles into one practical plan.",
+    image: "/program-metabolic-couple-v1.png",
+    oneMonth: "$39",
+    threeMonths: "$149/month",
+    equivalent: "Fullscript bundles paid separately",
+    savings: "Cancel future renewals anytime",
+    firstLabel: "Initial clinical review",
+    firstNote: "Today · then $149/month after 30 days",
+    secondLabel: "Ongoing membership care",
+    href: "/programs/metabolic-gut#fullscript-bundles",
+    detailsLabel: "See program and Fullscript bundles",
+    ctaLabel: "Start metabolic care",
   },
   {
     name: "Special Needs Nutrition",
@@ -92,7 +114,8 @@ const treatments = [
     firstLabel: "Initial clinical review",
     firstNote: "Today · then $149/month after 30 days",
     secondLabel: "Ongoing membership care",
-    href: "/nutrition-support",
+    href: "/nutrition-support#nutrition-bundles",
+    detailsLabel: "See nutrition support and bundles",
     ctaLabel: "Start nutrition membership",
   },
 ];
@@ -124,6 +147,8 @@ export default function TreatmentsPage() {
                 src={treatment.image}
                 alt={treatment.name === "Medical Weight Loss"
                   ? "Active man and woman walking together outdoors"
+                  : treatment.name === "Metabolic & Gut Health"
+                    ? "Active adult couple walking together as part of a metabolic wellness routine"
                   : treatment.name === "Special Needs Nutrition"
                     ? "Caregiver and family sharing a supportive nutrition routine"
                     : `Illustrative prescription vial for ${treatment.name} treatment`}
@@ -142,6 +167,9 @@ export default function TreatmentsPage() {
               <p className="eyebrow">{treatment.tag}</p>
               <h2>{treatment.headline}</h2>
               <p>{treatment.description}</p>
+              <Link className="text-link treatment-details-link" href={treatment.href}>
+                {treatment.detailsLabel} →
+              </Link>
 
               <div className="treatment-price-options">
                 <section className="treatment-price-card">
