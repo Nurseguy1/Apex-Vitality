@@ -68,13 +68,13 @@ const treatments = [
     description:
       "Personalized clinical evaluation, medication management, progress monitoring, and ongoing support, with FDA-approved options such as Wegovy or Zepbound considered when appropriate.",
     image: "/weight-loss-couple-walking-v1.png",
-    oneMonth: "$149/month",
-    threeMonths: "Paid separately",
-    equivalent: "Direct from the dispensing pharmacy",
-    savings: "No medication markup",
-    firstLabel: "Clinical membership",
-    firstNote: "Ongoing medical care",
-    secondLabel: "Medication cost",
+    oneMonth: "$39",
+    threeMonths: "$149/month",
+    equivalent: "Medication paid separately",
+    savings: "Cancel future renewals anytime",
+    firstLabel: "Initial visit",
+    firstNote: "One-time payment",
+    secondLabel: "Ongoing clinical care",
     href: "/weight-loss",
     ctaLabel: "Explore weight-loss care",
   },
@@ -127,7 +127,7 @@ export default function TreatmentsPage() {
               <div className="treatment-price-options">
                 <section className="treatment-price-card">
                   <span>{treatment.firstLabel}</span>
-                  <strong className={treatment.name === "Medical Weight Loss" ? "treatment-price-monthly" : undefined}>
+                  <strong>
                     {treatment.oneMonth}
                   </strong>
                   <small>{treatment.firstNote}</small>
@@ -137,7 +137,7 @@ export default function TreatmentsPage() {
                 </section>
 
                 <section className="treatment-price-card treatment-price-best">
-                  <span className="best-value-badge">{treatment.name === "Medical Weight Loss" ? "Medication" : "Ongoing care"}</span>
+                  <span className="best-value-badge">Ongoing care</span>
                   <span>{treatment.secondLabel}</span>
                   <strong className={treatment.threeMonths === "Paid separately" ? "treatment-price-separate" : "treatment-price-monthly"}>
                     {treatment.threeMonths}
