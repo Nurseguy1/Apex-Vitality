@@ -47,6 +47,9 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const program = programs[slug as ProgramSlug];
   if (!program) notFound();
+  const startHref = slug === "metabolic-gut"
+    ? "/start?treatment=Metabolic%20%26%20Gut%20Health&plan=initial"
+    : "/treatments";
 
   return (
     <main>
@@ -56,7 +59,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
           <p className="eyebrow">{program.eyebrow}</p>
           <h1>{program.headline}</h1>
           <p>{program.intro}</p>
-          <Link className="primary-button" href="/treatments">Choose focused care</Link>
+          <Link className="primary-button" href={startHref}>{slug === "metabolic-gut" ? "Start for $39" : "Choose focused care"}</Link>
         </div>
       </section>
       <section className="program-detail-includes">
@@ -67,7 +70,8 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
         <p className="eyebrow">Your next step</p>
         <h2>Choose your goal. Begin your program.</h2>
         <p>Start online, connect with a qualified medical clinician, and put your personalized plan into motion.</p>
-        <Link className="primary-button" href="/treatments">Start online today</Link>
+        {slug === "metabolic-gut" && <p>Supplements recommended as part of your plan may be purchased separately through Fullscript. Laboratory services, medications, and other outside services are also paid separately.</p>}
+        <Link className="primary-button" href={startHref}>{slug === "metabolic-gut" ? "Begin my $39 evaluation" : "Start online today"}</Link>
       </section>
       <SiteFooter />
     </main>

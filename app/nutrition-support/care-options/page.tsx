@@ -9,23 +9,14 @@ export const metadata: Metadata = {
 
 const options = [
   {
-    label: "The simple start",
-    title: "Daily Nutrition Foundation",
-    price: "$79",
-    description: "A short caregiver questionnaire, clinician review, and a practical foundation plan for everyday nutrition support.",
-    items: ["Brief starting questionnaire", "Medication and supplement review", "Simple daily plan", "Fullscript recommendations when useful"],
-    action: "Start with the foundation",
+    label: "Ongoing support",
+    title: "Special Needs Nutrition Membership",
+    price: "$39 to start",
+    description: "Begin with a caregiver-guided clinical review, then continue with ongoing nutrition and digestive-wellness support for $149 per month after 30 days unless canceled.",
+    items: ["Initial clinician review", "Scheduled follow-up visits", "Personalized nutrition, supplement guidance, and plan adjustments", "Fullscript bundles purchased separately"],
+    action: "Start membership care",
     featured: true,
-    href: "/schedule",
-  },
-  {
-    label: "When one concern needs more attention",
-    title: "Focused Support",
-    price: "$59 follow-up",
-    description: "Add a focused visit for selective eating, protein intake, constipation or fiber, probiotics, omega-3s, or supplement questions.",
-    items: ["Expanded questions for the concern", "Brief telehealth follow-up", "Plan adjustments", "Clear home observations to track"],
-    action: "Explore focused support",
-    href: "/schedule",
+    href: "/start?treatment=Special%20Needs%20Nutrition&plan=initial",
   },
   {
     label: "For the fuller picture",
@@ -66,8 +57,8 @@ export default function NutritionCareOptionsPage() {
           <h2>The questionnaire guides the next conversation.</h2>
         </div>
         <div className="nutrition-routing-list">
-          <p><strong>Most families</strong><span>Begin with the foundation plan.</span></p>
-          <p><strong>A specific nutrition or digestive concern</strong><span>Opens a focused set of questions and follow-up option.</span></p>
+          <p><strong>Most families</strong><span>Begin with the $39 membership clinical review.</span></p>
+          <p><strong>A specific nutrition or digestive concern</strong><span>Is addressed through personalized membership care and ongoing adjustments.</span></p>
           <p><strong>Growth, swallowing, complex medications, or several concerns</strong><span>Moves into comprehensive care or coordinated referral.</span></p>
         </div>
       </section>

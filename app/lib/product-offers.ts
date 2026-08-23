@@ -54,6 +54,30 @@ const offers: Record<string, ProductOffer> = {
     billingLabel: "$39 today, then $149/month after 30 days unless canceled",
     included: sharedIncluded,
   },
+  "Metabolic & Gut Health|initial": {
+    treatment: "Metabolic & Gut Health",
+    plan: "initial",
+    planLabel: "Initial clinical evaluation",
+    price: "$39",
+    billingLabel: "$39 today, then $149/month after 30 days unless canceled",
+    included: [
+      "Licensed-clinician review of your digestive, metabolic, nutrition, and weight-related goals",
+      "Laboratory planning and review when clinically appropriate",
+      "A personalized clinical, nutrition, lifestyle, and supplement plan when appropriate",
+    ],
+  },
+  "Special Needs Nutrition|initial": {
+    treatment: "Special Needs Nutrition",
+    plan: "initial",
+    planLabel: "Membership clinical review",
+    price: "$39",
+    billingLabel: "$39 today, then $149/month after 30 days unless canceled",
+    included: [
+      "Caregiver-guided clinician review of nutrition, digestive wellness, routines, and goals",
+      "A practical personalized nutrition and supplement plan when appropriate",
+      "Scheduled follow-up visits, ongoing plan adjustments, and secure non-urgent support",
+    ],
+  },
   "Focused Care Membership|ongoing": {
     treatment: "Focused Care Membership",
     plan: "ongoing",

@@ -26,15 +26,15 @@ export default function NutritionQuestionnaire() {
 
   const comprehensive = selectedSafety.length > 0;
   const focused = !comprehensive && (foods.includes("Fewer than 10 foods") || selectedGoals.some((goal) => ["Support protein intake", "Support bowel regularity", "Improve digestive comfort"].includes(goal)) || selectedConsiderations.length >= 2);
-  const result = comprehensive ? "Comprehensive Care" : focused ? "Focused Support" : "Daily Nutrition Foundation";
+  const result = comprehensive ? "Comprehensive Care" : "Special Needs Nutrition Membership";
 
   if (step === 4) {
     return (
       <section className="nutrition-route-result" aria-live="polite">
         <p className="eyebrow">Your preview pathway</p>
-        <span className={`nutrition-route-pill route-${comprehensive ? "comprehensive" : focused ? "focused" : "foundation"}`}>{result}</span>
-        <h2>{comprehensive ? "Begin with a fuller clinical conversation." : focused ? "Add focused support to the foundation." : "Start with a simple daily foundation."}</h2>
-        <p>{comprehensive ? "One or more answers deserve a more complete review before choosing supplements. A longer visit can connect feeding safety, growth, medical history, medications, and nutrition goals." : focused ? "Your answers point to a specific nutrition or digestive priority. A focused review can add the right questions while keeping the plan practical." : "Your answers fit the streamlined starting pathway: clinician review, a simple nutrition foundation, and optional follow-up as new goals develop."}</p>
+        <span className={`nutrition-route-pill route-${comprehensive ? "comprehensive" : "foundation"}`}>{result}</span>
+        <h2>{comprehensive ? "Begin with a fuller clinical conversation." : "Start with ongoing nutrition support."}</h2>
+        <p>{comprehensive ? "One or more answers deserve a more complete review before choosing supplements. A longer visit can connect feeding safety, growth, medical history, medications, and nutrition goals." : focused ? "Your answers point to a specific nutrition or digestive priority that can be addressed through the membership review and ongoing plan adjustments." : "Your answers fit the membership pathway: caregiver-guided clinician review, a practical nutrition plan, and ongoing support as new goals develop."}</p>
         <div className="nutrition-result-actions"><button className="secondary-dark-button" type="button" onClick={() => setStep(1)}>Review again</button><Link className="primary-button" href="/nutrition-support/care-options">See this care option →</Link></div>
         <small>This preview does not provide a diagnosis, transmit answers, or replace the secure clinical intake.</small>
       </section>

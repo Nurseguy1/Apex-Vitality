@@ -103,6 +103,7 @@ export default function LocationRouter({
                 <div className="checkout-summary-notices">
                   <p><strong>Clinical decision:</strong> Payment requests clinician review but does not guarantee eligibility, a prescription, a particular formulation, or a particular dose.</p>
                   <p><strong>Medication cost:</strong> Medication, pharmacy charges, supplies, and shipping are not included in this payment. They are paid separately by the patient through the dispensing pharmacy.</p>
+                  {(selectedTreatment === "Metabolic & Gut Health" || selectedTreatment === "Special Needs Nutrition") && <p><strong>Supplements:</strong> Clinician-recommended supplements and bundles may be purchased separately through Fullscript. Supplement purchases are not included in the clinical-care payment.</p>}
                   <p><strong>Membership:</strong> $39 today automatically continues as $149/month after 30 days unless canceled. If the clinician determines you are ineligible for the selected care pathway, the $39 payment is refunded and membership does not begin.</p>
                 </div>
               </section>

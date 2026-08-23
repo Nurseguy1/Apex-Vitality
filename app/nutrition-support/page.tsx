@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const benefits = [
   ["A simpler daily routine", "Practical recommendations designed around foods, textures, schedules, and supplements your family can realistically use."],
   ["Whole-person support", "Nutrition, digestion, medications, sensitivities, sleep, and daily routines are considered together."],
-  ["Room to grow", "Start with the essentials, then add focused or comprehensive support whenever your family needs more."],
+  ["Room to grow", "Begin with membership care, then move into comprehensive support whenever your family needs more."],
 ];
 
 export default function NutritionSupportPage() {
@@ -29,8 +29,8 @@ export default function NutritionSupportPage() {
             help you build a practical plan that creates meaningful wins at home.
           </p>
           <div className="hero-actions">
-            <Link className="primary-button" href="/nutrition-support/start">Start the questionnaire</Link>
-            <Link className="secondary-button" href="/nutrition-support/care-options">See care options</Link>
+            <Link className="primary-button" href="/start?treatment=Special%20Needs%20Nutrition&plan=initial">Start for $39</Link>
+            <Link className="secondary-button" href="/nutrition-support/start">Start the questionnaire</Link>
           </div>
           <p className="nutrition-reassurance">No routine lab work is required to get started.</p>
         </div>
@@ -40,7 +40,7 @@ export default function NutritionSupportPage() {
         <article><strong>Respect preferences</strong><span>Begin with the person&apos;s strengths and accepted routine.</span></article>
         <article><strong>Overcome barriers</strong><span>Find practical ways around sensory, schedule, and food limitations.</span></article>
         <article><strong>Create achievable wins</strong><span>Choose changes that caregivers can confidently carry into daily life.</span></article>
-        <article><strong>Build on progress</strong><span>Access focused support for future goals.</span></article>
+        <article><strong>Build on progress</strong><span>Use ongoing membership support as goals evolve.</span></article>
       </section>
 
       <section className="nutrition-benefits">
@@ -71,8 +71,8 @@ export default function NutritionSupportPage() {
       <section className="nutrition-cta">
         <p className="eyebrow">Take the first step</p>
           <h2>Show us the goal. Let&apos;s create the next win.</h2>
-        <p>Complete the short starting questionnaire to identify the strongest opportunities for progress and choose the right level of support.</p>
-        <Link className="primary-button" href="/nutrition-support/start">Start Daily Nutrition Support</Link>
+        <p>Begin with a $39 clinical review, then continue for $149 per month with scheduled follow-up visits and ongoing plan support.</p>
+        <Link className="primary-button" href="/start?treatment=Special%20Needs%20Nutrition&plan=initial">Begin membership care for $39</Link>
       </section>
       <SiteFooter />
     </main>
