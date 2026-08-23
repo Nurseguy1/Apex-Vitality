@@ -127,7 +127,9 @@ export default function PeptidesPage() {
             <div className={styles.productImage}>
               <Image
                 src={treatment.image}
-                alt={`Illustrative packaging for ${treatment.name}`}
+                alt={treatment.name === "Medical Weight Loss"
+                  ? "Active man and woman exercising outdoors"
+                  : `Illustrative packaging for ${treatment.name}`}
                 fill
                 sizes="(max-width: 760px) 100vw, 50vw"
                 priority={index < 2}
