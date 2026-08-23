@@ -150,10 +150,8 @@ export default function TreatmentsPage() {
               </div>
 
               <p className="treatment-included">
-                The displayed price covers the service shown above. Medication is
-                separate. When clinically appropriate, laboratory testing and the
-                clinician&apos;s laboratory review and counseling are itemized as
-                separate services.
+                Medication and any clinically appropriate laboratory services are
+                billed separately.
               </p>
             </div>
           </article>
