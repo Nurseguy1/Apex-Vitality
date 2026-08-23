@@ -131,7 +131,7 @@ export default function TreatmentsPage() {
                     {treatment.oneMonth}
                   </strong>
                   <small>{treatment.firstNote}</small>
-                  <Link className="secondary-dark-button" href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=initial`}>
+                  <Link className="secondary-dark-button" href={`/start?treatment=${encodeURIComponent(treatment.name)}&plan=initial`}>
                     {treatment.ctaLabel ?? "Choose one month"}
                   </Link>
                 </section>
@@ -143,7 +143,7 @@ export default function TreatmentsPage() {
                     {treatment.threeMonths}
                   </strong>
                   <small>{treatment.equivalent} · {treatment.savings}</small>
-                  <Link className="primary-button" href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=initial`}>
+                  <Link className="primary-button" href={`/start?treatment=${encodeURIComponent(treatment.name)}&plan=initial`}>
                     {treatment.ctaLabel ?? "Start with an initial visit"}
                   </Link>
                 </section>

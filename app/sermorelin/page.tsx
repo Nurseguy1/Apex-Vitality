@@ -37,7 +37,7 @@ export default function SermorelinPage() {
           <p className="focused-care-lede">Sermorelin is a prescription peptide that supports natural growth-hormone signaling involved in tissue maintenance, sleep, and physical recovery. Build a plan around recovery, strength, body composition, performance, and healthy-aging goals.</p>
           <p className="focused-care-simple-path">Start with a quick questionnaire. A clinician reviews your symptoms and goals. Your medication is delivered directly to your door.</p>
           <div className="hero-actions">
-            <Link className="primary-button" href="/treatments#sermorelin">Start my peptide care plan</Link>
+            <Link className="primary-button" href="/start?treatment=Sermorelin&plan=initial">Start my peptide care plan</Link>
             <Link className="secondary-button" href="/schedule/comprehensive">Choose comprehensive care</Link>
           </div>
           <div className="sermorelin-price-line"><strong>$39</strong><span>initial visit</span><b>then $149/month for ongoing clinical care</b></div>
@@ -106,7 +106,7 @@ export default function SermorelinPage() {
       <section className="sermorelin-experience" aria-labelledby="sermorelin-experience-title">
         <div className="section-heading"><p className="eyebrow">What the experience looks like</p><h2 id="sermorelin-experience-title">Give your plan time to build momentum.</h2><p>Sermorelin care is designed as a continuing process. Your experience is personal, and follow-up helps connect what you notice with the next stage of your plan.</p></div>
         <div className="sermorelin-experience-grid">{experience.map(([time, title, copy]) => <article key={time}><span>{time}</span><h3>{title}</h3><p>{copy}</p></article>)}</div>
-        <Link className="primary-button" href="/treatments#sermorelin">Start with sermorelin care</Link>
+        <Link className="primary-button" href="/start?treatment=Sermorelin&plan=initial">Start with sermorelin care</Link>
       </section>
 
       <section className="sermorelin-trust-strip" aria-label="Sermorelin care standards">

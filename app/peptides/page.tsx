@@ -90,7 +90,7 @@ export default function PeptidesPage() {
             <Link className={styles.primaryCta} href="#treatments">
               Explore treatments
             </Link>
-            <Link className={styles.secondaryCta} href="#treatments">
+            <Link className={styles.secondaryCta} href="/start?treatment=Sermorelin&plan=initial">
               Start my medical review
             </Link>
           </div>
@@ -152,7 +152,7 @@ export default function PeptidesPage() {
               <p className={styles.clinicalNote}>Medication and any clinically appropriate laboratory services are billed separately.</p>
               <Link
                 className={styles.cardCta}
-                href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=initial`}
+                href={`/start?treatment=${encodeURIComponent(treatment.name)}&plan=initial`}
               >
                 {treatment.ctaLabel ?? `Start with ${treatment.name}`}
               </Link>
@@ -171,7 +171,7 @@ export default function PeptidesPage() {
           <li><b>2</b><span><strong>Complete your review</strong>Answer a few health questions for clinician review.</span></li>
           <li><b>3</b><span><strong>Begin your plan</strong>If prescribed, your treatment is coordinated for home delivery.</span></li>
         </ol>
-        <Link className={styles.whiteCta} href="#treatments">
+        <Link className={styles.whiteCta} href="/start?treatment=Sermorelin&plan=initial">
           Start now
         </Link>
       </section>
@@ -198,7 +198,7 @@ export default function PeptidesPage() {
             <li>Clear treatment and follow-up instructions</li>
             <li>Support for questions and plan adjustments</li>
           </ul>
-          <Link className={styles.primaryCta} href="/treatments">
+          <Link className={styles.primaryCta} href="/start?treatment=Sermorelin&plan=initial">
             Begin peptide care
           </Link>
         </div>
@@ -207,7 +207,7 @@ export default function PeptidesPage() {
       <section className={styles.finalCta}>
         <p className={styles.kicker}>Your next move starts here</p>
         <h2>Choose your goal. Start your review. Build your plan.</h2>
-        <Link className={styles.whiteCta} href="#treatments">
+        <Link className={styles.whiteCta} href="/start?treatment=Sermorelin&plan=initial">
           Get started
         </Link>
         <p className={styles.clinicalNote}>

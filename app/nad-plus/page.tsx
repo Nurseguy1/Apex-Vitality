@@ -56,7 +56,7 @@ export default function NadPlusPage() {
             your routine, and your goals.
           </p>
           <div className="hero-actions">
-            <Link className="primary-button" href="#nad-offer">Start my NAD+ plan</Link>
+            <Link className="primary-button" href="/start?treatment=NAD%2B&plan=initial">Start my NAD+ plan</Link>
             <Link className="secondary-button" href="/schedule/comprehensive">
               Choose comprehensive care
             </Link>

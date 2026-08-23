@@ -17,7 +17,7 @@ export default function MensHealthPage() {
         <p>Feel stronger, sharper, and more like yourself. Personalized men&apos;s health care designed to improve energy, performance, sexual health, recovery, mood, sleep, and body composition.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Start my men&apos;s health care</Link>
-          <Link className="secondary-button" href="/schedule">Schedule an initial visit</Link>
+          <Link className="secondary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Schedule an initial visit</Link>
         </div>
         <p className="hero-cta-note">Your goals lead the way, supported by expert clinical guidance and a care plan built around you.</p>
       </section>
@@ -77,7 +77,7 @@ export default function MensHealthPage() {
             <strong>About $150</strong>
             <b>when clinically needed</b>
             <p>Laboratory testing is selected for your individual care plan and billed separately.</p>
-            <Link className="plan-select-button" href="/questionnaires/mens-vitality">Begin my assessment</Link>
+            <Link className="plan-select-button" href="/start?treatment=Men%27s%20Health&plan=initial">Start my care</Link>
           </article>
         </div>
         <p className="sermorelin-pricing-note">Medication and laboratory services are billed separately from the membership.</p>
