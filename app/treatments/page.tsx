@@ -150,9 +150,10 @@ export default function TreatmentsPage() {
               </div>
 
               <p className="treatment-included">
-                The displayed price covers Apex Vitality clinical care. Medication
-                and any clinically appropriate laboratory testing and review are
-                billed separately.
+                The displayed price covers the service shown above. Medication is
+                separate. When clinically appropriate, laboratory testing and the
+                clinician&apos;s laboratory review and counseling are itemized as
+                separate services.
               </p>
             </div>
           </article>
