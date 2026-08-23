@@ -46,12 +46,15 @@ Purchase-oriented buttons now move forward without returning patients to a treat
 - Restyled the self-pay agreement with the site's soft teal, blue, and warm neutral palette.
 - Kept separate, affirmative acknowledgments for the self-pay terms and automatic monthly renewal.
 - Added **Metabolic & Gut Health** and **Special Needs Nutrition** to the $39 initial-care and $149 ongoing-membership pathway.
-- Added a prominent Special Needs Nutrition card to the Treatments page.
-- Added the adult metabolic and digestive Fullscript bundle section to the nutrition-support page.
+- Added matching **Metabolic & Gut Health** and **Special Needs Nutrition** cards to the Home-page Care section and Treatments page.
+- Kept **Medical Weight Loss** first in the Home-page Care section, followed by Metabolic & Gut Health and Special Needs Nutrition.
+- Added direct links from both new cards to their visible bundle sections.
+- Added the adult metabolic and digestive Fullscript bundle section to the Metabolic & Gut Health program page.
+- Added three visible Special Needs Nutrition bundle examples: Daily Nutrition Foundation, Digestive Routine Support, and Flexible-Format Support.
 - Corrected spacing on all purchase-summary prices.
 - Reduced the oversized **$149/month** price on the Focused Care purchase summary and placed it inside a padded, rounded inset.
 - Fixed the Focused Care **$149/month** price so it stays inside its summary box at responsive widths.
-- Published and verified commit `c7d7834` on both the preview deployment and the public production site.
+- Published and verified commit `ac1811f` on both the review deployment and the public production site.
 
 ## Fullscript status
 
@@ -66,19 +69,25 @@ Fullscript products and bundles are paid for separately by the patient. The webs
 ## Deployment status
 
 - Working branch: `agent/stripe-checkout-preview`
-- Latest published commit: `c7d7834` — **Fix focused care price overflow**
+- Latest published site commit: `ac1811f` — **Keep weight loss first in care options**
 - Review site: https://review.goapexvitality.com
 - Public production deployment was promoted in Vercel and verified at https://www.goapexvitality.com.
-- The Focused Care summary now renders with a responsive 26–32 px price, a wider responsive inset, and no price overflow on the public site.
+- The Home-page **Explore options** flow now lands on Care cards ordered Medical Weight Loss, Metabolic & Gut Health, then Special Needs Nutrition.
+- The Treatments page includes both nutrition-program cards, and both cards link to visible bundle sections.
+- The review and public sites were verified after the production promotion.
 
 ## Next-conversation handoff
 
 - Repository folder: `/Users/johnbagby/Documents/Codex/2026-07-14/let/apex-vitality-stripe-ready`
 - Continue from this wiki and the `agent/stripe-checkout-preview` branch.
+- The Metabolic & Gut Health and Special Needs Nutrition cards are published on the Home-page Care section and Treatments page.
+- The Special Needs Nutrition page shows Daily Nutrition Foundation, Digestive Routine Support, and Flexible-Format Support bundle examples with age, medication, clinical-review, and separate-purchase safeguards.
+- The Metabolic & Gut Health cards link directly to the adult Fullscript bundle section.
+- The full production build passed, and the Home **Explore options** flow, Treatments cards, metabolic bundle section, and Special Needs Nutrition bundle cards were verified on both review and public domains.
 - Keep responses concise and action oriented; the owner prefers the shortest practical workflow.
 - Close temporary testing and verification tabs as work is completed. Keep active Fullscript, Charm, GitHub, Stripe, Strive, and Vercel working tabs when they are still needed.
 - Before stating that a website change is finished, verify both the preview deployment and the public `www.goapexvitality.com` page.
-- Obtain explicit approval before pushing a new commit or promoting a preview deployment to the public site.
+- The owner has given a standing instruction to publish completed, verified website changes so they can review them on the live site.
 
 ## Operating notes
 
