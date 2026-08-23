@@ -50,7 +50,8 @@ Purchase-oriented buttons now move forward without returning patients to a treat
 - Added the adult metabolic and digestive Fullscript bundle section to the nutrition-support page.
 - Corrected spacing on all purchase-summary prices.
 - Reduced the oversized **$149/month** price on the Focused Care purchase summary and placed it inside a padded, rounded inset.
-- Published and verified commit `138507e` on both the preview deployment and the public production site.
+- Fixed the Focused Care **$149/month** price so it stays inside its summary box at responsive widths.
+- Published and verified commit `c7d7834` on both the preview deployment and the public production site.
 
 ## Fullscript status
 
@@ -65,10 +66,10 @@ Fullscript products and bundles are paid for separately by the patient. The webs
 ## Deployment status
 
 - Working branch: `agent/stripe-checkout-preview`
-- Latest published commit: `138507e` — **Fix focused care summary pricing layout**
+- Latest published commit: `c7d7834` — **Fix focused care price overflow**
 - Review site: https://review.goapexvitality.com
 - Public production deployment was promoted in Vercel and verified at https://www.goapexvitality.com.
-- The Focused Care summary now renders with the compact 36 px price, 12 × 18 px padding, and a rounded inset on the public site.
+- The Focused Care summary now renders with a responsive 26–32 px price, a wider responsive inset, and no price overflow on the public site.
 
 ## Next-conversation handoff
 
