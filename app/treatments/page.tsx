@@ -78,6 +78,23 @@ const treatments = [
     href: "/weight-loss",
     ctaLabel: "Explore weight-loss care",
   },
+  {
+    name: "Special Needs Nutrition",
+    tag: "Caregiver-guided nutrition · digestive wellness · practical support",
+    headline: "Make everyday nutrition feel more achievable.",
+    description:
+      "Personalized nutrition and digestive-wellness support designed around preferences, sensory needs, daily routines, and realistic goals for children, teens, and adults with special needs.",
+    image: "/nutrition-support-family-v1.png",
+    oneMonth: "$39",
+    threeMonths: "$149/month",
+    equivalent: "Fullscript bundles paid separately",
+    savings: "Cancel future renewals anytime",
+    firstLabel: "Initial clinical review",
+    firstNote: "Today · then $149/month after 30 days",
+    secondLabel: "Ongoing membership care",
+    href: "/nutrition-support",
+    ctaLabel: "Start nutrition membership",
+  },
 ];
 
 export default function TreatmentsPage() {
@@ -107,7 +124,9 @@ export default function TreatmentsPage() {
                 src={treatment.image}
                 alt={treatment.name === "Medical Weight Loss"
                   ? "Active man and woman walking together outdoors"
-                  : `Illustrative prescription vial for ${treatment.name} treatment`}
+                  : treatment.name === "Special Needs Nutrition"
+                    ? "Caregiver and family sharing a supportive nutrition routine"
+                    : `Illustrative prescription vial for ${treatment.name} treatment`}
                 fill
                 sizes="(max-width: 820px) 100vw, 50vw"
                 priority={index === 0}
@@ -116,7 +135,7 @@ export default function TreatmentsPage() {
                 <strong>{treatment.name}</strong>
                 <small>Focused care</small>
               </div>
-              {treatment.name !== "Medical Weight Loss" ? <span className="treatment-image-note">Illustrative packaging</span> : null}
+              {["Sermorelin", "NAD+", "Glutathione"].includes(treatment.name) ? <span className="treatment-image-note">Illustrative packaging</span> : null}
             </div>
 
             <div className="treatment-product-copy">
@@ -150,8 +169,9 @@ export default function TreatmentsPage() {
               </div>
 
               <p className="treatment-included">
-                Medication and any clinically appropriate laboratory services are
-                billed separately.
+                {treatment.name === "Special Needs Nutrition"
+                  ? "Fullscript supplements and bundles, laboratory services, and other outside services are paid separately."
+                  : "Medication and any clinically appropriate laboratory services are billed separately."}
               </p>
             </div>
           </article>
@@ -177,7 +197,8 @@ export default function TreatmentsPage() {
           Medication and pharmacy charges are separate and paid by the patient.
           Compounded medications are not FDA-approved, and final medication,
           packaging and dispensing pharmacy may vary. Clinical care is currently
-          available only to adults physically located in California at the time of care.
+          available only in California and is subject to the age and eligibility
+          requirements of the selected pathway.
         </p>
       </aside>
 
