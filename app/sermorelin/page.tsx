@@ -40,7 +40,7 @@ export default function SermorelinPage() {
             <Link className="primary-button" href="/treatments#sermorelin">Start my peptide care plan</Link>
             <Link className="secondary-button" href="/schedule/comprehensive">Choose comprehensive care</Link>
           </div>
-          <div className="sermorelin-price-line"><strong>$179</strong><span>month-to-month</span><b>or $149/month with a three-month plan</b></div>
+          <div className="sermorelin-price-line"><strong>$39</strong><span>initial visit</span><b>then $149/month for ongoing clinical care</b></div>
           <p className="focused-care-note">Simple online care with personal clinical review, secure communication, and convenient home delivery.</p>
         </div>
       </section>
@@ -51,14 +51,14 @@ export default function SermorelinPage() {
         </div>
         <div>
           <p className="eyebrow">One clear monthly price</p>
-          <h2 id="sermorelin-offer-title">Your peptide care, medication, and delivery in one plan.</h2>
+          <h2 id="sermorelin-offer-title">Simple pricing for clinician-guided peptide care.</h2>
           <p className="sermorelin-offer-lede">Start with focused clinician-led care built for convenience, continuity, and the goals that brought you here.</p>
           <div className="sermorelin-plan-grid">
-            <article><span>Flexible</span><strong>$179</strong><b>one month</b><p>Start without a long commitment and continue as your plan develops.</p><Link className="plan-select-button" href="/start?treatment=Sermorelin&plan=1-month">Choose one month</Link></article>
-            <article className="featured"><span>Best value</span><strong>$447</strong><b>three months · $149/month</b><p>Give your plan time to build momentum while lowering the monthly price.</p><Link className="plan-select-button" href="/start?treatment=Sermorelin&plan=3-month">Choose three months</Link></article>
+            <article><span>Start here</span><strong>$39</strong><b>initial visit</b><p>Meet with a clinician to review your goals, history, and appropriate options.</p><Link className="plan-select-button" href="/start?treatment=Sermorelin&plan=initial">Start for $39</Link></article>
+            <article className="featured"><span>Continue your care</span><strong>$149</strong><b>per month</b><p>Ongoing clinical monitoring, prescription management, and follow-up support.</p><Link className="plan-select-button" href="/start?treatment=Sermorelin&plan=initial">Begin with your initial visit</Link></article>
           </div>
           <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication paid separately through the pharmacy</li><li>Secure follow-up and refill support</li></ul>
-          <p className="sermorelin-pricing-note">Laboratory services are selected and priced separately when they are part of your personalized monitoring plan.</p>
+          <p className="sermorelin-pricing-note">Baseline laboratory testing is generally expected before sermorelin care and is typically about $150, depending on the tests selected. Final pricing is confirmed before testing.</p>
         </div>
       </section>
 

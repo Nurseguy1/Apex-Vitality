@@ -1,6 +1,6 @@
 export type ProductOffer = {
   treatment: string;
-  plan: "1-month" | "3-month";
+  plan: "initial";
   planLabel: string;
   price: string;
   billingLabel: string;
@@ -8,57 +8,33 @@ export type ProductOffer = {
 };
 
 const sharedIncluded = [
-  "Licensed-clinician review of your submitted health information",
-  "Prescription and pharmacy coordination when treatment is authorized",
-  "Secure follow-up instructions and access to clinical support",
+  "Licensed-clinician review of your submitted health information and goals",
+  "Secure follow-up questions or a conversation when more information is needed",
+  "A personalized clinical plan when appropriate",
 ];
 
 const offers: Record<string, ProductOffer> = {
-  "Sermorelin|1-month": {
+  "Sermorelin|initial": {
     treatment: "Sermorelin",
-    plan: "1-month",
-    planLabel: "One-month care package",
-    price: "$179",
+    plan: "initial",
+    planLabel: "Initial clinical visit",
+    price: "$39",
     billingLabel: "One-time payment — no automatic renewal",
     included: sharedIncluded,
   },
-  "Sermorelin|3-month": {
-    treatment: "Sermorelin",
-    plan: "3-month",
-    planLabel: "Three-month care package",
-    price: "$447",
-    billingLabel: "One-time payment — no automatic renewal",
-    included: sharedIncluded,
-  },
-  "NAD+|1-month": {
+  "NAD+|initial": {
     treatment: "NAD+",
-    plan: "1-month",
-    planLabel: "One-month care package",
-    price: "$149",
+    plan: "initial",
+    planLabel: "Questionnaire and clinician review",
+    price: "$39",
     billingLabel: "One-time payment — no automatic renewal",
     included: sharedIncluded,
   },
-  "NAD+|3-month": {
-    treatment: "NAD+",
-    plan: "3-month",
-    planLabel: "Three-month care package",
-    price: "$357",
-    billingLabel: "One-time payment — no automatic renewal",
-    included: sharedIncluded,
-  },
-  "Glutathione|1-month": {
+  "Glutathione|initial": {
     treatment: "Glutathione",
-    plan: "1-month",
-    planLabel: "One-month care package",
-    price: "$149",
-    billingLabel: "One-time payment — no automatic renewal",
-    included: sharedIncluded,
-  },
-  "Glutathione|3-month": {
-    treatment: "Glutathione",
-    plan: "3-month",
-    planLabel: "Three-month care package",
-    price: "$357",
+    plan: "initial",
+    planLabel: "Questionnaire and clinician review",
+    price: "$39",
     billingLabel: "One-time payment — no automatic renewal",
     included: sharedIncluded,
   },

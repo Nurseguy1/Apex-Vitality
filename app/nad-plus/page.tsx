@@ -89,13 +89,14 @@ export default function NadPlusPage() {
         </div>
         <div>
           <p className="eyebrow">Simple, transparent pricing</p>
-          <h2 id="nad-offer-title">Your NAD+ care, medication, and delivery in one plan.</h2>
-          <p className="sermorelin-offer-lede">Choose a flexible start or save with three months of coordinated cellular-support care.</p>
+          <h2 id="nad-offer-title">Simple pricing for clinician-guided NAD+ care.</h2>
+          <p className="sermorelin-offer-lede">Begin with a focused questionnaire and clinician review, then continue with monthly care when it fits your plan.</p>
           <div className="sermorelin-plan-grid">
-            <article><span>Flexible</span><strong>$149</strong><b>one month</b><p>Begin with one month of clinician-guided NAD+ care.</p><Link className="plan-select-button" href="/start?treatment=NAD%2B&plan=1-month">Choose one month</Link></article>
-            <article className="featured"><span>Best value</span><strong>$357</strong><b>three months · $119/month</b><p>Save $90 while giving your care plan time to build momentum.</p><Link className="plan-select-button" href="/start?treatment=NAD%2B&plan=3-month">Choose three months</Link></article>
+            <article><span>Start here</span><strong>$39</strong><b>questionnaire review</b><p>A clinician reviews your goals, history, and appropriate options. Secure follow-up is added if more information is needed.</p><Link className="plan-select-button" href="/start?treatment=NAD%2B&plan=initial">Start for $39</Link></article>
+            <article className="featured"><span>Continue your care</span><strong>$149</strong><b>per month</b><p>Ongoing clinical monitoring, prescription management, and follow-up support.</p><Link className="plan-select-button" href="/start?treatment=NAD%2B&plan=initial">Begin with your review</Link></article>
           </div>
           <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication paid separately through the pharmacy</li><li>Secure follow-up support</li></ul>
+          <p className="sermorelin-pricing-note">Laboratory testing is ordered only when your clinician determines it is appropriate and is priced separately.</p>
         </div>
       </section>
 

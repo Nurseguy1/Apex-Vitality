@@ -19,7 +19,7 @@ export default function LocationRouter({
   const [state, setState] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [financialAccepted, setFinancialAccepted] = useState(false);
-  const planLabel = selectedPlan === "3-month" ? "Three-month care plan" : selectedPlan === "1-month" ? "One-month care plan" : "";
+  const planLabel = selectedPlan === "initial" ? (offer?.planLabel ?? "Initial clinical review") : "";
   const unavailable = state === "OTHER";
 
   return (
@@ -45,7 +45,7 @@ export default function LocationRouter({
           <article>
             <p className="result-kicker">Choose your program</p>
             <h2>Find the treatment option that matches your goal.</h2>
-            <p>Compare available programs and select a one- or three-month option to continue.</p>
+            <p>Compare available programs and choose the care you want to discuss.</p>
             <Link className="primary-button" href="/treatments">Explore treatments</Link>
           </article>
         ) : (
@@ -73,7 +73,7 @@ export default function LocationRouter({
                 <div className="checkout-summary-notices">
                   <p><strong>Clinical decision:</strong> Payment requests clinician review but does not guarantee eligibility, a prescription, a particular formulation, or a particular dose.</p>
                   <p><strong>Medication cost:</strong> Medication, pharmacy charges, supplies, and shipping are not included in this payment. They are paid separately by the patient through the dispensing pharmacy.</p>
-                  <p><strong>Clinical care:</strong> The clinical-care fee covers the services listed above whether or not medication is ultimately prescribed. See the <Link href="/agreements/self-pay">Self-Pay Agreement</Link>.</p>
+                  <p><strong>Ongoing care:</strong> If you continue after the initial visit, ongoing clinical care is $149 per month. See the <Link href="/agreements/self-pay">Self-Pay Agreement</Link>.</p>
                 </div>
               </section>
             )}

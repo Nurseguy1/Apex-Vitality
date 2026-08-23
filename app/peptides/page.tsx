@@ -17,10 +17,10 @@ const treatments = [
     description:
       "Build a stronger recovery rhythm around deeper sleep, training, body composition, and the way you want to feel each day.",
     image: "/treatment-sermorelin-v1.png",
-    oneMonth: "$179",
-    threeMonths: "$447",
-    firstLabel: "One-month care",
-    secondLabel: "Three-month care",
+    oneMonth: "$39",
+    threeMonths: "$149/month",
+    firstLabel: "Initial visit",
+    secondLabel: "Ongoing care",
     href: "/sermorelin",
     ctaLabel: "Explore Sermorelin care",
   },
@@ -30,10 +30,10 @@ const treatments = [
     description:
       "Bring more intention to energy, mental sharpness, recovery, and healthy-aging goals with a focused NAD+ care pathway.",
     image: "/treatment-nad-v1.png",
-    oneMonth: "$149",
-    threeMonths: "$357",
-    firstLabel: "One-month care",
-    secondLabel: "Three-month care",
+    oneMonth: "$39",
+    threeMonths: "$149/month",
+    firstLabel: "Questionnaire review",
+    secondLabel: "Ongoing care",
     href: "/nad-plus",
     ctaLabel: "Explore NAD+ care",
   },
@@ -56,10 +56,10 @@ const treatments = [
     description:
       "Add clinician-guided antioxidant support to a more intentional wellness, recovery, and longevity routine.",
     image: "/treatment-glutathione-v1.png",
-    oneMonth: "$149",
-    threeMonths: "$357",
-    firstLabel: "One-month care",
-    secondLabel: "Three-month care",
+    oneMonth: "$39",
+    threeMonths: "$149/month",
+    firstLabel: "Questionnaire review",
+    secondLabel: "Ongoing care",
     href: "/glutathione",
     ctaLabel: "Explore Glutathione care",
   },
@@ -152,7 +152,7 @@ export default function PeptidesPage() {
               <p className={styles.clinicalNote}>Medication and pharmacy charges are paid separately by the patient.</p>
               <Link
                 className={styles.cardCta}
-                href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=3-month`}
+                href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=initial`}
               >
                 {treatment.ctaLabel ?? `Start with ${treatment.name}`}
               </Link>

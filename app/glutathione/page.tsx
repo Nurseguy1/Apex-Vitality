@@ -19,21 +19,22 @@ export default function GlutathionePage() {
           <p className="focused-care-lede">Build glutathione into a personalized plan centered on antioxidant support, recovery, wellness, and healthy-aging goals.</p>
           <p className="focused-care-simple-path">Start with a quick questionnaire. A clinician reviews your history and goals. When prescribed, your medication is delivered directly to your door.</p>
           <div className="hero-actions"><Link className="primary-button" href="#glutathione-offer">Explore my options</Link><Link className="secondary-button" href="/schedule/comprehensive">Choose comprehensive care</Link></div>
-          <div className="sermorelin-price-line"><strong>$149</strong><span>for one month</span><b>or $119/month with a three-month plan</b></div>
+          <div className="sermorelin-price-line"><strong>$39</strong><span>questionnaire review</span><b>then $149/month for ongoing clinical care</b></div>
         </div>
       </section>
 
       <section className="sermorelin-offer" id="glutathione-offer" aria-labelledby="glutathione-offer-title">
         <div className="sermorelin-kit-image"><Image src="/treatment-glutathione-v1.png" alt="Illustrative Glutathione care packaging" width={1536} height={1024} priority /></div>
         <div>
-          <p className="eyebrow">One clear program price</p>
-          <h2 id="glutathione-offer-title">Glutathione care, medication, and delivery in one plan.</h2>
-          <p className="sermorelin-offer-lede">Choose a flexible month or build consistency and save with a three-month plan.</p>
+          <p className="eyebrow">Simple, transparent pricing</p>
+          <h2 id="glutathione-offer-title">Simple pricing for clinician-guided glutathione care.</h2>
+          <p className="sermorelin-offer-lede">Begin with a focused questionnaire and clinician review, then continue with monthly care when it fits your plan.</p>
           <div className="sermorelin-plan-grid">
-            <article><span>Flexible</span><strong>$149</strong><b>one month</b><p>Start with a focused month of clinician-guided antioxidant support.</p><Link className="plan-select-button" href="/start?treatment=Glutathione&plan=1-month">Choose one month</Link></article>
-            <article className="featured"><span>Best value</span><strong>$357</strong><b>three months · $119/month</b><p>Save $90 and give your wellness routine time to build momentum.</p><Link className="plan-select-button" href="/start?treatment=Glutathione&plan=3-month">Choose three months</Link></article>
+            <article><span>Start here</span><strong>$39</strong><b>questionnaire review</b><p>A clinician reviews your goals, history, and appropriate options. Secure follow-up is added if more information is needed.</p><Link className="plan-select-button" href="/start?treatment=Glutathione&plan=initial">Start for $39</Link></article>
+            <article className="featured"><span>Continue your care</span><strong>$149</strong><b>per month</b><p>Ongoing clinical monitoring, prescription management, and follow-up support.</p><Link className="plan-select-button" href="/start?treatment=Glutathione&plan=initial">Begin with your review</Link></article>
           </div>
           <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication paid separately through the pharmacy</li><li>Secure follow-up support</li></ul>
+          <p className="sermorelin-pricing-note">Laboratory testing is ordered only when your clinician determines it is appropriate and is priced separately.</p>
         </div>
       </section>
 
@@ -48,7 +49,7 @@ export default function GlutathionePage() {
 
       <section className="sermorelin-experience">
         <div className="section-heading"><p className="eyebrow">Built around your goals</p><h2>Make antioxidant support part of a complete wellness strategy.</h2><p>Connect glutathione with sleep, nutrition, movement, recovery, and healthy-aging habits organized around the way you want to feel and function.</p></div>
-        <Link className="primary-button" href="/start?treatment=Glutathione&plan=1-month">Begin with one month</Link>
+        <Link className="primary-button" href="/start?treatment=Glutathione&plan=initial">Start for $39</Link>
       </section>
 
       <aside className="screening-notice"><strong>About glutathione products:</strong> Compounded prescription products are not FDA-approved and are not reviewed by FDA for safety, effectiveness, or quality before marketing. Your clinician determines whether treatment is appropriate and reviews the product, risks, and follow-up plan with you.</aside>

@@ -17,13 +17,13 @@ const treatments = [
     description:
       "A focused peptide pathway for adults ready to invest in stronger sleep, physical recovery, body composition, and healthy-aging goals.",
     image: "/treatment-sermorelin-v1.png",
-    oneMonth: "$179",
-    threeMonths: "$447",
-    equivalent: "$149/month",
-    savings: "Save $90",
-    firstLabel: "Try one month",
+    oneMonth: "$39",
+    threeMonths: "$149/month",
+    equivalent: "Medication paid separately",
+    savings: "Cancel future renewals anytime",
+    firstLabel: "Initial visit",
     firstNote: "One-time payment",
-    secondLabel: "Three-month care plan",
+    secondLabel: "Ongoing clinical care",
     href: "/sermorelin",
     ctaLabel: "Explore Sermorelin care",
   },
@@ -34,13 +34,13 @@ const treatments = [
     description:
       "Build NAD+ care around the energy, focus, recovery, and longevity goals that power your work, training, and life.",
     image: "/treatment-nad-v1.png",
-    oneMonth: "$149",
-    threeMonths: "$357",
-    equivalent: "$119/month",
-    savings: "Save $90",
-    firstLabel: "Try one month",
+    oneMonth: "$39",
+    threeMonths: "$149/month",
+    equivalent: "Medication paid separately",
+    savings: "Cancel future renewals anytime",
+    firstLabel: "Questionnaire review",
     firstNote: "One-time payment",
-    secondLabel: "Three-month care plan",
+    secondLabel: "Ongoing clinical care",
     href: "/nad-plus",
     ctaLabel: "Explore NAD+ care",
   },
@@ -51,13 +51,13 @@ const treatments = [
     description:
       "A streamlined wellness pathway for people who want clinician-guided antioxidant support integrated into a more intentional routine.",
     image: "/treatment-glutathione-v1.png",
-    oneMonth: "$149",
-    threeMonths: "$357",
-    equivalent: "$119/month",
-    savings: "Save $90",
-    firstLabel: "Try one month",
+    oneMonth: "$39",
+    threeMonths: "$149/month",
+    equivalent: "Medication paid separately",
+    savings: "Cancel future renewals anytime",
+    firstLabel: "Questionnaire review",
     firstNote: "One-time payment",
-    secondLabel: "Three-month care plan",
+    secondLabel: "Ongoing clinical care",
     href: "/glutathione",
     ctaLabel: "Explore Glutathione care",
   },
@@ -131,27 +131,28 @@ export default function TreatmentsPage() {
                     {treatment.oneMonth}
                   </strong>
                   <small>{treatment.firstNote}</small>
-                  <Link className="secondary-dark-button" href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=1-month`}>
+                  <Link className="secondary-dark-button" href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=initial`}>
                     {treatment.ctaLabel ?? "Choose one month"}
                   </Link>
                 </section>
 
                 <section className="treatment-price-card treatment-price-best">
-                  <span className="best-value-badge">Best value</span>
+                  <span className="best-value-badge">{treatment.name === "Medical Weight Loss" ? "Medication" : "Ongoing care"}</span>
                   <span>{treatment.secondLabel}</span>
-                  <strong className={treatment.threeMonths === "Paid separately" ? "treatment-price-separate" : undefined}>
+                  <strong className={treatment.threeMonths === "Paid separately" ? "treatment-price-separate" : "treatment-price-monthly"}>
                     {treatment.threeMonths}
                   </strong>
                   <small>{treatment.equivalent} · {treatment.savings}</small>
-                  <Link className="primary-button" href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=3-month`}>
-                    {treatment.ctaLabel ?? "Choose three months"}
+                  <Link className="primary-button" href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=initial`}>
+                    {treatment.ctaLabel ?? "Start with an initial visit"}
                   </Link>
                 </section>
               </div>
 
               <p className="treatment-included">
-                The displayed price covers Apex Vitality clinical care. Medication,
-                pharmacy charges, supplies, and shipping are paid separately by the patient.
+                The displayed price covers Apex Vitality clinical care. Medication
+                and any clinically appropriate laboratory testing and review are
+                billed separately.
               </p>
             </div>
           </article>
