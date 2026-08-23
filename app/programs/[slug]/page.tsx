@@ -9,7 +9,7 @@ const programs = {
     eyebrow: "Program pathway 01",
     headline: "Feel lighter, stronger, and more in control.",
     intro: "A connected program for digestive wellness, metabolic health, nutrition, and sustainable weight-management goals.",
-    image: "/program-metabolic-couple-v1.png",
+    image: "/location-coastal-hiking-diverse-couple-v2.png",
     features: ["Initial medical evaluation", "Relevant laboratory review", "Personalized nutrition and lifestyle plan", "Digestive and metabolic goal setting", "Structured clinical follow-up", "Clear next steps that fit your life"],
   },
   "mens-vitality": {

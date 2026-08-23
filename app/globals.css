@@ -2345,6 +2345,10 @@ footer p {
   font-size: clamp(30px, 3vw, 42px);
 }
 
+.membership-choice-panel .membership-card-modern .membership-price-focused strong {
+  font-size: clamp(24px, 2.35vw, 32px);
+}
+
 .membership-choice-panel .membership-card-modern ul {
   margin: 18px 0 28px;
   padding-top: 18px;
