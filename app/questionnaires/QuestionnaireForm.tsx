@@ -63,7 +63,7 @@ export default function QuestionnaireForm({ questionnaire }: { questionnaire: Qu
         <h2>You&apos;re ready for the next step.</h2>
         <p>Continue to the secure Apex patient portal to complete your care setup.</p>
         <p className="form-note">This website preview does not transmit or save your answers. Enter your information securely in the patient portal.</p>
-        <Link className="primary-button" href="/start">Continue to my care options →</Link>
+        <Link className="primary-button" href="/treatments">Continue to my care options →</Link>
         <button className="secondary-dark-button" type="button" onClick={() => { setSection(0); setComplete(false); setAnswers({}); }}>Review the questionnaire again</button>
       </section>
     );

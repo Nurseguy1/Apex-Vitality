@@ -36,7 +36,7 @@ export default function HowItWorksPage() {
       </section>
       <section className="portal-handoff">
         <div><p className="eyebrow">Your next step</p><h2>Ready to begin?</h2><p>Choose the care experience that fits your goals and start online today.</p></div>
-        <Link className="primary-button" href="/start">Choose my care</Link>
+        <Link className="primary-button" href="/treatments">Choose my care</Link>
       </section>
       <SiteFooter />
     </main>

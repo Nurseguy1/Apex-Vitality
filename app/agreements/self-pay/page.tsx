@@ -27,6 +27,12 @@ export default function SelfPayAgreementPage() {
         <h2>Included and separate charges</h2>
         <p>The checkout description controls which Apex Vitality clinical services are included. Prescription medication, pharmacy charges, injection supplies, and medication shipping are always separate and paid by the patient. Laboratory testing, supplements, imaging, and other outside services are also separate unless the checkout expressly identifies them as included. You are responsible for charges you authorize and for providing accurate billing, shipping, and contact information.</p>
 
+        <h2>Membership and automatic renewal</h2>
+        <p>The focused-care offer charges $39 today for the initial clinical visit and automatically continues as a $149 monthly membership beginning 30 days later unless you cancel before that charge. It renews monthly until canceled. You authorize Apex Vitality and its payment processor to charge the payment method provided at checkout according to this schedule. You may cancel future renewals using the online cancellation method identified in your purchase confirmation or patient portal. Review the full <Link href="/agreements/recurring-payments">recurring-payment terms</Link>.</p>
+
+        <h2>Ineligibility refund</h2>
+        <p>If the reviewing clinician determines that you are not eligible for the selected care pathway, Apex Vitality will refund the $39 initial-care payment and the $149 monthly membership will not begin.</p>
+
         <h2>When treatment is not authorized</h2>
         <p>Clinical-care fees pay for the professional services described at checkout and do not guarantee a prescription. Medication is purchased separately from the dispensing pharmacy and is subject to that pharmacy&apos;s payment, cancellation, return, and refund policies.</p>
 
@@ -37,7 +43,9 @@ export default function SelfPayAgreementPage() {
         <p>Submit billing questions through the designated written support channel identified in your purchase confirmation or patient portal before purchasing if you do not understand the price, included services, refund terms, or another financial term.</p>
         <AgreementAcceptance
           storageKey="apex-care-terms-accepted"
-          label="I agree to these self-pay terms and the linked Terms, Telehealth Consent, and applicable treatment information."
+          label="I agree to these care and self-pay terms, the linked Terms, Telehealth Consent, and applicable treatment information."
+          recurringStorageKey="apex-recurring-accepted"
+          recurringLabel="I expressly authorize $39 today and automatic renewal at $149 per month beginning after 30 days unless I cancel."
         />
         <p className="legal-updated">Effective August 16, 2026.</p>
       </article>

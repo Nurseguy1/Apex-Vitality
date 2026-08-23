@@ -90,7 +90,7 @@ export default function PeptidesPage() {
             <Link className={styles.primaryCta} href="#treatments">
               Explore treatments
             </Link>
-            <Link className={styles.secondaryCta} href="/start?care=peptides">
+            <Link className={styles.secondaryCta} href="#treatments">
               Start my medical review
             </Link>
           </div>
@@ -171,7 +171,7 @@ export default function PeptidesPage() {
           <li><b>2</b><span><strong>Complete your review</strong>Answer a few health questions for clinician review.</span></li>
           <li><b>3</b><span><strong>Begin your plan</strong>If prescribed, your treatment is coordinated for home delivery.</span></li>
         </ol>
-        <Link className={styles.whiteCta} href="/start?care=peptides">
+        <Link className={styles.whiteCta} href="#treatments">
           Start now
         </Link>
       </section>
@@ -198,7 +198,7 @@ export default function PeptidesPage() {
             <li>Clear treatment and follow-up instructions</li>
             <li>Support for questions and plan adjustments</li>
           </ul>
-          <Link className={styles.primaryCta} href="/start?care=peptides">
+          <Link className={styles.primaryCta} href="#treatments">
             Begin peptide care
           </Link>
         </div>
@@ -207,7 +207,7 @@ export default function PeptidesPage() {
       <section className={styles.finalCta}>
         <p className={styles.kicker}>Your next move starts here</p>
         <h2>Choose your goal. Start your review. Build your plan.</h2>
-        <Link className={styles.whiteCta} href="/start?care=peptides">
+        <Link className={styles.whiteCta} href="#treatments">
           Get started
         </Link>
         <p className={styles.clinicalNote}>

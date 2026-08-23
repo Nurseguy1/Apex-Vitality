@@ -17,7 +17,7 @@ export default function PartnerAccessPage() {
           <p className="eyebrow">Welcome to Apex Vitality</p>
           <h1>Your care can keep moving forward.</h1>
           <p>Whether you are beginning something new or continuing care from a previous clinic, we will help make your next step simple.</p>
-          <Link className="primary-button" href="/start">Get started</Link>
+          <Link className="primary-button" href="/treatments">Get started</Link>
         </div>
       </section>
 
@@ -26,7 +26,7 @@ export default function PartnerAccessPage() {
           <p className="eyebrow">New to care</p>
           <h2>Start with your goals.</h2>
           <p>Answer a few questions, connect with a qualified medical clinician, and build your plan.</p>
-          <Link className="primary-button" href="/start">Begin my care</Link>
+          <Link className="primary-button" href="/treatments">Begin my care</Link>
         </article>
 
         <article className="membership-card featured">
@@ -51,7 +51,7 @@ export default function PartnerAccessPage() {
           <p className="eyebrow">We are ready when you are</p>
           <h2>Choose the path that fits where you are today.</h2>
         </div>
-        <Link className="primary-button" href="/start">Get started</Link>
+        <Link className="primary-button" href="/treatments">Get started</Link>
       </section>
       <SiteFooter />
     </main>

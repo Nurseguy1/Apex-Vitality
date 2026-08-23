@@ -19,7 +19,7 @@ const offers: Record<string, ProductOffer> = {
     plan: "initial",
     planLabel: "Initial clinical visit",
     price: "$39",
-    billingLabel: "One-time payment — no automatic renewal",
+    billingLabel: "$39 today, then $149/month after 30 days unless canceled",
     included: sharedIncluded,
   },
   "NAD+|initial": {
@@ -27,7 +27,7 @@ const offers: Record<string, ProductOffer> = {
     plan: "initial",
     planLabel: "Questionnaire and clinician review",
     price: "$39",
-    billingLabel: "One-time payment — no automatic renewal",
+    billingLabel: "$39 today, then $149/month after 30 days unless canceled",
     included: sharedIncluded,
   },
   "Glutathione|initial": {
@@ -35,7 +35,7 @@ const offers: Record<string, ProductOffer> = {
     plan: "initial",
     planLabel: "Questionnaire and clinician review",
     price: "$39",
-    billingLabel: "One-time payment — no automatic renewal",
+    billingLabel: "$39 today, then $149/month after 30 days unless canceled",
     included: sharedIncluded,
   },
   "Medical Weight Loss|initial": {
@@ -43,7 +43,7 @@ const offers: Record<string, ProductOffer> = {
     plan: "initial",
     planLabel: "Initial clinical visit",
     price: "$39",
-    billingLabel: "One-time payment — no automatic renewal",
+    billingLabel: "$39 today, then $149/month after 30 days unless canceled",
     included: sharedIncluded,
   },
   "Men's Health|initial": {
@@ -51,7 +51,7 @@ const offers: Record<string, ProductOffer> = {
     plan: "initial",
     planLabel: "Initial clinical visit",
     price: "$39",
-    billingLabel: "One-time payment — no automatic renewal",
+    billingLabel: "$39 today, then $149/month after 30 days unless canceled",
     included: sharedIncluded,
   },
   "Focused Care Membership|ongoing": {

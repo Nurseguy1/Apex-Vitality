@@ -56,7 +56,7 @@ export default function Home() {
           <h1>Your goals are within reach.</h1>
           <p className={styles.heroLead}>Build the energy, strength, confidence, and health to achieve more.</p>
           <div className={styles.actions}>
-            <Link className={styles.primaryCta} href="/start">Start my care</Link>
+            <Link className={styles.primaryCta} href="/treatments">Start my care</Link>
             <Link className={styles.secondaryCta} href="#care">Explore options</Link>
           </div>
           <div className={styles.heroProof} aria-label="Apex care highlights">
@@ -119,14 +119,14 @@ export default function Home() {
           <p className={styles.kicker}>Care that keeps moving</p>
           <h2>Choose your goal. We’ll help build the route.</h2>
           <p>Start with a brief online intake and connect with a qualified medical clinician who can personalize the next step.</p>
-          <Link className={styles.primaryCta} href="/start">Get started</Link>
+          <Link className={styles.primaryCta} href="/treatments">Get started</Link>
         </div>
       </section>
 
       <section className={styles.finalCta}>
         <p className={styles.kicker}>Your next step</p>
         <h2>Ready to build momentum?</h2>
-        <Link className={styles.whiteCta} href="/start">Start my care</Link>
+        <Link className={styles.whiteCta} href="/treatments">Start my care</Link>
         <p className={styles.clinicalNote}>Treatment recommendations and prescriptions, when appropriate, depend on medical evaluation and clinician judgment.</p>
       </section>
 

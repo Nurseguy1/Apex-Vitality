@@ -34,7 +34,7 @@ export function SiteHeader() {
           <Link href="/patient-access">Patient Access</Link>
         </nav>
       </details>
-      <Link className="header-action" href="/start">Get Started</Link>
+      <Link className="header-action" href="/treatments">Get Started</Link>
     </header>
   );
 }
@@ -110,7 +110,7 @@ export function PageIntro({
       <h1>{title}</h1>
       <p>{description}</p>
       <div className="hero-actions">
-        <Link className="primary-button" href="/start">Start my care</Link>
+        <Link className="primary-button" href="/treatments">Start my care</Link>
         <Link className="secondary-button" href="/schedule/comprehensive">Choose comprehensive care</Link>
       </div>
     </section>

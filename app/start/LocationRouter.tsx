@@ -7,12 +7,10 @@ import { useEffect, useState } from "react";
 import type { ProductOffer } from "../lib/product-offers";
 
 export default function LocationRouter({
-  selectedPlan,
   selectedTreatment,
   checkoutUrl,
   offer,
 }: {
-  selectedPlan: string;
   selectedTreatment: string;
   checkoutUrl: string | null;
   offer: ProductOffer | null;
@@ -23,12 +21,14 @@ export default function LocationRouter({
   const [recurringAccepted, setRecurringAccepted] = useState(false);
   const planLabel = offer?.planLabel ?? "";
   const unavailable = state === "OTHER";
-  const isRecurring = selectedPlan === "ongoing";
+  const isRecurring = Boolean(offer);
 
   useEffect(() => {
     setState(window.sessionStorage.getItem("apex-checkout-state") ?? "");
-    setCareTermsAccepted(window.sessionStorage.getItem("apex-care-terms-accepted") === "true");
-    setRecurringAccepted(window.sessionStorage.getItem("apex-recurring-accepted") === "true");
+    const careAccepted = window.sessionStorage.getItem("apex-care-terms-accepted") === "true";
+    const renewalAccepted = window.sessionStorage.getItem("apex-recurring-accepted") === "true";
+    setCareTermsAccepted(careAccepted && renewalAccepted);
+    setRecurringAccepted(renewalAccepted);
   }, []);
 
   useEffect(() => {
@@ -47,17 +47,8 @@ export default function LocationRouter({
       return;
     }
     setCareTermsAccepted(false);
-    window.sessionStorage.setItem("apex-care-terms-accepted", "false");
-  };
-
-  const reviewRecurringTerms = (checked: boolean) => {
-    if (checked) {
-      window.sessionStorage.setItem("apex-checkout-state", state);
-      window.sessionStorage.setItem("apex-auto-checkout-pending", "true");
-      router.push("/agreements/recurring-payments#accept");
-      return;
-    }
     setRecurringAccepted(false);
+    window.sessionStorage.setItem("apex-care-terms-accepted", "false");
     window.sessionStorage.setItem("apex-recurring-accepted", "false");
   };
 
@@ -112,7 +103,7 @@ export default function LocationRouter({
                 <div className="checkout-summary-notices">
                   <p><strong>Clinical decision:</strong> Payment requests clinician review but does not guarantee eligibility, a prescription, a particular formulation, or a particular dose.</p>
                   <p><strong>Medication cost:</strong> Medication, pharmacy charges, supplies, and shipping are not included in this payment. They are paid separately by the patient through the dispensing pharmacy.</p>
-                  <p><strong>Ongoing care:</strong> If you continue after the initial visit, ongoing clinical care is $149 per month. See the <Link href="/agreements/self-pay">Self-Pay Agreement</Link>.</p>
+                  <p><strong>Membership:</strong> $39 today automatically continues as $149/month after 30 days unless canceled. If the clinician determines you are ineligible for the selected care pathway, the $39 payment is refunded and membership does not begin.</p>
                 </div>
               </section>
             )}
@@ -133,14 +124,8 @@ export default function LocationRouter({
               <div className="checkout-acknowledgments" aria-label="Required purchase acknowledgments">
                 <label>
                   <input type="checkbox" checked={careTermsAccepted} onChange={(event) => reviewCareTerms(event.target.checked)} />
-                  <span>I agree to the <Link href="/terms">Terms</Link>, <Link href="/telehealth-consent">Telehealth Consent</Link>, applicable <Link href="/treatment-consents">treatment information</Link>, and <Link href="/agreements/self-pay">self-pay terms</Link>. I understand payment does not guarantee a prescription and medication is billed separately.</span>
+                  <span>Review the care, self-pay, and automatic-renewal agreement to continue.</span>
                 </label>
-                {isRecurring && (
-                  <label>
-                    <input type="checkbox" checked={recurringAccepted} onChange={(event) => reviewRecurringTerms(event.target.checked)} />
-                    <span>I agree to the <Link href="/agreements/recurring-payments">recurring-payment and automatic-renewal terms</Link>, including the disclosed monthly charge and cancellation method.</span>
-                  </label>
-                )}
               </div>
             )}
 

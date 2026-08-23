@@ -20,7 +20,7 @@ export default function ServiceAreasPage() {
         <h2>Outside California</h2>
         <p>Apex Vitality is not currently accepting purchases for clinical care delivered outside California. Additional service areas may be introduced after the appropriate licensed clinical infrastructure is active and disclosed.</p>
         <h2>Confirm your pathway</h2>
-        <p><Link className="primary-button" href="/start">Choose your location</Link></p>
+        <p><Link className="primary-button" href="/treatments">Choose your care</Link></p>
       </article>
       <SiteFooter />
     </main>

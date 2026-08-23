@@ -23,7 +23,6 @@ export default async function StartPage({
     <main className="start-location-page">
       <SiteHeader />
       <LocationRouter
-        selectedPlan={plan}
         selectedTreatment={treatment}
         checkoutUrl={checkoutUrl}
         offer={offer}
