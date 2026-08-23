@@ -116,7 +116,7 @@ export default function TreatmentsPage() {
                 <strong>{treatment.name}</strong>
                 <small>Focused care</small>
               </div>
-              <span className="treatment-image-note">Illustrative packaging</span>
+              {treatment.name !== "Medical Weight Loss" ? <span className="treatment-image-note">Illustrative packaging</span> : null}
             </div>
 
             <div className="treatment-product-copy">

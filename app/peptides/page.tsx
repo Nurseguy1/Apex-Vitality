@@ -132,7 +132,7 @@ export default function PeptidesPage() {
                 sizes="(max-width: 760px) 100vw, 50vw"
                 priority={index < 2}
               />
-              <span>Illustrative packaging</span>
+              {treatment.name !== "Medical Weight Loss" ? <span>Illustrative packaging</span> : null}
             </div>
             <div className={styles.cardCopy}>
               <p className={styles.cardTag}>{treatment.outcome}</p>
@@ -198,7 +198,7 @@ export default function PeptidesPage() {
             <li>Clear treatment and follow-up instructions</li>
             <li>Support for questions and plan adjustments</li>
           </ul>
-          <Link className={styles.primaryCta} href="#treatments">
+          <Link className={styles.primaryCta} href="/treatments">
             Begin peptide care
           </Link>
         </div>
