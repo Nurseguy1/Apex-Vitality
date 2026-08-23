@@ -43,10 +43,10 @@ const treatments = [
     description:
       "Build a personalized weight-management plan with clinical evaluation, ongoing monitoring, and FDA-approved medication options when appropriate.",
     image: "/membership-banner-runner-v1.png",
-    oneMonth: "$149/month",
-    threeMonths: "Paid separately",
-    firstLabel: "Clinical membership",
-    secondLabel: "Medication",
+    oneMonth: "$39",
+    threeMonths: "$149/month",
+    firstLabel: "Initial visit",
+    secondLabel: "Ongoing care",
     href: "/weight-loss",
     ctaLabel: "Explore weight-loss care",
   },
@@ -144,12 +144,12 @@ export default function PeptidesPage() {
                   <strong>{treatment.oneMonth}</strong>
                 </div>
                 <div className={styles.bestValue}>
-                  <small>Best value</small>
+                  <small>Ongoing care</small>
                   <span>{treatment.secondLabel}</span>
                   <strong>{treatment.threeMonths}</strong>
                 </div>
               </div>
-              <p className={styles.clinicalNote}>Medication and pharmacy charges are paid separately by the patient.</p>
+              <p className={styles.clinicalNote}>Medication and any clinically appropriate laboratory services are billed separately.</p>
               <Link
                 className={styles.cardCta}
                 href={treatment.href ?? `/start?treatment=${encodeURIComponent(treatment.name)}&plan=initial`}

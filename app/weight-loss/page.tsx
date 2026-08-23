@@ -35,22 +35,22 @@ export default function WeightLossPage() {
         <div className="weight-hero-copy">
           <p className="eyebrow">Online care for California adults</p>
           <h1>Medical Weight Loss</h1>
-          <h2 className="weight-hero-offer">Start with a $59 initial visit.</h2>
+          <h2 className="weight-hero-offer">Start with a $39 initial visit.</h2>
           <p className="weight-hero-lede">
             Get a personalized medical strategy, ongoing clinician support, and a
             clear path toward results that fit your life.
           </p>
           <div className="hero-actions">
-            <Link className="primary-button" href="/questionnaires/metabolic-weight">Start for $59</Link>
+            <Link className="primary-button" href="/questionnaires/metabolic-weight">Start for $39</Link>
             <Link className="secondary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
           </div>
           <p className="hero-cta-note">Simple online start • Personal clinician guidance • Ongoing support</p>
         </div>
         <div className="weight-pricing-card">
           <span>Medical weight loss</span>
-          <strong>Start with $59</strong>
+          <strong>Start with $39</strong>
           <b>$149/month for ongoing care</b>
-          <p>Medication costs are separate.</p>
+          <p>Medication and any clinically appropriate laboratory services are billed separately.</p>
         </div>
       </section>
 
@@ -110,10 +110,10 @@ export default function WeightLossPage() {
       <section className="weight-final-cta">
         <p className="eyebrow">The power to begin is yours</p>
         <h2>Your next chapter starts with one decision.</h2>
-        <p>Start with a $59 initial visit, then continue with ongoing care for $149 per month.</p>
+        <p>Start with a $39 initial visit, then continue with ongoing care for $149 per month.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
-          <Link className="secondary-button" href="/questionnaires/metabolic-weight">Start for $59</Link>
+          <Link className="secondary-button" href="/questionnaires/metabolic-weight">Start for $39</Link>
         </div>
       </section>
 
