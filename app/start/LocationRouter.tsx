@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { ProductOffer } from "../lib/product-offers";
 
@@ -16,6 +17,7 @@ export default function LocationRouter({
   checkoutUrl: string | null;
   offer: ProductOffer | null;
 }) {
+  const router = useRouter();
   const [state, setState] = useState("");
   const [careTermsAccepted, setCareTermsAccepted] = useState(false);
   const [recurringAccepted, setRecurringAccepted] = useState(false);
@@ -24,18 +26,39 @@ export default function LocationRouter({
   const isRecurring = selectedPlan === "ongoing";
 
   useEffect(() => {
+    setState(window.sessionStorage.getItem("apex-checkout-state") ?? "");
     setCareTermsAccepted(window.sessionStorage.getItem("apex-care-terms-accepted") === "true");
     setRecurringAccepted(window.sessionStorage.getItem("apex-recurring-accepted") === "true");
   }, []);
 
-  const updateCareTermsAcceptance = (checked: boolean) => {
-    setCareTermsAccepted(checked);
-    window.sessionStorage.setItem("apex-care-terms-accepted", String(checked));
+  useEffect(() => {
+    const readyForCheckout = state === "CA" && checkoutUrl && careTermsAccepted && (!isRecurring || recurringAccepted);
+    if (readyForCheckout && window.sessionStorage.getItem("apex-auto-checkout-pending") === "true") {
+      window.sessionStorage.removeItem("apex-auto-checkout-pending");
+      window.location.assign(checkoutUrl);
+    }
+  }, [careTermsAccepted, checkoutUrl, isRecurring, recurringAccepted, state]);
+
+  const reviewCareTerms = (checked: boolean) => {
+    if (checked) {
+      window.sessionStorage.setItem("apex-checkout-state", state);
+      window.sessionStorage.setItem("apex-auto-checkout-pending", "true");
+      router.push("/agreements/self-pay#accept");
+      return;
+    }
+    setCareTermsAccepted(false);
+    window.sessionStorage.setItem("apex-care-terms-accepted", "false");
   };
 
-  const updateRecurringAcceptance = (checked: boolean) => {
-    setRecurringAccepted(checked);
-    window.sessionStorage.setItem("apex-recurring-accepted", String(checked));
+  const reviewRecurringTerms = (checked: boolean) => {
+    if (checked) {
+      window.sessionStorage.setItem("apex-checkout-state", state);
+      window.sessionStorage.setItem("apex-auto-checkout-pending", "true");
+      router.push("/agreements/recurring-payments#accept");
+      return;
+    }
+    setRecurringAccepted(false);
+    window.sessionStorage.setItem("apex-recurring-accepted", "false");
   };
 
   return (
@@ -96,7 +119,10 @@ export default function LocationRouter({
 
             <label className="checkout-state-field">
               <span>Where will you be physically located for care?</span>
-              <select value={state} onChange={(event) => setState(event.target.value)}>
+              <select value={state} onChange={(event) => {
+                setState(event.target.value);
+                window.sessionStorage.setItem("apex-checkout-state", event.target.value);
+              }}>
                 <option value="">Select your location</option>
                 <option value="CA">California</option>
                 <option value="OTHER">Outside California</option>
@@ -106,12 +132,12 @@ export default function LocationRouter({
             {state === "CA" && (
               <div className="checkout-acknowledgments" aria-label="Required purchase acknowledgments">
                 <label>
-                  <input type="checkbox" checked={careTermsAccepted} onChange={(event) => updateCareTermsAcceptance(event.target.checked)} />
+                  <input type="checkbox" checked={careTermsAccepted} onChange={(event) => reviewCareTerms(event.target.checked)} />
                   <span>I agree to the <Link href="/terms">Terms</Link>, <Link href="/telehealth-consent">Telehealth Consent</Link>, applicable <Link href="/treatment-consents">treatment information</Link>, and <Link href="/agreements/self-pay">self-pay terms</Link>. I understand payment does not guarantee a prescription and medication is billed separately.</span>
                 </label>
                 {isRecurring && (
                   <label>
-                    <input type="checkbox" checked={recurringAccepted} onChange={(event) => updateRecurringAcceptance(event.target.checked)} />
+                    <input type="checkbox" checked={recurringAccepted} onChange={(event) => reviewRecurringTerms(event.target.checked)} />
                     <span>I agree to the <Link href="/agreements/recurring-payments">recurring-payment and automatic-renewal terms</Link>, including the disclosed monthly charge and cancellation method.</span>
                   </label>
                 )}

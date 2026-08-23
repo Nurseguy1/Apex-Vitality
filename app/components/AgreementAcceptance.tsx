@@ -24,7 +24,7 @@ export default function AgreementAcceptance({
   };
 
   return (
-    <section className="agreement-acceptance" aria-label="Agreement acknowledgment">
+    <section id="accept" className="agreement-acceptance" aria-label="Agreement acknowledgment">
       <label>
         <input
           type="checkbox"
