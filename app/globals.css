@@ -2929,6 +2929,49 @@ footer p {
   font-size: 14px !important;
 }
 
+/* Comfortable, reassuring treatment for the required purchase agreement */
+.self-pay-page {
+  background:
+    radial-gradient(circle at 8% 10%, rgb(173 222 214 / .5), transparent 34%),
+    radial-gradient(circle at 94% 28%, rgb(198 220 233 / .56), transparent 38%),
+    linear-gradient(145deg, #edf6f3 0%, #edf3f6 52%, #f4eee7 100%);
+}
+
+.self-pay-page .legal-page {
+  max-width: 1040px;
+  margin: clamp(34px, 6vw, 74px) auto;
+  padding: clamp(38px, 7vw, 78px);
+  border: 1px solid rgb(72 139 135 / .34);
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgb(255 255 255 / .92), rgb(221 241 236 / .82));
+  box-shadow: 0 28px 70px rgb(31 83 84 / .14);
+}
+
+.self-pay-page .legal-page > .eyebrow { color: #087078; }
+.self-pay-page .legal-page h1 { color: #173f46; }
+.self-pay-page .legal-page h2 {
+  padding: 14px 18px;
+  border-left: 4px solid #65aaa4;
+  border-radius: 0 14px 14px 0;
+  background: linear-gradient(90deg, rgb(184 222 216 / .58), rgb(225 239 244 / .28));
+  color: #1d5559;
+}
+.self-pay-page .legal-page a { color: #087078; font-weight: 750; }
+.self-pay-page .agreement-acceptance {
+  border-color: rgb(44 128 119 / .42);
+  background: linear-gradient(135deg, #cde9e3 0%, #dcecf2 55%, #eadfd4 100%);
+  box-shadow: 0 16px 34px rgb(26 93 91 / .12);
+}
+
+@media (max-width: 700px) {
+  .self-pay-page .legal-page {
+    margin: 18px 12px 30px;
+    padding: 32px 20px;
+    border-radius: 22px;
+  }
+  .self-pay-page .legal-page h1 { font-size: clamp(38px, 12vw, 54px); }
+}
+
 
 .site-footer {
   display: grid;

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function SelfPayAgreementPage() {
   return (
-    <main>
+    <main className="self-pay-page">
       <SiteHeader />
       <article className="legal-page">
         <p className="eyebrow">Financial agreement</p>
