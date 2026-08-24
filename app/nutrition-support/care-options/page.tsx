@@ -39,7 +39,7 @@ export default function NutritionCareOptionsPage() {
         <p>Review the complete program here first. When you are ready, one agreement and one $597 checkout enroll you in the full three-month program, including the initial-care portion and 45-minute visit.</p>
         <div className="membership-flow" aria-label="Special Needs Nutrition enrollment flow">
           <span><b>1</b><strong>Review the program</strong><small>Confirm the visits, price, and eligibility.</small></span>
-          <span><b>2</b><strong>Agree &amp; pay $597</strong><small>One payment includes the $39 initial-care portion.</small></span>
+          <span><b>2</b><strong>Agree &amp; pay $597 for the three-month program</strong><small>One payment includes the $39 initial-care portion.</small></span>
           <span><b>3</b><strong>Schedule 45 minutes</strong><small>Book the included comprehensive initial visit.</small></span>
         </div>
       </section>
