@@ -71,6 +71,14 @@ export default function MembershipsPage() {
           <span><b>3</b><strong>Schedule your visit</strong><small>15 minutes with Focused Care; 45 minutes with any higher tier.</small></span>
         </div>
       </section>
+      <section className="membership-cta">
+        <div>
+          <p className="eyebrow">For parents and caregivers</p>
+          <h2>Special Needs Nutrition follows its own three-month program.</h2>
+          <p>Review the fixed three-month program before completing its single $597 agreement and checkout. The standard $39 initial-care portion is included in the total, not charged separately.</p>
+        </div>
+        <Link className="primary-button" href="/nutrition-support/care-options">View the 3-month program</Link>
+      </section>
       <div className="membership-scroll-stack" aria-label="Membership choices">
         {options.map((option, index) => (
           <section

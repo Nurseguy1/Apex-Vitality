@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../../components";
 
 export const metadata: Metadata = {
-  title: "Special Needs Nutrition Support Options | Apex Vitality",
+  title: "3-Month Special Needs Nutrition Program | Apex Vitality",
   robots: { index: false, follow: false },
 };
 
@@ -12,11 +12,11 @@ const options = [
     label: "Fixed three-month program",
     title: "Special Needs Nutrition Program",
     price: "$597 total",
-    description: "After the separate $39 initial-care payment, enroll for one fixed $597 program payment ($199 per month equivalent). There is no automatic renewal.",
-    items: ["Month 1: 45-minute initial visit and written plan", "Month 2: one 30-minute follow-up and plan adjustment", "Month 3: one 30-minute follow-up and final plan update", "Clinical messaging, Fullscript bundles, labs, and outside services are not included"],
-    action: "Begin with the $39 payment",
+    description: "Enroll with one fixed $597 payment ($199 per month equivalent). The standard $39 initial-care portion is included in this total—not charged separately. There is no automatic renewal.",
+    items: ["The $39 initial-care portion is included in the $597 total", "Month 1: 45-minute initial visit and written plan", "Month 2: one 30-minute follow-up and plan adjustment", "Month 3: one 30-minute follow-up and final plan update", "Clinical messaging, Fullscript bundles, labs, and outside services are not included"],
+    action: "Review agreement & enroll · $597",
     featured: true,
-    href: "/start?treatment=Special%20Needs%20Nutrition&plan=initial",
+    href: "/start?treatment=3-Month%20Special%20Needs%20Nutrition%20Program&plan=program",
   },
   {
     label: "After the three months",
@@ -35,8 +35,13 @@ export default function NutritionCareOptionsPage() {
       <SiteHeader />
       <section className="nutrition-options-hero">
         <p className="eyebrow">Apex Daily Nutrition Support for Special Needs</p>
-        <h1>Choose an achievable first step. Build momentum from there.</h1>
-        <p>Parents and caregivers can begin with a clear action they can manage today. The program turns concerns about a child&apos;s limited diet, digestive routine, or supplements into a written plan with scheduled follow-through.</p>
+        <h1>3-Month Special Needs Nutrition Program</h1>
+        <p>Review the complete program here first. When you are ready, one agreement and one $597 checkout enroll you in the full three-month program, including the initial-care portion and 45-minute visit.</p>
+        <div className="membership-flow" aria-label="Special Needs Nutrition enrollment flow">
+          <span><b>1</b><strong>Review the program</strong><small>Confirm the visits, price, and eligibility.</small></span>
+          <span><b>2</b><strong>Agree &amp; pay $597</strong><small>One payment includes the $39 initial-care portion.</small></span>
+          <span><b>3</b><strong>Schedule 45 minutes</strong><small>Book the included comprehensive initial visit.</small></span>
+        </div>
       </section>
       <section className="nutrition-option-grid">
         {options.map((option) => (
@@ -57,7 +62,7 @@ export default function NutritionCareOptionsPage() {
           <h2>The questionnaire guides the next conversation.</h2>
         </div>
         <div className="nutrition-routing-list">
-          <p><strong>Most families</strong><span>Begin with the $39 initial-care payment, then the fixed three-month program if appropriate.</span></p>
+          <p><strong>Most families</strong><span>Enroll in the fixed three-month program with one $597 payment, including the initial-care portion.</span></p>
           <p><strong>A specific nutrition or digestive concern</strong><span>Is addressed through the written plan and two scheduled follow-up adjustments.</span></p>
           <p><strong>Growth, swallowing, complex medications, or several concerns</strong><span>Receives additional clinical review and may require coordinated referral before enrollment.</span></p>
         </div>
@@ -66,7 +71,10 @@ export default function NutritionCareOptionsPage() {
       <section className="nutrition-cta">
         <p className="eyebrow">Ready when you are</p>
         <h2>Meaningful progress can start with one clear next step.</h2>
-        <Link className="primary-button" href="/nutrition-support/start">Start the questionnaire</Link>
+        <div className="hero-actions">
+          <Link className="primary-button" href="/start?treatment=3-Month%20Special%20Needs%20Nutrition%20Program&plan=program">Review agreement &amp; enroll · $597</Link>
+          <Link className="secondary-dark-button" href="/nutrition-support#nutrition-bundles">View supplement bundle examples</Link>
+        </div>
       </section>
       <SiteFooter />
     </main>

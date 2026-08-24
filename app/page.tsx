@@ -21,12 +21,12 @@ const carePaths = [
     cta: "View program & bundles",
   },
   {
-    eyebrow: "Caregiver-guided nutrition support",
+    eyebrow: "Fixed three-month caregiver program",
     title: "Special Needs Nutrition",
-    copy: "Build an achievable nutrition and digestive-wellness routine around accepted foods, sensory preferences, supplement forms, and family priorities.",
+    copy: "Review the full three-month program, pricing, visits, and enrollment steps before completing one agreement and one secure checkout.",
     image: "/nutrition-support-family-v1.png",
-    href: "/nutrition-support#nutrition-bundles",
-    cta: "View support & bundles",
+    href: "/nutrition-support/care-options",
+    cta: "View the 3-month program",
   },
   {
     eyebrow: "Know what you want?",
@@ -56,8 +56,8 @@ const carePaths = [
 
 const steps = [
   ["1", "Choose your direction", "Start with the treatment, concern, or health goal that matters most to you."],
-  ["2", "Make the $39 initial-care payment", "Share your history and goals, then select the level of membership care you want."],
-  ["3", "Choose your membership", "Continue with $149 Focused Care and a 15-minute initial appointment or select a higher level with a 45-minute appointment."],
+  ["2", "Review the starting price", "Standard care begins at $39. Special Needs Nutrition uses one $597 payment with the $39 portion included."],
+  ["3", "Complete enrollment", "Accept the agreement and complete the checkout for your membership or fixed program."],
   ["4", "Begin your care plan", "Schedule included care, complete clinical review, and get monitoring organized around your progress."],
 ];
 
@@ -134,7 +134,7 @@ export default function Home() {
         <div className={styles.supportCopy}>
           <p className={styles.kicker}>Care that keeps moving</p>
           <h2>Choose your goal. We’ll help build the route.</h2>
-          <p>Start with the one-time $39 initial-care payment, then choose the membership and initial appointment length that match the support you want.</p>
+          <p>Standard membership care starts with a one-time $39 initial-care payment. Special Needs Nutrition uses one $597 program payment with that initial-care portion included.</p>
           <Link className={styles.primaryCta} href="/treatments">Get started</Link>
         </div>
       </section>

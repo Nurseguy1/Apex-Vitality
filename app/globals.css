@@ -3409,6 +3409,11 @@ footer p {
 .membership-flow strong { color: var(--foreground); }
 .membership-flow small { color: var(--muted); line-height: 1.45; }
 
+.nutrition-options-hero .membership-flow {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1120px;
+}
+
 .membership-visit-note {
   margin: 16px 0 0;
   color: var(--teal-dark);
@@ -3490,7 +3495,12 @@ footer p {
 
 @media (max-width: 760px) {
   .membership-flow { grid-template-columns: 1fr; }
+  .nutrition-options-hero .membership-flow { grid-template-columns: 1fr; }
   .post-purchase-actions { display: grid; }
+}
+
+@media (min-width: 761px) and (max-width: 1020px) {
+  .nutrition-options-hero .membership-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* Clearly visible version of the shared light-card palette. */

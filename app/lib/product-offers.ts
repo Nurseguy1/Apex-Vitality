@@ -79,18 +79,6 @@ const offers: Record<string, ProductOffer> = {
       "A personalized clinical, nutrition, lifestyle, and supplement plan when appropriate",
     ],
   },
-  "Special Needs Nutrition|initial": {
-    treatment: "Special Needs Nutrition",
-    plan: "initial",
-    planLabel: "Initial clinical-care payment",
-    price: "$39",
-    billingLabel: "One-time initial-care payment · fixed three-month program selected afterward",
-    included: [
-      "Caregiver-guided clinician review of nutrition, digestive wellness, routines, and goals",
-      "A practical personalized nutrition and supplement plan when appropriate",
-      "A clear recommendation about whether the three-month program is an appropriate next step",
-    ],
-  },
   "3-Month Special Needs Nutrition Program|program": {
     treatment: "3-Month Special Needs Nutrition Program",
     plan: "program",
@@ -98,6 +86,7 @@ const offers: Record<string, ProductOffer> = {
     price: "$597",
     billingLabel: "One-time program payment · $199/month equivalent · no automatic renewal",
     included: [
+      "The standard $39 initial-care portion, included in the $597 total",
       "Month 1: one 45-minute initial visit and a personalized written nutrition and supplement plan",
       "Month 2: one 30-minute follow-up visit with plan adjustments",
       "Month 3: one 30-minute follow-up visit with a final plan update",

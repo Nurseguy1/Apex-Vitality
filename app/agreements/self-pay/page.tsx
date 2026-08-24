@@ -47,9 +47,9 @@ export default async function SelfPayAgreementPage({
         {isMembership ? (
           <p>The selected {selection || "Apex Vitality membership"} costs {membershipPrice} and renews monthly until canceled. It is a separate purchase from the one-time $39 initial-care payment. You authorize Apex Vitality and its payment processor to charge the payment method provided at checkout according to this schedule. You may cancel future renewals using the online cancellation method identified in your purchase confirmation or patient portal. Review the full <Link href="/agreements/recurring-payments">recurring-payment terms</Link>.</p>
         ) : isProgram ? (
-          <p>The 3-Month Special Needs Nutrition Program costs $597 in one payment after the separate $39 initial-care payment. It includes one 45-minute initial visit, a personalized written nutrition and supplement plan, one 30-minute follow-up in month 2, and one 30-minute follow-up in month 3 with a final plan update. It does not renew automatically. Clinical messaging, supplements, laboratory testing, and outside services are not included. Continuing care after the program requires a separate, affirmative purchase.</p>
+          <p>The 3-Month Special Needs Nutrition Program costs $597 in one payment. The standard $39 initial-care portion is included in the $597 total and is not charged separately. The program includes one 45-minute initial visit, a personalized written nutrition and supplement plan, one 30-minute follow-up in month 2, and one 30-minute follow-up in month 3 with a final plan update. It does not renew automatically. Clinical messaging, supplements, laboratory testing, and outside services are not included. Continuing care after the program requires a separate, affirmative purchase.</p>
         ) : (
-          <p>The initial-care payment is a one-time $39 charge. It does not automatically begin a recurring charge. After payment, you choose and separately authorize the applicable membership or fixed program. Focused Care at $149 per month includes a 15-minute initial appointment. The three higher memberships and the Special Needs Nutrition Program include a 45-minute comprehensive initial appointment.</p>
+          <p>The initial-care payment is a one-time $39 charge. It does not automatically begin a recurring charge. After payment, you choose and separately authorize the applicable membership. Focused Care at $149 per month includes a 15-minute initial appointment, and the three higher memberships include a 45-minute comprehensive initial appointment. Special Needs Nutrition uses its own single $597 program checkout, which already includes the standard $39 initial-care portion.</p>
         )}
 
         {isProgram && (
@@ -60,7 +60,7 @@ export default async function SelfPayAgreementPage({
         )}
 
         <h2>Ineligibility refund</h2>
-        <p>If the reviewing clinician determines that you are not eligible for the selected care pathway, Apex Vitality will refund the $39 initial-care payment. If a fixed program payment was also collected and program services have not begun, that program payment will also be refunded. A recurring membership charge begins only after the patient separately chooses a membership, accepts its renewal terms, and completes its checkout.</p>
+        <p>{isProgram ? "If the reviewing clinician determines that you are not eligible for the Special Needs Nutrition Program before program services begin, Apex Vitality will refund the $597 program payment." : "If the reviewing clinician determines that you are not eligible for the selected care pathway, Apex Vitality will refund the $39 initial-care payment."} A recurring membership charge begins only after the patient separately chooses a membership, accepts its renewal terms, and completes its checkout.</p>
 
         <h2>When treatment is not authorized</h2>
         <p>Clinical-care fees pay for the professional services described at checkout and do not guarantee a prescription. Medication is purchased separately from the dispensing pharmacy and is subject to that pharmacy&apos;s payment, cancellation, return, and refund policies.</p>

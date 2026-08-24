@@ -30,7 +30,7 @@ export default function NutritionSupportPage() {
             creates meaningful wins at home. Teens and adults may also be considered.
           </p>
           <div className="hero-actions">
-            <Link className="primary-button" href="/start?treatment=Special%20Needs%20Nutrition&plan=initial">Start for $39</Link>
+            <Link className="primary-button" href="/nutrition-support/care-options">Review program &amp; pricing</Link>
             <Link className="secondary-button" href="/nutrition-support/start">Start the questionnaire</Link>
           </div>
           <p className="nutrition-reassurance">No routine lab work is required to get started.</p>
@@ -98,9 +98,9 @@ export default function NutritionSupportPage() {
       <section className="nutrition-cta">
         <p className="eyebrow">Take the first step</p>
           <h2>Show us the goal. Let&apos;s create the next win.</h2>
-        <p>Begin with the separate $39 initial-care payment, then enroll in the fixed three-month program for $597 total ($199 per month equivalent). The program includes one 45-minute initial visit, a written plan, and two 30-minute follow-ups. It does not renew automatically.</p>
+        <p>Enroll in the fixed three-month program with one $597 payment ($199 per month equivalent). The standard $39 initial-care portion is included in that total and is not charged separately. The program includes one 45-minute initial visit, a written plan, and two 30-minute follow-ups. It does not renew automatically.</p>
         <p className="program-fullscript-note">Children age 4+, teens, and adults may be considered. A parent or legal guardian must participate for a minor. Funding or reimbursement depends on the person&apos;s approved plan and funding administrator.</p>
-        <Link className="primary-button" href="/start?treatment=Special%20Needs%20Nutrition&plan=initial">Begin with the $39 initial-care payment</Link>
+        <Link className="primary-button" href="/nutrition-support/care-options">Review program and enrollment</Link>
       </section>
       <SiteFooter />
     </main>

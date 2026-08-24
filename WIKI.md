@@ -12,10 +12,10 @@ Updated: August 23, 2026
 ## Current project status
 
 - The membership and scheduling workflow was revised on August 23.
-- Everyone begins with a separate, one-time **$39 initial-care payment**, then completes the selected membership checkout.
+- Standard treatment and membership pathways begin with a separate, one-time **$39 initial-care payment**, then continue to the selected membership checkout. Special Needs Nutrition is the exception: its $39 initial-care portion is included in the single $597 program total.
 - Focused Care includes a 15-minute initial appointment. Apex Treatment, Apex Performance, and Apex Private Client Care include a 45-minute comprehensive initial appointment.
 - Special Needs Nutrition is now a separate fixed three-month program for parents and caregivers who are concerned about a child's selective or limited diet, digestive routine, or supplements. Teens and adults may also be considered.
-- The Special Needs Nutrition pathway is a separate $39 initial-care payment followed by one $597 program payment ($199/month equivalent). It does not renew automatically.
+- The Special Needs Nutrition pathway uses one $597 program payment ($199/month equivalent). The standard $39 initial-care portion is included in that total and is not charged separately. It does not renew automatically.
 - Special Needs Nutrition includes one 45-minute initial visit and written plan in month 1, one 30-minute follow-up and adjustment in month 2, and one 30-minute follow-up and final update in month 3.
 - Clinical messaging is not included in memberships or the Special Needs Nutrition Program. Clinical questions are handled during scheduled visits; administrative channels remain available for scheduling, forms, records, billing, and account support.
 - The first full membership month is charged immediately. Canceling stops the next renewal; it does not prorate or reverse a month already purchased.
@@ -28,7 +28,7 @@ Updated: August 23, 2026
 - Apex Treatment: **$499 per month**, including a 45-minute comprehensive initial appointment.
 - Apex Performance: **$749 per month**, including a 45-minute comprehensive initial appointment.
 - Apex Private Client Care: **$1,250 per month**, including a 45-minute comprehensive initial appointment.
-- Special Needs Nutrition Program: **$597 one time for three months** after the separate $39 initial-care payment. This is a fixed program, not an automatically renewing membership.
+- Special Needs Nutrition Program: **$597 one time for three months**, including the standard $39 initial-care portion. There is no separate $39 charge. This is a fixed program, not an automatically renewing membership.
 - Peptide- or NAD+-only patients are directed to Focused Care as the default membership, but they must affirmatively approve its separate recurring checkout.
 - The $39 checkout returns to `/purchase-complete`; membership checkouts return to `/membership-complete`.
 - The Special Needs Nutrition program checkout returns to `/program-complete`, where a verified California payment opens the included 45-minute scheduling step.
@@ -36,13 +36,15 @@ Updated: August 23, 2026
 
 ## Purchase workflow
 
+Standard treatment and membership workflow:
+
 1. Patient chooses a treatment or membership.
 2. Patient confirms California as the location of care and accepts the self-pay terms.
 3. Patient pays the one-time $39 initial-care fee in Stripe.
-4. Patient returns to Apex Vitality and affirmatively completes the selected membership or fixed-program checkout.
+4. Patient returns to Apex Vitality and affirmatively completes the selected membership checkout.
 5. Patient schedules the included 15-minute or 45-minute initial appointment based on the selected care option.
 
-Special Needs Nutrition follows the same first three steps, then the patient pays the fixed $597 three-month program fee and schedules the included 45-minute initial visit. Months 2 and 3 each include one 30-minute follow-up. After month 3, continued care is opt-in only; a stable patient may separately choose $149/month Focused Care. Funding or reimbursement is not promised and depends on the patient's approved plan and funding administrator.
+Special Needs Nutrition has one enrollment and one $597 checkout, then the patient schedules the included 45-minute initial visit. The standard $39 initial-care portion is included in the $597 total and is not a second payment. Months 2 and 3 each include one 30-minute follow-up. After month 3, continued care is opt-in only; a stable patient may separately choose $149/month Focused Care. Funding or reimbursement is not promised and depends on the patient's approved plan and funding administrator.
 
 Purchase-oriented buttons now move forward without returning patients to a treatment page they already visited. Direct checkout paths were verified for:
 
@@ -64,10 +66,10 @@ Purchase-oriented buttons now move forward without returning patients to a treat
 - Removed the illustrative-packaging label and description from the Medical Weight Loss lifestyle image.
 - Restyled the self-pay agreement with the site's soft teal, blue, and warm neutral palette.
 - Kept separate, affirmative acknowledgments for the self-pay terms and automatic monthly renewal.
-- Added **Metabolic & Gut Health** and **Special Needs Nutrition** to the $39 initial-care and $149 ongoing-membership pathway.
+- Added **Metabolic & Gut Health** to the $39 initial-care and $149 ongoing-membership pathway, and introduced **Special Needs Nutrition** before later converting it to the fixed $597 program described below.
 - Added matching **Metabolic & Gut Health** and **Special Needs Nutrition** cards to the Home-page Care section and Treatments page.
 - Kept **Medical Weight Loss** first in the Home-page Care section, followed by Metabolic & Gut Health and Special Needs Nutrition.
-- Added direct links from both new cards to their visible bundle sections.
+- Added visible Fullscript bundle sections for both nutrition programs and kept the bundle examples reachable from each program page.
 - Added the adult metabolic and digestive Fullscript bundle section to the Metabolic & Gut Health program page.
 - Added three visible Special Needs Nutrition bundle examples: Daily Nutrition Foundation, Digestive Routine Support, and Flexible-Format Support.
 - Corrected spacing on all purchase-summary prices.
@@ -91,6 +93,8 @@ Purchase-oriented buttons now move forward without returning patients to a treat
 - Repositioned Special Needs Nutrition primarily for parents and caregivers of children age 4+ while retaining possible teen and adult eligibility. All other Apex care remains adult-only.
 - Replaced the former $149/month Special Needs Nutrition membership presentation with a fixed three-month program: 45-minute initial visit and written plan, then one 30-minute follow-up in each of months 2 and 3.
 - Corrected the Treatments page so Metabolic & Gut Health remains $149/month while Special Needs Nutrition shows $597 total and links to the dedicated three-month program page.
+- Standardized every Special Needs Nutrition entry point: Home Care card, Treatments card, nutrition landing page, questionnaire result, and Memberships callout now lead to the dedicated program page before agreements and checkout.
+- The dedicated program page shows the full sequence: review the program, accept one agreement and complete one $597 checkout, then schedule the included 45-minute visit. It clearly states that the standard $39 initial-care portion is included and is not charged separately.
 - Removed public promises of clinical messaging from membership, contact, privacy, consent, and care-standard pages. Clinical care is delivered through scheduled visits.
 
 ## Fullscript status

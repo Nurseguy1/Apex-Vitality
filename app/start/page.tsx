@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import { SiteFooter, SiteHeader } from "../components";
 import LocationRouter from "./LocationRouter";
 import { getProductCheckout } from "../lib/product-checkouts";
@@ -16,6 +17,9 @@ export default async function StartPage({
   searchParams: Promise<{ treatment?: string; plan?: string; nextMembership?: string }>;
 }) {
   const { treatment = "", plan = "", nextMembership = "" } = await searchParams;
+  if (treatment === "Special Needs Nutrition" && plan === "initial") {
+    redirect("/start?treatment=3-Month%20Special%20Needs%20Nutrition%20Program&plan=program");
+  }
   const checkoutUrl = getProductCheckout(treatment, plan);
   const offer = getProductOffer(treatment, plan);
 
