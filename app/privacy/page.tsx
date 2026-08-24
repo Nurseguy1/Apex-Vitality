@@ -11,7 +11,7 @@ export default function PrivacyPage() {
         <h1>Privacy notice</h1>
         <p>Apex Vitality is operated by {practiceContact.legalName}. Do not submit protected health information or other sensitive medical details through ordinary email or general website channels.</p>
         <h2>Secure patient information</h2>
-        <p>Appointments, assigned intake forms, medical information, and care-related messages should be handled through the secure CharmHealth patient workflow. Apex Vitality uses reasonable privacy and security safeguards and handles patient information according to its Notice of Privacy Practices.</p>
+        <p>Appointments, assigned intake forms, requested records, and medical information should be handled through the secure CharmHealth patient workflow. Clinical questions require a scheduled visit. Apex Vitality uses reasonable privacy and security safeguards and handles patient information according to its Notice of Privacy Practices.</p>
         <h2>Website information</h2>
         <p>Basic technical information may be processed by the hosting provider to operate, secure, and measure this website. General website activity is separate from the clinical record maintained through the patient platform.</p>
         <h2>Clinical service partners</h2>

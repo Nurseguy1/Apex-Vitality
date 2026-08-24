@@ -46,7 +46,7 @@ export default function TelehealthConsentPage() {
           Telehealth uses electronic communication when you and the clinician
           are in different locations. Services may include review of your
           medical history and records, electronic questionnaires, photographs
-          or measurements you submit, secure messages, telephone or video
+          or measurements you submit, scheduled telephone or video
           consultation, assessment, diagnosis, treatment recommendations,
           laboratory orders, prescriptions, monitoring, referrals, and
           follow-up. A consultation may be asynchronous or live, depending on

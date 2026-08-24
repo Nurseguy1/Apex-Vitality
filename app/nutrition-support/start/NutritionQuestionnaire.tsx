@@ -26,15 +26,15 @@ export default function NutritionQuestionnaire() {
 
   const comprehensive = selectedSafety.length > 0;
   const focused = !comprehensive && (foods.includes("Fewer than 10 foods") || selectedGoals.some((goal) => ["Support protein intake", "Support bowel regularity", "Improve digestive comfort"].includes(goal)) || selectedConsiderations.length >= 2);
-  const result = comprehensive ? "Comprehensive Care" : "Special Needs Nutrition Membership";
+  const result = comprehensive ? "Clinical Review Before Enrollment" : "3-Month Special Needs Nutrition Program";
 
   if (step === 4) {
     return (
       <section className="nutrition-route-result" aria-live="polite">
         <p className="eyebrow">Your preview pathway</p>
         <span className={`nutrition-route-pill route-${comprehensive ? "comprehensive" : "foundation"}`}>{result}</span>
-        <h2>{comprehensive ? "Begin with a fuller clinical conversation." : "Start with ongoing nutrition support."}</h2>
-        <p>{comprehensive ? "One or more answers deserve a more complete review before choosing supplements. A longer visit can connect feeding safety, growth, medical history, medications, and nutrition goals." : focused ? "Your answers point to a specific nutrition or digestive priority that can be addressed through the membership review and ongoing plan adjustments." : "Your answers fit the membership pathway: caregiver-guided clinician review, a practical nutrition plan, and ongoing support as new goals develop."}</p>
+        <h2>{comprehensive ? "Begin with a fuller clinical conversation." : "Start with a defined three-month nutrition plan."}</h2>
+        <p>{comprehensive ? "One or more answers deserve a more complete review before program enrollment or supplement decisions. A longer visit can connect feeding safety, growth, medical history, medications, and nutrition goals." : focused ? "Your answers point to a specific nutrition or digestive priority that can be addressed through the written plan and two scheduled follow-up adjustments." : "Your answers fit the three-month pathway: caregiver-guided clinician review, a practical written nutrition plan, and two scheduled follow-up visits."}</p>
         <div className="nutrition-result-actions"><button className="secondary-dark-button" type="button" onClick={() => setStep(1)}>Review again</button><Link className="primary-button" href="/nutrition-support/care-options">See this care option →</Link></div>
         <small>This preview does not provide a diagnosis, transmit answers, or replace the secure clinical intake.</small>
       </section>
@@ -45,7 +45,7 @@ export default function NutritionQuestionnaire() {
     <form className="nutrition-questionnaire" onSubmit={(event) => { event.preventDefault(); setStep(step + 1); }}>
       <div className="nutrition-progress"><span>About 5 minutes</span><i><b style={{ width: `${step * 33.33}%` }} /></i><span>{step} of 3</span></div>
       {step === 1 && <>
-        <fieldset><legend>Who are you completing this for?</legend><Options items={["A child age 4–12", "A teen age 13–17", "An adult age 18+", "Myself"]} name="person" selected={person} onChange={setPerson} /></fieldset>
+        <fieldset><legend>Who are you completing this for?</legend><p className="nutrition-field-help">Most families complete this for a child. Teens and adults may also be considered.</p><Options items={["My child, age 4–12", "My teen, age 13–17", "An adult age 18+", "Myself"]} name="person" selected={person} onChange={setPerson} /></fieldset>
         <fieldset><legend>About how many different foods are regularly accepted?</legend><Options items={["Fewer than 10 foods", "10–20 foods", "More than 20 foods", "It varies"]} name="foods" selected={foods} onChange={setFoods} /></fieldset>
         <fieldset><legend>What would you most like help with?</legend><p className="nutrition-field-help">Choose all that apply.</p><Options items={goals} name="goals" multiple selected={selectedGoals} onChange={setGoals} /></fieldset>
       </>}

@@ -15,7 +15,7 @@ const options = [
     price: "$149 USD",
     cadence: "per month",
     intro: "Focused ongoing care for one treatment pathway with the essential clinical support needed to keep it moving.",
-    features: ["Included 15-minute initial appointment", "Scheduled clinician follow-up", "Prescription and refill management", "Focused progress monitoring", "Secure non-urgent support"],
+    features: ["Included 15-minute initial appointment", "Scheduled clinician follow-up", "Prescription and refill management", "Focused progress monitoring"],
     checkoutUrl: "/schedule",
     checkoutLabel: "Start focused care",
   },
@@ -27,7 +27,7 @@ const options = [
     cadence: "per month",
     annual: "From $4,990/year — 2 months free",
     intro: "Broader, more connected care for patients managing multiple goals, treatments, or health priorities.",
-    features: ["Included 45-minute comprehensive initial appointment", "Everything in Focused Care", "Longer, broader clinical reviews", "Multi-treatment coordination", "More frequent treatment-response review", "Clinically appropriate adjustments", "Secure non-urgent support"],
+    features: ["Included 45-minute comprehensive initial appointment", "Everything in Focused Care", "Longer, broader clinical reviews", "Multi-treatment coordination", "More frequent treatment-response review", "Clinically appropriate adjustments"],
     checkoutUrl: "/schedule",
     checkoutLabel: "Start with an introductory visit",
   },
@@ -51,7 +51,7 @@ const options = [
     cadence: "per month",
     annual: "From $12,500/year — 2 months free",
     intro: "Limited-enrollment concierge care for patients who value exceptional access, privacy, and proactive coordination.",
-    features: ["Included 45-minute comprehensive initial appointment", "Everything in Apex Performance", "Highly responsive communication", "Frequent strategy visits", "Proactive laboratory and pharmacy coordination", "Concierge-level continuity", "A care cadence designed around your goals"],
+    features: ["Included 45-minute comprehensive initial appointment", "Everything in Apex Performance", "Frequent scheduled strategy visits", "Proactive laboratory and pharmacy coordination", "Concierge-level continuity", "A care cadence designed around your goals"],
     checkoutUrl: "/schedule",
     checkoutLabel: "Request private client care",
   },
@@ -99,7 +99,7 @@ export default function MembershipsPage() {
           <p><strong>Focused Care keeps one pathway simple:</strong> The $149 membership is the lowest level, the default ongoing option for peptide and NAD+ patients, and includes a 15-minute initial appointment.</p>
           <p><strong>Higher tiers add time, access, and breadth:</strong> Apex Treatment, Apex Performance, and Apex Private Client Care each include a 45-minute comprehensive initial appointment after enrollment.</p>
           <p><strong>The value is clinical attention:</strong> Medication, laboratory services, pharmacy charges, and other outside services are paid separately unless a written plan expressly says they are included.</p>
-          <p><strong>Communication:</strong> Secure messaging is intended for non-urgent questions and is answered during business hours. It is not continuously monitored and is not an emergency service.</p>
+          <p><strong>Clinical care happens in scheduled visits:</strong> Memberships do not include clinical messaging. Administrative channels remain available for scheduling, forms, billing, and account support.</p>
           <p><strong>Clinical decisions stay clinical:</strong> Membership does not guarantee a prescription, refill, laboratory order, or particular outcome.</p>
         </div>
       </section>

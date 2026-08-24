@@ -1,6 +1,6 @@
 export type ProductOffer = {
   treatment: string;
-  plan: "initial" | "ongoing";
+  plan: "initial" | "ongoing" | "program";
   planLabel: string;
   price: string;
   billingLabel: string;
@@ -10,7 +10,7 @@ export type ProductOffer = {
 
 const sharedIncluded = [
   "Licensed-clinician review of your submitted health information and goals",
-  "Secure follow-up questions or a conversation when more information is needed",
+  "A scheduled clinical conversation when more information is needed",
   "A personalized clinical plan when appropriate",
 ];
 
@@ -84,11 +84,23 @@ const offers: Record<string, ProductOffer> = {
     plan: "initial",
     planLabel: "Initial clinical-care payment",
     price: "$39",
-    billingLabel: "One-time initial-care payment · membership selected afterward",
+    billingLabel: "One-time initial-care payment · fixed three-month program selected afterward",
     included: [
       "Caregiver-guided clinician review of nutrition, digestive wellness, routines, and goals",
       "A practical personalized nutrition and supplement plan when appropriate",
-      "Scheduled follow-up visits, ongoing plan adjustments, and secure non-urgent support",
+      "A clear recommendation about whether the three-month program is an appropriate next step",
+    ],
+  },
+  "3-Month Special Needs Nutrition Program|program": {
+    treatment: "3-Month Special Needs Nutrition Program",
+    plan: "program",
+    planLabel: "Fixed three-month nutrition program",
+    price: "$597",
+    billingLabel: "One-time program payment · $199/month equivalent · no automatic renewal",
+    included: [
+      "Month 1: one 45-minute initial visit and a personalized written nutrition and supplement plan",
+      "Month 2: one 30-minute follow-up visit with plan adjustments",
+      "Month 3: one 30-minute follow-up visit with a final plan update",
     ],
   },
   "Focused Care Membership|ongoing": {
@@ -101,7 +113,7 @@ const offers: Record<string, ProductOffer> = {
       "An included 15-minute initial appointment",
       "Scheduled clinician follow-up for one focused treatment pathway",
       "Prescription and refill management when clinically appropriate",
-      "Focused progress monitoring and secure non-urgent support",
+      "Focused progress monitoring during scheduled visits",
     ],
     requiresRenewalConsent: true,
   },
@@ -114,7 +126,7 @@ const offers: Record<string, ProductOffer> = {
     included: [
       "An included 45-minute comprehensive initial appointment after enrollment",
       "Longer reviews and coordination across multiple treatment goals",
-      "More frequent treatment-response review and secure non-urgent support",
+      "More frequent treatment-response review during scheduled visits",
     ],
     requiresRenewalConsent: true,
   },
@@ -139,7 +151,7 @@ const offers: Record<string, ProductOffer> = {
     billingLabel: "Monthly membership — renews until canceled",
     included: [
       "An included 45-minute comprehensive initial appointment after enrollment",
-      "Frequent strategy visits and highly responsive communication",
+      "Frequent scheduled strategy visits and proactive care coordination",
       "Proactive laboratory, pharmacy, and care coordination",
     ],
     requiresRenewalConsent: true,

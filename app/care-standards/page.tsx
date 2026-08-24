@@ -43,13 +43,13 @@ export default function CareStandardsPage() {
 
         <h2>California service area</h2>
         <p>
-          Apex Vitality currently provides clinical care only to adults physically located in California at the time of care. Treatment availability also depends on clinical appropriateness, pharmacy coverage, and applicable law.
+          Apex Vitality currently provides clinical care to adults age 18 and older who are physically located in California at the time of care. Children age 4 and older and teens may be considered only for the Special Needs Nutrition Program with parent or legal-guardian participation and consent. All other care is adult-only. Treatment availability also depends on clinical appropriateness, pharmacy coverage, and applicable law.
         </p>
         <p><Link href="/service-areas">Review current service-area information.</Link></p>
 
         <h2>Privacy and secure communication</h2>
         <p>
-          Medical information, assigned forms, records, and care-related messages should be handled through the designated secure patient workflow. Ordinary email and general website channels should not be used for sensitive medical information.
+          Medical information, assigned forms, and records should be handled through the designated secure patient workflow. Ordinary email and general website channels should not be used for sensitive medical information. Clinical questions require a scheduled visit.
         </p>
         <p>
           Review our <Link href="/privacy">Privacy Notice</Link>, <Link href="/notice-of-privacy-practices">Notice of Privacy Practices</Link>, and <Link href="/telehealth-consent">Telehealth Informed Consent</Link>.
@@ -65,7 +65,7 @@ export default function CareStandardsPage() {
 
         <h2>Questions or concerns</h2>
         <p>
-          Use the secure patient channel for written customer-service, compliance, and medical questions. Apex Vitality is not an emergency service; call 911 for an emergency.
+          Use the secure patient channel for written customer-service, compliance, assigned forms, and records. Schedule a visit for clinical questions. Apex Vitality is not an emergency service; call 911 for an emergency.
         </p>
         <p className="legal-updated">Last updated August 16, 2026.</p>
       </article>

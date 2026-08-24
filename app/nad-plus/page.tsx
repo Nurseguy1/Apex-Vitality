@@ -62,9 +62,9 @@ export default function NadPlusPage() {
             </Link>
           </div>
           <p className="focused-care-note">
-            No scheduled visit is required. A secure message,
-            telephone call, or video conversation can be added whenever it helps
-            move your care forward.
+            Focused Care includes a scheduled 15-minute initial appointment.
+            Higher memberships include a 45-minute comprehensive initial visit.
+            Clinical messaging is not included.
           </p>
         </div>
       </section>

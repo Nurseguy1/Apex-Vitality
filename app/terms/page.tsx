@@ -19,12 +19,12 @@ export default function TermsPage() {
 
         <h2>2. Eligibility and service area</h2>
         <p>
-          Apex Vitality currently serves adults age 18 and older who are physically located in California at the time clinical care is provided. Availability also depends on the selected service, clinical appropriateness, pharmacy coverage, and applicable law. See the <Link href="/service-areas">Service Areas page</Link>. You must provide accurate identity, contact, physical location, shipping address, health, medication, and payment information and may not use another person&apos;s identity or account.
+          Apex Vitality currently serves adults age 18 and older who are physically located in California at the time clinical care is provided. The only age exception is the Special Needs Nutrition Program, for which children age 4 and older and teens may be considered with parent or legal-guardian participation and consent. All other treatments, programs, and memberships are adult-only. Availability also depends on the selected service, clinical appropriateness, pharmacy coverage, and applicable law. See the <Link href="/service-areas">Service Areas page</Link>. You must provide accurate identity, contact, physical location, shipping address, health, medication, and payment information and may not use another person&apos;s identity or account.
         </p>
 
         <h2>3. Not emergency care</h2>
         <p>
-          Apex Vitality, this website, questionnaires, email, and secure messages are not emergency services and are not monitored continuously. Call 911 or seek immediate in-person care for a medical emergency, severe or rapidly worsening symptoms, thoughts of self-harm, or another urgent concern.
+          Apex Vitality, this website, questionnaires, email, and administrative patient channels are not emergency services and are not monitored continuously. Call 911 or seek immediate in-person care for a medical emergency, severe or rapidly worsening symptoms, thoughts of self-harm, or another urgent concern.
         </p>
 
         <h2>4. Website information</h2>
@@ -39,7 +39,7 @@ export default function TermsPage() {
 
         <h2>6. Telehealth services</h2>
         <p>
-          Care may be provided through video, telephone, secure messaging, electronic questionnaires, record review, or other legally permitted telehealth methods. Before telehealth care is delivered, you will be asked to acknowledge the <Link href="/telehealth-consent">Telehealth Informed Consent</Link>. A clinician may recommend an in-person examination, testing, urgent evaluation, or another level of care when useful for safe and effective treatment.
+          Care may be provided through scheduled video or telephone visits, electronic questionnaires, record review, or other legally permitted telehealth methods. Clinical messaging is not included. Before telehealth care is delivered, you will be asked to acknowledge the <Link href="/telehealth-consent">Telehealth Informed Consent</Link>. A clinician may recommend an in-person examination, testing, urgent evaluation, or another level of care when useful for safe and effective treatment.
         </p>
 
         <h2>7. Prescriptions and treatment plans</h2>
@@ -79,7 +79,7 @@ export default function TermsPage() {
 
         <h2>14. Electronic communications</h2>
         <p>
-          You consent to receive service-related electronic communications, including appointment, account, payment, questionnaire, and care notifications. Standard message and data rates may apply. Email and text messages may not be fully secure; use the Charm patient portal for medical information and care-related messages. You may manage optional marketing communications separately from essential service communications.
+          You consent to receive service-related electronic communications, including appointment, account, payment, questionnaire, and care notifications. Standard message and data rates may apply. Email and text messages may not be fully secure; use the Charm patient portal for assigned forms, records, and other requested medical information. Clinical questions require a scheduled visit. You may manage optional marketing communications separately from essential service communications.
         </p>
 
         <h2>15. Your account and security</h2>
@@ -124,9 +124,9 @@ export default function TermsPage() {
 
         <h2>23. Entire agreement and questions</h2>
         <p>
-          These terms, the Privacy Notice, the Telehealth Informed Consent, and any program-specific terms presented at checkout form the agreement concerning the service. Use the <Link href="/contact">contact page</Link> for customer-service questions and the secure Charm patient portal for care-related questions. Do not use ordinary email for sensitive medical information.
+          These terms, the Privacy Notice, the Telehealth Informed Consent, and any program-specific terms presented at checkout form the agreement concerning the service. Use the <Link href="/contact">contact page</Link> for customer-service questions and the secure Charm patient portal for assigned forms and records. Clinical questions require a scheduled visit. Do not use ordinary email for sensitive medical information.
         </p>
-        <p className="legal-updated">Effective August 13, 2026.</p>
+        <p className="legal-updated">Effective August 23, 2026.</p>
       </article>
       <SiteFooter />
     </main>

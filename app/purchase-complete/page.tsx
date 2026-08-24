@@ -19,8 +19,8 @@ export default async function PurchaseCompletePage({ searchParams }: { searchPar
       <SiteHeader />
       <article className="legal-page purchase-complete-page">
         <p className="eyebrow">$39 initial-care payment received</p>
-        <h1>Your membership choice is the next step.</h1>
-        <p>Your payment establishes your place in the care process. Choose and enroll in a membership next, then schedule the initial appointment included with that tier. A prescription is issued only when clinically appropriate and legally permitted.</p>
+        <h1>Complete the care option that comes next.</h1>
+        <p>Your payment establishes your place in the care process. Choose and enroll in the applicable membership or fixed program next, then schedule the initial appointment included with it. A prescription is issued only when clinically appropriate and legally permitted.</p>
 
         <MembershipNextStep california={california} purchasedItems={checkout?.items ?? []} />
 

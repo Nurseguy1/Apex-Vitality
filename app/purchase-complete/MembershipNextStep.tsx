@@ -31,6 +31,7 @@ export default function MembershipNextStep({
   const focusedAlreadyIncluded = purchasedItems.some((item) => /Focused Care Membership/i.test(item));
   const focusedIsDefault = focusedDefaultTreatments.has(selectedTreatment);
   const intendedMembershipPath = membershipCheckoutPaths[intendedMembership];
+  const specialNeedsProgram = selectedTreatment === "Special Needs Nutrition";
 
   if (focusedAlreadyIncluded) {
     return (
@@ -40,6 +41,22 @@ export default function MembershipNextStep({
           <p>Complete patient access next. You can compare higher memberships whenever you want broader care and an included 45-minute comprehensive visit.</p>
         </div>
         <Link href="/memberships">Compare higher memberships →</Link>
+      </section>
+    );
+  }
+
+  if (specialNeedsProgram) {
+    return (
+      <section className="post-purchase-membership" aria-labelledby="choose-special-needs-program-title">
+        <p className="eyebrow">Step 2 of 3</p>
+        <h2 id="choose-special-needs-program-title">Enroll in the three-month nutrition program.</h2>
+        <p>Your separate $39 initial-care payment is complete. The next step is one $597 payment for the fixed three-month program—equivalent to $199 per month, with no automatic renewal.</p>
+        <div className="membership-default-callout">
+          <strong>3-Month Special Needs Nutrition Program · $597 total</strong>
+          <p>Month 1 includes a 45-minute initial visit and written plan. Months 2 and 3 each include one 30-minute follow-up and plan update. Clinical messaging, supplements, laboratory testing, and outside services are not included.</p>
+          <Link className="primary-button" href="/start?treatment=3-Month%20Special%20Needs%20Nutrition%20Program&plan=program">Continue to program enrollment</Link>
+        </div>
+        <p className="location-router-note">Children age 4+, teens, and adults may be considered. A parent or legal guardian must participate for a minor. Funding or reimbursement depends on the person&apos;s approved plan and funding administrator.</p>
       </section>
     );
   }

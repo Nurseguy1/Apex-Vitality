@@ -9,23 +9,23 @@ export const metadata: Metadata = {
 
 const options = [
   {
-    label: "Ongoing support",
-    title: "Special Needs Nutrition Membership",
-    price: "$39 to start",
-    description: "Begin with a one-time $39 caregiver-guided clinical review, then choose and separately approve an ongoing membership.",
-    items: ["Initial clinician review", "Scheduled follow-up visits", "Personalized nutrition, supplement guidance, and plan adjustments", "Fullscript bundles purchased separately"],
-    action: "Start membership care",
+    label: "Fixed three-month program",
+    title: "Special Needs Nutrition Program",
+    price: "$597 total",
+    description: "After the separate $39 initial-care payment, enroll for one fixed $597 program payment ($199 per month equivalent). There is no automatic renewal.",
+    items: ["Month 1: 45-minute initial visit and written plan", "Month 2: one 30-minute follow-up and plan adjustment", "Month 3: one 30-minute follow-up and final plan update", "Clinical messaging, Fullscript bundles, labs, and outside services are not included"],
+    action: "Begin with the $39 payment",
     featured: true,
     href: "/start?treatment=Special%20Needs%20Nutrition&plan=initial",
   },
   {
-    label: "For the fuller picture",
-    title: "Comprehensive Care",
-    price: "Included with higher memberships",
-    description: "A 45-minute visit for complex histories, several overlapping concerns, optional lab decisions, or coordination with other clinicians.",
-    items: ["Detailed history and goal review", "Longer telehealth visit", "Individualized care plan", "Optional testing or referral planning"],
-    action: "Compare higher memberships",
-    href: "/memberships",
+    label: "After the three months",
+    title: "Optional Focused Care",
+    price: "$149/month",
+    description: "Patients who are stable but want continued scheduled clinical follow-up may choose Focused Care after completing the program. It is a separate, optional enrollment.",
+    items: ["No automatic transition", "One focused treatment pathway", "Scheduled clinical follow-up", "Supplements, labs, and outside services paid separately"],
+    action: "Review Focused Care",
+    href: "/memberships/initial-care",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function NutritionCareOptionsPage() {
       <section className="nutrition-options-hero">
         <p className="eyebrow">Apex Daily Nutrition Support for Special Needs</p>
         <h1>Choose an achievable first step. Build momentum from there.</h1>
-        <p>Every family can begin with a clear action they can manage today. Focused and comprehensive support helps overcome the next obstacle as new goals come into view.</p>
+        <p>Parents and caregivers can begin with a clear action they can manage today. The program turns concerns about a child&apos;s limited diet, digestive routine, or supplements into a written plan with scheduled follow-through.</p>
       </section>
       <section className="nutrition-option-grid">
         {options.map((option) => (
@@ -57,10 +57,11 @@ export default function NutritionCareOptionsPage() {
           <h2>The questionnaire guides the next conversation.</h2>
         </div>
         <div className="nutrition-routing-list">
-          <p><strong>Most families</strong><span>Begin with the $39 membership clinical review.</span></p>
-          <p><strong>A specific nutrition or digestive concern</strong><span>Is addressed through personalized membership care and ongoing adjustments.</span></p>
-          <p><strong>Growth, swallowing, complex medications, or several concerns</strong><span>Moves into comprehensive care or coordinated referral.</span></p>
+          <p><strong>Most families</strong><span>Begin with the $39 initial-care payment, then the fixed three-month program if appropriate.</span></p>
+          <p><strong>A specific nutrition or digestive concern</strong><span>Is addressed through the written plan and two scheduled follow-up adjustments.</span></p>
+          <p><strong>Growth, swallowing, complex medications, or several concerns</strong><span>Receives additional clinical review and may require coordinated referral before enrollment.</span></p>
         </div>
+        <p className="program-fullscript-note">Children age 4+, teens, and adults may be considered. A parent or legal guardian must participate for a minor. Funding or reimbursement is not guaranteed and depends on the approved plan and funding administrator.</p>
       </section>
       <section className="nutrition-cta">
         <p className="eyebrow">Ready when you are</p>

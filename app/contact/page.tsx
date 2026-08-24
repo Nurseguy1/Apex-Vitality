@@ -13,14 +13,14 @@ export default function ContactPage() {
         <p>Explore the initial care pathway and current enrollment status.</p>
         <p><Link className="primary-button" href="/treatments">Start my care</Link></p>
         <h2>Existing patients</h2>
-        <p>Use the Charm patient portal for appointment changes, assigned forms, non-urgent care messages, and other customer-service needs. Stripe receipts and payment details remain available through Stripe.</p>
+        <p>Use the Charm patient portal for appointment changes, assigned forms, billing questions, and other administrative needs. Clinical questions are addressed during scheduled visits. Stripe receipts and payment details remain available through Stripe.</p>
         <p><Link className="secondary-dark-button" href="/patient-access">Open secure patient access</Link></p>
         <h2>Practice contact</h2>
         <p><strong>{practiceContact.legalName}</strong><br />{practiceContact.addressLine1}<br />{practiceContact.cityStateZip}</p>
         <p>Use the secure patient workflow for written customer-service and billing questions.</p>
         <p>See <Link href="/providers">Care Team &amp; Clinical Partners</Link> for information about who provides care.</p>
         <h2>Medical privacy</h2>
-        <p>Do not send medical information through ordinary email or unsecured website messages. Secure messages are reviewed during business hours and are not an emergency service.</p>
+        <p>Do not send medical information through ordinary email or unsecured website messages. Administrative channels are not monitored for clinical care or emergencies; clinical questions require a scheduled visit.</p>
         <h2>Emergency care</h2>
         <p>Call 911 or seek immediate in-person care for urgent or life-threatening concerns.</p>
       </article>

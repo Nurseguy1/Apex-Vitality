@@ -90,12 +90,12 @@ const treatments = [
       "Clinician-guided care that brings digestive wellness, metabolic goals, nutrition, lifestyle, and optional Fullscript supplement bundles into one practical plan.",
     image: "/program-metabolic-couple-v1.png",
     oneMonth: "$39",
-    threeMonths: "$149/month",
-    equivalent: "Fullscript bundles paid separately",
-    savings: "Choose after the initial visit",
+    threeMonths: "$597 total",
+    equivalent: "$199/month equivalent",
+    savings: "No automatic renewal",
     firstLabel: "Initial clinical review",
     firstNote: "One-time payment · membership approved separately",
-    secondLabel: "Ongoing membership care",
+    secondLabel: "Fixed three-month program",
     href: "/programs/metabolic-gut#fullscript-bundles",
     detailsLabel: "See program and Fullscript bundles",
     ctaLabel: "Start metabolic care",
@@ -116,7 +116,7 @@ const treatments = [
     secondLabel: "Ongoing membership care",
     href: "/nutrition-support#nutrition-bundles",
     detailsLabel: "See nutrition support and bundles",
-    ctaLabel: "Start nutrition membership",
+    ctaLabel: "Start nutrition program",
   },
 ];
 
@@ -187,13 +187,13 @@ export default function TreatmentsPage() {
 
                 <section className="treatment-price-card treatment-price-best">
                   <span className="best-value-badge">Step 2</span>
-                  <span>Memberships from</span>
+                  <span>{treatment.name === "Special Needs Nutrition" ? "Three-month program" : "Memberships from"}</span>
                   <strong className={treatment.threeMonths === "Paid separately" ? "treatment-price-separate" : "treatment-price-monthly"}>
                     {treatment.threeMonths}
                   </strong>
                   <small>{treatment.equivalent} · {treatment.savings}</small>
-                  <Link className="primary-button" href="/memberships">
-                    Compare memberships
+                  <Link className="primary-button" href={treatment.name === "Special Needs Nutrition" ? "/nutrition-support/care-options" : "/memberships"}>
+                    {treatment.name === "Special Needs Nutrition" ? "See program details" : "Compare memberships"}
                   </Link>
                 </section>
               </div>
