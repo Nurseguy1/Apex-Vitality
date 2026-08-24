@@ -90,12 +90,12 @@ const treatments = [
       "Clinician-guided care that brings digestive wellness, metabolic goals, nutrition, lifestyle, and optional Fullscript supplement bundles into one practical plan.",
     image: "/program-metabolic-couple-v1.png",
     oneMonth: "$39",
-    threeMonths: "$597 total",
-    equivalent: "$199/month equivalent",
-    savings: "No automatic renewal",
+    threeMonths: "$149/month",
+    equivalent: "Fullscript bundles paid separately",
+    savings: "Choose after the initial visit",
     firstLabel: "Initial clinical review",
     firstNote: "One-time payment · membership approved separately",
-    secondLabel: "Fixed three-month program",
+    secondLabel: "Ongoing membership care",
     href: "/programs/metabolic-gut#fullscript-bundles",
     detailsLabel: "See program and Fullscript bundles",
     ctaLabel: "Start metabolic care",
@@ -108,12 +108,12 @@ const treatments = [
       "Personalized nutrition and digestive-wellness support designed around preferences, sensory needs, daily routines, and realistic goals for children, teens, and adults with special needs.",
     image: "/nutrition-support-family-v1.png",
     oneMonth: "$39",
-    threeMonths: "$149/month",
-    equivalent: "Fullscript bundles paid separately",
-    savings: "Choose after the initial visit",
+    threeMonths: "$597 total",
+    equivalent: "$199/month equivalent",
+    savings: "No automatic renewal",
     firstLabel: "Initial clinical review",
-    firstNote: "One-time payment · membership approved separately",
-    secondLabel: "Ongoing membership care",
+    firstNote: "One-time payment · three-month program approved separately",
+    secondLabel: "Fixed three-month program",
     href: "/nutrition-support#nutrition-bundles",
     detailsLabel: "See nutrition support and bundles",
     ctaLabel: "Start nutrition program",
@@ -130,12 +130,12 @@ export default function TreatmentsPage() {
         <p>
           Everyone begins with the same one-time $39 initial-care payment. A licensed clinician reviews
           your information and determines what is medically appropriate and legally
-          available where you are located, then you choose the ongoing membership that fits your care.
+          available where you are located, then you choose the ongoing membership or fixed program that fits your care.
         </p>
         <div className="treatment-shop-proof" aria-label="Treatment experience">
           <span>Clinician-guided care</span>
           <span>$39 initial-care payment</span>
-          <span>Membership chosen afterward</span>
+          <span>Membership or program chosen afterward</span>
           <span>Home delivery when prescribed</span>
           <span>Medication paid separately</span>
         </div>
@@ -193,7 +193,7 @@ export default function TreatmentsPage() {
                   </strong>
                   <small>{treatment.equivalent} · {treatment.savings}</small>
                   <Link className="primary-button" href={treatment.name === "Special Needs Nutrition" ? "/nutrition-support/care-options" : "/memberships"}>
-                    {treatment.name === "Special Needs Nutrition" ? "See program details" : "Compare memberships"}
+                    {treatment.name === "Special Needs Nutrition" ? "View the 3-month program" : "Compare memberships"}
                   </Link>
                 </section>
               </div>
@@ -213,9 +213,9 @@ export default function TreatmentsPage() {
         <h2>A straightforward path from interest to ongoing care.</h2>
         <div>
           <span><b>1</b><strong>Choose an option to discuss</strong><small>Select the program that interests you.</small></span>
-          <span><b>2</b><strong>Make the $39 initial-care payment</strong><small>Complete a brief medical questionnaire, then select your membership.</small></span>
-          <span><b>3</b><strong>Choose your membership</strong><small>Peptide and NAD+ patients continue with $149 Focused Care by default or select a higher tier.</small></span>
-          <span><b>4</b><strong>Schedule your initial appointment</strong><small>Focused Care includes 15 minutes; higher memberships include 45 minutes. If prescribed, medication is paid separately.</small></span>
+          <span><b>2</b><strong>Make the $39 initial-care payment</strong><small>Complete a brief medical questionnaire, then select your membership or fixed program.</small></span>
+          <span><b>3</b><strong>Choose the next care step</strong><small>Peptide and NAD+ patients use Focused Care by default. Special Needs Nutrition uses the fixed three-month program.</small></span>
+          <span><b>4</b><strong>Schedule your initial appointment</strong><small>Focused Care includes 15 minutes; higher memberships and the Special Needs Nutrition Program include 45 minutes.</small></span>
         </div>
       </section>
 

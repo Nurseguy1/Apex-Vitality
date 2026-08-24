@@ -90,6 +90,7 @@ Purchase-oriented buttons now move forward without returning patients to a treat
 - Created live Stripe Payment Link `https://buy.stripe.com/cNi6oIdkr0TC84Tf48fnO0k`, collecting full name and billing address and returning to `/program-complete?session_id={CHECKOUT_SESSION_ID}`.
 - Repositioned Special Needs Nutrition primarily for parents and caregivers of children age 4+ while retaining possible teen and adult eligibility. All other Apex care remains adult-only.
 - Replaced the former $149/month Special Needs Nutrition membership presentation with a fixed three-month program: 45-minute initial visit and written plan, then one 30-minute follow-up in each of months 2 and 3.
+- Corrected the Treatments page so Metabolic & Gut Health remains $149/month while Special Needs Nutrition shows $597 total and links to the dedicated three-month program page.
 - Removed public promises of clinical messaging from membership, contact, privacy, consent, and care-standard pages. Clinical care is delivered through scheduled visits.
 
 ## Fullscript status
