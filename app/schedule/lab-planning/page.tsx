@@ -14,7 +14,7 @@ export default function LabPlanningSchedulePage() {
       <section className="schedule-intro">
         <p className="eyebrow">Payment complete</p>
         <h1>Choose your 15-minute lab-planning visit.</h1>
-        <p>Select <strong>New Patient Lab-Planning Visit</strong> in the secure CharmHealth calendar below. Your $59 payment can be applied to a comprehensive lab-review and treatment-planning visit booked within 90 days.</p>
+        <p>Select <strong>Initial Care Visit</strong> in the secure calendar below to begin.</p>
       </section>
       <section className="scheduler-section">
         <div className="scheduler-heading">

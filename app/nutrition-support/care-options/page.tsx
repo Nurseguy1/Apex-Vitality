@@ -3,35 +3,29 @@ import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../../components";
 
 export const metadata: Metadata = {
-  title: "Special Needs Nutrition Support Options | Apex Vitality",
+  title: "3-Month Special Needs Nutrition Program | Apex Vitality",
   robots: { index: false, follow: false },
 };
 
 const options = [
   {
-    label: "The simple start",
-    title: "Daily Nutrition Foundation",
-    price: "$79",
-    description: "A short caregiver questionnaire, clinician review, and a practical foundation plan for everyday nutrition support.",
-    items: ["Brief starting questionnaire", "Medication and supplement review", "Simple daily plan", "Fullscript recommendations when useful"],
-    action: "Start with the foundation",
+    label: "Fixed three-month program",
+    title: "Special Needs Nutrition Program",
+    price: "$597 total",
+    description: "Enroll with one fixed $597 payment ($199 per month equivalent). The standard $39 initial-care portion is included in this total—not charged separately. There is no automatic renewal.",
+    items: ["The $39 initial-care portion is included in the $597 total", "Month 1: 45-minute initial visit and written plan", "Month 2: one 30-minute follow-up and plan adjustment", "Month 3: one 30-minute follow-up and final plan update", "Clinical messaging, Fullscript bundles, labs, and outside services are not included"],
+    action: "Review agreement & enroll · $597",
     featured: true,
+    href: "/start?treatment=3-Month%20Special%20Needs%20Nutrition%20Program&plan=program",
   },
   {
-    label: "When one concern needs more attention",
-    title: "Focused Support",
-    price: "$59 follow-up",
-    description: "Add a focused visit for selective eating, protein intake, constipation or fiber, probiotics, omega-3s, or supplement questions.",
-    items: ["Expanded questions for the concern", "Brief telehealth follow-up", "Plan adjustments", "Clear home observations to track"],
-    action: "Explore focused support",
-  },
-  {
-    label: "For the fuller picture",
-    title: "Comprehensive Care",
-    price: "45-minute visit",
-    description: "A longer visit for complex histories, several overlapping concerns, optional lab decisions, or coordination with other clinicians.",
-    items: ["Detailed history and goal review", "Longer telehealth visit", "Individualized care plan", "Optional testing or referral planning"],
-    action: "Choose comprehensive care",
+    label: "After the three months",
+    title: "Optional Focused Care",
+    price: "$149/month",
+    description: "Patients who are stable but want continued scheduled clinical follow-up may choose Focused Care after completing the program. It is a separate, optional enrollment.",
+    items: ["No automatic transition", "One focused treatment pathway", "Scheduled clinical follow-up", "Supplements, labs, and outside services paid separately"],
+    action: "Review Focused Care",
+    href: "/memberships/initial-care",
   },
 ];
 
@@ -41,8 +35,13 @@ export default function NutritionCareOptionsPage() {
       <SiteHeader />
       <section className="nutrition-options-hero">
         <p className="eyebrow">Apex Daily Nutrition Support for Special Needs</p>
-        <h1>Choose an achievable first step. Build momentum from there.</h1>
-        <p>Every family can begin with a clear action they can manage today. Focused and comprehensive support helps overcome the next obstacle as new goals come into view.</p>
+        <h1>3-Month Special Needs Nutrition Program</h1>
+        <p>Review the complete program here first. When you are ready, one agreement and one $597 checkout enroll you in the full three-month program, including the initial-care portion and 45-minute visit.</p>
+        <div className="membership-flow" aria-label="Special Needs Nutrition enrollment flow">
+          <span><b>1</b><strong>Review the program</strong><small>Confirm the visits, price, and eligibility.</small></span>
+          <span><b>2</b><strong>Agree &amp; pay $597 for the three-month program</strong><small>One payment includes the $39 initial-care portion.</small></span>
+          <span><b>3</b><strong>Schedule 45 minutes</strong><small>Book the included comprehensive initial visit.</small></span>
+        </div>
       </section>
       <section className="nutrition-option-grid">
         {options.map((option) => (
@@ -53,7 +52,7 @@ export default function NutritionCareOptionsPage() {
             <strong className="nutrition-price">{option.price}</strong>
             <p>{option.description}</p>
             <ul>{option.items.map((item) => <li key={item}>✓ {item}</li>)}</ul>
-            <Link className={option.featured ? "primary-button" : "secondary-dark-button"} href={option.featured ? "/nutrition-support/start" : "/schedule"}>{option.action}</Link>
+            <Link className={option.featured ? "primary-button" : "secondary-dark-button"} href={option.href}>{option.action}</Link>
           </article>
         ))}
       </section>
@@ -63,15 +62,19 @@ export default function NutritionCareOptionsPage() {
           <h2>The questionnaire guides the next conversation.</h2>
         </div>
         <div className="nutrition-routing-list">
-          <p><strong>Most families</strong><span>Begin with the foundation plan.</span></p>
-          <p><strong>A specific nutrition or digestive concern</strong><span>Opens a focused set of questions and follow-up option.</span></p>
-          <p><strong>Growth, swallowing, complex medications, or several concerns</strong><span>Moves into comprehensive care or coordinated referral.</span></p>
+          <p><strong>Most families</strong><span>Enroll in the fixed three-month program with one $597 payment, including the initial-care portion.</span></p>
+          <p><strong>A specific nutrition or digestive concern</strong><span>Is addressed through the written plan and two scheduled follow-up adjustments.</span></p>
+          <p><strong>Growth, swallowing, complex medications, or several concerns</strong><span>Receives additional clinical review and may require coordinated referral before enrollment.</span></p>
         </div>
+        <p className="program-fullscript-note">Children age 4+, teens, and adults may be considered. A parent or legal guardian must participate for a minor. Funding or reimbursement is not guaranteed and depends on the approved plan and funding administrator.</p>
       </section>
       <section className="nutrition-cta">
         <p className="eyebrow">Ready when you are</p>
         <h2>Meaningful progress can start with one clear next step.</h2>
-        <Link className="primary-button" href="/nutrition-support/start">Start the questionnaire</Link>
+        <div className="hero-actions">
+          <Link className="primary-button" href="/start?treatment=3-Month%20Special%20Needs%20Nutrition%20Program&plan=program">Review agreement &amp; enroll · $597</Link>
+          <Link className="secondary-dark-button" href="/nutrition-support#nutrition-bundles">View supplement bundle examples</Link>
+        </div>
       </section>
       <SiteFooter />
     </main>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { charmLinks } from "./lib/charm";
+import { practiceContact } from "./lib/compliance";
 
 export function SiteHeader() {
   return (
@@ -9,19 +10,18 @@ export function SiteHeader() {
         <span>Apex Vitality</span>
       </Link>
       <nav className="nav-links" aria-label="Main navigation">
-        <Link href="/memberships">Memberships</Link>
-        <Link href="/gut-health">Gut Health</Link>
+        <Link href="/peptides">Peptides</Link>
         <Link href="/weight-loss">Weight Loss</Link>
-        <Link href="/functional-health">Longevity &amp; Functional Health</Link>
-        <Link href="/nad-plus">NAD+</Link>
-        <Link href="/sermorelin">Sermorelin Peptide</Link>
-        <Link href="/mens-health">Men&apos;s Health</Link>
-        <Link href="/womens-health">Women&apos;s Health &amp; Healthy Aging</Link>
+        <Link href="/treatments">Treatments</Link>
+        <Link href="/memberships">Memberships</Link>
         <Link href="/how-it-works">How It Works</Link>
       </nav>
       <details className="mobile-menu">
         <summary aria-label="Open site navigation">Menu</summary>
         <nav aria-label="Mobile navigation">
+          <Link href="/peptides">Peptide Care</Link>
+          <Link href="/treatments">Choose a Treatment</Link>
+          <Link href="/treatments">Programs</Link>
           <Link href="/mens-health">Men&apos;s Health</Link>
           <Link href="/womens-health">Women&apos;s Health</Link>
           <Link href="/weight-loss">Weight Loss</Link>
@@ -34,7 +34,7 @@ export function SiteHeader() {
           <Link href="/patient-access">Patient Access</Link>
         </nav>
       </details>
-      <Link className="header-action" href="/questionnaires">Get Started</Link>
+      <Link className="header-action" href="/treatments">Get Started</Link>
     </header>
   );
 }
@@ -45,8 +45,18 @@ export function SiteFooter() {
       <div>
         <strong>Apex Vitality</strong>
         <p>Personalized telehealth care from licensed medical providers.</p>
+        <address>
+          {practiceContact.legalName}<br />
+          {practiceContact.addressLine1}<br />
+          {practiceContact.cityStateZip}
+        </address>
       </div>
       <nav aria-label="Footer navigation">
+        <Link href="/peptides">Peptide Care</Link>
+        <Link href="/treatments">Choose a Treatment</Link>
+        <Link href="/programs/metabolic-gut">Metabolic &amp; Gut Program</Link>
+        <Link href="/programs/mens-vitality">Men&apos;s Vitality Program</Link>
+        <Link href="/programs/longevity-functional">Longevity &amp; Functional Health Program</Link>
         <Link href="/gut-health">Gut Health</Link>
         <Link href="/weight-loss">Medical Weight Management</Link>
         <Link href="/functional-health">Longevity &amp; Functional Health</Link>
@@ -60,16 +70,24 @@ export function SiteFooter() {
         <Link href="/faq">FAQ</Link>
         <Link href="/patient-access">Patient Access</Link>
         <Link href="/contact">Contact</Link>
+        <Link href="/providers">Care Team &amp; Clinical Partners</Link>
+        <Link href="/care-standards">Care &amp; Compliance Standards</Link>
+        <Link href="/service-areas">Service Areas</Link>
       </nav>
       <nav aria-label="Legal navigation">
         <Link href="/privacy">Privacy</Link>
+        <Link href="/california-privacy">California Privacy</Link>
+        <Link href="/notice-of-privacy-practices">HIPAA Notice</Link>
         <Link href="/telehealth-consent">Telehealth Consent</Link>
+        <Link href="/treatment-consents">Treatment Consents</Link>
+        <Link href="/agreements/self-pay">Self-Pay Agreement</Link>
+        <Link href="/agreements/recurring-payments">Recurring Payments</Link>
         <Link href="/terms">Terms &amp; Medical Disclaimer</Link>
       </nav>
       <p className="footer-disclaimer">
         Information on this website is educational and is not medical advice.
-        Care includes assessment, clinical guidance, and individualized planning.
-        Your clinician connects testing, prescriptions, monitoring, and follow-up with your personal care plan.
+        Prescription treatment requires an appropriate evaluation by a licensed clinician and is provided only when clinically appropriate.
+        Some treatments use patient-specific compounded medications prepared by independent licensed pharmacies; compounded medications are not FDA-approved.
         Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation.
       </p>
       {charmLinks.portal && <a className="footer-portal-link" href={charmLinks.portal} rel="noreferrer" target="_blank">Secure Charm patient login ↗</a>}
@@ -92,8 +110,8 @@ export function PageIntro({
       <h1>{title}</h1>
       <p>{description}</p>
       <div className="hero-actions">
-        <Link className="primary-button" href="/questionnaires">Start my care</Link>
-        <Link className="secondary-button" href="/schedule">Choose comprehensive care</Link>
+        <Link className="primary-button" href="/treatments">Start my care</Link>
+        <Link className="secondary-button" href="/memberships">Compare memberships</Link>
       </div>
     </section>
   );

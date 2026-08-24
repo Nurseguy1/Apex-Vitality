@@ -14,17 +14,17 @@ export default function TermsPage() {
 
         <h2>1. Who we are</h2>
         <p>
-          Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation. Medical services are provided by appropriately licensed clinicians acting within their professional scope and the laws of the state where the patient is located.
+          Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation. Clinical care is provided by appropriately licensed Apex Vitality clinicians. The treating clinician—not the website, pharmacy, or payment processor—is responsible for medical evaluation and treatment decisions.
         </p>
 
         <h2>2. Eligibility and service area</h2>
         <p>
-          Apex Vitality currently serves adults age 18 and older. You must provide accurate identity, contact, location, health, medication, and payment information. Availability depends on clinician licensure, pharmacy service areas, and applicable law. You may not use another person&apos;s identity or account.
+          Apex Vitality currently serves adults age 18 and older who are physically located in California at the time clinical care is provided. The only age exception is the Special Needs Nutrition Program, for which children age 4 and older and teens may be considered with parent or legal-guardian participation and consent. All other treatments, programs, and memberships are adult-only. Availability also depends on the selected service, clinical appropriateness, pharmacy coverage, and applicable law. See the <Link href="/service-areas">Service Areas page</Link>. You must provide accurate identity, contact, physical location, shipping address, health, medication, and payment information and may not use another person&apos;s identity or account.
         </p>
 
         <h2>3. Not emergency care</h2>
         <p>
-          Apex Vitality, this website, questionnaires, email, and secure messages are not emergency services and are not monitored continuously. Call 911 or seek immediate in-person care for a medical emergency, severe or rapidly worsening symptoms, thoughts of self-harm, or another urgent concern.
+          Apex Vitality, this website, questionnaires, email, and administrative patient channels are not emergency services and are not monitored continuously. Call 911 or seek immediate in-person care for a medical emergency, severe or rapidly worsening symptoms, thoughts of self-harm, or another urgent concern.
         </p>
 
         <h2>4. Website information</h2>
@@ -39,7 +39,7 @@ export default function TermsPage() {
 
         <h2>6. Telehealth services</h2>
         <p>
-          Care may be provided through video, telephone, secure messaging, electronic questionnaires, record review, or other legally permitted telehealth methods. Before telehealth care is delivered, you will be asked to acknowledge the <Link href="/telehealth-consent">Telehealth Informed Consent</Link>. A clinician may recommend an in-person examination, testing, urgent evaluation, or another level of care when useful for safe and effective treatment.
+          Care may be provided through scheduled video or telephone visits, electronic questionnaires, record review, or other legally permitted telehealth methods. Clinical messaging is not included. Before telehealth care is delivered, you will be asked to acknowledge the <Link href="/telehealth-consent">Telehealth Informed Consent</Link>. A clinician may recommend an in-person examination, testing, urgent evaluation, or another level of care when useful for safe and effective treatment.
         </p>
 
         <h2>7. Prescriptions and treatment plans</h2>
@@ -49,7 +49,7 @@ export default function TermsPage() {
 
         <h2>8. Compounded medications</h2>
         <p>
-          Some plans may include a compounded medication prepared by an independent licensed pharmacy pursuant to a patient-specific prescription. Compounded drugs are not FDA-approved, and the FDA does not review their safety, effectiveness, or quality before marketing. Formulation, concentration, appearance, packaging, beyond-use date, and availability may vary by pharmacy. Your clinician will discuss material treatment information and alternatives as part of your care.
+          A clinician may prescribe a compounded medication prepared by an independent licensed pharmacy pursuant to a patient-specific prescription. Compounded drugs are not FDA-approved, and the FDA does not review their safety, effectiveness, or quality before marketing. Formulation, concentration, appearance, packaging, beyond-use date, and availability may vary by pharmacy. Your clinician will discuss material treatment information and alternatives as part of your care.
         </p>
 
         <h2>9. Pharmacies, laboratories, and other third parties</h2>
@@ -59,12 +59,12 @@ export default function TermsPage() {
 
         <h2>10. Prices, payments, and insurance</h2>
         <p>
-          Prices are shown in U.S. dollars. The checkout page identifies what is included in a purchase. Medication, laboratory testing, supplements, shipping, imaging, or other outside services are separate unless expressly listed as included. Payments are processed through Stripe or another identified processor. By submitting payment information, you authorize the stated charge. Apex Vitality is a cash-pay practice unless expressly stated otherwise and does not guarantee insurance reimbursement.
+          Prices are shown in U.S. dollars. Apex Vitality checkout charges cover only the clinical services identified at checkout. Prescription medication, pharmacy charges, medication supplies, and medication shipping are paid separately by the patient. Laboratory testing, supplements, imaging, or other outside services are also separate unless expressly listed as included. Payments are processed through Stripe or another identified processor. By submitting payment information, you authorize the stated charge. Apex Vitality is a cash-pay practice unless expressly stated otherwise and does not guarantee insurance reimbursement. The <Link href="/agreements/self-pay">Self-Pay Agreement</Link> provides additional financial terms.
         </p>
 
         <h2>11. Provider-review purchases and refunds</h2>
         <p>
-          Some programs allow you to pay and submit a health questionnaire before clinician review. If the reviewing clinician does not authorize the selected prescription, Apex Vitality will contact you about next steps. You may receive a refund for the undelivered medication or program portion, or choose another offered care option. Any nonrefundable clinical-review fee will be clearly disclosed before purchase. Prescription medications generally cannot be returned or refunded after a pharmacy has prepared or shipped them, except when required by law or under the pharmacy&apos;s written policy.
+          Some programs allow you to pay and submit a health questionnaire before clinician review. That payment covers the clinical services described at checkout and does not guarantee that medication will be prescribed. Medication is purchased separately from the dispensing pharmacy and is governed by the pharmacy&apos;s payment, cancellation, return, and refund policies.
         </p>
 
         <h2>12. Appointments, cancellations, and missed visits</h2>
@@ -74,12 +74,12 @@ export default function TermsPage() {
 
         <h2>13. Memberships and recurring charges</h2>
         <p>
-          If you purchase a recurring membership, the price, billing interval, included services, and renewal terms will be shown before checkout. By enrolling, you authorize recurring charges to your payment method until cancellation. You may cancel before the next renewal through the secure patient portal or the stated customer-service method. Cancellation stops future renewals. Fees already paid for the current period are not prorated or refunded except when required by law or agreed in writing.
+          If you purchase a recurring membership, the price, billing interval, included services, and renewal terms will be shown before checkout. A recurring charge begins only after your separate affirmative authorization. You may cancel future renewals using the direct online method identified at enrollment and in your retainable acknowledgment. Cancellation stops future renewals. Fees already paid for the current period are not prorated or refunded except when required by law or agreed in writing. Review the <Link href="/agreements/recurring-payments">Recurring-Payment Terms</Link>.
         </p>
 
         <h2>14. Electronic communications</h2>
         <p>
-          You consent to receive service-related electronic communications, including appointment, account, payment, questionnaire, and care notifications. Standard message and data rates may apply. Email and text messages may not be fully secure; use the Charm patient portal for medical information and care-related messages. You may manage optional marketing communications separately from essential service communications.
+          You consent to receive service-related electronic communications, including appointment, account, payment, questionnaire, and care notifications. Standard message and data rates may apply. Email and text messages may not be fully secure; use the Charm patient portal for assigned forms, records, and other requested medical information. Clinical questions require a scheduled visit. You may manage optional marketing communications separately from essential service communications.
         </p>
 
         <h2>15. Your account and security</h2>
@@ -124,9 +124,9 @@ export default function TermsPage() {
 
         <h2>23. Entire agreement and questions</h2>
         <p>
-          These terms, the Privacy Notice, the Telehealth Informed Consent, and any program-specific terms presented at checkout form the agreement concerning the service. Use the <Link href="/contact">contact page</Link> for customer-service questions and the secure Charm patient portal for care-related questions. Do not use ordinary email for sensitive medical information.
+          These terms, the Privacy Notice, the Telehealth Informed Consent, and any program-specific terms presented at checkout form the agreement concerning the service. Use the <Link href="/contact">contact page</Link> for customer-service questions and the secure Charm patient portal for assigned forms and records. Clinical questions require a scheduled visit. Do not use ordinary email for sensitive medical information.
         </p>
-        <p className="legal-updated">Effective July 25, 2026.</p>
+        <p className="legal-updated">Effective August 23, 2026.</p>
       </article>
       <SiteFooter />
     </main>

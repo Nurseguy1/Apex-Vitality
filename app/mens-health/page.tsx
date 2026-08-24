@@ -1,28 +1,34 @@
 import type { Metadata } from "next";
-import { CareNotice, PageIntro, SiteFooter, SiteHeader } from "../components";
+import Link from "next/link";
+import { SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
   title: "Men's Vitality & Hormonal Health | Apex Vitality",
-  description: "Telehealth evaluation for men's vitality, performance, and hormonal health concerns.",
+  description: "Personalized telehealth care for men's vitality, performance, and hormonal health.",
 };
 
 export default function MensHealthPage() {
   return (
-    <main>
+    <main className="mens-health-page">
       <SiteHeader />
-      <PageIntro
-        eyebrow="Vitality, performance & hormonal health"
-        title="Men's Health"
-        description="Understand the symptoms, review the data, and build the right plan. Focused telehealth care for changes in energy, sexual health, strength, recovery, mood, sleep, or body composition."
-      />
+      <section className="page-intro">
+        <p className="eyebrow">Vitality, performance &amp; hormonal health</p>
+        <h1>Men&apos;s Health</h1>
+        <p>Feel stronger, sharper, and more like yourself. Personalized men&apos;s health care designed to improve energy, performance, sexual health, recovery, mood, sleep, and body composition.</p>
+        <div className="hero-actions">
+          <Link className="primary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Start my men&apos;s health care</Link>
+          <Link className="secondary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Schedule an initial visit</Link>
+        </div>
+        <p className="hero-cta-note">Your goals lead the way, supported by expert clinical guidance and a care plan built around you.</p>
+      </section>
       <section className="content-section">
         <div className="section-heading">
-          <p className="eyebrow">Your symptoms are the starting point</p>
-          <h2>Turn the changes you notice into a plan for renewed vitality.</h2>
+          <p className="eyebrow">Your goals are the starting point</p>
+          <h2>Create momentum toward renewed vitality.</h2>
           <p>
-            Men&apos;s health concerns have many contributing factors. Clinical review includes
-            symptoms, medical history, medications, sleep, stress, metabolic health,
-            and goal-directed lab testing.
+            We connect the full picture—energy, sleep, strength, sexual health,
+            metabolism, lifestyle, and lab results—to build a clear path toward
+            feeling and performing your best.
           </p>
         </div>
         <div className="marker-grid wide-markers">
@@ -32,22 +38,63 @@ export default function MensHealthPage() {
       <section className="content-split dark-panel">
         <div>
           <p className="eyebrow">Hormonal health care</p>
-          <h2>Thoughtful hormonal care, built with you.</h2>
+          <h2>Personalized hormonal care, built with you.</h2>
           <p>
-            Your clinician explains what your symptoms and laboratory findings mean,
-            reviews the benefits and risks of your options, and helps you implement
-            a treatment plan with the baseline testing and ongoing monitoring it needs.
-            The focus is health, function, vitality, and long-term well-being.
+            Gain a clear understanding of your health, explore your care options,
+            and move forward with a treatment plan designed around your goals.
+            Your clinician stays connected with guidance and monitoring to help
+            you build lasting progress.
           </p>
         </div>
         <ul className="check-list">
-          <li>Symptom and medical-history review</li>
-          <li>Goal-directed laboratory review</li>
-          <li>Shared decision-making with a clinician</li>
-          <li>Monitoring based on the care plan</li>
+          <li>A complete picture of your health and goals</li>
+          <li>Lab insights focused on your progress</li>
+          <li>A care plan created with your clinician</li>
+          <li>Ongoing guidance and personalized monitoring</li>
         </ul>
       </section>
-      <CareNotice />
+      <section className="content-section" id="hormone-balance">
+        <div className="section-heading">
+          <p className="eyebrow">Men&apos;s hormone balance</p>
+          <h2>Build a plan around how you want to feel, perform, and live.</h2>
+          <p>
+            Start with a focused conversation about your goals, symptoms, and lab
+            results. Together, you and your clinician will create a personalized
+            care plan with clear guidance, coordinated treatment, and ongoing
+            support designed to help you make meaningful progress.
+          </p>
+        </div>
+        <div className="sermorelin-plan-grid" aria-label="Men's health membership pricing">
+          <article className="featured">
+            <span>Ongoing care membership</span>
+            <strong>$149</strong>
+            <b>per month</b>
+            <p>Ongoing clinician guidance, monitoring, prescription management, and follow-up support.</p>
+            <Link className="plan-select-button" href="/start?treatment=Focused%20Care%20Membership&plan=ongoing">Choose ongoing care</Link>
+          </article>
+          <article>
+            <span>Laboratory services</span>
+            <strong>About $150</strong>
+            <b>when clinically needed</b>
+            <p>Laboratory testing is selected for your individual care plan and billed separately.</p>
+            <Link className="plan-select-button" href="/start?treatment=Men%27s%20Health&plan=initial">Start my care</Link>
+          </article>
+        </div>
+        <p className="sermorelin-pricing-note">Medication and laboratory services are billed separately from the membership.</p>
+        <div className="focused-process-grid">
+          <article><span>01</span><h3>Tell us where you want to go</h3><p>Share how you feel today, what you want to improve, and the health details that help us understand you.</p></article>
+          <article><span>02</span><h3>Collaborate with your clinician</h3><p>Talk through your goals, symptoms, and the testing that will help shape your care.</p></article>
+          <article><span>03</span><h3>Understand your results</h3><p>Review your hormone levels and health markers together, with clear answers and a plan built around you.</p></article>
+          <article><span>04</span><h3>Put your plan into action</h3><p>Move forward with coordinated treatment, follow-up, and monitoring designed to support your progress.</p></article>
+        </div>
+        <div className="hormone-balance-cta">
+          <div>
+            <p className="eyebrow">Ready to move forward?</p>
+            <h3>Take the first step toward renewed vitality.</h3>
+          </div>
+          <Link className="primary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Start my plan</Link>
+        </div>
+      </section>
       <SiteFooter />
     </main>
   );

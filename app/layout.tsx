@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./bright-theme.css";
 import { JsonLd } from "./seo";
+import { practiceContact } from "./lib/compliance";
 
-const siteUrl = "https://create-a-coral.vercel.app";
+const siteUrl = "https://goapexvitality.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -76,6 +78,20 @@ const organizationSchema = {
       image: `${siteUrl}/og.png`,
       description:
         "A California telehealth practice providing clinician-led longevity, functional health, healthy-aging, metabolic, men's health, women's health, and digestive-wellness care for adults.",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: practiceContact.addressLine1,
+        addressLocality: "Santa Clarita",
+        addressRegion: "CA",
+        postalCode: "91350",
+        addressCountry: "US",
+      },
+      employee: {
+        "@type": "Person",
+        name: practiceContact.clinician,
+        jobTitle: "Family Nurse Practitioner",
+        identifier: practiceContact.npi,
+      },
       medicalSpecialty: [
         "PrimaryCare",
         "DietNutrition",
@@ -105,6 +121,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="/bright-theme-v2.css" />
+      </head>
       <body>
         <JsonLd data={organizationSchema} />
         {children}
