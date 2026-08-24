@@ -11,6 +11,8 @@ Updated: August 23, 2026
 
 ## Current project status
 
+- Latest verified production website commit: `a8f9ef4` (**Clarify three-month program payment step**).
+- No website work is currently in progress. The production build passed, the review deployment was verified, and the same change was promoted and verified at `www.goapexvitality.com`.
 - The membership and scheduling workflow was revised on August 23.
 - Standard treatment and membership pathways begin with a separate, one-time **$39 initial-care payment**, then continue to the selected membership checkout. Special Needs Nutrition is the exception: its $39 initial-care portion is included in the single $597 program total.
 - Focused Care includes a 15-minute initial appointment. Apex Treatment, Apex Performance, and Apex Private Client Care include a 45-minute comprehensive initial appointment.
@@ -95,6 +97,7 @@ Purchase-oriented buttons now move forward without returning patients to a treat
 - Corrected the Treatments page so Metabolic & Gut Health remains $149/month while Special Needs Nutrition shows $597 total and links to the dedicated three-month program page.
 - Standardized every Special Needs Nutrition entry point: Home Care card, Treatments card, nutrition landing page, questionnaire result, and Memberships callout now lead to the dedicated program page before agreements and checkout.
 - The dedicated program page shows the full sequence: review the program, accept one agreement and complete one $597 checkout, then schedule the included 45-minute visit. It clearly states that the standard $39 initial-care portion is included and is not charged separately.
+- The final visible wording for step 2 is: **Agree & pay $597 for the three-month program**. The supporting line says: **One payment includes the $39 initial-care portion.**
 - Removed public promises of clinical messaging from membership, contact, privacy, consent, and care-standard pages. Clinical care is delivered through scheduled visits.
 
 ## Fullscript status
@@ -115,13 +118,15 @@ Fullscript products and bundles are paid for separately by the patient. The webs
 - Live Stripe and Charm URLs are configured as Vercel environment variables for both Production and Preview.
 - The new public $597 Special Needs Nutrition Payment Link is connected through `NEXT_PUBLIC_STRIPE_SPECIAL_NEEDS_PROGRAM_CHECKOUT_URL` when configured, with the verified live Payment Link as a public fallback.
 - The Home-page **Explore options** flow now lands on Care cards ordered Medical Weight Loss, Metabolic & Gut Health, then Special Needs Nutrition.
-- The Treatments page includes both nutrition-program cards, and both cards link to visible bundle sections.
-- The review and public sites were verified after the production promotion.
+- The Treatments page includes both nutrition-program cards. Metabolic & Gut Health links to its visible adult bundle section; Special Needs Nutrition links to its dedicated fixed three-month program page, where supplement bundle examples remain reachable.
+- Commit `a8f9ef4` is live on both review and public sites. The exact step-2 wording was verified on both domains after production promotion.
 
 ## Next-conversation handoff
 
 - Repository folder: `/Users/johnbagby/Documents/Codex/2026-07-14/let/apex-vitality-stripe-ready`
 - Continue from this wiki and the `agent/stripe-checkout-preview` branch.
+- At handoff, no implementation task is pending. Start by asking the owner what they want to change next; do not redo the completed Special Needs flow.
+- Latest production website code commit: `a8f9ef4`. A documentation-only handoff commit may appear after it.
 - Begin with this wiki and verify both the Vercel review deployment and public site before declaring future changes complete.
 - The Metabolic & Gut Health and Special Needs Nutrition cards are published on the Home-page Care section and Treatments page.
 - The Special Needs Nutrition page shows Daily Nutrition Foundation, Digestive Routine Support, and Flexible-Format Support bundle examples with age, medication, clinical-review, and separate-purchase safeguards.
@@ -135,6 +140,9 @@ Fullscript products and bundles are paid for separately by the patient. The webs
 - Keep both the 15-minute and 45-minute new-patient visit types enabled in Charm Online Appointments unless the membership scheduling model changes.
 - Keep all non-nutrition care adult-only. The only minor-care exception is Special Needs Nutrition for children age 4+ and teens with parent or legal-guardian participation and consent.
 - Keep Special Needs Nutrition as a fixed, nonrenewing three-month program. Do not describe it as a $149/month membership or promise clinical messaging.
+- Preserve the finalized Special Needs path: Home, Treatments, nutrition landing page, questionnaire result, and Memberships callout → `/nutrition-support/care-options` → one program agreement → one $597 checkout → verified return → included 45-minute scheduling.
+- Preserve the price rule: the standard $39 initial-care portion is included within the $597 Special Needs total. Never create a second $39 Special Needs checkout.
+- Preserve the visible step-2 label exactly unless the owner requests another change: **Agree & pay $597 for the three-month program**.
 
 ## Operating notes
 
