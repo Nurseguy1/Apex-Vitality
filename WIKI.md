@@ -75,7 +75,7 @@ Purchase-oriented buttons now move forward without returning patients to a treat
 - Added verified purchase-complete and membership-complete return pages.
 - Added clear 15-minute versus 45-minute initial-appointment guidance throughout the memberships, agreements, and scheduling flow.
 - Preserved separate affirmative consent for recurring membership charges.
-- Added `https://www.goapexvitality.com` to the Charm Web Embed Hosting Websites list while retaining the Vercel preview host.
+- Added `https://www.goapexvitality.com` and `https://review.goapexvitality.com` to the Charm Web Embed Hosting Websites list while retaining the original Vercel preview host.
 - Connected Charm's regenerated public scheduler link in Vercel for general, Focused Care, and comprehensive booking.
 
 ## Fullscript status
@@ -111,7 +111,7 @@ Fullscript products and bundles are paid for separately by the patient. The webs
 - Close temporary testing and verification tabs as work is completed. Keep active Fullscript, Charm, GitHub, Stripe, Strive, and Vercel working tabs when they are still needed.
 - Before stating that a website change is finished, verify both the preview deployment and the public `www.goapexvitality.com` page.
 - The owner has given a standing instruction to publish completed, verified website changes so they can review them on the live site.
-- Charm Web Embed authorizes the live `www.goapexvitality.com` host and the original Vercel preview host. If Charm regenerates the embed code, update all three `NEXT_PUBLIC_CHARM_*_BOOKING_URL` values in Vercel.
+- Charm Web Embed authorizes the live `www.goapexvitality.com` host, the `review.goapexvitality.com` host, and the original Vercel preview host. If Charm regenerates the embed code, update all three `NEXT_PUBLIC_CHARM_*_BOOKING_URL` values in Vercel.
 
 ## Operating notes
 
