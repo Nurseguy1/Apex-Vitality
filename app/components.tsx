@@ -111,7 +111,7 @@ export function PageIntro({
       <p>{description}</p>
       <div className="hero-actions">
         <Link className="primary-button" href="/treatments">Start my care</Link>
-        <Link className="secondary-button" href="/schedule/comprehensive">Choose comprehensive care</Link>
+        <Link className="secondary-button" href="/memberships">Compare memberships</Link>
       </div>
     </section>
   );

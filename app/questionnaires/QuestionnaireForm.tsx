@@ -12,8 +12,8 @@ function QuestionField({ question, answers }: { question: Question; answers: Rec
     <fieldset className="quiz-field">
       <legend>{question.label}{question.required && <span aria-hidden="true"> *</span>}</legend>
       {question.help && <p className="field-help urgent-help">{question.help}</p>}
-      {question.type === "text" && <textarea {...common} defaultValue={saved[0] ?? ""} rows={4} />}
-      {question.type === "number" && <input {...common} defaultValue={saved[0] ?? ""} type="number" min="0" />}
+      {question.type === "text" && <textarea {...common} aria-label={question.label} defaultValue={saved[0] ?? ""} rows={4} />}
+      {question.type === "number" && <input {...common} aria-label={question.label} defaultValue={saved[0] ?? ""} type="number" min="0" />}
       {question.type === "scale" && (
         <div className="scale-row" role="radiogroup" aria-label={question.label}>
           {Array.from({ length: 10 }, (_, index) => index + 1).map((value) => <label key={value}><input {...common} defaultChecked={saved.includes(String(value))} type="radio" value={value} /><span>{value}</span></label>)}

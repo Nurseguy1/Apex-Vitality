@@ -1,6 +1,6 @@
 # Apex Vitality Project Wiki
 
-Updated: August 22, 2026
+Updated: August 23, 2026
 
 ## Live website
 
@@ -11,25 +11,30 @@ Updated: August 22, 2026
 
 ## Current project status
 
-- The August 22 launch work is complete.
-- All requested website changes are published on the live site; no launch-session website changes remain unpublished.
-- The final Home-page Care order, Treatments cards, and nutritional bundle paths were verified on both the review and public sites.
+- The membership and scheduling workflow was revised on August 23.
+- Everyone begins with a separate, one-time **$39 initial-care payment**, then completes the selected membership checkout.
+- Focused Care includes a 15-minute initial appointment. Apex Treatment, Apex Performance, and Apex Private Client Care include a 45-minute comprehensive initial appointment.
+- The first full membership month is charged immediately. Canceling stops the next renewal; it does not prorate or reverse a month already purchased.
+- The Home-page Care order, Treatments cards, and nutritional bundle paths remain in place.
 
 ## Current purchase model
 
-- Initial clinical visit: **$39 today**.
-- Focused-care membership: **$149 per month beginning after 30 days unless canceled**.
-- If the clinician determines the patient is ineligible for the selected care pathway, the $39 initial payment is refunded and the membership does not begin.
-- Stripe checkout is active and returns patients to `/purchase-complete` after payment.
-- Checkout collects a billing address but does not require a phone number.
+- Initial clinical visit: **$39 one time**.
+- Focused Care: **$149 per month**, including a 15-minute initial appointment.
+- Apex Treatment: **$499 per month**, including a 45-minute comprehensive initial appointment.
+- Apex Performance: **$749 per month**, including a 45-minute comprehensive initial appointment.
+- Apex Private Client Care: **$1,250 per month**, including a 45-minute comprehensive initial appointment.
+- Peptide- or NAD+-only patients are directed to Focused Care as the default membership, but they must affirmatively approve its separate recurring checkout.
+- The $39 checkout returns to `/purchase-complete`; membership checkouts return to `/membership-complete`.
+- Stripe verifies the completed checkout before the return page displays the relevant next step.
 
 ## Purchase workflow
 
-1. Patient chooses a treatment.
-2. Patient confirms California as the location of care.
-3. Patient reviews and accepts the self-pay and recurring-payment terms.
-4. The site automatically opens the secure Stripe checkout.
-5. After payment, the patient returns to Apex Vitality for patient-access instructions.
+1. Patient chooses a treatment or membership.
+2. Patient confirms California as the location of care and accepts the self-pay terms.
+3. Patient pays the one-time $39 initial-care fee in Stripe.
+4. Patient returns to Apex Vitality and affirmatively completes the selected membership checkout.
+5. Patient schedules the included 15-minute or 45-minute initial appointment based on the membership tier.
 
 Purchase-oriented buttons now move forward without returning patients to a treatment page they already visited. Direct checkout paths were verified for:
 
@@ -62,6 +67,17 @@ Purchase-oriented buttons now move forward without returning patients to a treat
 - Fixed the Focused Care **$149/month** price so it stays inside its summary box at responsive widths.
 - Published and verified commit `ac1811f` on both the review deployment and the public production site.
 
+## August 23 updates
+
+- Separated the $39 initial-care payment from recurring membership enrollment.
+- Removed the 30-day Focused Care trial language and configured the first full membership month to be due immediately.
+- Added all four memberships and their separate live Stripe checkouts.
+- Added verified purchase-complete and membership-complete return pages.
+- Added clear 15-minute versus 45-minute initial-appointment guidance throughout the memberships, agreements, and scheduling flow.
+- Preserved separate affirmative consent for recurring membership charges.
+- Added `https://www.goapexvitality.com` to the Charm Web Embed Hosting Websites list while retaining the Vercel preview host.
+- Connected Charm's regenerated public scheduler link in Vercel for general, Focused Care, and comprehensive booking.
+
 ## Fullscript status
 
 The following general-wellness collections are published in the Apex Vitality Fullscript storefront:
@@ -75,9 +91,9 @@ Fullscript products and bundles are paid for separately by the patient. The webs
 ## Deployment status
 
 - Working branch: `agent/stripe-checkout-preview`
-- Latest published site commit: `ac1811f` — **Keep weight loss first in care options**
 - Review site: https://review.goapexvitality.com
-- Public production deployment was promoted in Vercel and verified at https://www.goapexvitality.com.
+- Public production is deployed through Vercel at https://www.goapexvitality.com.
+- Live Stripe and Charm URLs are configured as Vercel environment variables for both Production and Preview.
 - The Home-page **Explore options** flow now lands on Care cards ordered Medical Weight Loss, Metabolic & Gut Health, then Special Needs Nutrition.
 - The Treatments page includes both nutrition-program cards, and both cards link to visible bundle sections.
 - The review and public sites were verified after the production promotion.
@@ -86,7 +102,7 @@ Fullscript products and bundles are paid for separately by the patient. The webs
 
 - Repository folder: `/Users/johnbagby/Documents/Codex/2026-07-14/let/apex-vitality-stripe-ready`
 - Continue from this wiki and the `agent/stripe-checkout-preview` branch.
-- There is no pending launch work at this handoff; begin with the owner's next requested change.
+- Begin with this wiki and verify both the Vercel review deployment and public site before declaring future changes complete.
 - The Metabolic & Gut Health and Special Needs Nutrition cards are published on the Home-page Care section and Treatments page.
 - The Special Needs Nutrition page shows Daily Nutrition Foundation, Digestive Routine Support, and Flexible-Format Support bundle examples with age, medication, clinical-review, and separate-purchase safeguards.
 - The Metabolic & Gut Health cards link directly to the adult Fullscript bundle section.
@@ -95,6 +111,7 @@ Fullscript products and bundles are paid for separately by the patient. The webs
 - Close temporary testing and verification tabs as work is completed. Keep active Fullscript, Charm, GitHub, Stripe, Strive, and Vercel working tabs when they are still needed.
 - Before stating that a website change is finished, verify both the preview deployment and the public `www.goapexvitality.com` page.
 - The owner has given a standing instruction to publish completed, verified website changes so they can review them on the live site.
+- Charm Web Embed authorizes the live `www.goapexvitality.com` host and the original Vercel preview host. If Charm regenerates the embed code, update all three `NEXT_PUBLIC_CHARM_*_BOOKING_URL` values in Vercel.
 
 ## Operating notes
 

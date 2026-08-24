@@ -9,14 +9,18 @@ const safeHttpsUrl = (value: string | undefined) => {
 };
 
 const checkoutKeys: Record<string, string | undefined> = {
-  "Sermorelin|initial": process.env.NEXT_PUBLIC_STRIPE_PEPTIDE_INITIAL_CHECKOUT_URL,
-  "NAD+|initial": process.env.NEXT_PUBLIC_STRIPE_PEPTIDE_INITIAL_CHECKOUT_URL,
-  "Glutathione|initial": process.env.NEXT_PUBLIC_STRIPE_PEPTIDE_INITIAL_CHECKOUT_URL,
-  "Medical Weight Loss|initial": process.env.NEXT_PUBLIC_STRIPE_PEPTIDE_INITIAL_CHECKOUT_URL,
-  "Men's Health|initial": process.env.NEXT_PUBLIC_STRIPE_PEPTIDE_INITIAL_CHECKOUT_URL,
-  "Metabolic & Gut Health|initial": process.env.NEXT_PUBLIC_STRIPE_PEPTIDE_INITIAL_CHECKOUT_URL,
-  "Special Needs Nutrition|initial": process.env.NEXT_PUBLIC_STRIPE_PEPTIDE_INITIAL_CHECKOUT_URL,
-  "Focused Care Membership|ongoing": process.env.NEXT_PUBLIC_STRIPE_FOCUSED_CARE_CHECKOUT_URL,
+  "Establish Care|initial": process.env.NEXT_PUBLIC_STRIPE_INITIAL_VISIT_CHECKOUT_URL,
+  "Sermorelin|initial": process.env.NEXT_PUBLIC_STRIPE_INITIAL_VISIT_CHECKOUT_URL,
+  "NAD+|initial": process.env.NEXT_PUBLIC_STRIPE_INITIAL_VISIT_CHECKOUT_URL,
+  "Glutathione|initial": process.env.NEXT_PUBLIC_STRIPE_INITIAL_VISIT_CHECKOUT_URL,
+  "Medical Weight Loss|initial": process.env.NEXT_PUBLIC_STRIPE_INITIAL_VISIT_CHECKOUT_URL,
+  "Men's Health|initial": process.env.NEXT_PUBLIC_STRIPE_INITIAL_VISIT_CHECKOUT_URL,
+  "Metabolic & Gut Health|initial": process.env.NEXT_PUBLIC_STRIPE_INITIAL_VISIT_CHECKOUT_URL,
+  "Special Needs Nutrition|initial": process.env.NEXT_PUBLIC_STRIPE_INITIAL_VISIT_CHECKOUT_URL,
+  "Focused Care Membership|ongoing": process.env.NEXT_PUBLIC_STRIPE_FOCUSED_MEMBERSHIP_CHECKOUT_URL,
+  "Apex Treatment Membership|ongoing": process.env.NEXT_PUBLIC_STRIPE_TREATMENT_MEMBERSHIP_CHECKOUT_URL,
+  "Apex Performance Membership|ongoing": process.env.NEXT_PUBLIC_STRIPE_PERFORMANCE_MEMBERSHIP_CHECKOUT_URL,
+  "Apex Private Client Care|ongoing": process.env.NEXT_PUBLIC_STRIPE_PRIVATE_CLIENT_CHECKOUT_URL,
 };
 
 export function getProductCheckout(treatment: string, plan: string) {

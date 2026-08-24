@@ -7,8 +7,9 @@ export const memberships = {
     cadence: "monthly",
     image: "/membership-initial-care-v1.png",
     intro: "Focused ongoing clinical support for patients who want one treatment pathway managed simply and consistently.",
-    features: ["Scheduled clinician follow-up", "Prescription and refill management", "Focused progress monitoring", "Secure non-urgent support"],
-    cta: "Start focused care",
+    features: ["Included 15-minute initial appointment", "Scheduled clinician follow-up", "Prescription and refill management", "Focused progress monitoring", "Secure non-urgent support"],
+    cta: "Choose Focused Care",
+    includesComprehensiveVisit: false,
   },
   treatment: {
     name: "Apex Treatment Membership",
@@ -18,8 +19,9 @@ export const memberships = {
     annual: "From $4,990/year — 2 months free",
     image: "/membership-treatment-v1.png",
     intro: "Broader clinical attention for patients managing multiple goals, treatments, or health priorities.",
-    features: ["Everything in Focused Care", "Longer, broader clinical reviews", "Multi-treatment coordination", "More frequent treatment-response review", "Clinically appropriate adjustments", "Secure non-urgent support"],
-    cta: "Start my care",
+    features: ["Everything in Focused Care", "Included 45-minute comprehensive initial appointment after enrollment", "Longer, broader clinical reviews", "Multi-treatment coordination", "More frequent treatment-response review", "Clinically appropriate adjustments", "Secure non-urgent support"],
+    cta: "Choose Apex Treatment",
+    includesComprehensiveVisit: true,
   },
   performance: {
     name: "Apex Performance Membership",
@@ -29,8 +31,9 @@ export const memberships = {
     annual: "From $7,490/year — 2 months free",
     image: "/membership-performance-diverse-v2.png",
     intro: "Elevated access and a deeper focus on performance, prevention, and long-term progress.",
-    features: ["Everything in Apex Treatment Membership", "Monthly progress reviews", "Priority scheduling, subject to availability", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle and nutrition guidance", "Performance optimization planning"],
-    cta: "Build my performance plan",
+    features: ["Everything in Apex Treatment Membership", "Included 45-minute comprehensive initial appointment after enrollment", "Monthly progress reviews", "Priority scheduling, subject to availability", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle and nutrition guidance", "Performance optimization planning"],
+    cta: "Choose Apex Performance",
+    includesComprehensiveVisit: true,
   },
   "private-client": {
     name: "Apex Private Client Care",
@@ -40,8 +43,9 @@ export const memberships = {
     annual: "From $12,500/year — 2 months free",
     image: "/membership-private-v1.png",
     intro: "Concierge-level care for people who value exceptional access, privacy, and proactive coordination.",
-    features: ["Everything in Apex Performance", "Highly responsive communication", "Frequent strategy visits", "Proactive laboratory and pharmacy coordination", "Concierge-level continuity", "A care cadence designed around your goals"],
-    cta: "Request private client care",
+    features: ["Everything in Apex Performance", "Included 45-minute comprehensive initial appointment after enrollment", "Highly responsive communication", "Frequent strategy visits", "Proactive laboratory and pharmacy coordination", "Concierge-level continuity", "A care cadence designed around your goals"],
+    cta: "Choose Private Client Care",
+    includesComprehensiveVisit: true,
   },
 } as const;
 

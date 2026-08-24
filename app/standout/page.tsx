@@ -33,7 +33,7 @@ export default function PartnerAccessPage() {
           <span className="membership-badge">Continuing care</span>
           <h2>Already receiving treatment?</h2>
           <p>Share your current medications, recent labs, and available records so your clinician can review the care you already have in place.</p>
-          <Link className="primary-button" href="/schedule/comprehensive">Continue my care</Link>
+          <Link className="primary-button" href="/memberships">Compare memberships</Link>
         </article>
       </section>
 

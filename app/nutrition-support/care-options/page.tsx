@@ -12,7 +12,7 @@ const options = [
     label: "Ongoing support",
     title: "Special Needs Nutrition Membership",
     price: "$39 to start",
-    description: "Begin with a caregiver-guided clinical review, then continue with ongoing nutrition and digestive-wellness support for $149 per month after 30 days unless canceled.",
+    description: "Begin with a one-time $39 caregiver-guided clinical review, then choose and separately approve an ongoing membership.",
     items: ["Initial clinician review", "Scheduled follow-up visits", "Personalized nutrition, supplement guidance, and plan adjustments", "Fullscript bundles purchased separately"],
     action: "Start membership care",
     featured: true,
@@ -21,11 +21,11 @@ const options = [
   {
     label: "For the fuller picture",
     title: "Comprehensive Care",
-    price: "45-minute visit",
-    description: "A longer visit for complex histories, several overlapping concerns, optional lab decisions, or coordination with other clinicians.",
+    price: "Included with higher memberships",
+    description: "A 45-minute visit for complex histories, several overlapping concerns, optional lab decisions, or coordination with other clinicians.",
     items: ["Detailed history and goal review", "Longer telehealth visit", "Individualized care plan", "Optional testing or referral planning"],
-    action: "Choose comprehensive care",
-    href: "/schedule/comprehensive",
+    action: "Compare higher memberships",
+    href: "/memberships",
   },
 ];
 

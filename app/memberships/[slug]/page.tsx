@@ -22,9 +22,8 @@ export default async function MembershipDetailPage({ params }: { params: Promise
   const { slug } = await params;
   const membership = memberships[slug as MembershipSlug];
   if (!membership) notFound();
-  const enrollmentHref = slug === "initial-care"
-    ? "/start?treatment=Focused%20Care%20Membership&plan=ongoing"
-    : "/schedule/comprehensive";
+  const enrollmentHref = `/start?treatment=${encodeURIComponent(membership.name)}&plan=ongoing`;
+  const newPatientHref = `/start?treatment=Establish%20Care&plan=initial&nextMembership=${encodeURIComponent(membership.name)}`;
 
   return (
     <main>
@@ -38,11 +37,15 @@ export default async function MembershipDetailPage({ params }: { params: Promise
           <h1>{membership.headline}</h1>
           <p>{membership.intro}</p>
           <p><strong>Available to California residents.</strong></p>
+          <p><strong>{membership.includesComprehensiveVisit ? "Includes a 45-minute comprehensive initial appointment after enrollment." : "Includes a 15-minute initial appointment for one focused treatment pathway."}</strong></p>
           <div className="membership-detail-price">
             <strong>{membership.price}</strong>
             {"annual" in membership && <span>{membership.annual}</span>}
           </div>
-          <Link className="primary-button" href={enrollmentHref}>{membership.cta}</Link>
+          <div className="membership-enrollment-actions">
+            <Link className="primary-button" href={newPatientHref}>New patient · start with $39</Link>
+            <Link className="membership-existing-link" href={enrollmentHref}>Already completed the $39 visit? {membership.cta} →</Link>
+          </div>
         </div>
       </section>
 
@@ -56,8 +59,12 @@ export default async function MembershipDetailPage({ params }: { params: Promise
 
       <section className="membership-detail-simple">
         <p className="eyebrow">Simple by design</p>
-        <h2>Choose your plan. We handle the details.</h2>
-        <Link className="primary-button" href={enrollmentHref}>{membership.cta}</Link>
+        <h2>{membership.includesComprehensiveVisit ? "Enroll, then schedule your included 45-minute initial appointment." : "Enroll, then schedule your included 15-minute Focused Care initial appointment."}</h2>
+        <p>New patients make the one-time $39 initial-care payment first. Membership is selected and paid separately afterward, then the initial appointment is scheduled for the length included with this tier.</p>
+        <div className="membership-enrollment-actions">
+          <Link className="primary-button" href={newPatientHref}>Start my $39 establish-care visit</Link>
+          <Link className="membership-existing-link" href={enrollmentHref}>Existing patient membership checkout →</Link>
+        </div>
       </section>
       <SiteFooter />
     </main>

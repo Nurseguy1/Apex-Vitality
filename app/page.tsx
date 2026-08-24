@@ -5,7 +5,7 @@ import styles from "./home.module.css";
 
 const carePaths = [
   {
-    eyebrow: "Start with a $39 initial visit",
+    eyebrow: "Start with a $39 initial-care payment",
     title: "Medical Weight Loss",
     copy: "Build a personalized weight-loss plan with clinician guidance, ongoing support, and medication options tailored to your goals.",
     image: "/weight-loss-couple-walking-v1.png",
@@ -47,7 +47,7 @@ const carePaths = [
   {
     eyebrow: "Ongoing support",
     title: "Membership Care",
-    copy: "Available to California residents. Keep your care, follow-up, treatment coordination, and support connected through one simple membership.",
+    copy: "After the $39 initial-care payment, choose Focused Care with a 15-minute initial appointment or a higher membership with a 45-minute comprehensive initial appointment.",
     image: "/membership-performance-diverse-v2.png",
     href: "/memberships",
     cta: "View memberships",
@@ -56,9 +56,9 @@ const carePaths = [
 
 const steps = [
   ["1", "Choose your direction", "Start with the treatment, concern, or health goal that matters most to you."],
-  ["2", "Complete your assessment", "Share your history and review your labs with your clinician."],
-  ["3", "Collaborate with your clinician", "Review your goals, results, options, benefits, and risks together."],
-  ["4", "Begin your care plan", "Get the support you need, with monitoring and adjustments organized around your progress."],
+  ["2", "Make the $39 initial-care payment", "Share your history and goals, then select the level of membership care you want."],
+  ["3", "Choose your membership", "Continue with $149 Focused Care and a 15-minute initial appointment or select a higher level with a 45-minute appointment."],
+  ["4", "Begin your care plan", "Schedule included care, complete clinical review, and get monitoring organized around your progress."],
 ];
 
 export default function Home() {
@@ -134,7 +134,7 @@ export default function Home() {
         <div className={styles.supportCopy}>
           <p className={styles.kicker}>Care that keeps moving</p>
           <h2>Choose your goal. We’ll help build the route.</h2>
-          <p>Start with a brief online intake and connect with a qualified medical clinician who can personalize the next step.</p>
+          <p>Start with the one-time $39 initial-care payment, then choose the membership and initial appointment length that match the support you want.</p>
           <Link className={styles.primaryCta} href="/treatments">Get started</Link>
         </div>
       </section>

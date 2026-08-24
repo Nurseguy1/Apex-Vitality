@@ -102,8 +102,8 @@ export default async function NadArticlePage({
             {charmLinks.portal && (
               <Link className="primary-button" href="/start?treatment=NAD%2B&plan=initial">Start my NAD+ plan</Link>
             )}
-            <Link className="secondary-button" href="/schedule/comprehensive">
-              Choose comprehensive care
+            <Link className="secondary-button" href="/memberships">
+              Compare memberships
             </Link>
           </div>
         </section>

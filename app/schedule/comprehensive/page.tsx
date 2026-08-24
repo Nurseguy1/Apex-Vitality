@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../../components";
 import { charmLinks } from "../../lib/charm";
 
@@ -19,13 +20,19 @@ export default function ComprehensiveVisitPage() {
       </section>
       <section className="booking-steps" aria-label="Comprehensive visit booking">
         <article>
-          <span>Comprehensive visit · 45 minutes</span>
-          <h2>Comprehensive New Patient Consultation · $325</h2>
+          <span>Included membership visit · 45 minutes</span>
+          <h2>Already choosing a higher membership?</h2>
+          <p>Apex Treatment, Apex Performance, and Apex Private Client Care include a 45-minute comprehensive initial appointment after enrollment. Make the $39 initial-care payment and enroll in the membership first, then schedule from the verified confirmation page without a separate visit charge.</p>
+          <Link className="primary-button" href="/memberships">Compare memberships</Link>
+        </article>
+        <article>
+          <span>Standalone option · 45 minutes</span>
+          <h2>Standalone Comprehensive Consultation · $325</h2>
           <p>Review your history, goals, lifestyle, and recent lab results together, then build a personalized plan for your next steps.</p>
           <p>By continuing, you confirm that you will be physically located in California when clinical care is provided.</p>
           {charmLinks.newPatientCheckout && <a className="primary-button" href={charmLinks.newPatientCheckout} rel="noreferrer" target="_blank">Pay $325 and schedule ↗</a>}
         </article>
-        <p className="alternate-start"><a href="/schedule">← Start with the $259 initial care visit instead</a></p>
+        <p className="alternate-start"><Link href="/schedule">← Start with the $39 initial visit instead</Link></p>
       </section>
       <aside className="screening-notice"><strong>Medical emergency?</strong> Do not use online scheduling. Call 911 or seek immediate in-person care.</aside>
       <SiteFooter />

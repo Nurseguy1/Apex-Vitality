@@ -10,10 +10,12 @@ export default function LocationRouter({
   selectedTreatment,
   checkoutUrl,
   offer,
+  intendedMembership,
 }: {
   selectedTreatment: string;
   checkoutUrl: string | null;
   offer: ProductOffer | null;
+  intendedMembership: string;
 }) {
   const router = useRouter();
   const [state, setState] = useState("");
@@ -21,15 +23,26 @@ export default function LocationRouter({
   const [recurringAccepted, setRecurringAccepted] = useState(false);
   const planLabel = offer?.planLabel ?? "";
   const unavailable = state === "OTHER";
-  const isRecurring = Boolean(offer);
+  const isRecurring = offer?.requiresRenewalConsent === true;
 
   useEffect(() => {
     setState(window.sessionStorage.getItem("apex-checkout-state") ?? "");
     const careAccepted = window.sessionStorage.getItem("apex-care-terms-accepted") === "true";
     const renewalAccepted = window.sessionStorage.getItem("apex-recurring-accepted") === "true";
-    setCareTermsAccepted(careAccepted && renewalAccepted);
+    setCareTermsAccepted(isRecurring ? careAccepted && renewalAccepted : careAccepted);
     setRecurringAccepted(renewalAccepted);
-  }, []);
+  }, [isRecurring]);
+
+  useEffect(() => {
+    if (selectedTreatment && offer?.plan === "initial") {
+      window.sessionStorage.setItem("apex-selected-treatment", selectedTreatment);
+      if (intendedMembership) {
+        window.sessionStorage.setItem("apex-intended-membership", intendedMembership);
+      } else {
+        window.sessionStorage.removeItem("apex-intended-membership");
+      }
+    }
+  }, [intendedMembership, offer?.plan, selectedTreatment]);
 
   useEffect(() => {
     const readyForCheckout = state === "CA" && checkoutUrl && careTermsAccepted && (!isRecurring || recurringAccepted);
@@ -43,7 +56,8 @@ export default function LocationRouter({
     if (checked) {
       window.sessionStorage.setItem("apex-checkout-state", state);
       window.sessionStorage.setItem("apex-auto-checkout-pending", "true");
-      router.push("/agreements/self-pay#accept");
+      const purchase = isRecurring ? "membership" : "initial";
+      router.push(`/agreements/self-pay?purchase=${purchase}&selection=${encodeURIComponent(selectedTreatment)}#accept`);
       return;
     }
     setCareTermsAccepted(false);
@@ -57,8 +71,8 @@ export default function LocationRouter({
       <div className="location-router-intro">
         <div className="location-router-heading">
           <p className="eyebrow">Complete your selection</p>
-          <h1 id="purchase-title">Start with the care you want.</h1>
-          <p>Confirm your clinical-care selection and continue to secure checkout. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy.</p>
+          <h1 id="purchase-title">{offer?.plan === "ongoing" ? "Choose your membership." : "Start care with a one-time $39 payment."}</h1>
+          <p>{offer?.plan === "ongoing" ? "Review the membership, approve the recurring payment terms, and continue to secure checkout." : selectedTreatment === "Establish Care" ? "If you are not sure which treatment you need, this one-time payment establishes your place in care. After you choose a membership, your initial appointment is 15 minutes with Focused Care or 45 minutes with Treatment, Performance, or Private Client." : "Everyone begins with the same one-time $39 initial-care payment. Afterward, choose the membership that fits the level of care you want and schedule the appointment included with that tier."} Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy.</p>
           {selectedTreatment ? (
             <p className="location-prompt"><strong>{selectedTreatment}</strong>{planLabel ? ` · ${planLabel}` : ""}</p>
           ) : (
@@ -107,7 +121,11 @@ export default function LocationRouter({
                   <p><strong>Clinical decision:</strong> Payment requests clinician review but does not guarantee eligibility, a prescription, a particular formulation, or a particular dose.</p>
                   <p><strong>Medication cost:</strong> Medication, pharmacy charges, supplies, and shipping are not included in this payment. They are paid separately by the patient through the dispensing pharmacy.</p>
                   {(selectedTreatment === "Metabolic & Gut Health" || selectedTreatment === "Special Needs Nutrition") && <p><strong>Supplements:</strong> Clinician-recommended supplements and bundles may be purchased separately through Fullscript. Supplement purchases are not included in the clinical-care payment.</p>}
-                  <p><strong>Membership:</strong> $39 today automatically continues as $149/month after 30 days unless canceled. If the clinician determines you are ineligible for the selected care pathway, the $39 payment is refunded and membership does not begin.</p>
+                  {isRecurring ? (
+                    <p><strong>Membership:</strong> This membership renews monthly at the price shown until canceled. It begins only after your separate authorization and secure Stripe checkout.</p>
+                  ) : (
+                    <p><strong>Membership comes next:</strong> This one-time $39 payment does not begin a recurring charge. Focused Care includes a 15-minute initial appointment; the three higher memberships include a 45-minute comprehensive initial appointment.</p>
+                  )}
                 </div>
               </section>
             )}
@@ -128,7 +146,7 @@ export default function LocationRouter({
               <div className="checkout-acknowledgments" aria-label="Required purchase acknowledgments">
                 <label>
                   <input type="checkbox" checked={careTermsAccepted} onChange={(event) => reviewCareTerms(event.target.checked)} />
-                  <span>Review the care, self-pay, and automatic-renewal agreement to continue.</span>
+                  <span>{isRecurring ? "Review the care, self-pay, and automatic-renewal agreement to continue." : "Review the care and self-pay agreement to continue."}</span>
                 </label>
               </div>
             )}
@@ -147,7 +165,7 @@ export default function LocationRouter({
               </div>
             ) : null}
 
-            <p className="location-router-note">Checkout collects and verifies your address. You must be physically located in California when clinical care is provided. The focused-care membership begins after 30 days unless canceled.</p>
+            <p className="location-router-note">Checkout collects and verifies your address. You must be physically located in California when clinical care is provided. {isRecurring ? "Membership renews monthly until canceled." : "The initial-care payment is a one-time $39 charge; membership enrollment and appointment scheduling happen afterward."}</p>
           </article>
         )}
       </div>

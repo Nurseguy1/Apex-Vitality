@@ -1,61 +1,34 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
+import { getVerifiedCheckout } from "../lib/stripe-checkout";
+import MembershipNextStep from "./MembershipNextStep";
 
 export const metadata: Metadata = {
   title: "Purchase Complete | Apex Vitality",
   robots: { index: false, follow: false },
 };
 
-type StripeCheckoutSession = {
-  payment_status?: string;
-  customer_details?: { address?: { state?: string | null } | null } | null;
-  shipping_details?: { address?: { state?: string | null } | null } | null;
-};
-
-async function getVerifiedCheckoutState(sessionId: string) {
-  const secret = process.env.STRIPE_SECRET_KEY;
-  if (!secret || !sessionId.startsWith("cs_")) return null;
-
-  try {
-    const response = await fetch(`https://api.stripe.com/v1/checkout/sessions/${encodeURIComponent(sessionId)}`, {
-      headers: { Authorization: `Bearer ${secret}` },
-      cache: "no-store",
-    });
-    if (!response.ok) return null;
-    const session = (await response.json()) as StripeCheckoutSession;
-    if (session.payment_status !== "paid") return null;
-    return (session.shipping_details?.address?.state || session.customer_details?.address?.state || "").toUpperCase() || null;
-  } catch {
-    return null;
-  }
-}
-
 export default async function PurchaseCompletePage({ searchParams }: { searchParams: Promise<{ session_id?: string }> }) {
   const { session_id = "" } = await searchParams;
-  const verifiedState = await getVerifiedCheckoutState(session_id);
-  const california = verifiedState === "CA";
+  const checkout = await getVerifiedCheckout(session_id);
+  const california = checkout?.state === "CA";
 
   return (
     <main>
       <SiteHeader />
-      <article className="legal-page">
-        <p className="eyebrow">Purchase received</p>
-        <h1>Your clinical review is the next step.</h1>
-        <p>Your purchase begins the care process. Watch for instructions to complete the secure medical intake and connect with the clinician assigned to review your request. A prescription is issued only when clinically appropriate and legally permitted.</p>
+      <article className="legal-page purchase-complete-page">
+        <p className="eyebrow">$39 initial-care payment received</p>
+        <h1>Your membership choice is the next step.</h1>
+        <p>Your payment establishes your place in the care process. Choose and enroll in a membership next, then schedule the initial appointment included with that tier. A prescription is issued only when clinically appropriate and legally permitted.</p>
 
-        {california && (
-          <section className="california-membership-note">
-            <div>
-              <strong>California patients: want a closer care relationship?</strong>
-              <p>You may add an optional Apex Vitality membership for closer follow-up, ongoing monitoring, treatment coordination, and Private Client service. Your original purchase does not require membership.</p>
-            </div>
-            <Link href="/memberships">Compare optional memberships →</Link>
-          </section>
+        <MembershipNextStep california={california} purchasedItems={checkout?.items ?? []} />
+
+        {!checkout && (
+          <p className="screening-notice">We could not verify this checkout from the current link. Use the purchase-complete link from your Stripe receipt or continue to patient access for help.</p>
         )}
-
-        {!verifiedState && (
-          <p className="screening-notice">Your address will be verified through the completed checkout before any location-specific care or membership option is offered.</p>
+        {checkout && !california && (
+          <p className="screening-notice">Membership and clinical care are currently available only when you are physically located in California.</p>
         )}
 
         <p><Link className="primary-button" href="/patient-access">Continue to patient access</Link></p>

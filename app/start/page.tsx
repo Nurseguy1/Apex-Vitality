@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 export default async function StartPage({
   searchParams,
 }: {
-  searchParams: Promise<{ treatment?: string; plan?: string }>;
+  searchParams: Promise<{ treatment?: string; plan?: string; nextMembership?: string }>;
 }) {
-  const { treatment = "", plan = "" } = await searchParams;
+  const { treatment = "", plan = "", nextMembership = "" } = await searchParams;
   const checkoutUrl = getProductCheckout(treatment, plan);
   const offer = getProductOffer(treatment, plan);
 
@@ -26,6 +26,7 @@ export default async function StartPage({
         selectedTreatment={treatment}
         checkoutUrl={checkoutUrl}
         offer={offer}
+        intendedMembership={nextMembership}
       />
       <SiteFooter />
     </main>

@@ -9,7 +9,22 @@ export const metadata: Metadata = {
   description: "Apex Vitality self-pay terms for California clinical services.",
 };
 
-export default function SelfPayAgreementPage() {
+const membershipPrices: Record<string, string> = {
+  "Focused Care Membership": "$149 per month",
+  "Apex Treatment Membership": "$499 per month",
+  "Apex Performance Membership": "$749 per month",
+  "Apex Private Client Care": "$1,250 per month",
+};
+
+export default async function SelfPayAgreementPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ purchase?: string; selection?: string }>;
+}) {
+  const { purchase = "initial", selection = "" } = await searchParams;
+  const isMembership = purchase === "membership";
+  const membershipPrice = membershipPrices[selection] ?? "$149 per month";
+
   return (
     <main className="self-pay-page">
       <SiteHeader />
@@ -27,11 +42,15 @@ export default function SelfPayAgreementPage() {
         <h2>Included and separate charges</h2>
         <p>The checkout description controls which Apex Vitality clinical services are included. Prescription medication, pharmacy charges, injection supplies, and medication shipping are always separate and paid by the patient. Laboratory testing, supplements, imaging, and other outside services are also separate unless the checkout expressly identifies them as included. You are responsible for charges you authorize and for providing accurate billing, shipping, and contact information.</p>
 
-        <h2>Membership and automatic renewal</h2>
-        <p>The focused-care offer charges $39 today for the initial clinical visit and automatically continues as a $149 monthly membership beginning 30 days later unless you cancel before that charge. It renews monthly until canceled. You authorize Apex Vitality and its payment processor to charge the payment method provided at checkout according to this schedule. You may cancel future renewals using the online cancellation method identified in your purchase confirmation or patient portal. Review the full <Link href="/agreements/recurring-payments">recurring-payment terms</Link>.</p>
+        <h2>{isMembership ? "Membership and automatic renewal" : "$39 initial-care payment"}</h2>
+        {isMembership ? (
+          <p>The selected {selection || "Apex Vitality membership"} costs {membershipPrice} and renews monthly until canceled. It is a separate purchase from the one-time $39 initial-care payment. You authorize Apex Vitality and its payment processor to charge the payment method provided at checkout according to this schedule. You may cancel future renewals using the online cancellation method identified in your purchase confirmation or patient portal. Review the full <Link href="/agreements/recurring-payments">recurring-payment terms</Link>.</p>
+        ) : (
+          <p>The initial-care payment is a one-time $39 charge. It does not automatically begin a recurring membership charge. After payment, you choose and separately authorize a membership. Focused Care at $149 per month includes a 15-minute initial appointment. The three higher memberships include a 45-minute comprehensive initial appointment.</p>
+        )}
 
         <h2>Ineligibility refund</h2>
-        <p>If the reviewing clinician determines that you are not eligible for the selected care pathway, Apex Vitality will refund the $39 initial-care payment and the $149 monthly membership will not begin.</p>
+        <p>If the reviewing clinician determines that you are not eligible for the selected care pathway, Apex Vitality will refund the $39 initial-care payment. A membership charge begins only after the patient separately chooses a membership, accepts its renewal terms, and completes its checkout.</p>
 
         <h2>When treatment is not authorized</h2>
         <p>Clinical-care fees pay for the professional services described at checkout and do not guarantee a prescription. Medication is purchased separately from the dispensing pharmacy and is subject to that pharmacy&apos;s payment, cancellation, return, and refund policies.</p>
@@ -44,10 +63,10 @@ export default function SelfPayAgreementPage() {
         <AgreementAcceptance
           storageKey="apex-care-terms-accepted"
           label="I agree to these care and self-pay terms, the linked Terms, Telehealth Consent, and applicable treatment information."
-          recurringStorageKey="apex-recurring-accepted"
-          recurringLabel="I expressly authorize $39 today and automatic renewal at $149 per month beginning after 30 days unless I cancel."
+          recurringStorageKey={isMembership ? "apex-recurring-accepted" : undefined}
+          recurringLabel={isMembership ? `I expressly authorize the ${membershipPrice} recurring membership charge, which renews monthly until I cancel.` : undefined}
         />
-        <p className="legal-updated">Effective August 16, 2026.</p>
+        <p className="legal-updated">Effective August 23, 2026.</p>
       </article>
       <SiteFooter />
     </main>

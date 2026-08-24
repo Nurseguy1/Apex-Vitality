@@ -18,8 +18,8 @@ export default function GlutathionePage() {
           <h1>Support resilience from the inside out with glutathione care.</h1>
           <p className="focused-care-lede">Build glutathione into a personalized plan centered on antioxidant support, recovery, wellness, and healthy-aging goals.</p>
           <p className="focused-care-simple-path">Start with a quick questionnaire. A clinician reviews your history and goals. When prescribed, your medication is delivered directly to your door.</p>
-          <div className="hero-actions"><Link className="primary-button" href="#glutathione-offer">Explore my options</Link><Link className="secondary-button" href="/schedule/comprehensive">Choose comprehensive care</Link></div>
-          <div className="sermorelin-price-line"><strong>$39</strong><span>questionnaire review</span><b>then $149/month for ongoing clinical care</b></div>
+          <div className="hero-actions"><Link className="primary-button" href="#glutathione-offer">Explore my options</Link><Link className="secondary-button" href="/memberships">Compare memberships</Link></div>
+          <div className="sermorelin-price-line"><strong>$39</strong><span>one-time questionnaire review</span><b>then approve $149/month Focused Care or choose a higher membership</b></div>
         </div>
       </section>
 
@@ -31,7 +31,7 @@ export default function GlutathionePage() {
           <p className="sermorelin-offer-lede">Begin with a focused questionnaire and clinician review, then continue with monthly care when it fits your plan.</p>
           <div className="sermorelin-plan-grid">
             <article><span>Start here</span><strong>$39</strong><b>questionnaire review</b><p>A clinician reviews your goals, history, and appropriate options. Secure follow-up is added if more information is needed.</p><Link className="plan-select-button" href="/start?treatment=Glutathione&plan=initial">Start for $39</Link></article>
-            <article className="featured"><span>Continue your care</span><strong>$149</strong><b>per month</b><p>Ongoing clinical monitoring, prescription management, and follow-up support.</p><Link className="plan-select-button" href="/start?treatment=Glutathione&plan=initial">Begin with your review</Link></article>
+            <article className="featured"><span>Default next step</span><strong>$149</strong><b>per month</b><p>Focused Care provides ongoing clinical monitoring, prescription management, and follow-up support after the initial visit.</p><Link className="plan-select-button" href="/memberships/initial-care">See Focused Care</Link></article>
           </div>
           <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication paid separately through the pharmacy</li><li>Secure follow-up support</li></ul>
           <p className="sermorelin-pricing-note">Laboratory testing is ordered only when your clinician determines it is appropriate and is priced separately.</p>

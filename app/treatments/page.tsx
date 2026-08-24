@@ -20,9 +20,9 @@ const treatments = [
     oneMonth: "$39",
     threeMonths: "$149/month",
     equivalent: "Medication paid separately",
-    savings: "Cancel future renewals anytime",
+    savings: "Choose after the initial visit",
     firstLabel: "Initial visit",
-    firstNote: "Today · then $149/month after 30 days",
+    firstNote: "One-time payment · no automatic membership charge",
     secondLabel: "Ongoing clinical care",
     href: "/sermorelin",
     detailsLabel: "Learn about Sermorelin care",
@@ -38,9 +38,9 @@ const treatments = [
     oneMonth: "$39",
     threeMonths: "$149/month",
     equivalent: "Medication paid separately",
-    savings: "Cancel future renewals anytime",
+    savings: "Focused Care is the default next step",
     firstLabel: "Questionnaire review",
-    firstNote: "Today · then $149/month after 30 days",
+    firstNote: "One-time payment · membership approved separately",
     secondLabel: "Ongoing clinical care",
     href: "/nad-plus",
     detailsLabel: "Learn about NAD+ care",
@@ -56,9 +56,9 @@ const treatments = [
     oneMonth: "$39",
     threeMonths: "$149/month",
     equivalent: "Medication paid separately",
-    savings: "Cancel future renewals anytime",
+    savings: "Choose after the initial visit",
     firstLabel: "Questionnaire review",
-    firstNote: "Today · then $149/month after 30 days",
+    firstNote: "One-time payment · membership approved separately",
     secondLabel: "Ongoing clinical care",
     href: "/glutathione",
     detailsLabel: "Learn about Glutathione care",
@@ -74,9 +74,9 @@ const treatments = [
     oneMonth: "$39",
     threeMonths: "$149/month",
     equivalent: "Medication paid separately",
-    savings: "Cancel future renewals anytime",
+    savings: "Choose after the initial visit",
     firstLabel: "Initial visit",
-    firstNote: "Today · then $149/month after 30 days",
+    firstNote: "One-time payment · membership approved separately",
     secondLabel: "Ongoing clinical care",
     href: "/weight-loss",
     detailsLabel: "Learn about weight-loss care",
@@ -92,9 +92,9 @@ const treatments = [
     oneMonth: "$39",
     threeMonths: "$149/month",
     equivalent: "Fullscript bundles paid separately",
-    savings: "Cancel future renewals anytime",
+    savings: "Choose after the initial visit",
     firstLabel: "Initial clinical review",
-    firstNote: "Today · then $149/month after 30 days",
+    firstNote: "One-time payment · membership approved separately",
     secondLabel: "Ongoing membership care",
     href: "/programs/metabolic-gut#fullscript-bundles",
     detailsLabel: "See program and Fullscript bundles",
@@ -110,9 +110,9 @@ const treatments = [
     oneMonth: "$39",
     threeMonths: "$149/month",
     equivalent: "Fullscript bundles paid separately",
-    savings: "Cancel future renewals anytime",
+    savings: "Choose after the initial visit",
     firstLabel: "Initial clinical review",
-    firstNote: "Today · then $149/month after 30 days",
+    firstNote: "One-time payment · membership approved separately",
     secondLabel: "Ongoing membership care",
     href: "/nutrition-support#nutrition-bundles",
     detailsLabel: "See nutrition support and bundles",
@@ -128,12 +128,14 @@ export default function TreatmentsPage() {
         <p className="eyebrow">Focused treatment options</p>
         <h1>Explore the support that may fit your goals.</h1>
         <p>
-          Begin with the option you want to discuss. A licensed clinician reviews
+          Everyone begins with the same one-time $39 initial-care payment. A licensed clinician reviews
           your information and determines what is medically appropriate and legally
-          available where you are located.
+          available where you are located, then you choose the ongoing membership that fits your care.
         </p>
         <div className="treatment-shop-proof" aria-label="Treatment experience">
           <span>Clinician-guided care</span>
+          <span>$39 initial-care payment</span>
+          <span>Membership chosen afterward</span>
           <span>Home delivery when prescribed</span>
           <span>Medication paid separately</span>
         </div>
@@ -173,25 +175,25 @@ export default function TreatmentsPage() {
 
               <div className="treatment-price-options">
                 <section className="treatment-price-card">
-                  <span>{treatment.firstLabel}</span>
+                  <span>One-time initial-care payment</span>
                   <strong>
                     {treatment.oneMonth}
                   </strong>
                   <small>{treatment.firstNote}</small>
                   <Link className="secondary-dark-button" href={`/start?treatment=${encodeURIComponent(treatment.name)}&plan=initial`}>
-                    {treatment.ctaLabel ?? "Choose one month"}
+                    Start my $39 visit
                   </Link>
                 </section>
 
                 <section className="treatment-price-card treatment-price-best">
-                  <span className="best-value-badge">Ongoing care</span>
-                  <span>{treatment.secondLabel}</span>
+                  <span className="best-value-badge">Step 2</span>
+                  <span>Memberships from</span>
                   <strong className={treatment.threeMonths === "Paid separately" ? "treatment-price-separate" : "treatment-price-monthly"}>
                     {treatment.threeMonths}
                   </strong>
                   <small>{treatment.equivalent} · {treatment.savings}</small>
-                  <Link className="primary-button" href={`/start?treatment=${encodeURIComponent(treatment.name)}&plan=initial`}>
-                    {treatment.ctaLabel ?? "Start with an initial visit"}
+                  <Link className="primary-button" href="/memberships">
+                    Compare memberships
                   </Link>
                 </section>
               </div>
@@ -208,11 +210,12 @@ export default function TreatmentsPage() {
 
       <section className="treatment-how-it-works">
         <p className="eyebrow">From choice to your door</p>
-        <h2>A straightforward path from interest to clinical review.</h2>
+        <h2>A straightforward path from interest to ongoing care.</h2>
         <div>
           <span><b>1</b><strong>Choose an option to discuss</strong><small>Select the program that interests you.</small></span>
-          <span><b>2</b><strong>Complete your review</strong><small>Answer a brief medical questionnaire and connect with a qualified provider.</small></span>
-          <span><b>3</b><strong>Receive your plan</strong><small>If prescribed, your treatment ships directly to your home.</small></span>
+          <span><b>2</b><strong>Make the $39 initial-care payment</strong><small>Complete a brief medical questionnaire, then select your membership.</small></span>
+          <span><b>3</b><strong>Choose your membership</strong><small>Peptide and NAD+ patients continue with $149 Focused Care by default or select a higher tier.</small></span>
+          <span><b>4</b><strong>Schedule your initial appointment</strong><small>Focused Care includes 15 minutes; higher memberships include 45 minutes. If prescribed, medication is paid separately.</small></span>
         </div>
       </section>
 

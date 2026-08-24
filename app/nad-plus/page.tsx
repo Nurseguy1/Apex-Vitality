@@ -57,8 +57,8 @@ export default function NadPlusPage() {
           </p>
           <div className="hero-actions">
             <Link className="primary-button" href="/start?treatment=NAD%2B&plan=initial">Start my NAD+ plan</Link>
-            <Link className="secondary-button" href="/schedule/comprehensive">
-              Choose comprehensive care
+            <Link className="secondary-button" href="/memberships">
+              Compare memberships
             </Link>
           </div>
           <p className="focused-care-note">
@@ -93,7 +93,7 @@ export default function NadPlusPage() {
           <p className="sermorelin-offer-lede">Begin with a focused questionnaire and clinician review, then continue with monthly care when it fits your plan.</p>
           <div className="sermorelin-plan-grid">
             <article><span>Start here</span><strong>$39</strong><b>questionnaire review</b><p>A clinician reviews your goals, history, and appropriate options. Secure follow-up is added if more information is needed.</p><Link className="plan-select-button" href="/start?treatment=NAD%2B&plan=initial">Start for $39</Link></article>
-            <article className="featured"><span>Continue your care</span><strong>$149</strong><b>per month</b><p>Ongoing clinical monitoring, prescription management, and follow-up support.</p><Link className="plan-select-button" href="/start?treatment=NAD%2B&plan=initial">Begin with your review</Link></article>
+            <article className="featured"><span>Default next step</span><strong>$149</strong><b>per month</b><p>Focused Care provides ongoing clinical monitoring, prescription management, and follow-up support after the initial visit.</p><Link className="plan-select-button" href="/memberships/initial-care">See Focused Care</Link></article>
           </div>
           <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication paid separately through the pharmacy</li><li>Secure follow-up support</li></ul>
           <p className="sermorelin-pricing-note">Laboratory testing is ordered only when your clinician determines it is appropriate and is priced separately.</p>
@@ -186,9 +186,9 @@ export default function NadPlusPage() {
             digestive health, and healthy aging need to be considered together,
             begin with the complete consultation.
           </p>
-          <p className="focused-price"><strong>$325</strong><span>one-time · 45 minutes</span></p>
-          <Link className="primary-button" href="/schedule/comprehensive">
-            Schedule comprehensive care
+          <p className="focused-price"><strong>Included</strong><span>45 minutes · Treatment membership and above</span></p>
+          <Link className="primary-button" href="/memberships">
+            Compare higher memberships
           </Link>
         </div>
         <ul className="check-list focused-comprehensive-list">
