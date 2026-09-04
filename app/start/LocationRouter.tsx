@@ -20,6 +20,7 @@ export default function LocationRouter({
   const router = useRouter();
   const [state, setState] = useState("");
   const [careTermsAccepted, setCareTermsAccepted] = useState(false);
+  const [coverageEligibilityAttested, setCoverageEligibilityAttested] = useState(false);
   const [recurringAccepted, setRecurringAccepted] = useState(false);
   const planLabel = offer?.planLabel ?? "";
   const unavailable = state === "OTHER";
@@ -29,8 +30,10 @@ export default function LocationRouter({
   useEffect(() => {
     setState(window.sessionStorage.getItem("apex-checkout-state") ?? "");
     const careAccepted = window.sessionStorage.getItem("apex-care-terms-accepted") === "true";
+    const coverageAccepted = window.sessionStorage.getItem("apex-coverage-eligibility-attested") === "true";
     const renewalAccepted = window.sessionStorage.getItem("apex-recurring-accepted") === "true";
-    setCareTermsAccepted(isRecurring ? careAccepted && renewalAccepted : careAccepted);
+    setCareTermsAccepted(isRecurring ? careAccepted && coverageAccepted && renewalAccepted : careAccepted && coverageAccepted);
+    setCoverageEligibilityAttested(coverageAccepted);
     setRecurringAccepted(renewalAccepted);
   }, [isRecurring]);
 
@@ -46,12 +49,12 @@ export default function LocationRouter({
   }, [intendedMembership, offer?.plan, selectedTreatment]);
 
   useEffect(() => {
-    const readyForCheckout = state === "CA" && checkoutUrl && careTermsAccepted && (!isRecurring || recurringAccepted);
+    const readyForCheckout = state === "CA" && checkoutUrl && careTermsAccepted && coverageEligibilityAttested && (!isRecurring || recurringAccepted);
     if (readyForCheckout && window.sessionStorage.getItem("apex-auto-checkout-pending") === "true") {
       window.sessionStorage.removeItem("apex-auto-checkout-pending");
       window.location.assign(checkoutUrl);
     }
-  }, [careTermsAccepted, checkoutUrl, isRecurring, recurringAccepted, state]);
+  }, [careTermsAccepted, checkoutUrl, coverageEligibilityAttested, isRecurring, recurringAccepted, state]);
 
   const reviewCareTerms = (checked: boolean) => {
     if (checked) {
@@ -62,8 +65,10 @@ export default function LocationRouter({
       return;
     }
     setCareTermsAccepted(false);
+    setCoverageEligibilityAttested(false);
     setRecurringAccepted(false);
     window.sessionStorage.setItem("apex-care-terms-accepted", "false");
+    window.sessionStorage.setItem("apex-coverage-eligibility-attested", "false");
     window.sessionStorage.setItem("apex-recurring-accepted", "false");
   };
 
@@ -170,7 +175,7 @@ export default function LocationRouter({
                 <p>Please do not purchase this program if you will be physically located outside California during care. Join us later as additional service areas become available.</p>
               </div>
             ) : state && checkoutUrl ? (
-              careTermsAccepted && (!isRecurring || recurringAccepted) ? <a className="primary-button" href={checkoutUrl}>Continue to secure Stripe checkout · {offer?.price ?? ""}</a> : <p className="location-router-note"><strong>Review and accept the required acknowledgment to continue.</strong></p>
+              careTermsAccepted && coverageEligibilityAttested && (!isRecurring || recurringAccepted) ? <a className="primary-button" href={checkoutUrl}>Continue to secure Stripe checkout · {offer?.price ?? ""}</a> : <p className="location-router-note"><strong>Review and accept all required acknowledgments to continue.</strong></p>
             ) : state ? (
               <div className="scheduler-pending">
                 <h3>Secure checkout is being connected.</h3>

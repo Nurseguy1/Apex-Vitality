@@ -37,6 +37,9 @@ export default async function SelfPayAgreementPage({
         <h2>Cash-pay services</h2>
         <p>Apex Vitality is a cash-pay practice unless a specific written offer states otherwise. Apex Vitality does not submit claims to health plans and does not promise that a health plan, flexible spending account, or health savings account will reimburse any charge. Upon request, Apex may provide an itemized receipt when appropriate.</p>
 
+        <h2>Coverage eligibility</h2>
+        <p>Apex Vitality does not accept patients enrolled in Medicare, Medicare Advantage, Medi-Cal/Medicaid, the Qualified Medicare Beneficiary (QMB) program, or dual-eligible coverage. By continuing, you confirm that you are not currently enrolled in any of these forms of coverage. Eligibility is based on coverage status, not age.</p>
+
         <h2>What your payment means</h2>
         <p>Payment starts the administrative and clinical-review process. It does not establish medical eligibility and does not guarantee a diagnosis, prescription, laboratory order, refill, medication, or result. A licensed clinician independently determines whether a requested service or treatment is appropriate.</p>
 
@@ -73,10 +76,12 @@ export default async function SelfPayAgreementPage({
         <AgreementAcceptance
           storageKey="apex-care-terms-accepted"
           label="I agree to these care and self-pay terms, the linked Terms, Telehealth Consent, and applicable treatment information."
+          eligibilityStorageKey="apex-coverage-eligibility-attested"
+          eligibilityLabel="I attest that I am not currently enrolled in Medicare, Medicare Advantage, Medi-Cal/Medicaid, the Qualified Medicare Beneficiary (QMB) program, or dual-eligible coverage."
           recurringStorageKey={isMembership ? "apex-recurring-accepted" : undefined}
           recurringLabel={isMembership ? `I expressly authorize the ${membershipPrice} recurring membership charge, which renews monthly until I cancel.` : undefined}
         />
-        <p className="legal-updated">Effective August 23, 2026.</p>
+        <p className="legal-updated">Effective September 4, 2026.</p>
       </article>
       <SiteFooter />
     </main>

@@ -65,6 +65,7 @@ export default function MembershipsPage() {
         <p className="eyebrow">California membership care</p>
         <h1>Begin for $39, then choose your membership.</h1>
         <p>If you are not sure which treatment you need, this is the place to establish care: choose a membership, make the one-time $39 initial-care payment, then complete membership enrollment. Focused Care at $149 per month includes a 15-minute initial appointment. The three higher memberships include a 45-minute comprehensive initial appointment.</p>
+        <p><strong>Coverage eligibility:</strong> Apex Vitality is a self-pay practice and does not accept patients enrolled in Medicare, Medicare Advantage, Medi-Cal/Medicaid, the Qualified Medicare Beneficiary (QMB) program, or dual-eligible coverage. Please do not purchase or enroll if you currently have any of these forms of coverage.</p>
         <div className="membership-flow" aria-label="How membership enrollment works">
           <span><b>1</b><strong>Choose membership</strong><small>Select the care level you want.</small></span>
           <span><b>2</b><strong>Pay $39</strong><small>Make the one-time initial-care payment.</small></span>
