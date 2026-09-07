@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 const coaching = [
   ["Understand your patterns", "Notice how food, hydration, sleep, stress, movement, and daily routines relate to how you feel."],
-  ["Review labs educationally", "Explore wellness-related laboratory patterns, functional ranges, and questions to discuss with your licensed healthcare provider."],
+  ["Review labs educationally", "Explore wellness-related laboratory patterns and functional ranges to develop clearer, more practical wellness priorities."],
   ["Build realistic habits", "Turn general wellness information into practical routines that fit your life, preferences, and responsibilities."],
-  ["Track what helps", "Use simple observations and reflection to recognize progress, obstacles, and questions for your healthcare professionals."],
+  ["Track what helps", "Use simple observations and reflection to recognize progress, obstacles, and patterns worth exploring further."],
   ["Stay supported", "Use education, accountability, and structured follow-through to make healthy routines easier to maintain."],
 ];
 
@@ -47,7 +47,7 @@ export default function GutHealthPage() {
         <div className="section-heading">
           <p className="eyebrow">Practical, whole-person support</p>
           <h2>Make everyday wellness easier to understand and sustain.</h2>
-          <p>Coaching focuses on education and behavior—not diagnosing conditions or providing medical treatment. Clients organize the habits and questions that help them participate more confidently in their own wellness journey.</p>
+          <p>Coaching turns education and personal patterns into a focused wellness strategy. Clients organize their priorities, take practical action, track what changes, and refine their approach with ongoing support.</p>
         </div>
         <div className="service-grid light-grid">
           {coaching.map(([title, copy]) => <article className="service-card" key={title}><h3>{title}</h3><p>{copy}</p></article>)}
@@ -57,11 +57,11 @@ export default function GutHealthPage() {
       <section className="content-split">
         <div>
           <p className="eyebrow">Educational functional lab review</p>
-          <h2>Understand wellness patterns without turning coaching into medical care.</h2>
+          <h2>See more meaning in the numbers.</h2>
           <p>Coaching clients may receive a personalized educational review of wellness-related laboratory patterns and functional ranges. We explain what individual markers generally represent, discuss what results may indicate from a wellness perspective, and use those insights to support nutrition, lifestyle, sleep, stress, and habit goals.</p>
         </div>
         <div>
-          <p>This review does not diagnose disease, provide medical treatment, replace clinical interpretation by a licensed healthcare provider, or direct medication changes. Abnormal, concerning, or medically significant findings are referred to an appropriate licensed provider.</p>
+          <p>You leave with clearer wellness priorities, practical actions to try, patterns to track, and a stronger understanding of how your daily choices connect with the information in front of you.</p>
         </div>
       </section>
 
@@ -76,20 +76,20 @@ export default function GutHealthPage() {
           <li>Educational review of wellness-related lab patterns</li>
           <li>Lifestyle, sleep, stress, movement, and routine support</li>
           <li>Goal setting, tracking, and accountability</li>
-          <li>Help preparing questions for your licensed healthcare professionals</li>
+          <li>A practical, personalized wellness action plan</li>
         </ul>
       </section>
 
       <aside className="care-notice">
-        <strong>Know when medical care is needed.</strong>
-        <p>Severe or persistent abdominal pain, gastrointestinal bleeding, black stools, unexplained weight loss, persistent vomiting, fever, dehydration, anemia, difficulty swallowing, or other urgent concerns require evaluation by an appropriately licensed medical professional and are outside this coaching pathway.</p>
+        <strong>Important safety education</strong>
+        <p>Severe or persistent abdominal pain, gastrointestinal bleeding, black stools, unexplained weight loss, persistent vomiting, fever, dehydration, anemia, difficulty swallowing, or another urgent concern falls outside coaching and should receive prompt medical evaluation.</p>
       </aside>
 
       <section className="content-section">
         <div className="section-heading">
           <p className="eyebrow">Start with a conversation</p>
-          <h2>See whether this coaching route fits your goals.</h2>
-          <p>If you are seeking diagnosis, treatment, prescriptions, or individualized medical interpretation, contact your licensed healthcare professional instead.</p>
+          <h2>Bring your questions. Leave with a clearer direction.</h2>
+          <p>Tell us what still feels unresolved and what you want to understand. We will identify the coaching priorities that can help you move forward with greater clarity and consistency.</p>
           <Link className="primary-button" href="/contact">Contact Apex Vitality</Link>
         </div>
       </section>
