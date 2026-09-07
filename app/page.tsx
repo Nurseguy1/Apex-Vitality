@@ -5,7 +5,7 @@ import styles from "./home.module.css";
 
 const carePaths = [
   {
-    eyebrow: "Educational wellness coaching · Broadly available",
+    eyebrow: "Personalized guidance · Broadly available",
     title: "Gut Health & Metabolic Balance",
     copy: "For adults who have been told their labs are normal but still do not feel like themselves—root-cause-oriented education, lab-pattern review, and practical gut-health and lifestyle coaching.",
     image: "/program-metabolic-couple-v1.png",
@@ -13,7 +13,7 @@ const carePaths = [
     cta: "Explore wellness coaching",
   },
   {
-    eyebrow: "Licensed medical care · California",
+    eyebrow: "Men’s Hormone Health · California",
     title: "Men’s Hormone Health",
     copy: "A deeper clinical look for men concerned about symptoms or laboratory findings that could reflect a hormone deficiency—with medical evaluation, treatment, and monitoring when clinically appropriate.",
     image: "/home-professional-man-35-45-v3.png",
@@ -23,9 +23,9 @@ const carePaths = [
 ];
 
 const steps = [
-  ["1", "Choose your route", "Select California medical care or non-medical wellness coaching."],
-  ["2", "Review the details", "Understand what the service includes, its boundaries, and the appropriate next step."],
-  ["3", "Begin with clarity", "Use the secure medical workflow or contact Apex about wellness coaching."],
+  ["1", "Choose your route", "Start with Gut Health or Men’s Hormone Health."],
+  ["2", "Review the details", "See which service best matches your goals and the support you want."],
+  ["3", "Begin with clarity", "Take the next step with personalized guidance and a plan for moving forward."],
 ];
 
 export default function Home() {
@@ -39,7 +39,7 @@ export default function Home() {
           <p className={styles.heroLead}>Gut-health and metabolic-balance coaching for all adults, plus a deeper California medical pathway for men concerned about possible hormone deficiency.</p>
           <div className={styles.actions}>
             <Link className={styles.primaryCta} href="#care">Choose my path</Link>
-            <Link className={styles.secondaryCta} href="/patient-access">Medical patient portal</Link>
+            <Link className={styles.secondaryCta} href="/patient-access">Men&apos;s Hormone Health patient portal</Link>
           </div>
           <div className={styles.heroProof} aria-label="Apex service highlights">
             <span>Clear advice for moving forward</span><span>Personal attention</span><span>Practical next steps</span>
@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       <section className={styles.trustGrid} aria-label="Apex service structure">
-        <article><strong>Coaching clients</strong><p>Education, nutrition, lifestyle guidance, tracking, and accountability for sustainable everyday wellness.</p></article>
+        <article><strong>Gut Health clients</strong><p>Education, nutrition, lifestyle guidance, tracking, and accountability for sustainable everyday wellness.</p></article>
         <article><strong>Men&apos;s Hormone Health patients</strong><p>Licensed evaluation and treatment for eligible men physically located in California.</p></article>
         <article><strong>Progress toward your goals</strong><p>Personalized guidance, practical strategies, and consistent support to help you keep moving forward.</p></article>
       </section>
@@ -56,7 +56,7 @@ export default function Home() {
       <section className={styles.intro}>
         <p className={styles.kicker}>Choose your route</p>
         <h2>Two services. One clear decision.</h2>
-        <p>Apex Vitality keeps medical care and wellness coaching distinct so you can understand exactly what you are choosing.</p>
+        <p>Choose the path that speaks to your goals and the kind of support you want right now.</p>
       </section>
 
       <section className={styles.pathStack} id="care" aria-label="Apex Vitality service choices">
@@ -83,8 +83,8 @@ export default function Home() {
       <section className={styles.support}>
         <div className={styles.supportImage}><Image src="/program-metabolic-couple-v1.png" alt="Adults building sustainable wellness routines" fill sizes="(max-width: 900px) 100vw, 50vw" /></div>
         <div className={styles.supportCopy}>
-          <p className={styles.kicker}>Not sure which route fits?</p><h2>Medical care and coaching serve different needs.</h2>
-          <p>Choose medical care for diagnosis, individualized medical interpretation, prescriptions, or treatment. Choose coaching for education, routines, nutrition, lifestyle support, and accountability.</p>
+          <p className={styles.kicker}>Not sure which route fits?</p><h2>Start with the change you want to make.</h2>
+          <p>Choose Gut Health for nutrition, digestion, energy, and sustainable daily habits. Choose Men&apos;s Hormone Health for a deeper look at possible hormone deficiency.</p>
           <Link className={styles.primaryCta} href="/contact">Ask Apex Vitality</Link>
         </div>
       </section>
@@ -92,7 +92,6 @@ export default function Home() {
       <section className={styles.finalCta}>
         <p className={styles.kicker}>Your next step</p><h2>Choose the support that matches your goals.</h2>
         <Link className={styles.whiteCta} href="#care">View both routes</Link>
-        <p className={styles.clinicalNote}>Wellness coaching is educational and does not diagnose or treat medical conditions. Medical treatment and prescriptions require an appropriate evaluation by a licensed clinician and are offered only where legally permitted and clinically appropriate.</p>
       </section>
       <SiteFooter />
     </main>

@@ -34,7 +34,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div>
         <strong>Apex Vitality</strong>
-        <p>Focused California men&apos;s medical care and inclusive gut-health and metabolic-balance wellness coaching.</p>
+        <p>Personalized support for Gut Health clients and focused care for Men&apos;s Hormone Health patients.</p>
         <address>
           {practiceContact.legalName}<br />
           {practiceContact.addressLine1}<br />

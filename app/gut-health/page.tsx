@@ -33,7 +33,7 @@ export default function GutHealthPage() {
         <div>
           <p className="eyebrow">When “normal” does not answer your questions</p>
           <h2>Your experience deserves more than a quick dismissal.</h2>
-          <p>Many coaching clients arrive after being told that standard results are within range while fatigue, digestive discomfort, inconsistent energy, or difficulty maintaining healthy routines continues. Coaching creates space to organize your story and examine how nutrition, digestion, sleep, stress, movement, and everyday habits may fit together.</p>
+          <p>Many Gut Health clients arrive after being told that standard results are within range while fatigue, digestive discomfort, inconsistent energy, or difficulty maintaining healthy routines continues. Your experience deserves time, attention, and a thoughtful look at how nutrition, digestion, sleep, stress, movement, and everyday habits may fit together.</p>
         </div>
         <div>
           <p className="eyebrow">Root-cause-oriented education</p>
@@ -57,7 +57,7 @@ export default function GutHealthPage() {
         <div>
           <p className="eyebrow">Educational functional lab review</p>
           <h2>See more meaning in the numbers.</h2>
-          <p>Coaching clients may receive a personalized educational review of wellness-related laboratory patterns and functional ranges. We explain what individual markers generally represent, discuss what results may indicate from a wellness perspective, and use those insights to support nutrition, lifestyle, sleep, stress, and habit goals.</p>
+          <p>Gut Health clients may receive a personalized educational review of wellness-related laboratory patterns and functional ranges. We explain what individual markers generally represent, discuss what results may indicate from a wellness perspective, and use those insights to support nutrition, lifestyle, sleep, stress, and habit goals.</p>
         </div>
         <div>
           <p>You leave with clearer wellness priorities, practical actions to try, patterns to track, and a stronger understanding of how your daily choices connect with the information in front of you.</p>
