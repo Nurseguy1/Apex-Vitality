@@ -43,7 +43,7 @@ export default function CareStandardsPage() {
 
         <h2>California service area</h2>
         <p>
-          Apex Vitality currently provides clinical care to adults age 18 and older who are physically located in California at the time of care. Children age 4 and older and teens may be considered only for the Special Needs Nutrition Program with parent or legal-guardian participation and consent. All other care is adult-only. Treatment availability also depends on clinical appropriateness, pharmacy coverage, and applicable law.
+          Apex Vitality currently provides Men&apos;s Health medical care to eligible adults age 18 and older who are physically located in California at the time of care. Treatment availability also depends on clinical appropriateness, pharmacy coverage, and applicable law. Gut Health &amp; Metabolic Balance is a separate non-medical coaching service and does not include diagnosis, treatment, prescribing, or individualized medical interpretation.
         </p>
         <p><Link href="/service-areas">Review current service-area information.</Link></p>
 

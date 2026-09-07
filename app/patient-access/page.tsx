@@ -5,7 +5,7 @@ import { charmLinks } from "../lib/charm";
 
 export const metadata: Metadata = {
   title: "Secure Patient Access | Apex Vitality",
-  description: "Secure scheduling, intake, and patient portal access for Apex Vitality clients.",
+  description: "Secure scheduling, intake, and portal access for Apex Vitality medical patients.",
 };
 
 const accessItems = [
@@ -34,9 +34,10 @@ export default function PatientAccessPage() {
     <main>
       <SiteHeader />
       <section className="patient-access-hero">
-        <p className="eyebrow">Secure patient access</p>
-        <h1>Your care journey, connected through CharmHealth.</h1>
-        <p>Scheduling, clinical intake, assigned forms, and patient communication take place through Apex Vitality&apos;s secure CharmHealth workflow.</p>
+        <p className="eyebrow">Men&apos;s Health medical patients only</p>
+        <h1>Secure medical-patient access through CharmHealth.</h1>
+        <p>Scheduling, clinical intake, assigned forms, and patient communication for Men&apos;s Health medical care take place through Apex Vitality&apos;s secure CharmHealth workflow.</p>
+        <p><strong>Coaching clients:</strong> Gut Health &amp; Metabolic Balance coaching is non-medical and does not use this portal unless a client is also separately established as a Men&apos;s Health medical patient.</p>
       </section>
       <section className="patient-access-grid">
         {accessItems.map((item, index) => (
@@ -55,7 +56,7 @@ export default function PatientAccessPage() {
       <aside className={`portal-status ${charmLinks.booking && charmLinks.portal ? "is-ready" : ""}`}>
         <strong>{charmLinks.booking && charmLinks.portal ? "Secure scheduling and portal access are active." : "CharmHealth connection is being prepared."}</strong>
         <p>{charmLinks.booking && charmLinks.portal ? "Schedule above or use the patient portal. Assigned intake forms will appear in your secure Charm account." : "Please do not send medical information through ordinary email or unsecured website messages."}</p>
-        {!(charmLinks.booking && charmLinks.portal) && <Link className="text-link" href="/questionnaires">Preview the screening questionnaires →</Link>}
+        {!(charmLinks.booking && charmLinks.portal) && <Link className="text-link" href="/contact">Contact Apex Vitality →</Link>}
       </aside>
       <SiteFooter />
     </main>

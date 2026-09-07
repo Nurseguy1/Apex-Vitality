@@ -4,7 +4,7 @@ import { SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
   title: "Service Areas | Apex Vitality",
-  description: "See where Apex Vitality telehealth care is currently available.",
+  description: "See where Apex Vitality medical care and wellness coaching are currently available.",
 };
 
 export default function ServiceAreasPage() {
@@ -13,15 +13,13 @@ export default function ServiceAreasPage() {
       <SiteHeader />
       <article className="legal-page">
         <p className="eyebrow">Service areas</p>
-        <h1>Apex Vitality currently provides clinical care in California.</h1>
-        <h2>California service area</h2>
-        <p>Adults age 18 and older who are physically located in California at the time of care may use Apex Vitality&apos;s telehealth pathway, including visits, laboratory planning, comprehensive consultations, eligible treatment programs, and available membership services.</p>
-        <p><strong>Special Needs Nutrition exception:</strong> Children age 4 and older and teens may be considered only for the Special Needs Nutrition Program. A parent or legal guardian must participate and provide required consent for a minor. All other Apex treatments, programs, and memberships are adult-only.</p>
-        <p>Availability also depends on clinical appropriateness, the selected service, pharmacy coverage, and applicable law. Displaying a treatment on this website does not guarantee that it will be prescribed.</p>
-        <h2>Outside California</h2>
-        <p>Apex Vitality is not currently accepting purchases for clinical care delivered outside California. Additional service areas may be introduced after the appropriate licensed clinical infrastructure is active and disclosed.</p>
+        <h1>Medical care and coaching have different boundaries.</h1>
+        <h2>Men&apos;s Health medical care</h2>
+        <p>Eligible adults age 18 and older who are physically located in California at the time of care may use the Men&apos;s Health telehealth pathway. Availability depends on clinical appropriateness, pharmacy coverage, and applicable law. No treatment or prescription is guaranteed.</p>
+        <h2>Gut Health &amp; Metabolic Balance coaching</h2>
+        <p>This is educational wellness coaching, not medical care. It may be available more broadly, subject to local requirements and confirmation during enrollment. It may include educational review of wellness-related laboratory patterns, but it does not include diagnosis, treatment, prescribing, diagnostic testing as medical care, or clinical interpretation of laboratory results.</p>
         <h2>Confirm your pathway</h2>
-        <p><Link className="primary-button" href="/treatments">Choose your care</Link></p>
+        <p><Link className="primary-button" href="/#care">Choose your path</Link></p>
       </article>
       <SiteFooter />
     </main>

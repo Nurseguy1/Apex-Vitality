@@ -21,7 +21,7 @@ export default function ProvidersPage() {
           <li>National Provider Identifier: {practiceContact.npi}</li>
         </ul>
         <h2>Current service area</h2>
-        <p>Apex Vitality currently provides clinical services to adults age 18 and older who are physically located in California at the time of care. Children age 4 and older and teens may be considered only for the Special Needs Nutrition Program with parent or legal-guardian participation and consent. All other care is adult-only.</p>
+        <p>Apex Vitality currently provides Men&apos;s Health medical services to eligible adults age 18 and older who are physically located in California at the time of care.</p>
         <h2>Pharmacy fulfillment</h2>
         <p>Apex Vitality is not a pharmacy. If medication is prescribed, the prescription is sent to an independent licensed pharmacy serving the patient&apos;s location. The dispensing pharmacy&apos;s identity, contact information, medication label, and applicable instructions are provided through the pharmacy or fulfillment workflow. Pharmacy and product availability vary by state.</p>
         <h2>Questions</h2>

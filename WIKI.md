@@ -13,6 +13,7 @@ Updated: August 23, 2026
 
 - Latest verified production website commit: `a8f9ef4` (**Clarify three-month program payment step**).
 - No website work is currently in progress. The production build passed, the review deployment was verified, and the same change was promoted and verified at `www.goapexvitality.com`.
+- End-of-day check on August 23: the owner opened the live home page, confirmed that it looked good, and stopped for the night. No website code, configuration, checkout, or deployment changes were made during that final session.
 - The membership and scheduling workflow was revised on August 23.
 - Standard treatment and membership pathways begin with a separate, one-time **$39 initial-care payment**, then continue to the selected membership checkout. Special Needs Nutrition is the exception: its $39 initial-care portion is included in the single $597 program total.
 - Focused Care includes a 15-minute initial appointment. Apex Treatment, Apex Performance, and Apex Private Client Care include a 45-minute comprehensive initial appointment.
@@ -126,6 +127,7 @@ Fullscript products and bundles are paid for separately by the patient. The webs
 - Repository folder: `/Users/johnbagby/Documents/Codex/2026-07-14/let/apex-vitality-stripe-ready`
 - Continue from this wiki and the `agent/stripe-checkout-preview` branch.
 - At handoff, no implementation task is pending. Start by asking the owner what they want to change next; do not redo the completed Special Needs flow.
+- The owner ended the August 23 session after reviewing the live home page and saying it looked good. Resume from the currently published site without making assumptions about the next requested change.
 - Latest production website code commit: `a8f9ef4`. A documentation-only handoff commit may appear after it.
 - Begin with this wiki and verify both the Vercel review deployment and public site before declaring future changes complete.
 - The Metabolic & Gut Health and Special Needs Nutrition cards are published on the Home-page Care section and Treatments page.

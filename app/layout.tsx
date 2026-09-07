@@ -9,23 +9,19 @@ const siteUrl = "https://goapexvitality.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Apex Vitality | California Telehealth, Longevity & Functional Health",
+    default: "Apex Vitality | Men’s Health & Gut Health Coaching",
     template: "%s",
   },
   description:
-    "Personalized, clinician-led California telehealth care for longevity, functional health, healthy aging, medical weight management, men's health, women's health, and digestive wellness.",
+    "Focused California men's medical care and inclusive gut-health and metabolic-balance wellness coaching.",
   applicationName: "Apex Vitality",
   category: "healthcare",
   keywords: [
     "California telehealth",
-    "longevity care",
-    "functional health",
-    "healthy aging",
-    "medical weight management",
     "men's health",
-    "women's health",
     "gut health",
-    "concierge telehealth",
+    "metabolic wellness coaching",
+    "California telehealth men's health",
   ],
   alternates: {
     types: {
@@ -48,9 +44,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Apex Vitality | California Telehealth, Longevity & Functional Health",
+    title: "Apex Vitality | Men’s Health & Gut Health Coaching",
     description:
-      "Proactive, clinician-led care for vitality, performance, and healthy aging.",
+      "Two focused paths: California men's medical care and gut-health and metabolic-balance wellness coaching.",
     type: "website",
     siteName: "Apex Vitality",
     locale: "en_US",
@@ -59,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Apex Vitality | Longevity & Functional Health",
-    description: "Proactive, clinician-led California telehealth care.",
+    title: "Apex Vitality | Men’s Health & Gut Health Coaching",
+    description: "California men's medical care and inclusive wellness coaching.",
     images: ["/og.png"],
   },
 };
@@ -77,7 +73,7 @@ const organizationSchema = {
       logo: `${siteUrl}/favicon.svg`,
       image: `${siteUrl}/og.png`,
       description:
-        "A California telehealth practice providing clinician-led longevity, functional health, healthy-aging, metabolic, men's health, women's health, and digestive-wellness care for adults.",
+        "Apex Vitality provides focused men's medical care for eligible adults located in California and a distinct educational gut-health and metabolic-balance wellness-coaching pathway.",
       address: {
         "@type": "PostalAddress",
         streetAddress: practiceContact.addressLine1,

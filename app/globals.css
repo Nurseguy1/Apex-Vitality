@@ -2682,6 +2682,17 @@ footer p {
   color: #9ad8d4;
 }
 
+.gut-health-page .page-intro {
+  background-image:
+    linear-gradient(90deg, rgb(7 34 42 / .92) 0%, rgb(19 71 76 / .7) 45%, rgb(16 66 70 / .16) 74%, transparent 100%),
+    url('/womens-health-hero-v1.png?v=20260907-coaching') !important;
+  background-position: center center !important;
+}
+
+.gut-health-page .page-intro .eyebrow {
+  color: #b7e4dc;
+}
+
 .womens-health-page .page-intro {
   background-image:
     linear-gradient(90deg, rgb(7 34 42 / .9) 0%, rgb(19 71 76 / .65) 43%, rgb(16 66 70 / .12) 72%, transparent 100%),

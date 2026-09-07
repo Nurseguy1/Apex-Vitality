@@ -5,23 +5,17 @@ import { JsonLd } from "../seo";
 export const metadata: Metadata = { title: "Frequently Asked Questions | Apex Vitality" };
 
 const questions = [
-  ["Can I ask about a specific treatment I believe will help?", "Yes. Your experience and ideas are an important part of the consultation. Your clinician will listen, explore your ideas with you, answer your questions, explain the options clearly, and build a plan designed around your goals."],
-  ["What care begins at the first consultation?", "Your consultation includes individualized assessment, clinical guidance, education, and a personalized care plan. Testing, prescriptions, monitoring, and follow-up can be incorporated when they support your needs and goals."],
-  ["How is a medical weight-management plan built?", "Your clinician reviews your goals, health history, medications, risks, and relevant data; explains what those findings mean; and builds an individualized nutrition, activity, medical, testing, and follow-up plan with you."],
-  ["Does Apex Vitality offer men's hormonal health care?", "Yes. Care includes assessment of men’s health concerns, education about symptoms and laboratory findings, individualized treatment planning, and the testing and monitoring needed to support that plan."],
-  ["Who provides my care?", "Your care is provided by a licensed medical provider. Recommendations are based on your health history, goals, available clinical data, and applicable standards of care."],
-  ["Can I start with a specific treatment in mind?", "Yes. Choose the focused care area that matches your goal, complete the secure questionnaire, and bring your treatment ideas into the clinician review. Your clinician works with you to build the plan."],
-  ["How is lab work used?", "Your clinician selects laboratory testing that adds useful insight, explains the results clearly, and uses them to guide progress toward your goals."],
-  ["Does everyone need specialty gut testing?", "No. Testing is selected only when the clinician believes the result is likely to answer a useful clinical question or change the care plan."],
-  ["Does Apex Vitality offer longevity-focused care?", "Yes. The longevity pathway helps you understand modifiable risks, biomarkers, recovery, body composition, and healthy-aging priorities, then turns that information into a practical long-term plan."],
-  ["How are specific therapies incorporated?", "Assessment and clinical guidance begin with the consultation. Your clinician explains the options clearly and coordinates an individualized treatment, testing, monitoring, and follow-up plan designed around your goals."],
-  ["What does it cost to establish care?", "Standard treatment and membership pathways begin with a one-time $39 USD initial-care payment. Focused Care includes a 15-minute initial appointment; Apex Treatment, Performance, and Private Client include a 45-minute comprehensive initial appointment. Special Needs Nutrition instead uses one $597 program payment with the standard $39 initial-care portion included. Medication, laboratory services, and membership charges are separate unless a written offer expressly says otherwise."],
-  ["What do memberships cost?", "Focused Care is the lowest membership at $149 USD per month and includes a 15-minute initial appointment. Apex Treatment is $499 per month, Apex Performance is $749 per month, and limited-enrollment Apex Private Client Care is $1,250 per month. Those three higher memberships include a 45-minute comprehensive initial appointment."],
-  ["Who can use the Special Needs Nutrition Program?", "The program is designed primarily for parents and caregivers of children age 4 and older with special needs and selective or limited diets. Teens and adults may also be considered. A parent or legal guardian must participate and provide required consent for a minor. All other Apex treatments and memberships are adult-only."],
-  ["What does the Special Needs Nutrition Program cost?", "The fixed three-month program costs $597 in one payment, equivalent to $199 per month. The standard $39 initial-care portion is included in the $597 total and is not charged separately. It includes one 45-minute initial visit, a written plan, and two 30-minute follow-up visits. It does not renew automatically. Clinical messaging, supplements, laboratory testing, and outside services are not included."],
-  ["Can I send medical information through ordinary email?", "No. Use the secure CharmHealth patient portal for requested medical information, assigned forms, records, and appointments. Clinical questions require a scheduled visit. Do not send sensitive medical information through ordinary email or general website channels."],
-  ["Where is care available?", "Availability depends on clinician licensure, applicable telehealth rules, and the services offered in your location. Confirm availability before relying on the service."],
-  ["Is this website medical advice?", "No. Website content is general education and does not replace professional medical advice, diagnosis, treatment, or emergency care."],
+  ["What are the two Apex Vitality paths?", "Men’s Health is licensed medical care for eligible adults located in California. Gut Health & Metabolic Balance is educational wellness coaching focused on nutrition, digestive wellness, habits, and sustainable lifestyle change."],
+  ["How do I know which path to choose?", "Choose Men’s Health if you are seeking a medical evaluation, laboratory review, diagnosis, or possible prescription treatment. Choose Gut Health & Metabolic Balance if you want non-medical education, structure, and coaching. Contact Apex Vitality if you are unsure."],
+  ["Is Men’s Health medical care?", "Yes. Men’s Health is provided through a licensed California clinician after an appropriate medical evaluation. Testing or prescriptions may be recommended when clinically appropriate, but no treatment or prescription is guaranteed."],
+  ["Where is Men’s Health available?", "Medical care is currently limited to eligible adults who are physically located in California at the time of care. Availability also depends on clinical appropriateness and applicable law."],
+  ["What can Gut Health & Metabolic Balance coaching include?", "Coaching may include general education about food patterns, digestive wellness, sleep, stress, movement, routines, practical behavior-change support, and a personalized educational review of wellness-related laboratory patterns and functional ranges."],
+  ["How are labs discussed in coaching?", "A coaching client may receive an educational review explaining what markers generally represent, what results may indicate from a wellness perspective, and questions to discuss with a licensed healthcare provider. This is different from clinical interpretation used to diagnose or treat a medical condition."],
+  ["What is outside the scope of coaching?", "Coaching does not diagnose or treat disease, prescribe medication, direct medication changes, order diagnostic tests as medical care, or provide clinical interpretation of laboratory results. Abnormal, concerning, or medically significant findings are referred to an appropriate licensed provider."],
+  ["Is Gut Health & Metabolic Balance only for women?", "No. The coaching path is open to adults of any gender. Some messaging may especially resonate with women ages 35–50 and people supporting neurodivergent family members, but the service is not exclusive to those groups."],
+  ["Does Apex Vitality offer peptides, NAD+, or weight-loss programs?", "No. The current public offering is intentionally limited to Men’s Health and Gut Health & Metabolic Balance."],
+  ["Can I send medical information through ordinary email?", "No. Medical patients should use the secure CharmHealth patient portal for requested medical information, assigned forms, records, and appointments. Do not send sensitive medical information through ordinary email or general website channels."],
+  ["Is this website medical advice?", "No. Website content is general information and does not replace individualized medical advice, diagnosis, treatment, or emergency care. Call 911 or seek immediate in-person care for an emergency."],
 ];
 
 const faqSchema = {
@@ -30,10 +24,7 @@ const faqSchema = {
   mainEntity: questions.map(([question, answer]) => ({
     "@type": "Question",
     name: question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: answer,
-    },
+    acceptedAnswer: { "@type": "Answer", text: answer },
   })),
 };
 
@@ -42,7 +33,7 @@ export default function FaqPage() {
     <main>
       <JsonLd data={faqSchema} />
       <SiteHeader />
-      <PageIntro eyebrow="Common questions" title="Clear answers. A simple path into care." description="Choose your care, complete the secure intake, and move forward with personal clinician guidance." />
+      <PageIntro eyebrow="Common questions" title="Two paths, clearly separated." description="Understand the difference between California medical care and non-medical wellness coaching before you begin." />
       <section className="faq-list">
         {questions.map(([question, answer]) => <details key={question}><summary>{question}</summary><p>{answer}</p></details>)}
       </section>

@@ -5,107 +5,69 @@ import styles from "./home.module.css";
 
 const carePaths = [
   {
-    eyebrow: "Start with a $39 initial-care payment",
-    title: "Medical Weight Loss",
-    copy: "Build a personalized weight-loss plan with clinician guidance, ongoing support, and medication options tailored to your goals.",
-    image: "/weight-loss-couple-walking-v1.png",
-    href: "/weight-loss",
-    cta: "Start weight-loss care",
+    eyebrow: "Licensed medical care · California",
+    title: "Men’s Health",
+    copy: "Personalized evaluation for energy, strength, sexual health, body composition, metabolic health, and hormonal concerns—with testing, treatment, and monitoring when clinically appropriate.",
+    image: "/home-professional-man-35-45-v3.png",
+    href: "/mens-health",
+    cta: "Explore men’s health",
   },
   {
-    eyebrow: "Adult nutrition & digestive wellness",
-    title: "Metabolic & Gut Health",
-    copy: "Connect metabolic goals, digestive wellness, nutrition, lifestyle, and optional Fullscript supplement bundles in one clinician-guided plan.",
+    eyebrow: "Educational wellness coaching · Broadly available",
+    title: "Gut Health & Metabolic Balance",
+    copy: "Structured nutrition, digestive-wellness, lifestyle, and habit coaching for people who want more sustainable energy, routines, and everyday well-being.",
     image: "/program-metabolic-couple-v1.png",
-    href: "/programs/metabolic-gut#fullscript-bundles",
-    cta: "View program & bundles",
-  },
-  {
-    eyebrow: "Fixed three-month caregiver program",
-    title: "Special Needs Nutrition",
-    copy: "Review the full three-month program, pricing, visits, and enrollment steps before completing one agreement and one secure checkout.",
-    image: "/nutrition-support-family-v1.png",
-    href: "/nutrition-support/care-options",
-    cta: "View the 3-month program",
-  },
-  {
-    eyebrow: "Know what you want?",
-    title: "Peptide & NAD+ Care",
-    copy: "Compare focused treatment options, complete a brief medical review, and move directly toward your personalized plan.",
-    image: "/standout-gym-men-v1.png",
-    href: "/peptides",
-    cta: "Explore peptide care",
-  },
-  {
-    eyebrow: "Build a complete plan",
-    title: "Men’s, Women’s & Metabolic Health",
-    copy: "Choose the health goal that matters most now—energy, strength, hormonal health, weight, digestion, or healthy aging.",
-    image: "/program-longevity-couple-v1.png",
-    href: "/treatments",
-    cta: "Explore care options",
-  },
-  {
-    eyebrow: "Ongoing support",
-    title: "Membership Care",
-    copy: "After the $39 initial-care payment, choose Focused Care with a 15-minute initial appointment or a higher membership with a 45-minute comprehensive initial appointment.",
-    image: "/membership-performance-diverse-v2.png",
-    href: "/memberships",
-    cta: "View memberships",
+    href: "/gut-health",
+    cta: "Explore wellness coaching",
   },
 ];
 
 const steps = [
-  ["1", "Choose your direction", "Start with the treatment, concern, or health goal that matters most to you."],
-  ["2", "Review the starting price", "Standard care begins at $39. Special Needs Nutrition uses one $597 payment with the $39 portion included."],
-  ["3", "Complete enrollment", "Accept the agreement and complete the checkout for your membership or fixed program."],
-  ["4", "Begin your care plan", "Schedule included care, complete clinical review, and get monitoring organized around your progress."],
+  ["1", "Choose your route", "Select California medical care or non-medical wellness coaching."],
+  ["2", "Review the details", "Understand what the service includes, its boundaries, and the appropriate next step."],
+  ["3", "Begin with clarity", "Use the secure medical workflow or contact Apex about wellness coaching."],
 ];
 
 export default function Home() {
   return (
     <main className={styles.page}>
       <SiteHeader />
-
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
-          <p className={styles.kicker}>Modern telehealth for vitality, recovery & longevity</p>
-          <h1>Your goals are within reach.</h1>
-          <p className={styles.heroLead}>Build the energy, strength, confidence, and health to achieve more.</p>
+          <p className={styles.kicker}>Two focused paths to better health</p>
+          <h1>Start with what matters most.</h1>
+          <p className={styles.heroLead}>Choose licensed men&apos;s medical care in California or practical gut-health and metabolic-balance coaching.</p>
           <div className={styles.actions}>
-            <Link className={styles.primaryCta} href="/treatments">Start my care</Link>
-            <Link className={styles.secondaryCta} href="#care">Explore options</Link>
+            <Link className={styles.primaryCta} href="#care">Choose my path</Link>
+            <Link className={styles.secondaryCta} href="/patient-access">Medical patient portal</Link>
           </div>
-          <div className={styles.heroProof} aria-label="Apex care highlights">
-            <span>Simple online start</span>
-            <span>Personal medical review</span>
-            <span>A plan built around you</span>
+          <div className={styles.heroProof} aria-label="Apex service highlights">
+            <span>Clear service boundaries</span><span>Personal attention</span><span>Practical next steps</span>
           </div>
         </div>
       </section>
 
-      <section className={styles.trustGrid} aria-label="Apex care experience">
-        <article><strong>Start simply</strong><p>Choose the care that matches what you want to accomplish.</p></article>
-        <article><strong>Be heard</strong><p>Your history, medications, symptoms, and goals receive personal attention.</p></article>
-        <article><strong>Move forward</strong><p>Leave with a clear plan and an easy next step.</p></article>
+      <section className={styles.trustGrid} aria-label="Apex service structure">
+        <article><strong>Medical patients</strong><p>Licensed evaluation and treatment for eligible Men&apos;s Health patients physically located in California.</p></article>
+        <article><strong>Coaching clients</strong><p>Education, nutrition, lifestyle guidance, tracking, and accountability without diagnosis or treatment.</p></article>
+        <article><strong>The right next step</strong><p>Clear referral to appropriate medical care whenever a concern falls outside coaching.</p></article>
       </section>
 
       <section className={styles.intro}>
-        <p className={styles.kicker}>Choose your care experience</p>
-        <h2>One clear place to start.</h2>
-        <p>You do not need to understand every option before beginning. Choose what feels most relevant and let your clinician help tailor the details.</p>
+        <p className={styles.kicker}>Choose your route</p>
+        <h2>Two services. One clear decision.</h2>
+        <p>Apex Vitality keeps medical care and wellness coaching distinct so you can understand exactly what you are choosing.</p>
       </section>
 
-      <section className={styles.pathStack} id="care" aria-label="Care choices">
+      <section className={styles.pathStack} id="care" aria-label="Apex Vitality service choices">
         {carePaths.map((path, index) => (
           <article className={styles.pathPanel} key={path.title}>
             <div className={styles.pathImage}>
-              <Image src={path.image} alt="Active adults pursuing better health" fill sizes="(max-width: 900px) 100vw, 50vw" />
+              <Image src={path.image} alt="Adult focused on personal health and well-being" fill sizes="(max-width: 900px) 100vw, 50vw" />
             </div>
             <div className={styles.pathCopy}>
-              <p className={styles.kicker}>{path.eyebrow}</p>
-              <h2>{path.title}</h2>
-              <p>{path.copy}</p>
-              <Link className={index < 2 ? styles.primaryCta : styles.darkCta} href={path.href}>{path.cta}</Link>
+              <p className={styles.kicker}>{path.eyebrow}</p><h2>{path.title}</h2><p>{path.copy}</p>
+              <Link className={index === 0 ? styles.primaryCta : styles.darkCta} href={path.href}>{path.cta}</Link>
             </div>
           </article>
         ))}
@@ -113,39 +75,25 @@ export default function Home() {
 
       <section className={styles.process}>
         <div className={styles.processHeading}>
-          <p className={styles.kicker}>How it works</p>
-          <h2>A simple path forward.</h2>
-          <p>Four clear steps take you from interest to personalized, monitored care.</p>
+          <p className={styles.kicker}>How to begin</p><h2>A simpler way forward.</h2><p>Start with the route that matches the kind of support you want.</p>
         </div>
-        <ol>
-          {steps.map(([number, title, copy]) => (
-            <li key={number}>
-              <b>{number}</b>
-              <div><strong>{title}</strong><span>{copy}</span></div>
-            </li>
-          ))}
-        </ol>
+        <ol>{steps.map(([number, title, copy]) => <li key={number}><b>{number}</b><div><strong>{title}</strong><span>{copy}</span></div></li>)}</ol>
       </section>
 
       <section className={styles.support}>
-        <div className={styles.supportImage}>
-          <Image src="/home-professional-man-35-45-v3.png" alt="Active professional focused on his health goals" fill sizes="(max-width: 900px) 100vw, 50vw" />
-        </div>
+        <div className={styles.supportImage}><Image src="/program-metabolic-couple-v1.png" alt="Adults building sustainable wellness routines" fill sizes="(max-width: 900px) 100vw, 50vw" /></div>
         <div className={styles.supportCopy}>
-          <p className={styles.kicker}>Care that keeps moving</p>
-          <h2>Choose your goal. We’ll help build the route.</h2>
-          <p>Standard membership care starts with a one-time $39 initial-care payment. Special Needs Nutrition uses one $597 program payment with that initial-care portion included.</p>
-          <Link className={styles.primaryCta} href="/treatments">Get started</Link>
+          <p className={styles.kicker}>Not sure which route fits?</p><h2>Medical care and coaching serve different needs.</h2>
+          <p>Choose medical care for diagnosis, individualized medical interpretation, prescriptions, or treatment. Choose coaching for education, routines, nutrition, lifestyle support, and accountability.</p>
+          <Link className={styles.primaryCta} href="/contact">Ask Apex Vitality</Link>
         </div>
       </section>
 
       <section className={styles.finalCta}>
-        <p className={styles.kicker}>Your next step</p>
-        <h2>Ready to build momentum?</h2>
-        <Link className={styles.whiteCta} href="/treatments">Start my care</Link>
-        <p className={styles.clinicalNote}>Treatment recommendations and prescriptions, when appropriate, depend on medical evaluation and clinician judgment.</p>
+        <p className={styles.kicker}>Your next step</p><h2>Choose the support that matches your goals.</h2>
+        <Link className={styles.whiteCta} href="#care">View both routes</Link>
+        <p className={styles.clinicalNote}>Wellness coaching is educational and does not diagnose or treat medical conditions. Medical treatment and prescriptions require an appropriate evaluation by a licensed clinician and are offered only where legally permitted and clinically appropriate.</p>
       </section>
-
       <SiteFooter />
     </main>
   );
