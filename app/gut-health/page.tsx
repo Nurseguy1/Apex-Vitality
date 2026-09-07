@@ -38,8 +38,8 @@ export default function GutHealthPage() {
         </div>
         <div>
           <p className="eyebrow">Root-cause-oriented education</p>
-          <h2>Look for patterns—not a coaching diagnosis.</h2>
-          <p>We use wellness education and educational lab review to explore possible contributing patterns and identify practical areas to support. We do not claim to diagnose the root cause of symptoms. Medical conditions, concerning findings, and the clinical meaning of abnormal results belong with an appropriately licensed healthcare provider.</p>
+          <h2>Look deeper at the patterns behind how you feel.</h2>
+          <p>We use wellness education and educational lab review to explore possible contributing patterns across digestion, nutrition, sleep, stress, movement, and daily routines. Then we turn those insights into practical areas to support, track, and refine over time.</p>
         </div>
       </section>
 
@@ -68,7 +68,7 @@ export default function GutHealthPage() {
       <section className="content-split dark-panel">
         <div>
           <p className="eyebrow">Clear boundaries</p>
-          <h2>Coaching supports wellness. It does not replace healthcare.</h2>
+          <h2>Clear boundaries keep coaching focused.</h2>
           <p>This pathway does not diagnose or treat medical conditions, prescribe or change medication, order diagnostic testing as medical care, or provide clinical interpretation of laboratory results.</p>
         </div>
         <ul className="check-list">
