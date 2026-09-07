@@ -9,7 +9,7 @@ const siteUrl = "https://goapexvitality.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Apex Vitality | Gut Health Coaching & Men’s Health",
+    default: "Apex Vitality | Gut Health Coaching & Men’s Hormone Health",
     template: "%s",
   },
   description:
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Apex Vitality | Gut Health Coaching & Men’s Health",
+    title: "Apex Vitality | Gut Health Coaching & Men’s Hormone Health",
     description:
       "Two focused paths: gut-health and metabolic-balance wellness coaching and California men's medical care.",
     type: "website",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Apex Vitality | Men’s Health & Gut Health Coaching",
+    title: "Apex Vitality | Gut Health Coaching & Men’s Hormone Health",
     description: "California men's medical care and inclusive wellness coaching.",
     images: ["/og.png"],
   },

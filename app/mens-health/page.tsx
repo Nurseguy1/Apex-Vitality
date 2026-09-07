@@ -3,8 +3,8 @@ import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
-  title: "Men's Vitality & Hormonal Health | Apex Vitality",
-  description: "Personalized telehealth care for men's vitality, performance, and hormonal health.",
+  title: "Men's Hormone Health | Apex Vitality",
+  description: "California medical evaluation for men concerned about symptoms or laboratory findings that could reflect a hormone deficiency.",
 };
 
 export default function MensHealthPage() {
@@ -12,9 +12,9 @@ export default function MensHealthPage() {
     <main className="mens-health-page">
       <SiteHeader />
       <section className="page-intro">
-        <p className="eyebrow">Vitality, performance &amp; hormonal health</p>
-        <h1>Men&apos;s Health</h1>
-        <p>Feel stronger, sharper, and more like yourself. Personalized men&apos;s health care designed to improve energy, performance, sexual health, recovery, mood, sleep, and body composition.</p>
+        <p className="eyebrow">California medical care</p>
+        <h1>Men&apos;s Hormone Health</h1>
+        <p>A deeper clinical look for men concerned about symptoms or laboratory findings that could reflect a hormone deficiency, including changes in energy, strength, sexual health, recovery, mood, sleep, or body composition.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Start my men&apos;s health care</Link>
           <Link className="secondary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Schedule an initial visit</Link>

@@ -11,7 +11,7 @@ export function SiteHeader() {
       </Link>
       <nav className="nav-links" aria-label="Main navigation">
         <Link href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
-        <Link href="/mens-health">Men&apos;s Health</Link>
+        <Link href="/mens-health">Men&apos;s Hormone Health</Link>
         <Link href="/faq">FAQ</Link>
         <Link href="/patient-access">Medical Patient Portal</Link>
       </nav>
@@ -19,7 +19,7 @@ export function SiteHeader() {
         <summary aria-label="Open site navigation">Menu</summary>
         <nav aria-label="Mobile navigation">
           <Link href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
-          <Link href="/mens-health">Men&apos;s Health</Link>
+          <Link href="/mens-health">Men&apos;s Hormone Health</Link>
           <Link href="/faq">FAQ</Link>
           <Link href="/patient-access">Medical Patient Portal</Link>
         </nav>
@@ -43,7 +43,7 @@ export function SiteFooter() {
       </div>
       <nav aria-label="Footer navigation">
         <Link href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
-        <Link href="/mens-health">Men&apos;s Health</Link>
+        <Link href="/mens-health">Men&apos;s Hormone Health</Link>
         <Link href="/faq">FAQ</Link>
         <Link href="/patient-access">Medical Patient Portal</Link>
         <Link href="/contact">Contact</Link>
@@ -87,7 +87,7 @@ export function PageIntro({
       <p>{description}</p>
       <div className="hero-actions">
         <Link className="primary-button" href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
-        <Link className="secondary-button" href="/mens-health">Men&apos;s Health</Link>
+        <Link className="secondary-button" href="/mens-health">Men&apos;s Hormone Health</Link>
       </div>
     </section>
   );
