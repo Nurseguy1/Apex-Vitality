@@ -10,16 +10,16 @@ export function SiteHeader() {
         <span>Apex Vitality</span>
       </Link>
       <nav className="nav-links" aria-label="Main navigation">
-        <Link href="/mens-health">Men&apos;s Health</Link>
         <Link href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
+        <Link href="/mens-health">Men&apos;s Health</Link>
         <Link href="/faq">FAQ</Link>
         <Link href="/patient-access">Medical Patient Portal</Link>
       </nav>
       <details className="mobile-menu">
         <summary aria-label="Open site navigation">Menu</summary>
         <nav aria-label="Mobile navigation">
-          <Link href="/mens-health">Men&apos;s Health</Link>
           <Link href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
+          <Link href="/mens-health">Men&apos;s Health</Link>
           <Link href="/faq">FAQ</Link>
           <Link href="/patient-access">Medical Patient Portal</Link>
         </nav>
@@ -42,8 +42,8 @@ export function SiteFooter() {
         </address>
       </div>
       <nav aria-label="Footer navigation">
-        <Link href="/mens-health">Men&apos;s Health</Link>
         <Link href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
+        <Link href="/mens-health">Men&apos;s Health</Link>
         <Link href="/faq">FAQ</Link>
         <Link href="/patient-access">Medical Patient Portal</Link>
         <Link href="/contact">Contact</Link>
@@ -86,8 +86,8 @@ export function PageIntro({
       <h1>{title}</h1>
       <p>{description}</p>
       <div className="hero-actions">
-        <Link className="primary-button" href="/mens-health">Men&apos;s Health</Link>
-        <Link className="secondary-button" href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
+        <Link className="primary-button" href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
+        <Link className="secondary-button" href="/mens-health">Men&apos;s Health</Link>
       </div>
     </section>
   );

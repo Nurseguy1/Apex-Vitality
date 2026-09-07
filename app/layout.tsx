@@ -9,11 +9,11 @@ const siteUrl = "https://goapexvitality.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Apex Vitality | Men’s Health & Gut Health Coaching",
+    default: "Apex Vitality | Gut Health Coaching & Men’s Health",
     template: "%s",
   },
   description:
-    "Focused California men's medical care and inclusive gut-health and metabolic-balance wellness coaching.",
+    "Inclusive gut-health and metabolic-balance wellness coaching and focused California men's medical care.",
   applicationName: "Apex Vitality",
   category: "healthcare",
   keywords: [
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Apex Vitality | Men’s Health & Gut Health Coaching",
+    title: "Apex Vitality | Gut Health Coaching & Men’s Health",
     description:
-      "Two focused paths: California men's medical care and gut-health and metabolic-balance wellness coaching.",
+      "Two focused paths: gut-health and metabolic-balance wellness coaching and California men's medical care.",
     type: "website",
     siteName: "Apex Vitality",
     locale: "en_US",

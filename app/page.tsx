@@ -5,20 +5,20 @@ import styles from "./home.module.css";
 
 const carePaths = [
   {
-    eyebrow: "Licensed medical care · California",
-    title: "Men’s Health",
-    copy: "Personalized evaluation for energy, strength, sexual health, body composition, metabolic health, and hormonal concerns—with testing, treatment, and monitoring when clinically appropriate.",
-    image: "/home-professional-man-35-45-v3.png",
-    href: "/mens-health",
-    cta: "Explore men’s health",
-  },
-  {
     eyebrow: "Educational wellness coaching · Broadly available",
     title: "Gut Health & Metabolic Balance",
     copy: "Structured nutrition, digestive-wellness, lifestyle, and habit coaching for people who want more sustainable energy, routines, and everyday well-being.",
     image: "/program-metabolic-couple-v1.png",
     href: "/gut-health",
     cta: "Explore wellness coaching",
+  },
+  {
+    eyebrow: "Licensed medical care · California",
+    title: "Men’s Health",
+    copy: "Personalized evaluation for energy, strength, sexual health, body composition, metabolic health, and hormonal concerns—with testing, treatment, and monitoring when clinically appropriate.",
+    image: "/home-professional-man-35-45-v3.png",
+    href: "/mens-health",
+    cta: "Explore men’s health",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function Home() {
         <div className={styles.heroCopy}>
           <p className={styles.kicker}>Two focused paths to better health</p>
           <h1>Start with what matters most.</h1>
-          <p className={styles.heroLead}>Choose licensed men&apos;s medical care in California or practical gut-health and metabolic-balance coaching.</p>
+          <p className={styles.heroLead}>Choose practical gut-health and metabolic-balance coaching or licensed men&apos;s medical care in California.</p>
           <div className={styles.actions}>
             <Link className={styles.primaryCta} href="#care">Choose my path</Link>
             <Link className={styles.secondaryCta} href="/patient-access">Medical patient portal</Link>
@@ -48,8 +48,8 @@ export default function Home() {
       </section>
 
       <section className={styles.trustGrid} aria-label="Apex service structure">
-        <article><strong>Medical patients</strong><p>Licensed evaluation and treatment for eligible Men&apos;s Health patients physically located in California.</p></article>
         <article><strong>Coaching clients</strong><p>Education, nutrition, lifestyle guidance, tracking, and accountability without diagnosis or treatment.</p></article>
+        <article><strong>Medical patients</strong><p>Licensed evaluation and treatment for eligible Men&apos;s Health patients physically located in California.</p></article>
         <article><strong>The right next step</strong><p>Clear referral to appropriate medical care whenever a concern falls outside coaching.</p></article>
       </section>
 
