@@ -17,7 +17,7 @@ export default function ContactPage() {
         <p>Take a deeper look at symptoms, laboratory findings, and possible hormone deficiency through focused California medical care.</p>
         <p><Link className="primary-button" href="/mens-health">Explore Men&apos;s Hormone Health</Link></p>
         <h2>Already working with Apex?</h2>
-        <p>Coaching clients can follow the contact and enrollment instructions provided to them. The medical patient portal is only for Men&apos;s Hormone Health patients and can be used for appointments, forms, billing questions, and other administrative needs.</p>
+        <p>Coaching clients can follow the contact and enrollment instructions provided to them. The Men&apos;s Hormone Health patient portal can be used for appointments, forms, billing questions, and other administrative needs.</p>
         <p><Link className="secondary-dark-button" href="/patient-access">Open Men&apos;s Health patient portal</Link></p>
         <h2>About the practice</h2>
         <p><strong>{practiceContact.legalName}</strong><br />{practiceContact.addressLine1}<br />{practiceContact.cityStateZip}</p>

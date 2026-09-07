@@ -13,7 +13,7 @@ export function SiteHeader() {
         <Link href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
         <Link href="/mens-health">Men&apos;s Hormone Health</Link>
         <Link href="/faq">FAQ</Link>
-        <Link href="/patient-access">Medical Patient Portal</Link>
+        <Link href="/patient-access">Men&apos;s Hormone Health Patient Portal</Link>
       </nav>
       <details className="mobile-menu">
         <summary aria-label="Open site navigation">Menu</summary>
@@ -21,7 +21,7 @@ export function SiteHeader() {
           <Link href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
           <Link href="/mens-health">Men&apos;s Hormone Health</Link>
           <Link href="/faq">FAQ</Link>
-          <Link href="/patient-access">Medical Patient Portal</Link>
+          <Link href="/patient-access">Men&apos;s Hormone Health Patient Portal</Link>
         </nav>
       </details>
       <Link className="header-action" href="/#care">Choose a Route</Link>
@@ -45,7 +45,7 @@ export function SiteFooter() {
         <Link href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
         <Link href="/mens-health">Men&apos;s Hormone Health</Link>
         <Link href="/faq">FAQ</Link>
-        <Link href="/patient-access">Medical Patient Portal</Link>
+        <Link href="/patient-access">Men&apos;s Hormone Health Patient Portal</Link>
         <Link href="/contact">Contact</Link>
         <Link href="/providers">Care Team &amp; Clinical Partners</Link>
         <Link href="/care-standards">Care &amp; Compliance Standards</Link>
