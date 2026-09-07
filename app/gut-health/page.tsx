@@ -27,7 +27,6 @@ export default function GutHealthPage() {
           <Link className="primary-button" href="/contact">Ask about coaching</Link>
           <Link className="secondary-button" href="#coaching">See what coaching includes</Link>
         </div>
-        <p className="hero-cta-note">Open to adults who identify with the goals described; marketing may speak especially to women ages 35–50 and people supporting neurodivergent family members.</p>
       </section>
 
       <section className="content-split">
