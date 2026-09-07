@@ -2719,6 +2719,14 @@ footer p {
   padding: clamp(64px, 9vw, 116px) clamp(20px, 9vw, 150px);
 }
 
+.coaching-scope-note {
+  max-width: 760px;
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+}
+
 .content-section .section-heading p,
 .content-split p,
 .legal-page p {

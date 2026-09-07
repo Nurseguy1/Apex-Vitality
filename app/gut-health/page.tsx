@@ -65,21 +65,6 @@ export default function GutHealthPage() {
         </div>
       </section>
 
-      <section className="content-split dark-panel">
-        <div>
-          <p className="eyebrow">Clear boundaries</p>
-          <h2>Clear boundaries keep coaching focused.</h2>
-          <p>This pathway does not diagnose or treat medical conditions, prescribe or change medication, order diagnostic testing as medical care, or provide clinical interpretation of laboratory results.</p>
-        </div>
-        <ul className="check-list">
-          <li>General nutrition and digestive-wellness education</li>
-          <li>Educational review of wellness-related lab patterns</li>
-          <li>Lifestyle, sleep, stress, movement, and routine support</li>
-          <li>Goal setting, tracking, and accountability</li>
-          <li>A practical, personalized wellness action plan</li>
-        </ul>
-      </section>
-
       <aside className="care-notice">
         <strong>Important safety education</strong>
         <p>Severe or persistent abdominal pain, gastrointestinal bleeding, black stools, unexplained weight loss, persistent vomiting, fever, dehydration, anemia, difficulty swallowing, or another urgent concern falls outside coaching and should receive prompt medical evaluation.</p>
@@ -91,6 +76,7 @@ export default function GutHealthPage() {
           <h2>Bring your questions. Leave with a clearer direction.</h2>
           <p>Tell us what still feels unresolved and what you want to understand. We will identify the coaching priorities that can help you move forward with greater clarity and consistency.</p>
           <Link className="primary-button" href="/contact">Contact Apex Vitality</Link>
+          <p className="coaching-scope-note"><strong>Coaching scope:</strong> This educational service does not diagnose or treat medical conditions, prescribe or change medication, order diagnostic testing as medical care, or provide clinical interpretation of laboratory results.</p>
         </div>
       </section>
       <SiteFooter />
