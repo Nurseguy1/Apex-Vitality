@@ -7,7 +7,7 @@ const carePaths = [
   {
     eyebrow: "Educational wellness coaching · Broadly available",
     title: "Gut Health & Metabolic Balance",
-    copy: "Structured nutrition, digestive-wellness, lifestyle, and habit coaching for people who want more sustainable energy, routines, and everyday well-being.",
+    copy: "For adults who have been told their labs are normal but still do not feel like themselves—root-cause-oriented education, lab-pattern review, and practical gut-health and lifestyle coaching.",
     image: "/program-metabolic-couple-v1.png",
     href: "/gut-health",
     cta: "Explore wellness coaching",

@@ -4,7 +4,7 @@ import { SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
   title: "Gut Health & Metabolic Balance Coaching | Apex Vitality",
-  description: "Educational nutrition, digestive-wellness, lifestyle, and habit coaching for sustainable energy, routines, and everyday well-being.",
+  description: "Root-cause-oriented gut-health education and wellness coaching for adults who still do not feel well even when conventional lab results are described as normal.",
 };
 
 const coaching = [
@@ -22,12 +22,25 @@ export default function GutHealthPage() {
       <section className="page-intro">
         <p className="eyebrow">Educational wellness coaching</p>
         <h1>Gut Health &amp; Metabolic Balance</h1>
-        <p>Coaching clients build sustainable nutrition, digestive-wellness, energy, and daily-living habits through structured education, practical guidance, tracking, and accountability.</p>
+        <p>Have you been told your labs are normal, yet you still do not feel like yourself? This coaching path gives you time to be heard, explore the bigger wellness picture, and build practical gut-health and metabolic habits.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/contact">Ask about coaching</Link>
           <Link className="secondary-button" href="#coaching">See what coaching includes</Link>
         </div>
         <p className="hero-cta-note">Open to adults who identify with the goals described; marketing may speak especially to women ages 35–50 and people supporting neurodivergent family members.</p>
+      </section>
+
+      <section className="content-split">
+        <div>
+          <p className="eyebrow">When “normal” does not answer your questions</p>
+          <h2>Your experience deserves more than a quick dismissal.</h2>
+          <p>Many coaching clients arrive after being told that standard results are within range while fatigue, digestive discomfort, inconsistent energy, or difficulty maintaining healthy routines continues. Coaching creates space to organize your story and examine how nutrition, digestion, sleep, stress, movement, and everyday habits may fit together.</p>
+        </div>
+        <div>
+          <p className="eyebrow">Root-cause-oriented education</p>
+          <h2>Look for patterns—not a coaching diagnosis.</h2>
+          <p>We use wellness education and educational lab review to explore possible contributing patterns and identify practical areas to support. We do not claim to diagnose the root cause of symptoms. Medical conditions, concerning findings, and the clinical meaning of abnormal results belong with an appropriately licensed healthcare provider.</p>
+        </div>
       </section>
 
       <section className="content-section" id="coaching">
