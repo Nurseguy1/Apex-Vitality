@@ -65,18 +65,13 @@ export default function GutHealthPage() {
         </div>
       </section>
 
-      <aside className="care-notice">
-        <strong>Important safety education</strong>
-        <p>Severe or persistent abdominal pain, gastrointestinal bleeding, black stools, unexplained weight loss, persistent vomiting, fever, dehydration, anemia, difficulty swallowing, or another urgent concern falls outside coaching and should receive prompt medical evaluation.</p>
-      </aside>
-
       <section className="content-section">
         <div className="section-heading">
           <p className="eyebrow">Start with a conversation</p>
           <h2>Bring your questions. Leave with a clearer direction.</h2>
           <p>Tell us what still feels unresolved and what you want to understand. We will identify the coaching priorities that can help you move forward with greater clarity and consistency.</p>
           <Link className="primary-button" href="/contact">Contact Apex Vitality</Link>
-          <p className="coaching-scope-note"><strong>Coaching scope:</strong> This educational service does not diagnose or treat medical conditions, prescribe or change medication, order diagnostic testing as medical care, or provide clinical interpretation of laboratory results.</p>
+          <p className="coaching-scope-note"><strong>Important information:</strong> Gut Health &amp; Metabolic Balance is an educational wellness-coaching service and does not diagnose or treat medical conditions, prescribe or change medication, order diagnostic testing as medical care, or provide clinical interpretation of laboratory results. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department. For an urgent medical concern, seek prompt care from an appropriate urgent-care or medical provider.</p>
         </div>
       </section>
       <SiteFooter />
