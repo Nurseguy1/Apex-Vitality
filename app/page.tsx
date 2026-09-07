@@ -15,7 +15,7 @@ const carePaths = [
   {
     eyebrow: "Licensed medical care · California",
     title: "Men’s Health",
-    copy: "Personalized evaluation for energy, strength, sexual health, body composition, metabolic health, and hormonal concerns—with testing, treatment, and monitoring when clinically appropriate.",
+    copy: "A deeper clinical look at men’s hormonal concerns, symptoms, and laboratory findings—with medical evaluation, treatment, and monitoring when clinically appropriate.",
     image: "/home-professional-man-35-45-v3.png",
     href: "/mens-health",
     cta: "Explore men’s health",
@@ -36,7 +36,7 @@ export default function Home() {
         <div className={styles.heroCopy}>
           <p className={styles.kicker}>Two focused paths to better health</p>
           <h1>Start with what matters most.</h1>
-          <p className={styles.heroLead}>Choose practical gut-health and metabolic-balance coaching or licensed men&apos;s medical care in California.</p>
+          <p className={styles.heroLead}>Begin with practical gut-health and metabolic-balance coaching, with a deeper California medical pathway for men&apos;s hormonal concerns.</p>
           <div className={styles.actions}>
             <Link className={styles.primaryCta} href="#care">Choose my path</Link>
             <Link className={styles.secondaryCta} href="/patient-access">Medical patient portal</Link>
