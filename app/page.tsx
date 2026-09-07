@@ -50,7 +50,7 @@ export default function Home() {
       <section className={styles.trustGrid} aria-label="Apex service structure">
         <article><strong>Coaching clients</strong><p>Education, nutrition, lifestyle guidance, tracking, and accountability for sustainable everyday wellness.</p></article>
         <article><strong>Men&apos;s Hormone Health patients</strong><p>Licensed evaluation and treatment for eligible men physically located in California.</p></article>
-        <article><strong>The right next step</strong><p>Clear referral to appropriate medical care whenever a concern falls outside coaching.</p></article>
+        <article><strong>Progress toward your goals</strong><p>Personalized guidance, practical strategies, and consistent support to help you keep moving forward.</p></article>
       </section>
 
       <section className={styles.intro}>
