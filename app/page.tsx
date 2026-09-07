@@ -42,7 +42,7 @@ export default function Home() {
             <Link className={styles.secondaryCta} href="/patient-access">Medical patient portal</Link>
           </div>
           <div className={styles.heroProof} aria-label="Apex service highlights">
-            <span>Clear service boundaries</span><span>Personal attention</span><span>Practical next steps</span>
+            <span>Clear advice for moving forward</span><span>Personal attention</span><span>Practical next steps</span>
           </div>
         </div>
       </section>
