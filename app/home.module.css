@@ -6,7 +6,7 @@
   align-items: center;
   padding: clamp(72px, 10vw, 150px) clamp(22px, 7vw, 112px);
   background:
-    linear-gradient(90deg, transparent 0%, rgba(20,75,80,.2) 27%, rgba(15,63,69,.84) 58%, rgba(7,34,42,.96) 100%),
+    linear-gradient(90deg, transparent 0%, rgba(20,75,80,.16) 27%, rgba(15,63,69,.72) 58%, rgba(7,34,42,.88) 100%),
     url('/weight-loss-couple-walking-v1.png?v=20260907-two-routes') center / cover no-repeat;
   color: #fff;
 }
