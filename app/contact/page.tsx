@@ -7,27 +7,22 @@ export default function ContactPage() {
     <main>
       <SiteHeader />
       <article className="legal-page">
-        <p className="eyebrow">Contact &amp; customer service</p>
-        <h1>Start with the path that fits your goal.</h1>
-        <h2>Men&apos;s Health medical care</h2>
-        <p>For eligible adults located in California seeking a medical evaluation, laboratory review, or possible treatment.</p>
-        <p><Link className="primary-button" href="/mens-health">Explore Men&apos;s Health</Link></p>
+        <p className="eyebrow">Ask Apex Vitality</p>
+        <h1>Tell us what you want to improve.</h1>
+        <p>Whether you want to feel better day to day, understand your health patterns, or take a closer look at men&apos;s hormone health, Apex Vitality can help you choose a clear way forward.</p>
         <h2>Gut Health &amp; Metabolic Balance coaching</h2>
-        <p>For adults seeking non-medical education and practical support around nutrition, digestive wellness, routines, and sustainable habits.</p>
-        <p><Link className="primary-button" href="/gut-health">Explore coaching</Link></p>
-        <h2>Coaching clients</h2>
-        <p>Use the coaching contact and enrollment instructions provided to you. Do not use the medical patient portal for coaching unless you are also separately established as a Men&apos;s Health medical patient.</p>
-        <h2>Existing medical patients</h2>
-        <p>Use the Charm patient portal for appointment changes, assigned forms, billing questions, and other administrative needs. Clinical questions are addressed during scheduled visits. Stripe receipts and payment details remain available through Stripe.</p>
+        <p>Get personalized education, practical strategies, and ongoing support for nutrition, digestive wellness, energy, daily routines, and sustainable habits.</p>
+        <p><Link className="primary-button" href="/gut-health">Explore Gut Health coaching</Link></p>
+        <h2>Men&apos;s Hormone Health</h2>
+        <p>Take a deeper look at symptoms, laboratory findings, and possible hormone deficiency through focused California medical care.</p>
+        <p><Link className="primary-button" href="/mens-health">Explore Men&apos;s Hormone Health</Link></p>
+        <h2>Already working with Apex?</h2>
+        <p>Coaching clients can follow the contact and enrollment instructions provided to them. Medical patients can use the secure patient portal for appointments, forms, billing questions, and other administrative needs.</p>
         <p><Link className="secondary-dark-button" href="/patient-access">Open secure patient access</Link></p>
-        <h2>Practice contact</h2>
+        <h2>About the practice</h2>
         <p><strong>{practiceContact.legalName}</strong><br />{practiceContact.addressLine1}<br />{practiceContact.cityStateZip}</p>
-        <p>Use the secure patient workflow for written customer-service and billing questions.</p>
-        <p>See <Link href="/providers">Care Team &amp; Clinical Partners</Link> for information about licensed medical care.</p>
-        <h2>Medical privacy</h2>
-        <p>Do not send medical information through ordinary email or unsecured website messages. Administrative channels are not monitored for clinical care or emergencies; clinical questions require a scheduled visit.</p>
-        <h2>Emergency care</h2>
-        <p>Call 911 or seek immediate in-person care for urgent or life-threatening concerns.</p>
+        <p>Learn more about the <Link href="/providers">Apex Vitality care team and clinical partners</Link>.</p>
+        <p className="coaching-scope-note"><strong>Important information:</strong> Protect your privacy by using the secure patient workflow for medical information. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department. For an urgent medical concern, seek prompt care from an appropriate urgent-care or medical provider.</p>
       </article>
       <SiteFooter />
     </main>
