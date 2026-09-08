@@ -15,7 +15,7 @@ const carePaths = [
   {
     eyebrow: "Men’s Hormone Health · California",
     title: "Men’s Hormone Health",
-    copy: "A deeper clinical look for men concerned about symptoms or laboratory findings that could reflect a hormone deficiency—with medical evaluation, treatment, and monitoring when clinically appropriate.",
+    copy: "A clinical evaluation for men concerned about symptoms or laboratory findings that could reflect a hormone deficiency—with medical evaluation, treatment, and monitoring when clinically appropriate.",
     image: "/home-professional-man-35-45-v3.png",
     href: "/mens-health",
     cta: "Explore men’s hormone health",
@@ -36,7 +36,7 @@ export default function Home() {
         <div className={styles.heroCopy}>
           <p className={styles.kicker}>Two focused paths to better health</p>
           <h1>Start with what matters most.</h1>
-          <p className={styles.heroLead}>Gut-health and metabolic-balance coaching for all adults, plus a deeper California medical pathway for men concerned about possible hormone deficiency.</p>
+          <p className={styles.heroLead}>Gut-health and metabolic-balance coaching for all adults, plus a California medical pathway for men concerned about possible hormone deficiency.</p>
           <div className={styles.actions}>
             <Link className={styles.primaryCta} href="#care">Choose my path</Link>
             <Link className={styles.secondaryCta} href="/patient-access">Men&apos;s Hormone Health patient portal</Link>
@@ -84,7 +84,7 @@ export default function Home() {
         <div className={styles.supportImage}><Image src="/program-metabolic-couple-v1.png" alt="Adults building sustainable wellness routines" fill sizes="(max-width: 900px) 100vw, 50vw" /></div>
         <div className={styles.supportCopy}>
           <p className={styles.kicker}>Not sure which route fits?</p><h2>Start with the change you want to make.</h2>
-          <p>Choose Gut Health for nutrition, digestion, energy, and sustainable daily habits. Choose Men&apos;s Hormone Health for a deeper look at possible hormone deficiency.</p>
+          <p>Choose Gut Health for nutrition, digestion, energy, and sustainable daily habits. Choose Men&apos;s Hormone Health for evaluation of possible hormone deficiency.</p>
           <Link className={styles.primaryCta} href="/contact">Ask Apex Vitality</Link>
         </div>
       </section>

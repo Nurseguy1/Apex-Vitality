@@ -1,21 +1,22 @@
 .page { background: linear-gradient(180deg,#f7faf9 0%,#e8f2ef 54%,#f7faf9 100%); color: #101719; }
 
 .hero {
-  min-height: 780px;
-  display: flex;
-  align-items: center;
-  padding: clamp(72px, 10vw, 150px) clamp(22px, 7vw, 112px);
-  background:
-    linear-gradient(90deg, transparent 0%, rgba(20,75,80,.16) 27%, rgba(15,63,69,.72) 58%, rgba(7,34,42,.88) 100%),
-    url('/weight-loss-couple-walking-v1.png?v=20260907-two-routes') center / cover no-repeat;
+  min-height: 700px;
+  display: grid;
+  grid-template-columns: 46% 54%;
+  background: linear-gradient(135deg, #174b51, #07222a);
   color: #fff;
 }
 
-.heroCopy { width: min(700px, 58vw); margin-left: auto; }
+.hero::before {
+  content: '';
+  background: url('/weight-loss-couple-walking-v1.png?v=20260907-two-routes') center top / cover no-repeat;
+}
+.heroCopy { min-width: 0; align-self: center; padding: calc(clamp(36px, 5vw, 80px) + 32px) clamp(36px, 5vw, 80px) clamp(36px, 5vw, 80px); }
 .kicker { margin: 0 0 14px; color: #0b6066; font-size: 12px; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
 .hero .kicker { color: #b9e6e0; }
-.hero h1 { max-width: 760px; margin: 0 0 24px; font-size: clamp(56px, 8vw, 104px); line-height: .92; letter-spacing: -.055em; }
-.heroLead { max-width: 660px; margin: 0 0 34px; color: rgba(255,255,255,.82); font-size: clamp(20px, 2.2vw, 28px); line-height: 1.5; }
+.hero h1 { max-width: 760px; margin: 0 0 24px; font-size: clamp(48px, 5vw, 80px); line-height: 1; letter-spacing: -.055em; }
+.heroLead { max-width: 660px; margin: 0 0 34px; color: rgba(255,255,255,.82); font-size: clamp(20px, 1.7vw, 25px); line-height: 1.5; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .primaryCta,.secondaryCta,.darkCta,.whiteCta { display: inline-flex; min-height: 52px; align-items: center; justify-content: center; padding: 14px 22px; border-radius: 999px; font-weight: 800; }
 .primaryCta { background: #0b6066; color: #fff; }
@@ -76,12 +77,11 @@
 
 @media (max-width:900px) {
   .hero {
-    min-height: 700px;
-    background:
-      linear-gradient(180deg, rgba(7,34,42,.14) 0%, rgba(7,34,42,.42) 42%, rgba(7,34,42,.96) 100%),
-      url('/weight-loss-couple-walking-v1.png?v=20260907-two-routes') center / cover no-repeat;
+    min-height: 0;
+    grid-template-columns: 1fr;
   }
-  .heroCopy { width: 100%; margin-left: 0; }
+  .hero::before { height: clamp(300px, 65vw, 500px); }
+  .heroCopy { width: 100%; padding: 40px 24px; }
   .trustGrid { grid-template-columns: 1fr; }
   .pathPanel,.support { grid-template-columns: 1fr; }
   .pathPanel:nth-child(even) .pathImage { order: 0; }
@@ -89,8 +89,7 @@
 }
 
 @media (max-width:560px) {
-  .hero { min-height: 740px; align-items: flex-end; background-position: 52% center; }
-  .hero h1 { font-size: 54px; }
+  .hero h1 { font-size: 48px; }
   .pathStack { padding-right: 16px; padding-left: 16px; }
   .pathPanel { border-radius: 22px; }
   .pathImage { min-height: 330px; }

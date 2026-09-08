@@ -14,7 +14,7 @@ export default function MensHealthPage() {
       <section className="page-intro">
         <p className="eyebrow">California medical care</p>
         <h1>Men&apos;s Hormone Health</h1>
-        <p>A deeper clinical look for men concerned about symptoms or laboratory findings that could reflect a hormone deficiency, including changes in energy, strength, sexual health, recovery, mood, sleep, or body composition.</p>
+        <p>A clinical evaluation for men concerned about symptoms or laboratory findings that could reflect a hormone deficiency, including changes in energy, strength, sexual health, recovery, mood, sleep, or body composition.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Start my men&apos;s health care</Link>
           <Link className="secondary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Schedule an initial visit</Link>

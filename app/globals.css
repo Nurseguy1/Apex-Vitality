@@ -3119,8 +3119,8 @@ footer p {
     bottom: auto;
     display: grid;
     width: min(calc(100vw - 24px), 310px);
-    height: min(70dvh, 620px);
-    max-height: none;
+    height: auto;
+    max-height: min(70dvh, 620px);
     align-self: auto;
     align-content: start;
     overflow-y: auto;
@@ -3251,7 +3251,7 @@ footer p {
     right: 12px;
     left: auto;
     width: min(calc(100vw - 24px), 310px);
-    height: min(70dvh, 620px);
+    height: auto;
   }
 
   .hero,

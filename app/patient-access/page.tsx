@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 const accessItems = [
   {
-    title: "Schedule a consultation",
-    copy: "Choose an available visit type and begin the secure onboarding process.",
-    href: charmLinks.booking ? "/schedule" : null,
-    label: "Open secure scheduling",
+    title: "New to Apex Vitality?",
+    copy: "Begin your men's health enrollment. Scheduling follows the initial-care and membership steps.",
+    href: "/start?treatment=Men%27s%20Health&plan=initial",
+    label: "Begin care enrollment",
   },
   {
     title: "Complete secure intake",
@@ -54,8 +54,8 @@ export default function PatientAccessPage() {
         ))}
       </section>
       <aside className={`portal-status ${charmLinks.booking && charmLinks.portal ? "is-ready" : ""}`}>
-        <strong>{charmLinks.booking && charmLinks.portal ? "Secure scheduling and portal access are active." : "CharmHealth connection is being prepared."}</strong>
-        <p>{charmLinks.booking && charmLinks.portal ? "Schedule above or use the patient portal. Assigned intake forms will appear in your secure Charm account." : "Please do not send medical information through ordinary email or unsecured website messages."}</p>
+        <strong>{charmLinks.portal ? "Secure patient portal access" : "CharmHealth connection is being prepared."}</strong>
+        <p>{charmLinks.portal ? "Existing patients can access appointments and assigned intake forms in their secure Charm account. New patients can begin enrollment above." : "Please do not send medical information through ordinary email or unsecured website messages."}</p>
         {!(charmLinks.booking && charmLinks.portal) && <Link className="text-link" href="/contact">Contact Apex Vitality →</Link>}
       </aside>
       <SiteFooter />

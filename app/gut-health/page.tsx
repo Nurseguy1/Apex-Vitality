@@ -37,7 +37,7 @@ export default function GutHealthPage() {
         </div>
         <div>
           <p className="eyebrow">Root-cause-oriented education</p>
-          <h2>Look deeper at the patterns behind how you feel.</h2>
+          <h2>Explore the patterns behind how you feel.</h2>
           <p>We use wellness education and educational lab review to explore possible contributing patterns across digestion, nutrition, sleep, stress, movement, and daily routines. Then we turn those insights into practical areas to support, track, and refine over time.</p>
         </div>
       </section>

@@ -38,7 +38,7 @@ const options = [
     price: "From $749 USD",
     cadence: "per month",
     annual: "From $7,490/year — 2 months free",
-    intro: "For patients seeking more frequent monitoring and a deeper focus on performance, prevention, and long-term progress.",
+    intro: "For patients seeking more frequent monitoring and a focus on performance, prevention, and long-term progress.",
     features: ["Included 45-minute comprehensive initial appointment", "Everything in Apex Treatment Membership", "Monthly progress reviews", "Priority scheduling, subject to availability", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle and nutrition guidance", "Performance optimization planning"],
     checkoutUrl: "/schedule",
     checkoutLabel: "Start with an introductory visit",

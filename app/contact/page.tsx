@@ -10,6 +10,10 @@ export default function ContactPage() {
         <p className="eyebrow">Ask Apex Vitality</p>
         <h1>Tell us what you want to improve.</h1>
         <p>Whether you want to feel better day to day, understand your health patterns, or take a closer look at men&apos;s hormone health, Apex Vitality can help you choose a clear way forward.</p>
+        <h2>Get in touch</h2>
+        <p>For coaching inquiries, enrollment questions, or general information, email <a href="mailto:apexvitality5@gmail.com">apexvitality5@gmail.com</a>.</p>
+        <p><a className="primary-button" href="mailto:apexvitality5@gmail.com">Email Apex Vitality</a></p>
+        <p>Please keep email to general questions. Use the secure patient portal for medical details, records, or clinical information.</p>
         <h2>Gut Health &amp; Metabolic Balance</h2>
         <p>Receive personalized guidance, practical strategies, and ongoing support for nutrition, digestive wellness, energy, daily routines, and sustainable habits.</p>
         <p><Link className="primary-button" href="/gut-health">Explore Gut Health coaching</Link></p>

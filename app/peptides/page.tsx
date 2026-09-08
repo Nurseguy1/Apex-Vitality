@@ -15,7 +15,7 @@ const treatments = [
     name: "Sermorelin",
     outcome: "Sleep, recovery & healthy aging",
     description:
-      "Build a stronger recovery rhythm around deeper sleep, training, body composition, and the way you want to feel each day.",
+      "Build a stronger recovery rhythm around restful sleep, training, body composition, and the way you want to feel each day.",
     image: "/treatment-sermorelin-v1.png",
     oneMonth: "$39",
     threeMonths: "$149/month",

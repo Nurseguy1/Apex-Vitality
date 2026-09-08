@@ -2,6 +2,16 @@
 
 Updated: August 23, 2026
 
+## September 8, 2026 — Meeting presentation check
+
+- Canonical production site: https://goapexvitality.com; Vercel project `apex-vitality`.
+- Homepage photo and headline now occupy separate columns on laptops; both full faces remain visible. Phones show the photo above the text. Headline positioned slightly lower.
+- Removed “deeper” from site copy; retained “California medical pathway.”
+- Owner approved apexvitality5@gmail.com for general inquiries; added a direct email link on Contact.
+- Mobile navigation now fits its contents. Patient access directs new patients into enrollment instead of the redirected `/schedule` route.
+- Build passed; 19 internal destinations linked from the main pages returned success without redirects. Homepage visually checked at 1366px and 390px.
+- Existing membership pages remain intentionally redirected; Fast Track membership tiers require scope and integration decisions at the upcoming tech meeting. No real payment, consent acceptance, patient creation, or appointment booking was performed in this presentation check.
+
 ## Live website
 
 - Production site: https://www.goapexvitality.com
