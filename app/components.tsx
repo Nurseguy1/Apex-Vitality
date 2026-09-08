@@ -34,7 +34,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div>
         <strong>Apex Vitality</strong>
-        <p>Personalized support for Gut Health clients and focused care for Men&apos;s Hormone Health patients.</p>
+        <p>Personalized guidance and support for Gut Health clients and Men&apos;s Hormone Health patients.</p>
         <address>
           {practiceContact.legalName}<br />
           {practiceContact.addressLine1}<br />
