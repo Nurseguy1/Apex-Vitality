@@ -14,7 +14,7 @@ export default async function BookConsultation({ searchParams }: { searchParams:
       <SiteHeader />
       <section className="consultation-booking-intro">
         <p className="eyebrow">{consultationPaid ? "Consultation payment received · book your visit" : "New Patient Consultation · $39"}</p>
-        <h1>Choose a time to speak with John.</h1>
+        <h1>Choose an appointment time.</h1>
         <p>In the secure calendar below, select <strong>New Patient Consultation (15 mins)</strong>, choose a time, and complete the appointment request.</p>
         <p>This is a video consultation to discuss your goals and whether further care is appropriate. <strong>No membership is required.</strong> Lab orders and testing are not included; lab orders require a separate $149/month membership.</p>
         <p>You must be physically located in California for the visit. Calendar times are shown in Pacific Time.</p>
