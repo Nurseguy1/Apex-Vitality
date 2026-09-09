@@ -26,6 +26,7 @@ export default function LocationRouter({
   const unavailable = state === "OTHER";
   const isRecurring = offer?.requiresRenewalConsent === true;
   const isFixedProgram = offer?.plan === "program";
+  const isMensInitial = selectedTreatment === "Men's Health" && offer?.plan === "initial";
 
   useEffect(() => {
     setState(window.sessionStorage.getItem("apex-checkout-state") ?? "");
@@ -77,8 +78,9 @@ export default function LocationRouter({
       <div className="location-router-intro">
         <div className="location-router-heading">
           <p className="eyebrow">Complete your selection</p>
-          <h1 id="purchase-title">{offer?.plan === "ongoing" ? "Choose your membership." : isFixedProgram ? "Choose your three-month nutrition program." : "Start care with a one-time $39 payment."}</h1>
-          <p>{offer?.plan === "ongoing" ? "Review the membership, approve the recurring payment terms, and continue to secure checkout. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy." : isFixedProgram ? "Review the fixed program, approve the one-time payment terms, and continue to secure checkout. This program does not renew automatically. Supplements, laboratory testing, and outside services are paid separately." : selectedTreatment === "Establish Care" ? "If you are not sure which treatment you need, this one-time payment establishes your place in care. After you choose a membership, your initial appointment is 15 minutes with Focused Care or 45 minutes with Treatment, Performance, or Private Client. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy." : "This standard treatment pathway begins with a one-time $39 initial-care payment. Afterward, choose the care option that fits the level of support you want and schedule the appointment included with it. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy."}</p>
+          <h1 id="purchase-title">{isMensInitial ? "Start with a $39 consultation." : offer?.plan === "ongoing" ? "Choose your membership." : isFixedProgram ? "Choose your three-month nutrition program." : "Start care with a one-time $39 payment."}</h1>
+          {isMensInitial && <p><strong>Consultation only. No membership is required for this visit.</strong> The $39 consultation does not include lab orders or testing. Before any lab orders, you must enroll separately in the $149/month Focused Care membership. Membership includes one appointment each month and four follow-up lab checks per year with testing costs and clinician interpretation.</p>}
+          <p>{offer?.plan === "ongoing" ? "Review the membership, approve the recurring payment terms, and continue to secure checkout. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy." : isFixedProgram ? "Review the fixed program, approve the one-time payment terms, and continue to secure checkout. This program does not renew automatically. Supplements, laboratory testing, and outside services are paid separately." : isMensInitial ? "Review the consultation terms and complete the one-time $39 checkout. You can schedule the initial consultation without joining a membership. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy." : selectedTreatment === "Establish Care" ? "If you are not sure which treatment you need, this one-time payment establishes your place in care. After you choose a membership, your initial appointment is 15 minutes with Focused Care or 45 minutes with Treatment, Performance, or Private Client. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy." : "This standard treatment pathway begins with a one-time $39 initial-care payment. Afterward, choose the care option that fits the level of support you want and schedule the appointment included with it. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy."}</p>
           {selectedTreatment ? (
             <p className="location-prompt"><strong>{selectedTreatment}</strong>{planLabel ? ` · ${planLabel}` : ""}</p>
           ) : (
@@ -142,7 +144,7 @@ export default function LocationRouter({
                       <p><strong>Age eligibility:</strong> Children age 4+, teens, and adults may be considered. A parent or legal guardian must participate and provide required consent for a minor. All other Apex care is adult-only.</p>
                     </>
                   ) : (
-                    <p><strong>Membership comes next:</strong> This one-time $39 payment does not begin a recurring charge. Focused Care includes a 15-minute initial appointment; the three higher memberships include a 45-minute comprehensive initial appointment.</p>
+                    <p><strong>Consultation only:</strong> This one-time $39 payment covers your initial consultation and does not begin a recurring charge. No membership is needed for the visit. Lab orders require a separate $149/month Focused Care membership.</p>
                   )}
                 </div>
               </section>
@@ -183,7 +185,7 @@ export default function LocationRouter({
               </div>
             ) : null}
 
-            <p className="location-router-note">Checkout collects and verifies your address. You must be physically located in California when clinical care is provided. {isRecurring ? "Membership renews monthly until canceled." : isFixedProgram ? "The $597 program payment is charged once and does not renew automatically." : "The initial-care payment is a one-time $39 charge; care-option enrollment and appointment scheduling happen afterward."}</p>
+            <p className="location-router-note">Checkout collects and verifies your address. You must be physically located in California when clinical care is provided. {isRecurring ? "Membership renews monthly until canceled." : isFixedProgram ? "The $597 program payment is charged once and does not renew automatically." : "The $39 payment covers your initial consultation. Membership is required only if you proceed to lab orders, and must be separately authorized."}</p>
           </article>
         )}
       </div>

@@ -16,10 +16,10 @@ export default function MensHealthPage() {
         <h1>Men&apos;s Hormone Health</h1>
         <p>A clinical evaluation for men concerned about symptoms or laboratory findings that could reflect a hormone deficiency, including changes in energy, strength, sexual health, recovery, mood, sleep, or body composition.</p>
         <div className="hero-actions">
-          <Link className="primary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Start my men&apos;s health care</Link>
-          <Link className="secondary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Schedule an initial visit</Link>
+          <Link className="primary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Book a $39 consultation</Link>
+          <Link className="secondary-button" href="/memberships">View membership &amp; pricing</Link>
         </div>
-        <p className="hero-cta-note">Your goals lead the way, supported by expert clinical guidance and a care plan built around you.</p>
+        <p className="hero-cta-note">Start with a $39 consultation only, with no membership required. Lab orders require a separate $149/month Focused Care membership.</p>
       </section>
       <section className="content-section">
         <div className="section-heading">
@@ -69,18 +69,18 @@ export default function MensHealthPage() {
             <span>Ongoing care membership</span>
             <strong>$149</strong>
             <b>per month</b>
-            <p>Ongoing clinician guidance, monitoring, prescription management, and follow-up support.</p>
-            <Link className="plan-select-button" href="/start?treatment=Focused%20Care%20Membership&plan=ongoing">Choose ongoing care</Link>
+            <p>One scheduled clinician appointment each month, progress monitoring, and prescription management when appropriate.</p>
+            <Link className="plan-select-button" href="/memberships">View membership &amp; sign up</Link>
           </article>
           <article>
-            <span>Laboratory services</span>
-            <strong>About $150</strong>
-            <b>when clinically needed</b>
-            <p>Laboratory testing is selected for your individual care plan and billed separately.</p>
-            <Link className="plan-select-button" href="/start?treatment=Men%27s%20Health&plan=initial">Start my care</Link>
+            <span>Follow-up laboratory checks</span>
+            <strong>4 per year</strong>
+            <b>included in your membership</b>
+            <p>Testing costs and clinician interpretation are included for four follow-up lab checks per year.</p>
+            <Link className="plan-select-button" href="/memberships">Start my care</Link>
           </article>
         </div>
-        <p className="sermorelin-pricing-note">Medication and laboratory services are billed separately from the membership.</p>
+        <p className="sermorelin-pricing-note">The $39 initial visit is a consultation only; no membership is required for that visit. Before any lab orders, you must enroll separately in the $149/month Focused Care membership. Your membership includes one appointment each month and four follow-up lab checks per year, including testing costs and interpretation. Medication and services outside these inclusions are paid separately.</p>
         <div className="focused-process-grid">
           <article><span>01</span><h3>Tell us where you want to go</h3><p>Share how you feel today, what you want to improve, and the health details that help us understand you.</p></article>
           <article><span>02</span><h3>Collaborate with your clinician</h3><p>Talk through your goals, symptoms, and the testing that will help shape your care.</p></article>
@@ -92,7 +92,7 @@ export default function MensHealthPage() {
             <p className="eyebrow">Ready to move forward?</p>
             <h3>Take the first step toward renewed vitality.</h3>
           </div>
-          <Link className="primary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Start my plan</Link>
+          <Link className="primary-button" href="/memberships">Start my plan</Link>
         </div>
       </section>
       <SiteFooter />

@@ -17,9 +17,8 @@ export default async function StartPage({
   searchParams: Promise<{ treatment?: string; plan?: string; nextMembership?: string }>;
 }) {
   const { treatment = "", plan = "", nextMembership = "" } = await searchParams;
-  if (treatment === "Special Needs Nutrition" && plan === "initial") {
-    redirect("/start?treatment=3-Month%20Special%20Needs%20Nutrition%20Program&plan=program");
-  }
+  const currentOffer = (treatment === "Men's Health" && plan === "initial") || (treatment === "Focused Care Membership" && plan === "ongoing");
+  if (!currentOffer) redirect("/memberships");
   const checkoutUrl = getProductCheckout(treatment, plan);
   const offer = getProductOffer(treatment, plan);
 

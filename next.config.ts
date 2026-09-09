@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
       { source: "/nad-plus/:path*", destination: "/", permanent: false },
       { source: "/glutathione/:path*", destination: "/", permanent: false },
       { source: "/sermorelin/:path*", destination: "/mens-health", permanent: false },
-      { source: "/memberships/:path*", destination: "/", permanent: false },
+      { source: "/memberships/:slug", destination: "/memberships", permanent: false },
       { source: "/programs/:path*", destination: "/", permanent: false },
       { source: "/nutrition-support/:path*", destination: "/gut-health", permanent: false },
       { source: "/standout/:path*", destination: "/", permanent: false },

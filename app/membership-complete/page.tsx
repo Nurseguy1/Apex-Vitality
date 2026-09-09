@@ -44,15 +44,15 @@ export default async function MembershipCompletePage({ searchParams }: { searchP
         ) : verified ? (
           <section className="included-visit-card">
             <p className="eyebrow">Step 3 of 3</p>
-            <h2>Schedule your included 15-minute Focused Care initial appointment.</h2>
-            <p>Focused Care is the lowest membership for one treatment pathway. If you prefer a 45-minute comprehensive initial appointment, compare Apex Treatment, Performance, and Private Client before scheduling.</p>
+            <h2>Schedule your membership appointment.</h2>
+            <p>Your Focused Care membership supports one treatment pathway at $149/month. Membership is required before any lab orders. Ongoing membership includes one appointment each month and four follow-up lab checks per year, including testing costs and clinician interpretation.</p>
             {charmLinks.focusedBooking ? (
-              <a className="primary-button" href={charmLinks.focusedBooking}>Schedule my 15-minute appointment →</a>
+              <a className="primary-button" href={charmLinks.focusedBooking}>Schedule my membership appointment →</a>
             ) : (
-              charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Open Charm to schedule my 15-minute appointment ↗</a>
+              charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Open Charm to schedule my appointment ↗</a>
             )}
-            {!charmLinks.focusedBooking && <p className="booking-help">In Charm, open <strong>Appointments</strong> and select the 15-minute Focused Care initial appointment. New patients will receive secure account instructions during onboarding.</p>}
-            <p><Link className="membership-existing-link" href="/memberships">Compare higher memberships instead →</Link></p>
+            {!charmLinks.focusedBooking && <p className="booking-help">In Charm, open <strong>Appointments</strong> and request your Focused Care membership appointment. New patients will receive secure account instructions during onboarding.</p>}
+            <p><Link className="membership-existing-link" href="/memberships">Review your membership details →</Link></p>
           </section>
         ) : (
           <p className="screening-notice">We could not verify a completed California membership checkout from this link. Use the return link from Stripe or continue to patient access for help.</p>

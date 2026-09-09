@@ -62,10 +62,10 @@ const offers: Record<string, ProductOffer> = {
   "Men's Health|initial": {
     treatment: "Men's Health",
     plan: "initial",
-    planLabel: "Initial clinical-care payment",
+    planLabel: "New Patient Consultation only",
     price: "$39",
-    billingLabel: "One-time initial-care payment · membership selected afterward",
-    included: sharedIncluded,
+    billingLabel: "One-time $39 consultation · no membership required · lab orders excluded",
+    included: ["One initial consultation to discuss your symptoms, history, and goals", "No membership required for this consultation", "Lab orders and testing excluded; membership required before any lab orders"],
   },
   "Metabolic & Gut Health|initial": {
     treatment: "Metabolic & Gut Health",
@@ -99,8 +99,9 @@ const offers: Record<string, ProductOffer> = {
     price: "$149/month",
     billingLabel: "Monthly membership — renews until canceled",
     included: [
-      "An included 15-minute initial appointment",
-      "Scheduled clinician follow-up for one focused treatment pathway",
+      "Membership required before any laboratory orders",
+      "One scheduled clinician appointment each month for your focused treatment pathway",
+      "Four follow-up lab checks per year, including testing costs and clinician interpretation",
       "Prescription and refill management when clinically appropriate",
       "Focused progress monitoring during scheduled visits",
     ],

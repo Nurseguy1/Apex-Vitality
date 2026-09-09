@@ -6,6 +6,7 @@ const routes = [
   "",
   "/gut-health",
   "/mens-health",
+  "/memberships",
   "/faq",
   "/contact",
   "/providers",
@@ -22,7 +23,7 @@ const routes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-09-07T00:00:00-07:00");
+  const lastModified = new Date("2026-09-09T00:00:00-07:00");
 
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,

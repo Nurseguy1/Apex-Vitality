@@ -11,9 +11,15 @@ export const metadata: Metadata = {
 const accessItems = [
   {
     title: "New to Apex Vitality?",
-    copy: "Begin your men's health enrollment. Scheduling follows the initial-care and membership steps.",
-    href: "/start?treatment=Men%27s%20Health&plan=initial",
+    copy: "Book a $39 consultation without a membership. If you want lab orders, enroll separately in the $149/month membership.",
+    href: "/memberships",
     label: "Begin care enrollment",
+  },
+  {
+    title: "Already paid for your consultation?",
+    copy: "Choose New Patient Consultation in the secure calendar and request your appointment. No membership is required and you do not need to pay again.",
+    href: "/book-consultation",
+    label: "Book my New Patient Consultation",
   },
   {
     title: "Complete secure intake",
