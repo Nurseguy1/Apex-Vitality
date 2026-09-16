@@ -2,6 +2,16 @@
 
 Updated: August 23, 2026
 
+## September 16, 2026 — $69 consultation and first-month credit
+
+- Owner approved a $69 consultation and a full $69 credit toward the first Focused Care membership month: $80 first membership payment, then $149/month. Consultation plus first month totals $149. Supersedes the earlier $39/no-credit offer below.
+- Code commit 24c9b39 includes the price change from 40509e6 and the credit across homepage, men's health, memberships, FAQ, booking, signup, and financial agreements.
+- Stripe consultation link plink_1U7mCrLaIe44L2p96hLR9zEV now uses price_1UGPrLLaIe44L2p9VT1tsx6V ($69 once). Public URL unchanged: https://buy.stripe.com/eVqfZifsz6dWad17BGfnO0f. Verified live checkout displays $69. Return remains /book-consultation?session_id={CHECKOUT_SESSION_ID}.
+- Stripe coupon zRz9EJnj, name Consultation credit, is $69 off ONCE, restricted to prod_V7fer2DhpcMDFM (Focused Care). Customer code CONSULT69. No expiration added.
+- Membership link has promotion codes enabled. Website passes prefilled_promo_code=CONSULT69. Verified live Stripe checkout shows $80 due today, then $149/month starting next month; no charge was submitted.
+- Credit eligibility uses a patient attestation that the $69 consultation was paid, with instructions to use the same name/email. This is not automatic receipt verification: staff should match the consultation receipt before completing enrollment. Coupon is first invoice per subscription, not an enforceable lifetime per-person credit. Existing subscriptions were not modified.
+- Build/TypeScript and 10 preview routes passed. Verified checkout link mapping includes the promo only for Focused Care and leaves consultation checkout unchanged. Production promotion GtUFYc3Bm4hYyMv4eMCvFUyqjqSZ is live. All 10 production routes passed with $69 consultation, $80 first month where applicable, no old $188/$218 totals, and CONSULT69 in the membership checkout URL.
+
 ## September 16, 2026 — Medication-inclusive offer LIVE
 
 - Website commit db8aa55 is published and verified on review.goapexvitality.com and www.goapexvitality.com. Production deployment 7EM7QZFJbFd2WHacCkwHsjV8A5XR is Ready / Current.
