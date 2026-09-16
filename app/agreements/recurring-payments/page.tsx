@@ -20,6 +20,9 @@ export default function RecurringPaymentsPage() {
         <h2>Disclosures before enrollment</h2>
         <p>Before you agree, the checkout must clearly display the amount charged, billing frequency, renewal period, included clinical services, minimum commitment if any, and how to cancel. The men’s health Focused Care membership includes prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed. These terms must appear close to the enrollment control.</p>
 
+        <h2>Consultation credit</h2>
+        <p>Your paid $69 consultation is credited once toward the first month of a new Focused Care membership. The first membership payment is $80, then $149 each month until canceled. The credit applies to the first membership month only.</p>
+
         <h2>Your affirmative authorization</h2>
         <p>A recurring charge may begin only after you provide separate affirmative consent to the automatic-renewal terms. You authorize Apex Vitality and its identified payment processor to charge the payment method you provide at the disclosed frequency until cancellation. Verification of that consent may be retained as required by law.</p>
 

@@ -22,6 +22,7 @@ export default function LocationRouter({
   const [careTermsAccepted, setCareTermsAccepted] = useState(false);
   const [coverageEligibilityAttested, setCoverageEligibilityAttested] = useState(false);
   const [recurringAccepted, setRecurringAccepted] = useState(false);
+  const [consultationPaid, setConsultationPaid] = useState(false);
   const planLabel = offer?.planLabel ?? "";
   const unavailable = state === "OTHER";
   const isRecurring = offer?.requiresRenewalConsent === true;
@@ -37,6 +38,7 @@ export default function LocationRouter({
     setCareTermsAccepted(isRecurring ? careAccepted && coverageAccepted && renewalAccepted : careAccepted && coverageAccepted);
     setCoverageEligibilityAttested(coverageAccepted);
     setRecurringAccepted(renewalAccepted);
+    setConsultationPaid(window.sessionStorage.getItem("apex-consultation-credit-attested") === "true");
   }, [isRecurring]);
 
   useEffect(() => {
@@ -51,12 +53,12 @@ export default function LocationRouter({
   }, [intendedMembership, offer?.plan, selectedTreatment]);
 
   useEffect(() => {
-    const readyForCheckout = state === "CA" && checkoutUrl && careTermsAccepted && coverageEligibilityAttested && (!isRecurring || recurringAccepted);
+    const readyForCheckout = state === "CA" && (!isMensMembership || consultationPaid) && checkoutUrl && careTermsAccepted && coverageEligibilityAttested && (!isRecurring || recurringAccepted);
     if (readyForCheckout && window.sessionStorage.getItem("apex-auto-checkout-pending") === "true") {
       window.sessionStorage.removeItem("apex-auto-checkout-pending");
       window.location.assign(checkoutUrl);
     }
-  }, [careTermsAccepted, checkoutUrl, coverageEligibilityAttested, isRecurring, recurringAccepted, state]);
+  }, [careTermsAccepted, checkoutUrl, consultationPaid, coverageEligibilityAttested, isMensMembership, isRecurring, recurringAccepted, state]);
 
   const reviewCareTerms = (checked: boolean) => {
     if (checked) {
@@ -82,6 +84,7 @@ export default function LocationRouter({
           <h1 id="purchase-title">{isMensInitial ? "Start with a $69 consultation." : offer?.plan === "ongoing" ? "Choose your membership." : isFixedProgram ? "Choose your three-month nutrition program." : "Start care with a one-time $69 payment."}</h1>
           {isMensInitial && <p><strong>Consultation only. No membership is required for this visit.</strong> The $69 consultation does not include lab orders or testing. Before any lab orders, you must enroll separately in the $149/month Focused Care membership. Membership includes one appointment each month and baseline and scheduled follow-up TRT labs, prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed.</p>}
           <p>{offer?.plan === "ongoing" ? "Your $149 monthly membership includes care, scheduled TRT labs, prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed. Review the renewal terms and continue to secure checkout." : isFixedProgram ? "Review the fixed program, approve the one-time payment terms, and continue to secure checkout. This program does not renew automatically. Supplements, laboratory testing, and outside services are paid separately." : isMensInitial ? "Review the consultation terms and complete the one-time $69 checkout. You can schedule the initial consultation without joining a membership. If you continue, the $149/month membership includes care, scheduled TRT labs, prescribed testosterone, supplies, and delivery." : selectedTreatment === "Establish Care" ? "If you are not sure which treatment you need, this one-time payment establishes your place in care. After you choose a membership, your initial appointment is 15 minutes with Focused Care or 45 minutes with Treatment, Performance, or Private Client. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy." : "This standard treatment pathway begins with a one-time $69 initial-care payment. Afterward, choose the care option that fits the level of support you want and schedule the appointment included with it. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy."}</p>
+          {(isMensInitial || isMensMembership) && <p><strong>Your $69 consultation fee is credited toward your first membership month when you join. Pay $80 for the first month, then $149/month.</strong></p>}
           {selectedTreatment ? (
             <p className="location-prompt"><strong>{selectedTreatment}</strong>{planLabel ? ` · ${planLabel}` : ""}</p>
           ) : (
@@ -151,6 +154,8 @@ export default function LocationRouter({
               </section>
             )}
 
+            {isMensMembership && <div className="checkout-acknowledgments"><label><input type="checkbox" checked={consultationPaid} onChange={(event) => { setConsultationPaid(event.target.checked); window.sessionStorage.setItem("apex-consultation-credit-attested", String(event.target.checked)); }} /><span>I have paid the $69 consultation fee and am applying that credit to my first membership month.</span></label><p>Use the same name and email as your consultation payment. <Link href="/start?treatment=Men%27s%20Health&plan=initial">Need to book your consultation?</Link></p></div>}
+
             <label className="checkout-state-field">
               <span>Where will you be physically located for care?</span>
               <select value={state} onChange={(event) => {
@@ -163,7 +168,7 @@ export default function LocationRouter({
               </select>
             </label>
 
-            {state === "CA" && (
+            {state === "CA" && (!isMensMembership || consultationPaid) && (
               <div className="checkout-acknowledgments" aria-label="Required purchase acknowledgments">
                 <label>
                   <input type="checkbox" checked={careTermsAccepted} onChange={(event) => reviewCareTerms(event.target.checked)} />
@@ -178,7 +183,7 @@ export default function LocationRouter({
                 <p>Please do not purchase this program if you will be physically located outside California during care. Join us later as additional service areas become available.</p>
               </div>
             ) : state && checkoutUrl ? (
-              careTermsAccepted && coverageEligibilityAttested && (!isRecurring || recurringAccepted) ? <a className="primary-button" href={checkoutUrl}>Continue to secure Stripe checkout · {offer?.price ?? ""}</a> : <p className="location-router-note"><strong>Review and accept all required acknowledgments to continue.</strong></p>
+              (!isMensMembership || consultationPaid) && careTermsAccepted && coverageEligibilityAttested && (!isRecurring || recurringAccepted) ? <a className="primary-button" href={checkoutUrl}>Continue to secure Stripe checkout · {isMensMembership ? "$80 first month" : offer?.price ?? ""}</a> : <p className="location-router-note"><strong>Review and accept all required acknowledgments to continue.</strong></p>
             ) : state ? (
               <div className="scheduler-pending">
                 <h3>Secure checkout is being connected.</h3>

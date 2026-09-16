@@ -19,7 +19,7 @@ export default function MensHealthPage() {
           <Link className="primary-button" href="/start?treatment=Men%27s%20Health&plan=initial">Book a $69 consultation</Link>
           <Link className="secondary-button" href="#hormone-balance">See what’s included</Link>
         </div>
-        <p className="hero-cta-note">Start with a $69 consultation only, with no membership required. Continue with $149/month for care, scheduled labs, prescribed testosterone, supplies, and delivery.</p>
+        <p className="hero-cta-note">Start with a $69 consultation. Join afterward and apply the full $69 toward your first month: $80 to join, then $149/month. Continue with $149/month for care, scheduled labs, prescribed testosterone, supplies, and delivery.</p>
       </section>
       <section className="content-section">
         <div className="section-heading">

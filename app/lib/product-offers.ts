@@ -64,7 +64,7 @@ const offers: Record<string, ProductOffer> = {
     plan: "initial",
     planLabel: "New Patient Consultation only",
     price: "$69",
-    billingLabel: "One-time $69 consultation · no membership required · lab orders excluded",
+    billingLabel: "One-time $69 consultation · credited toward your first membership month when you join",
     included: ["One initial consultation to discuss your symptoms, history, and goals", "No membership required for this consultation", "Lab orders and testing excluded; membership required before any lab orders"],
   },
   "Metabolic & Gut Health|initial": {
@@ -97,7 +97,7 @@ const offers: Record<string, ProductOffer> = {
     plan: "ongoing",
     planLabel: "Focused ongoing care",
     price: "$149/month",
-    billingLabel: "Monthly membership — renews until canceled",
+    billingLabel: "$80 first month after your $69 consultation credit · then $149/month until canceled",
     included: [
       "Membership required before any laboratory orders",
       "One scheduled clinician appointment each month for your focused treatment pathway",

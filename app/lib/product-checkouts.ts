@@ -24,5 +24,11 @@ const checkoutKeys: Record<string, string | undefined> = {
 };
 
 export function getProductCheckout(treatment: string, plan: string) {
-  return safeHttpsUrl(checkoutKeys[`${treatment}|${plan}`]);
+  const checkout = safeHttpsUrl(checkoutKeys[`${treatment}|${plan}`]);
+  if (checkout && treatment === "Focused Care Membership" && plan === "ongoing") {
+    const url = new URL(checkout);
+    url.searchParams.set("prefilled_promo_code", "CONSULT69");
+    return url.toString();
+  }
+  return checkout;
 }

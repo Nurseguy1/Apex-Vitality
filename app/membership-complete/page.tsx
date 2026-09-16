@@ -45,7 +45,7 @@ export default async function MembershipCompletePage({ searchParams }: { searchP
           <section className="included-visit-card">
             <p className="eyebrow">Step 3 of 3</p>
             <h2>Schedule your membership appointment.</h2>
-            <p>Your Focused Care membership supports one treatment pathway at $149/month. Membership is required before any lab orders. Ongoing membership includes one appointment each month and baseline and scheduled follow-up TRT labs, prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed.</p>
+            <p>Your Focused Care membership supports one treatment pathway at $149/month. When the $69 consultation credit is applied, your first membership payment is $80; later months renew at $149. Membership is required before any lab orders. Ongoing membership includes one appointment each month and baseline and scheduled follow-up TRT labs, prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed.</p>
             {charmLinks.focusedBooking ? (
               <a className="primary-button" href={charmLinks.focusedBooking}>Schedule my membership appointment →</a>
             ) : (
