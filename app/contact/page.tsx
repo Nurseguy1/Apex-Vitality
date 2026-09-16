@@ -13,15 +13,15 @@ export default function ContactPage() {
         <h2>Get in touch</h2>
         <p>For coaching inquiries, enrollment questions, or general information, email <a href="mailto:apexvitality5@gmail.com">apexvitality5@gmail.com</a>.</p>
         <p><a className="primary-button" href="mailto:apexvitality5@gmail.com">Email Apex Vitality</a></p>
-        <p>Please keep email to general questions. Use the secure patient portal for medical details, records, or clinical information.</p>
+        <p>Please keep email to general questions. Medical patients use CharmHealth for medical details and records. Coaching clients use their Scalerize access link for coaching information.</p>
         <h2>Gut Health &amp; Metabolic Balance</h2>
-        <p>Receive personalized guidance, practical strategies, and ongoing support for nutrition, digestive wellness, energy, daily routines, and sustainable habits.</p>
+        <p>Group coaching starts at $99/month with self-paced videos and a monthly group Q&A. Higher tiers offer more personal attention.</p>
         <p><Link className="primary-button" href="/gut-health">Explore Gut Health coaching</Link></p>
         <h2>Men&apos;s Hormone Health</h2>
-        <p>Receive personalized evaluation, guidance, and ongoing support for symptoms, laboratory findings, and possible hormone deficiency.</p>
+        <p>Medical evaluation and treatment for eligible men physically located in California at the time of care.</p>
         <p><Link className="primary-button" href="/mens-health">Explore Men&apos;s Hormone Health</Link></p>
         <h2>Already working with Apex?</h2>
-        <p>Gut Health clients can follow the contact and enrollment instructions provided to them. Men&apos;s Hormone Health patients can use the patient portal for appointments, forms, billing questions, and other administrative needs.</p>
+        <p>Coaching clients use their separate Scalerize invitation and enrollment instructions. Men&apos;s Hormone Health patients can use the patient portal for appointments, forms, billing questions, and other administrative needs.</p>
         <p><Link className="secondary-dark-button" href="/patient-access">Open Men&apos;s Health patient portal</Link></p>
         <h2>About the practice</h2>
         <p><strong>{practiceContact.legalName}</strong><br />{practiceContact.addressLine1}<br />{practiceContact.cityStateZip}</p>

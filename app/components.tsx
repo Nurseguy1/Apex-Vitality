@@ -10,20 +10,20 @@ export function SiteHeader() {
         <span>Apex Vitality</span>
       </Link>
       <nav className="nav-links" aria-label="Main navigation">
-        <Link href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
-        <Link href="/mens-health">Men&apos;s Hormone Health</Link>
-        <Link href="/memberships">Membership</Link>
+        <Link href="/gut-health">Lifestyle Coaching</Link>
+        <Link href="/mens-health">Men’s Health · California</Link>
+        <Link href="/memberships">Medical Membership</Link>
         <Link href="/faq">FAQ</Link>
-        <Link href="/patient-access">Men&apos;s Hormone Health Patient Portal</Link>
+        <Link href="/patient-access">Medical Patient Portal</Link>
       </nav>
       <details className="mobile-menu">
         <summary aria-label="Open site navigation">Menu</summary>
         <nav aria-label="Mobile navigation">
-          <Link href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
-          <Link href="/mens-health">Men&apos;s Hormone Health</Link>
-          <Link href="/memberships">Membership</Link>
+          <Link href="/gut-health">Lifestyle Coaching</Link>
+          <Link href="/mens-health">Men’s Health · California</Link>
+          <Link href="/memberships">Medical Membership</Link>
           <Link href="/faq">FAQ</Link>
-          <Link href="/patient-access">Men&apos;s Hormone Health Patient Portal</Link>
+          <Link href="/patient-access">Medical Patient Portal</Link>
         </nav>
       </details>
       <Link className="header-action" href="/#care">Choose a Route</Link>
@@ -44,11 +44,11 @@ export function SiteFooter() {
         </address>
       </div>
       <nav aria-label="Footer navigation">
-        <Link href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
-        <Link href="/mens-health">Men&apos;s Hormone Health</Link>
-        <Link href="/memberships">Membership</Link>
+        <Link href="/gut-health">Lifestyle Coaching</Link>
+        <Link href="/mens-health">Men’s Health · California</Link>
+        <Link href="/memberships">Medical Membership</Link>
         <Link href="/faq">FAQ</Link>
-        <Link href="/patient-access">Men&apos;s Hormone Health Patient Portal</Link>
+        <Link href="/patient-access">Medical Patient Portal</Link>
         <Link href="/contact">Contact</Link>
         <Link href="/providers">Care Team &amp; Clinical Partners</Link>
         <Link href="/care-standards">Care &amp; Compliance Standards</Link>
@@ -89,8 +89,8 @@ export function PageIntro({
       <h1>{title}</h1>
       <p>{description}</p>
       <div className="hero-actions">
-        <Link className="primary-button" href="/gut-health">Gut Health &amp; Metabolic Balance</Link>
-        <Link className="secondary-button" href="/mens-health">Men&apos;s Hormone Health</Link>
+        <Link className="primary-button" href="/gut-health">Lifestyle Coaching</Link>
+        <Link className="secondary-button" href="/mens-health">Men’s Health · California</Link>
       </div>
     </section>
   );

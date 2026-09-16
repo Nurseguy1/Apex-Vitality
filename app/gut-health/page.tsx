@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
-  title: "Gut Health & Metabolic Balance Coaching | Apex Vitality",
+  title: "Functional Health & Lifestyle Coaching | Apex Vitality",
   description: "Root-cause-oriented gut-health education and wellness coaching for adults who still do not feel well even when conventional lab results are described as normal.",
 };
 
@@ -21,7 +21,7 @@ export default function GutHealthPage() {
       <SiteHeader />
       <section className="page-intro">
         <p className="eyebrow">Educational wellness coaching</p>
-        <h1>Gut Health &amp; Metabolic Balance</h1>
+        <h1>Functional Health &amp; Lifestyle Coaching</h1>
         <p>Have you been told your labs are normal, yet you still do not feel like yourself? This coaching path gives you time to be heard, explore the bigger wellness picture, and build practical gut-health and metabolic habits.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/contact">Ask about coaching</Link>
@@ -42,6 +42,17 @@ export default function GutHealthPage() {
         </div>
       </section>
 
+      <section className="content-section" id="coaching-membership">
+        <div className="section-heading">
+          <p className="eyebrow">Learn at your pace</p>
+          <h2>Group coaching · $99/month</h2>
+          <p>Build healthier routines with self-paced video lessons and one monthly group Q&amp;A with your coach. Explore nutrition, movement, sleep, stress, and gut health at a pace that fits your life.</p>
+          <p>Higher coaching tiers offer more personalized attention. Ask about the available options and pricing.</p>
+          <a className="primary-button" href="mailto:apexvitality5@gmail.com?subject=Coaching%20enrollment">Ask about coaching enrollment</a>
+          <p>Already enrolled? Use the Scalerize access link from your coaching welcome email for lessons, group sessions, and client support.</p>
+        </div>
+      </section>
+
       <section className="content-section" id="coaching">
         <div className="section-heading">
           <p className="eyebrow">Practical, whole-person support</p>
@@ -57,7 +68,7 @@ export default function GutHealthPage() {
         <div>
           <p className="eyebrow">Educational functional lab review</p>
           <h2>See more meaning in the numbers.</h2>
-          <p>Gut Health clients may receive a personalized educational review of wellness-related laboratory patterns and functional ranges. We explain what individual markers generally represent, discuss what results may indicate from a wellness perspective, and use those insights to support nutrition, lifestyle, sleep, stress, and habit goals.</p>
+          <p>Depending on the coaching tier selected, clients may receive a personalized educational review of wellness-related laboratory patterns and functional ranges. We explain what individual markers generally represent, discuss what results may indicate from a wellness perspective, and use those insights to support nutrition, lifestyle, sleep, stress, and habit goals.</p>
         </div>
         <div>
           <p>You leave with clearer wellness priorities, practical actions to try, patterns to track, and a stronger understanding of how your daily choices connect with the information in front of you.</p>

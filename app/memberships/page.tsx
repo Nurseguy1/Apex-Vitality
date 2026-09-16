@@ -14,7 +14,8 @@ export default function MembershipsPage() {
       <SiteHeader />
       <section className="membership-availability" aria-label="Consultation and Focused Care membership">
         <p className="eyebrow">Men&apos;s Hormone Health · California medical care</p>
-        <h1>Start with a conversation.</h1>
+        <h1>Men’s health medical membership.</h1>
+        <p><strong>For patients physically located in California at the time of care.</strong> Looking for lifestyle coaching? <Link href="/gut-health#coaching-membership">Explore coaching from $99/month</Link>.</p>
         <p><strong>$69 New Patient Consultation. No membership required.</strong> Speak with your clinician about your symptoms, goals, and what you want to pursue—or whether you need care at all.</p>
         <p><strong>Your $69 consultation fee is credited toward your first membership month when you join. Pay $80 for the first month, then $149/month.</strong></p>
         <p>The initial visit is <strong>consultation only</strong>. It does not include laboratory orders or testing. If you want to proceed with lab orders, you must enroll separately in the <strong>$149/month Focused Care membership</strong> first.</p>

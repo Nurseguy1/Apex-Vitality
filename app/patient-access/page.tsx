@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const accessItems = [
   {
-    title: "New to Apex Vitality?",
+    title: "New to men’s health medical care?",
     copy: "Book a $69 consultation without a membership. Your consultation fee is credited toward your first month if you join. If you want lab orders, enroll separately in the $149/month membership.",
     href: "/memberships",
     label: "Begin care enrollment",
@@ -42,8 +42,8 @@ export default function PatientAccessPage() {
       <section className="patient-access-hero">
         <p className="eyebrow">Men&apos;s Health medical patients only</p>
         <h1>Secure medical-patient access through CharmHealth.</h1>
-        <p>Scheduling, clinical intake, assigned forms, and patient communication for Men&apos;s Health medical care take place through Apex Vitality&apos;s secure CharmHealth workflow.</p>
-        <p><strong>Coaching clients:</strong> Gut Health &amp; Metabolic Balance coaching is non-medical and does not use this portal unless a client is also separately established as a Men&apos;s Health medical patient.</p>
+        <p>Medical care is for patients physically located in California at the time of each visit. Scheduling, clinical intake, assigned forms, and patient communication take place through the secure CharmHealth workflow.</p>
+        <p>Looking for lifestyle coaching? <Link href="/gut-health">Go to coaching information and enrollment</Link>. Existing coaching clients should use their Scalerize invitation.</p>
       </section>
       <section className="patient-access-grid">
         {accessItems.map((item, index) => (

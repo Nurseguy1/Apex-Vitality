@@ -5,25 +5,25 @@ import styles from "./home.module.css";
 
 const carePaths = [
   {
-    eyebrow: "Personalized guidance · Broadly available",
-    title: "Gut Health & Metabolic Balance",
-    copy: "For adults who have been told their labs are normal but still do not feel like themselves—root-cause-oriented education, lab-pattern review, and practical gut-health and lifestyle coaching.",
+    eyebrow: "Lifestyle education · Coaching",
+    title: "Functional Health & Lifestyle Coaching",
+    copy: "Build healthier habits around nutrition, movement, sleep, stress, and gut health. Start with self-paced video lessons and a monthly group Q&A with your coach.",
     image: "/program-metabolic-couple-v1.png",
     href: "/gut-health",
-    cta: "Explore wellness coaching",
+    cta: "Explore coaching",
   },
   {
-    eyebrow: "Men’s Hormone Health · California",
-    title: "Men’s Hormone Health",
+    eyebrow: "Medical care · California only",
+    title: "Men’s Health Medical Care",
     copy: "A clinical evaluation for men concerned about symptoms or laboratory findings that could reflect a hormone deficiency—with medical evaluation, treatment, and monitoring when clinically appropriate.",
     image: "/home-professional-man-35-45-v3.png",
     href: "/mens-health",
-    cta: "Explore men’s hormone health",
+    cta: "Explore California medical care",
   },
 ];
 
 const steps = [
-  ["1", "Choose your route", "Start with Gut Health or Men’s Hormone Health."],
+  ["1", "Choose your route", "Choose lifestyle coaching or California men’s health medical care."],
   ["2", "Review the details", "See which service best matches your goals and the support you want."],
   ["3", "Begin with clarity", "Take the next step with personalized guidance and a plan for moving forward."],
 ];
@@ -36,10 +36,10 @@ export default function Home() {
         <div className={styles.heroCopy}>
           <p className={styles.kicker}>Two focused paths to better health</p>
           <h1>Start with what matters most.</h1>
-          <p className={styles.heroLead}>Gut-health and metabolic-balance coaching for all adults, plus a California medical pathway for men concerned about possible hormone deficiency.</p>
+          <p className={styles.heroLead}>Choose lifestyle coaching for healthier daily habits, or men’s health medical care for hormone evaluation and treatment. Medical visits are for patients physically located in California.</p>
           <div className={styles.actions}>
-            <Link className={styles.primaryCta} href="#care">Choose my path</Link>
-            <Link className={styles.secondaryCta} href="/patient-access">Men&apos;s Hormone Health patient portal</Link>
+            <Link className={styles.primaryCta} href="/gut-health">Explore coaching</Link>
+            <Link className={styles.secondaryCta} href="/mens-health">Men’s health · California</Link>
           </div>
           <div className={styles.heroProof} aria-label="Apex service highlights">
             <span>Clear advice for moving forward</span><span>Personal attention</span><span>Practical next steps</span>
@@ -48,8 +48,8 @@ export default function Home() {
       </section>
 
       <section className={styles.trustGrid} aria-label="Apex service structure">
-        <article><strong>Gut Health clients</strong><p>Education, nutrition, lifestyle guidance, tracking, and accountability for sustainable everyday wellness.</p></article>
-        <article><strong>Men&apos;s Hormone Health patients</strong><p>Licensed evaluation and treatment for eligible men physically located in California.</p></article>
+        <article><strong>Lifestyle coaching clients</strong><p>Education, nutrition, lifestyle guidance, tracking, and accountability for sustainable everyday wellness.</p></article>
+        <article><strong>Men’s health medical patients</strong><p>Licensed evaluation and treatment for eligible men physically located in California.</p></article>
         <article><strong>Progress toward your goals</strong><p>Personalized guidance, practical strategies, and consistent support to help you keep moving forward.</p></article>
       </section>
 
@@ -68,7 +68,8 @@ export default function Home() {
             <div className={styles.pathCopy}>
               <p className={styles.kicker}>{path.eyebrow}</p><h2>{path.title}</h2><p>{path.copy}</p>
               <Link className={index === 0 ? styles.primaryCta : styles.darkCta} href={path.href}>{path.cta}</Link>
-              {index === 1 && <><p><strong>$69 initial consultation—credited toward your first month when you join.</strong> No membership is needed for the consultation. Lab orders require the $149/month membership, which includes one appointment each month and baseline and scheduled follow-up TRT labs with interpretation, prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed.</p><Link className={styles.darkCta} href="/memberships">View membership &amp; sign up</Link></>}
+              {index === 0 && <p><strong>Group coaching starts at $99/month.</strong> Includes self-paced videos and one monthly group Q&amp;A. Higher tiers offer more personal support.</p>}
+              {index === 1 && <><p><strong>For patients physically located in California.</strong></p><p><strong>$69 initial consultation—credited toward your first month when you join.</strong> No membership is needed for the consultation. Lab orders require the $149/month membership, which includes one appointment each month and baseline and scheduled follow-up TRT labs with interpretation, prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed.</p><Link className={styles.darkCta} href="/memberships">View medical membership</Link></>}
             </div>
           </article>
         ))}
@@ -85,7 +86,7 @@ export default function Home() {
         <div className={styles.supportImage}><Image src="/program-metabolic-couple-v1.png" alt="Adults building sustainable wellness routines" fill sizes="(max-width: 900px) 100vw, 50vw" /></div>
         <div className={styles.supportCopy}>
           <p className={styles.kicker}>Not sure which route fits?</p><h2>Start with the change you want to make.</h2>
-          <p>Choose Gut Health for nutrition, digestion, energy, and sustainable daily habits. Choose Men&apos;s Hormone Health for evaluation of possible hormone deficiency.</p>
+          <p>Choose coaching for nutrition, digestion, energy, and sustainable daily habits. Choose men’s health medical care for evaluation and treatment of hormone concerns while physically located in California.</p>
           <Link className={styles.primaryCta} href="/contact">Ask Apex Vitality</Link>
         </div>
       </section>
