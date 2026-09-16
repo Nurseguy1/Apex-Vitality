@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
   title: "Online Medical Weight Loss in California | Apex Vitality",
   description:
-    "Start medical weight-loss care online with a focused questionnaire, personal clinician review, lab planning, treatment options, and ongoing support from Apex Vitality.",
+    "Start medical weight-loss care online with a focused questionnaire, personal clinician review, treatment options, and ongoing support from Apex Vitality.",
 };
 
 const steps = [
   ["01", "Choose your goal", "Decide what you want to achieve and take the first step toward it."],
   ["02", "Share what matters", "Complete a brief questionnaire so we can understand your starting point and priorities."],
-  ["03", "Build your strategy", "Bring your goals together with medical expertise, useful labs, and personalized options."],
+  ["03", "Build your strategy", "Bring your goals together with medical expertise and personalized options."],
   ["04", "Put your plan into motion", "Begin with clear next steps, convenient follow-through, and support that keeps you moving."],
 ];
 
 const benefits = [
   "A plan built around your goals and health history",
   "Medication and metabolic-health review",
-  "Recent outside labs accepted for clinician review",
+  "A simple start without unnecessary steps",
   "Nutrition, movement, sleep, and habit support",
   "Convenient telehealth follow-up",
   "Pharmacy coordination and home delivery when prescribed",
@@ -30,32 +31,27 @@ export default function WeightLossPage() {
       <SiteHeader />
 
       <section className="weight-hero">
-        <div>
-          <p className="eyebrow">Online medical weight loss for California adults</p>
-          <h1>Your weight-loss goal is within reach. Start today.</h1>
+        <Image className="weight-hero-image" src="/weight-loss-couple-walking-v1.png" alt="Active man and woman walking together outdoors" fill priority sizes="100vw" />
+        <div className="weight-hero-copy">
+          <p className="eyebrow">Online care for California adults</p>
+          <h1>Medical Weight Loss</h1>
+          <h2 className="weight-hero-offer">Start with a $39 initial visit.</h2>
           <p className="weight-hero-lede">
-            You know what you want to change. Make the decision, choose your goal,
-            and begin building the energy, confidence, and lasting progress you are
-            ready to achieve.
+            Get a personalized medical strategy, ongoing clinician support, and a
+            clear path toward results that fit your life.
           </p>
           <div className="hero-actions">
-            <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
-            <Link className="secondary-button" href="/schedule/lab-planning">Plan my labs · $59</Link>
+            <Link className="primary-button" href="/start?treatment=Medical%20Weight%20Loss&plan=initial">Start for $39</Link>
+            <Link className="secondary-button" href="/start?treatment=Medical%20Weight%20Loss&plan=initial">Start my medical review</Link>
           </div>
-          <p className="hero-cta-note">Start online • Choose your direction • Build real momentum</p>
+          <p className="hero-cta-note">Simple online start • Personal clinician guidance • Ongoing support</p>
         </div>
-        <aside className="weight-offer-card">
-          <span>Medical weight-loss pathway</span>
-          <h2>You decide. You start. You move forward.</h2>
-          <ul className="check-list">
-            <li>Brief questionnaire</li>
-            <li>Clinician-led treatment planning</li>
-            <li>Lab review and monitoring</li>
-            <li>Medication options discussed</li>
-            <li>Ongoing support and adjustments</li>
-          </ul>
-          <p className="weight-pricing-note"><strong>Medication program pricing coming soon</strong><br />Final pricing will be posted after pharmacy fulfillment is confirmed.</p>
-        </aside>
+        <div className="weight-pricing-card">
+          <span>Medical weight loss</span>
+          <strong>Start with $39</strong>
+          <b>$149/month for ongoing care</b>
+          <p>Medication and any clinically appropriate laboratory services are billed separately.</p>
+        </div>
       </section>
 
       <section className="weight-trust-strip" aria-label="Weight loss care highlights">
@@ -106,7 +102,7 @@ export default function WeightLossPage() {
         </div>
         <div className="weight-plan-options">
           <article><strong>Medical options</strong><span>Discuss available prescription pathways and how they fit into your broader plan.</span></article>
-          <article><strong>Metabolic insight</strong><span>Use relevant measurements and labs to understand factors affecting progress.</span></article>
+          <article><strong>Metabolic insight</strong><span>Use relevant health information to understand the factors affecting your progress.</span></article>
           <article><strong>Lasting momentum</strong><span>Strengthen nutrition, movement, recovery, and routines that support continued results.</span></article>
         </div>
       </section>
@@ -114,10 +110,10 @@ export default function WeightLossPage() {
       <section className="weight-final-cta">
         <p className="eyebrow">The power to begin is yours</p>
         <h2>Your next chapter starts with one decision.</h2>
-        <p>Choose your goal. Start online today. Begin creating the progress you want to see.</p>
+        <p>Start with a $39 initial visit, then continue with ongoing care for $149 per month.</p>
         <div className="hero-actions">
-          <Link className="primary-button" href="/questionnaires/metabolic-weight">Customize Your Treatment</Link>
-          <Link className="secondary-button" href="/schedule">Choose comprehensive care</Link>
+          <Link className="primary-button" href="/start?treatment=Medical%20Weight%20Loss&plan=initial">Start my medical review</Link>
+          <Link className="secondary-button" href="/start?treatment=Medical%20Weight%20Loss&plan=initial">Start for $39</Link>
         </div>
       </section>
 

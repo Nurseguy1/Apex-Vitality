@@ -1,36 +1,29 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://create-a-coral.vercel.app";
+const siteUrl = "https://goapexvitality.com";
 
 const routes = [
   "",
-  "/functional-health",
-  "/longevity",
   "/gut-health",
-  "/weight-loss",
   "/mens-health",
-  "/womens-health",
-  "/nad-plus",
-  "/nad-plus/articles/nad-energy-focus-busy-adults",
-  "/nad-plus/articles/nad-recovery-active-adults",
-  "/nad-plus/articles/nad-healthy-aging",
-  "/nad-plus/articles/nad-women-35-55",
-  "/sermorelin",
-  "/sermorelin/articles/sermorelin-sleep-recovery",
-  "/sermorelin/articles/sermorelin-active-adults",
-  "/sermorelin/articles/sermorelin-healthy-aging",
-  "/sermorelin/articles/sermorelin-midlife-wellness",
   "/memberships",
-  "/how-it-works",
   "/faq",
   "/contact",
-  "/schedule",
+  "/providers",
+  "/care-standards",
+  "/service-areas",
   "/privacy",
+  "/california-privacy",
+  "/notice-of-privacy-practices",
+  "/telehealth-consent",
+  "/treatment-consents/hormone-therapy",
+  "/agreements/self-pay",
+  "/agreements/recurring-payments",
   "/terms",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-07-24T00:00:00-07:00");
+  const lastModified = new Date("2026-09-09T00:00:00-07:00");
 
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,

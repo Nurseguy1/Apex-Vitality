@@ -66,8 +66,8 @@ export default async function SermorelinArticlePage({ params }: { params: Promis
           <h2>Stronger recovery and healthier aging start with a personal plan.</h2>
           <p>Complete your secure review and work with a licensed clinician to connect sermorelin peptide care with your sleep, recovery, performance, and longevity goals.</p>
           <div className="hero-actions">
-            {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Start my peptide care plan ↗</a>}
-            <Link className="secondary-button" href="/schedule">Choose comprehensive care</Link>
+            <Link className="primary-button" href="/start?treatment=Sermorelin&plan=initial">Start my peptide care plan</Link>
+            <Link className="secondary-button" href="/memberships">Compare memberships</Link>
           </div>
         </section>
       </article>

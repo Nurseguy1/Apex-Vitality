@@ -14,7 +14,7 @@ export default function LabReviewSchedulePage() {
       <section className="schedule-intro">
         <p className="eyebrow">Payment complete</p>
         <h1>Schedule your lab review and treatment-planning visit.</h1>
-        <p>Your $59 lab-planning credit has been applied. Choose the matching follow-up appointment in CharmHealth below to review your results and build your next-step care plan.</p>
+        <p>Choose the matching follow-up appointment below to review your results and build your next-step care plan.</p>
       </section>
       <section className="scheduler-section">
         <div className="scheduler-heading">

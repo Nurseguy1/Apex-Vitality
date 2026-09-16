@@ -1,29 +1,27 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./bright-theme.css";
 import { JsonLd } from "./seo";
+import { practiceContact } from "./lib/compliance";
 
-const siteUrl = "https://create-a-coral.vercel.app";
+const siteUrl = "https://goapexvitality.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Apex Vitality | California Telehealth, Longevity & Functional Health",
+    default: "Apex Vitality | Gut Health Coaching & Men’s Hormone Health",
     template: "%s",
   },
   description:
-    "Personalized, clinician-led California telehealth care for longevity, functional health, healthy aging, medical weight management, men's health, women's health, and digestive wellness.",
+    "Inclusive gut-health and metabolic-balance wellness coaching and focused California men's medical care.",
   applicationName: "Apex Vitality",
   category: "healthcare",
   keywords: [
     "California telehealth",
-    "longevity care",
-    "functional health",
-    "healthy aging",
-    "medical weight management",
     "men's health",
-    "women's health",
     "gut health",
-    "concierge telehealth",
+    "metabolic wellness coaching",
+    "California telehealth men's health",
   ],
   alternates: {
     types: {
@@ -46,9 +44,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Apex Vitality | California Telehealth, Longevity & Functional Health",
+    title: "Apex Vitality | Gut Health Coaching & Men’s Hormone Health",
     description:
-      "Proactive, clinician-led care for vitality, performance, and healthy aging.",
+      "Two focused paths: gut-health and metabolic-balance wellness coaching and California men's medical care.",
     type: "website",
     siteName: "Apex Vitality",
     locale: "en_US",
@@ -57,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Apex Vitality | Longevity & Functional Health",
-    description: "Proactive, clinician-led California telehealth care.",
+    title: "Apex Vitality | Gut Health Coaching & Men’s Hormone Health",
+    description: "California men's medical care and inclusive wellness coaching.",
     images: ["/og.png"],
   },
 };
@@ -75,7 +73,21 @@ const organizationSchema = {
       logo: `${siteUrl}/favicon.svg`,
       image: `${siteUrl}/og.png`,
       description:
-        "A California telehealth practice providing clinician-led longevity, functional health, healthy-aging, metabolic, men's health, women's health, and digestive-wellness care for adults.",
+        "Apex Vitality provides focused men's medical care for eligible adults located in California and a distinct educational gut-health and metabolic-balance wellness-coaching pathway.",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: practiceContact.addressLine1,
+        addressLocality: "Santa Clarita",
+        addressRegion: "CA",
+        postalCode: "91350",
+        addressCountry: "US",
+      },
+      employee: {
+        "@type": "Person",
+        name: practiceContact.clinician,
+        jobTitle: "Family Nurse Practitioner",
+        identifier: practiceContact.npi,
+      },
       medicalSpecialty: [
         "PrimaryCare",
         "DietNutrition",
@@ -105,6 +117,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="/bright-theme-v2.css" />
+      </head>
       <body>
         <JsonLd data={organizationSchema} />
         {children}

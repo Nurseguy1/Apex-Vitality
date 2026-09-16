@@ -8,11 +8,10 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  ["1", "Choose and purchase your care", "Select focused treatment access, comprehensive care, or membership support and pay securely through Stripe."],
-  ["2", "Answer a few health questions", "Complete a short confidential questionnaire through the Charm patient portal."],
-  ["3", "Receive personal clinician review", "Your clinician reviews your symptoms, history, medications, goals, and treatment ideas."],
-  ["4", "Begin your personalized plan", "Move into treatment, pharmacy coordination, home delivery, laboratory planning, and follow-up organized around your care."],
-  ["5", "Build momentum", "Use follow-up and monitoring to measure progress and keep your plan moving toward your goals."],
+  ["1", "Choose your starting point", "Select a treatment, symptom, or health goal. Your selection is a request for clinical review, not a guaranteed prescription."],
+  ["2", "Complete your assessment", "Submit a confidential medical intake and complete laboratory testing when clinically indicated."],
+  ["3", "Meet your California clinician", "Review your history, results, options, material risks, and alternatives before a treatment decision is made."],
+  ["4", "Begin a monitored plan", "If treatment is authorized, receive pharmacy coordination, follow-up, repeat testing when needed, and adjustments based on your response."],
 ];
 
 export default function HowItWorksPage() {
@@ -22,7 +21,7 @@ export default function HowItWorksPage() {
       <PageIntro
         eyebrow="How it works"
         title="A straightforward process with personalized care at the center."
-        description="Choose your care online, answer a few questions, receive personal clinician review, and begin a plan built around your goals."
+        description="Choose a starting point, complete an assessment, meet your clinician, and begin only the treatment that is medically appropriate for you."
       />
       <section className="content-section process-page">
         <ol className="journey-list">
@@ -36,8 +35,8 @@ export default function HowItWorksPage() {
         <p>If you may be experiencing a medical emergency, call 911 or seek immediate in-person care.</p>
       </section>
       <section className="portal-handoff">
-        <div><p className="eyebrow">Secure next step</p><h2>Payment through Stripe. Care coordination through CharmHealth.</h2><p>Appointments, assigned health forms, medication review, secure messages, and portal access are handled through the protected patient workflow.</p></div>
-        <Link className="primary-button" href="/questionnaires">Choose my care</Link>
+        <div><p className="eyebrow">Your next step</p><h2>Ready to begin?</h2><p>Choose the care experience that fits your goals and start online today.</p></div>
+        <Link className="primary-button" href="/treatments">Choose my care</Link>
       </section>
       <SiteFooter />
     </main>

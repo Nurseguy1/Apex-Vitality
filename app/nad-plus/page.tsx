@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { CareNotice, SiteFooter, SiteHeader } from "../components";
-import { charmLinks } from "../lib/charm";
 import { JsonLd } from "../seo";
 import { nadArticles } from "./articles/article-data";
 
@@ -16,7 +16,7 @@ const included = [
   "Secure portal communication with your clinician",
   "A personalized treatment and follow-up plan",
   "Prescription and pharmacy coordination",
-  "Medication, supplies, and direct shipping included when listed in your selected plan",
+  "Medication and pharmacy charges paid separately by the patient",
 ];
 
 const comprehensiveCare = [
@@ -42,7 +42,7 @@ export default function NadPlusPage() {
   };
 
   return (
-    <main>
+    <main className="nad-plus-page">
       <JsonLd data={pageSchema} />
       <SiteHeader />
 
@@ -56,21 +56,20 @@ export default function NadPlusPage() {
             your routine, and your goals.
           </p>
           <div className="hero-actions">
-            {charmLinks.portal && (
-              <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">
-                Start my NAD+ plan ↗
-              </a>
-            )}
-            <Link className="secondary-button" href="/schedule">
-              Choose comprehensive care
+            <Link className="primary-button" href="/start?treatment=NAD%2B&plan=initial">Start my NAD+ plan</Link>
+            <Link className="secondary-button" href="/memberships">
+              Compare memberships
             </Link>
           </div>
           <p className="focused-care-note">
-            No scheduled visit is required. A secure message,
-            telephone call, or video conversation can be added whenever it helps
-            move your care forward.
+            Focused Care includes a scheduled 15-minute initial appointment.
+            Higher memberships include a 45-minute comprehensive initial visit.
+            Clinical messaging is not included.
           </p>
         </div>
+      </section>
+
+      <section className="nad-offer-band" aria-label="NAD+ focused care benefits">
         <aside className="focused-offer-card">
           <span>Your goals can start moving today</span>
           <h2>A simpler path to feeling energized, focused, and ready.</h2>
@@ -78,11 +77,27 @@ export default function NadPlusPage() {
             {included.map((item) => <li key={item}>{item}</li>)}
           </ul>
           <p>
-            Your total price is presented before payment and clearly lists the
-            clinician review, care coordination, medication, supplies, and
-            shipping included in your selected plan.
+            Your clinical-care price is presented before payment. Medication,
+            pharmacy charges, supplies, and shipping are paid separately by you.
           </p>
         </aside>
+      </section>
+
+      <section className="sermorelin-offer" id="nad-offer" aria-labelledby="nad-offer-title">
+        <div className="sermorelin-kit-image">
+          <Image src="/treatment-nad-v1.png" alt="Illustrative NAD+ nasal care packaging" width={1536} height={1024} />
+        </div>
+        <div>
+          <p className="eyebrow">Simple, transparent pricing</p>
+          <h2 id="nad-offer-title">Simple pricing for clinician-guided NAD+ care.</h2>
+          <p className="sermorelin-offer-lede">Begin with a focused questionnaire and clinician review, then continue with monthly care when it fits your plan.</p>
+          <div className="sermorelin-plan-grid">
+            <article><span>Start here</span><strong>$39</strong><b>questionnaire review</b><p>A clinician reviews your goals, history, and appropriate options. Secure follow-up is added if more information is needed.</p><Link className="plan-select-button" href="/start?treatment=NAD%2B&plan=initial">Start for $39</Link></article>
+            <article className="featured"><span>Default next step</span><strong>$149</strong><b>per month</b><p>Focused Care provides ongoing clinical monitoring, prescription management, and follow-up support after the initial visit.</p><Link className="plan-select-button" href="/memberships/initial-care">See Focused Care</Link></article>
+          </div>
+          <ul className="check-list"><li>Personal clinician review</li><li>Prescription and pharmacy coordination</li><li>Medication paid separately through the pharmacy</li><li>Secure follow-up support</li></ul>
+          <p className="sermorelin-pricing-note">Laboratory testing is ordered only when your clinician determines it is appropriate and is priced separately.</p>
+        </div>
       </section>
 
       <section className="focused-process" aria-labelledby="nad-process">
@@ -171,9 +186,9 @@ export default function NadPlusPage() {
             digestive health, and healthy aging need to be considered together,
             begin with the complete consultation.
           </p>
-          <p className="focused-price"><strong>$325</strong><span>one-time · 45 minutes</span></p>
-          <Link className="primary-button" href="/schedule">
-            Schedule comprehensive care
+          <p className="focused-price"><strong>Included</strong><span>45 minutes · Treatment membership and above</span></p>
+          <Link className="primary-button" href="/memberships">
+            Compare higher memberships
           </Link>
         </div>
         <ul className="check-list focused-comprehensive-list">

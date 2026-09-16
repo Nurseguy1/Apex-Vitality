@@ -1,264 +1,99 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "./components";
+import styles from "./home.module.css";
 
-const services = [
+const carePaths = [
   {
-    category: "NAD+ Care",
-    title: "Explore NAD+ Care for Energy & Healthy Aging",
-    copy: "Explore energy, recovery, and healthy-aging goals through focused, personalized care.",
-    href: "/nad-plus",
-    cta: "Explore NAD+ care",
-  },
-  {
-    category: "Sermorelin Peptide Care",
-    title: "Strengthen Sleep, Recovery & Healthy Aging",
-    copy: "Answer a quick questionnaire, receive personal clinician review, and have your medication delivered directly to your door.",
-    href: "/sermorelin",
-    cta: "Explore sermorelin peptide care",
-  },
-  {
-    category: "Longevity & Functional Health",
-    title: "Build Your Longevity & Functional Health Plan",
-    copy: "Connect the dots between symptoms, nutrition, metabolic health, recovery, biomarkers, and the way you want to live.",
-    href: "/functional-health",
-    cta: "Explore functional health",
-  },
-  {
-    category: "Gut Health",
-    title: "Get to the Root of Your Gut Health",
-    copy: "Stop guessing about digestive symptoms. Build a clearer plan around nutrition, lifestyle, medications, and useful testing.",
+    eyebrow: "Lifestyle education · Coaching",
+    title: "Foundational Health & Lifestyle Coaching",
+    copy: "Build healthier habits around nutrition, movement, sleep, stress, and gut health. Start with self-paced video lessons and a monthly group Q&A with your coach.",
+    image: "/program-metabolic-couple-v1.png",
     href: "/gut-health",
-    cta: "Explore gut health",
+    cta: "Explore coaching",
   },
   {
-    category: "Medical Weight Management",
-    title: "Make Medical Weight Management Work for You",
-    copy: "Start with your goals, receive personal clinician review, and move forward with a practical treatment and follow-up plan.",
-    href: "/weight-loss",
-    cta: "Explore weight management",
-  },
-  {
-    category: "Men’s Health",
-    title: "Restore Energy, Strength & Confidence",
-    copy: "Take changes in energy, sexual health, strength, mood, sleep, recovery, and body composition seriously—and act on them.",
+    eyebrow: "Medical care · California only",
+    title: "Men’s Health Medical Care",
+    copy: "A clinical evaluation for men concerned about symptoms or laboratory findings that could reflect a hormone deficiency—with medical evaluation, treatment, and monitoring when clinically appropriate.",
+    image: "/home-professional-man-35-45-v3.png",
     href: "/mens-health",
-    cta: "Explore men's health",
-  },
-  {
-    category: "Women’s Health",
-    title: "Feel Your Best Through Every Stage of Women’s Health",
-    copy: "Move through hormonal and metabolic changes with a plan for energy, sleep, strength, confidence, and healthy aging.",
-    href: "/womens-health",
-    cta: "Explore women's health",
+    cta: "Explore California medical care",
   },
 ];
-
-const carePriority = ["Men’s Health", "Women’s Health", "Medical Weight Management"];
-const orderedServices = [...services].sort((a, b) => {
-  const aPriority = carePriority.indexOf(a.category);
-  const bPriority = carePriority.indexOf(b.category);
-  return (aPriority === -1 ? carePriority.length : aPriority) -
-    (bPriority === -1 ? carePriority.length : bPriority);
-});
 
 const steps = [
-  ["1. Choose your care", "Start with the treatment, health concern, or comprehensive care experience that matches your goals."],
-  ["2. Purchase and answer a few questions", "Pay securely, then complete a short confidential intake through the patient portal."],
-  ["3. Receive personal clinician review", "Your clinician reviews your symptoms, history, medications, goals, and treatment ideas."],
-  ["4. Begin your plan", "Move directly into your personalized care plan, pharmacy coordination, delivery, and follow-up."],
-];
-
-const biomarkers = ["A1C, glucose & insulin", "Lipids & cardiovascular risk", "Thyroid", "Hormonal health", "Liver & kidney function", "Nutrient status", "Inflammation in context", "Digestive testing when indicated"];
-
-const programs = [
-  {
-    label: "Program 01",
-    title: "Metabolic & Gut Optimization Track",
-    copy: "A coordinated pathway for digestive wellness, metabolic health, and medical weight-management goals.",
-    includes: ["Initial medical evaluation", "Relevant lab review", "Personalized nutrition and lifestyle plan", "Structured clinical follow-up"],
-  },
-  {
-    label: "Program 02",
-    title: "Men's Vitality & Hormonal Optimization Track",
-    copy: "A focused pathway for energy, sexual health, strength, recovery, body composition, and hormonal evaluation when indicated.",
-    includes: ["Comprehensive men's health review", "Baseline and follow-up labs when needed", "Individualized clinical plan", "Secure follow-up and monitoring"],
-  },
-  {
-    label: "Program 03",
-    title: "Longevity & Functional Health Track",
-    copy: "A comprehensive pathway connecting metabolic health, digestive wellness, recovery, healthy aging, and women's or men's health goals.",
-    includes: ["Goal-directed biomarker review", "Personalized nutrition and supplement review", "Men's or women's healthy-aging support", "Focused testing that informs care"],
-  },
-];
-
-const memberships = [
-  {
-    name: "Comprehensive New Patient Consultation",
-    price: "$325 USD",
-    cadence: "one-time",
-    description: "An unhurried clinical evaluation and personalized starting plan.",
-    includes: ["Detailed health and goal review", "Medication and risk-factor review", "Relevant lab planning", "Personalized next steps"],
-  },
-  {
-    name: "Apex Core Membership",
-    price: "$225 USD",
-    cadence: "per month",
-    description: "Ongoing medical management with convenient, consistent follow-through.",
-    includes: ["Personalized treatment planning", "Clinically appropriate follow-ups", "Secure non-urgent messaging", "Prescription management", "Annual wellness planning"],
-  },
-  {
-    name: "Apex Performance Membership",
-    price: "$375 USD",
-    cadence: "per month",
-    description: "Elevated access and deeper performance-focused care planning.",
-    includes: ["Everything in Apex Core", "Priority scheduling", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle, nutrition, and performance planning"],
-  },
+  ["1", "Choose your route", "Choose lifestyle coaching or California men’s health medical care."],
+  ["2", "Review the details", "See which service best matches your goals and the support you want."],
+  ["3", "Begin with clarity", "Take the next step with personalized guidance and a plan for moving forward."],
 ];
 
 export default function Home() {
   return (
-    <main className="home-sermorelin-vibe">
+    <main className={styles.page}>
       <SiteHeader />
-      <section
-        className="hero home-focus-hero home-active-adults-hero"
-        id="top"
-        style={{
-          backgroundImage:
-            "linear-gradient(90deg, rgba(7, 27, 33, .98) 0%, rgba(15, 49, 56, .92) 42%, rgba(12, 37, 42, .3) 73%, rgba(7, 21, 24, .08) 100%), url('/home-professional-man-35-45-v3.png?v=20260729-3')",
-          backgroundPosition: "70% center",
-        }}
-      >
-        <div className="hero-copy">
-          <p className="eyebrow">Modern telehealth for vitality, recovery &amp; longevity</p>
-          <h1>
-            Your goals are within reach. Build the health to achieve more.
-          </h1>
-          <p className="hero-tagline">Turn health obstacles into a focused plan for greater energy, strength, recovery, confidence, and longevity.</p>
-          <p className="hero-lede">You know your body and what you want to achieve. Work with a care team that listens, connects the details, and helps you create forward momentum.</p>
-          <div className="hero-actions">
-            <Link className="primary-button" href="/schedule">Start with a $59 visit</Link>
-            <Link className="text-link hero-care-link" href="#care-options">Explore care options →</Link>
+      <section className={styles.hero}>
+        <div className={styles.heroCopy}>
+          <p className={styles.kicker}>Two focused paths to better health</p>
+          <h1>Start with what matters most.</h1>
+          <p className={styles.heroLead}>Choose lifestyle coaching for healthier daily habits, or men’s health medical care for hormone evaluation and treatment. Medical visits are for patients physically located in California.</p>
+          <div className={styles.actions}>
+            <Link className={styles.primaryCta} href="/gut-health">Explore coaching</Link>
+            <Link className={styles.secondaryCta} href="/mens-health">Men’s health · California</Link>
           </div>
-          <p className="hero-cta-note">Simple online start • Personal clinician review • A plan built to move you forward</p>
+          <div className={styles.heroProof} aria-label="Apex service highlights">
+            <span>Clear advice for moving forward</span><span>Personal attention</span><span>Practical next steps</span>
+          </div>
         </div>
       </section>
 
-      <section className="home-trust-strip" aria-label="Apex Vitality care experience">
-        <article><strong>Start online</strong><span>Choose focused care or a comprehensive consultation.</span></article>
-        <article><strong>Personal review</strong><span>Your history, symptoms, medications, and goals receive clinician attention.</span></article>
-        <article><strong>Overcome the obstacles</strong><span>Connect symptoms, history, habits, and treatment options in one plan.</span></article>
-        <article><strong>Build lasting momentum</strong><span>Use convenient follow-through to keep moving toward the life you want.</span></article>
+      <section className={styles.trustGrid} aria-label="Apex service structure">
+        <article><strong>Lifestyle coaching clients</strong><p>Education, nutrition, lifestyle guidance, tracking, and accountability for sustainable everyday wellness.</p></article>
+        <article><strong>Men’s health medical patients</strong><p>Licensed evaluation and treatment for eligible men physically located in California.</p></article>
+        <article><strong>Progress toward your goals</strong><p>Personalized guidance, practical strategies, and consistent support to help you keep moving forward.</p></article>
       </section>
 
-      <section className="funnel-section" aria-labelledby="choose-your-path">
-        <div className="funnel-heading">
-          <p className="eyebrow">Choose your care experience</p>
-          <h2 id="choose-your-path">Whatever brings you here, there is a place to start.</h2>
-          <p>Come with a focused goal, a concern, or a treatment idea already in mind. Your clinician will listen and collaborate with you to develop options and build a plan.</p>
-        </div>
-        <div className="funnel-options">
-          <article className="funnel-card featured-funnel">
-            <span className="funnel-label">Introductory visit</span>
-            <h3>New-Patient Lab-Planning Visit</h3>
-            <p className="funnel-price"><strong>$59</strong><span>one-time • 15 minutes</span></p>
-            <p>Establish care, discuss your goals, and create the lab plan that moves you toward your next step.</p>
-            <ul>
-              <li>Focused introductory clinician visit</li>
-              <li>Personalized lab planning</li>
-              <li>Full $59 credit toward your comprehensive follow-up within 90 days</li>
-            </ul>
-            <Link className="primary-button" href="/schedule">Start for $59</Link>
+      <section className={styles.intro}>
+        <p className={styles.kicker}>Choose your route</p>
+        <h2>Two services. One clear decision.</h2>
+        <p>Clients seeking foundational health and lifestyle coaching: choose the coaching path below. For men’s health medical evaluation and treatment in California, choose the medical care path.</p>
+      </section>
+
+      <section className={styles.pathStack} id="care" aria-label="Apex Vitality service choices">
+        {carePaths.map((path, index) => (
+          <article className={styles.pathPanel} key={path.title}>
+            <div className={styles.pathImage}>
+              <Image src={path.image} alt="Adult focused on personal health and well-being" fill sizes="(max-width: 900px) 100vw, 50vw" />
+            </div>
+            <div className={styles.pathCopy}>
+              <p className={styles.kicker}>{path.eyebrow}</p><h2>{path.title}</h2><p>{path.copy}</p>
+              <Link className={index === 0 ? styles.primaryCta : styles.darkCta} href={path.href}>{path.cta}</Link>
+              {index === 0 && <p><strong>Group coaching starts at $99/month.</strong> Includes self-paced videos and one monthly group Q&amp;A. Higher tiers offer more personal support.</p>}
+              {index === 1 && <><p><strong>For patients physically located in California.</strong></p><p><strong>$69 initial consultation—credited toward your first month when you join.</strong> No membership is needed for the consultation. Lab orders require the $149/month membership, which includes one appointment each month and baseline and scheduled follow-up TRT labs with interpretation, prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed.</p><Link className={styles.darkCta} href="/memberships">View medical membership</Link></>}
+            </div>
           </article>
-          <article className="funnel-card">
-            <span className="funnel-label">Complete care in one visit</span>
-            <h3>Comprehensive New-Patient Consultation</h3>
-            <p className="funnel-price"><strong>$325</strong><span>one-time • 45 minutes</span></p>
-            <p>Review your symptoms, health history, medications, goals, and relevant testing needs with your clinician.</p>
-            <ul>
-              <li>Unhurried whole-person clinician review</li>
-              <li>Clear priorities and personalized next steps</li>
-              <li>Personalized lab planning</li>
-            </ul>
-            <Link className="secondary-dark-button" href="/schedule">Book my consultation</Link>
-          </article>
-          <article className="funnel-card">
-            <span className="funnel-label">Know what you want?</span>
-            <h3>Start Focused Care</h3>
-            <p>Already know what you want to address—or have a treatment in mind? Start there. We will listen to your perspective and work with you to turn it into a clear clinical plan.</p>
-            <ul>
-              <li>Gut, metabolic, men&apos;s, or women&apos;s health</li>
-              <li><strong>Longevity &amp; Functional Health</strong></li>
-              <li><strong>NAD+ &amp; Sermorelin Peptide Care</strong></li>
-            </ul>
-            <Link className="secondary-dark-button care-path-button" href="#care-options">Choose My Care</Link>
-          </article>
+        ))}
+      </section>
+
+      <section className={styles.process}>
+        <div className={styles.processHeading}>
+          <p className={styles.kicker}>How to begin</p><h2>A simpler way forward.</h2><p>Start with the route that matches the kind of support you want.</p>
         </div>
-        <p className="funnel-disclaimer">Your consultation includes individualized assessment, clinical guidance, and a personalized care plan. Testing, prescriptions, and medication fulfillment are added when they support that plan.</p>
+        <ol>{steps.map(([number, title, copy]) => <li key={number}><b>{number}</b><div><strong>{title}</strong><span>{copy}</span></div></li>)}</ol>
       </section>
 
-      <section className="proof-strip" aria-label="Care principles">
-        <div><strong>Insight</strong><span>see your health history, goals, lifestyle, and relevant data as a complete picture</span></div>
-        <div><strong>Precision</strong><span>focus your time and effort on the strategies most relevant to your priorities</span></div>
-        <div><strong>Partnership</strong><span>work directly with a clinician through thoughtful follow-up and responsible adjustments</span></div>
-      </section>
-
-      <section className="service-band" id="care-options">
-        <div className="section-heading"><p className="eyebrow">Explore care areas</p><h2>Find the care that matches your health goals.</h2><p>Start with a familiar area of care. Programs can stand alone or work together when multiple aspects of health overlap.</p></div>
-        <div className="service-grid">
-          {orderedServices.map((service) => <article className="service-card" key={service.title}><p className="service-category">{service.category}</p><h3>{service.title}</h3><p>{service.copy}</p><Link className="text-link" href={service.href}>{service.cta} →</Link></article>)}
+      <section className={styles.support}>
+        <div className={styles.supportImage}><Image src="/program-metabolic-couple-v1.png" alt="Adults building sustainable wellness routines" fill sizes="(max-width: 900px) 100vw, 50vw" /></div>
+        <div className={styles.supportCopy}>
+          <p className={styles.kicker}>Not sure which route fits?</p><h2>Start with the change you want to make.</h2>
+          <p>Choose coaching for nutrition, digestion, energy, and sustainable daily habits. Choose men’s health medical care for evaluation and treatment of hormone concerns while physically located in California.</p>
+          <Link className={styles.primaryCta} href="/contact">Ask Apex Vitality</Link>
         </div>
       </section>
 
-      <section className="program-section">
-        <div className="section-heading"><p className="eyebrow">Program pathways</p><h2>Choose the care experience that fits your goals.</h2><p>Each pathway includes clinician-led assessment, guidance, and ongoing care. Testing and specific therapies are personalized to your needs.</p></div>
-        <div className="program-grid">
-          {programs.map((program) => <article className="program-card" key={program.title}><span>{program.label}</span><h3>{program.title}</h3><p>{program.copy}</p><ul>{program.includes.map((item) => <li key={item}>{item}</li>)}</ul></article>)}
-        </div>
-        <p className="program-note">Your clinician will help you understand your health more clearly and build an individualized treatment plan designed around your goals.</p>
-      </section>
-
-      <section className="membership-section" id="memberships">
-        <div className="section-heading"><p className="eyebrow">Membership care</p><h2>Expert guidance with the access and continuity your health deserves.</h2><p>Begin with a comprehensive consultation. For appropriate ongoing care, choose the level of access and support that fits your goals.</p></div>
-        <div className="membership-grid">
-          {memberships.map((membership, index) => (
-            <article className={`membership-card ${index === 2 ? "featured" : ""}`} key={membership.name}>
-              {index === 2 && <span className="membership-badge">Elevated access</span>}
-              <h3>{membership.name}</h3>
-              <p className="membership-price"><strong>{membership.price}</strong><span>{membership.cadence}</span></p>
-              <p>{membership.description}</p>
-              <ul>{membership.includes.map((item) => <li key={item}>{item}</li>)}</ul>
-              <Link className={index === 2 ? "primary-button" : "secondary-dark-button"} href={index === 0 ? "/schedule" : "/memberships"}>{index === 0 ? "Schedule consultation" : "View membership details"}</Link>
-            </article>
-          ))}
-        </div>
-        <p className="membership-note">Membership fees cover the professional services listed. Medications, laboratory testing, pharmacy charges, imaging, and outside services are separate unless expressly stated. Secure messaging is for non-urgent questions and is answered during business hours.</p>
-      </section>
-
-      <section className="lab-section" id="labs">
-        <div className="lab-copy"><p className="eyebrow">Labs and baseline review</p><h2>Use relevant data—not indiscriminate testing.</h2><p>Testing is selected according to symptoms, history, goals, and clinical judgment. Results are interpreted in context rather than used as a stand-alone diagnosis.</p></div>
-        <div className="marker-grid" aria-label="Example biomarker categories">{biomarkers.map((marker) => <span key={marker}>{marker}</span>)}</div>
-      </section>
-
-      <section className="split-section" id="process">
-        <div><p className="eyebrow">A simple path forward</p><h2>Four steps to the care you have been looking for.</h2><p>Choose your care, answer a few questions, receive personal clinician review, and put your plan into motion.</p><Link className="primary-button" href="#care-options">Choose my care</Link></div>
-        <ol className="step-list">{steps.map(([title, copy]) => <li key={title}><strong>{title}</strong><span>{copy}</span></li>)}</ol>
-      </section>
-
-      <section className="faq-preview">
-        <div><p className="eyebrow">Know before you begin</p><h2>Care should feel clear before it starts.</h2></div>
-        <div className="faq-preview-list"><p><strong>What does the consultation include?</strong><span>Assessment, education, clinical guidance, and a treatment plan built around your goals.</span></p><p><strong>How are labs used?</strong><span>Your clinician selects and explains testing that helps guide progress toward your goals.</span></p><Link className="text-link" href="/faq">Read all frequently asked questions →</Link></div>
-      </section>
-
-      <section className="visit-section" id="visit">
-        <div className="visit-copy"><p className="eyebrow">Start online</p><h2>Begin with a confidential consultation.</h2><p>Meet with a licensed clinician to understand your health more clearly, learn what your findings mean, and build a treatment plan around your goals.</p></div>
-        <div className="intake-form readiness-card">
-          <span className="status-pill">Secure online scheduling</span>
-          <h3>Ready to take the next step?</h3>
-          <p>Pay securely through Stripe, schedule through CharmHealth, then complete the intake assigned in your patient portal. Please do not send medical information through ordinary email or website messages.</p>
-          <Link className="primary-button" href="/schedule">Start changing my health</Link>
-          <Link className="text-link" href="/faq">Review common questions</Link>
-          <p className="form-note">Your clinician connects testing, prescriptions, pharmacy coordination, and follow-up with your personalized plan.</p>
-        </div>
+      <section className={styles.finalCta}>
+        <p className={styles.kicker}>Your next step</p><h2>Choose the support that matches your goals.</h2>
+        <Link className={styles.whiteCta} href="#care">View both routes</Link>
       </section>
       <SiteFooter />
     </main>

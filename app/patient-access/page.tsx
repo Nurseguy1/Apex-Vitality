@@ -5,15 +5,21 @@ import { charmLinks } from "../lib/charm";
 
 export const metadata: Metadata = {
   title: "Secure Patient Access | Apex Vitality",
-  description: "Secure scheduling, intake, and patient portal access for Apex Vitality clients.",
+  description: "Secure scheduling, intake, and portal access for Apex Vitality medical patients.",
 };
 
 const accessItems = [
   {
-    title: "Schedule a consultation",
-    copy: "Choose an available visit type and begin the secure onboarding process.",
-    href: charmLinks.booking ? "/schedule" : null,
-    label: "Open secure scheduling",
+    title: "New to men’s health medical care?",
+    copy: "Book a $69 consultation without a membership. Your consultation fee is credited toward your first month if you join. If you want lab orders, enroll separately in the $149/month membership.",
+    href: "/memberships",
+    label: "Begin care enrollment",
+  },
+  {
+    title: "Already paid for your consultation?",
+    copy: "Choose New Patient Consultation in the secure calendar and request your appointment. No membership is required and you do not need to pay again.",
+    href: "/book-consultation",
+    label: "Book my New Patient Consultation",
   },
   {
     title: "Complete secure intake",
@@ -34,9 +40,10 @@ export default function PatientAccessPage() {
     <main>
       <SiteHeader />
       <section className="patient-access-hero">
-        <p className="eyebrow">Secure patient access</p>
-        <h1>Your care journey, connected through CharmHealth.</h1>
-        <p>Scheduling, clinical intake, assigned forms, and patient communication take place through Apex Vitality&apos;s secure CharmHealth workflow.</p>
+        <p className="eyebrow">Men&apos;s Health medical patients only</p>
+        <h1>Secure medical-patient access through CharmHealth.</h1>
+        <p>Medical care is for patients physically located in California at the time of each visit. Scheduling, clinical intake, assigned forms, and patient communication take place through the secure CharmHealth workflow.</p>
+        <p>Clients seeking foundational health and lifestyle coaching: <Link href="/gut-health">Follow the coaching path here</Link>. Existing coaching clients should use their Scalerize invitation.</p>
       </section>
       <section className="patient-access-grid">
         {accessItems.map((item, index) => (
@@ -53,9 +60,9 @@ export default function PatientAccessPage() {
         ))}
       </section>
       <aside className={`portal-status ${charmLinks.booking && charmLinks.portal ? "is-ready" : ""}`}>
-        <strong>{charmLinks.booking && charmLinks.portal ? "Secure scheduling and portal access are active." : "CharmHealth connection is being prepared."}</strong>
-        <p>{charmLinks.booking && charmLinks.portal ? "Schedule above or use the patient portal. Assigned intake forms will appear in your secure Charm account." : "Please do not send medical information through ordinary email or unsecured website messages."}</p>
-        {!(charmLinks.booking && charmLinks.portal) && <Link className="text-link" href="/questionnaires">Preview the screening questionnaires →</Link>}
+        <strong>{charmLinks.portal ? "Secure patient portal access" : "CharmHealth connection is being prepared."}</strong>
+        <p>{charmLinks.portal ? "Existing patients can access appointments and assigned intake forms in their secure Charm account. New patients can begin enrollment above." : "Please do not send medical information through ordinary email or unsecured website messages."}</p>
+        {!(charmLinks.booking && charmLinks.portal) && <Link className="text-link" href="/contact">Contact Apex Vitality →</Link>}
       </aside>
       <SiteFooter />
     </main>

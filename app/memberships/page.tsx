@@ -3,70 +3,47 @@ import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
-  title: "Memberships & Pricing | Apex Vitality",
-  description: "Explore Apex Vitality consultation and monthly membership options for personalized telehealth care.",
+  title: "Consultation & Focused Care Membership | Apex Vitality",
+  description: "Men's Hormone Health: $149/month for care, labs, and prescribed medication. A $149/month membership is required before lab orders and includes monthly appointments, scheduled TRT labs, prescribed testosterone, supplies, and delivery.",
 };
-
-const options = [
-  {
-    name: "Comprehensive New Patient Consultation",
-    price: "$325 USD",
-    cadence: "one-time",
-    intro: "A complete first step for connecting your goals and health history with a personalized care plan.",
-    features: ["Unhurried clinician review", "Health, medication, and risk review", "Relevant laboratory planning", "Personalized recommendations and next steps"],
-    checkoutUrl: "https://buy.stripe.com/eVq9AU1BJ7i00Cr9JOfnO00",
-    checkoutLabel: "Pay securely with Stripe",
-  },
-  {
-    name: "Apex Core Membership",
-    price: "$225 USD",
-    cadence: "per month",
-    intro: "Designed for patients who value consistent access and ongoing medical management.",
-    features: ["Personalized treatment planning", "Clinically appropriate follow-up visits", "Secure non-urgent messaging during business hours", "Care-plan coordination and treatment management", "Annual wellness planning", "Preferred pricing on selected laboratory services when available"],
-    checkoutUrl: "https://buy.stripe.com/5kQcN6cgn1XG0Crg8cfnO01",
-    checkoutLabel: "Start Apex Core",
-  },
-  {
-    name: "Apex Performance Membership",
-    price: "$375 USD",
-    cadence: "per month",
-    intro: "For patients seeking elevated access and a deeper focus on performance, prevention, and long-term progress.",
-    features: ["Everything in Apex Core", "Priority scheduling, subject to availability", "Extended appointments", "Quarterly comprehensive reviews", "Lifestyle and nutrition guidance", "Annual advanced laboratory interpretation", "Performance optimization planning"],
-    checkoutUrl: "https://buy.stripe.com/cNieVe3JRfOwbh5bRWfnO02",
-    checkoutLabel: "Start Apex Performance",
-  },
-];
-
+const consultation = "/start?treatment=Men%27s%20Health&plan=initial";
+const membership = "/start?treatment=Focused%20Care%20Membership&plan=ongoing";
 export default function MembershipsPage() {
   return (
     <main>
       <SiteHeader />
-      <section className="membership-hero">
-        <p className="eyebrow">Memberships &amp; pricing</p>
-        <h1>Ongoing care designed around access, continuity, and your goals.</h1>
-        <p>Choose the access, continuity, and level of support that matches the health goals you are ready to pursue.</p>
-      </section>
-      <section className="membership-page-grid">
-        {options.map((option, index) => (
-          <article className={`membership-card ${index === 2 ? "featured" : ""}`} key={option.name}>
-            {index === 2 && <span className="membership-badge">Elevated access</span>}
-            <h2>{option.name}</h2>
-            <p className="membership-price"><strong>{option.price}</strong><span>{option.cadence}</span></p>
-            <p>{option.intro}</p>
-            <ul>{option.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
-            <a className="primary-button" href={option.checkoutUrl} rel="noreferrer" target="_blank">{option.checkoutLabel}</a>
-          </article>
-        ))}
-      </section>
-      <section className="membership-terms">
-        <h2>Clear expectations from the beginning.</h2>
-        <div>
-          <p><strong>What is separate:</strong> Medications, laboratory testing, pharmacy charges, imaging, supplements, and services from outside clinicians or facilities are not included unless expressly stated.</p>
-          <p><strong>Communication:</strong> Secure messaging is intended for non-urgent questions and is answered during business hours. It is not continuously monitored and is not an emergency service.</p>
-          <p><strong>Clinical partnership:</strong> Membership provides ongoing assessment, education, guidance, and care planning. Your clinician helps you understand your health more clearly and coordinates a plan designed to help you achieve your goals.</p>
+      <section className="membership-availability" aria-label="Consultation and Focused Care membership">
+        <p className="eyebrow">Men&apos;s Hormone Health · California medical care</p>
+        <h1>Men’s health medical membership.</h1>
+        <p><strong>For patients physically located in California at the time of care.</strong> Looking for foundational health and lifestyle coaching? <Link href="/gut-health#coaching-membership">Go to the coaching path · from $99/month</Link>.</p>
+        <p><strong>$69 New Patient Consultation. No membership required.</strong> Speak with your clinician about your symptoms, goals, and what you want to pursue—or whether you need care at all.</p>
+        <p><strong>Your $69 consultation fee is credited toward your first membership month when you join. Pay $80 for the first month, then $149/month.</strong></p>
+        <p>The initial visit is <strong>consultation only</strong>. It does not include laboratory orders or testing. If you want to proceed with lab orders, you must enroll separately in the <strong>$149/month Focused Care membership</strong> first.</p>
+        <Link className="primary-button" href={consultation}>Book a consultation · $69</Link>
+        <div className="membership-flow" aria-label="How to begin">
+          <span><b>1</b><strong>Book a $69 consultation</strong><small>Pay once. No membership or recurring charge is required.</small></span>
+          <span><b>2</b><strong>Discuss your goals</strong><small>Talk with your clinician about your concerns and whether further care makes sense.</small></span>
+          <span><b>3</b><strong>Continue with membership</strong><small>Apply your $69 consultation credit. Pay $80 for the first month, then $149/month for care, labs, medication, supplies, and delivery.</small></span>
         </div>
       </section>
-      <section className="membership-cta"><div><p className="eyebrow">Your first step</p><h2>Start with a comprehensive consultation.</h2><p>Your clinician reviews your goals, builds your initial plan, and helps you choose the ongoing support that keeps it moving.</p></div><Link className="primary-button" href="/schedule">Pay and start my care</Link></section>
+      <section className="membership-terms">
+        <h2>Focused Care · $149/month</h2>
+        <div>
+          <p><strong>Required before lab orders:</strong> The consultation alone does not include lab orders. An active Focused Care membership is required before any laboratory orders are placed.</p>
+          <p><strong>Monthly appointments:</strong> One scheduled clinician appointment each month for your focused care pathway, with progress monitoring and prescription or refill management when clinically appropriate.</p>
+          <p><strong>TRT labs included:</strong> Baseline testing, a check at 8 weeks, another 3 months later, then every 6 months, with clinician interpretation. Monitoring is personalized to your needs.</p>
+          <p><strong>Medication and delivery included:</strong> Prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed.</p>
+          <p><strong>Getting started:</strong> Your $69 consultation fee is credited toward your first membership month when you join. Pay $80 for the first month, then $149/month.</p>
+          <p><strong>Scheduled support:</strong> Clinical questions are handled during scheduled visits. Clinical messaging is not included; administrative help is available for appointments, forms, billing, and account support.</p>
+          <p><strong>Monthly renewal:</strong> After your paid $69 consultation, the first membership payment is $80 with the consultation credit. Membership then renews at $149/month until canceled. The consultation does not automatically enroll you. Your consultation and first membership month together total $149. Canceling stops future renewals; it does not prorate a month already purchased.</p>
+          <p><strong>Clinical eligibility:</strong> Care is for eligible adults physically located in California. Your clinician determines whether testing or treatment is appropriate. Payment does not guarantee a prescription or outcome.</p>
+          <Link className="primary-button" href={membership}>Join · $80 first month with consultation credit</Link>
+        </div>
+      </section>
+      <section className="membership-cta">
+        <div><p className="eyebrow">Begin with clarity</p><h2>A consultation before you commit.</h2><p>Start with a $69 conversation. Review the <Link href="/agreements/self-pay?purchase=initial&selection=Men%27s%20Health">consultation terms</Link> and, if you choose membership, the <Link href="/agreements/recurring-payments">renewal terms</Link>.</p></div>
+        <Link className="primary-button" href={consultation}>Book your $69 consultation</Link>
+      </section>
       <SiteFooter />
     </main>
   );

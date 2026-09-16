@@ -13,7 +13,7 @@ export const sermorelinArticles: SermorelinArticle[] = [
     slug: "sermorelin-sleep-recovery",
     title: "Build Better Sleep and Recovery with Sermorelin Peptide Care",
     description: "Connect sleep quality, overnight recovery, and daily performance through a clinician-guided sermorelin peptide plan.",
-    audience: "Adults ready for deeper recovery",
+    audience: "Adults ready for improved recovery",
     readTime: "4 min read",
     intro: "Restorative sleep drives physical repair, cognitive performance, metabolic health, and the energy you bring into each day. Sermorelin supports the body’s own growth-hormone signaling, creating a focused pathway for adults who want to strengthen sleep and recovery.",
     sections: [

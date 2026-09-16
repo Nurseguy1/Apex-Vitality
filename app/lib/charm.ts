@@ -14,8 +14,13 @@ export const charmLinks = {
       "https://phr2.charmtracker.com/login.sas",
   ),
   booking: safeHttpsUrl(
-    process.env.NEXT_PUBLIC_CHARM_BOOKING_URL ??
-      "https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=35c9756a5b86dc9f47cce5b694b4ef0616de10b798c099526e562f0cc7c6c38e2fc9c2738e1cf54df296ce50cba21ed4a0ae868b6eb0918a",
+    process.env.NEXT_PUBLIC_CHARM_BOOKING_URL,
+  ),
+  focusedBooking: safeHttpsUrl(
+    process.env.NEXT_PUBLIC_CHARM_FOCUSED_BOOKING_URL,
+  ),
+  comprehensiveBooking: safeHttpsUrl(
+    process.env.NEXT_PUBLIC_CHARM_COMPREHENSIVE_BOOKING_URL,
   ),
   newPatientCheckout: safeHttpsUrl(
     process.env.NEXT_PUBLIC_STRIPE_NEW_PATIENT_CHECKOUT_URL ??
@@ -24,5 +29,8 @@ export const charmLinks = {
   labPlanningCheckout: safeHttpsUrl(
     process.env.NEXT_PUBLIC_STRIPE_LAB_PLANNING_CHECKOUT_URL ??
       "https://buy.stripe.com/3cI8wQa8fdGo84TaNSfnO03",
+  ),
+  nationalCareCheckout: safeHttpsUrl(
+    process.env.NEXT_PUBLIC_NATIONAL_CARE_CHECKOUT_URL,
   ),
 };

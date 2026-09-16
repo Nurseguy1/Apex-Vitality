@@ -1,8 +1,8 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Link from "next/link";
 import type { Questionnaire, Question } from "./data";
-import { charmLinks } from "../lib/charm";
 
 function QuestionField({ question, answers }: { question: Question; answers: Record<string, string[]> }) {
   const common = { name: question.id, required: question.required };
@@ -12,8 +12,8 @@ function QuestionField({ question, answers }: { question: Question; answers: Rec
     <fieldset className="quiz-field">
       <legend>{question.label}{question.required && <span aria-hidden="true"> *</span>}</legend>
       {question.help && <p className="field-help urgent-help">{question.help}</p>}
-      {question.type === "text" && <textarea {...common} defaultValue={saved[0] ?? ""} rows={4} />}
-      {question.type === "number" && <input {...common} defaultValue={saved[0] ?? ""} type="number" min="0" />}
+      {question.type === "text" && <textarea {...common} aria-label={question.label} defaultValue={saved[0] ?? ""} rows={4} />}
+      {question.type === "number" && <input {...common} aria-label={question.label} defaultValue={saved[0] ?? ""} type="number" min="0" />}
       {question.type === "scale" && (
         <div className="scale-row" role="radiogroup" aria-label={question.label}>
           {Array.from({ length: 10 }, (_, index) => index + 1).map((value) => <label key={value}><input {...common} defaultChecked={saved.includes(String(value))} type="radio" value={value} /><span>{value}</span></label>)}
@@ -63,7 +63,7 @@ export default function QuestionnaireForm({ questionnaire }: { questionnaire: Qu
         <h2>You&apos;re ready for the next step.</h2>
         <p>Continue to the secure Apex patient portal to complete your care setup.</p>
         <p className="form-note">This website preview does not transmit or save your answers. Enter your information securely in the patient portal.</p>
-        {charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Continue securely ↗</a>}
+        <Link className="primary-button" href="/treatments">Continue to my care options →</Link>
         <button className="secondary-dark-button" type="button" onClick={() => { setSection(0); setComplete(false); setAnswers({}); }}>Review the questionnaire again</button>
       </section>
     );
