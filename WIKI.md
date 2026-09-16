@@ -2,18 +2,19 @@
 
 Updated: August 23, 2026
 
-## September 16, 2026 — Medication-inclusive men's health offer (prepared, not yet published)
+## September 16, 2026 — Medication-inclusive offer LIVE
 
-- Owner approved retaining $149/month and including prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed, plus monthly appointments and scheduled TRT labs.
-- Planned lab schedule: baseline, 8 weeks, 3 months later, then every 6 months; monitoring remains individualized. Replaces the old four-follow-up-checks-per-year language.
-- Updated men's health, memberships, offer data, checkout summary, purchase/member confirmations, FAQ, self-pay and recurring agreements, telehealth consent, care standards, and terms. Consultation confirmation now links directly to /book-consultation.
-- Existing $39 consultation is unchanged. Owner asked whether to charge $69 to offset a prospective $60-per-attendee marketing service. $69 was recommended for consideration but has NOT been authorized or implemented.
-- Production build and TypeScript passed; local route checks verified new inclusions on ten customer-facing pages and retained payment verification on confirmation routes.
-- NOT PUBLISHED: saved Vercel credential authenticates but lacks project/team access; browser is signed out. Requested owner sign-in.
-- STRIPE STILL NEEDS UPDATE: live $149 membership link https://buy.stripe.com/bJe9AUbcjauc3OD3lqfnO0g still describes medication/supplies/shipping as separate and four follow-up lab checks yearly. Stripe dashboard is signed out; local API key returns unauthorized. Requested owner sign-in. Check billing settings as checkout showed $149 billed monthly but a $0 total-due-today field during inspection; do not infer the cause until configuration is checked.
-- Existing consultation payment link: https://buy.stripe.com/eVqfZifsz6dWad17BGfnO0f . No new payment or subscription was submitted.
-- Next: update Stripe description and inspect billing settings, deploy and verify preview/public pages, inspect consultation checkout and Charm calendar without making real bookings, then record completion.
-- Financial estimates only: medication/shipping $23/month assuming 10mL at 0.75mL/week, labs $30/month placeholder, supplies $5/month placeholder, anastrozole $5/month placeholder. Total $63/month before clinical labor, payment fees, overhead, acquisition, and profit. Actual Quest fees remain unverified.
+- Website commit db8aa55 is published and verified on review.goapexvitality.com and www.goapexvitality.com. Production deployment 7EM7QZFJbFd2WHacCkwHsjV8A5XR is Ready / Current.
+- $149/month men's health Focused Care includes monthly scheduled appointments, baseline and scheduled follow-up TRT labs with interpretation, prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed.
+- Lab schedule: baseline, 8 weeks, 3 months later, then every 6 months, individualized as needed. Replaces old four-follow-up-checks-yearly wording.
+- $39 consultation remains unchanged. Owner asked about $69 to offset a proposed $60-per-attendee marketing service, but has not approved a price change.
+- Stripe product prod_V7fer2DhpcMDFM description updated and saved to match the website. Monthly payment link plink_1U7mDdLaIe44L2p9OoLmdjI0: $149 monthly, no trial, quantity fixed at 1; returns to /membership-complete?session_id={CHECKOUT_SESSION_ID}.
+- Consultation payment link plink_1U7mCrLaIe44L2p96hLR9zEV: $39 once; returns to /book-consultation?session_id={CHECKOUT_SESSION_ID}.
+- Both payment links now explicitly require full name and billing address. Verified persisted settings after page refresh. Previous transient $0 checkout display was not a configured free trial; dashboard preview shows $149 and trial setting is No.
+- Build and TypeScript passed. Ten live pages verified for consistent inclusions; California checkout gates on required acknowledgments. Booking iframe loads John Bagby's New Patient Consultation (15 mins) and progresses to the appointment calendar. No real payment, subscription, consent acceptance, or appointment request was submitted during verification.
+- Updated FAQ, terms, self-pay, renewal and telehealth agreements, care standards, offer data, checkout and confirmation copy. Post-consultation confirmation links directly to booking.
+- User signed into Vercel and Stripe to complete work. Old local Stripe API key is unauthorized; Vercel CLI credential lacks team access. Git push plus signed-in Vercel UI promotion worked.
+- Cost estimates remain: testosterone/shipping $23/month, labs $30/month, supplies $5/month, anastrozole $5/month; $63 total before clinical labor, fees, overhead, acquisition, and profit. Quest and supply estimates are not verified contracted rates.
 
 ## September 8, 2026 — Meeting presentation check
 
