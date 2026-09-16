@@ -2,6 +2,19 @@
 
 Updated: August 23, 2026
 
+## September 16, 2026 — Medication-inclusive men's health offer (prepared, not yet published)
+
+- Owner approved retaining $149/month and including prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed, plus monthly appointments and scheduled TRT labs.
+- Planned lab schedule: baseline, 8 weeks, 3 months later, then every 6 months; monitoring remains individualized. Replaces the old four-follow-up-checks-per-year language.
+- Updated men's health, memberships, offer data, checkout summary, purchase/member confirmations, FAQ, self-pay and recurring agreements, telehealth consent, care standards, and terms. Consultation confirmation now links directly to /book-consultation.
+- Existing $39 consultation is unchanged. Owner asked whether to charge $69 to offset a prospective $60-per-attendee marketing service. $69 was recommended for consideration but has NOT been authorized or implemented.
+- Production build and TypeScript passed; local route checks verified new inclusions on ten customer-facing pages and retained payment verification on confirmation routes.
+- NOT PUBLISHED: saved Vercel credential authenticates but lacks project/team access; browser is signed out. Requested owner sign-in.
+- STRIPE STILL NEEDS UPDATE: live $149 membership link https://buy.stripe.com/bJe9AUbcjauc3OD3lqfnO0g still describes medication/supplies/shipping as separate and four follow-up lab checks yearly. Stripe dashboard is signed out; local API key returns unauthorized. Requested owner sign-in. Check billing settings as checkout showed $149 billed monthly but a $0 total-due-today field during inspection; do not infer the cause until configuration is checked.
+- Existing consultation payment link: https://buy.stripe.com/eVqfZifsz6dWad17BGfnO0f . No new payment or subscription was submitted.
+- Next: update Stripe description and inspect billing settings, deploy and verify preview/public pages, inspect consultation checkout and Charm calendar without making real bookings, then record completion.
+- Financial estimates only: medication/shipping $23/month assuming 10mL at 0.75mL/week, labs $30/month placeholder, supplies $5/month placeholder, anastrozole $5/month placeholder. Total $63/month before clinical labor, payment fees, overhead, acquisition, and profit. Actual Quest fees remain unverified.
+
 ## September 8, 2026 — Meeting presentation check
 
 - Canonical production site: https://goapexvitality.com; Vercel project `apex-vitality`.

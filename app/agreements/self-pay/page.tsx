@@ -35,7 +35,7 @@ export default async function SelfPayAgreementPage({
         <h1>Agreement for self-payment of services</h1>
         <p>This agreement explains the financial terms for services purchased from {practiceContact.legalName}, operating as Apex Vitality. The exact price and included items for a purchase must be displayed before payment.</p>
 
-        {(isMensInitial || selection === "Focused Care Membership") && <p><strong>Consultation and membership:</strong> The $39 initial consultation may be purchased without membership. It is consultation only and does not include lab orders or testing. Before any lab orders, you must separately enroll in the $149/month Focused Care membership. Membership includes one scheduled appointment each month and four follow-up laboratory checks per year with testing costs and clinician interpretation. Purchasing both the consultation and first membership month totals $188. Membership renews monthly until canceled.</p>}
+        {(isMensInitial || selection === "Focused Care Membership") && <p><strong>Consultation and membership:</strong> The $39 initial consultation may be purchased without membership. It is consultation only and does not include lab orders or testing. Before any lab orders, you must separately enroll in the $149/month Focused Care membership. Membership includes one scheduled appointment each month and baseline and scheduled follow-up TRT labs, prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed. Purchasing both the consultation and first membership month totals $188. Membership renews monthly until canceled.</p>}
 
         <h2>Cash-pay services</h2>
         <p>Apex Vitality is a cash-pay practice unless a specific written offer states otherwise. Apex Vitality does not submit claims to health plans and does not promise that a health plan, flexible spending account, or health savings account will reimburse any charge. Upon request, Apex may provide an itemized receipt when appropriate.</p>
@@ -47,7 +47,7 @@ export default async function SelfPayAgreementPage({
         <p>Payment starts the administrative and clinical-review process. It does not establish medical eligibility and does not guarantee a diagnosis, prescription, laboratory order, refill, medication, or result. A licensed clinician independently determines whether a requested service or treatment is appropriate.</p>
 
         <h2>Included and separate charges</h2>
-        <p>The checkout description controls which Apex Vitality clinical services are included. Prescription medication, pharmacy charges, injection supplies, and medication shipping are always separate and paid by the patient. Laboratory testing, supplements, imaging, and other outside services are also separate unless the checkout expressly identifies them as included. You are responsible for charges you authorize and for providing accurate billing, shipping, and contact information.</p>
+        <p>The checkout description controls which Apex Vitality clinical services are included. The $149/month men’s health Focused Care membership includes prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed. Laboratory testing, supplements, imaging, and other outside services are also separate unless the checkout expressly identifies them as included. You are responsible for charges you authorize and for providing accurate billing, shipping, and contact information.</p>
 
         <h2>{isMembership ? "Membership and automatic renewal" : isProgram ? "Fixed three-month nutrition program" : "$39 initial-care payment"}</h2>
         {isMembership ? (
@@ -71,7 +71,7 @@ export default async function SelfPayAgreementPage({
         <p>{isProgram ? "If the reviewing clinician determines that you are not eligible for the Special Needs Nutrition Program before program services begin, Apex Vitality will refund the $597 program payment." : "If the reviewing clinician determines that you are not eligible for the selected care pathway, Apex Vitality will refund the $39 initial-care payment."} A recurring membership charge begins only after the patient separately chooses a membership, accepts its renewal terms, and completes its checkout.</p>
 
         <h2>When treatment is not authorized</h2>
-        <p>Clinical-care fees pay for the professional services described at checkout and do not guarantee a prescription. Medication is purchased separately from the dispensing pharmacy and is subject to that pharmacy&apos;s payment, cancellation, return, and refund policies.</p>
+        <p>Clinical-care fees pay for the professional services described at checkout and do not guarantee a prescription. Included medication is dispensed by an independent pharmacy. Medication outside the stated membership inclusions is paid separately and is subject to the pharmacy&apos;s payment, cancellation, return, and refund policies.</p>
 
         <h2>Appointments</h2>
         <p>Appointment cancellation, rescheduling, and missed-visit terms are stated in the <Link href="/terms">Terms of Service</Link> and any appointment-specific notice shown before payment. If a checkout notice conflicts with this agreement, contact Apex Vitality before paying.</p>

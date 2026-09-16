@@ -4,7 +4,7 @@ import { SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
   title: "Consultation & Focused Care Membership | Apex Vitality",
-  description: "Start with a $39 consultation for California Men's Hormone Health. A $149/month membership is required before lab orders and includes monthly appointments and four follow-up lab checks per year.",
+  description: "Men's Hormone Health: $149/month for care, labs, and prescribed medication. A $149/month membership is required before lab orders and includes monthly appointments, scheduled TRT labs, prescribed testosterone, supplies, and delivery.",
 };
 const consultation = "/start?treatment=Men%27s%20Health&plan=initial";
 const membership = "/start?treatment=Focused%20Care%20Membership&plan=ongoing";
@@ -21,7 +21,7 @@ export default function MembershipsPage() {
         <div className="membership-flow" aria-label="How to begin">
           <span><b>1</b><strong>Book a $39 consultation</strong><small>Pay once. No membership or recurring charge is required.</small></span>
           <span><b>2</b><strong>Discuss your goals</strong><small>Talk with your clinician about your concerns and whether further care makes sense.</small></span>
-          <span><b>3</b><strong>Join before lab orders</strong><small>If you proceed with laboratory orders, separately authorize the $149/month membership.</small></span>
+          <span><b>3</b><strong>Continue with membership</strong><small>Choose $149/month for ongoing care, labs, medication, supplies, and delivery.</small></span>
         </div>
       </section>
       <section className="membership-terms">
@@ -29,8 +29,9 @@ export default function MembershipsPage() {
         <div>
           <p><strong>Required before lab orders:</strong> The consultation alone does not include lab orders. An active Focused Care membership is required before any laboratory orders are placed.</p>
           <p><strong>Monthly appointments:</strong> One scheduled clinician appointment each month for your focused care pathway, with progress monitoring and prescription or refill management when clinically appropriate.</p>
-          <p><strong>Follow-up labs included:</strong> Four follow-up laboratory checks per year, including testing costs and clinician interpretation.</p>
-          <p><strong>Separate costs:</strong> The $39 New Patient Consultation, medication, pharmacy charges, supplies, shipping, and services outside the included appointments and follow-up labs are paid separately.</p>
+          <p><strong>TRT labs included:</strong> Baseline testing, a check at 8 weeks, another 3 months later, then every 6 months, with clinician interpretation. Monitoring is personalized to your needs.</p>
+          <p><strong>Medication and delivery included:</strong> Prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed.</p>
+          <p><strong>Getting started:</strong> The initial consultation is $39. Your ongoing membership is $149/month.</p>
           <p><strong>Scheduled support:</strong> Clinical questions are handled during scheduled visits. Clinical messaging is not included; administrative help is available for appointments, forms, billing, and account support.</p>
           <p><strong>Monthly renewal:</strong> $149 is charged when you enroll in membership, then monthly until canceled. The $39 consultation does not automatically enroll you. Purchasing both the consultation and first membership month totals $188. Canceling stops future renewals; it does not prorate a month already purchased.</p>
           <p><strong>Clinical eligibility:</strong> Care is for eligible adults physically located in California. Your clinician determines whether testing or treatment is appropriate. Payment does not guarantee a prescription or outcome.</p>

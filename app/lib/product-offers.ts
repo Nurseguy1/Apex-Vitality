@@ -101,7 +101,8 @@ const offers: Record<string, ProductOffer> = {
     included: [
       "Membership required before any laboratory orders",
       "One scheduled clinician appointment each month for your focused treatment pathway",
-      "Four follow-up lab checks per year, including testing costs and clinician interpretation",
+      "Baseline TRT labs and scheduled follow-up testing, including clinician interpretation",
+      "Prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed",
       "Prescription and refill management when clinically appropriate",
       "Focused progress monitoring during scheduled visits",
     ],

@@ -7,7 +7,7 @@ export const memberships = {
     cadence: "monthly",
     image: "/membership-initial-care-v1.png",
     intro: "Focused ongoing clinical support for patients who want one treatment pathway managed simply and consistently.",
-    features: ["Membership required before lab orders", "One scheduled appointment each month", "Four follow-up lab checks per year, including testing costs and interpretation", "Prescription and refill management", "Focused progress monitoring"],
+    features: ["Membership required before lab orders", "One scheduled appointment each month", "Baseline TRT labs and scheduled follow-up testing, including clinician interpretation", "Prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed", "Prescription and refill management", "Focused progress monitoring"],
     cta: "Choose Focused Care",
     includesComprehensiveVisit: false,
   },

@@ -153,8 +153,8 @@ export default function TelehealthConsentPage() {
         <h2>11. Fees, subscriptions, and insurance</h2>
         <p>
           You are responsible for the clinical-care fees disclosed before
-          purchase. Prescription medication, pharmacy charges, medication
-          supplies, and medication shipping are paid separately by the patient.
+          purchase. The men’s health Focused Care membership includes prescribed testosterone,
+          injection supplies, delivery, and anastrozole when prescribed.
           Laboratory or other third-party charges are also separate unless
           expressly listed as included. Payment or membership enrollment does
           not guarantee a prescription or treatment approval. Apex Vitality does

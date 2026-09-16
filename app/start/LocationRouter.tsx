@@ -26,6 +26,7 @@ export default function LocationRouter({
   const unavailable = state === "OTHER";
   const isRecurring = offer?.requiresRenewalConsent === true;
   const isFixedProgram = offer?.plan === "program";
+  const isMensMembership = selectedTreatment === "Focused Care Membership";
   const isMensInitial = selectedTreatment === "Men's Health" && offer?.plan === "initial";
 
   useEffect(() => {
@@ -79,8 +80,8 @@ export default function LocationRouter({
         <div className="location-router-heading">
           <p className="eyebrow">Complete your selection</p>
           <h1 id="purchase-title">{isMensInitial ? "Start with a $39 consultation." : offer?.plan === "ongoing" ? "Choose your membership." : isFixedProgram ? "Choose your three-month nutrition program." : "Start care with a one-time $39 payment."}</h1>
-          {isMensInitial && <p><strong>Consultation only. No membership is required for this visit.</strong> The $39 consultation does not include lab orders or testing. Before any lab orders, you must enroll separately in the $149/month Focused Care membership. Membership includes one appointment each month and four follow-up lab checks per year with testing costs and clinician interpretation.</p>}
-          <p>{offer?.plan === "ongoing" ? "Review the membership, approve the recurring payment terms, and continue to secure checkout. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy." : isFixedProgram ? "Review the fixed program, approve the one-time payment terms, and continue to secure checkout. This program does not renew automatically. Supplements, laboratory testing, and outside services are paid separately." : isMensInitial ? "Review the consultation terms and complete the one-time $39 checkout. You can schedule the initial consultation without joining a membership. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy." : selectedTreatment === "Establish Care" ? "If you are not sure which treatment you need, this one-time payment establishes your place in care. After you choose a membership, your initial appointment is 15 minutes with Focused Care or 45 minutes with Treatment, Performance, or Private Client. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy." : "This standard treatment pathway begins with a one-time $39 initial-care payment. Afterward, choose the care option that fits the level of support you want and schedule the appointment included with it. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy."}</p>
+          {isMensInitial && <p><strong>Consultation only. No membership is required for this visit.</strong> The $39 consultation does not include lab orders or testing. Before any lab orders, you must enroll separately in the $149/month Focused Care membership. Membership includes one appointment each month and baseline and scheduled follow-up TRT labs, prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed.</p>}
+          <p>{offer?.plan === "ongoing" ? "Your $149 monthly membership includes care, scheduled TRT labs, prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed. Review the renewal terms and continue to secure checkout." : isFixedProgram ? "Review the fixed program, approve the one-time payment terms, and continue to secure checkout. This program does not renew automatically. Supplements, laboratory testing, and outside services are paid separately." : isMensInitial ? "Review the consultation terms and complete the one-time $39 checkout. You can schedule the initial consultation without joining a membership. If you continue, the $149/month membership includes care, scheduled TRT labs, prescribed testosterone, supplies, and delivery." : selectedTreatment === "Establish Care" ? "If you are not sure which treatment you need, this one-time payment establishes your place in care. After you choose a membership, your initial appointment is 15 minutes with Focused Care or 45 minutes with Treatment, Performance, or Private Client. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy." : "This standard treatment pathway begins with a one-time $39 initial-care payment. Afterward, choose the care option that fits the level of support you want and schedule the appointment included with it. Medication is prescribed only when appropriate and is paid separately through the dispensing pharmacy."}</p>
           {selectedTreatment ? (
             <p className="location-prompt"><strong>{selectedTreatment}</strong>{planLabel ? ` · ${planLabel}` : ""}</p>
           ) : (
@@ -104,7 +105,7 @@ export default function LocationRouter({
           <article>
             <p className="result-kicker">Clinical care</p>
             <h2>Continue with {selectedTreatment}.</h2>
-            <p>{isFixedProgram ? "Your payment covers the scheduled clinical services shown below. It does not establish eligibility, guarantee a particular supplement recommendation, or guarantee a particular result." : "Your payment covers the selected Apex Vitality clinical-care plan. It does not establish eligibility or guarantee a prescription. Medication and pharmacy charges are separate and paid by you."}</p>
+            <p>{isFixedProgram ? "Your payment covers the scheduled clinical services shown below. It does not establish eligibility, guarantee a particular supplement recommendation, or guarantee a particular result." : isMensMembership ? "One monthly payment covers the care, scheduled labs, and prescribed medications listed below." : isMensInitial ? "Your $39 payment covers the initial consultation. You choose whether to join the $149/month membership afterward." : "Your payment covers the selected Apex Vitality clinical-care plan. Included items are listed below."}</p>
 
             {offer && (
               <section
@@ -121,7 +122,7 @@ export default function LocationRouter({
                     <span>{offer.billingLabel}</span>
                   </div>
                 </div>
-                <h4>Clinical services included</h4>
+                <h4>What’s included</h4>
                 <ul>
                   {offer.included.map((item) => <li key={item}>{item}</li>)}
                 </ul>
@@ -131,7 +132,7 @@ export default function LocationRouter({
                   ) : (
                     <>
                       <p><strong>Clinical decision:</strong> Payment requests clinician review but does not guarantee eligibility, a prescription, a particular formulation, or a particular dose.</p>
-                      <p><strong>Medication cost:</strong> Medication, pharmacy charges, supplies, and shipping are not included in this payment. They are paid separately by the patient through the dispensing pharmacy.</p>
+                      <p><strong>{isMensMembership ? "Medication included:" : "Ongoing membership:"}</strong> {isMensMembership ? "Prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed are included in your $149/month membership." : "The $149/month men’s health membership includes prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed."}</p>
                     </>
                   )}
                   {(selectedTreatment === "Metabolic & Gut Health" || selectedTreatment.includes("Special Needs Nutrition")) && <p><strong>Supplements:</strong> Clinician-recommended supplements and bundles may be purchased separately through Fullscript. Supplement purchases are not included in the clinical-care payment.</p>}
