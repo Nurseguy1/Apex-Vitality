@@ -63,8 +63,8 @@ const offers: Record<string, ProductOffer> = {
     treatment: "Men's Health",
     plan: "initial",
     planLabel: "New Patient Consultation only",
-    price: "$39",
-    billingLabel: "One-time $39 consultation · no membership required · lab orders excluded",
+    price: "$69",
+    billingLabel: "One-time $69 consultation · no membership required · lab orders excluded",
     included: ["One initial consultation to discuss your symptoms, history, and goals", "No membership required for this consultation", "Lab orders and testing excluded; membership required before any lab orders"],
   },
   "Metabolic & Gut Health|initial": {

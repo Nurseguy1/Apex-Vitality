@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const accessItems = [
   {
     title: "New to Apex Vitality?",
-    copy: "Book a $39 consultation without a membership. If you want lab orders, enroll separately in the $149/month membership.",
+    copy: "Book a $69 consultation without a membership. If you want lab orders, enroll separately in the $149/month membership.",
     href: "/memberships",
     label: "Begin care enrollment",
   },

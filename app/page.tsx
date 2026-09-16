@@ -68,7 +68,7 @@ export default function Home() {
             <div className={styles.pathCopy}>
               <p className={styles.kicker}>{path.eyebrow}</p><h2>{path.title}</h2><p>{path.copy}</p>
               <Link className={index === 0 ? styles.primaryCta : styles.darkCta} href={path.href}>{path.cta}</Link>
-              {index === 1 && <><p><strong>$39 initial consultation.</strong> No membership is needed for the consultation. Lab orders require the $149/month membership, which includes one appointment each month and four follow-up lab checks per year with testing costs and interpretation.</p><Link className={styles.darkCta} href="/memberships">View membership &amp; sign up</Link></>}
+              {index === 1 && <><p><strong>$69 initial consultation.</strong> No membership is needed for the consultation. Lab orders require the $149/month membership, which includes one appointment each month and baseline and scheduled follow-up TRT labs with interpretation, prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed.</p><Link className={styles.darkCta} href="/memberships">View membership &amp; sign up</Link></>}
             </div>
           </article>
         ))}

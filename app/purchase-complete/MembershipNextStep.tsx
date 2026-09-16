@@ -7,7 +7,7 @@ export default function MembershipNextStep({ california, purchasedItems }: { cal
     <section className="post-purchase-membership" aria-labelledby="choose-membership-title">
       <p className="eyebrow">Your next step</p>
       <h2 id="choose-membership-title">{membershipIncluded ? "Your Focused Care membership is enrolled." : "Start with your consultation."}</h2>
-      {!membershipIncluded && <p>Your $39 consultation lets you discuss your goals and whether further care is appropriate. No membership is needed for this visit. Choose an appointment time below.</p>}
+      {!membershipIncluded && <p>Your $69 consultation lets you discuss your goals and whether further care is appropriate. No membership is needed for this visit. Choose an appointment time below.</p>}
       <Link className="primary-button" href="/book-consultation">Book my consultation</Link>
       <div className="membership-default-callout">
         <strong>Lab orders require Focused Care · $149/month</strong>
