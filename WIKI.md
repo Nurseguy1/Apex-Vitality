@@ -2,6 +2,17 @@
 
 Updated: August 23, 2026
 
+## September 16, 2026 — Separate coaching and medical funnels
+
+- Owner confirmed two service lines and two advertising companies. Functional Medicine Fast Track's coaching team uses Scalerize for client intake/records and their own funnel; separate men's-health advertising team routes medical patients through CharmHealth.
+- Coaching entry tier: $99/month for self-paced videos and one monthly group Q&A with the coach. Higher tiers provide more personal attention; exact higher-tier pricing is not supplied.
+- Medical pricing remains $69 consultation credited toward first membership month ($80 first membership payment, then $149/month). Medical care requires physical presence in California at each visit.
+- Teams build their own sales landing pages. No automatic cross-enrollment, record sharing, or synchronization is authorized. No new CRM integration has been configured.
+- Proposed subdomains: coaching.goapexvitality.com and menshealth.goapexvitality.com. NOT created: each team must supply hosting/DNS targets. Teams may build funnels first; main-domain ownership stays with Apex.
+- Coaching landing/signup URL not supplied. Current main-site coaching path leads to coaching information and an enrollment inquiry, not the medical checkout. Existing clients are directed to their Scalerize welcome link.
+- Source b7af9f8 clarifies main-page choices, labels navigation Medical Membership / Medical Patient Portal, and adds the $99 coaching tier. Booking iframe now requires an explicit California selection. Initial blank and Outside California states hide the iframe; CA shows it; switching back removes it. Build/TypeScript and local route assertions passed.
+- Owner requested explicit directions for clients seeking foundational health and lifestyle coaching. Source 6e00104 changes the coaching label and directs clients from the homepage, medical membership page, and patient-access page to /gut-health. Preview deployment 3BnffYmLLGj3UTNhNmCPeRNXipq7 passed five route checks. Production AQNtaeaMLrrxBfyn6pU117g4AK1b is live. All five production route checks passed, including coaching $99 pricing, medical $80/$149 pricing, and the booking location-check text.
+
 ## September 16, 2026 — $69 consultation and first-month credit
 
 - Owner approved a $69 consultation and a full $69 credit toward the first Focused Care membership month: $80 first membership payment, then $149/month. Consultation plus first month totals $149. Supersedes the earlier $39/no-credit offer below.
