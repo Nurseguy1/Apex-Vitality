@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
-  title: "Functional Health & Lifestyle Coaching | Apex Vitality",
+  title: "Foundational Health & Lifestyle Coaching | Apex Vitality",
   description: "Root-cause-oriented gut-health education and wellness coaching for adults who still do not feel well even when conventional lab results are described as normal.",
 };
 
@@ -21,7 +21,7 @@ export default function GutHealthPage() {
       <SiteHeader />
       <section className="page-intro">
         <p className="eyebrow">Educational wellness coaching</p>
-        <h1>Functional Health &amp; Lifestyle Coaching</h1>
+        <h1>Foundational Health &amp; Lifestyle Coaching</h1>
         <p>Have you been told your labs are normal, yet you still do not feel like yourself? This coaching path gives you time to be heard, explore the bigger wellness picture, and build practical gut-health and metabolic habits.</p>
         <div className="hero-actions">
           <Link className="primary-button" href="/contact">Ask about coaching</Link>

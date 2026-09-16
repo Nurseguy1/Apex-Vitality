@@ -6,7 +6,7 @@ import styles from "./home.module.css";
 const carePaths = [
   {
     eyebrow: "Lifestyle education · Coaching",
-    title: "Functional Health & Lifestyle Coaching",
+    title: "Foundational Health & Lifestyle Coaching",
     copy: "Build healthier habits around nutrition, movement, sleep, stress, and gut health. Start with self-paced video lessons and a monthly group Q&A with your coach.",
     image: "/program-metabolic-couple-v1.png",
     href: "/gut-health",
@@ -56,7 +56,7 @@ export default function Home() {
       <section className={styles.intro}>
         <p className={styles.kicker}>Choose your route</p>
         <h2>Two services. One clear decision.</h2>
-        <p>Choose the path that speaks to your goals and the kind of support you want right now.</p>
+        <p>Clients seeking foundational health and lifestyle coaching: choose the coaching path below. For men’s health medical evaluation and treatment in California, choose the medical care path.</p>
       </section>
 
       <section className={styles.pathStack} id="care" aria-label="Apex Vitality service choices">

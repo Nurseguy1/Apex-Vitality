@@ -43,7 +43,7 @@ export default function PatientAccessPage() {
         <p className="eyebrow">Men&apos;s Health medical patients only</p>
         <h1>Secure medical-patient access through CharmHealth.</h1>
         <p>Medical care is for patients physically located in California at the time of each visit. Scheduling, clinical intake, assigned forms, and patient communication take place through the secure CharmHealth workflow.</p>
-        <p>Looking for lifestyle coaching? <Link href="/gut-health">Go to coaching information and enrollment</Link>. Existing coaching clients should use their Scalerize invitation.</p>
+        <p>Clients seeking foundational health and lifestyle coaching: <Link href="/gut-health">Follow the coaching path here</Link>. Existing coaching clients should use their Scalerize invitation.</p>
       </section>
       <section className="patient-access-grid">
         {accessItems.map((item, index) => (
