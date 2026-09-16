@@ -48,7 +48,7 @@
 .pathPanel:nth-child(even) .pathImage { order: 2; }
 .pathImage { position: relative; min-height: 500px; }
 .pathImage img,.supportImage img { object-fit: cover; }
-.pathPanel:nth-child(1) .pathImage img { object-position: center 32%; }
+.pathPanel:nth-child(1) .pathImage img { object-position: 87% center; }
 .pathPanel:nth-child(2) .pathImage img { object-position: 82% 48%; }
 .pathPanel:nth-child(3) .pathImage img { object-position: 72% 45%; }
 .pathCopy { align-self: center; padding: clamp(48px,7vw,104px); }
@@ -93,8 +93,14 @@
   .pathStack { padding-right: 16px; padding-left: 16px; }
   .pathPanel { border-radius: 22px; }
   .pathImage { min-height: 330px; }
-  .pathPanel:nth-child(1) .pathImage img { object-position: center 30%; }
+  .pathPanel:nth-child(1) .pathImage img { object-position: 87% center; }
   .pathPanel:nth-child(2) .pathImage img { object-position: 82% center; }
   .pathPanel:nth-child(3) .pathImage img { object-position: 70% 42%; }
   .supportImage img { object-position: 67% center; }
+}
+
+/* Keep both coaching subjects visible when the text makes a narrow card tall. */
+@media (min-width: 901px) and (max-width: 1100px) {
+  .pathPanel:first-child { grid-template-columns: 1fr; }
+  .pathPanel:first-child .pathImage { min-height: 0; aspect-ratio: 16 / 9; }
 }
