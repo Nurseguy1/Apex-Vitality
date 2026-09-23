@@ -1,3 +1,10 @@
+## California-only enrollment — September 23, 2026
+- Owner now restricts BOTH foundational health/lifestyle coaching and men’s health to people physically located in California during appointments.
+- Shared CaliforniaEligibility gate hides coaching enrollment and booking links/calendars until California is selected; Outside California blocks continuation. Medical checkout retains its CA gate and validates restored location values.
+- Homepage and service-area wording reflect California-only availability for both paths.
+- This is a website self-attestation gate, not geolocation verification. Independently shared Stripe/Charm links and third-party team funnels still require matching intake restrictions; no external CRM configuration was changed.
+- Build and local coaching positive/negative UI checks passed. Live deployment verification recorded in task response.
+
 # Apex Vitality Project Wiki
 
 Updated: August 23, 2026
