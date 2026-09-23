@@ -31,7 +31,8 @@ export default function LocationRouter({
   const isMensInitial = selectedTreatment === "Men's Health" && offer?.plan === "initial";
 
   useEffect(() => {
-    setState(window.sessionStorage.getItem("apex-checkout-state") ?? "");
+    const savedState = window.sessionStorage.getItem("apex-checkout-state");
+    setState(savedState === "CA" || savedState === "OTHER" ? savedState : "");
     const careAccepted = window.sessionStorage.getItem("apex-care-terms-accepted") === "true";
     const coverageAccepted = window.sessionStorage.getItem("apex-coverage-eligibility-attested") === "true";
     const renewalAccepted = window.sessionStorage.getItem("apex-recurring-accepted") === "true";
@@ -182,7 +183,7 @@ export default function LocationRouter({
                 <h3>Clinical care is currently limited to California.</h3>
                 <p>Please do not purchase this program if you will be physically located outside California during care. Join us later as additional service areas become available.</p>
               </div>
-            ) : state && checkoutUrl ? (
+            ) : state === "CA" && checkoutUrl ? (
               (!isMensMembership || consultationPaid) && careTermsAccepted && coverageEligibilityAttested && (!isRecurring || recurringAccepted) ? <a className="primary-button" href={checkoutUrl}>Continue to secure Stripe checkout · {isMensMembership ? "$80 first month" : offer?.price ?? ""}</a> : <p className="location-router-note"><strong>Review and accept all required acknowledgments to continue.</strong></p>
             ) : state ? (
               <div className="scheduler-pending">

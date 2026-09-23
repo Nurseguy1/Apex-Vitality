@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import CaliforniaEligibility from "../components/CaliforniaEligibility";
 import { SiteFooter, SiteHeader } from "../components";
 
 export const metadata: Metadata = {
@@ -20,11 +21,11 @@ export default function GutHealthPage() {
     <main className="gut-health-page">
       <SiteHeader />
       <section className="page-intro">
-        <p className="eyebrow">Educational wellness coaching</p>
+        <p className="eyebrow">Educational wellness coaching · California only</p>
         <h1>Foundational Health &amp; Lifestyle Coaching</h1>
         <p>Have you been told your labs are normal, yet you still do not feel like yourself? This coaching path gives you time to be heard, explore the bigger wellness picture, and build practical gut-health and metabolic habits.</p>
         <div className="hero-actions">
-          <Link className="primary-button" href="/contact">Ask about coaching</Link>
+          <Link className="primary-button" href="#coaching-membership">Ask about coaching</Link>
           <Link className="secondary-button" href="#coaching">See what coaching includes</Link>
         </div>
       </section>
@@ -48,7 +49,9 @@ export default function GutHealthPage() {
           <h2>Group coaching · $99/month</h2>
           <p>Build healthier routines with self-paced video lessons and one monthly group Q&amp;A with your coach. Explore nutrition, movement, sleep, stress, and gut health at a pace that fits your life.</p>
           <p>Higher coaching tiers offer more personalized attention. Ask about the available options and pricing.</p>
-          <a className="primary-button" href="mailto:apexvitality5@gmail.com?subject=Coaching%20enrollment">Ask about coaching enrollment</a>
+          <CaliforniaEligibility>
+            <a className="primary-button" href="mailto:apexvitality5@gmail.com?subject=California%20coaching%20enrollment">Ask about coaching enrollment</a>
+          </CaliforniaEligibility>
           <p>Already enrolled? Use the Scalerize access link from your coaching welcome email for lessons, group sessions, and client support.</p>
         </div>
       </section>
@@ -80,7 +83,7 @@ export default function GutHealthPage() {
           <p className="eyebrow">Start with a conversation</p>
           <h2>Bring your questions. Leave with a clearer direction.</h2>
           <p>Tell us what still feels unresolved and what you want to understand. We will identify the coaching priorities that can help you move forward with greater clarity and consistency.</p>
-          <Link className="primary-button" href="/contact">Contact Apex Vitality</Link>
+          <Link className="primary-button" href="#coaching-membership">Contact Apex Vitality</Link>
           <p className="coaching-scope-note"><strong>Important information:</strong> Gut Health &amp; Metabolic Balance is an educational wellness-coaching service and does not diagnose or treat medical conditions, prescribe or change medication, order diagnostic testing as medical care, or provide clinical interpretation of laboratory results. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department. For an urgent medical concern, seek prompt care from an appropriate urgent-care or medical provider.</p>
         </div>
       </section>

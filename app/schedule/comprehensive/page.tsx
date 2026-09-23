@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../../components";
+import CaliforniaEligibility from "../../components/CaliforniaEligibility";
 import { charmLinks } from "../../lib/charm";
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export default function ComprehensiveVisitPage() {
           <h2>Standalone Comprehensive Consultation · $325</h2>
           <p>Review your history, goals, lifestyle, and recent lab results together, then build a personalized plan for your next steps.</p>
           <p>By continuing, you confirm that you will be physically located in California when clinical care is provided.</p>
-          {charmLinks.newPatientCheckout && <a className="primary-button" href={charmLinks.newPatientCheckout} rel="noreferrer" target="_blank">Pay $325 and schedule ↗</a>}
+          <CaliforniaEligibility>{charmLinks.newPatientCheckout && <a className="primary-button" href={charmLinks.newPatientCheckout} rel="noreferrer" target="_blank">Pay $325 and schedule ↗</a>}</CaliforniaEligibility>
         </article>
         <p className="alternate-start"><Link href="/schedule">← Start with the $39 initial visit instead</Link></p>
       </section>

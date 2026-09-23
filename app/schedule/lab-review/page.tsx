@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../../components";
+import CaliforniaEligibility from "../../components/CaliforniaEligibility";
 import { charmLinks } from "../../lib/charm";
 
 export const metadata: Metadata = {
@@ -23,11 +24,13 @@ export default function LabReviewSchedulePage() {
           <p>The calendar below is powered by CharmHealth and presented in the Apex Vitality experience.</p>
         </div>
         {charmLinks.booking ? (
+          <CaliforniaEligibility>
           <div className="scheduler-frame">
             <a className="scheduler-mobile-launch" href={charmLinks.booking} rel="noreferrer" target="_blank">Open secure scheduler full screen ↗</a>
             <iframe src={charmLinks.booking} title="Schedule an Apex Vitality lab-review and treatment-planning visit through CharmHealth" loading="eager" referrerPolicy="strict-origin-when-cross-origin" />
             <p>Secure scheduling is provided by CharmHealth.</p>
           </div>
+          </CaliforniaEligibility>
         ) : (
           <div className="scheduler-pending"><h2>Online scheduling is being configured.</h2><p>Please return soon. Do not send medical information through ordinary email.</p></div>
         )}

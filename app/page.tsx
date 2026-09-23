@@ -23,7 +23,7 @@ const carePaths = [
 ];
 
 const steps = [
-  ["1", "Choose your route", "Choose lifestyle coaching or California men’s health medical care."],
+  ["1", "Choose your route", "Choose lifestyle coaching or men’s health medical care. Both paths serve California only."],
   ["2", "Review the details", "See which service best matches your goals and the support you want."],
   ["3", "Begin with clarity", "Take the next step with personalized guidance and a plan for moving forward."],
 ];
@@ -36,7 +36,7 @@ export default function Home() {
         <div className={styles.heroCopy}>
           <p className={styles.kicker}>Two focused paths to better health</p>
           <h1>Start with what matters most.</h1>
-          <p className={styles.heroLead}>Choose lifestyle coaching for healthier daily habits, or men’s health medical care for hormone evaluation and treatment. Medical visits are for patients physically located in California.</p>
+          <p className={styles.heroLead}>Choose lifestyle coaching for healthier daily habits, or men’s health medical care for hormone evaluation and treatment. Both services are available only to people physically located in California during appointments.</p>
           <div className={styles.actions}>
             <Link className={styles.primaryCta} href="/gut-health">Explore coaching</Link>
             <Link className={styles.secondaryCta} href="/mens-health">Men’s health · California</Link>
@@ -68,7 +68,7 @@ export default function Home() {
             <div className={styles.pathCopy}>
               <p className={styles.kicker}>{path.eyebrow}</p><h2>{path.title}</h2><p>{path.copy}</p>
               <Link className={index === 0 ? styles.primaryCta : styles.darkCta} href={path.href}>{path.cta}</Link>
-              {index === 0 && <p><strong>Group coaching starts at $99/month.</strong> Includes self-paced videos and one monthly group Q&amp;A. Higher tiers offer more personal support.</p>}
+              {index === 0 && <p><strong>Group coaching starts at $99/month · California only.</strong> Includes self-paced videos and one monthly group Q&amp;A. Higher tiers offer more personal support.</p>}
               {index === 1 && <><p><strong>For patients physically located in California.</strong></p><p><strong>$69 initial consultation—credited toward your first month when you join.</strong> No membership is needed for the consultation. Lab orders require the $149/month membership, which includes one appointment each month and baseline and scheduled follow-up TRT labs with interpretation, prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed.</p><Link className={styles.darkCta} href="/memberships">View medical membership</Link></>}
             </div>
           </article>
