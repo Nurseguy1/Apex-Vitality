@@ -17,7 +17,8 @@ export default async function StartPage({
   searchParams: Promise<{ treatment?: string; plan?: string; nextMembership?: string }>;
 }) {
   const { treatment = "", plan = "", nextMembership = "" } = await searchParams;
-  const currentOffer = (treatment === "Men's Health" && plan === "initial") || (treatment === "Focused Care Membership" && plan === "ongoing");
+  if ((treatment === "Men's Health" || treatment === "Establish Care") && plan === "initial") redirect("/book-consultation");
+  const currentOffer = plan === "ongoing" && ["Apex Treatment Membership", "Apex Performance Membership", "Apex Private Client Care"].includes(treatment);
   if (!currentOffer) redirect("/memberships");
   const checkoutUrl = getProductCheckout(treatment, plan);
   const offer = getProductOffer(treatment, plan);
