@@ -78,6 +78,10 @@ The women's site uses the same eStore. Its current logo/Home links return to the
 
 ## Before the next application change
 
+### Booking confirmation investigation — October 17, 2026
+
+The owner reported that two successful test submissions returned to the booking form without an obvious confirmation. Both test appointments were confirmed in Charm and subsequently canceled through Cancel Appointment. No patient details belong in this repository. The exact final patient-facing success message and cause of the reset remain unverified. The website has no booking redirect handler; the calendar is a cross-origin Charm iframe. Embed settings expose no custom success-message editor. Guidance above the calendar now directs visitors to their confirmation email and asks them to contact Apex instead of submitting a duplicate if the calendar resets. This is guidance, not detection or proof of successful booking. Do not implement an unconditional success state on iframe load. A real success screen still requires a supported, verified Charm callback or integration.
+
 1. Fetch GitHub and start from current `main`; inspect local changes before switching branches.
 2. Keep environment files, patient records, sponsor billing information, and caches out of Git.
 3. Follow the source map in README. Use the pnpm lockfile and supported Node version.
