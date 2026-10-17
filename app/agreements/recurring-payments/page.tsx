@@ -18,9 +18,9 @@ export default function RecurringPaymentsPage() {
         <p>This page describes the rules that apply when you affirmatively enroll in an Apex Vitality membership or another automatically renewing service. It does not enroll you by itself.</p>
 
         <h2>Disclosures before enrollment</h2>
-        <p>Before you agree, the checkout must clearly display the amount charged, billing frequency, renewal period, included clinical services, minimum commitment if any, and how to cancel. The men’s health Focused Care membership includes prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed. These terms must appear close to the enrollment control.</p>
+        <p>Before you agree, the checkout must clearly display the amount charged, billing frequency, renewal period, included clinical services, minimum commitment if any, and how to cancel. These terms must appear close to the enrollment control.</p>
 
-        <h2>Consultation credit</h2>
+        <h2>Free first consultation</h2>
         <p>Your first consultation is free. Membership charges begin only after you choose and authorize a membership.</p>
 
         <h2>Your affirmative authorization</h2>
