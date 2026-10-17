@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
+import CaliforniaEligibility from "../components/CaliforniaEligibility";
 import { charmLinks } from "../lib/charm";
 import { getVerifiedCheckout } from "../lib/stripe-checkout";
 
@@ -20,7 +21,7 @@ export default async function MembershipCompletePage({ searchParams }: { searchP
   const { session_id = "" } = await searchParams;
   const checkout = await getVerifiedCheckout(session_id);
   const membership = membershipDetails.find((option) => checkout?.items.some((item) => option.pattern.test(item)));
-  const verified = checkout?.mode === "subscription" && checkout.state === "CA" && membership;
+  const verified = checkout?.mode === "subscription" && membership;
 
   return (
     <main>
@@ -29,6 +30,7 @@ export default async function MembershipCompletePage({ searchParams }: { searchP
         <p className="eyebrow">Membership enrollment</p>
         <h1>{verified ? `${membership.name} is active.` : "Complete your membership setup."}</h1>
 
+        <CaliforniaEligibility>
         {verified && membership.duration === 45 ? (
           <section className="included-visit-card">
             <p className="eyebrow">Step 3 of 3</p>
@@ -58,6 +60,7 @@ export default async function MembershipCompletePage({ searchParams }: { searchP
           <p className="screening-notice">We could not verify a completed California membership checkout from this link. Use the return link from Stripe or continue to patient access for help.</p>
         )}
 
+        </CaliforniaEligibility>
         <p><Link className="primary-button" href="/patient-access">Continue to patient access</Link></p>
       </article>
       <SiteFooter />
