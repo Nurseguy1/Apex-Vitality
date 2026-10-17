@@ -25,7 +25,7 @@ export default async function SelfPayAgreementPage({
   const isMembership = purchase === "membership";
   const isProgram = purchase === "program";
   const isMensInitial = !isMembership && selection === "Men's Health";
-  const membershipPrice = membershipPrices[selection] ?? "$149 per month";
+  const membershipPrice = membershipPrices[selection] ?? "the price displayed at checkout";
 
   return (
     <main className="self-pay-page">
@@ -46,7 +46,7 @@ export default async function SelfPayAgreementPage({
         <p>Payment starts the administrative and clinical-review process. It does not establish medical eligibility and does not guarantee a diagnosis, prescription, laboratory order, refill, medication, or result. A licensed clinician independently determines whether a requested service or treatment is appropriate.</p>
 
         <h2>Included and separate charges</h2>
-        <p>The checkout description controls which Apex Vitality clinical services are included. The $149/month men’s health Focused Care membership includes prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed. Laboratory testing, supplements, imaging, and other outside services are also separate unless the checkout expressly identifies them as included. You are responsible for charges you authorize and for providing accurate billing, shipping, and contact information.</p>
+        <p>The checkout description controls which Apex Vitality clinical services are included. Laboratory testing, supplements, imaging, and other outside services are also separate unless the checkout expressly identifies them as included. You are responsible for charges you authorize and for providing accurate billing, shipping, and contact information.</p>
 
         <h2>{isMembership ? "Membership and automatic renewal" : isProgram ? "Fixed three-month nutrition program" : "Free first consultation"}</h2>
         {isMembership ? (
