@@ -31,12 +31,12 @@ export default function NutritionQuestionnaire() {
   if (step === 4) {
     return (
       <section className="nutrition-route-result" aria-live="polite">
-        <p className="eyebrow">Your preview pathway</p>
+        <p className="eyebrow">Your starting pathway</p>
         <span className={`nutrition-route-pill route-${comprehensive ? "comprehensive" : "foundation"}`}>{result}</span>
         <h2>{comprehensive ? "Begin with a fuller clinical conversation." : "Start with a defined three-month nutrition plan."}</h2>
         <p>{comprehensive ? "One or more answers deserve a more complete review before program enrollment or supplement decisions. A longer visit can connect feeding safety, growth, medical history, medications, and nutrition goals." : focused ? "Your answers point to a specific nutrition or digestive priority that can be addressed through the written plan and two scheduled follow-up adjustments." : "Your answers fit the three-month pathway: caregiver-guided clinician review, a practical written nutrition plan, and two scheduled follow-up visits."}</p>
         <div className="nutrition-result-actions"><button className="secondary-dark-button" type="button" onClick={() => setStep(1)}>Review again</button><Link className="primary-button" href="/nutrition-support/care-options">See this care option →</Link></div>
-        <small>This preview does not provide a diagnosis, transmit answers, or replace the secure clinical intake.</small>
+        <small>This questionnaire does not provide a diagnosis, transmit answers, or replace the secure clinical intake.</small>
       </section>
     );
   }

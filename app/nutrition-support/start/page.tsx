@@ -15,8 +15,8 @@ export default function NutritionSupportStartPage() {
         <div className="nutrition-form-intro">
           <p className="eyebrow">Apex Daily Nutrition Support for Special Needs · Step 1</p>
           <h1>A simple place to start.</h1>
-          <p>This preview shows the short questionnaire a caregiver would complete. It gathers the essentials first; answers that need more attention can open a focused follow-up instead of making every family complete a long intake.</p>
-          <div className="preview-note"><strong>Preview only</strong><span>These answers are not saved or transmitted.</span></div>
+          <p>Start with a short questionnaire about your priorities and daily routines. Complete your clinical intake through the secure patient portal.</p>
+          <div className="preview-note"><strong>About this questionnaire</strong><span>These answers are not saved or transmitted.</span></div>
         </div>
         <NutritionQuestionnaire />
       </section>
