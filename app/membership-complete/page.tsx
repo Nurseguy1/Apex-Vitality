@@ -37,7 +37,7 @@ export default async function MembershipCompletePage({ searchParams }: { searchP
             <h2>Schedule your included 45-minute comprehensive initial appointment.</h2>
             <p>This is your initial appointment for the higher membership you selected. Bring your history, goals, medications, and any recent laboratory results so your clinician can build the broader care plan with you.</p>
             {charmLinks.comprehensiveBooking ? (
-              <a className="primary-button" href={charmLinks.comprehensiveBooking}>Schedule my included visit →</a>
+              <div className="consultation-calendar"><iframe src={charmLinks.comprehensiveBooking} title="Schedule your included appointment — select New Patient Visit (45 mins)" loading="eager" referrerPolicy="strict-origin-when-cross-origin" /></div>
             ) : (
               charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Open Charm to schedule my 45-minute appointment ↗</a>
             )}
@@ -49,7 +49,7 @@ export default async function MembershipCompletePage({ searchParams }: { searchP
             <h2>Schedule your membership appointment.</h2>
             <p>Schedule your included appointment through the secure patient system.</p>
             {charmLinks.focusedBooking ? (
-              <a className="primary-button" href={charmLinks.focusedBooking}>Schedule my membership appointment →</a>
+              <div className="consultation-calendar"><iframe src={charmLinks.focusedBooking} title="Schedule your membership appointment" loading="eager" referrerPolicy="strict-origin-when-cross-origin" /></div>
             ) : (
               charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Open Charm to schedule my appointment ↗</a>
             )}
