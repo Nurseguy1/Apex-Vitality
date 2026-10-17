@@ -32,7 +32,7 @@ function TourFrame({ page }: { page: (typeof pages)[number] }) {
 
   return (
     <section className="review-tour-page" id={page.id}>
-      <iframe ref={frameRef} src={page.src} title={`${page.title} preview`} style={{ height }} onLoad={() => { fitFrame(); window.setTimeout(fitFrame, 600); }} />
+      <iframe ref={frameRef} src={page.src} title={page.title} style={{ height }} onLoad={() => { fitFrame(); window.setTimeout(fitFrame, 600); }} />
     </section>
   );
 }
