@@ -26,7 +26,7 @@ export function SiteHeader() {
           <Link href="/patient-access">Medical Patient Portal</Link>
         </nav>
       </details>
-      <Link className="header-action" href="/#care">Choose a Route</Link>
+      <Link className="header-action" href="/book-consultation">Free First Consultation</Link>
     </header>
   );
 }
@@ -36,7 +36,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div>
         <strong>Apex Vitality</strong>
-        <p>Personalized guidance and support for Gut Health clients and Men&apos;s Hormone Health patients.</p>
+        <p>A place to talk about men&apos;s health and lifestyle concerns and feel heard.</p>
         <address>
           {practiceContact.legalName}<br />
           {practiceContact.addressLine1}<br />
@@ -59,14 +59,13 @@ export function SiteFooter() {
         <Link href="/california-privacy">California Privacy</Link>
         <Link href="/notice-of-privacy-practices">HIPAA Notice</Link>
         <Link href="/telehealth-consent">Telehealth Consent</Link>
-        <Link href="/treatment-consents/hormone-therapy">Hormone Therapy Consent</Link>
         <Link href="/agreements/self-pay">Self-Pay Agreement</Link>
         <Link href="/agreements/recurring-payments">Recurring Payments</Link>
         <Link href="/terms">Terms &amp; Medical Disclaimer</Link>
       </nav>
       <p className="footer-disclaimer">
         Wellness-coaching information is educational and is not medical advice, diagnosis, or treatment.
-        Medical treatment and prescriptions require an appropriate evaluation by a licensed clinician and are offered only where legally permitted and clinically appropriate.
+        Medical care requires an appropriate evaluation by a licensed clinician.
         Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation.
       </p>
       {charmLinks.portal && <a className="footer-portal-link" href={charmLinks.portal} rel="noreferrer" target="_blank">Secure Charm patient login ↗</a>}

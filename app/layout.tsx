@@ -9,11 +9,11 @@ const siteUrl = "https://goapexvitality.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Apex Vitality | Gut Health Coaching & Men’s Hormone Health",
+    default: "Apex Vitality | Men’s Health & Lifestyle Consultations",
     template: "%s",
   },
   description:
-    "Inclusive gut-health and metabolic-balance wellness coaching and focused California men's medical care.",
+    "A place to talk about lifestyle and health concerns and feel heard. Schedule your free first consultation with John Bagby, FNP-C in California.",
   applicationName: "Apex Vitality",
   category: "healthcare",
   keywords: [
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Apex Vitality | Gut Health Coaching & Men’s Hormone Health",
+    title: "Apex Vitality | Men’s Health & Lifestyle Consultations",
     description:
-      "Two focused paths: gut-health and metabolic-balance wellness coaching and California men's medical care.",
+      "Personalized conversations about men’s health and lifestyle concerns. Your first consultation is free.",
     type: "website",
     siteName: "Apex Vitality",
     locale: "en_US",
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Apex Vitality | Gut Health Coaching & Men’s Hormone Health",
-    description: "California men's medical care and inclusive wellness coaching.",
+    title: "Apex Vitality | Men’s Health & Lifestyle Consultations",
+    description: "Men’s health and lifestyle consultations in California.",
     images: ["/og.png"],
   },
 };
@@ -73,7 +73,7 @@ const organizationSchema = {
       logo: `${siteUrl}/favicon.svg`,
       image: `${siteUrl}/og.png`,
       description:
-        "Apex Vitality provides focused men's medical care for eligible adults located in California and a distinct educational gut-health and metabolic-balance wellness-coaching pathway.",
+        "Apex Vitality offers personalized men’s health and lifestyle consultations for adults located in California.",
       address: {
         "@type": "PostalAddress",
         streetAddress: practiceContact.addressLine1,
@@ -85,7 +85,7 @@ const organizationSchema = {
       employee: {
         "@type": "Person",
         name: practiceContact.clinician,
-        jobTitle: "Family Nurse Practitioner",
+        jobTitle: "FNP-C",
         identifier: practiceContact.npi,
       },
       medicalSpecialty: [
