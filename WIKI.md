@@ -130,3 +130,11 @@ These signed-in observations supersede historical assumptions of present connect
 Do not interpret restoring the website source as verifying account-level authorization, clinical ordering, fulfillment, or end-to-end patient use. No clinical orders, prescriptions, paid subscriptions, or new account enrollments were created during this audit.
 
 Strive official provider portal verified from its Account link: `https://host5d.lifefile.net/application_main_zfw/login/login/vendor_name/strivepharmacy/access/doctor`. Existing account must be used; do not create a replacement. Fullscript consent is awaiting explicit approval to send patient identifying/contact details and prescriptions.
+
+### Strive account verification — October 18, 2026
+
+Owner signed into the existing Strive LifeFile account. The portal identifies Apex Vitality and John Bagby, with StriveAZ-Gilbert selected and StriveMO-St.Louis also available. The provider control panel is accessible; opening eRx reaches Patient Selection. No patient was selected or created, no prescription or order was submitted, and no pharmacy, billing, or shipping setting was changed. This confirms provider portal access, not prescription fulfillment or automatic Charm/website synchronization. Fullscript data-sharing approval remains pending.
+
+### Fullscript connection attempt — October 18, 2026
+
+Owner explicitly approved the described patient-data sharing. Consent checkbox was selected, but Choose your Fullscript Account did not open a dialog or authorization tab using native and Playwright button interactions, including after one page reload. Browser reported a Charm prescription-script error: Identifier PrescriptionHtml has already been declared. Whether that error causes the button failure is unproven. No OAuth authorization or provider association has completed; Fullscript must not be marked connected. Owner was shown the setup page to attempt the account-selector button directly.
