@@ -108,3 +108,25 @@ Historical pharmacy notes: Strive/LifeFile onboarding progressed in August; Sept
 - Stripe: keep the same account and restored current tier checkout paths; do not reintroduce retired consultation prices or promotions. Automated Stripe-to-Charm sync remains separate and unfinished.
 - eStore: retain `https://fm.goapexvitality.com/estore` in a separate tab, with the shared women's-store setup preserved.
 - Scalerize: keep the existing separate coaching invitation path; do not migrate medical records to it.
+
+## Live integration audit — October 18, 2026
+
+These signed-in observations supersede historical assumptions of present connectivity:
+
+| Service | Current observed status |
+|---|---|
+| Charm public calendar | Original saved calendar loads consultation (30 minutes) and new-patient visit (45 minutes). Final success-screen persistence still untested. |
+| Quest | Lab Integration Requests shows the Quest bidirectional live interface is active. No clinical order submitted. |
+| Charm TeleHealth | Provider is Enabled for California. No live video session started. |
+| Fullscript | Settings displays consent and Choose your Fullscript Account, not a connected-provider list. Account reconnection and data-sharing approval requested. Earlier notes stating enabled are historical, not current proof. |
+| Charm eRx | Provider shows Not Enabled. |
+| EPCS | Manager asks for facility landline/fax configuration before enrollment. No enrollment started or submitted. |
+| Pharmacy fulfillment | Custom pharmacy directory is empty; that does not establish the state of the independent Strive/LifeFile workflow. Owner confirmed Strive on October 18. The official Strive Account link leads to its LifeFile provider portal. Portal currently requires sign-in; owner asked to sign in for verification. No pharmacy account or routing changed. |
+| Fax | Incoming and outgoing services enabled. |
+| Patient email | Confirmation, reschedule, cancellation, reminder, shared labs/documents/visit summaries, PHR welcome and appointment questionnaire notifications enabled. |
+| Stripe monthly plans | All three live checkouts load the correct membership and monthly amount: 499, 749, 1250 USD. No payment submitted. |
+| Shared eStore | Public access-request page loads at fm.goapexvitality.com/estore. No request or purchase submitted. |
+
+Do not interpret restoring the website source as verifying account-level authorization, clinical ordering, fulfillment, or end-to-end patient use. No clinical orders, prescriptions, paid subscriptions, or new account enrollments were created during this audit.
+
+Strive official provider portal verified from its Account link: `https://host5d.lifefile.net/application_main_zfw/login/login/vendor_name/strivepharmacy/access/doctor`. Existing account must be used; do not create a replacement. Fullscript consent is awaiting explicit approval to send patient identifying/contact details and prescriptions.
