@@ -94,3 +94,17 @@ The owner reported that two successful test submissions returned to the booking 
 ## Original Charm integration restored — October 18, 2026
 
 Compared the pre-redesign tag with the current booking components after the owner reported the old site did not reset after confirmation. The iframe wrapper is identical (eager loading and strict-origin-when-cross-origin referrer policy); the saved original calendar digest differs from the replacement. Restored the original calendar URL from the tag in both booking URL locations, and restored the original CaliforniaBooking component without the temporary duplicate-booking warning. Free 30-minute consultation copy and the California gate remain. No redirect handler was added, and the digest difference is not established as the cause of the reset. Verify public calendar availability and the final confirmation behavior separately; do not claim the reset is fixed based on calendar loading alone.
+
+## Preserve all existing integrations — October 18, 2026
+
+Owner instruction: the redesign must preserve all previously working external services, including Charm, telehealth, Quest, pharmacy, Fullscript, payment services, and the shared eStore. A design change is not authorization to replace accounts, create duplicate clinical workflows, or reset vendor configuration.
+
+Source audit against `production-before-redesign-2026-10-16`: all 12 literal external URLs in the original application source remain present. No pharmacy or Fullscript API/client implementation or direct Fullscript URL was present in that baseline website code. Fullscript is documented as enabled through Charm, with an active practitioner account and Fullscript Labs. Preserve that account-level workflow. The source audit does not prove live account connectivity or successful fulfillment.
+
+Historical pharmacy notes: Strive/LifeFile onboarding progressed in August; September 16 records the owner's report of a Strive clinic-billing/patient-shipping option. Pharmacy Hub was an earlier candidate. These notes are not a current end-to-end verification. Do not reset the pharmacy connection or advertise a new integration based on these notes. Verify the actual existing account and prescription routing before claiming operational pharmacy fulfillment.
+
+- Charm calendar: restored the saved original URL and iframe, with the current free 30-minute consultation. Public calendar loading verified; final confirmation persistence not retested.
+- Charm portal, forms, video, Quest and Fullscript: retain the same EHR account and existing native workflows; no vendor settings were changed in the source restoration. Historical video/Quest test evidence is archived above.
+- Stripe: keep the same account and restored current tier checkout paths; do not reintroduce retired consultation prices or promotions. Automated Stripe-to-Charm sync remains separate and unfinished.
+- eStore: retain `https://fm.goapexvitality.com/estore` in a separate tab, with the shared women's-store setup preserved.
+- Scalerize: keep the existing separate coaching invitation path; do not migrate medical records to it.
