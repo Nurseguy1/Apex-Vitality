@@ -3,64 +3,46 @@ import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
 import CaliforniaEligibility from "../components/CaliforniaEligibility";
 import { charmLinks } from "../lib/charm";
-import { getVerifiedCheckout } from "../lib/stripe-checkout";
+import { annualMemberships } from "../lib/membership-catalog";
+import { getVerifiedMembershipCheckout } from "../lib/stripe-checkout";
 
 export const metadata: Metadata = {
   title: "Membership Complete | Apex Vitality",
   robots: { index: false, follow: false },
 };
-
-const membershipDetails = [
-  { pattern: /Private Client/i, name: "Apex Private Client Care", duration: 45 },
-  { pattern: /Performance Membership/i, name: "Apex Performance Membership", duration: 45 },
-  { pattern: /Treatment Membership/i, name: "Apex Treatment Membership", duration: 45 },
-  { pattern: /Focused Care Membership/i, name: "Focused Care Membership", duration: 15 },
-];
+const membershipDetails = Object.values(annualMemberships);
 
 export default async function MembershipCompletePage({ searchParams }: { searchParams: Promise<{ session_id?: string }> }) {
   const { session_id = "" } = await searchParams;
-  const checkout = await getVerifiedCheckout(session_id);
-  const membership = membershipDetails.find((option) => checkout?.items.some((item) => option.pattern.test(item)));
-  const verified = checkout?.mode === "subscription" && membership;
-
+  const checkout = await getVerifiedMembershipCheckout(session_id, membershipDetails.map((offer) => offer.product));
+  const membership = membershipDetails.find((option) => option.product === checkout?.membershipProduct);
   return (
     <main>
       <SiteHeader />
       <article className="legal-page membership-complete-page">
         <p className="eyebrow">Membership enrollment</p>
-        <h1>{verified ? `${membership.name} is active.` : "Complete your membership setup."}</h1>
-
-        <CaliforniaEligibility>
-        {verified && membership.duration === 45 ? (
-          <section className="included-visit-card">
-            <p className="eyebrow">Step 3 of 3</p>
-            <h2>Schedule your included 45-minute comprehensive initial appointment.</h2>
-            <p>This is your initial appointment for the higher membership you selected. Bring your history, goals, medications, and any recent laboratory results so your clinician can build the broader care plan with you.</p>
-            {charmLinks.comprehensiveBooking ? (
-              <div className="consultation-calendar"><iframe src={charmLinks.comprehensiveBooking} title="Schedule your included appointment — select New Patient Visit (45 mins)" loading="eager" referrerPolicy="strict-origin-when-cross-origin" /></div>
-            ) : (
-              charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Open Charm to schedule my 45-minute appointment ↗</a>
-            )}
-            {!charmLinks.comprehensiveBooking && <p className="booking-help">In Charm, open <strong>Appointments</strong> and select the 45-minute comprehensive initial appointment. New patients will receive secure account instructions during onboarding.</p>}
-          </section>
-        ) : verified ? (
-          <section className="included-visit-card">
-            <p className="eyebrow">Step 3 of 3</p>
-            <h2>Schedule your membership appointment.</h2>
-            <p>Schedule your included appointment through the secure patient system.</p>
-            {charmLinks.focusedBooking ? (
-              <div className="consultation-calendar"><iframe src={charmLinks.focusedBooking} title="Schedule your membership appointment" loading="eager" referrerPolicy="strict-origin-when-cross-origin" /></div>
-            ) : (
-              charmLinks.portal && <a className="primary-button" href={charmLinks.portal} rel="noreferrer" target="_blank">Open Charm to schedule my appointment ↗</a>
-            )}
-            {!charmLinks.focusedBooking && <p className="booking-help">In Charm, open <strong>Appointments</strong> and request your Focused Care membership appointment. New patients will receive secure account instructions during onboarding.</p>}
-            <p><Link className="membership-existing-link" href="/memberships">Review your membership details →</Link></p>
-          </section>
+        <h1>{membership ? `${membership.name} is active.` : "Complete your membership setup."}</h1>
+        {membership ? (
+          <CaliforniaEligibility>
+            <section className="included-visit-card">
+              <p className="eyebrow">Step 3 of 3</p>
+              <h2>Schedule your included 45-minute comprehensive initial appointment.</h2>
+              <p>Your membership includes this initial appointment. Bring your history, goals, medications, and any recent laboratory results so your clinician can build the broader care plan with you.</p>
+              {charmLinks.comprehensiveBooking ? (
+                <div className="consultation-calendar"><iframe src={charmLinks.comprehensiveBooking} title="Schedule your included appointment — select New Patient Visit (45 mins)" loading="eager" referrerPolicy="strict-origin-when-cross-origin" /></div>
+              ) : (
+                <p>Please contact Apex for help scheduling your included appointment.</p>
+              )}
+            </section>
+          </CaliforniaEligibility>
         ) : (
-          <p className="screening-notice">We could not verify a completed California membership checkout from this link. Use the return link from Stripe or continue to patient access for help.</p>
+          <section className="included-visit-card">
+            <h2>Confirm your membership to schedule.</h2>
+            <p>We could not confirm an active, paid membership from this link. Use your Stripe checkout return link. If you have already paid, contact Apex for help before purchasing again.</p>
+            <p><a href="mailto:apexvitality5@gmail.com">Contact Apex for scheduling help</a>. Keep health information in your secure patient portal.</p>
+            <p><Link href="/#memberships">Review memberships →</Link></p>
+          </section>
         )}
-
-        </CaliforniaEligibility>
         <p><Link className="primary-button" href="/patient-access">Continue to patient access</Link></p>
       </article>
       <SiteFooter />
