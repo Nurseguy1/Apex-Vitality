@@ -1,13 +1,13 @@
 # Apex Vitality project wiki
 
-Current as of October 16, 2026. This page supersedes the earlier launch notes, which are retained in [the historical wiki](docs/history/WIKI-before-2026-10-16.md). Historical prices and readiness claims are not current instructions.
+Current as of October 18, 2026. This page supersedes the earlier launch notes, which are retained in [the historical wiki](docs/history/WIKI-before-2026-10-16.md). Historical prices and readiness claims are not current instructions.
 
 ## Current production and Git workflow
 
 - Public site: https://www.goapexvitality.com (apex domain redirects to the public site).
 - GitHub repository: `Nurseguy1/Apex-Vitality`.
 - Canonical development baseline: `main`, synchronized with the published men's-health source. Start future work from updated `main` on a focused branch.
-- Tonight's application changes were published from `agent/stripe-checkout-preview`; this branch is preserved for history, not the baseline for new work.
+- The original redesign was published from `agent/stripe-checkout-preview`; that branch is preserved for history. Current application changes are published from `main`.
 - Active local checkout: `/Users/johnbagby/Documents/Codex/2026-07-14/let/apex-vitality-stripe-ready`.
 - Canonical Vercel project: `apex-vitality`, team `abcdef4`, project ID `prj_rfbZeOcGshHaq2b7LifA7mDz3V38`.
 - The old Vercel project `create-a` also automatically builds the repository and can hold up the build queue. It is not the production target. Duplicate builds were canceled; the project and its Git connection were not deleted or reconfigured.
@@ -40,8 +40,8 @@ The current FAQ and patient-access pages explain the free 30-minute consultation
 - Annual pages live at `/checkout/annual?tier=treatment`, `performance`, or `private`. Server-side checkout uses fixed amounts/product IDs in `app/lib/membership-catalog.ts`; clients cannot supply prices. Existing annual Stripe prices are looked up by stable keys, or created idempotently at the approved amounts.
 - Annual acknowledgments include California, coverage, care terms, annual payment in full, and annual renewal. Checkout metadata records that acknowledgment. The server rejects missing acknowledgments, invalid tiers, and mismatched Stripe prices.
 - `STRIPE_SECRET_KEY` was entered privately into Vercel by the owner for Production and Preview. The old local key is unauthorized. Never print or commit either key.
-- `/membership-complete` verifies the Stripe checkout server-side before displaying member booking. It embeds Charm on the authorized clinic domain rather than sending patients to an unauthorized direct calendar URL.
-- No real payment, paid subscription, patient legal acceptance, or appointment was submitted during verification. Annual checkout was checked with mocked server tests, TypeScript, hosted builds, and page-level price checks; a real completed annual payment has not been tested.
+- `/membership-complete` checks a completed paid checkout, a fixed medical membership product ID, and a currently active subscription with a paid latest invoice and an unexpired billing period before rendering member booking. It embeds Charm on the authorized clinic domain. This does not enforce membership inside Charm or establish patient identity; receipt links remain transferable.
+- No real payment or paid subscription was submitted during payment verification. Separate explicitly authorized test appointments were created and canceled; see the booking retest below. Annual checkout was checked with mocked server tests, TypeScript, hosted builds, and page-level price checks; a real completed annual payment has not been tested.
 - There is no Stripe webhook endpoint, durable enrollment database, or Stripe-to-Charm synchronization implemented in this repository. Do not describe payment verification as full EHR integration.
 
 ## Corporate care: pending activation
@@ -115,13 +115,13 @@ These signed-in observations supersede historical assumptions of present connect
 
 | Service | Current observed status |
 |---|---|
-| Charm public calendar | Original saved calendar loads consultation (30 minutes) and new-patient visit (45 minutes). Final success-screen persistence still untested. |
-| Quest | Lab Integration Requests shows the Quest bidirectional live interface is active. No clinical order submitted. |
+| Charm public calendar | Both visit types load. Successful booking confirmation was observed, followed by an iframe reset to service selection after 30 seconds. Test appointment canceled; vendor support issue remains open. |
+| Quest | Bidirectional live interface active. Saved 13-test panel reached electronic order review in a nonclinical test chart; canceled before transmission and test order marked Expired. No order sent or charge created. Delivery/results remain untested. |
 | Charm TeleHealth | Provider is Enabled for California. No live video session started. |
-| Fullscript | Settings displays consent and Choose your Fullscript Account, not a connected-provider list. Account reconnection and data-sharing approval requested. Earlier notes stating enabled are historical, not current proof. |
+| Fullscript | Existing account Linked to Apex Vitality; John Bagby provider mapping Enabled after owner completed authorization. No supplement order transmitted. Earlier disconnected observations below are historical. |
 | Charm eRx | Provider shows Not Enabled. |
 | EPCS | Manager asks for facility landline/fax configuration before enrollment. No enrollment started or submitted. |
-| Pharmacy fulfillment | Custom pharmacy directory is empty; that does not establish the state of the independent Strive/LifeFile workflow. Owner confirmed Strive on October 18. The official Strive Account link leads to its LifeFile provider portal. Portal currently requires sign-in; owner asked to sign in for verification. No pharmacy account or routing changed. |
+| Pharmacy fulfillment | Owner uses Strive. Existing LifeFile provider account opened successfully and eRx reached Patient Selection. No prescription or fulfillment order submitted; end-to-end delivery untested. Charm-native eRx remains separate. |
 | Fax | Incoming and outgoing services enabled. |
 | Patient email | Confirmation, reschedule, cancellation, reminder, shared labs/documents/visit summaries, PHR welcome and appointment questionnaire notifications enabled. |
 | Stripe monthly plans | All three live checkouts load the correct membership and monthly amount: 499, 749, 1250 USD. No payment submitted. |
@@ -158,3 +158,14 @@ Verification: mocked Stripe payment/subscription regression tests in `tests/memb
 
 
 Published and verified: production deployment `Em6xPgyMetSdTkTRPwAtJHpiYjcT` (commit `3f4060d`) reached Ready; the live `/membership-complete` page without a receipt shows membership-verification help and renders no calendar. All 15 mocked Stripe regression checks and the production build passed; no live payment was submitted. Owner chose to keep instant booking after reviewing Charm’s alternative free-consult-only request form, which would require manual appointment confirmation. No Charm calendar setting or embed was saved or replaced. The shared-calendar limitation therefore remains explicit.
+
+
+## End-of-day handoff — October 18, 2026
+
+- Published booking copy in commit `6997e34`, verified on the live `/book-consultation` page: **“For your free first consultation, select New Patient Consultation (30 mins).”** The following sentence clarifies that the 45-minute New Patient Visit is for enrolled members. Production build passed. This is guidance, not a technical restriction of Charm’s shared calendar.
+- Owner elected to keep instant booking. The available free-consult-only embed alternative would collect preferred times and require manual confirmation; no replacement embed or calendar setting was saved. Review active paid membership before providing member care when a patient books through the shared calendar or portal.
+- Website payment checks are deployed and covered by 15 mocked Stripe regression checks; the live no-receipt screen renders no member calendar. Actual completed live payments remain untested.
+- Quest walkthrough used the saved 13-test Men’s Health Baseline panel in an existing explicitly nonclinical chart. Electronic review showed the configured Quest account, tests, billing choices, and LIS/PSC actions. Neither final transmission button was used. The newly created internal test order was marked Expired; the older test order was left unchanged. No new diagnosis mapping or specimen collection details were entered. No real lab order or billing action was performed.
+- Remaining work: Charm API access and automatic Stripe-to-Charm administrative membership synchronization; booking-confirmation reset with Charm support; sponsor billing details and corporate enrollment accounting; end-to-end payment, lab-result, telehealth, and pharmacy fulfillment verification as appropriate. Existing native services and provider access do not prove every end-to-end workflow.
+- Scope for future synchronization: only the three men’s-health medical memberships and separately mapped corporate members. Functional medicine/coaching clients must not be automatically enrolled into Charm based on Stripe email or general account activity.
+- Preserve the existing vendor accounts, original-site backup, and Git history. Do not put patient details, credentials, or private sponsor rates in Git. An unrelated untracked duplicate test file was observed during this documentation update and was left untouched.
