@@ -17,6 +17,8 @@ const nextConfig: NextConfig = {
       { source: "/nutrition-support/:path*", destination: "/gut-health", permanent: false },
       { source: "/standout/:path*", destination: "/", permanent: false },
       { source: "/how-it-works", destination: "/", permanent: false },
+      { source: "/schedule", destination: "/patient-access", permanent: false },
+      { source: "/schedule/lab-review", destination: "/membership-complete", permanent: false },
       { source: "/schedule/:path*", destination: "/mens-health", permanent: false },
       { source: "/questionnaires", destination: "/", permanent: false },
       { source: "/questionnaires/metabolic-weight", destination: "/", permanent: false },
