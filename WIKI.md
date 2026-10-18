@@ -88,3 +88,7 @@ The owner reported that two successful test submissions returned to the booking 
 4. Run TypeScript and the production build for application changes; test the affected patient path without creating real records or charges.
 5. Verify a preview from the canonical Vercel project, publish intentionally, then verify the public domain. Keep the source commit and deployment traceable.
 6. Treat corporate automation and EHR sync as unfinished until Charm access, durable state, authentication, idempotent event handling, cancellation behavior, and integration testing are actually in place.
+
+## Original Charm integration restored — October 18, 2026
+
+Compared the pre-redesign tag with the current booking components after the owner reported the old site did not reset after confirmation. The iframe wrapper is identical (eager loading and strict-origin-when-cross-origin referrer policy); the saved original calendar digest differs from the replacement. Restored the original calendar URL from the tag in both booking URL locations, and restored the original CaliforniaBooking component without the temporary duplicate-booking warning. Free 30-minute consultation copy and the California gate remain. No redirect handler was added, and the digest difference is not established as the cause of the reset. Verify public calendar availability and the final confirmation behavior separately; do not claim the reset is fixed based on calendar loading alone.

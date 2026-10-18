@@ -14,13 +14,13 @@ export const charmLinks = {
       "https://phr2.charmtracker.com/login.sas",
   ),
   booking: safeHttpsUrl(
-    "https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=35c9756a5b86dc9f47cce5b694b4ef068fa75e121a80e417e0fab6bfd60eea1d3da030e7f293979af296ce50cba21ed4a0ae868b6eb0918a",
+    "https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=35c9756a5b86dc9f47cce5b694b4ef065c5d870db24188dc9cc35e4fb8368a0566e98fcf386c0141f296ce50cba21ed4a0ae868b6eb0918a",
   ),
   focusedBooking: safeHttpsUrl(
-    "https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=35c9756a5b86dc9f47cce5b694b4ef068fa75e121a80e417e0fab6bfd60eea1d3da030e7f293979af296ce50cba21ed4a0ae868b6eb0918a",
+    "https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=35c9756a5b86dc9f47cce5b694b4ef065c5d870db24188dc9cc35e4fb8368a0566e98fcf386c0141f296ce50cba21ed4a0ae868b6eb0918a",
   ),
   comprehensiveBooking: safeHttpsUrl(
-    "https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=35c9756a5b86dc9f47cce5b694b4ef068fa75e121a80e417e0fab6bfd60eea1d3da030e7f293979af296ce50cba21ed4a0ae868b6eb0918a",
+    "https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=35c9756a5b86dc9f47cce5b694b4ef065c5d870db24188dc9cc35e4fb8368a0566e98fcf386c0141f296ce50cba21ed4a0ae868b6eb0918a",
   ),
   newPatientCheckout: safeHttpsUrl(
     process.env.NEXT_PUBLIC_STRIPE_NEW_PATIENT_CHECKOUT_URL ??
