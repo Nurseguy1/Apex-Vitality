@@ -138,3 +138,7 @@ Owner signed into the existing Strive LifeFile account. The portal identifies Ap
 ### Fullscript connection attempt — October 18, 2026
 
 Owner explicitly approved the described patient-data sharing. Consent checkbox was selected, but Choose your Fullscript Account did not open a dialog or authorization tab using native and Playwright button interactions, including after one page reload. Browser reported a Charm prescription-script error: Identifier PrescriptionHtml has already been declared. Whether that error causes the button failure is unproven. No OAuth authorization or provider association has completed; Fullscript must not be marked connected. Owner was shown the setup page to attempt the account-selector button directly.
+
+### Fullscript connection confirmed — October 18, 2026
+
+After the owner continued the setup and requested a refresh, the signed-in Charm Fullscript settings showed John Bagby’s existing Fullscript account Linked to Apex Vitality and FNP John Bagby mapped with status Enabled. No Associate, Delete, patient-information update, or prescription-transmission action was performed during verification. This supersedes the earlier disconnected/setup-blocked observation. No supplement order was transmitted as a test.
