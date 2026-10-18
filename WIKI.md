@@ -52,6 +52,8 @@ The corporate Stripe product and an empty sponsor customer placeholder exist. No
 
 ## Charm: what works and what is pending
 
+Historical clinical operations are retained in `docs/history/charm-operations-before-redesign.md`. The older operations wiki records that Charm video was tested successfully and Quest was connected, with a dummy-chart lab-order workflow tested September 4 (no real order transmitted in that recorded test). The owner reports video visits and Quest ordering worked on the prior site. These existing EHR functions are separate from the unfinished website/Stripe API synchronization; the redesign does not require rebuilding them. Do not reset or replace the active Charm account. Earlier prices and visit durations in the archive are superseded by the current offer below.
+
 - The public embed calendar loads on the authorized clinic site. Both consultation and 45-minute initial member visits are offered.
 - New Patient Consultation was changed in Charm to 30 minutes with charge 0.00; the public label was verified. New Patient Visit remains 45 minutes. No existing appointments were edited.
 - Brief New Patient Intake, Consent to Care/Telehealth/Communications, and HIPAA acknowledgment are assigned to both new-patient visit types.
