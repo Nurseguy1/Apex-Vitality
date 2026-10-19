@@ -118,7 +118,7 @@ These signed-in observations supersede historical assumptions of present connect
 | Charm public calendar | Both visit types load. Successful booking confirmation was observed, followed by an iframe reset to service selection after 30 seconds. Test appointment canceled; vendor support issue remains open. |
 | Quest | Bidirectional live interface active. Saved 13-test panel reached electronic order review in a nonclinical test chart; canceled before transmission and test order marked Expired. No order sent or charge created. Delivery/results remain untested. |
 | Charm TeleHealth | Provider is Enabled for California. No live video session started. |
-| Fullscript | Existing account Linked to Apex Vitality; John Bagby provider mapping Enabled after owner completed authorization. No supplement order transmitted. Earlier disconnected observations below are historical. |
+| Fullscript | Disabled at owner request on October 18 due to concern about add-on costs. Account link removed; Add-ons now shows Enable Now. No supplement order transmitted. Earlier linked/enabled observations below are historical. |
 | Charm eRx | Provider shows Not Enabled. |
 | EPCS | Manager asks for facility landline/fax configuration before enrollment. No enrollment started or submitted. |
 | Pharmacy fulfillment | Owner uses Strive. Existing LifeFile provider account opened successfully and eRx reached Patient Selection. No prescription or fulfillment order submitted; end-to-end delivery untested. Charm-native eRx remains separate. |
@@ -169,3 +169,10 @@ Published and verified: production deployment `Em6xPgyMetSdTkTRPwAtJHpiYjcT` (co
 - Remaining work: Charm API access and automatic Stripe-to-Charm administrative membership synchronization; booking-confirmation reset with Charm support; sponsor billing details and corporate enrollment accounting; end-to-end payment, lab-result, telehealth, and pharmacy fulfillment verification as appropriate. Existing native services and provider access do not prove every end-to-end workflow.
 - Scope for future synchronization: only the three men’s-health medical memberships and separately mapped corporate members. Functional medicine/coaching clients must not be automatically enrolled into Charm based on Stripe email or general account activity.
 - Preserve the existing vendor accounts, original-site backup, and Git history. Do not put patient details, credentials, or private sponsor rates in Git. An unrelated untracked duplicate test file was observed during this documentation update and was left untouched.
+
+
+## Fullscript disabled and cost preference — October 18, 2026
+
+Owner requested disabling the Charm Fullscript add-on after learning it may involve charges. Removed the existing Fullscript association from Charm. Verified the setup screen returned to “Choose your Fullscript Account” and Charm Add-ons displays “Enable Now” for Fullscript. The independent Fullscript account was not closed, and no patient record or supplement order was deleted. This supersedes earlier linked/enabled status. No invoice, refund, cancellation fee, or previously accrued charge was verified; do not claim prior charges were reversed.
+
+Owner preference: disclose setup fees, subscription fees, usage charges, and possible costs before enabling or subscribing to services. If pricing is unclear, say so and check before proceeding. Do not reactivate Fullscript without discussing costs and obtaining the owner’s authorization.
