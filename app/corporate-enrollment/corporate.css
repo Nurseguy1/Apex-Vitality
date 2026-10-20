@@ -1,0 +1,8 @@
+.corporate-company-form { display: grid; gap: 12px; max-width: 560px; margin: 32px 0; }
+.corporate-company-form label { font-weight: 700; }
+.corporate-company-form input { width: 100%; box-sizing: border-box; padding: 14px 16px; border: 1px solid #879c9e; border-radius: 8px; background: #fff; color: #162c30; font: inherit; }
+.corporate-company-form input:focus-visible { outline: 3px solid #148080; outline-offset: 3px; }
+.corporate-company-form .primary-button { justify-self: start; }
+.corporate-edit-company { border: 0; padding: 4px; background: transparent; color: inherit; text-decoration: underline; font: inherit; cursor: pointer; }
+.corporate-booking-note { padding: 20px; border: 1px solid #b9cecc; border-radius: 12px; background: #f3f9f8; margin: 24px 0; }
+.corporate-note-text { font-weight: 700; overflow-wrap: anywhere; user-select: all; }

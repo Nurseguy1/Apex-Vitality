@@ -28,7 +28,7 @@ The homepage uses the existing Apex photos, with the California badge positioned
 | Apex Performance | $749/month or $7,490/year. |
 | Apex Private Client Care | $1,250/month or $12,500/year. |
 | Included member initial visit | 45-minute comprehensive New Patient Visit after enrollment in one of the three tiers. |
-| Corporate care | `/corporate-enrollment` leads to secure consultation booking. The sponsoring company pays; clients do not enter personal payment cards. Booking alone does not activate corporate membership. |
+| Corporate care | `/corporate-enrollment` requires a typed company name (no dropdown), then opens immediate registration/scheduling for a 45-minute initial visit in Charm after California confirmation. Clients copy the displayed company note into the appointment Reason field. Sponsor pays; no personal card. Apex verifies sponsorship before the visit without delaying scheduling. |
 
 Monthly and annual memberships renew at their selected frequency until canceled. Annual payment is paid in full, not monthly installments. Applicable tax is shown at checkout. The $69 consultation, $80 first month, and CONSULT69 first-month credit are retired. The former Focused Care Stripe product was repurposed for company-sponsored care and must not be used as an individual self-pay route.
 
@@ -176,3 +176,12 @@ Published and verified: production deployment `Em6xPgyMetSdTkTRPwAtJHpiYjcT` (co
 Owner requested disabling the Charm Fullscript add-on after learning it may involve charges. Removed the existing Fullscript association from Charm. Verified the setup screen returned to “Choose your Fullscript Account” and Charm Add-ons displays “Enable Now” for Fullscript. The independent Fullscript account was not closed, and no patient record or supplement order was deleted. This supersedes earlier linked/enabled status. No invoice, refund, cancellation fee, or previously accrued charge was verified; do not claim prior charges were reversed.
 
 Owner preference: disclose setup fees, subscription fees, usage charges, and possible costs before enabling or subscribing to services. If pricing is unclear, say so and check before proceeding. Do not reactivate Fullscript without discussing costs and obtaining the owner’s authorization.
+
+
+## Simple corporate enrollment — October 20, 2026
+
+Owner chose a typed company-name entry, not a dropdown, invitation, verification code, approval queue, or automated eligibility service. Any nonblank company name can continue; this is self-reported sponsorship, not proof of eligibility. Scheduling proceeds immediately; Apex will text the company separately before the actual visit. No automated message to any company is authorized or implemented.
+
+The page embeds the existing Charm calendar for patient registration and scheduling and instructs corporate clients to select New Patient Visit (45 mins). The browser-only company entry is not saved, sent to Stripe, or automatically inserted into Charm. The page provides a copy button for “Corporate Care — [company]” and instructs clients to paste it into Reason for appointment so it reaches the practice with the booking. Do not claim automatic company attribution or enrollment counting. A refresh clears the local company entry. No clinical data is collected by the website form.
+
+No new paid service, database, email provider, Stripe subscription, sponsor charge, or company account was created for this change. Each sponsor’s billing details, approved enrolled-client count, and billing activation still need separate setup. Existing Stripe processing/Billing charges remain applicable when corporate billing is activated. Functional medicine, self-pay membership payment checks, and Charm settings are unchanged.
