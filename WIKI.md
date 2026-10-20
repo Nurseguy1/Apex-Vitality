@@ -1,6 +1,6 @@
 # Apex Vitality project wiki
 
-Current as of October 18, 2026. This page supersedes the earlier launch notes, which are retained in [the historical wiki](docs/history/WIKI-before-2026-10-16.md). Historical prices and readiness claims are not current instructions.
+Current as of October 20, 2026. This page supersedes the earlier launch notes, which are retained in [the historical wiki](docs/history/WIKI-before-2026-10-16.md). Historical prices and readiness claims are not current instructions.
 
 ## Current production and Git workflow
 
@@ -185,3 +185,15 @@ Owner chose a typed company-name entry, not a dropdown, invitation, verification
 The page embeds the existing Charm calendar for patient registration and scheduling and instructs corporate clients to select New Patient Visit (45 mins). The browser-only company entry is not saved, sent to Stripe, or automatically inserted into Charm. The page provides a copy button for “Corporate Care — [company]” and instructs clients to paste it into Reason for appointment so it reaches the practice with the booking. Do not claim automatic company attribution or enrollment counting. A refresh clears the local company entry. No clinical data is collected by the website form.
 
 No new paid service, database, email provider, Stripe subscription, sponsor charge, or company account was created for this change. Each sponsor’s billing details, approved enrolled-client count, and billing activation still need separate setup. Existing Stripe processing/Billing charges remain applicable when corporate billing is activated. Functional medicine, self-pay membership payment checks, and Charm settings are unchanged.
+
+
+## Corporate automatic billing implementation — October 20, 2026
+
+Owner clarified the trigger: company-name entry unlocks scheduling; a successfully confirmed corporate appointment starts one recurring subscription for that client on the sponsoring company's card. Eligibility is checked manually before the visit and must not delay scheduling. Calendar loading, abandoned signup, and company-name entry alone must not charge. Repeated bookings for an already enrolled client must not create additional monthly subscriptions.
+
+Implemented a signed server-to-server booking receiver and Stripe subscription service, disabled by default. Private server configuration maps companies to sponsor customers and the approved corporate price. Stripe stores opaque duplicate references, avoiding a new database subscription. The existing public corporate page remains unchanged. No real subscription, card entry, financial authorization, company charge, or new paid service was performed.
+
+This is **not connected end to end**. Charm must provide a trustworthy confirmed appointment and company attribution through a supported integration/adapter; no native callback was assumed. No API-access instruction matched the clinic mailbox search at the latest check. Sponsor customer/card setup, company recurring-charge authorization, private configuration and a test-mode booking-to-billing exercise remain prerequisites. See [corporate billing implementation and activation](docs/integrations/corporate-billing.md). Any added vendor costs must be checked and disclosed before activation. Do not describe this as live automatic billing.
+
+
+Corporate setup follow-through: updated the existing zero-subscription sponsor customer in Stripe with the owner-provided legal/business name, billing email, billing address, contact name and registered office. Verified the saved record still shows no subscriptions, no payments, no invoices and no payment methods. Private company details remain in Stripe, not this repository. The billing implementation and existing member-booking tests passed 39 checks; production build and targeted lint passed. No event adapter or live configuration was enabled, and no funds moved.
