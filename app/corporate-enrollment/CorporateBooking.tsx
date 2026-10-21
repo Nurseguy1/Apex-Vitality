@@ -1,5 +1,6 @@
 "use client";
 import { useState, type FormEvent } from "react";
+import BookingCalendar from "../components/BookingCalendar";
 
 export default function CorporateBooking({ calendar, enrollmentEnabled = false }: { calendar: string; enrollmentEnabled?: boolean }) {
   const [company, setCompany] = useState("");
@@ -72,7 +73,7 @@ export default function CorporateBooking({ calendar, enrollmentEnabled = false }
       {enrollment.test && <p role="status">Test enrollment only. No live company charge was made.</p>}
       <p>Choose <strong>New Patient Visit (45 mins)</strong> in the calendar below and complete your patient details using the same email. You do not need to wait for company verification to schedule.</p>
       <aside className="corporate-booking-note"><h3>Include your company in the booking.</h3><p>Paste this note into <strong>Reason for appointment</strong> so Apex can match your appointment to your enrollment:</p><p className="corporate-note-text">{note}</p><button className="primary-button" type="button" onClick={copyNote}>{copied ? "Company note copied" : "Copy company note"}</button>{error && <p role="alert">{error}</p>}</aside>
-      <div className="consultation-calendar"><iframe src={calendar} title="Corporate care patient registration and appointment scheduling" loading="eager" referrerPolicy="strict-origin-when-cross-origin" /></div>
+      <BookingCalendar calendar={calendar} title="Corporate care patient registration and appointment scheduling" flow="corporate" />
     </section>}
   </>;
 }

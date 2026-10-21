@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
+import BookingCalendar from "../components/BookingCalendar";
 import CaliforniaEligibility from "../components/CaliforniaEligibility";
 import { charmLinks } from "../lib/charm";
 import { annualMemberships } from "../lib/membership-catalog";
@@ -29,7 +30,7 @@ export default async function MembershipCompletePage({ searchParams }: { searchP
               <h2>Schedule your included 45-minute comprehensive initial appointment.</h2>
               <p>Your membership includes this initial appointment. Bring your history, goals, medications, and any recent laboratory results so your clinician can build the broader care plan with you.</p>
               {charmLinks.comprehensiveBooking ? (
-                <div className="consultation-calendar"><iframe src={charmLinks.comprehensiveBooking} title="Schedule your included appointment — select New Patient Visit (45 mins)" loading="eager" referrerPolicy="strict-origin-when-cross-origin" /></div>
+                <BookingCalendar calendar={charmLinks.comprehensiveBooking} title="Schedule your included appointment — select New Patient Visit (45 mins)" flow="membership" />
               ) : (
                 <p>Please contact Apex for help scheduling your included appointment.</p>
               )}
