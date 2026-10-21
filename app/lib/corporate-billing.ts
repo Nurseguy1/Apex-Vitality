@@ -93,4 +93,3 @@ export async function billCorporateEnrollment(input: { company: string; email: s
   if (!subscription.id || !["active", "incomplete", "past_due", "unpaid", "paused", "trialing"].includes(subscription.status)) throw new EnrollmentError("billing_unavailable");
   return { company: sponsor.name, reference: reference.slice(0, 16), billing: subscription.status === "active" ? "active" : "needs_attention", test: !live };
 }
-

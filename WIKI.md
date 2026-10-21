@@ -89,7 +89,7 @@ The owner reported that two successful test submissions returned to the booking 
 3. Follow the source map in README. Use the pnpm lockfile and supported Node version.
 4. Run TypeScript and the production build for application changes; test the affected patient path without creating real records or charges.
 5. Verify a preview from the canonical Vercel project, publish intentionally, then verify the public domain. Keep the source commit and deployment traceable.
-6. Treat corporate automation and EHR sync as unfinished until Charm access, durable state, authentication, idempotent event handling, cancellation behavior, and integration testing are actually in place.
+6. Corporate enrollment billing is separate from EHR synchronization: see the latest corporate entry. Charm administrative sync remains pending API access. Monitor corporate payment failures and handle membership cancellation separately.
 
 ## Original Charm integration restored — October 18, 2026
 
