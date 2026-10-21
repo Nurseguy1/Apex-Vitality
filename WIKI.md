@@ -48,7 +48,7 @@ The current FAQ and patient-access pages explain the free 30-minute consultation
 
 The owner approved company-paid billing based on the number of active enrolled clients. The sponsor manages eligibility and unauthorized signups; Apex should not add verification codes. Sponsor pricing and billing details are private and must stay out of public site copy and public Git documentation.
 
-The corporate Stripe product and an empty sponsor customer placeholder exist. No sponsor card, billing email, or paid corporate subscription has been set up. No automatic enrollment counting, sponsor quantity updates, or account synchronization is implemented. Do not bill based on page visits or merely booked consultations. Sponsor identity and billing details require confirmation outside this public repository.
+The corporate Stripe product and an empty sponsor customer placeholder exist. Sponsor billing email and address are now entered, and a company card was saved by the owner on October 20. No paid corporate subscription has been started. No automatic enrollment counting, sponsor quantity updates, or account synchronization is implemented. Do not bill based on page visits or merely booked consultations. Sponsor identity and billing details require confirmation outside this public repository.
 
 ## Charm: what works and what is pending
 
@@ -197,3 +197,6 @@ This is **not connected end to end**. Charm must provide a trustworthy confirmed
 
 
 Corporate setup follow-through: updated the existing zero-subscription sponsor customer in Stripe with the owner-provided legal/business name, billing email, billing address, contact name and registered office. Verified the saved record still shows no subscriptions, no payments, no invoices and no payment methods. Private company details remain in Stripe, not this repository. The billing implementation and existing member-booking tests passed 39 checks; production build and targeted lint passed. No event adapter or live configuration was enabled, and no funds moved.
+
+
+Corporate registration readiness recheck — October 20: verified the live typed-company path reaches the existing Charm calendar with the 45-minute New Patient Visit available, without a personal card or an eligibility approval delay. The owner saved the sponsor’s Visa in Stripe; saved-card presence and CVC Passed were observed. Keep card details and company identity out of public Git. No subscription, invoice or charge had been created at that check. Default invoice payment-method configuration was not established by observation. Booking-triggered billing remains disconnected and disabled; saved-card availability alone does not complete it.
