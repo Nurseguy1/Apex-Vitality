@@ -209,3 +209,10 @@ Supersedes earlier booking-trigger and pending-activation entries. Owner approve
 One subscription is created per normalized company/customer and client email. A stable HMAC reference and Stripe idempotency prevent duplicate creation on retries. Existing canceled enrollments require staff review. Unknown companies, incorrect prices and cards attached to another customer fail before charging. The retired appointment receiver returns 410 so it cannot create a second billing trigger. Clinical workflows, functional medicine and individual membership checkout are unchanged.
 
 Automated tests use mocked Stripe only. No live enrollment, subscription, invoice or charge was created by the agent. Actual card collection remains subject to issuer approval; monitor Stripe for failed payments. Scheduling is allowed after an enrollment record exists even when Stripe reports payment needs attention; this is not proof of paid membership. Appointment cancellation does not cancel recurring membership. No extra paid service was added; normal Stripe payment/Billing fees apply. See the operational limits in the integration document.
+
+
+## Corporate enrollment diagnostic — October 21, 2026
+
+Production request logs showed three corporate-enrollment submissions returning HTTP 422 around 11:11–11:13 Pacific. They were not established as belonging to a particular patient. No company subscription/payment was present in Stripe at the observed check. A free consultation appointment alone does not prove which website entry page a client used. Do not infer that a client entered the wrong form solely from the visit type or absent charge.
+
+Added a read-only company readiness check before email/enrollment, using the same Stripe customer/card/price checks as billing without creating a subscription. This makes unknown company names visible earlier and allows production connection verification without a live charge. Rejections now log only safe error codes. Existing recurring billing trigger and patient scheduling remain unchanged. No paid add-on was enabled.

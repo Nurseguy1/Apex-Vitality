@@ -38,3 +38,8 @@ No new database or email service is required by this implementation. Standard St
 - Automatic invoice collection may require company action or fail. `needs_attention` means enrollment/subscription exists but does not establish payment. Monitor Stripe for failed payments; no new alerting service has been configured.
 - Appointment cancellation does not automatically cancel membership or refund payments. Membership cancellation and refund policy require separate handling. No automatic refunds, backdating, proration, tax configuration or sponsor eligibility verification is implemented.
 - Do not change the HMAC identity or enable retries with a different customer/secret to bypass a failure; reconcile the Stripe records first.
+
+
+## Read-only readiness check — October 21
+
+The company-name step calls the same endpoint with `checkOnly: true`. It verifies the private company mapping, live/test mode, Stripe customer, attached saved card and exact recurring price using GET requests only. It cannot create a subscription. A valid result is `{ "ready": true }`; the client can then enter email/attestations and explicitly complete the billing enrollment. Rejected company names are explained before collecting the email. Logs record only safe error codes/status, not company or patient input. This check does not prove the issuer will approve a future charge.

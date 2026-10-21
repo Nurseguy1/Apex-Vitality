@@ -134,3 +134,15 @@ test('a saved card belonging to another company cannot be charged', async () => 
   process.env.CORPORATE_SPONSORS_JSON = JSON.stringify(sponsors);
   await assert.rejects(enroll(input), e => e.code === 'company_not_ready'); assert.equal(state.created.length, 0);
 });
+
+test('read-only sponsor readiness validates Stripe resources without creating a subscription', async () => {
+  const state = fixture(); const response = await POST(request({ company: input.company, checkOnly: true }));
+  assert.equal(response.status, 200); assert.deepEqual(await response.json(), { ready: true });
+  assert.equal(state.created.length, 0); assert.ok(state.requests.every(r => r.init.method === 'GET'));
+});
+test('readiness still rejects unknown company names and mismatched prices', async () => {
+  const state = fixture({ price: { unit_amount: 1 } });
+  assert.equal((await POST(request({ company: input.company, checkOnly: true }))).status, 422);
+  assert.equal((await POST(request({ company: 'Unknown', checkOnly: true }))).status, 422);
+  assert.equal(state.created.length, 0);
+});

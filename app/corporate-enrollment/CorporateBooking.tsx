@@ -11,9 +11,20 @@ export default function CorporateBooking({ calendar, enrollmentEnabled = false }
   const [copied, setCopied] = useState(false);
   const note = enrollment ? `Corporate Care — ${enrollment.company} — Ref ${enrollment.reference}` : "";
 
-  function chooseCompany(event: FormEvent<HTMLFormElement>) {
+  async function chooseCompany(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (company.trim()) { setSubmittedCompany(company.trim()); setError(""); }
+    if (busy || !company.trim()) return;
+    setBusy(true); setError("");
+    try {
+      const response = await fetch("/api/corporate-enrollment", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ company: company.trim(), checkOnly: true }) });
+      const result = await response.json();
+      if (!response.ok) {
+        setError(result.error === "company_not_configured" ? "Company name not recognized. Please enter the company name provided by your sponsor, including its spelling. Contact Apex if you need help." : "Your company’s enrollment is temporarily unavailable. Please contact Apex for help.");
+        return;
+      }
+      setSubmittedCompany(company.trim());
+    } catch { setError("We could not check your company. Please try again or contact Apex for help."); }
+    finally { setBusy(false); }
   }
   async function register(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -40,7 +51,8 @@ export default function CorporateBooking({ calendar, enrollmentEnabled = false }
       <label htmlFor="corporate-company">Company name</label>
       <input id="corporate-company" name="company" autoComplete="organization" maxLength={120} required pattern={".*\\S.*"} value={company} onChange={e => setCompany(e.target.value)} aria-describedby="company-help" />
       <p id="company-help">Type the name of the company sponsoring your care.</p>
-      <button className="primary-button" type="submit">Continue to corporate enrollment</button>
+      <button className="primary-button" type="submit" disabled={busy}>{busy ? "Checking company…" : "Continue to corporate enrollment"}</button>
+      {error && <p role="alert">{error}</p>}
     </form> : !enrollment ? <section aria-label="Complete corporate enrollment">
       <h2>Complete your corporate enrollment.</h2>
       <p>Your company: <strong>{submittedCompany}</strong>. <button className="corporate-edit-company" type="button" disabled={busy} onClick={() => setSubmittedCompany("")}>Change company</button></p>

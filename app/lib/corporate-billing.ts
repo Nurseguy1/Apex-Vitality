@@ -26,28 +26,22 @@ export function corporateBillingEnabled() {
     (process.env.CORPORATE_ENROLLMENT_HMAC_SECRET?.length ?? 0) >= 32 && sponsorConfig().length > 0;
 }
 
-type Subscription = { id: string; status: string; metadata?: Record<string, string> };
-export async function billCorporateEnrollment(input: { company: string; email: string; accepted: boolean }) {
+export async function checkCorporateSponsor(companyInput: string) {
   if (!corporateBillingEnabled()) throw new EnrollmentError("unavailable");
-  const company = input.company.trim();
-  const email = input.email.trim().toLowerCase();
-  if (!company || company.length > 120 || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || input.accepted !== true)
+  const company = companyInput.trim();
+  if (!company || company.length > 120)
     throw new EnrollmentError("invalid_registration", 400);
   const sponsors = sponsorConfig().filter((s) => [s.name, ...(s.aliases || [])].some((name) => normalizeCompany(name) === normalizeCompany(company)));
   if (sponsors.length !== 1) throw new EnrollmentError("company_not_configured", 422);
   const sponsor = sponsors[0];
   const live = process.env.CORPORATE_BILLING_MODE === "live";
   if (live && !sponsor.liveAuthorized) throw new EnrollmentError("company_not_ready", 422);
-  const reference = createHmac("sha256", process.env.CORPORATE_ENROLLMENT_HMAC_SECRET!)
-    .update(`${sponsor.customer}\n${email}`).digest("hex");
   const headers = { Authorization: `Bearer ${process.env.STRIPE_SECRET_KEY}` };
-  async function stripe<T>(path: string, body?: URLSearchParams): Promise<T> {
+  async function stripe<T>(path: string): Promise<T> {
     let response: Response;
     try {
       response = await fetch(`https://api.stripe.com/v1/${path}`, {
-        method: body ? "POST" : "GET", headers: {
-          ...headers, ...(body ? { "Content-Type": "application/x-www-form-urlencoded", "Idempotency-Key": `corporate-v1-${reference}` } : {}),
-        }, ...(body ? { body } : {}), cache: "no-store", signal: AbortSignal.timeout(15000),
+        method: "GET", headers, cache: "no-store", signal: AbortSignal.timeout(15000),
       });
     } catch { throw new EnrollmentError("billing_unavailable"); }
     if (!response.ok) throw new EnrollmentError("billing_unavailable");
@@ -67,6 +61,31 @@ export async function billCorporateEnrollment(input: { company: string; email: s
   const price = await stripe<{ id: string; active: boolean; livemode: boolean; unit_amount: number; currency: string; type: string; recurring?: { interval: string; interval_count: number }; product: string }>(`prices/${sponsor.price}`);
   if (price.id !== sponsor.price || !price.active || price.livemode !== live || price.unit_amount !== amount || price.currency !== "usd" || price.type !== "recurring" || price.recurring?.interval !== "month" || price.recurring.interval_count !== 1 || price.product !== process.env.CORPORATE_STRIPE_PRODUCT_ID)
     throw new EnrollmentError("company_not_ready", 422);
+  return { sponsor, paymentMethod, live };
+}
+
+type Subscription = { id: string; status: string; metadata?: Record<string, string> };
+export async function billCorporateEnrollment(input: { company: string; email: string; accepted: boolean }) {
+  if (!corporateBillingEnabled()) throw new EnrollmentError("unavailable");
+  const email = input.email.trim().toLowerCase();
+  if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || input.accepted !== true)
+    throw new EnrollmentError("invalid_registration", 400);
+  const { sponsor, paymentMethod, live } = await checkCorporateSponsor(input.company);
+  const reference = createHmac("sha256", process.env.CORPORATE_ENROLLMENT_HMAC_SECRET!)
+    .update(`${sponsor.customer}\n${email}`).digest("hex");
+  const headers = { Authorization: `Bearer ${process.env.STRIPE_SECRET_KEY}` };
+  async function stripe<T>(path: string, body?: URLSearchParams): Promise<T> {
+    let response: Response;
+    try {
+      response = await fetch(`https://api.stripe.com/v1/${path}`, {
+        method: body ? "POST" : "GET", headers: {
+          ...headers, ...(body ? { "Content-Type": "application/x-www-form-urlencoded", "Idempotency-Key": `corporate-v1-${reference}` } : {}),
+        }, ...(body ? { body } : {}), cache: "no-store", signal: AbortSignal.timeout(15000),
+      });
+    } catch { throw new EnrollmentError("billing_unavailable"); }
+    if (!response.ok) throw new EnrollmentError("billing_unavailable");
+    return response.json() as Promise<T>;
+  }
   // All-status listing is immediately consistent and also catches retries after
   // Stripe's 24-hour idempotency retention. Never auto-restart a canceled client.
   let after = "";
