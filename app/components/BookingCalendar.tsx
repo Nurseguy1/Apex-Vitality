@@ -20,6 +20,14 @@ export default function BookingCalendar({ calendar, title, flow }: { calendar: s
   }, () => false);
   const finished = finishedHere || saved;
   const heading = useRef<HTMLHeadingElement>(null);
+  const calendarSection = useRef<HTMLElement>(null);
+  const [dockVisible, setDockVisible] = useState(false);
+  useEffect(() => {
+    if (finished || !calendarSection.current) return;
+    const observer = new IntersectionObserver(([entry]) => setDockVisible(entry.isIntersecting));
+    observer.observe(calendarSection.current);
+    return () => observer.disconnect();
+  }, [finished]);
   useEffect(() => {
     if (finished) {
       heading.current?.focus({ preventScroll: true });
@@ -49,12 +57,12 @@ export default function BookingCalendar({ calendar, title, flow }: { calendar: s
     <button className="booking-reopen" type="button" onClick={reopen}>I still need to finish booking</button>
   </section>;
 
-  return <section className="booking-calendar-flow" aria-label={title}>
+  return <section ref={calendarSection} className="booking-calendar-flow" aria-label={title}>
     <aside className="booking-finish-banner">
-      <div><strong>Final step: finish here after Charm confirms your booking</strong><p>Press Finish booking to close the calendar and view your next steps.</p></div>
-      <button className="booking-finish-button" type="button" onClick={finish}><span aria-hidden="true">✓ </span>Finish booking</button>
+      <div><strong>Final step: finish here after Charm confirms your booking</strong><p>After confirmation, use the button to close the calendar and view your next steps.</p></div>
+      <button className="booking-finish-button" type="button" onClick={finish}><span aria-hidden="true">✓ </span>Click here to finish</button>
     </aside>
     <div className="consultation-calendar"><iframe src={calendar} title={title} loading="eager" referrerPolicy="strict-origin-when-cross-origin" /></div>
-    <div className="booking-finish-bottom"><p>Already saw your booking confirmation?</p><button className="booking-finish-button" type="button" onClick={finish}><span aria-hidden="true">✓ </span>Finish booking</button></div>
+    <div className={`booking-finish-bottom${dockVisible ? " booking-finish-dock" : ""}`}><p><strong>After Charm confirms your appointment, press:</strong></p><button className="booking-finish-button" type="button" onClick={finish}><span aria-hidden="true">✓ </span>Click here to finish</button></div>
   </section>;
 }
