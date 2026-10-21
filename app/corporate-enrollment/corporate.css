@@ -6,3 +6,8 @@
 .corporate-edit-company { border: 0; padding: 4px; background: transparent; color: inherit; text-decoration: underline; font: inherit; cursor: pointer; }
 .corporate-booking-note { padding: 20px; border: 1px solid #b9cecc; border-radius: 12px; background: #f3f9f8; margin: 24px 0; }
 .corporate-note-text { font-weight: 700; overflow-wrap: anywhere; user-select: all; }
+
+.corporate-trap { display: none; }
+.corporate-confirmation { display: flex; gap: 10px; align-items: flex-start; font-weight: 400 !important; }
+.corporate-confirmation input { width: 20px; height: 20px; flex-shrink: 0; }
+.corporate-company-form button:disabled { opacity: .65; cursor: wait; }

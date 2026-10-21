@@ -1,16 +1,15 @@
-import { createHmac } from 'node:crypto';
 import { test, afterEach } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import ts from 'typescript';
 const source = await readFile(new URL('../app/lib/corporate-billing.ts', import.meta.url), 'utf8');
 const js = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText;
-const { billCorporateAppointment: enroll, corporateBillingEnabled: enabled, verifyCorporateEvent: verifyEvent } = await import(`data:text/javascript;base64,${Buffer.from(js).toString('base64')}`);
+const { billCorporateEnrollment: enroll, corporateBillingEnabled: enabled } = await import(`data:text/javascript;base64,${Buffer.from(js).toString('base64')}`);
 const originalFetch = globalThis.fetch;
 const names = ['STRIPE_SECRET_KEY','CORPORATE_BILLING_MODE','CORPORATE_LIVE_BILLING_APPROVED','CORPORATE_ENROLLMENT_HMAC_SECRET','CORPORATE_SPONSORS_JSON','CORPORATE_UNIT_AMOUNT','CORPORATE_STRIPE_PRODUCT_ID','CORPORATE_BOOKING_EVENT_SECRET'];
 const saved = Object.fromEntries(names.map(name => [name, process.env[name]]));
 afterEach(() => { globalThis.fetch = originalFetch; for (const name of names) { if (saved[name] === undefined) delete process.env[name]; else process.env[name] = saved[name]; } });
-const input = { company: 'Example LLC', email: 'client@example.com', appointmentId: 'appointment_fixture', confirmed: true };
+const input = { company: 'Example LLC', email: 'client@example.com', accepted: true };
 function fixture(options = {}) {
   Object.assign(process.env, { STRIPE_SECRET_KEY: 'sk_test_fixture', CORPORATE_BILLING_MODE: 'test', CORPORATE_ENROLLMENT_HMAC_SECRET: 'test-only-stable-secret-at-least-32-characters', CORPORATE_UNIT_AMOUNT: '19900', CORPORATE_STRIPE_PRODUCT_ID: 'prod_corporate', CORPORATE_SPONSORS_JSON: JSON.stringify([{ name: 'Example LLC', customer: 'cus_sponsor', price: 'price_corporate', liveAuthorized: false }]) });
   const created = [];
@@ -18,6 +17,7 @@ function fixture(options = {}) {
   globalThis.fetch = async (url, init) => {
     requests.push({ url, init });
     if (url.includes('/customers/')) return Response.json({ id: 'cus_sponsor', livemode: false, invoice_settings: { default_payment_method: 'pm_company' }, ...options.customer });
+    if (url.includes('/payment_methods/')) return Response.json({ id: 'pm_explicit', customer: 'cus_sponsor', type: 'card', livemode: false, ...options.paymentMethod });
     if (url.includes('/prices/')) return Response.json({ id: 'price_corporate', active: true, livemode: false, unit_amount: 19900, currency: 'usd', type: 'recurring', recurring: { interval: 'month', interval_count: 1 }, product: 'prod_corporate', ...options.price });
     if (init.method === 'POST') {
       const data = Object.fromEntries(init.body);
@@ -28,7 +28,7 @@ function fixture(options = {}) {
   };
   return { created, requests };
 }
-test('confirmed appointment creates one monthly subscription on the sponsor, with no patient identifiers in Stripe', async () => {
+test('completed enrollment creates one monthly subscription on the sponsor, with no patient identifiers in Stripe', async () => {
   const state = fixture(); const result = await enroll(input);
   assert.equal(result.billing, 'active'); assert.equal(result.test, true);
   const post = state.requests.find(r => r.init.method === 'POST');
@@ -64,7 +64,7 @@ test('different clients get different enrollment references and subscriptions', 
   const state = fixture(); const first = await enroll(input); const second = await enroll({ ...input, email: 'second@example.com' });
   assert.notEqual(first.reference, second.reference); assert.equal(state.created.length, 2);
 });
-for (const inputOverride of [{ confirmed: false }, { email: 'invalid' }, { company: 'Unknown LLC' }]) {
+for (const inputOverride of [{ accepted: false }, { email: 'invalid' }, { company: 'Unknown LLC' }]) {
   test(`invalid or unmapped enrollment cannot create a charge ${JSON.stringify(inputOverride)}`, async () => {
     const state = fixture(); await assert.rejects(enroll({ ...input, ...inputOverride })); assert.equal(state.created.length, 0);
   });
@@ -94,44 +94,43 @@ test('Stripe outage is retryable, without exposing Stripe errors', async () => {
   await assert.rejects(enroll(input), e => e.code === 'billing_unavailable' && !e.message.includes('private'));
 });
 
-test('calendar loading or missing appointment identifier cannot charge', async () => {
+
+const routeSource = await readFile(new URL('../app/api/corporate-enrollment/route.ts', import.meta.url), 'utf8');
+const libraryUrl = `data:text/javascript;base64,${Buffer.from(js).toString('base64')}`;
+const routeJs = ts.transpileModule(routeSource, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText.replace('"../../lib/corporate-billing"', JSON.stringify(libraryUrl));
+const { POST } = await import(`data:text/javascript;base64,${Buffer.from(routeJs).toString('base64')}`);
+function request(body, headers = {}) { return new Request('https://www.goapexvitality.com/api/corporate-enrollment', { method: 'POST', body: JSON.stringify(body), headers: { origin: 'https://www.goapexvitality.com', 'content-type': 'application/json', ...headers } }); }
+test('completed site enrollment triggers billing without a Charm appointment', async () => {
+  const state = fixture(); const result = await POST(request({ ...input, california: true }));
+  assert.equal(result.status, 200); assert.equal((await result.json()).billing, 'active'); assert.equal(state.created.length, 1);
+});
+test('company name alone, missing attestation and honeypot cannot trigger charges', async () => {
   const state = fixture();
-  await assert.rejects(enroll({ ...input, appointmentId: '' }));
+  for (const body of [{ company: input.company }, { ...input, california: false }, { ...input, california: true, accepted: false }, { ...input, california: true, website: 'bot' }]) assert.equal((await POST(request(body))).status, 400);
   assert.equal(state.created.length, 0);
 });
-test('another appointment for the same client does not create a second subscription', async () => {
-  const state = fixture(); await enroll(input);
-  await enroll({ ...input, appointmentId: 'appointment_second' });
-  assert.equal(state.created.length, 1);
-});
-
-test('booking events require a valid recent signature over the exact body', () => {
-  process.env.CORPORATE_BOOKING_EVENT_SECRET = 'test-event-secret-at-least-32-characters';
-  const raw = '{"type":"corporate.appointment.confirmed"}';
-  const now = Date.now(); const timestamp = String(Math.floor(now / 1000));
-  const sign = value => createHmac('sha256', process.env.CORPORATE_BOOKING_EVENT_SECRET).update(`${timestamp}.${value}`).digest('hex');
-  assert.equal(verifyEvent(raw, timestamp, sign(raw), now), true);
-  assert.equal(verifyEvent(raw + ' ', timestamp, sign(raw), now), false);
-  assert.equal(verifyEvent(raw, timestamp, sign(raw), now + 301000), false);
-  assert.equal(verifyEvent(raw, timestamp, 'bad', now), false);
-  assert.equal(verifyEvent(raw, null, null, now), false);
-});
-
-const routeSource = await readFile(new URL('../app/api/integrations/corporate-appointments/route.ts', import.meta.url), 'utf8');
-const libraryUrl = `data:text/javascript;base64,${Buffer.from(js).toString('base64')}`;
-const routeJs = ts.transpileModule(routeSource, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText.replace('"../../../lib/corporate-billing"', JSON.stringify(libraryUrl));
-const { POST } = await import(`data:text/javascript;base64,${Buffer.from(routeJs).toString('base64')}`);
-test('HTTP receiver rejects unsigned and oversized requests without contacting Stripe', async () => {
-  const state = fixture();
-  assert.equal((await POST(new Request('https://example.test/api', { method: 'POST', body: '{}' }))).status, 401);
-  assert.equal((await POST(new Request('https://example.test/api', { method: 'POST', body: 'x'.repeat(4097) }))).status, 413);
+test('cross-origin and oversized public enrollment requests are rejected', async () => {
+  const state = fixture(); assert.equal((await POST(request(input, { origin: 'https://other.test' }))).status, 403);
+  assert.equal((await POST(request({ ...input, padding: 'x'.repeat(4096) }))).status, 413);
   assert.equal(state.requests.length, 0);
 });
-test('HTTP receiver accepts a verified appointment and returns the opaque result', async () => {
-  const state = fixture(); process.env.CORPORATE_BOOKING_EVENT_SECRET = 'test-event-secret-at-least-32-characters';
-  const raw = JSON.stringify({ type: 'corporate.appointment.confirmed', ...input });
-  const timestamp = String(Math.floor(Date.now() / 1000));
-  const signature = createHmac('sha256', process.env.CORPORATE_BOOKING_EVENT_SECRET).update(`${timestamp}.${raw}`).digest('hex');
-  const response = await POST(new Request('https://example.test/api', { method: 'POST', body: raw, headers: { 'x-apex-timestamp': timestamp, 'x-apex-signature': signature } }));
-  assert.equal(response.status, 200); assert.equal((await response.json()).billing, 'active'); assert.equal(state.created.length, 1);
+test('retired appointment receiver cannot create a second trigger', async () => {
+  const source = await readFile(new URL('../app/api/integrations/corporate-appointments/route.ts', import.meta.url), 'utf8');
+  const module = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.ESNext } }).outputText;
+  const route = await import(`data:text/javascript;base64,${Buffer.from(module).toString('base64')}`);
+  assert.equal((await route.POST()).status, 410);
+});
+
+test('explicit saved company card is verified and used without an invoice default', async () => {
+  const state = fixture({ customer: { invoice_settings: {} } });
+  const sponsors = JSON.parse(process.env.CORPORATE_SPONSORS_JSON); sponsors[0].paymentMethod = 'pm_explicit';
+  process.env.CORPORATE_SPONSORS_JSON = JSON.stringify(sponsors);
+  await enroll(input);
+  assert.equal(Object.fromEntries(state.requests.find(r => r.init.method === 'POST').init.body).default_payment_method, 'pm_explicit');
+});
+test('a saved card belonging to another company cannot be charged', async () => {
+  const state = fixture({ paymentMethod: { customer: 'cus_other' } });
+  const sponsors = JSON.parse(process.env.CORPORATE_SPONSORS_JSON); sponsors[0].paymentMethod = 'pm_explicit';
+  process.env.CORPORATE_SPONSORS_JSON = JSON.stringify(sponsors);
+  await assert.rejects(enroll(input), e => e.code === 'company_not_ready'); assert.equal(state.created.length, 0);
 });

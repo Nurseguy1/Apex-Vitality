@@ -1,7 +1,7 @@
-import { createHmac, timingSafeEqual } from "node:crypto";
+import { createHmac } from "node:crypto";
 
 // Private, server-only mapping. Never derive a customer or price from browser input.
-export type Sponsor = { name: string; aliases?: string[]; customer: string; price: string; liveAuthorized: boolean };
+export type Sponsor = { name: string; aliases?: string[]; customer: string; price: string; liveAuthorized: boolean; paymentMethod?: string };
 export class EnrollmentError extends Error {
   constructor(public code: string, public status = 503) { super(code); }
 }
@@ -14,7 +14,7 @@ export function sponsorConfig(): Sponsor[] {
     if (!Array.isArray(config)) return [];
     return config.filter((s): s is Sponsor => s && typeof s.name === "string" &&
       /^cus_[A-Za-z0-9]+$/.test(s.customer) && /^price_[A-Za-z0-9]+$/.test(s.price) &&
-      typeof s.liveAuthorized === "boolean" && (s.aliases === undefined ||
+      typeof s.liveAuthorized === "boolean" && (s.paymentMethod === undefined || /^pm_[A-Za-z0-9]+$/.test(s.paymentMethod)) && (s.aliases === undefined ||
         (Array.isArray(s.aliases) && s.aliases.every((a: unknown) => typeof a === "string"))));
   } catch { return []; }
 }
@@ -27,11 +27,11 @@ export function corporateBillingEnabled() {
 }
 
 type Subscription = { id: string; status: string; metadata?: Record<string, string> };
-export async function billCorporateAppointment(input: { company: string; email: string; appointmentId: string; confirmed: boolean }) {
+export async function billCorporateEnrollment(input: { company: string; email: string; accepted: boolean }) {
   if (!corporateBillingEnabled()) throw new EnrollmentError("unavailable");
   const company = input.company.trim();
   const email = input.email.trim().toLowerCase();
-  if (!company || company.length > 120 || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || input.confirmed !== true || typeof input.appointmentId !== "string" || !/^[A-Za-z0-9_-]{1,160}$/.test(input.appointmentId))
+  if (!company || company.length > 120 || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || input.accepted !== true)
     throw new EnrollmentError("invalid_registration", 400);
   const sponsors = sponsorConfig().filter((s) => [s.name, ...(s.aliases || [])].some((name) => normalizeCompany(name) === normalizeCompany(company)));
   if (sponsors.length !== 1) throw new EnrollmentError("company_not_configured", 422);
@@ -54,8 +54,14 @@ export async function billCorporateAppointment(input: { company: string; email: 
     return response.json() as Promise<T>;
   }
   const customer = await stripe<{ id: string; deleted?: boolean; livemode: boolean; invoice_settings?: { default_payment_method?: string | null } }>(`customers/${sponsor.customer}`);
-  if (customer.deleted || customer.id !== sponsor.customer || customer.livemode !== live || !customer.invoice_settings?.default_payment_method)
+  if (customer.deleted || customer.id !== sponsor.customer || customer.livemode !== live)
     throw new EnrollmentError("company_not_ready", 422);
+  const paymentMethod = sponsor.paymentMethod || customer.invoice_settings?.default_payment_method;
+  if (!paymentMethod || !/^pm_[A-Za-z0-9]+$/.test(paymentMethod)) throw new EnrollmentError("company_not_ready", 422);
+  if (sponsor.paymentMethod) {
+    const method = await stripe<{ id: string; customer: string | null; type: string; livemode: boolean }>(`payment_methods/${paymentMethod}`);
+    if (method.id !== paymentMethod || method.customer !== sponsor.customer || method.type !== "card" || method.livemode !== live) throw new EnrollmentError("company_not_ready", 422);
+  }
   const amount = Number(process.env.CORPORATE_UNIT_AMOUNT);
   if (!Number.isSafeInteger(amount) || amount <= 0) throw new EnrollmentError("company_not_ready", 422);
   const price = await stripe<{ id: string; active: boolean; livemode: boolean; unit_amount: number; currency: string; type: string; recurring?: { interval: string; interval_count: number }; product: string }>(`prices/${sponsor.price}`);
@@ -78,20 +84,13 @@ export async function billCorporateAppointment(input: { company: string; email: 
   const subscription = existing ?? await stripe<Subscription>("subscriptions", new URLSearchParams({
     customer: sponsor.customer, "items[0][price]": sponsor.price, "items[0][quantity]": "1",
     collection_method: "charge_automatically", payment_behavior: "allow_incomplete",
+    default_payment_method: paymentMethod,
     "metadata[apex_corporate_enrollment]": reference,
     "metadata[apex_enrollment_version]": "2026-10-20",
-    "metadata[apex_trigger]": "confirmed_appointment",
+    "metadata[apex_trigger]": "completed_corporate_enrollment",
     // No patient names, email addresses, diagnoses or clinical information in Stripe.
   }));
   if (!subscription.id || !["active", "incomplete", "past_due", "unpaid", "paused", "trialing"].includes(subscription.status)) throw new EnrollmentError("billing_unavailable");
   return { company: sponsor.name, reference: reference.slice(0, 16), billing: subscription.status === "active" ? "active" : "needs_attention", test: !live };
 }
 
-
-export function verifyCorporateEvent(raw: string, timestamp: string | null, signature: string | null, now = Date.now()) {
-  const secret = process.env.CORPORATE_BOOKING_EVENT_SECRET;
-  if (!secret || secret.length < 32 || !timestamp || !/^\d{10}$/.test(timestamp) ||
-      !signature || !/^[a-f0-9]{64}$/.test(signature) || Math.abs(now / 1000 - Number(timestamp)) > 300) return false;
-  const expected = createHmac("sha256", secret).update(`${timestamp}.${raw}`).digest();
-  return timingSafeEqual(expected, Buffer.from(signature, "hex"));
-}

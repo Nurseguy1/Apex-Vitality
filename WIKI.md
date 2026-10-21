@@ -28,7 +28,7 @@ The homepage uses the existing Apex photos, with the California badge positioned
 | Apex Performance | $749/month or $7,490/year. |
 | Apex Private Client Care | $1,250/month or $12,500/year. |
 | Included member initial visit | 45-minute comprehensive New Patient Visit after enrollment in one of the three tiers. |
-| Corporate care | `/corporate-enrollment` requires a typed company name (no dropdown), then opens immediate registration/scheduling for a 45-minute initial visit in Charm after California confirmation. Clients copy the displayed company note into the appointment Reason field. Sponsor pays; no personal card. Apex verifies sponsorship before the visit without delaying scheduling. |
+| Corporate care | `/corporate-enrollment` requires a typed company name (no dropdown), then email and enrollment attestations. Completing enrollment starts company billing and opens Charm scheduling for a 45-minute initial visit. Clients copy the displayed company note into the appointment Reason field. Sponsor pays; no personal card. Apex verifies sponsorship before the visit without delaying scheduling. |
 
 Monthly and annual memberships renew at their selected frequency until canceled. Annual payment is paid in full, not monthly installments. Applicable tax is shown at checkout. The $69 consultation, $80 first month, and CONSULT69 first-month credit are retired. The former Focused Care Stripe product was repurposed for company-sponsored care and must not be used as an individual self-pay route.
 
@@ -44,11 +44,11 @@ The current FAQ and patient-access pages explain the free 30-minute consultation
 - No real payment or paid subscription was submitted during payment verification. Separate explicitly authorized test appointments were created and canceled; see the booking retest below. Annual checkout was checked with mocked server tests, TypeScript, hosted builds, and page-level price checks; a real completed annual payment has not been tested.
 - There is no Stripe webhook endpoint, durable enrollment database, or Stripe-to-Charm synchronization implemented in this repository. Do not describe payment verification as full EHR integration.
 
-## Corporate care: pending activation
+## Corporate care: enrollment billing
 
 The owner approved company-paid billing based on the number of active enrolled clients. The sponsor manages eligibility and unauthorized signups; Apex should not add verification codes. Sponsor pricing and billing details are private and must stay out of public site copy and public Git documentation.
 
-The corporate Stripe product and an empty sponsor customer placeholder exist. Sponsor billing email and address are now entered, and a company card was saved by the owner on October 20. No paid corporate subscription has been started. No automatic enrollment counting, sponsor quantity updates, or account synchronization is implemented. Do not bill based on page visits or merely booked consultations. Sponsor identity and billing details require confirmation outside this public repository.
+Corporate enrollment now creates one company-paid monthly subscription per client before opening Charm scheduling. Company billing starts on completed enrollment, not a confirmed appointment. Private production settings map each typed company name to its customer, approved price and saved card. See the latest October 20 entry and [implementation details](docs/integrations/corporate-billing.md). No live subscription was created during setup. General Stripe-to-Charm synchronization remains separate.
 
 ## Charm: what works and what is pending
 
@@ -200,3 +200,12 @@ Corporate setup follow-through: updated the existing zero-subscription sponsor c
 
 
 Corporate registration readiness recheck — October 20: verified the live typed-company path reaches the existing Charm calendar with the 45-minute New Patient Visit available, without a personal card or an eligibility approval delay. The owner saved the sponsor’s Visa in Stripe; saved-card presence and CVC Passed were observed. Keep card details and company identity out of public Git. No subscription, invoice or charge had been created at that check. Default invoice payment-method configuration was not established by observation. Booking-triggered billing remains disconnected and disabled; saved-card availability alone does not complete it.
+
+
+## Corporate enrollment trigger revision — October 20, 2026
+
+Supersedes earlier booking-trigger and pending-activation entries. Owner approved completing corporate enrollment on the website as the billing trigger, followed by Charm scheduling. No Charm API callback is required. Private production-only Vercel settings select the existing sponsor customer, approved monthly price and saved company card. Public copy discloses that billing begins at enrollment even if the appointment is scheduled later. No private rate or sponsor identity is published here.
+
+One subscription is created per normalized company/customer and client email. A stable HMAC reference and Stripe idempotency prevent duplicate creation on retries. Existing canceled enrollments require staff review. Unknown companies, incorrect prices and cards attached to another customer fail before charging. The retired appointment receiver returns 410 so it cannot create a second billing trigger. Clinical workflows, functional medicine and individual membership checkout are unchanged.
+
+Automated tests use mocked Stripe only. No live enrollment, subscription, invoice or charge was created by the agent. Actual card collection remains subject to issuer approval; monitor Stripe for failed payments. Scheduling is allowed after an enrollment record exists even when Stripe reports payment needs attention; this is not proof of paid membership. Appointment cancellation does not cancel recurring membership. No extra paid service was added; normal Stripe payment/Billing fees apply. See the operational limits in the integration document.
