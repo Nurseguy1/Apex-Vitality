@@ -231,3 +231,8 @@ Verified locally with the production build: pressing Finish booking removes the 
 
 
 Owner refinement: the finish control now reads **Click here to finish** and appears in a bright gold fixed bar while the booking section is visible, with 30px desktop / 27px mobile text and an 88px / 84px minimum button height. The top instruction card repeats the action. Bottom spacing lets visitors scroll the calendar controls above the bar. A 390px mobile check confirmed the fixed bar stays in the viewport with no horizontal overflow. This supersedes the earlier sticky-top presentation; the manual acknowledgment behavior is unchanged.
+
+
+## Clinical planning reference
+
+See [PED exposure: health assessment and cost-conscious laboratory planning](docs/clinical-reference/ped-health-assessment.md) for initial test considerations, selective additions, interpretation limits and source guidance. This is a general reference, not a standing order or completed patient assessment. Identifiable SOAP drafts remain in Charm or private clinician-controlled files outside this public repository; never commit patient details to this wiki. Laboratory tests and follow-up must be finalized by the treating clinician.
