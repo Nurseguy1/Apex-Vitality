@@ -248,3 +248,5 @@ John Bagby bio: user confirmed lifelong competitive athlete in judo, collegiate 
 Bio addition confirmed by John: multiple-time national champion and masters world champion in Brazilian jiu-jitsu. No organization, division, or year added.
 
 Bio addition: John emphasized personal understanding of maintaining health and strength as an older athlete. Included as personal perspective, without promising outcomes.
+
+Judo illustration moved into John’s bio at his request; laptop photograph moved to third benefit card, preserving one usage per image.
