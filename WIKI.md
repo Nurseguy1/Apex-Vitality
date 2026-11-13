@@ -272,3 +272,6 @@ Hero refinement: user wanted inspiring action comparable to surfing/downhill/jud
 Final hero selection: user approved wide cargo-net obstacle-race image. Set hero photo to 3:2 with contain fit to preserve obstacle and event context; replaces runner. Asset mens-obstacle-race-wide.webp.
 
 Hero refined to a wide group race scene with several people climbing and approaching the net; replaces posed solo athlete at user request.
+
+
+November 13, 2026: Replaced the cargo-net homepage hero with the approved original mountain race pack image (mens-race-pack-action.webp), based on a real Spartan reference. Featured mature athlete runs in second place; varied clothing and natural competitive action. Retained wide 3:2 framing. Shared homepage and men’s health landing page updated.
