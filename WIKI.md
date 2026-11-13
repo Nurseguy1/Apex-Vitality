@@ -262,3 +262,5 @@ Bio section heading updated to user wording: “Care that starts with your goals
 Replaced disliked stock kettlebell athlete with generated mature athlete in plain navy shirt; retained strength-training concept and natural proportions. New versioned asset mens-strength-v2.webp.
 
 Replaced standing beach portrait with real photo of a man riding a wave, per user request. Versioned mens-surf-action-v2.webp, Pexels source 35567703.
+
+Made Meet John Bagby a prominent semantic h3 heading (30–44px, bold serif), replacing tiny outlined tag.
