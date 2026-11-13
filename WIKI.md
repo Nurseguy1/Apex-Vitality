@@ -264,3 +264,5 @@ Replaced disliked stock kettlebell athlete with generated mature athlete in plai
 Replaced standing beach portrait with real photo of a man riding a wave, per user request. Versioned mens-surf-action-v2.webp, Pexels source 35567703.
 
 Made Meet John Bagby a prominent semantic h3 heading (30–44px, bold serif), replacing tiny outlined tag.
+
+Hero changed to a more active mid-stride coastal runner, versioned mens-coastal-run-action.webp. Keeps portrait framing and natural proportions.

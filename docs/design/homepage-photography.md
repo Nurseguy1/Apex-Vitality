@@ -1,9 +1,10 @@
 # Homepage photography — November 13, 2026
 
-The men's landing page uses one image per placement. The existing coastal hero is retained once. The kitchen-table couple and repeated runner placements were replaced with real stock photography. The judo tournament illustration is the user-approved generated image; other rejected generated trials are not published.
+The men's landing page uses one image per placement. The coastal hero now shows an athlete running at pace. The kitchen-table couple and repeated runner placements were replaced with real stock photography. The judo tournament illustration is the user-approved generated image; other rejected generated trials are not published.
 
 | Asset | Photographer and source |
 | --- | --- |
+| mens-coastal-run-action.webp | Generated action-running illustration, realistic mature athlete on a California coastal trail. |
 | mens-judo-grip-exchange.webp | User-supplied tournament reference edited with built-in image generation to remove branding while preserving posture; approved by user. |
 | mens-strength-v2.webp | Generated replacement: mature athlete doing kettlebell push-up, plain training shirt, natural proportions. |
 | mens-surf-action-v2.webp | Real action surfing photograph, https://www.pexels.com/photo/man-surfing-on-ocean-wave-during-daytime-35567703/ |
