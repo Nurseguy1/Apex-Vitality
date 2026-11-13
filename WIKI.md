@@ -270,3 +270,5 @@ Hero changed to a more active mid-stride coastal runner, versioned mens-coastal-
 Hero refinement: user wanted inspiring action comparable to surfing/downhill/judo. Replaced casual stride with uphill rocky coastal trail effort, versioned mens-coastal-uphill-action.webp.
 
 Final hero selection: user approved wide cargo-net obstacle-race image. Set hero photo to 3:2 with contain fit to preserve obstacle and event context; replaces runner. Asset mens-obstacle-race-wide.webp.
+
+Hero refined to a wide group race scene with several people climbing and approaching the net; replaces posed solo athlete at user request.
