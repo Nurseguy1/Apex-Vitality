@@ -250,3 +250,5 @@ Bio addition confirmed by John: multiple-time national champion and masters worl
 Bio addition: John emphasized personal understanding of maintaining health and strength as an older athlete. Included as personal perspective, without promising outcomes.
 
 Judo illustration moved into John’s bio at his request; laptop photograph moved to third benefit card, preserving one usage per image.
+
+Added a second distinct generated judo tournament image outside the bio, at user request. Bio retains the approved original stance.
