@@ -266,3 +266,5 @@ Replaced standing beach portrait with real photo of a man riding a wave, per use
 Made Meet John Bagby a prominent semantic h3 heading (30–44px, bold serif), replacing tiny outlined tag.
 
 Hero changed to a more active mid-stride coastal runner, versioned mens-coastal-run-action.webp. Keeps portrait framing and natural proportions.
+
+Hero refinement: user wanted inspiring action comparable to surfing/downhill/judo. Replaced casual stride with uphill rocky coastal trail effort, versioned mens-coastal-uphill-action.webp.

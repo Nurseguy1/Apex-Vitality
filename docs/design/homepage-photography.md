@@ -4,7 +4,7 @@ The men's landing page uses one image per placement. The coastal hero now shows 
 
 | Asset | Photographer and source |
 | --- | --- |
-| mens-coastal-run-action.webp | Generated action-running illustration, realistic mature athlete on a California coastal trail. |
+| mens-coastal-uphill-action.webp | Generated uphill trail-running illustration, mature athlete pushing up rocky coastal terrain. |
 | mens-judo-grip-exchange.webp | User-supplied tournament reference edited with built-in image generation to remove branding while preserving posture; approved by user. |
 | mens-strength-v2.webp | Generated replacement: mature athlete doing kettlebell push-up, plain training shirt, natural proportions. |
 | mens-surf-action-v2.webp | Real action surfing photograph, https://www.pexels.com/photo/man-surfing-on-ocean-wave-during-daytime-35567703/ |
