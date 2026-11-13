@@ -256,3 +256,5 @@ Added a second distinct generated judo tournament image outside the bio, at user
 Second judo image corrected: user rejected invented posture. Final selected image edits supplied tournament reference to remove branding, preserving athlete stance. Bio image unchanged.
 
 Second image final selection: supplied active grip-exchange reference with blue athlete on left and white athlete on right, branding removed. User confirmed athletes look engaged.
+
+Bio section heading updated to user wording: “Care that starts with your goals.”
