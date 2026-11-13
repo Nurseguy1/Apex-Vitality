@@ -236,3 +236,7 @@ Owner refinement: the finish control now reads **Click here to finish** and appe
 ## Clinical planning reference
 
 See [PED exposure: health assessment and cost-conscious laboratory planning](docs/clinical-reference/ped-health-assessment.md) for initial test considerations, selective additions, interpretation limits and source guidance. This is a general reference, not a standing order or completed patient assessment. Identifiable SOAP drafts remain in Charm or private clinician-controlled files outside this public repository; never commit patient details to this wiki. Laboratory tests and follow-up must be finalized by the treating clinician.
+
+## Homepage photo refresh — November 13, 2026
+
+Kept the coastal hero once and replaced the repeated runner/couple placements with real photography of online communication, strength training, surfing, grappling, and downhill mountain biking. Owner requested authentic athletic proportions and real riding technique. No generated trial photos were published. See `docs/design/homepage-photography.md` for asset sources and licenses.
