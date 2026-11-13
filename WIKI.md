@@ -240,3 +240,5 @@ See [PED exposure: health assessment and cost-conscious laboratory planning](doc
 ## Homepage photo refresh — November 13, 2026
 
 Kept the coastal hero once and replaced the repeated runner/couple placements with real photography of online communication, strength training, surfing, grappling, and downhill mountain biking. Owner requested authentic athletic proportions and real riding technique. No generated trial photos were published. See `docs/design/homepage-photography.md` for asset sources and licenses.
+
+Approved judo image update: selected upright tournament stance with plain blue/white gis, no logos or striking gear, no submission. Uses `mens-judo-tournament-v2.webp`; generated illustration, not a real patient or competitor photograph.
