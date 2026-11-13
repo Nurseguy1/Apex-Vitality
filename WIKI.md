@@ -244,3 +244,5 @@ Kept the coastal hero once and replaced the repeated runner/couple placements wi
 Approved judo image update: selected upright tournament stance with plain blue/white gis, no logos or striking gear, no submission. Uses `mens-judo-tournament-v2.webp`; generated illustration, not a real patient or competitor photograph.
 
 John Bagby bio: user confirmed lifelong competitive athlete in judo, collegiate wrestling, and Brazilian jiu-jitsu. Added to existing Meet John Bagby homepage section; no education or experience dates inferred.
+
+Bio addition confirmed by John: multiple-time national champion and masters world champion in Brazilian jiu-jitsu. No organization, division, or year added.
