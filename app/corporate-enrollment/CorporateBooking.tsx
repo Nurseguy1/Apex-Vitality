@@ -9,8 +9,6 @@ export default function CorporateBooking({ calendar, enrollmentEnabled = false }
   const [enrollment, setEnrollment] = useState<{ company: string; reference: string; billing: string; test: boolean } | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
-  const [copied, setCopied] = useState(false);
-  const note = enrollment ? `Corporate Care — ${enrollment.company} — Ref ${enrollment.reference}` : "";
 
   async function chooseCompany(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -43,10 +41,6 @@ export default function CorporateBooking({ calendar, enrollmentEnabled = false }
     } catch { setError("We could not confirm enrollment. Please retry with the same email or contact Apex for help."); }
     finally { setBusy(false); }
   }
-  async function copyNote() {
-    try { await navigator.clipboard.writeText(note); setCopied(true); }
-    catch { setCopied(false); setError("Please select and copy the company note, then paste it into Reason for appointment."); }
-  }
   return <>
     {!submittedCompany ? <form onSubmit={chooseCompany} className="corporate-company-form">
       <label htmlFor="corporate-company">Company name</label>
@@ -72,7 +66,7 @@ export default function CorporateBooking({ calendar, enrollmentEnabled = false }
       <h2>Your corporate enrollment is recorded.</h2>
       {enrollment.test && <p role="status">Test enrollment only. No live company charge was made.</p>}
       <p>Choose <strong>New Patient Visit (45 mins)</strong> in the calendar below and complete your patient details using the same email. You do not need to wait for company verification to schedule.</p>
-      <aside className="corporate-booking-note"><h3>Include your company in the booking.</h3><p>Paste this note into <strong>Reason for appointment</strong> so Apex can match your appointment to your enrollment:</p><p className="corporate-note-text">{note}</p><button className="primary-button" type="button" onClick={copyNote}>{copied ? "Company note copied" : "Copy company note"}</button>{error && <p role="alert">{error}</p>}</aside>
+      <aside className="corporate-booking-note"><h3>Your company membership is recorded.</h3><p><strong>{enrollment.company}</strong> sponsors your membership. Use <strong>the same email address you entered above</strong> when booking so Apex can match your registration. No company code or reference needs to be copied into the appointment form.</p></aside>
       <BookingCalendar calendar={calendar} title="Corporate care patient registration and appointment scheduling" flow="corporate" />
     </section>}
   </>;

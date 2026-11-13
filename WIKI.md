@@ -28,7 +28,7 @@ The homepage uses the existing Apex photos, with the California badge positioned
 | Apex Performance | $749/month or $7,490/year. |
 | Apex Private Client Care | $1,250/month or $12,500/year. |
 | Included member initial visit | 45-minute comprehensive New Patient Visit after enrollment in one of the three tiers. |
-| Corporate care | `/corporate-enrollment` requires a typed company name (no dropdown), then email and enrollment attestations. Completing enrollment starts company billing and opens Charm scheduling for a 45-minute initial visit. Clients copy the displayed company note into the appointment Reason field. Sponsor pays; no personal card. Apex verifies sponsorship before the visit without delaying scheduling. |
+| Corporate care | `/corporate-enrollment` requires a typed company name (no dropdown), then email and enrollment attestations. Completing enrollment starts company billing and opens Charm scheduling for a 45-minute initial visit. Clients use the same enrollment email when booking; no copied reference is required. Staff can reconcile email/company using the read-only membership lookup in the corporate billing guide. Sponsor pays; no personal card. Apex verifies sponsorship before the visit without delaying scheduling. |
 
 Monthly and annual memberships renew at their selected frequency until canceled. Annual payment is paid in full, not monthly installments. Applicable tax is shown at checkout. The $69 consultation, $80 first month, and CONSULT69 first-month credit are retired. The former Focused Care Stripe product was repurposed for company-sponsored care and must not be used as an individual self-pay route.
 
