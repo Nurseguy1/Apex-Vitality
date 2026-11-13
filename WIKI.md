@@ -252,3 +252,5 @@ Bio addition: John emphasized personal understanding of maintaining health and s
 Judo illustration moved into John’s bio at his request; laptop photograph moved to third benefit card, preserving one usage per image.
 
 Added a second distinct generated judo tournament image outside the bio, at user request. Bio retains the approved original stance.
+
+Second judo image corrected: user rejected invented posture. Final selected image edits supplied tournament reference to remove branding, preserving athlete stance. Bio image unchanged.
