@@ -254,3 +254,5 @@ Judo illustration moved into John’s bio at his request; laptop photograph move
 Added a second distinct generated judo tournament image outside the bio, at user request. Bio retains the approved original stance.
 
 Second judo image corrected: user rejected invented posture. Final selected image edits supplied tournament reference to remove branding, preserving athlete stance. Bio image unchanged.
+
+Second image final selection: supplied active grip-exchange reference with blue athlete on left and white athlete on right, branding removed. User confirmed athletes look engaged.
