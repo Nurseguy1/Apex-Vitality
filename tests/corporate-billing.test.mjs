@@ -6,7 +6,7 @@ const source = await readFile(new URL('../app/lib/corporate-billing.ts', import.
 const js = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText;
 const { billCorporateEnrollment: enroll, corporateBillingEnabled: enabled } = await import(`data:text/javascript;base64,${Buffer.from(js).toString('base64')}`);
 const originalFetch = globalThis.fetch;
-const names = ['STRIPE_SECRET_KEY','CORPORATE_BILLING_MODE','CORPORATE_LIVE_BILLING_APPROVED','CORPORATE_ENROLLMENT_HMAC_SECRET','CORPORATE_SPONSORS_JSON','CORPORATE_UNIT_AMOUNT','CORPORATE_STRIPE_PRODUCT_ID','CORPORATE_BOOKING_EVENT_SECRET'];
+const names = ['STRIPE_SECRET_KEY','CORPORATE_BILLING_MODE','CORPORATE_LIVE_BILLING_APPROVED','CORPORATE_ENROLLMENT_HMAC_SECRET','CORPORATE_SPONSORS_JSON','CORPORATE_ADDITIONAL_SPONSORS_JSON','CORPORATE_UNIT_AMOUNT','CORPORATE_STRIPE_PRODUCT_ID','CORPORATE_BOOKING_EVENT_SECRET'];
 const saved = Object.fromEntries(names.map(name => [name, process.env[name]]));
 afterEach(() => { globalThis.fetch = originalFetch; for (const name of names) { if (saved[name] === undefined) delete process.env[name]; else process.env[name] = saved[name]; } });
 const input = { company: 'Example LLC', email: 'client@example.com', accepted: true };
@@ -144,5 +144,19 @@ test('readiness still rejects unknown company names and mismatched prices', asyn
   const state = fixture({ price: { unit_amount: 1 } });
   assert.equal((await POST(request({ company: input.company, checkOnly: true }))).status, 422);
   assert.equal((await POST(request({ company: 'Unknown', checkOnly: true }))).status, 422);
+  assert.equal(state.created.length, 0);
+});
+
+test('additional sponsor is available without changing the original sponsor', async () => {
+  const state = fixture();
+  process.env.CORPORATE_ADDITIONAL_SPONSORS_JSON = JSON.stringify([{ name: 'Second Company', customer: 'cus_second', price: 'price_second', liveAuthorized: false }]);
+  const fallback = globalThis.fetch;
+  globalThis.fetch = async (url, init) => {
+    if (url.includes('/customers/cus_second')) return Response.json({ id: 'cus_second', livemode: false, invoice_settings: { default_payment_method: 'pm_second' } });
+    if (url.includes('/prices/price_second')) return Response.json({ id: 'price_second', active: true, livemode: false, unit_amount: 19900, currency: 'usd', type: 'recurring', recurring: { interval: 'month', interval_count: 1 }, product: 'prod_corporate' });
+    return fallback(url, init);
+  };
+  assert.equal((await POST(request({ company: 'Second Company', checkOnly: true }))).status, 200);
+  assert.equal((await POST(request({ company: input.company, checkOnly: true }))).status, 200);
   assert.equal(state.created.length, 0);
 });

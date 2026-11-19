@@ -10,8 +10,10 @@ export function normalizeCompany(value: string) {
 }
 export function sponsorConfig(): Sponsor[] {
   try {
-    const config: unknown = JSON.parse(process.env.CORPORATE_SPONSORS_JSON || "[]");
-    if (!Array.isArray(config)) return [];
+    const primary: unknown = JSON.parse(process.env.CORPORATE_SPONSORS_JSON || "[]");
+    const additional: unknown = JSON.parse(process.env.CORPORATE_ADDITIONAL_SPONSORS_JSON || "[]");
+    if (!Array.isArray(primary) || !Array.isArray(additional)) return [];
+    const config = [...primary, ...additional];
     return config.filter((s): s is Sponsor => s && typeof s.name === "string" &&
       /^cus_[A-Za-z0-9]+$/.test(s.customer) && /^price_[A-Za-z0-9]+$/.test(s.price) &&
       typeof s.liveAuthorized === "boolean" && (s.paymentMethod === undefined || /^pm_[A-Za-z0-9]+$/.test(s.paymentMethod)) && (s.aliases === undefined ||

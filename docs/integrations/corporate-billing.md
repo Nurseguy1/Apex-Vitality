@@ -19,6 +19,7 @@ The public endpoint accepts only company, email and attestations, checks the exa
 - `CORPORATE_BILLING_MODE`: `off` (default), `test`, or `live`.
 - `CORPORATE_LIVE_BILLING_APPROVED`: must explicitly equal `true` for live charging.
 - `CORPORATE_SPONSORS_JSON`: private list of company name, optional aliases, Stripe customer, price, optional `paymentMethod`, and `liveAuthorized`. Exact normalized mapping only; no client-supplied Stripe IDs. Do not put real company billing details into Git.
+- `CORPORATE_ADDITIONAL_SPONSORS_JSON`: optional additional private sponsor list with the same schema. Merged with the primary list without replacing existing sponsors; duplicate matching names fail closed.
 - `CORPORATE_UNIT_AMOUNT`: approved monthly amount in cents; must match the configured Stripe price exactly.
 - `CORPORATE_STRIPE_PRODUCT_ID`: must match the corporate product, not an individual membership product.
 - `CORPORATE_ENROLLMENT_HMAC_SECRET`: stable random server-only key, at least 32 characters. Do not rotate casually: changing it changes client duplicate references.
