@@ -5,6 +5,11 @@ const siteUrl = "https://goapexvitality.com";
 const routes = [
   "",
   "/gut-health",
+  "/functional-medicine",
+  "/functional-medicine/about",
+  "/functional-medicine/services",
+  "/functional-medicine/contact",
+  "/functional-medicine/book-a-call",
   "/mens-health",
   "/memberships",
   "/faq",
