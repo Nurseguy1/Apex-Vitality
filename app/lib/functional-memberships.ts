@@ -1,12 +1,14 @@
 export const functionalMemberships = {
- gold: { name:'Gold Plan', monthly:49900, setup:50000 },
- platinum: { name:'Platinum Plan', monthly:79900, setup:300000 },
+ treatment: { name:'Gold Plan', monthly:49900, setup:0 },
+ performance: { name:'Platinum Plan', monthly:74900, setup:0 },
+ private: { name:'Private Client Care', monthly:125000, setup:0 },
 } as const;
 export type FunctionalTier=keyof typeof functionalMemberships;
 export function functionalTier(value:unknown):FunctionalTier|null{return typeof value==='string'&&Object.hasOwn(functionalMemberships,value)?value as FunctionalTier:null;}
 export const dollars=(amount:number)=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(amount/100);
 
 export async function createFunctionalCheckout(tier:FunctionalTier,requestId:string,secret:string){
+ if(!functionalTier(tier))throw new Error('Membership unavailable');
  const offer=functionalMemberships[tier];
  const headers={Authorization:`Bearer ${secret}`,'Content-Type':'application/x-www-form-urlencoded'};
  async function stripe(path:string,body?:URLSearchParams,key?:string){

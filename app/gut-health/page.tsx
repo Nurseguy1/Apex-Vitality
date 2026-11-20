@@ -47,7 +47,7 @@ export default function GutHealthPage() {
         <div className="section-heading">
           <p className="eyebrow">Personalized support</p>
           <h2>Explore your membership options</h2>
-          <p>Functional medicine memberships start at $499/month plus a $500 one-time setup fee. Discuss your goals and choose the level of individual support that fits your needs.</p>
+          <p>Functional medicine memberships start at $499/month with no setup fee. Discuss your goals and choose the level of individual support that fits your needs.</p>
           <Link className="primary-button" href="/functional-medicine/services">View membership plans</Link>
         </div>
       </section>

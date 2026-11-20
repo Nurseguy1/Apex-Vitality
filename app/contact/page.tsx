@@ -15,7 +15,7 @@ export default function ContactPage() {
         <p><a className="primary-button" href="mailto:apexvitality5@gmail.com">Email Apex Vitality</a></p>
         <p>Please keep email to general questions. Medical patients use CharmHealth for medical details and records. Coaching clients use their Scalerize access link for coaching information.</p>
         <h2>Gut Health &amp; Metabolic Balance</h2>
-        <p>Functional medicine memberships start at $499/month plus a $500 one-time setup fee. Explore the available plans and discuss which level of support fits your goals.</p>
+        <p>Functional medicine memberships start at $499/month with no setup fee. Explore the available plans and discuss which level of support fits your goals.</p>
         <p><Link className="primary-button" href="/gut-health">Explore Gut Health coaching</Link></p>
         <h2>Men&apos;s Hormone Health</h2>
         <p>Medical evaluation and treatment for eligible men physically located in California at the time of care.</p>
