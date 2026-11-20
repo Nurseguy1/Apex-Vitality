@@ -45,14 +45,10 @@ export default function GutHealthPage() {
 
       <section className="content-section" id="coaching-membership">
         <div className="section-heading">
-          <p className="eyebrow">Learn at your pace</p>
-          <h2>Group coaching · $99/month</h2>
-          <p>Build healthier routines with self-paced video lessons and one monthly group Q&amp;A with your coach. Explore nutrition, movement, sleep, stress, and gut health at a pace that fits your life.</p>
-          <p>Higher coaching tiers offer more personalized attention. Ask about the available options and pricing.</p>
-          <CaliforniaEligibility>
-            <a className="primary-button" href="mailto:apexvitality5@gmail.com?subject=California%20coaching%20enrollment">Ask about coaching enrollment</a>
-          </CaliforniaEligibility>
-          <p>Already enrolled? Use the Scalerize access link from your coaching welcome email for lessons, group sessions, and client support.</p>
+          <p className="eyebrow">Personalized support</p>
+          <h2>Explore your membership options</h2>
+          <p>Functional medicine memberships start at $499/month plus a $500 one-time setup fee. Discuss your goals and choose the level of individual support that fits your needs.</p>
+          <Link className="primary-button" href="/functional-medicine/services">View membership plans</Link>
         </div>
       </section>
 
