@@ -1,5 +1,4 @@
 export const functionalMemberships = {
- signature: { name:'Signature Plan', monthly:9900, setup:0 },
  gold: { name:'Gold Plan', monthly:49900, setup:50000 },
  platinum: { name:'Platinum Plan', monthly:79900, setup:300000 },
 } as const;
