@@ -5593,3 +5593,5 @@ footer p {
 .fm-contact-form button.primary-button{border:0;cursor:pointer;padding:14px 22px;background:#00494b;color:white;font:600 16px Arial,sans-serif;border-radius:4px}.fm-contact-form input:focus-visible,.fm-contact-form textarea:focus-visible,.fm-contact-form select:focus-visible{outline:2px solid #00494b;outline-offset:2px}
 
 .fm-contact-form label.contact-opt-in{display:flex;align-items:flex-start;font-weight:400;line-height:1.6}.fm-contact-form .contact-opt-in input{width:20px;min-width:20px;height:20px;margin-top:3px}
+
+.footer-mailing-address { font-size: 0.8125rem; line-height: 1.6; font-style: normal; }

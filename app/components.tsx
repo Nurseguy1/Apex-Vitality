@@ -37,7 +37,9 @@ export function SiteFooter() {
       <div>
         <strong>Apex Vitality</strong>
         <p>A place to talk about men&apos;s health and lifestyle concerns and feel heard.</p>
-        <address>
+        <p>Apex Vitality is a telehealth-only clinic.</p>
+        <address className="footer-mailing-address">
+          Mailing address<br />
           {practiceContact.legalName}<br />
           {practiceContact.addressLine1}<br />
           {practiceContact.cityStateZip}
