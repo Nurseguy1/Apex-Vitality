@@ -5591,3 +5591,5 @@ footer p {
 
 .fm-contact-form{max-width:650px;display:grid;gap:20px}.fm-contact-form label{display:grid;gap:8px;font-weight:600}.fm-contact-form input,.fm-contact-form select,.fm-contact-form textarea{font:inherit;font-size:16px;padding:12px;border:1px solid #688b89;border-radius:4px;background:white;color:#002e33;width:100%}.fm-contact-form p{font-size:14px;margin:0}.fm-contact-form button{justify-self:start}.fm-contact-form button:disabled{opacity:.65}.fm-contact-trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
 .fm-contact-form button.primary-button{border:0;cursor:pointer;padding:14px 22px;background:#00494b;color:white;font:600 16px Arial,sans-serif;border-radius:4px}.fm-contact-form input:focus-visible,.fm-contact-form textarea:focus-visible,.fm-contact-form select:focus-visible{outline:2px solid #00494b;outline-offset:2px}
+
+.fm-contact-form label.contact-opt-in{display:flex;align-items:flex-start;font-weight:400;line-height:1.6}.fm-contact-form .contact-opt-in input{width:20px;min-width:20px;height:20px;margin-top:3px}
