@@ -12,7 +12,7 @@ export default function ContactPage() {
       <article className="legal-page">
         <p className="eyebrow">Ask Apex Vitality</p>
         <h1>Tell us what you want to improve.</h1>
-        <p>Whether you want to feel better day to day, understand your health patterns, or take a closer look at men&apos;s hormone health, Apex Vitality can help you choose a clear way forward.</p>
+        <p>Whether you want to feel better day to day, understand your health patterns, or discuss your health goals and lifestyle choices, Apex Vitality can help you choose a clear way forward.</p>
         <h2>Get in touch</h2>
         <p>For coaching inquiries, enrollment questions, or general information, email <a href="mailto:apexvitality5@gmail.com">apexvitality5@gmail.com</a>.</p>
         <ContactForm enabled={enabled} />
@@ -20,9 +20,9 @@ export default function ContactPage() {
         <h2>Gut Health &amp; Metabolic Balance</h2>
         <p>Functional medicine memberships start at $499/month with no setup fee. Explore the available plans and discuss which level of support fits your goals.</p>
         <p><Link className="primary-button" href="/gut-health">Explore Gut Health coaching</Link></p>
-        <h2>Men&apos;s Hormone Health</h2>
+        <h2>Men&apos;s Health</h2>
         <p>Medical evaluation and treatment for eligible men physically located in California at the time of care.</p>
-        <p><Link className="primary-button" href="/mens-health">Explore Men&apos;s Hormone Health</Link></p>
+        <p><Link className="primary-button" href="/mens-health">Explore Men&apos;s Health</Link></p>
         <h2>Already working with Apex?</h2>
         <p>Patients can use CharmHealth for appointments, assigned forms, and secure communication with the clinic.</p>
         <p><Link className="secondary-dark-button" href="/patient-access">Open patient access</Link></p>

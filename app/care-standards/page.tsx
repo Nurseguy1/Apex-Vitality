@@ -6,7 +6,7 @@ import { practiceContact } from "../lib/compliance";
 export const metadata: Metadata = {
   title: "Care & Compliance Standards | Apex Vitality",
   description:
-    "Learn how Apex Vitality handles clinical review, prescriptions, pharmacy fulfillment, privacy, and California telehealth care.",
+    "Learn how Apex Vitality handles clinical review, health goals, privacy, and California telehealth care.",
 };
 
 export default function CareStandardsPage() {
@@ -15,7 +15,7 @@ export default function CareStandardsPage() {
       <SiteHeader />
       <article className="legal-page">
         <p className="eyebrow">Care &amp; compliance standards</p>
-        <h1>Clear standards behind every treatment request.</h1>
+        <h1>Clear standards for personalized care.</h1>
         <p>
           Apex Vitality is a California telehealth practice operated by {practiceContact.legalName}. Our website helps patients explore care, but treatment decisions are made by a licensed clinician after an appropriate medical evaluation.
         </p>
@@ -26,20 +26,8 @@ export default function CareStandardsPage() {
         </p>
         <p><Link href="/providers">View clinician credentials and clinical-partner information.</Link></p>
 
-        <h2>Prescription-only treatment</h2>
-        <p>
-          Prescription medications are issued only when the treating clinician determines they are clinically appropriate and legally permitted. Patients must provide accurate health and medication information and complete any monitoring required for safe ongoing care.
-        </p>
-
-        <h2>Licensed-pharmacy fulfillment</h2>
-        <p>
-          Apex Vitality is not a pharmacy. When medication is prescribed, the prescription is sent to an independent licensed pharmacy serving the patient&apos;s location. The dispensing pharmacy is identified through the prescription, medication label, or fulfillment process. Product, formulation, packaging, and availability may vary.
-        </p>
-
-        <h2>Compounded medications</h2>
-        <p>
-          Some treatment plans may use a patient-specific compounded medication. Compounded drugs are not FDA-approved, and the FDA does not review them for safety, effectiveness, or quality before marketing. Your clinician determines whether a compounded option is appropriate and reviews material risks, benefits, alternatives, and monitoring with you.
-        </p>
+        <h2>Individualized care planning</h2>
+        <p>Your clinician discusses your health goals, lifestyle choices, and appropriate next steps during a private appointment. Care decisions follow an appropriate evaluation and informed discussion.</p>
 
         <h2>California service area</h2>
         <p>
@@ -57,7 +45,7 @@ export default function CareStandardsPage() {
 
         <h2>Transparent self-pay terms</h2>
         <p>
-          Clinical-care prices and inclusions are presented before checkout. Payment does not guarantee medical eligibility or a prescription. The men’s health Focused Care membership includes prescribed testosterone, injection supplies, delivery, and anastrozole when prescribed. Recurring-payment and outside-service terms are disclosed in the applicable checkout and written agreements.
+          Clinical-care prices and inclusions are presented before checkout. Payment does not guarantee medical eligibility or a prescription. Recurring-payment and outside-service terms are disclosed in the applicable checkout and written agreements.
         </p>
         <p>
           Review the <Link href="/agreements/self-pay">Self-Pay Agreement</Link>, <Link href="/agreements/recurring-payments">Recurring-Payment Terms</Link>, and <Link href="/terms">Terms of Service</Link>.

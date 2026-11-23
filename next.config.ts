@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      { source: "/treatment-consents/hormone-therapy", destination: "/patient-access", permanent: false },
+      { source: "/questionnaires/medication-review", destination: "/patient-access", permanent: false },
       { source: "/peptides/:path*", destination: "/", permanent: false },
       { source: "/treatments/:path*", destination: "/", permanent: false },
       { source: "/functional-health/:path*", destination: "/gut-health", permanent: false },

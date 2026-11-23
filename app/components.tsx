@@ -104,7 +104,7 @@ export function CareNotice() {
       <p>
         Your clinician will assess your history, goals, symptoms, and
         available data, then provide clinical guidance and a personalized plan.
-        Testing, prescriptions, monitoring, and follow-up are incorporated when useful.
+        Planning, monitoring, and follow-up are tailored to your needs.
       </p>
     </aside>
   );

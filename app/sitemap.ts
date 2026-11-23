@@ -21,7 +21,6 @@ const routes = [
   "/california-privacy",
   "/notice-of-privacy-practices",
   "/telehealth-consent",
-  "/treatment-consents/hormone-therapy",
   "/agreements/self-pay",
   "/agreements/recurring-payments",
   "/terms",
