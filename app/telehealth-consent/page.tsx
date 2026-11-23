@@ -6,11 +6,11 @@ export default function TelehealthConsentPage() {
     <main>
       <SiteHeader />
       <article className="legal-page">
-        <p className="eyebrow">Telehealth and pharmacy informed consent</p>
+        <p className="eyebrow">Telehealth informed consent</p>
         <h1>Consent to receive care through telehealth</h1>
         <p>
           Please read this consent carefully. It explains telehealth services,
-          clinical review, prescriptions, pharmacy coordination, privacy, and
+          clinical review, care coordination, privacy, and
           your choices as a patient. You may ask questions before accepting it.
           Where required, your electronic or verbal consent will be documented
           in your medical record before telehealth services begin.
@@ -30,14 +30,14 @@ export default function TelehealthConsentPage() {
           Apex Vitality is operated by Elite Functional Health, a Professional
           Nursing Corporation. Clinical care is provided by appropriately
           licensed Apex Vitality clinicians. Your treating clinician—not the
-          website, marketing team, pharmacy, or payment processor—makes all
+          website, marketing team, or payment processor—makes all
           medical decisions. The clinician&apos;s identity and professional
           credentials will be disclosed before care is provided.
         </p>
         <p>
           Clinical care is currently available only when you are physically
           located in California at the time of care. Service availability also
-          depends on clinical appropriateness, pharmacy availability, and
+          depends on clinical appropriateness, service availability, and
           applicable law.
         </p>
 
@@ -48,7 +48,7 @@ export default function TelehealthConsentPage() {
           medical history and records, electronic questionnaires, photographs
           or measurements you submit, scheduled telephone or video
           consultation, assessment, diagnosis, treatment recommendations,
-          laboratory orders, prescriptions, monitoring, referrals, and
+          laboratory orders, monitoring, referrals, and
           follow-up. A consultation may be asynchronous or live, depending on
           the service, your state&apos;s requirements, and the clinician&apos;s
           judgment.
@@ -57,10 +57,10 @@ export default function TelehealthConsentPage() {
         <h2>4. A medical consultation is required</h2>
         <p>
           A licensed clinician must independently review the information you
-          provide and complete an appropriate clinical evaluation before a
-          prescription can be issued. Completing a questionnaire, selecting a
+          provide and complete an appropriate clinical evaluation before an
+          individualized care plan is implemented. Completing a questionnaire, selecting a
           treatment, making a payment, or enrolling in a membership does not
-          guarantee a diagnosis, prescription, dose, laboratory order, or
+          guarantee a diagnosis, care plan, laboratory order, or
           treatment result. The clinician may request additional information,
           testing, a live consultation, or an in-person examination, recommend
           a different option, or decline treatment when it is not clinically
@@ -70,7 +70,7 @@ export default function TelehealthConsentPage() {
         <h2>5. Your medical information and responsibilities</h2>
         <p>
           You agree to provide complete, truthful, and accurate identity,
-          location, health history, medication, supplement, allergy, pregnancy,
+          location, health history, current care, supplement use, allergies, pregnancy,
           laboratory, and contact information and to update it when it changes.
           The clinician relies on this information when making medical
           decisions. Missing or inaccurate information can create medical risk
@@ -79,7 +79,7 @@ export default function TelehealthConsentPage() {
         <p>
           Participate from a reasonably private and safe location, do not drive
           during a visit, identify anyone else who is present, follow agreed
-          testing and monitoring, use medication only as directed, and promptly
+          testing and monitoring, follow your care plan only as directed, and promptly
           report significant side effects or changes in your condition. The
           clinician may confirm your identity, physical location, and emergency
           contact information.
@@ -97,51 +97,25 @@ export default function TelehealthConsentPage() {
           directed to in-person, urgent, emergency, or specialty care.
         </p>
 
-        <h2>7. Prescriptions, testing, and follow-up</h2>
-        <p>
-          If treatment is approved, the clinician may prescribe medication in
-          accordance with professional judgment, clinical standards, and
-          applicable law. Approval may depend on laboratory testing, medical
-          records, identity verification, a live consultation, or ongoing
-          monitoring. Prescriptions may be changed, paused, or discontinued
-          when medically appropriate. Telehealth does not replace your primary
-          care clinician, and you should continue routine and preventive care.
-        </p>
+        <h2>7. Care planning, testing, and follow-up</h2>
+        <p>Your clinician develops an individualized care plan using professional judgment, clinical standards, and applicable law. Decisions may depend on records, testing, identity verification, a live consultation, or ongoing monitoring. A plan may be changed, paused, or discontinued when clinically appropriate. Continue routine and preventive care with your usual clinician.</p>
 
-        <h2>8. Pharmacy services and your pharmacy choice</h2>
-        <p>
-          Apex Vitality is not a pharmacy. When a prescription is issued, it may
-          be sent to an independent licensed pharmacy or pharmacy network for
-          processing, dispensing, and delivery. A pharmacy may transfer the
-          prescription when permitted or required by law and may contact you or
-          the prescriber for additional information. Pharmacy availability,
-          formulation, pricing, and delivery time can vary by location.
-        </p>
-        <p>
-          You may ask to use another pharmacy when the prescription and
-          applicable law permit it. Some bundled or membership pricing may
-          apply only when the identified pharmacy network is used. The specific
-          pharmacy, included services, transfer process, and any separate costs
-          will be disclosed through the applicable program or pharmacy
-          workflow.
-        </p>
 
-        <h2>9. Compounded medication</h2>
-        <p>
-          If your plan includes compounded medication, it will be prepared by
-          an independent licensed pharmacy pursuant to a patient-specific
-          prescription. Compounded drugs are not FDA-approved, and the FDA does
-          not review their safety, effectiveness, or quality before marketing.
-          Formulation, concentration, appearance, packaging, beyond-use date,
-          and availability may vary by pharmacy. Your clinician will provide
-          material treatment information and answer your questions as part of
-          your care.
-        </p>
+
+        <h2>8. Independent service providers and your choices</h2>
+        <p>Your care may involve independent licensed service providers. Their identity, role, relevant instructions, availability, and any separate charges will be explained before you authorize the applicable service. You may discuss available alternatives with your clinician. Third-party services have their own terms and privacy notices.</p>
+
+
+
+        <h2>9. Additional information and informed consent</h2>
+        <p>This general telehealth consent does not authorize every possible intervention. Before a proposed intervention begins, your clinician will discuss its purpose, material risks, potential benefits, alternatives, limitations, and any applicable regulatory information. Additional service-specific disclosures and consent may be required through the secure patient workflow.</p>
+
+
 
         <h2>10. Privacy, records, and electronic communication</h2>
         <p>
           Clinical information may be handled by Apex Vitality, treating
-          clinicians, laboratories, pharmacies, and technology
+          clinicians, laboratories and technology
           providers as permitted by law and described in their applicable
           privacy notices. Use the designated secure patient platform for
           medical information. Ordinary email and text messages may not be fully
@@ -156,7 +130,7 @@ export default function TelehealthConsentPage() {
           purchase.
           Laboratory or other third-party charges are also separate unless
           expressly listed as included. Payment or membership enrollment does
-          not guarantee a prescription or treatment approval. Apex Vitality does
+          not guarantee a particular care decision or treatment approval. Apex Vitality does
           not guarantee insurance coverage or reimbursement.
         </p>
 
@@ -198,7 +172,7 @@ export default function TelehealthConsentPage() {
           verbally consenting after receiving this information, you acknowledge
           that you have read or had the opportunity to review this notice;
           understand the nature, potential benefits, risks, limitations, and
-          alternatives of telehealth; understand that no prescription or result
+          alternatives of telehealth; understand that no particular clinical decision or result
           is guaranteed; have had an opportunity to ask questions; consent to
           telehealth services; and authorize documentation of your consent in
           the medical record.
@@ -206,7 +180,7 @@ export default function TelehealthConsentPage() {
         <p>
           This consent works together with the <Link href="/terms">Terms of
           Service</Link>, <Link href="/privacy">Privacy Notice</Link>, and any
-          pharmacy, laboratory, program, or service-specific notices presented
+          laboratory, program, or service-specific notices presented
           to you during the applicable workflow.
         </p>
         <p className="legal-updated">Effective August 13, 2026.</p>

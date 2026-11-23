@@ -33,7 +33,7 @@ export default function RecurringPaymentsPage() {
         <p>You may cancel online without unnecessary delay through the cancellation method identified at enrollment, or by using the contact method in your acknowledgment. Cancellation stops future renewals and does not retroactively refund the current billing period unless required by law or expressly stated in the plan. Clinical care already in progress will be transitioned or concluded as medically appropriate.</p>
 
         <h2>Clinical independence</h2>
-        <p>Membership does not guarantee a prescription, refill, laboratory order, medication, or result. Clinical decisions remain with the treating clinician. Review the <Link href="/terms">Terms of Service</Link> and <Link href="/agreements/self-pay">Self-Pay Agreement</Link>.</p>
+        <p>Membership does not guarantee a particular care plan, laboratory order, or result. Clinical decisions remain with the treating clinician. Review the <Link href="/terms">Terms of Service</Link> and <Link href="/agreements/self-pay">Self-Pay Agreement</Link>.</p>
 
         <h2>Questions or cancellation assistance</h2>
         <p>Use the direct written cancellation method identified in your enrollment confirmation or secure patient portal. The online enrollment screen and confirmation message must identify that method before recurring memberships are activated.</p>

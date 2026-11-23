@@ -43,7 +43,7 @@ export default async function SelfPayAgreementPage({
         <p>Apex Vitality does not accept patients enrolled in Medicare, Medicare Advantage, Medi-Cal/Medicaid, the Qualified Medicare Beneficiary (QMB) program, or dual-eligible coverage. By continuing, you confirm that you are not currently enrolled in any of these forms of coverage. Eligibility is based on coverage status, not age.</p>
 
         <h2>What your payment means</h2>
-        <p>Payment starts the administrative and clinical-review process. It does not establish medical eligibility and does not guarantee a diagnosis, prescription, laboratory order, refill, medication, or result. A licensed clinician independently determines whether a requested service or treatment is appropriate.</p>
+        <p>Payment starts the administrative and clinical-review process. It does not establish medical eligibility and does not guarantee a diagnosis, particular care plan, laboratory order, or result. A licensed clinician independently determines whether a requested service or treatment is appropriate.</p>
 
         <h2>Included and separate charges</h2>
         <p>The checkout description controls which Apex Vitality clinical services are included. Laboratory testing, supplements, imaging, and other outside services are also separate unless the checkout expressly identifies them as included. You are responsible for charges you authorize and for providing accurate billing, shipping, and contact information.</p>
@@ -70,7 +70,7 @@ export default async function SelfPayAgreementPage({
         <p>{isProgram ? "If the reviewing clinician determines that you are not eligible for the Special Needs Nutrition Program before program services begin, Apex Vitality will refund the $597 program payment." : "If the reviewing clinician determines that you are not eligible for the selected care pathway, any applicable refund will be handled under the terms of the selected membership."} A recurring membership charge begins only after the patient separately chooses a membership, accepts its renewal terms, and completes its checkout.</p>
 
         <h2>When treatment is not authorized</h2>
-        <p>Clinical-care fees pay for the professional services described at checkout and do not guarantee a prescription. Included medication is dispensed by an independent pharmacy. Medication outside the stated membership inclusions is paid separately and is subject to the pharmacy&apos;s payment, cancellation, return, and refund policies.</p>
+        <p>Clinical-care fees cover the professional services described at checkout, regardless of the clinician’s eventual recommendation. A purchase does not assure a particular care decision or outcome. Services and items not expressly included are paid separately, subject to the independent provider’s terms disclosed before you authorize those charges.</p>
 
         <h2>Appointments</h2>
         <p>Appointment cancellation, rescheduling, and missed-visit terms are stated in the <Link href="/terms">Terms of Service</Link> and any appointment-specific notice shown before payment. If a checkout notice conflicts with this agreement, contact Apex Vitality before paying.</p>

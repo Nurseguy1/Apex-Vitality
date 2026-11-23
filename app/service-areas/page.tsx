@@ -15,9 +15,9 @@ export default function ServiceAreasPage() {
         <p className="eyebrow">Service areas</p>
         <h1>Both services are available in California.</h1>
         <h2>Men&apos;s Health medical care</h2>
-        <p>Eligible adults age 18 and older who are physically located in California at the time of care may use the Men&apos;s Health telehealth pathway. Availability depends on clinical appropriateness, pharmacy coverage, and applicable law. No treatment or prescription is guaranteed.</p>
+        <p>Eligible adults age 18 and older who are physically located in California at the time of care may use the Men&apos;s Health telehealth pathway. Availability depends on clinical appropriateness, service availability, and applicable law. No particular care decision or outcome is guaranteed.</p>
         <h2>Gut Health &amp; Metabolic Balance coaching</h2>
-        <p>This is educational wellness coaching, not medical care. Enrollment is available only to clients physically located in California during appointments. It may include educational review of wellness-related laboratory patterns, but it does not include diagnosis, treatment, prescribing, diagnostic testing as medical care, or clinical interpretation of laboratory results.</p>
+        <p>This is educational wellness coaching, not medical care. Enrollment is available only to clients physically located in California during appointments. It may include educational review of wellness-related laboratory patterns, but it does not include diagnosis, treatment, diagnostic testing as medical care, or clinical interpretation of laboratory results.</p>
         <h2>Confirm your pathway</h2>
         <p><Link className="primary-button" href="/#care">Choose your path</Link></p>
       </article>

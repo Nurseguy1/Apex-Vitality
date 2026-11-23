@@ -14,12 +14,12 @@ export default function TermsPage() {
 
         <h2>1. Who we are</h2>
         <p>
-          Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation. Clinical care is provided by appropriately licensed Apex Vitality clinicians. The treating clinician—not the website, pharmacy, or payment processor—is responsible for medical evaluation and treatment decisions.
+          Apex Vitality is operated by Elite Functional Health, a Professional Nursing Corporation. Clinical care is provided by appropriately licensed Apex Vitality clinicians. The treating clinician—not the website or payment processor—is responsible for medical evaluation and treatment decisions.
         </p>
 
         <h2>2. Eligibility and service area</h2>
         <p>
-          Apex Vitality currently serves adults age 18 and older who are physically located in California at the time clinical care is provided. The only age exception is the Special Needs Nutrition Program, for which children age 4 and older and teens may be considered with parent or legal-guardian participation and consent. All other treatments, programs, and memberships are adult-only. Availability also depends on the selected service, clinical appropriateness, pharmacy coverage, and applicable law. See the <Link href="/service-areas">Service Areas page</Link>. You must provide accurate identity, contact, physical location, shipping address, health, medication, and payment information and may not use another person&apos;s identity or account.
+          Apex Vitality currently serves adults age 18 and older who are physically located in California at the time clinical care is provided. The only age exception is the Special Needs Nutrition Program, for which children age 4 and older and teens may be considered with parent or legal-guardian participation and consent. All other treatments, programs, and memberships are adult-only. Availability also depends on the selected service, clinical appropriateness, service availability, and applicable law. See the <Link href="/service-areas">Service Areas page</Link>. You must provide accurate identity, contact, physical location, shipping address, health and payment information and may not use another person&apos;s identity or account.
         </p>
 
         <h2>3. Not emergency care</h2>
@@ -29,12 +29,12 @@ export default function TermsPage() {
 
         <h2>4. Website information</h2>
         <p>
-          Website articles, descriptions, illustrations, and other general information are educational and do not replace individualized medical care. They are not a diagnosis, prescription, or guarantee that a particular treatment is right for you.
+          Website articles, descriptions, illustrations, and other general information are educational and do not replace individualized medical care. They are not a diagnosis or guarantee that a particular treatment is right for you.
         </p>
 
         <h2>5. Starting care</h2>
         <p>
-          Completing a questionnaire, making a payment, or requesting an appointment begins the care process but does not by itself establish a clinician-patient relationship or guarantee a prescription. A clinician-patient relationship begins only when a licensed clinician accepts your care and provides an appropriate clinical evaluation. Your clinician will work with you to understand your history, symptoms, lifestyle, and goals and develop a personalized plan.
+          Completing a questionnaire, making a payment, or requesting an appointment begins the care process but does not by itself establish a clinician-patient relationship or assure a particular care decision. A clinician-patient relationship begins only when a licensed clinician accepts your care and provides an appropriate clinical evaluation. Your clinician will work with you to understand your history, symptoms, lifestyle, and goals and develop a personalized plan.
         </p>
 
         <h2>6. Telehealth services</h2>
@@ -42,19 +42,19 @@ export default function TermsPage() {
           Care may be provided through scheduled video or telephone visits, electronic questionnaires, record review, or other legally permitted telehealth methods. Clinical messaging is not included. Before telehealth care is delivered, you will be asked to acknowledge the <Link href="/telehealth-consent">Telehealth Informed Consent</Link>. A clinician may recommend an in-person examination, testing, urgent evaluation, or another level of care when useful for safe and effective treatment.
         </p>
 
-        <h2>7. Prescriptions and treatment plans</h2>
-        <p>
-          Treatment is individualized. Purchasing a program does not guarantee any particular medication, dose, laboratory order, supplement, or outcome. Prescriptions are issued only when a licensed clinician determines they are clinically appropriate and legally permitted. You agree to use medication only as directed, disclose all medications and relevant health information, complete requested monitoring, and promptly report adverse effects.
-        </p>
+        <h2>7. Individualized care plans</h2>
+        <p>Care is individualized. Purchasing a service does not assure a particular clinical decision, test, care plan, or outcome. Your clinician independently determines appropriate next steps after evaluation. Provide complete health information, follow agreed instructions and monitoring, and promptly report adverse effects or changes in your condition.</p>
 
-        <h2>8. Compounded medications</h2>
-        <p>
-          A clinician may prescribe a compounded medication prepared by an independent licensed pharmacy pursuant to a patient-specific prescription. Compounded drugs are not FDA-approved, and the FDA does not review their safety, effectiveness, or quality before marketing. Formulation, concentration, appearance, packaging, beyond-use date, and availability may vary by pharmacy. Your clinician will discuss material treatment information and alternatives as part of your care.
-        </p>
 
-        <h2>9. Pharmacies, laboratories, and other third parties</h2>
+
+        <h2>8. Additional information and informed consent</h2>
+        <p>Before a proposed intervention begins, your clinician will discuss its purpose, material risks, potential benefits, alternatives, limitations, and any applicable regulatory information. Additional service-specific disclosures and consent may be required through the secure patient workflow. These general terms do not replace that discussion or authorize an intervention by themselves.</p>
+
+
+
+        <h2>9. Laboratories and other independent service providers</h2>
         <p>
-          Pharmacies, laboratories, payment processors, delivery carriers, and technology platforms are independent third parties with their own terms and privacy practices. Apex Vitality may coordinate with them but does not control their operating hours, inventory, turnaround times, shipping, or service interruptions. Delivery dates are estimates. You are responsible for providing a complete delivery address, promptly retrieving packages, and following storage instructions.
+          Laboratories, payment processors, delivery carriers, and technology platforms are independent third parties with their own terms and privacy practices. Apex Vitality may coordinate with them but does not control their operating hours, inventory, turnaround times, shipping, or service interruptions. Delivery dates are estimates. You are responsible for providing a complete delivery address, promptly retrieving packages, and following storage instructions.
         </p>
 
         <h2>10. Prices, payments, and insurance</h2>
@@ -64,7 +64,7 @@ export default function TermsPage() {
 
         <h2>11. Provider-review purchases and refunds</h2>
         <p>
-          Some programs allow you to pay and submit a health questionnaire before clinician review. That payment covers the clinical services described at checkout and does not guarantee that medication will be prescribed. Medication included in the selected membership is covered by that membership. Other medication is purchased separately and is governed by the pharmacy&apos;s payment, cancellation, return, and refund policies.
+          Some programs allow you to pay and submit a health questionnaire before clinician review. That payment covers the professional services described at checkout and does not assure a particular clinical decision. Services and items not expressly included are paid separately. Independent providers apply their own payment, cancellation, return, and refund policies, disclosed before you authorize those charges.
         </p>
 
         <h2>12. Appointments, cancellations, and missed visits</h2>
@@ -104,7 +104,7 @@ export default function TermsPage() {
 
         <h2>19. No guarantee of results</h2>
         <p>
-          Health outcomes vary. Apex Vitality does not guarantee a particular diagnosis, prescription, response, result, or timeline. Nothing in these terms limits professional duties, patient rights, or liability that cannot legally be limited.
+          Health outcomes vary. Apex Vitality does not guarantee a particular diagnosis, response, result, or timeline. Nothing in these terms limits professional duties, patient rights, or liability that cannot legally be limited.
         </p>
 
         <h2>20. Suspension or termination</h2>

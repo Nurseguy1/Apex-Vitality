@@ -24,7 +24,7 @@ export default function CaliforniaPrivacyPage() {
         <p>Information may be used to operate and secure the website, respond to requests, provide purchased services, route users to the appropriate California care workflow, process payments, prevent fraud, maintain records, understand website performance, and comply with legal obligations.</p>
 
         <h2>Service providers and disclosures</h2>
-        <p>Information may be disclosed to hosting, security, analytics, communications, payment, scheduling, laboratory, pharmacy, professional-adviser, and clinical service providers when necessary for the stated purpose and permitted by law. Apex Vitality does not sell medical records. Any use of advertising or analytics technology must remain consistent with the privacy choices and notices presented on the website.</p>
+        <p>Information may be disclosed to hosting, security, analytics, communications, payment, scheduling, laboratory, care-coordination, professional-adviser, and clinical service providers when necessary for the stated purpose and permitted by law. Apex Vitality does not sell medical records. Any use of advertising or analytics technology must remain consistent with the privacy choices and notices presented on the website.</p>
 
         <h2>California requests</h2>
         <p>Subject to applicable law and exemptions, California residents may request information about collection and disclosure, correction, deletion, access, or a portable copy of certain personal information, and may exercise applicable rights concerning sale, sharing, or sensitive personal information. Apex Vitality will not discriminate against a person for exercising an applicable privacy right.</p>

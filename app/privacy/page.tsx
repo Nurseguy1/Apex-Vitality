@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         <h2>Website information</h2>
         <p>Basic technical information may be processed by the hosting provider to operate, secure, and measure this website. General website activity is separate from the clinical record maintained through the patient platform.</p>
         <h2>Clinical service partners</h2>
-        <p>When needed for care, authorized clinicians, laboratories, dispensing pharmacies, payment processors, and other service providers may handle information as described in their applicable notices and as permitted by law. Clinical information should be submitted only through the secure patient workflow provided for your care.</p>
+        <p>When needed for care, authorized clinicians, laboratories, independent care partners, payment processors, and other service providers may handle information as described in their applicable notices and as permitted by law. Clinical information should be submitted only through the secure patient workflow provided for your care.</p>
         <h2>Notice of Privacy Practices</h2>
         <p>Read the full <Link href="/notice-of-privacy-practices">Apex Vitality Notice of Privacy Practices</Link> for patient rights, permitted uses and disclosures, our responsibilities, and complaint information.</p>
         <h2>California residents</h2>

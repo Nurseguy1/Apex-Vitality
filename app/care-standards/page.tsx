@@ -22,7 +22,7 @@ export default function CareStandardsPage() {
 
         <h2>Licensed clinical review</h2>
         <p>
-          California care is provided by {practiceContact.clinician}. A questionnaire, product selection, or payment is a request for clinical review—not a guaranteed prescription. The clinician may approve, modify, postpone, or decline a requested treatment and may require laboratory testing, records, follow-up, or in-person evaluation.
+          California care is provided by {practiceContact.clinician}. A questionnaire, product selection, or payment is a request for clinical review—not a predetermined care plan. The clinician may approve, modify, postpone, or decline a requested treatment and may require laboratory testing, records, follow-up, or in-person evaluation.
         </p>
         <p><Link href="/providers">View clinician credentials and clinical-partner information.</Link></p>
 
@@ -31,7 +31,7 @@ export default function CareStandardsPage() {
 
         <h2>California service area</h2>
         <p>
-          Apex Vitality currently provides Men&apos;s Health medical care to eligible adults age 18 and older who are physically located in California at the time of care. Treatment availability also depends on clinical appropriateness, pharmacy coverage, and applicable law. Gut Health &amp; Metabolic Balance is a separate non-medical coaching service and does not include diagnosis, treatment, prescribing, or individualized medical interpretation.
+          Apex Vitality currently provides Men&apos;s Health medical care to eligible adults age 18 and older who are physically located in California at the time of care. Treatment availability also depends on clinical appropriateness, service availability, and applicable law. Gut Health &amp; Metabolic Balance is a separate non-medical coaching service and does not include diagnosis, treatment or individualized medical interpretation.
         </p>
         <p><Link href="/service-areas">Review current service-area information.</Link></p>
 
@@ -45,7 +45,7 @@ export default function CareStandardsPage() {
 
         <h2>Transparent self-pay terms</h2>
         <p>
-          Clinical-care prices and inclusions are presented before checkout. Payment does not guarantee medical eligibility or a prescription. Recurring-payment and outside-service terms are disclosed in the applicable checkout and written agreements.
+          Clinical-care prices and inclusions are presented before checkout. Payment does not guarantee medical eligibility or a particular care decision. Recurring-payment and outside-service terms are disclosed in the applicable checkout and written agreements.
         </p>
         <p>
           Review the <Link href="/agreements/self-pay">Self-Pay Agreement</Link>, <Link href="/agreements/recurring-payments">Recurring-Payment Terms</Link>, and <Link href="/terms">Terms of Service</Link>.

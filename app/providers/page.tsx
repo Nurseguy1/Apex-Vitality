@@ -22,8 +22,10 @@ export default function ProvidersPage() {
         </ul>
         <h2>Current service area</h2>
         <p>Apex Vitality currently provides Men&apos;s Health medical services to eligible adults age 18 and older who are physically located in California at the time of care.</p>
-        <h2>Pharmacy fulfillment</h2>
-        <p>Apex Vitality is not a pharmacy. If medication is prescribed, the prescription is sent to an independent licensed pharmacy serving the patient&apos;s location. The dispensing pharmacy&apos;s identity, contact information, medication label, and applicable instructions are provided through the pharmacy or fulfillment workflow. Pharmacy and product availability vary by state.</p>
+        <h2>Independent care partners</h2>
+        <p>When your care involves an independent licensed service provider, its identity, role, contact information, relevant instructions, and any separate charges will be provided through the secure patient workflow. Availability depends on your location and the service needed.</p>
+
+
         <h2>Questions</h2>
         <p>Use the designated secure patient channel for customer-service needs, assigned forms, and requested records. Clinical questions require a scheduled visit. Do not send medical information through ordinary email.</p>
       </article>
