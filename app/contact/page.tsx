@@ -1,8 +1,11 @@
 import Link from "next/link";
+import ContactForm from "../functional-medicine/contact/ContactForm";
+export const dynamic = "force-dynamic";
 import { SiteFooter, SiteHeader } from "../components";
 import { practiceContact } from "../lib/compliance";
 
 export default function ContactPage() {
+  const enabled = process.env.CONTACT_FORM_ENABLED === "true" && Boolean(process.env.RESEND_API_KEY && process.env.CONTACT_FROM_EMAIL && process.env.CONTACT_TO_EMAIL);
   return (
     <main>
       <SiteHeader />
@@ -12,8 +15,8 @@ export default function ContactPage() {
         <p>Whether you want to feel better day to day, understand your health patterns, or take a closer look at men&apos;s hormone health, Apex Vitality can help you choose a clear way forward.</p>
         <h2>Get in touch</h2>
         <p>For coaching inquiries, enrollment questions, or general information, email <a href="mailto:apexvitality5@gmail.com">apexvitality5@gmail.com</a>.</p>
-        <p><a className="primary-button" href="mailto:apexvitality5@gmail.com">Email Apex Vitality</a></p>
-        <p>Please keep email to general questions. Medical patients use CharmHealth for medical details and records. Coaching clients use their Scalerize access link for coaching information.</p>
+        <ContactForm enabled={enabled} />
+        <p>Please keep email to general questions. Use CharmHealth for medical details and records.</p>
         <h2>Gut Health &amp; Metabolic Balance</h2>
         <p>Functional medicine memberships start at $499/month with no setup fee. Explore the available plans and discuss which level of support fits your goals.</p>
         <p><Link className="primary-button" href="/gut-health">Explore Gut Health coaching</Link></p>
@@ -21,8 +24,8 @@ export default function ContactPage() {
         <p>Medical evaluation and treatment for eligible men physically located in California at the time of care.</p>
         <p><Link className="primary-button" href="/mens-health">Explore Men&apos;s Hormone Health</Link></p>
         <h2>Already working with Apex?</h2>
-        <p>Coaching clients use their separate Scalerize invitation and enrollment instructions. Men&apos;s Hormone Health patients can use the patient portal for appointments, forms, billing questions, and other administrative needs.</p>
-        <p><Link className="secondary-dark-button" href="/patient-access">Open Men&apos;s Health patient portal</Link></p>
+        <p>Patients can use CharmHealth for appointments, assigned forms, and secure communication with the clinic.</p>
+        <p><Link className="secondary-dark-button" href="/patient-access">Open patient access</Link></p>
         <h2>About the practice</h2>
         <p><strong>{practiceContact.legalName}</strong><br />{practiceContact.addressLine1}<br />{practiceContact.cityStateZip}</p>
         <p>Learn more about the <Link href="/providers">Apex Vitality care team and clinical partners</Link>.</p>
